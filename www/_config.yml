@@ -1,0 +1,19 @@
+# Site settings
+title            : Vincent Knight
+email            : vincent.knight@gmail.com
+description      : "Class website for Computing for Mathematics"
+baseurl          : "/cfm"
+url              : "http://vknight.org"
+github_username  : "drvinceknight"
+twitter_username : "@drvinceknight"
+plus_username    : "+VincentKnight"
+blogurl          : "http://vknight.org/unpeudemath/"
+
+# Build settings
+markdown    : kramdown
+permalink   : pretty
+highlighter : rouge
+
+collections:
+    labsheets:
+        output: true
