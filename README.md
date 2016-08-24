@@ -7,8 +7,9 @@ A Python 3 course for Mathematics students. Introduces:
 - Sympy for symbolic mathematics;
 - Numpy for linear algebra.
 
-All code in the various lab sheets is tested (using doctests).
+All Python code in the various lab sheets is tested (using doctests).
 
+The course also introduces some basic LaTeX.
 
 # License Information
 
