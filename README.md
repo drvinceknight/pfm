@@ -1,8 +1,13 @@
+[![Build
+Status](https://travis-ci.org/drvinceknight/cfm.svg?branch=master)](https://travis-ci.org/drvinceknight/cfm)
+
 A Python 3 course for Mathematics students. Introduces:
 
 - The standard library and basic programming concepts;
 - Sympy for symbolic mathematics;
 - Numpy for linear algebra.
+
+All code in the various lab sheets is tested (using doctests).
 
 
 # License Information
