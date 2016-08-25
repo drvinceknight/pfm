@@ -202,7 +202,7 @@ These questions aim to show you the basic building blocks of programming
 
    Let us check this for the first 30 values:
 
-   ```
+   ```python
    >>> checks = [check_formula(K) for K in range(30)]
    >>> all(checks)  # `all` combines all booleans in a list
    True
