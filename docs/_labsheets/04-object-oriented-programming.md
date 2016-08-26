@@ -327,7 +327,8 @@ These questions aim to show you the basic building blocks of programming
    ...     x1 = f.root()
    ...     x2 = g.root()
    ...     x3 = k.root()
-   ...     if x1 and x2 and x3:  # Assuming our three expressions have a root
+   ...     if (x1 is not False) and (x2 is not False) and (x3 is not False):
+   ...         # Assuming our three expressions have a root
    ...         return (a1 * x1 + a2 * x2) / (a1 + a2) == x3
    ...     return True  # If f, g have no roots the relationship is still true
    >>> check_result(2, 3, 4, 5)
