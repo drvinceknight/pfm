@@ -45,17 +45,17 @@ In this lab sheet we will learn how to use Python to study linear algebra.
    equations). Let us set up the above matrix equation:
 
    ```python
-   >>> import numpy as np  # We won't import * here to avoid confusion
-   >>> A = np.array([[5, 1, -1], [-1, 2, 4], [1, 1, 1]])
+   >>> import numpy as np
+   >>> A = np.matrix([[5, 1, -1], [-1, 2, 4], [1, 1, 1]])
    >>> A
-   array([[ 5,  1, -1],
-          [-1,  2,  4],
-          [ 1,  1,  1]])
-   >>> b = np.array([[0], [-2], [4]])
+   matrix([[ 5,  1, -1],
+           [-1,  2,  4],
+           [ 1,  1,  1]])
+   >>> b = np.matrix([[0], [-2], [4]])
    >>> b
-   array([[ 0],
-          [-2],
-          [ 4]])
+   matrix([[ 0],
+           [-2],
+           [ 4]])
 
    ```
 
@@ -64,9 +64,9 @@ In this lab sheet we will learn how to use Python to study linear algebra.
 
    ```python
    >>> np.linalg.solve(A, b)
-   array([[-14.],
-          [ 44.],
-          [-26.]])
+   matrix([[-14.],
+           [ 44.],
+           [-26.]])
 
    ```
 
@@ -78,11 +78,11 @@ In this lab sheet we will learn how to use Python to study linear algebra.
    corresponding element:
 
    ```python
-   >>> B = np.array([[1, 2, 0], [-4, 2, 2], [1, 3, 1]])
+   >>> B = np.matrix([[1, 2, 0], [-4, 2, 2], [1, 3, 1]])
    >>> A + B
-   array([[ 6,  3, -1],
-          [-5,  4,  6],
-          [ 2,  4,  2]])
+   matrix([[ 6,  3, -1],
+           [-5,  4,  6],
+           [ 2,  4,  2]])
 
    ```
 
@@ -90,9 +90,9 @@ In this lab sheet we will learn how to use Python to study linear algebra.
 
    ```python
    >>> 5 * A
-   array([[25,  5, -5],
-          [-5, 10, 20],
-          [ 5,  5,  5]])
+   matrix([[25,  5, -5],
+           [-5, 10, 20],
+           [ 5,  5,  5]])
 
    ```
 
@@ -100,10 +100,10 @@ In this lab sheet we will learn how to use Python to study linear algebra.
    multiplication](https://en.wikipedia.org/wiki/Matrix_multiplication):
 
    ```python
-   >>> np.matmul(A, B)
-   array([[ 0,  9,  1],
-          [-5, 14,  8],
-          [-2,  7,  3]])
+   >>> A * B
+   matrix([[ 0,  9,  1],
+           [-5, 14,  8],
+           [-2,  7,  3]])
 
    ```
 
@@ -111,10 +111,10 @@ In this lab sheet we will learn how to use Python to study linear algebra.
    \\(A ^ 3 = AAA\\):
 
    ```python
-   >>> np.linalg.matrix_power(A, 3)
-   array([[107,  33,  -1],
-          [ -9,  24,  44],
-          [ 25,  17,  15]])
+   >>> A ** 3
+   matrix([[107,  33,  -1],
+           [ -9,  24,  44],
+           [ 25,  17,  15]])
 
    ```
 
@@ -137,16 +137,16 @@ In this lab sheet we will learn how to use Python to study linear algebra.
    Here is the same matrix in python:
 
    ```python
-   >>> I = np.array([[1, 0, 0], [0, 1, 0], [0, 0, 1]])
+   >>> I = np.matrix([[1, 0, 0], [0, 1, 0], [0, 0, 1]])
    >>> I
-   array([[1, 0, 0],
-          [0, 1, 0],
-          [0, 0, 1]])
-   >>> np.matmul(I, A) == A  # We see that all elements are equal
-   array([[ True,  True,  True],
-          [ True,  True,  True],
-          [ True,  True,  True]], dtype=bool)
-   >>> np.array_equal(np.matmul(I, A), A)  # We see that the arrays are equal
+   matrix([[1, 0, 0],
+           [0, 1, 0],
+           [0, 0, 1]])
+   >>> I * A == A  # We see that all elements are equal
+   matrix([[ True,  True,  True],
+           [ True,  True,  True],
+           [ True,  True,  True]], dtype=bool)
+   >>> np.array_equal(I * A, A)  # We see that the matrices are equal
    True
 
    ```
@@ -156,10 +156,15 @@ In this lab sheet we will learn how to use Python to study linear algebra.
 
    ```python
    >>> I = np.identity(3)
-   >>> I
+   >>> I  # This is a numpy array
    array([[ 1.,  0.,  0.],
           [ 0.,  1.,  0.],
           [ 0.,  0.,  1.]])
+   >>> I = np.matrix(I)
+   >>> I
+   matrix([[ 1.,  0.,  0.],
+           [ 0.,  1.,  0.],
+           [ 0.,  0.,  1.]])
 
    ```
 
@@ -175,9 +180,9 @@ In this lab sheet we will learn how to use Python to study linear algebra.
    ```python
    >>> Ainv = np.linalg.inv(A)
    >>> Ainv
-   array([[ 1. ,  1. , -3. ],
-          [-2.5, -3. ,  9.5],
-          [ 1.5,  2. , -5.5]])
+   matrix([[ 1. ,  1. , -3. ],
+           [-2.5, -3. ,  9.5],
+           [ 1.5,  2. , -5.5]])
 
    ```
 
@@ -185,8 +190,8 @@ In this lab sheet we will learn how to use Python to study linear algebra.
    identity matrix:
 
    ```python
-   >>> np.matmul(np.linalg.inv(A), A)
-   array([[  1.0...
+   >>> Ainv * A
+   matrix([[  1.0...
 
    ```
 
@@ -197,10 +202,10 @@ In this lab sheet we will learn how to use Python to study linear algebra.
    This can be checked here:
 
    ```python
-   >>> np.matmul(Ainv, b)  # We obtain the same solution as before
-   array([[-14.],
-          [ 44.],
-          [-26.]])
+   >>> Ainv * b  # We obtain the same solution as before
+   matrix([[-14.],
+           [ 44.],
+           [-26.]])
 
    ```
 
@@ -252,29 +257,29 @@ In this lab sheet we will learn how to use Python to study linear algebra.
 
    ```python
    >>> N = 5
-   >>> A = np.zeros((N, N))  # An N by N array of zeros
+   >>> A = np.matrix(np.zeros((N, N)))  # An N by N array of zeros
    >>> for deal in range(N):  # Putting the 1s in the right position
-   ...     A[deal][deal] = 1
-   ...     A[deal][(deal + 1) % N] = 1
+   ...     A[deal, deal] = 1
+   ...     A[deal, (deal + 1) % N] = 1
    >>> A
-   array([[ 1.,  1.,  0.,  0.,  0.],
-          [ 0.,  1.,  1.,  0.,  0.],
-          [ 0.,  0.,  1.,  1.,  0.],
-          [ 0.,  0.,  0.,  1.,  1.],
-          [ 1.,  0.,  0.,  0.,  1.]])
+   matrix([[ 1.,  1.,  0.,  0.,  0.],
+           [ 0.,  1.,  1.,  0.,  0.],
+           [ 0.,  0.,  1.,  1.,  0.],
+           [ 0.,  0.,  0.,  1.,  1.],
+           [ 1.,  0.,  0.,  0.,  1.]])
 
    ```
 
    Now for the right hand side:
 
    ```python
-   >>> b = np.array([[i + 1] for i in range(N)])
+   >>> b = np.matrix([[i + 1] for i in range(N)])
    >>> b
-   array([[1],
-          [2],
-          [3],
-          [4],
-          [5]])
+   matrix([[1],
+           [2],
+           [3],
+           [4],
+           [5]])
 
    ```
 
@@ -283,13 +288,13 @@ In this lab sheet we will learn how to use Python to study linear algebra.
    ```python
    >>> contributions = np.linalg.solve(A, b)
    >>> contributions
-   array([[ 1.5],
-          [-0.5],
-          [ 2.5],
-          [ 0.5],
-          [ 3.5]])
+   matrix([[ 1.5],
+           [-0.5],
+           [ 2.5],
+           [ 0.5],
+           [ 3.5]])
    >>> sum(contributions)  # Total contributions
-   array([ 7.5])
+   matrix([[ 7.5]])
 
    ```
 
