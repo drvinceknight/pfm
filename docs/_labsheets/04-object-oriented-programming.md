@@ -202,6 +202,8 @@ These questions aim to show you the basic building blocks of programming
 
    ```
 
+   Here is how this new class behaves:
+
    ```python
    >>> geraint = LeapYearStudent(["Maths"], 22, "Male")
    >>> geraint.have_a_birthday()
