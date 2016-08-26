@@ -252,16 +252,16 @@ In this lab sheet we will learn how to use Python to study linear algebra.
 
    ```python
    >>> N = 5
-   >>> A = np.array([[0 for col in range(N)] for row in range(N)])  # A 2d list of 0
+   >>> A = np.zeros((N, N))  # An N by N array of zeros
    >>> for deal in range(N):  # Putting the 1s in the right position
    ...     A[deal][deal] = 1
    ...     A[deal][(deal + 1) % N] = 1
    >>> A
-   array([[1, 1, 0, 0, 0],
-          [0, 1, 1, 0, 0],
-          [0, 0, 1, 1, 0],
-          [0, 0, 0, 1, 1],
-          [1, 0, 0, 0, 1]])
+   array([[ 1.,  1.,  0.,  0.,  0.],
+          [ 0.,  1.,  1.,  0.,  0.],
+          [ 0.,  0.,  1.,  1.,  0.],
+          [ 0.,  0.,  0.,  1.,  1.],
+          [ 1.,  0.,  0.,  0.,  1.]])
 
    ```
 
