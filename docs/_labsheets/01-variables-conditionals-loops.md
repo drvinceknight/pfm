@@ -9,6 +9,11 @@ aim to push your understanding further. Finally at the end of the sheet there
 are links to other resources and tutorials that you might find
 helpful and/or interesting.
 
+There are videos throughout the sheets describing the concepts as well as
+showing demos.
+
+[Here is an overview of the course.](https://youtu.be/IB1wc1qgb7Q)
+
 # Installing and running Python
 
 Python is a programming language. There are various other programming languages:
@@ -48,6 +53,8 @@ We will use a Jupyter notebook which runs in your browser. To open a local
 server find the Continuum navigator and click on Jupyter. You do not need to be
 connected to the internet to use this.
 
+[This video is a demo of using a notebook.](https://youtu.be/Zk0RhwCiiNA)
+
 These lab sheets will include code snippets. They show what code you should
 write but also the output you should see. Try the following:
 
@@ -62,6 +69,10 @@ Hello world
 These questions aim to show you the basic building blocks of programming
 
 1. **TICKABLE** Creating numeric variables.
+
+   [A video describing the concept.](https://youtu.be/KtDrCIauto0)
+
+   [A video demo.](https://youtu.be/Esp-5f0kmpE)
 
    One of the building block of any
    programming language is variables. This is how we store a particular variable
@@ -115,6 +126,10 @@ These questions aim to show you the basic building blocks of programming
 
 2. **TICKABLE** Creating character variables.
 
+   [A video describing the concept.](https://youtu.be/8-lY3TepDKc)
+
+   [A video demo.](https://youtu.be/v3HBPbf0I3s)
+
    Another type of variable used is called a character variable. **In
    programming these are called strings**.
 
@@ -140,6 +155,10 @@ These questions aim to show you the basic building blocks of programming
    **Experiment by creating your own strings variables.**
 
 3. **Tickable** Boolean variables and if statements.
+
+   [A video describing the concept.](https://youtu.be/IxU67BAFtHI)
+
+   [A video demo.](https://youtu.be/EVAbSgT2Fvk)
 
    Programming languages can be used to check if statements are true or not. A
    variable that can either be `True` or `False` is called a boolean variable.
@@ -201,6 +220,10 @@ These questions aim to show you the basic building blocks of programming
 
 4. **Tickable** While loops.
 
+   [A video describing the concept.](https://youtu.be/MnKlyszfa7g)
+
+   [A video demo.](https://youtu.be/orAnw7ZiFV4)
+
    It is possible to use code to repeat various actions. Here is a `while` loop
    that repeats whatever is indented until the boolean condition is no longer
    true:
@@ -220,6 +243,10 @@ These questions aim to show you the basic building blocks of programming
    items.**
 
 5. **Worked example**
+
+   [A video describing the concept.](https://youtu.be/cPfHwhJgeik)
+
+   [A video demo.](https://www.youtube.com/watch?v=im6yVzlFrys)
 
    This is a slightly more complex example that brings together the various
    concepts above.
