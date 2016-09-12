@@ -296,21 +296,49 @@ These questions aim to show you the basic building blocks of programming
 
    These questions aim to push a bit further.
 
-6. Use code to check the following identity:
+6. **Debugging exercise**
+
+   Below is code that attempts to verify the following identity for all values
+   less than 2000.
+
+   $$
+   \sum_{i=0}^ni ^ 3 = \frac{\left(n ^ 2 + n\right)^{2}}{4}
+   $$
+
+   **There is at least one error (also called a bug) in the
+   code**. Find and fix all the bugs.
+
+   ```python
+   max_n = 2000
+   n = 0
+   while n > max_n:
+       n += 2
+       rhs = ((n ** 2 + 2 * n) ** 2) / 4
+       lhs = 0
+       i = 0
+       while i < n:
+           i += 1
+           lhs += i ** 2
+       if lhs != rhs:
+           print(False)
+
+   ```
+
+7. Use code to check the following identity:
 
    $$\sum_{i=0}^{n}i=\frac{n(n+1)}{2}$$
 
    for \(n=20\).
 
-7. **Tickable** Modify **the above** to check it for all values less than 2000.
+8. **Tickable** Modify **the above** to check it for all values less than 2000.
 
-8. Calculates the sum of the first natural numbers less than 1000 that are not
+9. Calculates the sum of the first natural numbers less than 1000 that are not
    divisible by 3.
 
-9. Calculates the sum of the first 1000 natural numbers that are not
+10. Calculates the sum of the first 1000 natural numbers that are not
    divisible by 3.
 
-10. It can be shown (you are not required to check this) that the following
+11. It can be shown (you are not required to check this) that the following
     sequence:
 
     $$x_{n+1}=\frac{x_n + K / x_{n}}{2}$$
