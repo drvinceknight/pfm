@@ -334,19 +334,30 @@ similar to mathematical functions) and lists (a way of holding data).
 
    These questions aim to push a bit further.
 
-7. Write a function that returns the triangular numbers \\(T_n\\):
+7. **Debugging exercise**
+
+   The following is an attempt to write \\(n!\\) as a recursive function. Find
+   and fix all the bugs.
+
+   ```python
+   def factorial(n):
+       """A function that returns factorial n"""
+       return n * factoial(n)
+   ```
+
+8. Write a function that returns the triangular numbers \\(T_n\\):
 
    $$T_n=\frac{n(n+1)}{2}$$
 
-8. **Tickable** Use code to check that the following relationship is true:
+9. **Tickable** Use code to check that the following relationship is true:
 
    $$\sum_{i=0}^{n}T_i=\frac{n(n+1)(n+2)}{6}$$
 
-9. Create a list with the first 1300 integers divisible by 3. What is the largest
+10. Create a list with the first 1300 integers divisible by 3. What is the largest
    such number? What is the smallest such number? What is the mean of these
    numbers?
 
-10. Investigate the use of the python `random` library. Use this to simulate the
+11. Investigate the use of the python `random` library. Use this to simulate the
     [Monty hall](Monty Hall proble://en.wikipedia.org/wiki/Monty_Python):
 
     - Write a function that simulates the play of the game when you 'stick' with
@@ -356,7 +367,7 @@ similar to mathematical functions) and lists (a way of holding data).
     - Repeat the play of the game using both those functions and compare the
       probability of winning.
 
-11. A data type that we have not considered are dictionaries. These are a
+12. A data type that we have not considered are dictionaries. These are a
     specific type of what is generally called a 'hash table'. Find information
     about dictionaries and experiment with them.
 
