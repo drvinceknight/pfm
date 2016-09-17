@@ -223,13 +223,24 @@ These questions aim to show you the basic building blocks of programming
 
    These questions aim to push a bit further.
 
-5. Write a recursive function that returns the Catalan numbers \\(C(n)\\)
+5. **Debugging exercise**
+
+   The following is an attempt to write \\(n!\\) as a recursive function. Find
+   and fix all the bugs.
+
+   ```python
+   def factorial(n):
+       """A function that returns factorial n"""
+       return n * factoial(n)
+   ```
+
+6. Write a recursive function that returns the Catalan numbers \\(C(n)\\)
    defined by the following:
 
    1. Base case: \\(C(0)=1\\);
    2. Recursive rule: \\(C(n)=\sum_{i=0}^{n-1}C(i)C(n-1-i)\\);
 
-6. **Tickable** Verify for the first 30 values of \\(n\\) that the following
+7. **Tickable** Verify for the first 30 values of \\(n\\) that the following
    alternative formula also gives the Catalan numbers (this is in fact the more
    commonly used formula):
 
@@ -239,11 +250,11 @@ These questions aim to show you the basic building blocks of programming
 
    You can use the factorial function we defined in this lab sheet (question 1) or you   can use the `math` library: `math.factorial`.
 
-7. The file [primes.csv]({{site.baseurl}}/assets/data/primes.csv) contains the
+8. The file [primes.csv]({{site.baseurl}}/assets/data/primes.csv) contains the
    first million prime numbers. Use it to attempt to verify
    [Goldbach's conjecture](https://en.wikipedia.org/wiki/Goldbach%27s_conjecture).
 
-8. Python has it's own functions to sort a list. This question investigates how
+9. Python has it's own functions to sort a list. This question investigates how
    one of those algorithms works.
 
    If we have a list of items that are not in the correct order, one algorithm
@@ -264,36 +275,36 @@ These questions aim to show you the basic building blocks of programming
    Attempt to write a function in python `insertion_sort` that takes a list of
    numbers and returns it sorted.
 
-9. Similarly to sorting there are also various algorithms for searching
-   (and finding) elements in a list. One of these is called 'binary search'
-   illustrated below:
+10. Similarly to sorting there are also various algorithms for searching
+    (and finding) elements in a list. One of these is called 'binary search'
+    illustrated below:
 
-   ![Binary search]({{site.baseurl}}/assets/Images/W04-img03.png)
+    ![Binary search]({{site.baseurl}}/assets/Images/W04-img03.png)
 
-   Here is some 'pseudo code' that describes this algorithm:
+    Here is some 'pseudo code' that describes this algorithm:
 
-   ```
-   SORT THE LIST
-   SET INDEX TO 0
-   SET LAST TO LENGTH - 1
-   SET FOUND TO FALSE
-   WHILE FIRST <= LAST AND NOT FOUND:
-       SET MIDDLE TO (FIRST + LAST) / 2
-       IF DATA[MIDDLE] = ITEM:
-           SET FOUND TO TRUE
-       ELSE:
-           IF DATA[MIDDLE] > ITEM:
-               SET LAST TO MIDDLE - 1
-           ELSE:
-               SET FIRST TO MIDDLE + 1
-   RETURN MIDDLE
-   ```
+    ```
+    SORT THE LIST
+    SET INDEX TO 0
+    SET LAST TO LENGTH - 1
+    SET FOUND TO FALSE
+    WHILE FIRST <= LAST AND NOT FOUND:
+        SET MIDDLE TO (FIRST + LAST) / 2
+        IF DATA[MIDDLE] = ITEM:
+            SET FOUND TO TRUE
+        ELSE:
+            IF DATA[MIDDLE] > ITEM:
+                SET LAST TO MIDDLE - 1
+            ELSE:
+                SET FIRST TO MIDDLE + 1
+    RETURN MIDDLE
+    ```
 
-   Attempt to write a function in python `binary_search` which takes a list and
-   an item to search for in that list. It should return the position of the
-   item.
+    Attempt to write a function in python `binary_search` which takes a list and
+    an item to search for in that list. It should return the position of the
+    item.
 
-10. Repeated calls of a recursive function can actually be quite slow
+11. Repeated calls of a recursive function can actually be quite slow
     (we have to recalculate the values each time). **Recursion is a tool that
     helps write nice code, often when we do not know an alternative formula**.
     There are ways to deal with this inefficiency:

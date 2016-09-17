@@ -336,13 +336,14 @@ similar to mathematical functions) and lists (a way of holding data).
 
 7. **Debugging exercise**
 
-   The following is an attempt to write \\(n!\\) as a recursive function. Find
+   The following is an attempt to write \\(n!\\) as a function. Find
    and fix all the bugs.
 
    ```python
    def factorial(n):
        """A function that returns factorial n"""
-       return n * factoial(n)
+       for i in range(n)
+           prod *= i
    ```
 
 8. Write a function that returns the triangular numbers \\(T_n\\):
