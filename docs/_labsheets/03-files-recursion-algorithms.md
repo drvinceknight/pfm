@@ -240,7 +240,7 @@ These questions aim to show you the basic building blocks of programming
    1. Base case: \\(C(0)=1\\);
    2. Recursive rule: \\(C(n)=\sum_{i=0}^{n-1}C(i)C(n-1-i)\\);
 
-7. **Tickable** Verify for the first 30 values of \\(n\\) that the following
+7. **Tickable** Verify for the first 15 values of \\(n\\) that the following
    alternative formula also gives the Catalan numbers (this is in fact the more
    commonly used formula):
 
