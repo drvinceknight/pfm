@@ -172,7 +172,7 @@ These questions aim to show you the basic building blocks of programming
 
    **Create instances of the Student class with these new methods.**
 
-4. **Inheritance**
+4. **Tickable** Inheritance
 
    One final (very important) aspect of object oriented programming is the
    concept of inheritance. This allows us to create new classes from other ones.
