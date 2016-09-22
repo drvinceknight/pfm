@@ -13,6 +13,8 @@ The course also introduces some basic LaTeX.
 
 # License Information
 
+[![Join the chat at https://gitter.im/computing-for-mathematics/Lobby](https://badges.gitter.im/computing-for-mathematics/Lobby.svg)](https://gitter.im/computing-for-mathematics/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This work is licensed under a [Creative Commons Attribution-ShareAlike 3.0](http://creativecommons.org/licenses/by-sa/3.0/us/) license.  You are free to:
 
 * Share: copy, distribute, and transmit the work,
