@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Lab sheet 01: Variables, Conditional Statements and Loops"
+comments: true
 ---
 
 This first lab sheet will introduce you to programming. You are expected to work
