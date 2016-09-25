@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Lab Sheet 06: Symbolic Mathematics"
+comments: true
 ---
 
 In the previous week we saw a variety of different libraries:

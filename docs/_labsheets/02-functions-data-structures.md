@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Lab Sheet 02: Data Structures and Functions"
+comments: true
 ---
 
 This lab sheet will move on to understanding how to write functions (very

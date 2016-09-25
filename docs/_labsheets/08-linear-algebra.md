@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Lab Sheet 08: Linear Algebra"
+comments: true
 ---
 
 In this lab sheet we will learn how to use Python to study linear algebra.

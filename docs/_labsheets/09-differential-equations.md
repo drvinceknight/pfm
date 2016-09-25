@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Lab Sheet 09: Differential Equations"
+comments: true
 ---
 
 The final topic that we will consider is the study of differential equations.

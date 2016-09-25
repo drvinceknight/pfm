@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Lab Sheet 07: Symbolic Calculus"
+comments: true
 ---
 
 In this lab sheet we will see how to carry out basic aspects of Calculus

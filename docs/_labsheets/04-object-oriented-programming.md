@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Lab Sheet 04: Object Oriented Programming"
+comments: true
 ---
 
 This lab sheet introduces object oriented programming. We have been using

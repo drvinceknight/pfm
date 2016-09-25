@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Lab Sheet 05: Writing Mathematics"
+comments: true
 ---
 
 Mathematicians, Computer Scientists, Physicists and others all need to present their research and this is usually through the written medium. Common word processors can be used for this but most prefer to use the typesetting language LaTeX (pronounced Lay-tech).

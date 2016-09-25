@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Lab Sheet 03: Reading and writing to file, recursion and algorithms"
+comments: true
 ---
 
 This lab sheet will allow us to read and write to text files (which lets us
