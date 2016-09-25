@@ -379,14 +379,34 @@ These questions aim to show you the basic building blocks of programming
 
    These questions aim to push a bit further.
 
-6. Build a class for a quadratic expression:
+6. **Debugging exercise**
+
+   The following is an attempt to write a class for rectangle, find
+   and fix all the bugs.
+
+   ```python
+   class Rectangle:
+       """A class for a rectangle""
+       def __init__(width, length)
+           self.width = width
+           self.length = width
+       def obtain_area(self:
+           """Obtain the area of the rectangle"""
+           return self.width * self.length
+       def is_square():
+           """Check if the rectangle is a square"""
+           return self.width == self.length
+
+   ```
+
+7. Build a class for a quadratic expression:
 
    $$ax^2+bx+c$$
 
    Include a method for adding two quadratic expressions together and also a
    method to calculate the roots of the expression.
 
-7. **Tickable** The data file
+8. **Tickable** The data file
    [W05_D01.csv]({{site.baseurl}}/assets/Data/W05_D01.csv) contains data
    corresponding to quadratic expression of the form:
 
@@ -403,7 +423,7 @@ These questions aim to show you the basic building blocks of programming
    Read in the data file (you might find it helpful to read about the `csv`
    library) and identify how many quadratics have real roots.
 
-8. If rain drops were to fall randomly on a square of side length \\(2r\\) the
+9. If rain drops were to fall randomly on a square of side length \\(2r\\) the
    probability of the drops landing in an inscribed circle of radius \\(r\\)
    would be given by:
 
@@ -443,7 +463,7 @@ These questions aim to show you the basic building blocks of programming
 
     (This is an example of a technique called Monte Carlo Simulation.)
 
-9. In a similar fashion to question 8, approximate the integral
+10. In a similar fashion to question 8, approximate the integral
    \\(\int_{0}^11-x^2\;dx\\).
 
    Recall that the integral corresponds to the area under a curve.
@@ -451,7 +471,7 @@ These questions aim to show you the basic building blocks of programming
 
    ![Grid]({{site.baseurl}}/assets/Images/gridwithplot.png)
 
-10. Re create the linear expression class using **inheritance** and the
+11. Re create the linear expression class using **inheritance** and the
     quadratic quadratic expression class from question 6.
 
 # Further resources
