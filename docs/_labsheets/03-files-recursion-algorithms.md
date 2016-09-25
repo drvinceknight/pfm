@@ -12,6 +12,10 @@ These questions aim to show you the basic building blocks of programming
 
 1. **Tickable** Recursion.
 
+   [A video describing the concept.](https://youtu.be/xFQGaPeaFxg)
+
+   [A video demo.](https://youtu.be/VDXYEJcksPs)
+
    It is possible to define functions recursively. This is similar to inductive
    proofs in mathematics. To do this we need to consider two things:
 
@@ -72,6 +76,10 @@ These questions aim to show you the basic building blocks of programming
 
 2. **Tickable** Writing to file.
 
+   [A video describing the concept.](https://youtu.be/w-gEOEOLfiA)
+
+   [A video demo.](https://youtu.be/jFS015bgRS0)
+
    All of the data we handle with variables, lists and dictionaries lives in
    the ‘memory’ of a computer when our python code is running. When the program
    stops running the data is lost. There will be occasions when we want to write
@@ -104,6 +112,10 @@ These questions aim to show you the basic building blocks of programming
    Modify the above code to write something different to file.
 
 3. **Tickable** Reading files.
+
+   [A video describing the concept.](https://youtu.be/rn21nG6TZlg)
+
+   [A video demo.](https://youtu.be/jtU3dML5mqw)
 
    To read data from a file, we need to open the file in ‘read mode’:
 
@@ -140,6 +152,10 @@ These questions aim to show you the basic building blocks of programming
    Use this code to verify that you can read in from the file you wrote.
 
 4. **Worked example**
+
+   [A video describing the concept.](https://youtu.be/WgmgK7K3WUM)
+
+   [A video demo.](https://youtu.be/7245uwUjSkI)
 
    The Fibonacci sequence can be thought of as:
 

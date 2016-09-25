@@ -10,6 +10,10 @@ similar to mathematical functions) and lists (a way of holding data).
 
 1. **Tickable** Lists
 
+   [A video describing the concept.](https://youtu.be/oLrrdPQzZas)
+
+   [A video demo.](https://youtu.be/E3BNVFwLWkM)
+
    Another type of variable in Python (we have already seen numeric and
    character variables) is the list. This type acts as a container that can hold
    multiple other items in an ordered way.
@@ -81,6 +85,10 @@ similar to mathematical functions) and lists (a way of holding data).
 
 2. **Tickable** For loops.
 
+   [A video describing the concept.](https://youtu.be/icgb6I85pX8)
+
+   [A video demo.](https://youtu.be/npJqdB1pqdQ)
+
    In the previous sheet, we saw that a `while` loop can be used to repeat a
    code chunk until a boolean condition is `False`. It is also possible to
    repeat an action for all elements of a list.
@@ -117,6 +125,10 @@ similar to mathematical functions) and lists (a way of holding data).
    items.**
 
 3. **Tickable** List comprehension
+
+   [A video describing the concept.](https://youtu.be/tEyxAfVWEGE)
+
+   [A video demo.](https://youtu.be/893eu9F75gI)
 
    Here is a list of squares, done using the `append` method and a for loop.
 
@@ -155,6 +167,10 @@ similar to mathematical functions) and lists (a way of holding data).
 
 4. **Tickable** Writing simple functions.
 
+   [A video describing the concept.](https://youtu.be/_8gcT7_o84U)
+
+   [A video demo.](https://youtu.be/FHXiY22e6NQ)
+
    Often we want to be able to use code more than once. The way to do this is to
    write a function. Here is a very simple example. This creates a function that
    returns a string saying "Hello world":
@@ -179,6 +195,10 @@ similar to mathematical functions) and lists (a way of holding data).
    Experiment with changing what the `say_hi` function says.
 
 5. **Tickable** Functions with variables.
+
+   [A video describing the concept.](https://youtu.be/S-pzofb4Ok0)
+
+   [A video demo.](https://youtu.be/X13uTM0GPjI)
 
    It is more useful to include variables in our functions (in the exact same
    way as for mathematical functions!).
@@ -242,6 +262,10 @@ similar to mathematical functions) and lists (a way of holding data).
    Experiment by creating your own function.
 
 6. **Worked example**
+
+   [A video describing the concept.](https://youtu.be/Y1mdHL7OZiU)
+
+   [A video demo.](https://youtu.be/h0_nnFmRwUQ)
 
    The Fibonacci numbers are defined by the following mathematical formula:
 

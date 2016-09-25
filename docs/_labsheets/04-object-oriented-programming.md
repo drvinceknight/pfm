@@ -13,6 +13,10 @@ These questions aim to show you the basic building blocks of programming
 
 1. **Tickable** Writing a class.
 
+   [A video describing the concept.](https://youtu.be/-58By9KGWX4)
+
+   [A video demo.](https://youtu.be/kcGzJ52MZNU)
+
    The main idea behind object orientated programming (OOP) is to
    create abstract structures that allow us to not worry about data. Alan Kay
    came up with the concept and is quoted as saying: ‘I wanted to get rid of
@@ -62,6 +66,10 @@ These questions aim to show you the basic building blocks of programming
    **Experiment with building an instance of the Student class.**
 
 2. **Tickable** Attributes
+
+   [A video describing the concept.](https://youtu.be/TDErnRv0SP8)
+
+   [A video demo.](https://youtu.be/c05rLmFf-Xk)
 
    The above student class is not very useful. We now see how to make our
    objects ‘hold’ information. The following code re-creates our previous
@@ -115,6 +123,10 @@ These questions aim to show you the basic building blocks of programming
    **Create instances with attributes and experiment with them.**
 
 3. **Tickable** Methods
+
+   [A video describing the concept.](https://youtu.be/dKS18fQVPxY)
+
+   [A video demo.](https://youtu.be/6AGuxUC2LUE)
 
    We will now see how to make classes 'do' things. These are called 'methods'
    and they are just functions 'attached' to classes.
@@ -174,6 +186,10 @@ These questions aim to show you the basic building blocks of programming
 
 4. **Tickable** Inheritance
 
+   [A video describing the concept.](https://youtu.be/f3Wh4MDEog8)
+
+   [A video demo.](https://youtu.be/fg4krAA5QXg)
+
    One final (very important) aspect of object oriented programming is the
    concept of inheritance. This allows us to create new classes from other ones.
    In practice this saves replicating code as we can change only certain methods
@@ -221,6 +237,10 @@ These questions aim to show you the basic building blocks of programming
    years?**
 
 5. **Worked example**
+
+   [A video describing the concept.](https://youtu.be/nlIz2QtBCTk)
+
+   [A video demo.](https://youtu.be/BRLbh-6QU_Q)
 
    Let us assume we want to study linear expressions. These are expressions
    of the form:
