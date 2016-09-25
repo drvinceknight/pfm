@@ -464,12 +464,12 @@ These questions aim to show you the basic building blocks of programming
     (This is an example of a technique called Monte Carlo Simulation.)
 
 10. In a similar fashion to question 8, approximate the integral
-   \\(\int_{0}^11-x^2\;dx\\).
+    \\(\int_{0}^11-x^2\;dx\\).
 
-   Recall that the integral corresponds to the area under a curve.
-   Furthermore this diagram might be helpful:
+    Recall that the integral corresponds to the area under a curve.
+    Furthermore this diagram might be helpful:
 
-   ![Grid]({{site.baseurl}}/assets/Images/gridwithplot.png)
+    ![Grid]({{site.baseurl}}/assets/Images/gridwithplot.png)
 
 11. Re create the linear expression class using **inheritance** and the
     quadratic quadratic expression class from question 6.
