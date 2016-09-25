@@ -456,11 +456,6 @@ These questions aim to show you the basic building blocks of programming
     count the number of those that are in the circle.  Use this to approximate
     \\(\pi\\).
 
-    What happens if you increase \\(N\\)?
-
-    What value of \\(N\\) seems to give \\(\pi\\P correct to 3
-    decimal places?
-
     (This is an example of a technique called Monte Carlo Simulation.)
 
 10. In a similar fashion to question 8, approximate the integral
@@ -470,9 +465,6 @@ These questions aim to show you the basic building blocks of programming
     Furthermore this diagram might be helpful:
 
     ![Grid]({{site.baseurl}}/assets/Images/gridwithplot.png)
-
-11. Re create the linear expression class using **inheritance** and the
-    quadratic quadratic expression class from question 6.
 
 # Further resources
 
