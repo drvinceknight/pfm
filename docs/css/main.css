@@ -18,8 +18,10 @@ body {
 
 p {margin-top: 15px;}
 
-h1 {font-size: 1em; color: #fff; }
+h1 {font-size: 1em; color: #fff; margin-top: 20px; margin-bottom: 20px}
 h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 400; }
+
+ul {margin-bottom: 15px}
 
 a         { color: #2a7ae2; text-decoration: none; }
 a:hover   { color: #000; text-decoration: underline; }

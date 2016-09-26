@@ -6,15 +6,11 @@ title  : Computing for Mathematics
 This is the course page for the Computing for Mathematics course taught at the
 School of Mathematics at Cardiff University.
 
----
-
 # Lab Sheets
 
 {% for sheet in site.labsheets %}
 - [{{sheet.title}}]({{ sheet.url | prepend: site.baseurl }})
 {% endfor %}
-
----
 
 # Help
 
