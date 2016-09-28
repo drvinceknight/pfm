@@ -17,3 +17,5 @@ highlighter : rouge
 collections:
     labsheets:
         output: true
+    handouts:
+        output: true

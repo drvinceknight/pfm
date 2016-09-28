@@ -12,9 +12,15 @@ School of Mathematics at Cardiff University.
 - [{{sheet.title}}]({{ sheet.url | prepend: site.baseurl }})
 {% endfor %}
 
+# Handouts
+
+{% for handout in site.handouts %}
+- [{{handout.title}}]({{ handout.url | prepend: site.baseurl }})
+{% endfor %}
+
 # Help
 
 - [Chat room](https://gitter.im/computing-for-mathematics/Lobby).
 - There are discussion boards on each lab sheet.
 - Email me: `knightva@cardiff.ac.uk`.
-- My office hours at Thursday 1400-1600.
+- My office hours: Thursday 1400-1600.
