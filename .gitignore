@@ -6,3 +6,14 @@ Enterprise/Assessment/Presentation/Feedback/
 *swp
 *.lock
 my_plot.pdf
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
+*.pygstyle
+*.pygtex
