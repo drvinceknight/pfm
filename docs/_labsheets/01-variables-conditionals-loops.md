@@ -299,8 +299,6 @@ These questions aim to show you the basic building blocks of programming
 
 6. **Debugging exercise**
 
-   [A video describing the concept.](https://youtu.be/cPfHwhJgeik)
-
    [A video demo.](https://youtu.be/NvAEDqMRSEw)
 
    Below is code that attempts to verify the following identity for all values
