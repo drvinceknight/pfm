@@ -25,7 +25,7 @@ mathematics.
 
 These questions aim to show you the basic building blocks of programming
 
-1. **Tickable** Exact valued computations.
+1. **TICKABLE** Exact valued computations.
 
    Using python we can calculate the square root and trigonometric values of
    numbers (we do this by importing the `math` library)::
@@ -86,7 +86,7 @@ These questions aim to show you the basic building blocks of programming
 
    **Experiment with other mathematical functions: `tan`, `sin`, `exp`.**
 
-2. **Tickable** Manipulating natural numbers.
+2. **TICKABLE** Manipulating natural numbers.
 
    As well as exact numerics as described above, SymPy can also be used to
    explore the factors and primality of a number.
@@ -108,7 +108,7 @@ These questions aim to show you the basic building blocks of programming
 
    **Repeat the above example with a different value of `N`.**
 
-3. **Tickable** Creating a symbolic variable.
+3. **TICKABLE** Creating a symbolic variable.
 
    Using SymPy it is possible to carry out symbolic computations. To do this we
    need to creates instances of the SymPy Symbols class. We do this using the
@@ -143,7 +143,7 @@ These questions aim to show you the basic building blocks of programming
 
    **Experiment with other symbolic manipulations.**
 
-4. **Tickable** Manipulating symbolic expressions.
+4. **TICKABLE** Manipulating symbolic expressions.
 
    We can substitute values in to our symbolic expressions:
 
@@ -178,7 +178,7 @@ These questions aim to show you the basic building blocks of programming
 
    **Experiment with other expressions and `expand`/`simplify`.**
 
-5. **Tickable** Solving equations.
+5. **TICKABLE** Solving equations.
 
    Sympy has the ability to solve equations. For example let us solve the
    following quadratic:
@@ -315,7 +315,7 @@ These questions aim to show you the basic building blocks of programming
 
    $$p_2(n) = n^2-n+41$$
 
-8. **Tickable** Use SymPy to verify that:
+8. **TICKABLE** Use SymPy to verify that:
 
    $$n^2 -79n+1601 = (n - 40) ^ 2 + (n - 40) + 41$$
 

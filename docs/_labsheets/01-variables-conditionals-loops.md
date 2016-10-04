@@ -155,7 +155,7 @@ These questions aim to show you the basic building blocks of programming
 
    **Experiment by creating your own strings variables.**
 
-3. **Tickable** Boolean variables and if statements.
+3. **TICKABLE** Boolean variables and if statements.
 
    [A video describing the concept.](https://youtu.be/IxU67BAFtHI)
 
@@ -219,7 +219,7 @@ These questions aim to show you the basic building blocks of programming
 
    **Experiment by changing the function \\(f\\) and modifying the code.**
 
-4. **Tickable** While loops.
+4. **TICKABLE** While loops.
 
    [A video describing the concept.](https://youtu.be/MnKlyszfa7g)
 
@@ -333,7 +333,7 @@ These questions aim to show you the basic building blocks of programming
 
    for \(n=20\).
 
-8. **Tickable** Modify **the above** to check it for all values less than 2000.
+8. **TICKABLE** Modify **the above** to check it for all values less than 2000.
 
 9. Calculates the sum of the first natural numbers less than 1000 that are not
    divisible by 3.

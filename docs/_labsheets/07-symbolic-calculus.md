@@ -9,7 +9,7 @@ In this lab sheet we will see how to carry out basic aspects of Calculus
 
 **Building blocks**
 
-1. **Tickable** Calculating limits.
+1. **TICKABLE** Calculating limits.
 
    It is possible to calculate limits easily with SymPy. Let us consider the
    following function as a running example:
@@ -63,7 +63,7 @@ In this lab sheet we will see how to carry out basic aspects of Calculus
 
    **Experiment with caculating the limit of different functions.**
 
-2. **Tickable** Differentiation.
+2. **TICKABLE** Differentiation.
 
    We can use SymPy to carry out differentiation:
 
@@ -112,7 +112,7 @@ In this lab sheet we will see how to carry out basic aspects of Calculus
 
    **Try and experiment with differentiating more complicated functions.**
 
-3. **Tickable** Integration.
+3. **TICKABLE** Integration.
 
    As well as differentiation it is possible to carry out integration.
 
@@ -149,7 +149,7 @@ In this lab sheet we will see how to carry out basic aspects of Calculus
 
    **Experiment with integrating other functions.**
 
-4. **Tickable** Plotting. It is possible to use SymPy to create plots.
+4. **TICKABLE** Plotting. It is possible to use SymPy to create plots.
 
    To view these in jupyter we need to run this line:
 
@@ -289,7 +289,7 @@ In this lab sheet we will see how to carry out basic aspects of Calculus
    Identify the roots and limits (at \\(\pm\infty\\)) of the function and
    confirm this with a plot.
 
-7. **Tickable** For the function of question 6, identify and classify all points
+7. **TICKABLE** For the function of question 6, identify and classify all points
    of inflection.
 
 8. There are various algebraic relationships on limits:

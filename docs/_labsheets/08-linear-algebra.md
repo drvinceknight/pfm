@@ -8,7 +8,7 @@ In this lab sheet we will learn how to use Python to study linear algebra.
 
 **Building blocks**
 
-1. **Tickable** Linear algebra is the study of systems of linear equations. Many
+1. **TICKABLE** Linear algebra is the study of systems of linear equations. Many
    mathematical problems reduce to solving systems of linear equations. Here is
    one such system that we will use as a running example:
 
@@ -73,7 +73,7 @@ In this lab sheet we will learn how to use Python to study linear algebra.
 
    **Experiment with another linear system.**
 
-2. **Tickable** Manipulating matrices.
+2. **TICKABLE** Manipulating matrices.
 
    It is possible to add two matrices together, this corresponds to adding each
    corresponding element:
@@ -121,7 +121,7 @@ In this lab sheet we will learn how to use Python to study linear algebra.
 
    **Modify the code here to try multiplying different matrices together.**
 
-3. **Tickable** As we have matrix multiplication, that implies that there will
+3. **TICKABLE** As we have matrix multiplication, that implies that there will
    be an element that does not have any effect when multiplying by it. (In normal
    multiplication this is the number \\(1\\) as \\(1 \times 5 = 5\\).
 
@@ -171,7 +171,7 @@ In this lab sheet we will learn how to use Python to study linear algebra.
 
    **Experiment with the above with different matrices.**
 
-4. **Tickable** Related to the idea of the identity matrix is the notion of the
+4. **TICKABLE** Related to the idea of the identity matrix is the notion of the
    inverse of a matrix \\(A^{-1}\\) so that:
 
    $$AA^{-1}=I$$
@@ -212,7 +212,7 @@ In this lab sheet we will learn how to use Python to study linear algebra.
 
    **Experiment with the above.**
 
-5. **Tickable** Related to the inverse of a matrix (it is used for its
+5. **TICKABLE** Related to the inverse of a matrix (it is used for its
    calculation) is called the
    [determinant](https://en.wikipedia.org/wiki/Determinant). We won't go in to
    detail about that here but this is how it is calculated:
@@ -316,7 +316,7 @@ In this lab sheet we will learn how to use Python to study linear algebra.
    What is the contribution of each player and what is the total contribution
    for \\(N=50\\)?
 
-8. **Tickable** Modify the problem of question 7 with the assumption that the
+8. **TICKABLE** Modify the problem of question 7 with the assumption that the
    contributions are now made by triplets of players so that:
    business person \\(i\\) and **half** of the contribution of business person
    \\(i+1\\), and **a third** of the contributions of business person \\(i+2\\)

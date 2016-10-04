@@ -8,7 +8,7 @@ The final topic that we will consider is the study of differential equations.
 
 **Building blocks**
 
-1. **Tickable** Solving differential equations.
+1. **TICKABLE** Solving differential equations.
 
    We can use SymPy to solve differential equations. For example:
 
@@ -53,7 +53,7 @@ The final topic that we will consider is the study of differential equations.
    **Experiment with solving a modified version of the differential equation
    considered here.**
 
-2. **Tickable** Higher order differential equations.
+2. **TICKABLE** Higher order differential equations.
 
    We can also solve higher order differential equations. For example, the
    following can be used to model the position of a mass on a spring:
@@ -71,7 +71,7 @@ The final topic that we will consider is the study of differential equations.
    **Experiment with solving a modified version of the differential equation
    considered here.**
 
-3. **Tickable** Systems of differential equations.
+3. **TICKABLE** Systems of differential equations.
 
    We can solve systems of differential equations like the following:
 
@@ -166,7 +166,7 @@ The final topic that we will consider is the study of differential equations.
    3. \\(\frac{d^2y}{dx^2}-y=\sin(5x)\\)
    4. \\(\frac{d^2y}{dx^2}+2\frac{dy}{dx}+2y=\cosh(x)\\)
 
-6. **Tickable** For each of the differential equations from question 5, obtain
+6. **TICKABLE** For each of the differential equations from question 5, obtain
    particular solutions with the corresponding conditions **and plot** the
    solutions.
 

@@ -9,7 +9,7 @@ similar to mathematical functions) and lists (a way of holding data).
 
 **Building blocks**
 
-1. **Tickable** Lists
+1. **TICKABLE** Lists
 
    [A video describing the concept.](https://youtu.be/oLrrdPQzZas)
 
@@ -84,7 +84,7 @@ similar to mathematical functions) and lists (a way of holding data).
 
    Experiment by creating lists and manipulating them.
 
-2. **Tickable** For loops.
+2. **TICKABLE** For loops.
 
    [A video describing the concept.](https://youtu.be/icgb6I85pX8)
 
@@ -125,7 +125,7 @@ similar to mathematical functions) and lists (a way of holding data).
    **Experiment by summing (or perhaps multiplying?) over a different list of
    items.**
 
-3. **Tickable** List comprehension
+3. **TICKABLE** List comprehension
 
    [A video describing the concept.](https://youtu.be/tEyxAfVWEGE)
 
@@ -166,7 +166,7 @@ similar to mathematical functions) and lists (a way of holding data).
 
    Experiment by modifying this code to create a different list.
 
-4. **Tickable** Writing simple functions.
+4. **TICKABLE** Writing simple functions.
 
    [A video describing the concept.](https://youtu.be/_8gcT7_o84U)
 
@@ -195,7 +195,7 @@ similar to mathematical functions) and lists (a way of holding data).
 
    Experiment with changing what the `say_hi` function says.
 
-5. **Tickable** Functions with variables.
+5. **TICKABLE** Functions with variables.
 
    [A video describing the concept.](https://youtu.be/S-pzofb4Ok0)
 
@@ -375,7 +375,7 @@ similar to mathematical functions) and lists (a way of holding data).
 
    $$T_n=\frac{n(n+1)}{2}$$
 
-9. **Tickable** Use code to check that the following relationship is true:
+9. **TICKABLE** Use code to check that the following relationship is true:
 
    $$\sum_{i=0}^{n}T_i=\frac{n(n+1)(n+2)}{6}$$
 

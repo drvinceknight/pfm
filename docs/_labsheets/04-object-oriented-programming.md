@@ -12,7 +12,7 @@ learn how to create our own objects (what this means become clear).
 
 These questions aim to show you the basic building blocks of programming
 
-1. **Tickable** Writing a class.
+1. **TICKABLE** Writing a class.
 
    [A video describing the concept.](https://youtu.be/-58By9KGWX4)
 
@@ -66,7 +66,7 @@ These questions aim to show you the basic building blocks of programming
 
    **Experiment with building an instance of the Student class.**
 
-2. **Tickable** Attributes
+2. **TICKABLE** Attributes
 
    [A video describing the concept.](https://youtu.be/TDErnRv0SP8)
 
@@ -123,7 +123,7 @@ These questions aim to show you the basic building blocks of programming
 
    **Create instances with attributes and experiment with them.**
 
-3. **Tickable** Methods
+3. **TICKABLE** Methods
 
    [A video describing the concept.](https://youtu.be/dKS18fQVPxY)
 
@@ -185,7 +185,7 @@ These questions aim to show you the basic building blocks of programming
 
    **Create instances of the Student class with these new methods.**
 
-4. **Tickable** Inheritance
+4. **TICKABLE** Inheritance
 
    [A video describing the concept.](https://youtu.be/f3Wh4MDEog8)
 
@@ -407,7 +407,7 @@ These questions aim to show you the basic building blocks of programming
    Include a method for adding two quadratic expressions together and also a
    method to calculate the roots of the expression.
 
-8. **Tickable** The data file
+8. **TICKABLE** The data file
    [W05_D01.csv]({{site.baseurl}}/assets/Data/W05_D01.csv) contains data
    corresponding to quadratic expression of the form:
 
