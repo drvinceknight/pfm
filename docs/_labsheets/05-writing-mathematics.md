@@ -421,3 +421,10 @@ A typesetting language is a language that requires the user to write code that i
     [Video hint (SageMathCloud)](http://youtu.be/d61T_y917DE)
 
     [Video hint (overleaf)](http://youtu.be/L3KGl2vn_iA)
+
+# Further resources
+
+- [Tutorial by PhD student Geraint
+  Palmer](http://www.geraintianpalmer.org.uk/teaching/latex-refresher/)
+- [Welsh version of tutorial by PhD student Geraint
+  Palmer](http://www.geraintianpalmer.org.uk/teaching/latex-refresher-cy/)
