@@ -27,6 +27,10 @@ These questions aim to show you the basic building blocks of programming
 
 1. **TICKABLE** Exact valued computations.
 
+   [A video describing the concept.](https://youtu.be/e-6qilg49lg)
+
+   [A video demo.](https://youtu.be/vJqdoufgeXE)
+
    Using python we can calculate the square root and trigonometric values of
    numbers (we do this by importing the `math` library)::
 
@@ -88,6 +92,10 @@ These questions aim to show you the basic building blocks of programming
 
 2. **TICKABLE** Manipulating natural numbers.
 
+   [A video describing the concept.](https://youtu.be/Do3Q4LRK4OQ)
+
+   [A video demo.](https://youtu.be/g-OCIVmkncg)
+
    As well as exact numerics as described above, SymPy can also be used to
    explore the factors and primality of a number.
 
@@ -109,6 +117,10 @@ These questions aim to show you the basic building blocks of programming
    **Repeat the above example with a different value of `N`.**
 
 3. **TICKABLE** Creating a symbolic variable.
+
+   [A video describing the concept.](https://youtu.be/xIpogoDTIC4)
+
+   [A video demo.](https://youtu.be/4fZwmYR_VkI)
 
    Using SymPy it is possible to carry out symbolic computations. To do this we
    need to creates instances of the SymPy Symbols class. We do this using the
@@ -145,6 +157,10 @@ These questions aim to show you the basic building blocks of programming
 
 4. **TICKABLE** Manipulating symbolic expressions.
 
+   [A video describing the concept.](https://youtu.be/7pUftAtK1Pg)
+
+   [A video demo.](https://youtu.be/fMEvfn3uaBU)
+
    We can substitute values in to our symbolic expressions:
 
    ```python
@@ -179,6 +195,10 @@ These questions aim to show you the basic building blocks of programming
    **Experiment with other expressions and `expand`/`simplify`.**
 
 5. **TICKABLE** Solving equations.
+
+   [A video describing the concept.](https://youtu.be/QnwEgAOCZDk)
+
+   [A video demo.](https://youtu.be/OeeH04lYoxg)
 
    Sympy has the ability to solve equations. For example let us solve the
    following quadratic:
@@ -238,6 +258,10 @@ These questions aim to show you the basic building blocks of programming
    **Experiment with solving different equations.**
 
 6. **Worked example**
+
+   [A video describing the concept.](https://youtu.be/kdcjdCU7S2c)
+
+   [A video demo.](https://youtu.be/smJEZBd45FE)
 
    In this example we are going to investigate the claim that the following
    polynomial expression can be used to generate primes:
