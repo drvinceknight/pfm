@@ -346,7 +346,7 @@ These questions aim to show you the basic building blocks of programming
    Use this and the work done in question 7 to try and explain why
    \\(n^2-79n+1601\\) gives primes for \\(0\leq n \leq 79\\).
 
-9. Solve the following equations (for \\(x\\):
+9. Solve the following equations (for \\(x\\)):
 
    1. \\(x^2=−1\\)
    2. \\(x^2−53x+2a=0\\)
