@@ -362,8 +362,8 @@ These questions aim to show you the basic building blocks of programming
        look in to options that can be passed to `symbols` for this).
 
 11. Use SymPy to write the first \\(10^6\\) prime numbers to file. Compare this
-    file to [primes.csv]({{site.baseurl}}/assets/data/primes.csv) (not by hand!)
-    and check that it is the same.
+    file to `primes.csv` ([download]({{site.baseurl}}/assets/data/primes.csv))
+    (not by hand!) and check that it is the same.
 
 # Further resources
 

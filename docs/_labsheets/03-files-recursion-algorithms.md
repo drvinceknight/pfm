@@ -267,9 +267,10 @@ These questions aim to show you the basic building blocks of programming
 
    You can use the factorial function we defined in this lab sheet (question 1) or you   can use the `math` library: `math.factorial`.
 
-8. The file [primes.csv]({{site.baseurl}}/assets/data/primes.csv) contains the
-   first million prime numbers. Use it to attempt to verify
-   [Goldbach's conjecture](https://en.wikipedia.org/wiki/Goldbach%27s_conjecture).
+8. The file `primes.csv` ([download]({{site.baseurl}}/assets/data/primes.csv))
+   contains the first million prime numbers. Use it to attempt to verify
+   [Goldbach's
+   conjecture](https://en.wikipedia.org/wiki/Goldbach%27s_conjecture).
 
 9. Python has it's own functions to sort a list. This question investigates how
    one of those algorithms works.
