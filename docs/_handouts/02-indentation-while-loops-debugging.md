@@ -1,8 +1,8 @@
 ---
 layout     : post
 categories : 2016-2017
-title      : "2016-2017: Indentation, while loops, debugging (and crashing
-Jupyter)"
+title      : "2016-2017: Handout 02 - Indentation, while loops, debugging (and
+crashing Jupyter)"
 comments   : true
 ---
 
