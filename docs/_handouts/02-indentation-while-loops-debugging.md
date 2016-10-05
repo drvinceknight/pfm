@@ -80,7 +80,7 @@ So far, we have mainly used `while` loops to repeat an action whilst
 incrementing a given variable. In fact `while` loops can be used to repeat
 actions until **any** boolean condition is no longer true.
 
-In the next lab session we will see the use of our first 'library'. These are
+In future lab sessions we will see the use of 'libraries'. These are
 parts of python that can be loaded in and used as necessary. To illustrate the
 above point we're going to make use of the `random` library which can be used to
 get random numbers.
