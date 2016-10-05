@@ -5,13 +5,15 @@ import matplotlib
 
 matplotlib.use('Agg')
 
+directories = ["./_labsheets", "./_handouts"]
 
 def load_tests(loader, tests, ignore):
-    for root, dirs, files in os.walk("./_labsheets"):
-        for f in files:
-            if f.endswith(".md"):
-                 tests.addTests(doctest.DocFileSuite(os.path.join(root, f),
-                                                  optionflags=doctest.ELLIPSIS))
+    for directory in directories:
+        for root, dirs, files in os.walk(directory):
+            for f in files:
+                if f.endswith(".md"):
+                     tests.addTests(doctest.DocFileSuite(os.path.join(root, f),
+                                                      optionflags=doctest.ELLIPSIS))
 
     return tests
 
