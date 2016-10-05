@@ -1,7 +1,7 @@
 ---
 layout     : post
 categories : 2016-2017
-title      : "2016-2017: Handout 1 - What you need to know"
+title      : "2016-2017: Handout 01 - What you need to know"
 comments   : true
 ---
 
