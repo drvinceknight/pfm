@@ -37,6 +37,9 @@ read try and surround it in between 3 ticks: `. You can read more about
 formatting markdown here:
 [gitter.zendesk.com/hc/en-us/articles/200176682-Markdown-basics](https://gitter.zendesk.com/hc/en-us/articles/200176682-Markdown-basics)
 
+**Commmenting and naming variables is important**: take a look at how I have
+done this in the solutions.
+
 ## Indentation is important in Python
 
 The levels at which Python indents things is important. This helps creates

@@ -158,6 +158,9 @@ similar to mathematical functions) and lists (a way of holding data).
 
    $$\{n \in S \;| \text{ if } n \text{ is divisible by  2}\}$$
 
+   (This is mathematical notation for "the set of all things in \\(S\\) that are
+   divisible by 2".)
+
    ```python
    >>> sum([n for n in favourite_numbers if n % 2 == 0])
    -88

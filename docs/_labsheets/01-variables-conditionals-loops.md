@@ -333,7 +333,8 @@ These questions aim to show you the basic building blocks of programming
 
    for \(n=20\).
 
-8. **TICKABLE** Modify **the above** to check it for all values less than 2000.
+8. **TICKABLE** Modify **the above** (Q7) to check it for all values less than
+   2000.
 
 9. Calculates the sum of the first natural numbers less than 1000 that are not
    divisible by 3.
