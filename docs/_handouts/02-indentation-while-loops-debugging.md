@@ -3,7 +3,7 @@ layout     : post
 categories : 2016-2017
 title      : "2016-2017: Indentation, while loops, debugging (and crashing
 Jupyter)"
-comments   : false
+comments   : true
 ---
 
 Lecturer: Vince Knight
