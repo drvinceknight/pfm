@@ -387,7 +387,7 @@ similar to mathematical functions) and lists (a way of holding data).
    numbers?
 
 11. Investigate the use of the python `random` library. Use this to simulate the
-    [Monty hall](https://en.wikipedia.org/wiki/Monty_Python):
+    [Monty hall problem](https://en.wikipedia.org/wiki/Monty_Python):
 
     - Write a function that simulates the play of the game when you 'stick' with
       the initial choice.
