@@ -336,7 +336,7 @@ These questions aim to show you the basic building blocks of programming
    finding roots of equations) and use it to solve the following equation (try
    and solve it using SymPy first):
 
-   $$sin(x)=x−1$$
+   $$\sin(x)=x−1$$
 
    Here is a similar example (finding the solution to \\(x^2=9\\), which we
    could of course do exactly):
