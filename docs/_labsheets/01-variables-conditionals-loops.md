@@ -374,5 +374,4 @@ These questions aim to show you the basic building blocks of programming
 
 # Solutions
 
-You can find the solutions here:
-[gist.github.com/drvinceknight/ccb740d54f68fc3df33a18d1c866af87](https://gist.github.com/drvinceknight/ccb740d54f68fc3df33a18d1c866af87)
+[Solutions available.](https://gist.github.com/drvinceknight/ccb740d54f68fc3df33a18d1c866af87)
