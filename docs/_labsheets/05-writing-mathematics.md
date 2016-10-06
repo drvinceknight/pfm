@@ -428,3 +428,5 @@ A typesetting language is a language that requires the user to write code that i
   Palmer](http://www.geraintianpalmer.org.uk/teaching/latex-refresher/)
 - [Welsh version of tutorial by PhD student Geraint
   Palmer](http://www.geraintianpalmer.org.uk/teaching/latex-refresher-cy/)
+- [Overleaf introduction to LaTeX
+  course](https://www.overleaf.com/latex/learn/free-online-introduction-to-latex-part-1#.V_YAM5MrJWc)
