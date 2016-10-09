@@ -11,6 +11,10 @@ In this lab sheet we will see how to carry out basic aspects of Calculus
 
 1. **TICKABLE** Calculating limits.
 
+   [A video describing the concept.](https://youtu.be/hJ4MSWx-EhU)
+
+   [A video demo.](https://youtu.be/5cjxM38yoCY)
+
    It is possible to calculate limits easily with SymPy. Let us consider the
    following function as a running example:
 
@@ -65,6 +69,10 @@ In this lab sheet we will see how to carry out basic aspects of Calculus
 
 2. **TICKABLE** Differentiation.
 
+   [A video describing the concept.](https://youtu.be/-03PrW-S_-w)
+
+   [A video demo.](https://youtu.be/EDv2eEH47J0)
+
    We can use SymPy to carry out differentiation:
 
    ```python
@@ -114,6 +122,10 @@ In this lab sheet we will see how to carry out basic aspects of Calculus
 
 3. **TICKABLE** Integration.
 
+   [A video describing the concept.](https://youtu.be/w9RpnPGR4O0)
+
+   [A video demo.](https://youtu.be/viGfOqV6qiA)
+
    As well as differentiation it is possible to carry out integration.
 
    We can do both definite and indefinite integrals:
@@ -150,6 +162,10 @@ In this lab sheet we will see how to carry out basic aspects of Calculus
    **Experiment with integrating other functions.**
 
 4. **TICKABLE** Plotting. It is possible to use SymPy to create plots.
+
+   [A video describing the concept.](https://youtu.be/ue9BBmvS7zw)
+
+   [A video demo.](https://youtu.be/g-aWhcFqnec)
 
    To view these in jupyter we need to run this line:
 
@@ -207,6 +223,10 @@ In this lab sheet we will see how to carry out basic aspects of Calculus
    **Attempt to create plots of other functions.**
 
 5. **Worked example**
+
+   [A video describing the concept.](https://youtu.be/RZFC6kHapuY)
+
+   [A video demo.](https://youtu.be/7PhZKOkZPiY)
 
    We are going to use the above to attempt to find and classify all points of
    inflection for the following quartic function:
