@@ -334,27 +334,3 @@ In this lab sheet we will see how to carry out basic aspects of Calculus
    2. Compute \\(\frac{f(x+h)-f(x)}{h}\\);
    3. Compute the above limit as \\(h\to 0\\) and verify that this is the
       derivative of \\(f\\).
-
-
-10. A probability density function \\(f(x)\\) gives the probability of a random event \\(x\\). One such function, that corresponds to the exponential distribution is given by:
-
-    $$f(x)=\begin{cases}
-        \lambda e^{- \lambda x}&,\text{ for }x\geq 0\\
-        0&,\text{ otherwise}
-      \end{cases}$$
-
-    1. Prove that the probability of all events occuring is 1 (you will need to integrate).
-    2. Obtain the cumulative distribution function, defined by:
-
-       $$F(x) = \int_{-\infty}^{x}f(t)\,dt$$
-
-    Repeat this with the following probability distribution functions:
-
-    1. Normal distribution: \\(f(x)=\frac{1}{\sqrt{2\sigma^2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\\)
-    2. The Logistic distribution: \\(f(x)=\frac{e^{\frac{x-\mu}{s}}}{s\left(1+e^{\frac{x-\mu}{s}}\right)^2}\\)
-
-# Further resources
-
-- [A SymPy tutorial given by some SymPy
-  developers](https://www.youtube.com/watch?v=AqnpuGbM6-Q)
-- [The SymPy documentation](http://docs.sympy.org/dev/index.html)
