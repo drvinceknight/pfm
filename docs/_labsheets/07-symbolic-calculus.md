@@ -320,8 +320,7 @@ In this lab sheet we will see how to carry out basic aspects of Calculus
 
    $$\lim_{x\to a}[f(x)/g(x)]=\lim_{x\to a}f(x) / \lim_{x\to a}g(x) \text{ if } \lim_{x\to a}g(a)\ne 0$$
 
-   Confirm these for generic functions \\(f\\) and \\(g\\) but also for the
-   following particular examples:
+   Confirm these for the following particular examples:
 
     $$f(x) = x^2 + x$$
 
