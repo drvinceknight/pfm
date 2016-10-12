@@ -192,7 +192,7 @@ These questions aim to show you the basic building blocks of programming
 
    Where \\(\phi\\) is the golden ratio:
 
-   $$\phi = \frac{1 - \sqrt{5}}{2}$$
+   $$\phi = \frac{1 + \sqrt{5}}{2}$$
 
    Let us use the recursive function to verify that this formula is correct for
    the first 200 values of \\(n\\):
