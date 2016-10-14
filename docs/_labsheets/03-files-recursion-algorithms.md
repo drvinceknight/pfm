@@ -342,8 +342,10 @@ These questions aim to show you the basic building blocks of programming
   Recursion](https://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Recursion):
 - [A nice tutorial from The Python
   Course on recursion](http://www.python-course.eu/recursive_functions.php)
+- [A short blog post by John Cook about
+  recursion](http://www.johndcook.com/blog/2010/03/30/understanding-recursion/)
 - [Reading and writing csv files with the csv library](https://pymotw.com/3/csv/)
-- [Docuentation for the caching function available in Python
+- [Documentation for the caching function available in Python
   3](https://docs.python.org/3/library/functools.html#functools.lru_cache)
 - [Insertion sort in
   Python](http://interactivepython.org/runestone/static/pythonds/SortSearch/TheInsertionSort.html)
