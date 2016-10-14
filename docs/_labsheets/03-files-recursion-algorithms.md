@@ -195,7 +195,7 @@ These questions aim to show you the basic building blocks of programming
    $$\phi = \frac{1 + \sqrt{5}}{2}$$
 
    Let us use the recursive function to verify that this formula is correct for
-   the first 200 values of \\(n\\):
+   the first 30 values of \\(n\\):
 
    ```python
    >>> import math  # This is a library that has various helpful function
