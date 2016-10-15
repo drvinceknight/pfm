@@ -188,7 +188,7 @@ These questions aim to show you the basic building blocks of programming
 
    It can be shown that the Fibonacci sequence can also be given by:
 
-   $$f(n) = \frac{\phi^{(n + 1)} + (-\phi)^{-(n + 1)}}{\sqrt{5}}$$
+   $$f(n) = \frac{\phi^{(n + 1)} - (-\phi)^{-(n + 1)}}{\sqrt{5}}$$
 
    Where \\(\phi\\) is the golden ratio:
 
