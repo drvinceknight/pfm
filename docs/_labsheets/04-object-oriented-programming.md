@@ -477,3 +477,6 @@ These questions aim to show you the basic building blocks of programming
   example](http://inventwithpython.com/blog/2014/12/02/why-is-object-oriented-programming-useful-with-an-role-playing-game-example)
 - [A video about classed suggested by a student
   tutor](https://www.youtube.com/watch?v=trOZBgZ8F_c)
+- [The documentation for the csv
+  library](https://docs.python.org/2/library/csv.html)
+- [A video about reading csv files](https://www.youtube.com/watch?v=jQ9aDyBWCXI)
