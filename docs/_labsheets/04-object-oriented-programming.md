@@ -451,7 +451,7 @@ These questions aim to show you the basic building blocks of programming
     Note that the above uses the following equation for a circle centred at
     \\((0,0)\\) of radius \\(r\\):
 
-    $$x^2+y^22≤r^2$$
+    $$x^2+y^2≤r^2$$
 
     To approximate \\(P\\) simply create \\(N=1000\\) instances of Drops and
     count the number of those that are in the circle.  Use this to approximate
