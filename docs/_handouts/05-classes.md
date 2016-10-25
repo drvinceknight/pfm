@@ -107,10 +107,10 @@ Now, let us create Linear expressions for each pair of coefficients:
 Finally let us count the ones that have a root:
 
 ```python
->>> linear_expns_with_root = [exp for exp in linear_exps if exp.root() is not False]
->>> linear_expns_with_root
+>>> linear_exps_with_root = [exp for exp in linear_exps if exp.root() is not False]
+>>> linear_exps_with_root
 [Linear expression: 4x + 6, Linear expression: 2x + -2]
->>> len(linear_expressions_with_root)
+>>> len(linear_exps_with_root)
 2
 
 ```
