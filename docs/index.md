@@ -18,6 +18,12 @@ School of Mathematics at Cardiff University.
 - [{{handout.title}}]({{ handout.url | prepend: site.baseurl }})
 {% endfor %}
 
+# Assessment
+
+{% for assessment in site.assessment %}
+- [{{assessment.title}}]({{ assessment.url | prepend: site.baseurl }})
+{% endfor %}
+
 # Help
 
 - [Chat room](https://gitter.im/computing-for-mathematics/Lobby).
