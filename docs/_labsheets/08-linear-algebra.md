@@ -311,7 +311,7 @@ In this lab sheet we will learn how to use Python to study linear algebra.
    \\(i+1\\) always equal to £5.
 
    (For the last pairing we have that the contribution of business person
-   \\(N\\) and half of that of business person \\(0\\) is £5.
+   \\(N\\) and half of that of business person \\(0\\) is £5).
 
    What is the contribution of each player and what is the total contribution
    for \\(N=50\\)?

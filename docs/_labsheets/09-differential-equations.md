@@ -162,9 +162,9 @@ The final topic that we will consider is the study of differential equations.
 5. Find the general solutions to the following 4 differential equations:
 
    1. \\(\frac{dy}{dx}-6y=3e^x\\)
-   2. \\(\frac{dy}{dx}+\frac{x(2y-3)}{x^2+1}=\sin(x)\\)
+   2. \\(\frac{dy}{dx}+\frac{x(2x-3)}{x^2+1}=\sin(x)\\)
    3. \\(\frac{d^2y}{dx^2}-y=\sin(5x)\\)
-   4. \\(\frac{d^2y}{dx^2}+2\frac{dy}{dx}+2y=\cosh(x)\\)
+   4. \\(\frac{d^2y}{dx^2}+2\frac{dy}{dx}+2x=\cosh(x)\\)
 
 6. **TICKABLE** For each of the differential equations from question 5, obtain
    particular solutions with the corresponding conditions **and plot** the
@@ -174,6 +174,9 @@ The final topic that we will consider is the study of differential equations.
    2. \\(y(0)=4\\)
    3. \\(y(3)=1, y'(3)=0\\)
    4. \\(y(1)=2, y'(1)=72\\)
+
+   (Hint: to be able to solve the systems of linear equations for 3 and 4 you
+   can use linear algebra or perhaps look at the `sympy` function: `linsolve`.)
 
 7. The love story between Romeo and Juliet can be modelled with the
    following system of differential equations:
