@@ -10,7 +10,18 @@ A typesetting language is a language that requires the user to write code that i
 
 ![]({{site.baseurl}}/assets/Images/W10-img01.png)
 
-01. **TICKABLE**  Open up TeXworks which should open a blank document **or use the cloud based services described at the bottom of this question**. Write the following LaTeX code:
+For this lab sheet you can either install LaTeX (use
+[MikTeX](http://miktex.org/) on windows and
+[MacTeX](https://tug.org/mactex/) on OS X), or use one of the following two
+cloud based solutions:
+
+- [overleaf.com](https://www.overleaf.com/)
+- [cloud.sagemath](https://cloud.sagemath.com/)
+
+Sometimes installing LaTeX can be tricky, if you're having difficulties I
+suggest using one of the cloud based solutions.
+
+01. **TICKABLE**  Write the following LaTeX code:
 
         \documentclass{article}
 
@@ -18,21 +29,21 @@ A typesetting language is a language that requires the user to write code that i
         Hello, world!
         \end{document}
 
+    If you are using LaTeX installed on your machine (and not a cloud based
+    system) then make sure you are compiling with "pdfLaTeX", with TeXworks (1
+    editor that comes bundled with the mentioned installs) this
+    works as follows:
+
     1. Save this document.
     2. Ensure the dropdown window has "pdfLaTeX" selected.
     3. Click on the green arrow (ctrl+T) to _compile_ this document which creates a pdf corresponding to your code.
 
     ![]({{site.baseurl}}/assets/Screenshots/W10-S01.png)
 
+    If you are using a cloud based system then this is automatically taken care
+    of.
+
     **This is the most basic of LaTeX documents, everything else you do using LaTeX will be done through writing code in your TeX file.**
-
-    There exists some good cloud based solutions to LaTeX including [SageMathCloud](https://cloud.sagemath.com/). The advantages of these are usually:
-
-    1. No local install of LaTeX needed;
-    2. Often possible to have multiple authors collaborating on a document **at the same time**;
-    3. Your files are always available to you.
-
-    The main disadvantage is that you need an internet collection to use it. Another good cloud based LaTeX solution is [www.overleaf.com/](https://www.overleaf.com/). Feel free to either use TeXworks, SageMathCloud or overleaf throughout your learning of LaTeX.
 
     [Video hint (SageMathCloud)](http://youtu.be/fHC5AS8r7-o)
 
