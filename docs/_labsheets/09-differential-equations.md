@@ -104,7 +104,7 @@ The final topic that we will consider is the study of differential equations.
    **Experiment with solving a modified version of the differential equations
    considered here.**
 
-4. **Worked example**: Solving and visualising the solution of a differential
+4. **TICKABLE: Worked example**: Solving and visualising the solution of a differential
    equation.
 
    Let us solve the following differential equation:
@@ -166,7 +166,7 @@ The final topic that we will consider is the study of differential equations.
    3. \\(\frac{d^2y}{dx^2}-y=\sin(5x)\\)
    4. \\(\frac{d^2y}{dx^2}+2\frac{dy}{dx}+2x=\cosh(x)\\)
 
-6. **TICKABLE** For each of the differential equations from question 5, obtain
+6. For each of the differential equations from question 5, obtain
    particular solutions with the corresponding conditions **and plot** the
    solutions.
 

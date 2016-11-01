@@ -257,7 +257,7 @@ These questions aim to show you the basic building blocks of programming
 
    **Experiment with solving different equations.**
 
-6. **Worked example**
+6. **TICKABLE: Worked example**
 
    [A video describing the concept.](https://youtu.be/kdcjdCU7S2c)
 
@@ -339,7 +339,7 @@ These questions aim to show you the basic building blocks of programming
 
    $$p_2(n) = n^2-n+41$$
 
-8. **TICKABLE** Use SymPy to verify that:
+8. Use SymPy to verify that:
 
    $$n^2 -79n+1601 = (n - 40) ^ 2 + (n - 40) + 41$$
 

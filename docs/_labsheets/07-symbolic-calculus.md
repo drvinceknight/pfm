@@ -222,7 +222,7 @@ In this lab sheet we will see how to carry out basic aspects of Calculus
 
    **Attempt to create plots of other functions.**
 
-5. **Worked example**
+5. **TICKABLE: Worked example**
 
    [A video describing the concept.](https://youtu.be/RZFC6kHapuY)
 
@@ -309,7 +309,7 @@ In this lab sheet we will see how to carry out basic aspects of Calculus
    Identify the roots and limits (at \\(\pm\infty\\)) of the function and
    confirm this with a plot.
 
-7. **TICKABLE** For the function of question 6, identify and classify all points
+7. For the function of question 6, identify and classify all points
    of inflection.
 
 8. There are various algebraic relationships on limits:

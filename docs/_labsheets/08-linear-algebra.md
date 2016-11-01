@@ -226,7 +226,7 @@ In this lab sheet we will learn how to use Python to study linear algebra.
    **For the various matrices you have experimented with, calculate the
    determinant.**
 
-6. **Worked example**: Large linear system.
+6. **TICKABLE: Worked example**: Large linear system.
 
    Let us consider the following hypothetical problem. A set of \\(N\\) business
    people who agree **together** to invest in a company. The first business
@@ -316,7 +316,7 @@ In this lab sheet we will learn how to use Python to study linear algebra.
    What is the contribution of each player and what is the total contribution
    for \\(N=50\\)?
 
-8. **TICKABLE** Modify the problem of question 7 with the assumption that the
+8. Modify the problem of question 7 with the assumption that the
    contributions are now made by triplets of players so that:
    business person \\(i\\) and **half** of the contribution of business person
    \\(i+1\\), and **a third** of the contributions of business person \\(i+2\\)
