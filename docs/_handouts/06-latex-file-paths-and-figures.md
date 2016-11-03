@@ -1,7 +1,7 @@
 ---
 layout     : post
 categories : 2016-2017
-title      : "2016-2017: File paths, formatting, floating figures"
+title      : "2016-2017: Handout 06 - File paths, formatting, floating figures."
 comments   : true
 ---
 
@@ -45,47 +45,21 @@ Good practice:
 
   This helps keep your directory tidy.
 
-## Page formatting
+## Bibliographies
 
-The following in your 'preamble' (before the `\begin{document}`) will use up the full page:
+Some difficulties occurred when using bibliographies. These usually were caused
+by 1 of the following errors:
 
-    \usepackage{fullpage}
-    \usepackage{parskip}
+- Not writing the correct code (wrong file name etc.).
+- Not deleting the auxiliary files.
 
-There are other ways to change the layout of a LaTeX page: [http://en.wikibooks.org/wiki/LaTeX/Page_Layout](http://en.wikibooks.org/wiki/LaTeX/Page_Layout).
+The first situation will happen and it's nothing to worry about, as you gain
+more experience you will recognise small errors sooner.
 
-## Floating figures
-
-We can include figures and tables in LaTeX using:
-
-    \begin{figure}
-    \begin{center}
-    \includegraphics{...}
-    \end{center}
-    \end{figure}
-
-    \begin{table}
-    \begin{tabular}
-    \begin{center}
-    ...
-    \end{center}
-    \end{tabular}
-    \end{table}
-
-Figures and Tables _move_ in LaTeX, ie if we put them in some specific place in the code they potentially do not appear there in the pdf. This is called _floating_.
-
-In general 'trust' LaTeX to put them in the correct place and refer to figure and tables using `\ref` and `\label`.
-
-LaTeX places these things in such a way as to format documents in an esthetically pleasing way. You can pass certain options to LaTeX to get it to ignore certain constraints:
-
-- `h` indicates that it can place the float inline;
-- `t` indicates that it can place the float in the top area;
-- `b` indicates that it can place the float in the bottom area;
-- `p` indicates that it can place the float on a float page or column area;
-- `!` indicates that further constraints can be ignored.
-
-In practice this means, use:
-
-    \begin{figure}[!htbp]
-
-Take a look at this writeLaTeX [http://goo.gl/k83ZHi](http://goo.gl/k83ZHi) template to play around with this.
+The second situation is because of how LaTeX compiles documents: it needs to
+create auxiliary files to be able to build the bibliography (it keeps track of
+where things go). If you've made a slight error then some of those auxiliary
+files will need to be deleted. If you're using overleaf this takes care of
+itself, if you're using a local install or cloud.sagemath you'll need to
+manually delete these (there is, depending on your system, usually an option to
+do this).
