@@ -2,7 +2,7 @@
 layout     : post
 categories : 2016-2017
 title      : "2016-2017: File paths, formatting, floating figures"
-comments   : false
+comments   : true
 ---
 
 Lecturer: Vince Knight
