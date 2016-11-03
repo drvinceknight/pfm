@@ -7,7 +7,7 @@ title  : Individual Coursework (Welsh instructions)
 
 ## Cyfarwyddiadau
 
-Ysgrifennwch adroddiad 3 tudalen ar bwnc mathemategol. Ystyriwch gynulleidfa targed eich adroddiad i fod yn fyfyrwyr mathemateg blwyddyn gyntaf sydd eisiau dysgu'r pwnc. Rhaid ysgrifennu eich adroddiad yn LaTeX a rhaid iddo ddefnyddio agweddau cyfrifiadureg (Python ac/neu Sage) i ddangos y pwnc.
+Ysgrifennwch adroddiad 3 tudalen ar bwnc mathemategol. Ystyriwch gynulleidfa targed eich adroddiad i fod yn fyfyrwyr mathemateg blwyddyn gyntaf sydd eisiau dysgu'r pwnc. Rhaid ysgrifennu eich adroddiad yn LaTeX a rhaid iddo ddefnyddio agweddau cyfrifiadureg (Python) i ddangos y pwnc.
 
 *Anogir i chi ddewis pwnc eich hun*, os ydych yn gwneud hyn rydw i'n awgrymu gwirio gyda fi (Vince Knight) bod y pwnc yn un addas. Os nad ydych yn gallu dewis pwnc dewiswch un o'r canlynol:
 
@@ -16,7 +16,7 @@ Ysgrifennwch adroddiad 3 tudalen ar bwnc mathemategol. Ystyriwch gynulleidfa tar
 - Datrys hafaliadau differol,
 - Digwyddiadau ar hap yn nhebygolrwydd.
 
-Anogir i chi cynnwys y cod fel atodiad (os ydych yn defnyddio Sage, mae cynnwys linc i'r daflen gyhoeddedig yn iawn).
+Anogir i chi cynnwys y cod fel atodiad.
 
 
 ## Cynllun marcio
@@ -40,11 +40,16 @@ Defnyddir y cynllun marcio canlynol:
 
 
 ## Enghraifft
+
+Yn blynyddoedd blaenorol defnyddwyd iaith mathemategol Sage (wedi'i ysgrifennu mewn Python) o wythnosau 6 i 11, felly mar rhai o'r esiamplau gwaith cwrs yn cynnwys Sage. **Anwybyddwch ochr yna o'r esiamplau canlynol**:
+
 Mae ateb enghreifftiol ar gael [fan
 hyn](https://www.overleaf.com/latex/templates/deall-y-deilliad/dcbnhxdqkttr#.VkRfB9_hBWc).
 
 Mae sut fyddai'r ateb enghreifftiol wedi cael ei farcio [fan
 hyn](https://www.overleaf.com/read/fcrbxxqmqbmw).
+
+[Casgliad o enghraifftiau o blynyddoedd blaenorol (yn amal yn defnyddio Sage yn lle Python).](http://vknight.org/Computing_for_mathematics/Assessment/IndividualCoursework/PastCourseWorks/)
 
 
 
