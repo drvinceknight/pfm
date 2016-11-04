@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "2016-2017 class test"
-comments: false
+comments: true
 ---
 
 This is an example class test. The instructions on the first page of the class
