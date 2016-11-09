@@ -394,3 +394,8 @@ These questions aim to show you the basic building blocks of programming
 - [A SymPy tutorial given by some SymPy
   developers](https://www.youtube.com/watch?v=AqnpuGbM6-Q)
 - [The SymPy documentation](http://docs.sympy.org/dev/index.html)
+
+# Solutions
+
+[Solutions
+available.](https://gist.github.com/drvinceknight/af2b6a8e743503bce80233f8576b661f)
