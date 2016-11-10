@@ -61,7 +61,7 @@ Python).](http://vknight.org/Computing_for_mathematics/Assessment/IndividualCour
 ## Submitting
 
 Deadline for this work to be handed in is *1300 Thursday of Week 11 (8th of
-Decemember)*.
+December)*.
 
 To submit you will use [learning central](https://learningcentral.cf.ac.uk).
 Find the module **"MA1003 Computing For Mathematics "**, within there find the
