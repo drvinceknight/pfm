@@ -10,6 +10,10 @@ The final topic that we will consider is the study of differential equations.
 
 1. **TICKABLE** Solving differential equations.
 
+   [A video describing the concept.](https://youtu.be/FGv5-AnyXDI)
+
+   [A video demo.](https://youtu.be/tLwmMUZGIxU)
+
    We can use SymPy to solve differential equations. For example:
 
    $$\frac{dy}{dx}=y$$
@@ -55,6 +59,10 @@ The final topic that we will consider is the study of differential equations.
 
 2. **TICKABLE** Higher order differential equations.
 
+   [A video describing the concept.](https://youtu.be/yDr0Fwiu-Tc)
+
+   [A video demo.](https://youtu.be/DjYHy2qOXGw)
+
    We can also solve higher order differential equations. For example, the
    following can be used to model the position of a mass on a spring:
 
@@ -72,6 +80,10 @@ The final topic that we will consider is the study of differential equations.
    considered here.**
 
 3. **TICKABLE** Systems of differential equations.
+
+   [A video describing the concept.](https://youtu.be/FTSKHQJKzzg)
+
+   [A video demo.](https://youtu.be/Q_XVeh9yWUI)
 
    We can solve systems of differential equations like the following:
 
@@ -106,6 +118,10 @@ The final topic that we will consider is the study of differential equations.
 
 4. **TICKABLE: Worked example**: Solving and visualising the solution of a differential
    equation.
+
+   [A video describing the concept.](https://youtu.be/S3GsOrh8FpE)
+
+   [A video demo.](https://youtu.be/MvWkpqc41bI)
 
    Let us solve the following differential equation:
 

@@ -8,9 +8,14 @@ In this lab sheet we will learn how to use Python to study linear algebra.
 
 **Building blocks**
 
-1. **TICKABLE** Linear algebra is the study of systems of linear equations. Many
-   mathematical problems reduce to solving systems of linear equations. Here is
-   one such system that we will use as a running example:
+1. **TICKABLE** Linear algebra is the study of systems of linear equations.
+
+   [A video describing the concept.](https://youtu.be/ojfhNuRK0mE)
+
+   [A video demo.](https://youtu.be/Pt-sJlIkYps)
+
+    Many mathematical problems reduce to solving systems of linear equations.
+    Here is one such system that we will use as a running example:
 
    $$\begin{cases}
    5\alpha+\beta-\gamma=0\\
@@ -75,6 +80,10 @@ In this lab sheet we will learn how to use Python to study linear algebra.
 
 2. **TICKABLE** Manipulating matrices.
 
+   [A video describing the concept.](https://youtu.be/6wWZbnDLn94)
+
+   [A video demo.](https://youtu.be/0yqDUePX_gg)
+
    It is possible to add two matrices together, this corresponds to adding each
    corresponding element:
 
@@ -121,7 +130,14 @@ In this lab sheet we will learn how to use Python to study linear algebra.
 
    **Modify the code here to try multiplying different matrices together.**
 
-3. **TICKABLE** As we have matrix multiplication, that implies that there will
+3. **TICKABLE** Identity matrix.
+
+
+   [A video describing the concept.](https://youtu.be/UkxqUA_B9x8)
+
+   [A video demo.](https://youtu.be/pzBbWQe54no)
+
+   As we have matrix multiplication, that implies that there will
    be an element that does not have any effect when multiplying by it. (In normal
    multiplication this is the number \\(1\\) as \\(1 \times 5 = 5\\).
 
@@ -171,7 +187,13 @@ In this lab sheet we will learn how to use Python to study linear algebra.
 
    **Experiment with the above with different matrices.**
 
-4. **TICKABLE** Related to the idea of the identity matrix is the notion of the
+4. **TICKABLE** Matrix inversion.
+
+   [A video describing the concept.](https://youtu.be/UkxqUA_B9x8)
+
+   [A video demo.](https://youtu.be/3Rlanj6GQL8)
+
+   Related to the idea of the identity matrix is the notion of the
    inverse of a matrix \\(A^{-1}\\) so that:
 
    $$AA^{-1}=I$$
@@ -212,7 +234,13 @@ In this lab sheet we will learn how to use Python to study linear algebra.
 
    **Experiment with the above.**
 
-5. **TICKABLE** Related to the inverse of a matrix (it is used for its
+5. **TICKABLE**
+
+   [A video describing the concept.](https://youtu.be/XT5il8z-ME4)
+
+   [A video demo.](https://youtu.be/ridNY00rcuw)
+
+   Related to the inverse of a matrix (it is used for its
    calculation) is called the
    [determinant](https://en.wikipedia.org/wiki/Determinant). We won't go in to
    detail about that here but this is how it is calculated:
@@ -227,6 +255,10 @@ In this lab sheet we will learn how to use Python to study linear algebra.
    determinant.**
 
 6. **TICKABLE: Worked example**: Large linear system.
+
+   [A video describing the concept.](https://youtu.be/HwSuEAB2EW8)
+
+   [A video demo.](https://youtu.be/QmEAb35HX5w)
 
    Let us consider the following hypothetical problem. A set of \\(N\\) business
    people who agree **together** to invest in a company. The first business
