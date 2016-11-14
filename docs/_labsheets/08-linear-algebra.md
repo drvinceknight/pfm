@@ -189,7 +189,7 @@ In this lab sheet we will learn how to use Python to study linear algebra.
 
 4. **TICKABLE** Matrix inversion.
 
-   [A video describing the concept.](https://youtu.be/UkxqUA_B9x8)
+   [A video describing the concept.](https://youtu.be/40cBHMzsVZA)
 
    [A video demo.](https://youtu.be/3Rlanj6GQL8)
 
