@@ -1,7 +1,7 @@
 ---
 layout     : post
 categories : 2016-2017
-title      : "2016-2017: Handout 08 - Referencing and floating figures."
+title      : "2016-2017: Handout 08 - Libraries, referencing and floating figures."
 comments   : true
 ---
 
@@ -19,6 +19,48 @@ chat: [https://gitter.im/computing-for-mathematics/Lobby](https://gitter.im/comp
 
 Using Sympy to carry out calculations relevant to Calculus: limits, derivatives,
 integrals and plotting.
+
+## Libraries
+
+Python has various libraries that comes as standard (`import math`, `import
+random` etc). With Anaconda, there are a number of other scientific libraries
+readily available to you (`import sympy`, `import numpy` etc...).
+
+There are however a **huge** number of libraries that are not included with
+Anaconda but that are readily available to you (this is one of the strengths of
+Python).
+
+To install them you can write a simple command at the command line of your
+computer:
+
+- On Mac OSX: look for "terminal";
+- On Windows: look for "command prompt".
+
+Once there simply type:
+
+```bash
+pip install <package-name>
+```
+
+Note that if you're on a university computer you need to type:
+
+```bash
+pip install --user <package-name>
+```
+
+For example, if you wanted to study queues, you could use a package called `ciw`
+which is actually written by a Cardiff University PhD student ([Geraint
+Palmer](http://www.geraintianpalmer.org.uk/)). To install this you'd run:
+
+```bash
+pip install ciw
+```
+
+To use it you'd take a look at the documentation which is here:
+[ciw.readthedocs.org/](http://ciw.readthedocs.org/).
+
+There are numerous libraries that exist in Python, depending on what you're
+working on they might be helpful.
 
 ## Referencing in LaTeX
 
