@@ -338,4 +338,4 @@ In this lab sheet we will see how to carry out basic aspects of Calculus
 # Solutions
 
 [Solutions
-available.](https://gist.github.com/drvinceknight/af2b6a8e743503bce80233f8576b661f)
+available.](https://gist.github.com/drvinceknight/d160303e7d85c08280a39c9cae09d8f2)
