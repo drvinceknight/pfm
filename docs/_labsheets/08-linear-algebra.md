@@ -371,3 +371,8 @@ In this lab sheet we will learn how to use Python to study linear algebra.
 - [Another course site](http://www.u.arizona.edu/~erdmann/mse350/topics/basic_linear_algebra.html)
 - [A neat numpy tutorial around Conway's game of
   life](http://www.labri.fr/perso/nrougier/teaching/numpy/numpy.html)
+
+# Solutions
+
+[Solutions
+available.](https://gist.github.com/drvinceknight/6a7edb4b1d7235a1651fdcff5b59cd25)
