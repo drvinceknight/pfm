@@ -2,7 +2,7 @@
 layout     : post
 categories : 2016-2017
 title      : "2016-2017: Handout 10 - Summary."
-comments   : false
+comments   : true
 ---
 
 Lecturer: Vince Knight
