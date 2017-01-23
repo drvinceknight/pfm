@@ -65,8 +65,8 @@ available:
 
 - WhatsApp, Messenger, Snapchat: familiarity however not all are portable or
   support productivity tools.
-- Slack, gitter: popular in the workplace and good support for integration with
-  other tools.
+- [Slack](https://slack.com/is), [gitter](https://gitter.im): popular in the
+  workplace and good support for integration with other tools.
 
 # Issue tracker (to do list)
 
