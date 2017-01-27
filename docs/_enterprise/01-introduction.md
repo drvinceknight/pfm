@@ -89,6 +89,9 @@ popular version control tools is called [git](https://git-scm.com/).
 - [Project proposal (30%)]({{site.baseurl}}/ent/proposal)
 - [Presentation (70%)]({{site.baseurl}}/ent/presentation)
 
+[Some resources on how I will handle marking of the group
+exercise](http://vknight.org/Assigning_Fair_Individual_Marks_To_Group_Projects/).
+
 ## Suggested timeline
 
 # Phase 1: Research
