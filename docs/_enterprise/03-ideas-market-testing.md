@@ -62,6 +62,3 @@ Python has two tools for this:
   ```
   $ python -m unittest test_main
   ```
-
-
-The first can be used to test code, the second to test documentation of code.
