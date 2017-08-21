@@ -8,7 +8,7 @@ The final topic that we will consider is the study of differential equations.
 
 **Building blocks**
 
-1. **TICKABLE** Solving differential equations.
+1. Solving differential equations.
 
    [A video describing the concept.](https://youtu.be/FGv5-AnyXDI)
 
@@ -57,7 +57,7 @@ The final topic that we will consider is the study of differential equations.
    **Experiment with solving a modified version of the differential equation
    considered here.**
 
-2. **TICKABLE** Higher order differential equations.
+2. Higher order differential equations.
 
    [A video describing the concept.](https://youtu.be/yDr0Fwiu-Tc)
 
@@ -79,7 +79,7 @@ The final topic that we will consider is the study of differential equations.
    **Experiment with solving a modified version of the differential equation
    considered here.**
 
-3. **TICKABLE** Systems of differential equations.
+3. Systems of differential equations.
 
    [A video describing the concept.](https://youtu.be/FTSKHQJKzzg)
 

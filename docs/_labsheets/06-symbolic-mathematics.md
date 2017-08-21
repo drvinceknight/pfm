@@ -25,7 +25,7 @@ mathematics.
 
 These questions aim to show you the basic building blocks of programming
 
-1. **TICKABLE** Exact valued computations.
+1. Exact valued computations.
 
    [A video describing the concept.](https://youtu.be/e-6qilg49lg)
 
@@ -90,7 +90,7 @@ These questions aim to show you the basic building blocks of programming
 
    **Experiment with other mathematical functions: `tan`, `sin`, `exp`.**
 
-2. **TICKABLE** Manipulating natural numbers.
+2. Manipulating natural numbers.
 
    [A video describing the concept.](https://youtu.be/Do3Q4LRK4OQ)
 
@@ -116,7 +116,7 @@ These questions aim to show you the basic building blocks of programming
 
    **Repeat the above example with a different value of `N`.**
 
-3. **TICKABLE** Creating a symbolic variable.
+3. Creating a symbolic variable.
 
    [A video describing the concept.](https://youtu.be/xIpogoDTIC4)
 
@@ -155,7 +155,7 @@ These questions aim to show you the basic building blocks of programming
 
    **Experiment with other symbolic manipulations.**
 
-4. **TICKABLE** Manipulating symbolic expressions.
+4. Manipulating symbolic expressions.
 
    [A video describing the concept.](https://youtu.be/7pUftAtK1Pg)
 
@@ -194,7 +194,7 @@ These questions aim to show you the basic building blocks of programming
 
    **Experiment with other expressions and `expand`/`simplify`.**
 
-5. **TICKABLE** Solving equations.
+5. Solving equations.
 
    [A video describing the concept.](https://youtu.be/QnwEgAOCZDk)
 

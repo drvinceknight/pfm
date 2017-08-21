@@ -11,7 +11,7 @@ store information even after we close down Python) and introduce recursion.
 
 These questions aim to show you the basic building blocks of programming
 
-1. **TICKABLE** Recursion.
+1. Recursion.
 
    [A video describing the concept.](https://youtu.be/xFQGaPeaFxg)
 
@@ -75,7 +75,7 @@ These questions aim to show you the basic building blocks of programming
 
    Experiment with modifying the above code.
 
-2. **TICKABLE** Writing to file.
+2. Writing to file.
 
    [A video describing the concept.](https://youtu.be/w-gEOEOLfiA)
 
@@ -112,7 +112,7 @@ These questions aim to show you the basic building blocks of programming
 
    Modify the above code to write something different to file.
 
-3. **TICKABLE** Reading files.
+3. Reading files.
 
    [A video describing the concept.](https://youtu.be/rn21nG6TZlg)
 
@@ -257,7 +257,7 @@ These questions aim to show you the basic building blocks of programming
    1. Base case: \\(C(0)=1\\);
    2. Recursive rule: \\(C(n)=\sum_{i=0}^{n-1}C(i)C(n-1-i)\\);
 
-7. **TICKABLE** Verify for the first 15 values of \\(n\\) that the following
+7. Verify for the first 15 values of \\(n\\) that the following
    alternative formula also gives the Catalan numbers (this is in fact the more
    commonly used formula):
 

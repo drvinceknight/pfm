@@ -9,7 +9,7 @@ In this lab sheet we will see how to carry out basic aspects of Calculus
 
 **Building blocks**
 
-1. **TICKABLE** Calculating limits.
+1. Calculating limits.
 
    [A video describing the concept.](https://youtu.be/hJ4MSWx-EhU)
 
@@ -67,7 +67,7 @@ In this lab sheet we will see how to carry out basic aspects of Calculus
 
    **Experiment with caculating the limit of different functions.**
 
-2. **TICKABLE** Differentiation.
+2. Differentiation.
 
    [A video describing the concept.](https://youtu.be/-03PrW-S_-w)
 
@@ -120,7 +120,7 @@ In this lab sheet we will see how to carry out basic aspects of Calculus
 
    **Try and experiment with differentiating more complicated functions.**
 
-3. **TICKABLE** Integration.
+3. Integration.
 
    [A video describing the concept.](https://youtu.be/w9RpnPGR4O0)
 
@@ -161,7 +161,7 @@ In this lab sheet we will see how to carry out basic aspects of Calculus
 
    **Experiment with integrating other functions.**
 
-4. **TICKABLE** Plotting. It is possible to use SymPy to create plots.
+4. Plotting. It is possible to use SymPy to create plots.
 
    [A video describing the concept.](https://youtu.be/ue9BBmvS7zw)
 

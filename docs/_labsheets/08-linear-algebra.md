@@ -8,7 +8,7 @@ In this lab sheet we will learn how to use Python to study linear algebra.
 
 **Building blocks**
 
-1. **TICKABLE** Linear algebra is the study of systems of linear equations.
+1. Linear algebra is the study of systems of linear equations.
 
    [A video describing the concept.](https://youtu.be/ojfhNuRK0mE)
 
@@ -78,7 +78,7 @@ In this lab sheet we will learn how to use Python to study linear algebra.
 
    **Experiment with another linear system.**
 
-2. **TICKABLE** Manipulating matrices.
+2. Manipulating matrices.
 
    [A video describing the concept.](https://youtu.be/6wWZbnDLn94)
 
@@ -130,7 +130,7 @@ In this lab sheet we will learn how to use Python to study linear algebra.
 
    **Modify the code here to try multiplying different matrices together.**
 
-3. **TICKABLE** Identity matrix.
+3. Identity matrix.
 
 
    [A video describing the concept.](https://youtu.be/UkxqUA_B9x8)
@@ -187,7 +187,7 @@ In this lab sheet we will learn how to use Python to study linear algebra.
 
    **Experiment with the above with different matrices.**
 
-4. **TICKABLE** Matrix inversion.
+4. Matrix inversion.
 
    [A video describing the concept.](https://youtu.be/40cBHMzsVZA)
 

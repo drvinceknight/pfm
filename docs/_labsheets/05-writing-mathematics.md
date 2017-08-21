@@ -21,7 +21,7 @@ cloud based solutions:
 Sometimes installing LaTeX can be tricky, if you're having difficulties I
 suggest using one of the cloud based solutions.
 
-01. **TICKABLE**  Write the following LaTeX code:
+01.  Write the following LaTeX code:
 
         \documentclass{article}
 
@@ -49,7 +49,7 @@ suggest using one of the cloud based solutions.
 
     [Video hint (overleaf)](http://youtu.be/4B8Cmm9scmU)
 
-02. **TICKABLE** The following keys are used to type text in a source file:
+02. The following keys are used to type text in a source file:
 
         a-z A-Z 0-9
         + = * / ( ) [ ]
@@ -74,7 +74,7 @@ suggest using one of the cloud based solutions.
 
     [Video hint (overleaf)](http://youtu.be/xMujHplqFx0)
 
-03. **TICKABLE** In general all the code that comes before the `\begin{document}` statement is called the 'preamble' and is used to set a title for the document, call certain packages as well as various other things. The following code (to be inserted in the preamble of your document) sets a title:
+03. In general all the code that comes before the `\begin{document}` statement is called the 'preamble' and is used to set a title for the document, call certain packages as well as various other things. The following code (to be inserted in the preamble of your document) sets a title:
 
 
         \title{Choose a title}
@@ -90,7 +90,7 @@ suggest using one of the cloud based solutions.
 
     [Video hint (overleaf)](http://youtu.be/bSJbxAWM5A8)
 
-04. **TICKABLE** The following will add an abstract to your document:
+04. The following will add an abstract to your document:
 
         \begin{abstract}
         This document contains some basic LaTeX code that will be useful to me in the future.
@@ -100,7 +100,7 @@ suggest using one of the cloud based solutions.
 
     [Video hint (overleaf)](http://youtu.be/d9WZFOSjIPA)
 
-05. **TICKABLE** There are various ways to obtain lists:
+05. There are various ways to obtain lists:
 
         \begin{itemize}
             \item Unordered item number 1
@@ -118,7 +118,7 @@ suggest using one of the cloud based solutions.
 
     [Video hint (overleaf)](http://youtu.be/AMisCNGM2G8)
 
-06. **TICKABLE** The following code creates a simple table (note the `c`, `r`, and `l` tags that indicate text alignment, experiment by changing these):
+06. The following code creates a simple table (note the `c`, `r`, and `l` tags that indicate text alignment, experiment by changing these):
 
         \begin{tabular}{|l|c|r|}
             \hline
@@ -138,7 +138,7 @@ suggest using one of the cloud based solutions.
 
     [Video hint (overleaf)](http://youtu.be/OAgTXe5ShSI)
 
-07. **TICKABLE** To include a picture is straightforward in LaTeX. We make use of the `graphicx` package. In LaTeX packages are included in the preamble using `usepackage`. Include the following in the preamble:
+07. To include a picture is straightforward in LaTeX. We make use of the `graphicx` package. In LaTeX packages are included in the preamble using `usepackage`. Include the following in the preamble:
 
         \usepackage{graphicx}
 
@@ -159,7 +159,7 @@ suggest using one of the cloud based solutions.
     [Video hint (overleaf)](http://youtu.be/260odGNvPEc)
 
 
-08. **TICKABLE** Graphs, pictures and diagrams can thus be created in any software of choice (Sage, inkscape, google drive etc...) and then included as required **but** it is often easier to draw a picture in LaTeX itself using code. A great package to do this with is `tikz`. Include the following in the preamble:
+08. Graphs, pictures and diagrams can thus be created in any software of choice (Sage, inkscape, google drive etc...) and then included as required **but** it is often easier to draw a picture in LaTeX itself using code. A great package to do this with is `tikz`. Include the following in the preamble:
 
         \usepackage{tikz}
 
@@ -195,7 +195,7 @@ suggest using one of the cloud based solutions.
 
     [Video hint (overleaf)](http://youtu.be/fPpATcx-fVc)
 
-09. **TICKABLE** It is possible to organise parts of a document using 'sections':
+09. It is possible to organise parts of a document using 'sections':
 
         \section{My first section}
 
@@ -236,7 +236,7 @@ suggest using one of the cloud based solutions.
 
     [Video hint (overleaf)](http://youtu.be/E2xT0xNk8EU)
 
-10. **TICKABLE** To create a bibliography we need to store the bibliographic information in a separate 'bibtex' file. In this file you include bibliographic information for the various references you might have.
+10. To create a bibliography we need to store the bibliographic information in a separate 'bibtex' file. In this file you include bibliographic information for the various references you might have.
 
     The following is the code for a book on LaTeX. Save the following in a separate file: `bibliography.bib`:
 
@@ -268,7 +268,7 @@ suggest using one of the cloud based solutions.
 
     [Video hint (overleaf)](http://youtu.be/X-9T2Oaj-5A)
 
-11. **TICKABLE** Typesetting mathematics is LaTeX's strength. Add the following to your document:
+11. Typesetting mathematics is LaTeX's strength. Add the following to your document:
 
         Mathematics can be typed in to \LaTeX\ as $x^2$ and/or \((a+b)^2=a^2+2ab+b^2\).
 
@@ -276,7 +276,7 @@ suggest using one of the cloud based solutions.
 
     [Video hint (overleaf)](http://youtu.be/ef2p-rVJ2Vk)
 
-12. **TICKABLE** The previous code showed how to include mathematics in text (_inline). We can also include mathematics in display mode. Add the following to your document:
+12. The previous code showed how to include mathematics in text (_inline). We can also include mathematics in display mode. Add the following to your document:
 
         $$\sum_{i=1}^{n}i=\frac{n(n+1)}{2}$$
 
@@ -284,7 +284,7 @@ suggest using one of the cloud based solutions.
 
     [Video hint (overleaf)](http://youtu.be/cHuDdblKmjs)
 
-13. **TICKABLE** Mathematics can also be included in equations and referred to as for sections, pictures etc:
+13. Mathematics can also be included in equations and referred to as for sections, pictures etc:
 
         \begin{equation}\label{my_first_equation}
         e=mc^2
@@ -296,7 +296,7 @@ suggest using one of the cloud based solutions.
 
     [Video hint (overleaf)](http://youtu.be/_ZH0jwscSwk)
 
-14. **TICKABLE** To include text within mathematics we can use the `text` command from the `amsmath` package:
+14. To include text within mathematics we can use the `text` command from the `amsmath` package:
 
         $$x^2 = 1 \text{ implies} x=\pm1$$
 
@@ -308,7 +308,7 @@ suggest using one of the cloud based solutions.
 
     [Video hint (overleaf)](http://youtu.be/408OEiq3ybU)
 
-15. **TICKABLE** Arithmetic operators are quite simple in LaTeX. Try the following:
+15. Arithmetic operators are quite simple in LaTeX. Try the following:
 
         \begin{itemize}
             \item $a+b$
@@ -326,7 +326,7 @@ suggest using one of the cloud based solutions.
 
     [Video hint (overleaf)](http://youtu.be/DiDe88f8jN0)
 
-16. **TICKABLE** Experiment with the following to see how to obtain integrals in LaTeX:
+16. Experiment with the following to see how to obtain integrals in LaTeX:
 
         $$\int_{0}^{\pi}x^2\,dx$$
 
@@ -334,7 +334,7 @@ suggest using one of the cloud based solutions.
 
     [Video hint (overleaf)](http://youtu.be/Aezyj0OhDVM)
 
-17. **TICKABLE** The following code gives a 3 by 2 matrix:
+17. The following code gives a 3 by 2 matrix:
 
         $$\begin{pmatrix}
         a&b\\
@@ -348,7 +348,7 @@ suggest using one of the cloud based solutions.
 
     [Video hint (overleaf)](http://youtu.be/JDsirwrf1Bg)
 
-18. **TICKABLE** It is possible to create aligned mathematics using:
+18. It is possible to create aligned mathematics using:
 
         \begin{align}
             (x+h)^2-x^2 & =x^2+2xh+h^2-x^2 \nonumber\\
@@ -368,7 +368,7 @@ suggest using one of the cloud based solutions.
 
     [Video hint (overleaf)](http://youtu.be/AzFOqb9WKX4)
 
-19. **TICKABLE** Finally we can create partitioned statements:
+19. Finally we can create partitioned statements:
 
         $$
         1+(-1)^n=\begin{cases}
@@ -381,7 +381,7 @@ suggest using one of the cloud based solutions.
 
     [Video hint (overleaf)](http://youtu.be/if7P-w6hHmw)
 
-20. **TICKABLE** It is possible to create high quality presentation in LaTeX. To do this we use the `beamer` document class:
+20. It is possible to create high quality presentation in LaTeX. To do this we use the `beamer` document class:
 
         \documentclass{beamer}
         \begin{document}
@@ -408,7 +408,7 @@ suggest using one of the cloud based solutions.
 
     [Video hint (overleaf)](http://youtu.be/XrZRVGnFXw0)
 
-21. **TICKABLE** Most of the LaTeX code you have learnt so far an be used without much change in a beamer presentation within the `frame` environment. There are however a few particularities:
+21. Most of the LaTeX code you have learnt so far an be used without much change in a beamer presentation within the `frame` environment. There are however a few particularities:
 
     To make a title, you need to use the `\titlepage` instead of the `\maketitle` command:
 

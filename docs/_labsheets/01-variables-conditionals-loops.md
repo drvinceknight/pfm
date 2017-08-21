@@ -5,10 +5,10 @@ comments: true
 ---
 
 This first lab sheet will introduce you to programming. You are expected to work
-through all the exercises marked as **Tickable**. There are other exercises that
-aim to push your understanding further. Finally at the end of the sheet there
-are links to other resources and tutorials that you might find
-helpful and/or interesting.
+through all the exercises marked as prior to and including the **worked
+example**. There are other exercises that aim to push your understanding
+further. Finally at the end of the sheet there are links to other resources and
+tutorials that you might find helpful and/or interesting.
 
 There are videos throughout the sheets describing the concepts as well as
 showing demos.
@@ -69,7 +69,7 @@ Hello world
 
 These questions aim to show you the basic building blocks of programming
 
-1. **TICKABLE** Creating numeric variables.
+1. Creating numeric variables.
 
    [A video describing the concept.](https://youtu.be/KtDrCIauto0)
 
@@ -125,7 +125,7 @@ These questions aim to show you the basic building blocks of programming
 
    **Experiment with manipulating numeric variables.**
 
-2. **TICKABLE** Creating character variables.
+2. Creating character variables.
 
    [A video describing the concept.](https://youtu.be/8-lY3TepDKc)
 
@@ -155,7 +155,7 @@ These questions aim to show you the basic building blocks of programming
 
    **Experiment by creating your own strings variables.**
 
-3. **TICKABLE** Boolean variables and if statements.
+3. Boolean variables and if statements.
 
    [A video describing the concept.](https://youtu.be/IxU67BAFtHI)
 
@@ -219,7 +219,7 @@ These questions aim to show you the basic building blocks of programming
 
    **Experiment by changing the function \\(f\\) and modifying the code.**
 
-4. **TICKABLE** While loops.
+4. While loops.
 
    [A video describing the concept.](https://youtu.be/MnKlyszfa7g)
 
@@ -333,7 +333,7 @@ These questions aim to show you the basic building blocks of programming
 
    for \(n=20\).
 
-8. **TICKABLE** Modify **the above** (Q7) to check it for all values less than
+8. Modify **the above** (Q7) to check it for all values less than
    2000.
 
 9. Calculates the sum of the first natural numbers less than 1000 that are not
