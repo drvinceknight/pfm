@@ -12,12 +12,6 @@ School of Mathematics at Cardiff University.
 - [{{sheet.title}}]({{ sheet.url | prepend: site.baseurl }})
 {% endfor %}
 
-# Handouts
-
-{% for handout in site.handouts %}
-- [{{handout.title}}]({{ handout.url | prepend: site.baseurl }})
-{% endfor %}
-
 # Assessment
 
 {% for assessment in site.assessment %}
