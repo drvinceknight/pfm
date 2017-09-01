@@ -228,8 +228,3 @@ The final topic that we will consider is the study of differential equations.
 
 - [SymPy documentation for solving differential
   equations.](http://docs.sympy.org/dev/modules/solvers/ode.html)
-
-# Solutions
-
-[Solutions
-available.](https://gist.github.com/drvinceknight/6ed3d0fd4e940e0b12504f09699ea05b)

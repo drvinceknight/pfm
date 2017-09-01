@@ -351,8 +351,3 @@ These questions aim to show you the basic building blocks of programming
   Python](http://interactivepython.org/runestone/static/pythonds/SortSearch/TheInsertionSort.html)
 - [Binary search in
   Python](http://interactivepython.org/runestone/static/pythonds/SortSearch/TheBinarySearch.html)
-
-# Solutions
-
-[Solutions
-available.](https://gist.github.com/drvinceknight/a8640124367e62d98a4b827bb03e20ea)

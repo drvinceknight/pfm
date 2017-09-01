@@ -334,8 +334,3 @@ In this lab sheet we will see how to carry out basic aspects of Calculus
    2. Compute \\(\frac{f(x+h)-f(x)}{h}\\);
    3. Compute the above limit as \\(h\to 0\\) and verify that this is the
       derivative of \\(f\\).
-
-# Solutions
-
-[Solutions
-available.](https://gist.github.com/drvinceknight/d160303e7d85c08280a39c9cae09d8f2)

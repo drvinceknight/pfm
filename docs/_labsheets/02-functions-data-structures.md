@@ -407,7 +407,3 @@ similar to mathematical functions) and lists (a way of holding data).
   Functions](https://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Defining_Functions):
 - [A nice tutorial from The Python
   Course](http://www.python-course.eu/python3_functions.php)
-
-# Solutions
-
-[Solutions available.](https://gist.github.com/drvinceknight/1c5e32180672fd0e1a189f68f0703b63)
