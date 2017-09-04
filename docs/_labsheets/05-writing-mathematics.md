@@ -12,11 +12,8 @@ A typesetting language is a language that requires the user to write code that i
 
 For this lab sheet you can either install LaTeX (use
 [MikTeX](http://miktex.org/) on windows and
-[MacTeX](https://tug.org/mactex/) on OS X), or use one of the following two
-cloud based solutions:
-
-- [overleaf.com](https://www.overleaf.com/)
-- [cloud.sagemath](https://cloud.sagemath.com/)
+[MacTeX](https://tug.org/mactex/) on OS X), or use one of a few cloud based
+solutions. I recommend: [overleaf.com](https://www.overleaf.com/).
 
 Sometimes installing LaTeX can be tricky, if you're having difficulties I
 suggest using one of the cloud based solutions.
@@ -45,8 +42,6 @@ suggest using one of the cloud based solutions.
 
     **This is the most basic of LaTeX documents, everything else you do using LaTeX will be done through writing code in your TeX file.**
 
-    [Video hint (SageMathCloud)](http://youtu.be/fHC5AS8r7-o)
-
     [Video hint (overleaf)](http://youtu.be/4B8Cmm9scmU)
 
 02. The following keys are used to type text in a source file:
@@ -70,8 +65,6 @@ suggest using one of the cloud based solutions.
         Hello, world!
         \end{document}
 
-    [Video hint (SageMathCloud)](http://youtu.be/m-BKupCslxQ)
-
     [Video hint (overleaf)](http://youtu.be/xMujHplqFx0)
 
 03. In general all the code that comes before the `\begin{document}` statement is called the 'preamble' and is used to set a title for the document, call certain packages as well as various other things. The following code (to be inserted in the preamble of your document) sets a title:
@@ -86,8 +79,6 @@ suggest using one of the cloud based solutions.
 
         \maketitle
 
-    [Video hint (SageMathCloud)](http://youtu.be/m6D5JeB3jm8)
-
     [Video hint (overleaf)](http://youtu.be/bSJbxAWM5A8)
 
 04. The following will add an abstract to your document:
@@ -95,8 +86,6 @@ suggest using one of the cloud based solutions.
         \begin{abstract}
         This document contains some basic LaTeX code that will be useful to me in the future.
         \end{abstract}
-
-    [Video hint (SageMathCloud)](http://youtu.be/t5cMm2MfLpA)
 
     [Video hint (overleaf)](http://youtu.be/d9WZFOSjIPA)
 
@@ -113,8 +102,6 @@ suggest using one of the cloud based solutions.
         \end{enumerate}
 
     Note that in LaTeX indentation is not required it is just good practice. Unlike Python where specific environments are delimited by indentation levels, in LaTeX they are ended by specific end statements `\end{enumerate}`.
-
-    [Video hint (SageMathCloud)](http://youtu.be/MoCr3NGbeho)
 
     [Video hint (overleaf)](http://youtu.be/AMisCNGM2G8)
 
@@ -134,8 +121,6 @@ suggest using one of the cloud based solutions.
 
     In general in LaTeX `\\` is used to denote a 'new line'.
 
-    [Video hint (SageMathCloud)](http://youtu.be/6G-yCK9etds)
-
     [Video hint (overleaf)](http://youtu.be/OAgTXe5ShSI)
 
 07. To include a picture is straightforward in LaTeX. We make use of the `graphicx` package. In LaTeX packages are included in the preamble using `usepackage`. Include the following in the preamble:
@@ -153,8 +138,6 @@ suggest using one of the cloud based solutions.
         \end{center}
 
     (Images can be in jpg, png and pdf format when using the pdflatex compiler.)
-
-    [Video hint (SageMathCloud)](http://youtu.be/HIzlgfSHL_M)
 
     [Video hint (overleaf)](http://youtu.be/260odGNvPEc)
 
@@ -190,8 +173,6 @@ suggest using one of the cloud based solutions.
         \end{tikzpicture}
 
     A lot more can be done with tikz and there are a variety of great examples, tutorials online.
-
-    [Video hint (SageMathCloud)](http://youtu.be/-pZyfnV-qrI)
 
     [Video hint (overleaf)](http://youtu.be/fPpATcx-fVc)
 
@@ -232,8 +213,6 @@ suggest using one of the cloud based solutions.
 
     Note, labels can be using in conjunction with `tabular` (for tables) and `figure` (for images) environments.
 
-    [Video hint (SageMathCloud)](http://youtu.be/4JlmiqnCitM)
-
     [Video hint (overleaf)](http://youtu.be/E2xT0xNk8EU)
 
 10. To create a bibliography we need to store the bibliographic information in a separate 'bibtex' file. In this file you include bibliographic information for the various references you might have.
@@ -264,23 +243,17 @@ suggest using one of the cloud based solutions.
 
     If you are using overleaf then this happens automatically.
 
-    [Video hint (SageMathCloud)](http://youtu.be/zcZ-ucApV6w)
-
     [Video hint (overleaf)](http://youtu.be/X-9T2Oaj-5A)
 
 11. Typesetting mathematics is LaTeX's strength. Add the following to your document:
 
         Mathematics can be typed in to \LaTeX\ as $x^2$ and/or \((a+b)^2=a^2+2ab+b^2\).
 
-    [Video hint (SageMathCloud)](http://youtu.be/nEkADjLQdmY)
-
     [Video hint (overleaf)](http://youtu.be/ef2p-rVJ2Vk)
 
 12. The previous code showed how to include mathematics in text (_inline). We can also include mathematics in display mode. Add the following to your document:
 
         $$\sum_{i=1}^{n}i=\frac{n(n+1)}{2}$$
-
-    [Video hint (SageMathCloud)](http://youtu.be/nRMU8Erl__I)
 
     [Video hint (overleaf)](http://youtu.be/cHuDdblKmjs)
 
@@ -292,8 +265,6 @@ suggest using one of the cloud based solutions.
 
         In equation (\ref{my_first_equation}) we have a very well known relationship!
 
-    [Video hint (SageMathCloud)](http://youtu.be/CVB4H7hiM60)
-
     [Video hint (overleaf)](http://youtu.be/_ZH0jwscSwk)
 
 14. To include text within mathematics we can use the `text` command from the `amsmath` package:
@@ -303,8 +274,6 @@ suggest using one of the cloud based solutions.
     (be sure to include `usepackage{amsmath}` in the preamble.)
 
     Another command that does this is `mbox` which does not require the amsmath package.
-
-    [Video hint (SageMathCloud)](http://youtu.be/VY-lyrcukEs)
 
     [Video hint (overleaf)](http://youtu.be/408OEiq3ybU)
 
@@ -322,15 +291,11 @@ suggest using one of the cloud based solutions.
             \item $\frac{a}{b}$
         \end{itemize}
 
-    [Video hint (SageMathCloud)](http://youtu.be/pmBpwxwnunk)
-
     [Video hint (overleaf)](http://youtu.be/DiDe88f8jN0)
 
 16. Experiment with the following to see how to obtain integrals in LaTeX:
 
         $$\int_{0}^{\pi}x^2\,dx$$
-
-    [Video hint (SageMathCloud)](http://youtu.be/beUz_50IBL4)
 
     [Video hint (overleaf)](http://youtu.be/Aezyj0OhDVM)
 
@@ -343,8 +308,6 @@ suggest using one of the cloud based solutions.
         \end{pmatrix}$$
 
     Experiment with `\begin{matrix}` and `\begin{vmatrix}`.
-
-    [Video hint (SageMathCloud)](http://youtu.be/BnuxEyz_euc)
 
     [Video hint (overleaf)](http://youtu.be/JDsirwrf1Bg)
 
@@ -364,8 +327,6 @@ suggest using one of the cloud based solutions.
                         & = h(2x+h)         && \text{(by factorisation)}
         \end{align}
 
-    [Video hint (SageMathCloud)](http://youtu.be/9MJ6TUWILeM)
-
     [Video hint (overleaf)](http://youtu.be/AzFOqb9WKX4)
 
 19. Finally we can create partitioned statements:
@@ -376,8 +337,6 @@ suggest using one of the cloud based solutions.
                     2, & \text{if $n$ even}
                     \end{cases}
         $$
-
-    [Video hint (SageMathCloud)](http://youtu.be/kPwXfq_mY3c)
 
     [Video hint (overleaf)](http://youtu.be/if7P-w6hHmw)
 
@@ -404,8 +363,6 @@ suggest using one of the cloud based solutions.
         \usetheme{Hannover}
         \usetheme{Berkeley}
 
-    [Video hint (SageMathCloud)](http://youtu.be/YYLtgWGp-_w)
-
     [Video hint (overleaf)](http://youtu.be/XrZRVGnFXw0)
 
 21. Most of the LaTeX code you have learnt so far an be used without much change in a beamer presentation within the `frame` environment. There are however a few particularities:
@@ -428,8 +385,6 @@ suggest using one of the cloud based solutions.
         \end{frame}
 
     There are various other commands and tools that can be used in Beamer. In particular take a look at the `pause`, `only` and `onslide` commands.
-
-    [Video hint (SageMathCloud)](http://youtu.be/d61T_y917DE)
 
     [Video hint (overleaf)](http://youtu.be/L3KGl2vn_iA)
 
