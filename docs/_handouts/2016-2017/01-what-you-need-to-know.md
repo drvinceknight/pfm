@@ -1,7 +1,7 @@
 ---
 layout     : post
-categories : 2017-2018
-title      : "2017-2018: Handout 01 - What you need to know"
+categories : 2016-2017
+title      : "2016-2017: Handout 01 - What you need to know"
 comments   : true
 ---
 
@@ -13,7 +13,7 @@ email: knightva@cf.ac.uk
 
 chat: [https://gitter.im/computing-for-mathematics/Lobby](https://gitter.im/computing-for-mathematics/Lobby)
 
-**Office hours: Thursday 1200-1400**
+**Office hours: Thursday 1400-1600**
 
 # Intended learning outcomes for this module:
 
@@ -24,18 +24,18 @@ chat: [https://gitter.im/computing-for-mathematics/Lobby](https://gitter.im/comp
 
 # How the material will be taught (first term):
 
-- Work through lab sheets and receive feedback during lab and class meetings;
-- **YOU WILL NEED TO WORK OUTSIDE OF THE LAB TO HAVE SUFFICIENT TIME TO COMPLETE LAB SHEETS**
-- Class meeting on Monday 0900;
-- Office hours Thursday 1200 - 1400.
-- Class meeting on Thursday 1500;
+- 2 lab sessions to do 1 lab sheet (**bring headphones!**);
+- Need to complete 80% of 'TICKABLES';
+- **YOU WILL NEED TO WORK OUTSIDE OF THE LABS TO HAVE SUFFICIENT TIME TO COMPLETE LAB SHEETS**
+- Lecture on Thursday 1300;
+- Office hours Thursday 1400 - 1500.
 
 # What you should do next:
 
-- Download and install Anaconda (**version 3.6**) on your own machine if you have one:
+- Download and install Anaconda (**version 3.5**) on your own machine if you have one:
     - Go to
       [https://www.continuum.io/downloads](https://www.continuum.io/downloads)
-      and download the Anaconda 3.6 installer. Follow the instructions there.
+      and download the Anaconda 3.5 installer. Follow the instructions there.
     - If you have a chromebook or similar come and have a chat with me.
 - Start working on the first lab sheet.
 - Organise a study group of 4 to 5 people to work together (I suggest finding people in your own tutor groups).
