@@ -25,7 +25,7 @@
     \begin{itemize}
         \item Office: M1.30
         \item email: knightva@cf.ac.uk
-        \item Office hours: Thursday 1400 - 1600
+        \item Office hours: Thursday 1200 - 1400
         \item \url{vknight.org/cfm}
     \end{itemize}
 
@@ -222,7 +222,7 @@ sympy.integrate(x ** 3, x)
 }
 
 \frame{
-    \frametitle{Labs and `Tickables'}
+    \frametitle{Lab and Class meetings}
     \begin{itemize}
         \item Every week you have 1 class meeting to look ahead.
         \item Every week you have 1 lab sheet: you should aim to work on your
@@ -233,6 +233,42 @@ sympy.integrate(x ** 3, x)
 }
 
 \frame{
+    \begin{center}
+        \begin{tikzpicture}
+            \node at (-1, .5) {Week:};
+            \draw (0, 0)  rectangle  (7, 1);
+
+            \foreach \i in {1,...,6}
+                {
+                    \draw (\i, 0) -- (\i, 1);
+                }
+
+            \draw [fill=blue!20] (0, 0) rectangle (1, 1);
+            \draw [fill=red!20] (2, 0) rectangle (3, 1);
+            \draw [fill=blue!20] (3, 0) rectangle (4, 1);
+
+            \node (class meetings) at (2, 3) {Meetings};
+
+            \foreach \i in {.5, 3.5}
+                {
+                    \draw [->] (class meetings) -- (\i, 1);
+                }
+
+            \node (lab) at (2.5, -2) {Lab};
+            \draw [->] (lab) -- (2.5, 0);
+
+            \pause
+            \node (personal work) at (6, -2) {\textbf{Personal work}};
+            \foreach \i in {1.5, 4.5, 5.5, 6.5}
+                {
+                    \draw [dashed, ->] (personal work) -- (\i, 0);
+                }
+
+        \end{tikzpicture}
+    \end{center}
+}
+
+\frame{
     \frametitle{Resources}
     \begin{center}
         \url{http://vknight.org/cfm/}
@@ -240,23 +276,61 @@ sympy.integrate(x ** 3, x)
 }
 
 \frame{
-    \frametitle{Feedback from last year}
-        \begin{center}
-            \includegraphics[width=.7\textwidth]{img/positive-2015-2016.png}
-        \end{center}
+    \begin{center}
+        \Huge Some Feedback
+    \end{center}
 }
 
-\frame{
-    \frametitle{Feedback from last year}
-        \begin{center}
-            \includegraphics[width=.7\textwidth]{img/negative-2015-2016.png}
-        \end{center}
-}
-
-\frame{
+\frame{\frametitle{Vince}
     \begin{quote}
-        ``No matter how difficult the lab sheets are, it always feels like there is sufficient support, either from Vince or from various online resources.''
+        ``Vince very approachable''
     \end{quote}
+
+    \hfill(50\%)
+
+    \begin{quote}
+        ``You are intimidating and I would personally rather approach a tutor
+        for help - no offence. Where is your accent from?''
+    \end{quote}
+
+    \hfill(20\%)
+}
+
+\frame{\frametitle{The class meeting}
+    \begin{quote}
+        ``The lecture is useful to go over what we struggle with.''
+    \end{quote}
+
+    \hfill(60\%)
+
+    \begin{quote}
+        ``Would be better to discuss the upcoming lab sheets in lectures instead
+        of the one we just did.''
+    \end{quote}
+
+    \hfill(4\%)
+
+    \begin{quote}
+        ``Some aspects should be taught first in lectures.''
+    \end{quote}
+
+    \hfill(4\%)
+}
+
+\frame{\frametitle{Labs}
+    \begin{quote}
+        ``Some (not all) [tutors] just give us the answers and don't explain it
+        clear enough \textbf{AND}.''
+    \end{quote}
+
+    \hfill(3\%)
+
+    \begin{quote}
+        ``Sometimes asking if you're watched videos when you have is a bit
+        demoralising, makes it hard to ask for help.''
+    \end{quote}
+
+    \hfill(3\%)
 }
 
 \frame{
@@ -284,17 +358,9 @@ sympy.integrate(x ** 3, x)
         \item Gitter (chat) room: \url{vknight.org/cfm}.
         \item Message boards: \url{vknight.org/cfm}.
         \item email: knightva@cf.ac.uk.
-        \item Office hours (M1.30): Thursday 1400 - 1600.
+        \item Office hours (M1.30): Thursday 1200 - 1400.
         \item \href{https://twitter.com/drvinceknight}{@drvinceknight} (and fb)
     \end{itemize}
-}
-
-\frame{
-    \begin{center}
-        \url{http://cardiffmathematicscodeclub.github.io/}
-
-        \href{https://twitter.com/cardiffmathcode}{@cardiffmathcode}
-    \end{center}
 }
 
 \frame{
