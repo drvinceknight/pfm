@@ -393,6 +393,6 @@ suggest using one of the cloud based solutions.
 - [Tutorial by PhD student Geraint
   Palmer](http://www.geraintianpalmer.org.uk/teaching/latex-refresher/)
 - [Welsh version of tutorial by PhD student Geraint
-  Palmer](http://www.geraintianpalmer.org.uk/teaching/latex-refresher-cy/)
+  Palmer](http://www.geraintianpalmer.org.uk/teaching/latex-refresher/cy/)
 - [Overleaf introduction to LaTeX
   course](https://www.overleaf.com/latex/learn/free-online-introduction-to-latex-part-1#.V_YAM5MrJWc)
