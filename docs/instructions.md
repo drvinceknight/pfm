@@ -17,4 +17,4 @@ The tutor has 3 main roles:
     - The message board;
     - Other resources.
 
-04. If you attend a lab session but do not complete any work, the tutor will still mark your attendance.
+04. The tutor also takes your attendance.
