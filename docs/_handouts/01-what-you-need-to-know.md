@@ -13,7 +13,7 @@ email: knightva@cf.ac.uk
 
 chat: [https://gitter.im/computing-for-mathematics/Lobby](https://gitter.im/computing-for-mathematics/Lobby)
 
-**Office hours: Thursday 1200-1400**
+**Office hours: Thursday 1300-1500**
 
 # Intended learning outcomes for this module:
 
@@ -27,7 +27,7 @@ chat: [https://gitter.im/computing-for-mathematics/Lobby](https://gitter.im/comp
 - Work through lab sheets and receive feedback during lab and class meetings;
 - **YOU WILL NEED TO WORK OUTSIDE OF THE LAB TO HAVE SUFFICIENT TIME TO COMPLETE LAB SHEETS**
 - Class meeting on Monday 0900;
-- Office hours Thursday 1200 - 1400.
+- Office hours Thursday 1300 - 1500.
 - Class meeting on Thursday 1500;
 
 # What you should do next:
