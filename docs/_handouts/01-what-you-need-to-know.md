@@ -32,10 +32,10 @@ chat: [https://gitter.im/computing-for-mathematics/Lobby](https://gitter.im/comp
 
 # What you should do next:
 
-- Download and install Anaconda (**version 3.6**) on your own machine if you have one:
+- Download and install Anaconda (**python version 3.6**) on your own machine if you have one:
     - Go to
       [https://www.continuum.io/downloads](https://www.continuum.io/downloads)
-      and download the Anaconda 3.6 installer. Follow the instructions there.
+      and download the Anaconda installer. Follow the instructions there.
     - If you have a chromebook or similar come and have a chat with me.
 - Start working on the first lab sheet.
 - Organise a study group of 4 to 5 people to work together (I suggest finding people in your own tutor groups).
