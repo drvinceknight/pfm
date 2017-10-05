@@ -54,10 +54,6 @@ Sage. **Ignore that aspect of the following examples**:
 [How the model solution would have been marked
 is](https://www.writelatex.com/read/qcjzqvbrmsfq).
 
-[A selection of past examples from previous years (often using Sage instead of
-Python).](http://vknight.org/Computing_for_mathematics/Assessment/IndividualCoursework/PastCourseWorks/)
-
-
 ## Submitting
 
 Deadline for this work to be handed in is *1500 Friday of Week 11 (15th of

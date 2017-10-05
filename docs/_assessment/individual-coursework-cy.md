@@ -49,9 +49,6 @@ hyn](https://www.overleaf.com/latex/templates/deall-y-deilliad/dcbnhxdqkttr#.VkR
 Mae sut fyddai'r ateb enghreifftiol wedi cael ei farcio [fan
 hyn](https://www.overleaf.com/read/fcrbxxqmqbmw).
 
-[Casgliad o enghraifftiau o blynyddoedd blaenorol (yn amal yn defnyddio Sage yn lle Python).](http://vknight.org/Computing_for_mathematics/Assessment/IndividualCoursework/PastCourseWorks/)
-
-
 
 ## Cyflwyno
 
