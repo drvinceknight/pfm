@@ -43,17 +43,6 @@ The following marking scheme will be applied:
     - 90%: The work is clear, well written with excellent quality graphs and images with no grammatical and spelling mistakes.
 
 
-## Examples
-
-In previous years a mathematics language called Sage (which is written in
-Python) was used from week 6 till 11 so the example courseworks often contain
-Sage. **Ignore that aspect of the following examples**:
-
-[A model solution is available](http://goo.gl/ly8fdG).
-
-[How the model solution would have been marked
-is](https://www.writelatex.com/read/qcjzqvbrmsfq).
-
 ## Submitting
 
 Deadline for this work to be handed in is *1500 Friday of Week 11 (15th of

@@ -39,17 +39,6 @@ Defnyddir y cynllun marcio canlynol:
 	- 90%: Mae'r gwaith yn glir, wedi'i hysgrifennu'n dda gyda graffiau a delweddau o ansawdd rhagorol a hefyd gyda dim camgymeriadau sillafu a gramadegol.
 
 
-## Enghraifft
-
-Yn blynyddoedd blaenorol defnyddwyd iaith mathemategol Sage (wedi'i ysgrifennu mewn Python) o wythnosau 6 i 11, felly mar rhai o'r esiamplau gwaith cwrs yn cynnwys Sage. **Anwybyddwch ochr yna o'r esiamplau canlynol**:
-
-Mae ateb enghreifftiol ar gael [fan
-hyn](https://www.overleaf.com/latex/templates/deall-y-deilliad/dcbnhxdqkttr#.VkRfB9_hBWc).
-
-Mae sut fyddai'r ateb enghreifftiol wedi cael ei farcio [fan
-hyn](https://www.overleaf.com/read/fcrbxxqmqbmw).
-
-
 ## Cyflwyno
 
 Fe allwch gyflwyno'r gwaith yn naill ai Saesneg neu yng Nghymraeg.
