@@ -371,3 +371,8 @@ These questions aim to show you the basic building blocks of programming
   playlist](https://www.youtube.com/watch?v=HBxCHonP6Ro&list=PL6gx4Cwl9DGAcbMi1sH6oAMk4JHw91mC_)
 - [Automating the boring stuff: a nice
   book](https://automatetheboringstuff.com/)
+
+# Solutions
+
+You can find the solutions here:
+[gist.github.com/drvinceknight/ccb740d54f68fc3df33a18d1c866af87](https://gist.github.com/drvinceknight/ccb740d54f68fc3df33a18d1c866af87)
