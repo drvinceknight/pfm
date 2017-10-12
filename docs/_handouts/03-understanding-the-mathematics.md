@@ -66,9 +66,9 @@ n  | n % 2 |  total | count
 
 This approach also helps with finding errors.
 
-# Question 10
+# Question 11
 
-Another good example of this is understanding question 10. Let us use the
+Another good example of this is understanding question 11. Let us use the
 formula to find the square root of 10.
 
 - Where do we start (\\(x_0\\))?
