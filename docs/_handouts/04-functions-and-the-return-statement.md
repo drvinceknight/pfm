@@ -71,55 +71,6 @@ Now we can use this to make the code for counting perfect numbers simpler:
 
 ```
 
-# Question 11
-
-Another good example of this is understanding question 11. Let us use the
-formula to find the square root of 10.
-
-- Where do we start (\\(x_0\\))?
-- When do we finish?
-
-These questions become immediately clear if we try to do this by hand.
-
-# Understanding the problem before you program 
-
-Be sure to spend time working on the exact steps you want to explain to the
-computer (through code) before coding.
-
-**For example let us find the number of perfect numbers less than 30.**
-
-First of all: what is a perfect number?
-
-A number whose divisors sum to it.
-
-We start by understanding how to find these by hand:
-
-1. Count to 30: which means have a number that increments by 1 until we get to
-   30.
-2. For every number, find all divisors of that number: this means go through all
-   numbers that are smaller than it and see if they divide our number.
-3. Sum those divisors and if they're equal to the original number keep track of
-   that.
-
-
-```python
->>> n = 0
->>> count = 0
->>> while n < 30:
-...     n += 1
-...     potential_divisor = 1
-...     sum_of_divisors = 0
-...     while potential_divisor < n:
-...         if n % potential_divisor == 0:
-...             sum_of_divisors += potential_divisor
-...         potential_divisor += 1
-...     if sum_of_divisors == n:
-...         count += 1
->>> count
-2
-
-```
-
 # The `return` statement ends a function
 
 So this function:
