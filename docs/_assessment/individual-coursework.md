@@ -12,16 +12,11 @@ your report to be first year mathematics students wanting to learn about a given
 topic. Your report is to be written in LaTeX and must use aspects of programming
 (Python) to illustrate the particular topic.
 
+For your topic choose a theorem, conjecture or algorithm and use code to
+illustrate, prove or disprove it.
+
 *You are encouraged to choose your own topic*, if you do so I recommend checking
-with me (Vince Knight) that the topic is appropriate. If you are unable to
-choose a topic select one from the following:
-
-- Convergence of sequences,
-- Complex numbers,
-- Solving differential equations,
-- Random events in probability.
-
-You are encouraged to include the code used as an appendix.
+with me (Vince Knight) that the topic is appropriate. 
 
 ## Marking scheme
 
@@ -42,6 +37,8 @@ The following marking scheme will be applied:
     - 70%: The work is well written with some graphs and images and minor grammatical and spelling mistakes.
     - 90%: The work is clear, well written with excellent quality graphs and images with no grammatical and spelling mistakes.
 
+**All code that you want to be considered for marks must be included in the 3
+page limit.***
 
 ## Submitting
 
