@@ -42,6 +42,17 @@ For each number \\(n\\):
 
 The solution shows an approach for this.
 
+# Reading files and displaying a lot of data
+
+If you read in the primes file and attempt to display it, your machine might
+says that it can't display them. This is just a question of displaying them. You
+can display less numbers:
+
+```python
+>>> string[:10]
+
+```
+
 # Another example of recursion
 
 Take a look at this handout from last year which looks at the collatz conjecture
