@@ -1,7 +1,7 @@
 ---
 layout     : post
 categories : 2017-2018
-title      : "2017-2018: Handout 05 - "
+title      : "2017-2018: Handout 05 - Catalan numbers"
 comments   : true
 ---
 
