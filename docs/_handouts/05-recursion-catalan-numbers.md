@@ -49,7 +49,9 @@ says that it can't display them. This is just a question of displaying them. You
 can display less numbers:
 
 ```python
+>>> string = "computing_for_mathematics"
 >>> string[:10]
+'computing_'
 
 ```
 
