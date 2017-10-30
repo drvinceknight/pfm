@@ -388,12 +388,15 @@ These questions aim to show you the basic building blocks of programming
    ```python
    class Rectangle:
        """A class for a rectangle""
+
        def __init__(width, length)
            self.width = width
            self.length = width
+
        def obtain_area(self:
            """Obtain the area of the rectangle"""
            return self.width * self.length
+
        def is_square():
            """Check if the rectangle is a square"""
            return self.width == self.length
