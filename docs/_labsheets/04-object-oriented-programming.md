@@ -486,4 +486,4 @@ These questions aim to show you the basic building blocks of programming
 
 # Solutions
 
-[Solutions available.](https://gist.github.com/drvinceknight/a8640124367e62d98a4b827bb03e20ea)
+[Solutions available.](https://gist.github.com/drvinceknight/8157c4510fa58a4bc037a130f6456c96)
