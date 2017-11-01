@@ -483,3 +483,7 @@ These questions aim to show you the basic building blocks of programming
 - [The documentation for the csv
   library](https://docs.python.org/2/library/csv.html)
 - [A video about reading csv files](https://www.youtube.com/watch?v=jQ9aDyBWCXI)
+
+# Solutions
+
+[Solutions available.](https://gist.github.com/drvinceknight/af2b6a8e743503bce80233f8576b661f)
