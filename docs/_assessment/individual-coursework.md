@@ -5,6 +5,8 @@ title  : Individual Coursework (English instructions)
 
 # Computing for Mathematics: individual coursework
 
+---
+
 ## Instructions
 
 Write a 3 page report on a mathematical topic. Consider the target audience of
@@ -17,6 +19,8 @@ illustrate, prove or disprove it.
 
 *You are encouraged to choose your own topic*, if you do so I recommend checking
 with me (Vince Knight) that the topic is appropriate. 
+
+---
 
 ## Marking scheme
 
@@ -40,6 +44,8 @@ The following marking scheme will be applied:
 **All code that you want to be considered for marks must be included in the 3
 page limit.***
 
+---
+
 ## Example solution
 
 An example solution is available:
@@ -51,6 +57,8 @@ An example solution is available:
 
 Note that this is not meant to be a **perfect** solution. In class we will 
 discuss it and critique it.
+
+---
 
 ## Submitting
 

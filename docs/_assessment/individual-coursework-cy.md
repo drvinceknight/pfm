@@ -5,6 +5,8 @@ title  : Individual Coursework (Welsh instructions)
 
 # Computing for Mathematics: gwaith cwrs unigol
 
+---
+
 ## Cyfarwyddiadau
 
 Ysgrifennwch adroddiad 3 tudalen ar bwnc mathemategol. Ystyriwch gynulleidfa
@@ -18,6 +20,7 @@ i'w ddangos, i'w phrofi, neu i'w wrthbrofi.
 *Anogir i chi ddewis pwnc eich hun*, os ydych yn gwneud hyn awgrymir eich bod yn
 gwirio gyda fi (Vince Knight) bod y pwnc yn un addas.
 
+---
 
 ## Cynllun marcio
 
@@ -49,7 +52,7 @@ Defnyddir y cynllun marcio canlynol:
 
 **Rhaid cynnwys yr holl god a hoffwch gael ei farcio o fewn y 3 tudalen.***
 
-
+---
 
 ## Cyflwyno
 
