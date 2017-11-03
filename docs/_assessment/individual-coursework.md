@@ -40,6 +40,18 @@ The following marking scheme will be applied:
 **All code that you want to be considered for marks must be included in the 3
 page limit.***
 
+## Example solution
+
+An example solution is available:
+
+- [pdf file]({{site.baseurl}}/assets/mock-solution/main.pdf)
+- [tex file]({{site.baseurl}}/assets/mock-solution/main.tex)
+- [bib file]({{site.baseurl}}/assets/mock-solution/bibliography.bib)
+- [notebook with all code]({{site.baseurl}}/assets/mock-solution/main.ipynb)
+
+Note that this is not meant to be a **perfect** solution. In class we will 
+discuss it and critique it.
+
 ## Submitting
 
 Deadline for this work to be handed in is *1500 Friday of Week 11 (15th of
