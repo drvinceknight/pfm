@@ -6,7 +6,9 @@ permalink : tutors
 
 The tutor has 3 main roles:
 
-01. The role of the tutor is to give immediate feedback with regards to progress for lab sheets: they are supposed to ask you questions that help you identify what you are not understanding.
+01. The role of the tutor is to give immediate feedback with regards to progress 
+for lab sheets: they are supposed to ask you questions that help you identify 
+what you are not understanding.
 
 02. The tutor will give me (Vince Knight) feedback as to what difficulties students are having. This enables me to better focus the class meeting.
 
@@ -17,4 +19,5 @@ The tutor has 3 main roles:
     - The message board;
     - Other resources.
 
-04. The tutor also takes your attendance.
+04. The tutor also takes your attendance (which will be noted after they have
+    had a chat with you about the lab sheet).
