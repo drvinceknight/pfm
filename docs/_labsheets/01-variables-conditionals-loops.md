@@ -333,16 +333,16 @@ These questions aim to show you the basic building blocks of programming
 
    for \(n=20\).
 
-8. Modify **the above** (Q7) to check it for all values less than
+8. (Optional) Modify **the above** (Q7) to check it for all values less than
    2000.
 
-9. Calculates the sum of the first natural numbers less than 1000 that are not
+9. (Optional) Calculates the sum of the first natural numbers less than 1000 that are not
    divisible by 3.
 
-10. Calculates the sum of the first 1000 natural numbers that are not
+10. (Optional) Calculates the sum of the first 1000 natural numbers that are not
    divisible by 3.
 
-11. It can be shown (you are not required to check this) that the following
+11. (Optional) It can be shown (you are not required to check this) that the following
     sequence:
 
     $$x_{n+1}=\frac{x_n + K / x_{n}}{2}$$

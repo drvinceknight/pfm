@@ -410,7 +410,7 @@ These questions aim to show you the basic building blocks of programming
    Include a method for adding two quadratic expressions together and also a
    method to calculate the roots of the expression.
 
-8. The data file `quadratics.csv`
+8. (Optional) The data file `quadratics.csv`
    ([download]({{site.baseurl}}/assets/data/quadratics.csv)) contains data
    corresponding to quadratic expression of the form:
 
@@ -427,7 +427,7 @@ These questions aim to show you the basic building blocks of programming
    Read in the data file (you might find it helpful to read about the `csv`
    library) and identify how many quadratics have real roots.
 
-9. If rain drops were to fall randomly on a square of side length \\(2r\\) the
+9. (Optional) If rain drops were to fall randomly on a square of side length \\(2r\\) the
    probability of the drops landing in an inscribed circle of radius \\(r\\)
    would be given by:
 
@@ -462,7 +462,7 @@ These questions aim to show you the basic building blocks of programming
 
     (This is an example of a technique called Monte Carlo Simulation.)
 
-10. In a similar fashion to question 8, approximate the integral
+10. (Optional) In a similar fashion to question 8, approximate the integral
     \\(\int_{0}^11-x^2\;dx\\).
 
     Recall that the integral corresponds to the area under a curve.

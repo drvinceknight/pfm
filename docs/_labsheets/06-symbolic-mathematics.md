@@ -257,7 +257,7 @@ These questions aim to show you the basic building blocks of programming
 
    **Experiment with solving different equations.**
 
-6. **TICKABLE: Worked example**
+6. **Worked example**
 
    [A video describing the concept.](https://youtu.be/kdcjdCU7S2c)
 
@@ -339,14 +339,14 @@ These questions aim to show you the basic building blocks of programming
 
    $$p_2(n) = n^2-n+41$$
 
-8. Use SymPy to verify that:
+8. (Optional) Use SymPy to verify that:
 
    $$n^2 -79n+1601 = (n - 40) ^ 2 + (n - 40) + 41$$
 
    Use this and the work done in question 7 to try and explain why
    \\(n^2-79n+1601\\) gives primes for \\(0\leq n \leq 79\\).
 
-9. Solve the following equations (for \\(x\\)):
+9. (Optional) Solve the following equations (for \\(x\\)):
 
    1. \\(x^2=−1\\)
    2. \\(x^2−53x+2a=0\\)
@@ -374,7 +374,7 @@ These questions aim to show you the basic building blocks of programming
 
    ```
 
-10. Trigonometry
+10. (Optional) Trigonometry
 
     Use SymPy's `simplify` method (and other things) to verify the follow
     trigonometric identities:
@@ -385,6 +385,6 @@ These questions aim to show you the basic building blocks of programming
     4. \\(\cos(n\pi)=(-1) ^ n\\) (for \\(n\in\mathbb{Z}\\) (Hint: you will need to
        look in to options that can be passed to `symbols` for this).
 
-11. Use SymPy to write the first \\(10^6\\) prime numbers to file. Compare this
+11. (Optional) Use SymPy to write the first \\(10^6\\) prime numbers to file. Compare this
     file to `primes.csv` ([download]({{site.baseurl}}/assets/data/primes.csv))
     (not by hand!) and check that it is the same.

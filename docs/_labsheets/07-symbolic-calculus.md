@@ -222,7 +222,7 @@ In this lab sheet we will see how to carry out basic aspects of Calculus
 
    **Attempt to create plots of other functions.**
 
-5. **TICKABLE: Worked example**
+5. **Worked example**
 
    [A video describing the concept.](https://youtu.be/RZFC6kHapuY)
 
@@ -312,7 +312,7 @@ In this lab sheet we will see how to carry out basic aspects of Calculus
 7. For the function of question 6, identify and classify all points
    of inflection.
 
-8. There are various algebraic relationships on limits:
+8. (Optional) There are various algebraic relationships on limits:
 
    $$\lim_{x\to a}[f(x)+g(x)]=\lim_{x\to a}f(x) + \lim_{x\to a}g(x)$$
 
@@ -326,7 +326,7 @@ In this lab sheet we will see how to carry out basic aspects of Calculus
 
     $$g(x) = 1 / (x ^ 2 + 1)$$
 
-9. The point of this question is to investigate the definition of a derivative:
+9. (Optional) The point of this question is to investigate the definition of a derivative:
 
    $$\frac{df}{dx}=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$$
 

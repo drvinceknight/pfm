@@ -382,11 +382,11 @@ similar to mathematical functions) and lists (a way of holding data).
 
    $$\sum_{i=0}^{n}T_i=\frac{n(n+1)(n+2)}{6}$$
 
-10. Create a list with the first 1300 integers divisible by 3. What is the largest
+10. (Optional) Create a list with the first 1300 integers divisible by 3. What is the largest
    such number? What is the smallest such number? What is the mean of these
    numbers?
 
-11. Investigate the use of the python `random` library. Use this to simulate the
+11. (Optional) Investigate the use of the python `random` library. Use this to simulate the
     [Monty hall problem](https://en.wikipedia.org/wiki/Monty_Hall_problem):
 
     - Write a function that simulates the play of the game when you 'stick' with
@@ -396,7 +396,7 @@ similar to mathematical functions) and lists (a way of holding data).
     - Repeat the play of the game using both those functions and compare the
       probability of winning.
 
-12. A data type that we have not considered are dictionaries. These are a
+12. (Optional) A data type that we have not considered are dictionaries. These are a
     specific type of what is generally called a 'hash table'. Find information
     about dictionaries and experiment with them.
 

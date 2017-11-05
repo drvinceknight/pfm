@@ -116,7 +116,7 @@ The final topic that we will consider is the study of differential equations.
    **Experiment with solving a modified version of the differential equations
    considered here.**
 
-4. **TICKABLE: Worked example**: Solving and visualising the solution of a differential
+4. **Worked example**: Solving and visualising the solution of a differential
    equation.
 
    [A video describing the concept.](https://youtu.be/S3GsOrh8FpE)
@@ -194,7 +194,7 @@ The final topic that we will consider is the study of differential equations.
    (Hint: to be able to solve the systems of linear equations for 3 and 4 you
    can use linear algebra or perhaps look at the `sympy` function: `linsolve`.)
 
-7. The love story between Romeo and Juliet can be modelled with the
+7. (Optional) The love story between Romeo and Juliet can be modelled with the
    following system of differential equations:
 
    $$\begin{cases} \frac{dx}{dt} = -y\\
@@ -212,7 +212,7 @@ The final topic that we will consider is the study of differential equations.
    Describe the behaviour of the system if Romeo and Juliet are initially
    indifferent to each other.
 
-8. A battle between two armies can be modelled with the following set of
+8. (Optional) A battle between two armies can be modelled with the following set of
    differential equations:
 
    $$\begin{cases}

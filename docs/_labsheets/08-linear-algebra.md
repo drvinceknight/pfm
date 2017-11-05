@@ -234,7 +234,7 @@ In this lab sheet we will learn how to use Python to study linear algebra.
 
    **Experiment with the above.**
 
-5. **TICKABLE**
+5. Matrix determinant
 
    [A video describing the concept.](https://youtu.be/XT5il8z-ME4)
 
@@ -254,7 +254,7 @@ In this lab sheet we will learn how to use Python to study linear algebra.
    **For the various matrices you have experimented with, calculate the
    determinant.**
 
-6. **TICKABLE: Worked example**: Large linear system.
+6. **Worked example**: Large linear system.
 
    [A video describing the concept.](https://youtu.be/HwSuEAB2EW8)
 
@@ -348,17 +348,17 @@ In this lab sheet we will learn how to use Python to study linear algebra.
    What is the contribution of each player and what is the total contribution
    for \\(N=50\\)?
 
-8. Modify the problem of question 7 with the assumption that the
+8. (Optional) Modify the problem of question 7 with the assumption that the
    contributions are now made by triplets of players so that:
    business person \\(i\\) and **half** of the contribution of business person
    \\(i+1\\), and **a third** of the contributions of business person \\(i+2\\)
    is always equal to £5.
 
-9. Further aspects of linear algebra are called eigenvalues and eigenvectors.
+9. (Optional) Further aspects of linear algebra are called eigenvalues and eigenvectors.
    Read about them and see how to compute them in numpy.
 
-10. Scipy (another package) and Sympy can also be used for linear algebra.
-    Explore those libraries and compare them to numpy.
+10.(Optional) Scipy (another package) and Sympy can also be used for linear algebra.
+   Explore those libraries and compare them to numpy.
 
 # Further resources
 

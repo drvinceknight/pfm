@@ -267,12 +267,12 @@ These questions aim to show you the basic building blocks of programming
 
    You can use the factorial function we defined in this lab sheet (question 1) or you   can use the `math` library: `math.factorial`.
 
-8. The file `primes.csv` ([download]({{site.baseurl}}/assets/data/primes.csv))
+8. (Optional) The file `primes.csv` ([download]({{site.baseurl}}/assets/data/primes.csv))
    contains the first million prime numbers. Use it to attempt to verify
    [Goldbach's
    conjecture](https://en.wikipedia.org/wiki/Goldbach%27s_conjecture).
 
-9. Python has it's own functions to sort a list. This question investigates how
+9. (Optional) Python has it's own functions to sort a list. This question investigates how
    one of those algorithms works.
 
    If we have a list of items that are not in the correct order, one algorithm
@@ -293,7 +293,7 @@ These questions aim to show you the basic building blocks of programming
    Attempt to write a function in python `insertion_sort` that takes a list of
    numbers and returns it sorted.
 
-10. Similarly to sorting there are also various algorithms for searching
+10. (Optional) Similarly to sorting there are also various algorithms for searching
     (and finding) elements in a list. One of these is called 'binary search'
     illustrated below:
 
@@ -322,7 +322,7 @@ These questions aim to show you the basic building blocks of programming
     an item to search for in that list. It should return the position of the
     item.
 
-11. Repeated calls of a recursive function can actually be quite slow
+11. (Optional) Repeated calls of a recursive function can actually be quite slow
     (we have to recalculate the values each time). **Recursion is a tool that
     helps write nice code, often when we do not know an alternative formula**.
     There are ways to deal with this inefficiency:
