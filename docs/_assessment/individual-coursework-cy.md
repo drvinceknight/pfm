@@ -54,6 +54,20 @@ Defnyddir y cynllun marcio canlynol:
 
 ---
 
+## Ateb Enghreifftiol
+
+Mae ateb enghreifftiol ar gael:
+
+- [ffeil pdf]({{site.baseurl}}/assets/mock-solution/main.pdf)
+- [ffeil tex]({{site.baseurl}}/assets/mock-solution/main.tex)
+- [ffeil bib]({{site.baseurl}}/assets/mock-solution/bibliography.bib)
+- [notebook gyda'r holl cod]({{site.baseurl}}/assets/mock-solution/main.ipynb)
+
+Noder nid yw hwn i fod yn ddatrysiad **perffaith**. Yn y dosbarth fe fyddwn
+yn drafod ac yn ei werthuso.
+
+---
+
 ## Cyflwyno
 
 Fe allwch gyflwyno'r gwaith yn naill ai Saesneg neu yng Nghymraeg.
