@@ -45,7 +45,7 @@ https://zdaugherty.ccnysites.cuny.edu/teaching/Su-Guidelines_for_Good_Mathematic
 Some specific points:
 
 - Know your audience;
-- Nudge your reader ``with gentle commands'';
+- Nudge your reader "with gentle commands";
 - Writing well does not necessarily mean writing more;
 - Give a roadmap for long arguments (help your reader);
 - Use sentences;
