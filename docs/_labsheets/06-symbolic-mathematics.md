@@ -333,7 +333,8 @@ These questions aim to show you the basic building blocks of programming
 
    These questions aim to push a bit further.
 
-7. For what values of \\(n\\) are the following polynomials prime:
+7. What is the lowest value of \\(n\in\mathbb{Z}\\) for which the following
+   polynomials are not prime:
 
    $$p_1(n) = n^2+n+41$$
 
