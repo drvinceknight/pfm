@@ -168,7 +168,7 @@ In this lab sheet we will learn how to use Python to study linear algebra.
 
    ```
 
-   As an inverse matrix of a given size is often used Numpy has a shorthand to
+   As an identity matrix of a given size is often used Numpy has a shorthand to
    get one:
 
    ```python
