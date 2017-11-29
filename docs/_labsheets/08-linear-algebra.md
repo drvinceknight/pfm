@@ -373,3 +373,7 @@ In this lab sheet we will learn how to use Python to study linear algebra.
   life](http://www.labri.fr/perso/nrougier/teaching/numpy/numpy.html)
 - [A numpy tutorial from the Scipy lecture notes - not concentrating on linear
   algebra](http://www.scipy-lectures.org/intro/numpy/index.html)
+
+# Solutions
+
+[Solutions available.](https://gist.github.com/drvinceknight/6a7edb4b1d7235a1651fdcff5b59cd25)
