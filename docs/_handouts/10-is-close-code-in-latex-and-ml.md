@@ -160,3 +160,5 @@ interested in reading more here:
 - [www.scipy-lectures.org/packages/scikit-learn/index.html](http://www.scipy-lectures.org/packages/scikit-learn/index.html)
 - [scikit-learn.org](http://scikit-learn.org)
 - [www.kaggle.com/competitions](https://www.kaggle.com/competitions)
+- [Predicting the weather using linear
+  regression](http://stackabuse.com/using-machine-learning-to-predict-the-weather-part-2/?utm_content=buffer34689&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
