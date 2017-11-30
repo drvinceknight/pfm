@@ -1,7 +1,7 @@
 ---
 layout     : post
 categories : 2017-2018
-title      : "2017-2018: Handout 10 - is close and including code in LaTeX and machine learning"
+title      : "2017-2018: Handout 11 - is close and including code in LaTeX and machine learning"
 comments   : true
 ---
 
