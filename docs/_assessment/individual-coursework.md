@@ -72,6 +72,8 @@ Coursework"** item. Then click on **"View/Complete"** and follow the
 instructions. Please see this video which shows how to submit:
 [vimeo.com/114969438](https://vimeo.com/114969438).
 
+You submit the pdf (**not** the source LaTeX code or any Jupyter notebooks).
+
 You are submitting work this way as "Turnitin" is a product purchased by the
 University which checks for plagiarism.
 

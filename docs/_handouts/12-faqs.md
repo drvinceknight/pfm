@@ -24,6 +24,10 @@ Using Sympy to solve differential equations
 When submitting via turnitin, there is a field to enter a submission title: it
 doesn't matter what you put there but use the title of your coursework.
 
+## What do I submit?
+
+You submit the pdf (**not** the source LaTeX code or any jupyter notebooks).
+
 ## How to include a plot in my LaTeX document?
 
 The most straightforward way to include a plot in your LaTeX document is to draw
