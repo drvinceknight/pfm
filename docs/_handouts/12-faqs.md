@@ -109,6 +109,12 @@ Here is a simple way to reference a website:
 }
 ```
 
+When you do this, include the following at the top of your main LaTeX document:
+
+```
+\usepackage{hyperref}
+```
+
 ## Can I reference wikipedia?
 
 If you take your information from wikipedia you **should** reference wikipedia.
