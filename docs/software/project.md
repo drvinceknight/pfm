@@ -1,7 +1,7 @@
 ---
 layout : post
 title  : Project proposal guidance
-permalink : ent/proposal
+permalink : dev/proposal
 ---
 
 In week 3 you are required to write a short project proposal for your group. The aim of this proposal is to:
@@ -19,12 +19,10 @@ In this section aim to answer the following question:
 
 Be sure to consider the following points:
 
-- What would be your strategy for your product to be used? (eg 'Building a
+- What would be your strategy for your project to be used? (eg 'Building a
   program that identifies the location of the Mars Rover')
 - How will your product be useful, who is it for?  (eg 'The product will be used by NASA')
 - What is the greater potential for your product? (eg 'If successful our product could be used by ongoing commercial Mars landing projects')
-- Discuss the convergent/divergent thought process used.
-
 
 ## Market research
 
@@ -38,7 +36,6 @@ quite capable of understanding it at this early point in your mathematical
 careers). Also, consider some of the tools you might need to learn (eg a new
 python library perhaps).
 
-
 ## Product definition (half a page)
 
 In this section you need to explain what exactly it is that you are going to try to do:
@@ -50,7 +47,15 @@ Also, consider what risks or unintended events might cause problems or limit the
 
 ## Marking Criteria
 
-Please do take a look at the [marking
-criteria]({{site.baseurl}}/assets/assessment/project_report.pdf) as you prepare this.
+The following marking scheme will be applied:
+
+- **Market research** (50% weighting): Good use of a variety of sources,
+  properly referenced and well linked to the project.
+
+- **Content** (30% weighting): How does the proposal explain the goal of the
+  project? Is the project well defined and is a plan for development well
+  described?
+
+- **Presentation** (20% weighting)
 
 **Good Luck!**
