@@ -220,5 +220,5 @@ popular version control tools is called [git](https://git-scm.com/).
 
 For more information about git and github see:
 
-- https://vknight.org/rsd/chapters/05/
-- https://vknight.org/rsd/chapters/06/
+- [https://vknight.org/rsd/chapters/05/](https://vknight.org/rsd/chapters/05/)
+- [https://vknight.org/rsd/chapters/06/](https://vknight.org/rsd/chapters/06/)
