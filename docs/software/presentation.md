@@ -1,6 +1,6 @@
 ---
 layout : post
-title  : Project proposal guidance
+title  : Presentation guidance
 permalink : dev/presentation
 ---
 

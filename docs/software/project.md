@@ -12,6 +12,8 @@ In week 3 you are required to write a short project proposal for your group. The
 
 **Submission date** Computing lecture at 1200 on Tuesday 20th of February.
 
+**Maximum: 3 pages.**
+
 ## Strategy (half a page)
 
 In this section aim to answer the following question:
