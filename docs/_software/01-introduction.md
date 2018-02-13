@@ -104,7 +104,7 @@ def fibonacci(n):
     """
     if n in [0, 1]:
         return 1
-    return fibonacci(n) + fibonacci(n - 1)
+    return fibonacci(n - 1) + fibonacci(n - 2)
 ```
 
 Now, open a Jupyter notebook in the same directory as that file and run the
