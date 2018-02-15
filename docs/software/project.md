@@ -10,7 +10,7 @@ In week 3 you are required to write a short project proposal for your group. The
 - Show that as a group you have carried out some research on the topic;
 - Describe your approach to solving the problem/opportunity.
 
-**Submission date** Computing lecture at 1200 on Tuesday 20th of February.
+**Submission date** Computing lecture at 1300 on Tuesday 20th of February.
 
 **Maximum: 3 pages.**
 
