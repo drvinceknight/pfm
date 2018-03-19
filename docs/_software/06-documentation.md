@@ -44,7 +44,7 @@ Pack
 It is valuable to include example of python code in the documentation. For
 example, `tutorial.md` could resemble:
 
-```markdown
+{% highlight markdown %}
 # Tutorial
 
 Let us use the `pack` library to identify the probability of obtain black jack
@@ -52,28 +52,28 @@ over any given deal of a hand.
 
 Here is how to obtain the probability using `pack`:
 
-    >>> import pack
-	>>> import random
-	>>> random.seed(0)
-	>>> count_blackjack = 0
-	>>> repetitions = 5000
-	>>> for _ in range(repetitions):
-	...     deck = pack.get_deck()
-	...     hand = pack.deal(deck, 2)
-	...     values = set([card[0] for card in hand])
-	...     if values == {1, 10}:
-	...         count_blackjack += 1
-	>>> count_blackjack / repetitions
-	0.0466
+>>> import pack
+>>> import random
+>>> random.seed(0)
+>>> count_blackjack = 0
+>>> repetitions = 5000
+>>> for _ in range(repetitions):
+...     deck = pack.get_deck()
+...     hand = pack.deal(deck, 2)
+...     values = set([card[0] for card in hand])
+...     if values == {1, 10}:
+...         count_blackjack += 1
+>>> count_blackjack / repetitions
+0.0466
 
 We can also compute the probability theoretically:
 
-	>>> import math
-	>>> prob = 4 * 16 / (math.factorial(52) / (math.factorial(2) * math.factorial(52 - 2)))
-    >>> round(prob, 6)
-    0.048265
+>>> import math
+>>> prob = 4 * 16 / (math.factorial(52) / (math.factorial(2) * math.factorial(52 - 2)))
+>>> round(prob, 6)
+0.048265
 
-```
+{% endhighlight %}
 
 As we modify the code or write the documentation it is possible to make
 mistakes.
