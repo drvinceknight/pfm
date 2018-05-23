@@ -9,9 +9,9 @@ Welcome to the personal course notes for Vince Knight's Computing for Mathematic
 The class notes are available here: https://vknight.org/cfm/
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 3
 
+   meetings/index.rst
 
 
 Indices and tables
