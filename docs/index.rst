@@ -12,6 +12,7 @@ The class notes are available here: https://vknight.org/cfm/
    :maxdepth: 3
 
    meetings/index.rst
+   tutors/index.rst
 
 
 Indices and tables
