@@ -1,2 +1,4 @@
-Lab: LaTeX Refresher + identify topic
-=====================================
+Lab: Overview of Python libraries
+=================================
+
+Outcome: agree on code base to use.

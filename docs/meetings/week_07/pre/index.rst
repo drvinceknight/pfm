@@ -1,2 +1,11 @@
-Pre: LaTeX Refresher + discussion of coursework
-===============================================
+Pre: Demo of libraries
+======================
+
+Monty Hall
+----------
+
+Page Rank
+---------
+
+SIR Model
+---------

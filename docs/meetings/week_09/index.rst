@@ -1,5 +1,5 @@
-Week 09: Writing Mathematics
-============================
+Week 09: LaTeX refresher
+========================
 
 .. toctree::
    :maxdepth: 2

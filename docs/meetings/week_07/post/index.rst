@@ -1,2 +1,2 @@
-Post: Reactive discussion + peer exercise
-=========================================
+Post: Library research skill session?
+=====================================

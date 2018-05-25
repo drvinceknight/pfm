@@ -1,4 +1,4 @@
-Lab: Overview of Python libraries
-=================================
+Lab: Feedback on their own code
+===============================
 
-Outcome: agree on code base to use.
+

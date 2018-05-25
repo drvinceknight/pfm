@@ -1,4 +1,4 @@
-Week 07: LaTeX refresher
+Week 07: Library Toolkit
 ========================
 
 .. toctree::

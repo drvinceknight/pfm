@@ -1,11 +1,2 @@
-Pre: Demo of libraries
-======================
-
-Monty Hall
-----------
-
-Page Rank
----------
-
-SIR Model
----------
+Pre: Review of all programming concepts
+=======================================

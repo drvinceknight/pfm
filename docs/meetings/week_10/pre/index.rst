@@ -1,2 +1,2 @@
-Pre: Review of all programming concepts
-=======================================
+Pre: Critically discuss some of the writing of the previous pieces
+==================================================================

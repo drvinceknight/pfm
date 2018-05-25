@@ -1,5 +1,5 @@
-Week 08: Library toolkit
-========================
+Week 08: Produce code
+=====================
 
 .. toctree::
    :maxdepth: 2
