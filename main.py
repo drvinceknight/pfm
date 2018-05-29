@@ -1,11 +1,13 @@
+import collections
 import itertools
+import jinja2
+import json
 import nbformat
 import pathlib
 import shutil
 import sys
+import tempfile
 import tqdm
-import collections
-import jinja2
 
 from nbconvert import HTMLExporter, PDFExporter
 
@@ -34,13 +36,27 @@ def get_name(path):
     except ValueError:
         return stem
 
-def convert_html(nb_path):
+def convert_html(nb_path, tags_to_ignore=["solution"]):
     """
     Convert a notebook to html
     """
+    contents = nb_path.read_text()
+    nb = json.loads(contents)
+
+    cells = []
+    for cell in nb["cells"]:
+        if ("tags" not in cell["metadata"] or
+            all(tag not in cell["metadata"]["tags"] for tag in tags_to_ignore)):
+            cells.append(cell)
+    nb["cells"] = cells
+
+    temporary_nb = tempfile.NamedTemporaryFile()
+    with open(temporary_nb.name, "w") as f:
+        f.write(json.dumps(nb))
+
     html_exporter = HTMLExporter()
     html_exporter.template_file = "basic"
-    return html_exporter.from_file(str(nb_path))
+    return html_exporter.from_file(temporary_nb)
 
 def render_template(template_file, template_vars, searchpath="./templates/"):
     """
