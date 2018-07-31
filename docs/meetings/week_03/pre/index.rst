@@ -175,4 +175,6 @@ discuss how the previous demo could be improved.
 
 Highlight that
 this is just a demo of using lists and functions: not a course on random number
-generation.
+generation: in fact this algorithm is known to not be sufficient and **also**
+python and most programming languages all have random number generators that can
+be used directly.
