@@ -1,5 +1,5 @@
-Week 04: Lab Sheet 03: Reading and writing to file, recursion and algorithms
-============================================================================
+Week 04: Lab Sheet 03: Reading and writing to file and recursion
+================================================================
 
 .. toctree::
    :maxdepth: 2

@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Computing for Mathematics</title>
+
+  <link rel="stylesheet" href="/cfm/assets/css/main.css">
+  <link rel="shortcut icon" type="image/png" href="/cfm/assets/favicon.ico"/>
+
+   
+<style media="screen" type="text/css">
+
+
+div.input_prompt {
+  color: #303F9F;
+}
+
+div.output_prompt {
+  color: #D84315;
+}
+</style>
+
+    <!-- Loading mathjax macro -->
+    <!-- Load mathjax -->
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+        <!-- MathJax configuration -->
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            // Center justify equations in code and markdown cells. Elsewhere
+            // we use CSS to left justify single line equations in code cells.
+            displayAlign: 'center',
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}},
+                linebreaks: { automatic: true }
+            }
+        });
+        </script>
+        <!-- End of mathjax configuration --></head>
+
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-38016329-2', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    <!-- gitter side car -->
+
+   <script> ((window.gitter = {}).chat = {}).options = { room: 'computing-for-mathematics/Lobby' }; </script>
+    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+</head>
+<body>
+
+    <header class="site-header">
+
+  <div class="wrap">
+
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
+          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
+            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
+            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
+            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+          <a class="page-link" href="/cfm/">Computing for Mathematics</a>
+          <a class="page-link" href="/cfm/chapters/">Chapters</a>
+      </div>
+    </nav>
+
+  </div>
+</header>
+
+ <div class="page-content">
+    <div class="wrap">
+      <div class="home">
+        
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Lab-Sheet-03:-Reading-and-writing-to-file,-recursion-and-algorithms">Lab Sheet 03: Reading and writing to file, recursion and algorithms<a class="anchor-link" href="#Lab-Sheet-03:-Reading-and-writing-to-file,-recursion-and-algorithms">&#182;</a></h2><p>This lab sheet will allow us to read and write to text files (which lets us store information even after we close down Python) and introduce recursion.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Tutorial">Tutorial<a class="anchor-link" href="#Tutorial">&#182;</a></h2><p>Work through the following:</p>
+<hr>
+<h3 id="1.-Recursion.">1. Recursion.<a class="anchor-link" href="#1.-Recursion.">&#182;</a></h3><p><a href="https://youtu.be/xFQGaPeaFxg">A video describing the concept.</a></p>
+<p><a href="https://youtu.be/VDXYEJcksPs">A video demo.</a></p>
+<p>It is possible to define functions recursively. This is similar to inductive
+proofs in mathematics. To do this we need to consider two things:</p>
+<ol>
+<li>A recursive rule;</li>
+<li>A base case (that the recursive rule reduces to).</li>
+</ol>
+<p>As an example let us code the following function:</p>
+<p>$$f(n) = \sum_{i=0}^ni$$</p>
+<p>We can see the <strong>'recursive rule'</strong>:</p>
+<p>$$f(n) = f(n-1) + n$$</p>
+<p>We also know that the <strong>'base case'</strong> is:</p>
+<p>$$f(0) = 0$$</p>
+<p>Now let us program this function using recursion:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sum_of_integers</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Sum of integers from 0 to n&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Base case</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">sum_of_integers</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">n</span>  <span class="c1"># Recursive rule</span>
+<span class="n">sum_of_integers</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[1]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>6</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here is another example. The factorial function $n!=n\times(n-1)\times(n-2)...2\times 1$ can be defined as:</p>
+<ol>
+<li>The base case: $0!=1$</li>
+<li>The recursive rule: $n!=n\times (n-1)!$</li>
+</ol>
+<p>Here is how to code this:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns n! using recursion&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Base case</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+1
+2
+6
+24
+120
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Experiment with modifying the above code.</p>
+<h3 id="2.-Writing-to-file.">2. Writing to file.<a class="anchor-link" href="#2.-Writing-to-file.">&#182;</a></h3><p><a href="https://youtu.be/w-gEOEOLfiA">A video describing the concept.</a></p>
+<p><a href="https://youtu.be/jFS015bgRS0">A video demo.</a></p>
+<p>All of the data we handle with variables, lists and dictionaries lives in
+the ‘memory’ of a computer when our python code is running. When the program
+stops running the data is lost. There will be occasions when we want to write
+our data to a file on the hard drive of a computer (so that it is always
+available even when we turn the computer off).</p>
+<p>To do this we need Python to
+open a file (usually a basic text file), write strings to the text file and
+then close the file. The following code opens (or creates a) text file in
+‘write mode’ (that’s what the w is for) and writes the numbers 1 to 10 to it:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">textfile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;mytextfile.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>  <span class="c1"># Open the file in write mode</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
+    <span class="n">textfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">textfile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>  <span class="c1"># Close the file</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Strings (see in in the previous lab sheet) and lists are similar in that they
+   are 'containers' for items. A lot of the manipulation that works with lists
+   also works with strings:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It is also possible to do it as below (so that we don't have to worry about closing the file).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;mytextfile.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">textfile</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
+        <span class="n">textfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Modify the above code to write something different to file.</p>
+<h3 id="3.-Reading-files.">3. Reading files.<a class="anchor-link" href="#3.-Reading-files.">&#182;</a></h3><p><a href="https://youtu.be/rn21nG6TZlg">A video describing the concept.</a></p>
+<p><a href="https://youtu.be/jtU3dML5mqw">A video demo.</a></p>
+<p>To read data from a file, we need to open the file in ‘read mode’:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;mytextfile.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">textfile</span><span class="p">:</span>
+    <span class="n">string</span> <span class="o">=</span> <span class="n">textfile</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">string</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[7]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This string is not particularly helpful. To transform the string to a
+list we can use the split method which separates a string on a given
+character:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">data</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;, &#39;10&#39;, &#39;&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We see that we have a list of <strong>strings</strong> and also have a last empy item.
+Here we clean that up (converting the strings to integers and ignoring the last item):</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+<span class="n">data</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<h3 id="Worked-example">Worked example<a class="anchor-link" href="#Worked-example">&#182;</a></h3><p><a href="https://youtu.be/WgmgK7K3WUM">A video describing the concept.</a></p>
+<p><a href="https://youtu.be/7245uwUjSkI">A video demo.</a></p>
+<p>The Fibonacci sequence can be thought of as:</p>
+<ol>
+<li>The base case: $f(0)=f(1)=1$</li>
+<li>The recursive rule: $f(n)=f(n-1)+f(n-2)$</li>
+</ol>
+<p>Here is how to code this:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the nth fibonacci number using recursion&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>  <span class="c1"># Base case</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Recursive rule</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+     <span class="nb">print</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It can be shown that the Fibonacci sequence can also be given by:</p>
+<p>$$f(n) = \frac{\phi^{(n + 1)} - (-\phi)^{-(n + 1)}}{\sqrt{5}}$$</p>
+<p>Where $\phi$ is the golden ratio:</p>
+<p>$$\phi = \frac{1 + \sqrt{5}}{2}$$</p>
+<p>Let us use the recursive function to verify that this formula is correct for the first 30 values of $n$:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>  <span class="c1"># This is a library that has various helpful function</span>
+<span class="n">phi</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="k">def</span> <span class="nf">alt_fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the nth fibonacci number using the golden ratio formula&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">phi</span> <span class="o">**</span> <span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="o">-</span><span class="n">phi</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span> <span class="o">/</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As we did in the previous sheet let us write a function to check the formula:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">check_formula</span><span class="p">(</span><span class="n">K</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check the golden ratio formula&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">K</span><span class="p">)</span> <span class="o">==</span> <span class="nb">round</span><span class="p">(</span><span class="n">alt_fibonacci</span><span class="p">(</span><span class="n">K</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">check_formula</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let us check this for the first 30 values:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">checks</span> <span class="o">=</span> <span class="p">[</span><span class="n">check_formula</span><span class="p">(</span><span class="n">K</span><span class="p">)</span> <span class="k">for</span> <span class="n">K</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">)]</span>
+<span class="nb">all</span><span class="p">(</span><span class="n">checks</span><span class="p">)</span>  <span class="c1"># `all` combines all booleans in a list</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[14]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can then use the alternative formula to write a large file with the first 500 Fibonacci numbers:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;fibonacci.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">textfile</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">500</span><span class="p">):</span>
+        <span class="n">fib_number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">alt_fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="mi">0</span><span class="p">))</span>  <span class="c1"># Rounding the number</span>
+        <span class="n">textfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">fib_number</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Writing it</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<h2 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h2><p>Here are a number of exercises that are possible to carry out using the code concepts discussed:</p>
+<ul>
+<li><p>Recursion, writing code that matchs mathematical recursive definitions. For example $a(0)=1$ and $a(n)=2a(n-1)$:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sequence_a</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+      <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># base case</span>
+         <span class="k">return</span> <span class="mi">1</span>  
+      <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># recursive relationship</span>
+</pre></div>
+</li>
+<li><p>Writing to file with <code>open("file.txt", "w")</code> and reading from file with <code>open("file.txt", "r")</code></p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<h3 id="Exercise-1">Exercise 1<a class="anchor-link" href="#Exercise-1">&#182;</a></h3><p><strong>Debugging exercise</strong></p>
+<p>The following is an attempt to write $n!$ as a recursive function. Find
+and fix all the bugs.</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A function that returns factorial n&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factoial</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<h3 id="Exercise-2">Exercise 2<a class="anchor-link" href="#Exercise-2">&#182;</a></h3><p>Write a recursive function that returns the Catalan numbers $C(n)$ defined by the following:</p>
+<ol>
+<li>Base case: $C(0)=1$;</li>
+<li>Recursive rule: $C(n)=\sum_{i=0}^{n-1}C(i)C(n-1-i)$</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<h3 id="Exercise-3">Exercise 3<a class="anchor-link" href="#Exercise-3">&#182;</a></h3><p>Verify for the first 15 values of $n$ that the following
+alternative formula also gives the Catalan numbers (this is in fact the more
+commonly used formula):</p>
+<p>$$C(n) = \frac{(2n)!}{(n+1)!n!}$$</p>
+<p>Write the first 500 catalan numbers to file.</p>
+<p>You can use the factorial function we defined in this lab sheet (question 1) or you   can use the <code>math</code> library: <code>math.factorial</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<h3 id="Exercise-4">Exercise 4<a class="anchor-link" href="#Exercise-4">&#182;</a></h3><p>The file <code>primes.csv</code> (<a href="/cfm/nbs/chapters/primes.csv">download</a>) contains the first million prime numbers. Use it to attempt to verify <a href="https://en.wikipedia.org/wiki/Goldbach%27s_conjecture">Goldbach's conjecture</a>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<h2 id="Further-resources">Further resources<a class="anchor-link" href="#Further-resources">&#182;</a></h2><h1 id="Further-resources">Further resources<a class="anchor-link" href="#Further-resources">&#182;</a></h1><ul>
+<li><a href="https://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Recursion">A non programmers tutorial for
+Python:
+Recursion</a>:</li>
+<li><a href="http://www.python-course.eu/recursive_functions.php">A nice tutorial from The Python
+Course on recursion</a></li>
+<li><a href="http://www.johndcook.com/blog/2010/03/30/understanding-recursion/">A short blog post by John Cook about
+recursion</a></li>
+<li><a href="https://pymotw.com/3/csv/">Reading and writing csv files with the csv library</a></li>
+<li><a href="https://docs.python.org/3/library/functools.html#functools.lru_cache">Documentation for the caching function available in Python
+3</a></li>
+<li><a href="http://interactivepython.org/runestone/static/pythonds/SortSearch/TheInsertionSort.html">Insertion sort in
+Python</a></li>
+<li><a href="http://interactivepython.org/runestone/static/pythonds/SortSearch/TheBinarySearch.html">Binary search in
+Python</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+ 
+
+
+
+    
+        <a href="../02/">Previous</a>
+    
+    
+        <p align="right"><a href="../00/">Next</a></p>
+    
+
+      </div>
+  </div>
+</div>
+
+
+</body>
+</html>
