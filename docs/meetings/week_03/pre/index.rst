@@ -4,7 +4,7 @@ Pre: Demo of creating a random number generator
 Corresponding lab sheet:
 ------------------------
 
-- `Data Structures and Functions <vknight.org/cfm/chapters/02/>`_
+- `Data Structures and Functions <vknight.org/cfm/chapters/03/>`_
 
 Objectives
 ----------
