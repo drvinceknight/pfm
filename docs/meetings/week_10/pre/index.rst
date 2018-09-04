@@ -38,3 +38,20 @@ Repeat the above with another piece of work.
 
 **Remind students that next time they should bring as complete a draft as
 possible**.
+
+Some notes about each piece:
+
+- :download:`sir.pdf <../../../../assets/rsc/sir/main.pdf>`: 
+  This is well written and does a good job investigating new pieces of
+  mathematics. The conclusion is a bit weak: so what is the question we can be
+  left asking? The final figure could have also investigated other areas
+  parameters.
+- :download:`page-rank.pdf <../../../../assets/rsc/page-rank/main.pdf>`: the
+  writing of this piece is weak. It could be clearer, with more definitions
+  used, small details like the lack of the Figure caption etc... It does however
+  do a nice job of exploring a completely new area of mathematics and delving in
+  to networkx and numpy.
+- :download:`monty-hall.pdf <../../../../assets/rsc/monty-hall/main.pdf>`: this
+  is a well written piece of work, it brings together exact mathematics through
+  sympy as well as the writing out numeric simulations using the basic building
+  blocks of programming.
