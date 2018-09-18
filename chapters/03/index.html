@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Computing for Mathematics</title>
+    <title>Computing for mathematics</title>
 
+  <!-- Mobile Specific Metas –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An undergraduate course introducing programming, through Python, to mathematicians.">
+  <meta name="keywords" content="python, mathematics, jupyter">
+  <meta name="author" content="Vince Knight">
+  <!-- CSS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="/cfm/assets/css/main.css">
+  <link rel="stylesheet" href="/cfm/assets/css/normalize.css">
+  <link rel="stylesheet" href="/cfm/assets/css/skeleton.css">
   <link rel="shortcut icon" type="image/png" href="/cfm/assets/favicon.ico"/>
 
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+  async>
+  </script>
+  <!-- MathJax configuration -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		tex2jax: {
+			inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+			displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+			processEscapes: true,
+			processEnvironments: true
+		},
+		// Center justify equations in code and markdown cells. Elsewhere
+		// we use CSS to left justify single line equations in code cells.
+		displayAlign: 'center',
+		"HTML-CSS": {
+			styles: {'.MathJax_Display': {"margin": 0}},
+			linebreaks: { automatic: true }
+		}
+	});
+	</script>
+	<!-- End of mathjax configuration -->
+</head>
+
    
-<style media="screen" type="text/css">
-
-
-div.input_prompt {
-  color: #303F9F;
-}
-
-div.output_prompt {
-  color: #D84315;
-}
-</style>
-
-    <!-- Loading mathjax macro -->
-    <!-- Load mathjax -->
-        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-        <!-- MathJax configuration -->
-        <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-                processEscapes: true,
-                processEnvironments: true
-            },
-            // Center justify equations in code and markdown cells. Elsewhere
-            // we use CSS to left justify single line equations in code cells.
-            displayAlign: 'center',
-            "HTML-CSS": {
-                styles: {'.MathJax_Display': {"margin": 0}},
-                linebreaks: { automatic: true }
-            }
-        });
-        </script>
-        <!-- End of mathjax configuration --></head>
+  <link rel="stylesheet" href="/cfm/assets/css/notebook.css">
 
 
     <!-- Google Analytics -->
@@ -53,51 +53,48 @@ div.output_prompt {
     ga('create', 'UA-38016329-2', 'auto');
     ga('send', 'pageview');
     </script>
-
-    <!-- gitter side car -->
-
-   <script> ((window.gitter = {}).chat = {}).options = { room: 'computing-for-mathematics/Lobby' }; </script>
-    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-
 </head>
 <body>
 
-    <header class="site-header">
-
-  <div class="wrap">
-
-
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
-          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
-            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
-            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
-            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
-      <div class="trigger">
-          <a class="page-link" href="/cfm/">Computing for Mathematics</a>
-          <a class="page-link" href="/cfm/chapters/">Chapters</a>
-      </div>
-    </nav>
-
-  </div>
+    <header>
+    <div class="row">
+        <div class="three.columns">
+            <a class="logo" href="/cfm">Computing for mathematics</a>
+        </div>
+        <div class="nine.columns">
+              <input id="nav" type="checkbox">
+              <label for="nav"></label>
+              <nav>
+                    <ul>
+                      
+                          <li><a href=/cfm/chapters/00/>Introduction to the course</a></li>
+                      
+                          <li><a href=/cfm/chapters/01/>Variables Conditional Statements and Loops</a></li>
+                      
+                          <li><a href=/cfm/chapters/02/>Functions and data structures</a></li>
+                      
+                          <li><a href=/cfm/chapters/03/>Writing to files and recursion</a></li>
+                      
+                          <li><a href=/cfm/chapters/04/>Object oriented programming</a></li>
+                      
+                          <li><a href=/cfm/chapters/05/>Symbolic mathematics with sympy</a></li>
+                      
+                          <li><a href=/cfm/chapters/06/>Scientific libraries</a></li>
+                      
+                    </ul>
+              </nav>
+        </div>
+    </div>
 </header>
 
- <div class="page-content">
-    <div class="wrap">
-      <div class="home">
+    <div class="container">
         
     
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Lab-Sheet-03:-Reading-and-writing-to-file,-recursion-and-algorithms">Lab Sheet 03: Reading and writing to file, recursion and algorithms<a class="anchor-link" href="#Lab-Sheet-03:-Reading-and-writing-to-file,-recursion-and-algorithms">&#182;</a></h2><p>This lab sheet will allow us to read and write to text files (which lets us store information even after we close down Python) and introduce recursion.</p>
+<h2 id="Chapter-03:-Reading-and-writing-to-file,-recursion-and-algorithms">Chapter 03: Reading and writing to file, recursion and algorithms<a class="anchor-link" href="#Chapter-03:-Reading-and-writing-to-file,-recursion-and-algorithms">&#182;</a></h2><p>This lab sheet will allow us to read and write to text files (which lets us store information even after we close down Python) and introduce recursion.</p>
 
 </div>
 </div>
@@ -117,11 +114,17 @@ proofs in mathematics. To do this we need to consider two things:</p>
 <li>A base case (that the recursive rule reduces to).</li>
 </ol>
 <p>As an example let us code the following function:</p>
-<p>$$f(n) = \sum_{i=0}^ni$$</p>
+<p>$$
+    f(n) = \sum_{i=0}^ni
+$$</p>
 <p>We can see the <strong>'recursive rule'</strong>:</p>
-<p>$$f(n) = f(n-1) + n$$</p>
+<p>$$
+    f(n) = f(n-1) + n
+$$</p>
 <p>We also know that the <strong>'base case'</strong> is:</p>
-<p>$$f(0) = 0$$</p>
+<p>$$
+    f(0) = 0
+$$</p>
 <p>Now let us program this function using recursion:</p>
 
 </div>
@@ -532,9 +535,13 @@ Here we clean that up (converting the strings to integers and ignoring the last 
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>It can be shown that the Fibonacci sequence can also be given by:</p>
-<p>$$f(n) = \frac{\phi^{(n + 1)} - (-\phi)^{-(n + 1)}}{\sqrt{5}}$$</p>
+<p>$$
+    f(n) = \frac{\phi^{(n + 1)} - (-\phi)^{-(n + 1)}}{\sqrt{5}}
+$$</p>
 <p>Where $\phi$ is the golden ratio:</p>
-<p>$$\phi = \frac{1 + \sqrt{5}}{2}$$</p>
+<p>$$
+    \phi = \frac{1 + \sqrt{5}}{2}
+$$</p>
 <p>Let us use the recursive function to verify that this formula is correct for the first 30 values of $n$:</p>
 
 </div>
@@ -729,7 +736,9 @@ and fix all the bugs.</p>
 <h3 id="Exercise-3">Exercise 3<a class="anchor-link" href="#Exercise-3">&#182;</a></h3><p>Verify for the first 15 values of $n$ that the following
 alternative formula also gives the Catalan numbers (this is in fact the more
 commonly used formula):</p>
-<p>$$C(n) = \frac{(2n)!}{(n+1)!n!}$$</p>
+<p>$$
+    C(n) = \frac{(2n)!}{(n+1)!n!}
+$$</p>
 <p>Write the first 500 catalan numbers to file.</p>
 <p>You can use the factorial function we defined in this lab sheet (question 1) or you   can use the <code>math</code> library: <code>math.factorial</code>.</p>
 
@@ -778,10 +787,19 @@ recursion</a></li>
         <p align="right"><a href="../04/">Next</a></p>
     
 
-      </div>
-  </div>
-</div>
+    </div>
 
 
+    <script>
+        document.querySelector('header nav ul').addEventListener('click', function(){
+            document.querySelector('#nav').checked = false;
+        });
+
+        var menuHeight = document.querySelector('header').offsetHeight;
+        document.querySelectorAll('.section-title').forEach(function(a){
+            a.style.paddingTop = menuHeight + 'px';
+            a.style.marginTop = '-' + menuHeight + 'px';
+        });
+    </script>
 </body>
 </html>

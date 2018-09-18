@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Computing for Mathematics</title>
+    <title>Computing for mathematics</title>
 
+  <!-- Mobile Specific Metas –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An undergraduate course introducing programming, through Python, to mathematicians.">
+  <meta name="keywords" content="python, mathematics, jupyter">
+  <meta name="author" content="Vince Knight">
+  <!-- CSS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="/cfm/assets/css/main.css">
+  <link rel="stylesheet" href="/cfm/assets/css/normalize.css">
+  <link rel="stylesheet" href="/cfm/assets/css/skeleton.css">
   <link rel="shortcut icon" type="image/png" href="/cfm/assets/favicon.ico"/>
 
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+  async>
+  </script>
+  <!-- MathJax configuration -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		tex2jax: {
+			inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+			displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+			processEscapes: true,
+			processEnvironments: true
+		},
+		// Center justify equations in code and markdown cells. Elsewhere
+		// we use CSS to left justify single line equations in code cells.
+		displayAlign: 'center',
+		"HTML-CSS": {
+			styles: {'.MathJax_Display': {"margin": 0}},
+			linebreaks: { automatic: true }
+		}
+	});
+	</script>
+	<!-- End of mathjax configuration -->
+</head>
+
    
-<style media="screen" type="text/css">
-
-
-div.input_prompt {
-  color: #303F9F;
-}
-
-div.output_prompt {
-  color: #D84315;
-}
-</style>
-
-    <!-- Loading mathjax macro -->
-    <!-- Load mathjax -->
-        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-        <!-- MathJax configuration -->
-        <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-                processEscapes: true,
-                processEnvironments: true
-            },
-            // Center justify equations in code and markdown cells. Elsewhere
-            // we use CSS to left justify single line equations in code cells.
-            displayAlign: 'center',
-            "HTML-CSS": {
-                styles: {'.MathJax_Display': {"margin": 0}},
-                linebreaks: { automatic: true }
-            }
-        });
-        </script>
-        <!-- End of mathjax configuration --></head>
+  <link rel="stylesheet" href="/cfm/assets/css/notebook.css">
 
 
     <!-- Google Analytics -->
@@ -53,51 +53,48 @@ div.output_prompt {
     ga('create', 'UA-38016329-2', 'auto');
     ga('send', 'pageview');
     </script>
-
-    <!-- gitter side car -->
-
-   <script> ((window.gitter = {}).chat = {}).options = { room: 'computing-for-mathematics/Lobby' }; </script>
-    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-
 </head>
 <body>
 
-    <header class="site-header">
-
-  <div class="wrap">
-
-
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
-          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
-            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
-            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
-            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
-      <div class="trigger">
-          <a class="page-link" href="/cfm/">Computing for Mathematics</a>
-          <a class="page-link" href="/cfm/chapters/">Chapters</a>
-      </div>
-    </nav>
-
-  </div>
+    <header>
+    <div class="row">
+        <div class="three.columns">
+            <a class="logo" href="/cfm">Computing for mathematics</a>
+        </div>
+        <div class="nine.columns">
+              <input id="nav" type="checkbox">
+              <label for="nav"></label>
+              <nav>
+                    <ul>
+                      
+                          <li><a href=/cfm/chapters/00/>Introduction to the course</a></li>
+                      
+                          <li><a href=/cfm/chapters/01/>Variables Conditional Statements and Loops</a></li>
+                      
+                          <li><a href=/cfm/chapters/02/>Functions and data structures</a></li>
+                      
+                          <li><a href=/cfm/chapters/03/>Writing to files and recursion</a></li>
+                      
+                          <li><a href=/cfm/chapters/04/>Object oriented programming</a></li>
+                      
+                          <li><a href=/cfm/chapters/05/>Symbolic mathematics with sympy</a></li>
+                      
+                          <li><a href=/cfm/chapters/06/>Scientific libraries</a></li>
+                      
+                    </ul>
+              </nav>
+        </div>
+    </div>
 </header>
 
- <div class="page-content">
-    <div class="wrap">
-      <div class="home">
+    <div class="container">
         
     
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Lab-Sheet-04:-Object-Oriented-Programming">Lab Sheet 04: Object Oriented Programming<a class="anchor-link" href="#Lab-Sheet-04:-Object-Oriented-Programming">&#182;</a></h2><p>This lab sheet introduces object oriented programming. We have been using object oriented programming throughout the previous lab sheets. Here we will learn how to create our own objects (what this means become clear).</p>
+<h2 id="Chapter-04:-Object-Oriented-Programming">Chapter 04: Object Oriented Programming<a class="anchor-link" href="#Chapter-04:-Object-Oriented-Programming">&#182;</a></h2><p>This lab sheet introduces object oriented programming. We have been using object oriented programming throughout the previous lab sheets. Here we will learn how to create our own objects (what this means become clear).</p>
 
 </div>
 </div>
@@ -175,7 +172,7 @@ the rules:</p>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;__main__.Student at 0x7f843022d940&gt;</pre>
+<pre>&lt;__main__.Student at 0x7fbc390319e8&gt;</pre>
 </div>
 
 </div>
@@ -208,7 +205,7 @@ the rules:</p>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;__main__.Student at 0x7f843022d908&gt;</pre>
+<pre>&lt;__main__.Student at 0x7fbc390319b0&gt;</pre>
 </div>
 
 </div>
@@ -905,11 +902,15 @@ February (a date that only occurs once every 4 years):</p>
 <p><a href="https://youtu.be/BRLbh-6QU_Q">A video demo.</a></p>
 <p>Let us assume we want to study linear expressions. These are expressions
 of the form:</p>
-<p>$$ax+b$$</p>
+<p>$$
+    ax+b
+$$</p>
 <p>We are interested, for example, in what the value of $x$ for which a
 linear expression is 0. This is called the 'root' and is the solution to the
 following equation:</p>
-<p>$$ax+b=0$$</p>
+<p>$$
+    ax+b=0
+$$</p>
 <p>This is obviously an easy thing to study but we're going to assume it's not
 and build a class to represent and manipulate linear expressions.</p>
 
@@ -1315,7 +1316,9 @@ Let's fix that:</p>
 <p>Let us now use this to verify the following simple fact. If $f(x) =
 a_1x+b_1$ and $g(x) = a_2x+b_2$, then the root of $f(x) + g(x)$ is
 given by:</p>
-<p>$$\frac{a_1x_1 + a_2x_2}{a_1+a_2}$$</p>
+<p>$$
+    \frac{a_1x_1 + a_2x_2}{a_1+a_2}
+$$</p>
 <p>where $x_1$ is the root of $f$ and $x_2$ is the root of $g$
 (if they exist).</p>
 <p>First let's write a function that checks this for a given set of
@@ -1484,7 +1487,9 @@ method to calculate the roots of the expression.</p>
 <h3 id="Exercise-3">Exercise 3<a class="anchor-link" href="#Exercise-3">&#182;</a></h3><p>If rain drops were to fall randomly on a square of side length $2r$ the
 probability of the drops landing in an inscribed circle of radius $r$
 would be given by:</p>
-<p>$$P = \frac{\text{Area of circle}}{\text{Area of square}}=\frac{\pi r ^2}{4r^2}=\frac{\pi}{4}$$</p>
+<p>$$
+    P = \frac{\text{Area of circle}}{\text{Area of square}}=\frac{\pi r ^2}{4r^2}=\frac{\pi}{4}
+$$</p>
 <p><img src="/cfm/img/circle.png" alt="Circle"></p>
 <p>Thus, if we can approximate $P$ then we can approximate $\pi$ as
 $4P$. In this question we will write code to approximate $P$ using
@@ -1499,7 +1504,9 @@ understand the code!):</p>
 </pre></div>
 <p>Note that the above uses the following equation for a circle centred at
 $(0,0)$ of radius $r$:</p>
-<p>$$x^2+y^2≤r^2$$</p>
+<p>$$
+    x^2+y^2≤r^2
+$$</p>
 <p>To approximate $P$ simply create $N=1000$ instances of Drops and
 count the number of those that are in the circle.  Use this to approximate
 $\pi$.</p>
@@ -1552,10 +1559,19 @@ tutor</a></li>
         <p align="right"><a href="../05/">Next</a></p>
     
 
-      </div>
-  </div>
-</div>
+    </div>
 
 
+    <script>
+        document.querySelector('header nav ul').addEventListener('click', function(){
+            document.querySelector('#nav').checked = false;
+        });
+
+        var menuHeight = document.querySelector('header').offsetHeight;
+        document.querySelectorAll('.section-title').forEach(function(a){
+            a.style.paddingTop = menuHeight + 'px';
+            a.style.marginTop = '-' + menuHeight + 'px';
+        });
+    </script>
 </body>
 </html>

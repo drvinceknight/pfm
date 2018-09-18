@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Computing for Mathematics</title>
+    <title>Computing for mathematics</title>
 
+  <!-- Mobile Specific Metas –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An undergraduate course introducing programming, through Python, to mathematicians.">
+  <meta name="keywords" content="python, mathematics, jupyter">
+  <meta name="author" content="Vince Knight">
+  <!-- CSS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="/cfm/assets/css/main.css">
+  <link rel="stylesheet" href="/cfm/assets/css/normalize.css">
+  <link rel="stylesheet" href="/cfm/assets/css/skeleton.css">
   <link rel="shortcut icon" type="image/png" href="/cfm/assets/favicon.ico"/>
 
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+  async>
+  </script>
+  <!-- MathJax configuration -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		tex2jax: {
+			inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+			displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+			processEscapes: true,
+			processEnvironments: true
+		},
+		// Center justify equations in code and markdown cells. Elsewhere
+		// we use CSS to left justify single line equations in code cells.
+		displayAlign: 'center',
+		"HTML-CSS": {
+			styles: {'.MathJax_Display': {"margin": 0}},
+			linebreaks: { automatic: true }
+		}
+	});
+	</script>
+	<!-- End of mathjax configuration -->
+</head>
+
    
-<style media="screen" type="text/css">
-
-
-div.input_prompt {
-  color: #303F9F;
-}
-
-div.output_prompt {
-  color: #D84315;
-}
-</style>
-
-    <!-- Loading mathjax macro -->
-    <!-- Load mathjax -->
-        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-        <!-- MathJax configuration -->
-        <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-                processEscapes: true,
-                processEnvironments: true
-            },
-            // Center justify equations in code and markdown cells. Elsewhere
-            // we use CSS to left justify single line equations in code cells.
-            displayAlign: 'center',
-            "HTML-CSS": {
-                styles: {'.MathJax_Display': {"margin": 0}},
-                linebreaks: { automatic: true }
-            }
-        });
-        </script>
-        <!-- End of mathjax configuration --></head>
+  <link rel="stylesheet" href="/cfm/assets/css/notebook.css">
 
 
     <!-- Google Analytics -->
@@ -53,44 +53,41 @@ div.output_prompt {
     ga('create', 'UA-38016329-2', 'auto');
     ga('send', 'pageview');
     </script>
-
-    <!-- gitter side car -->
-
-   <script> ((window.gitter = {}).chat = {}).options = { room: 'computing-for-mathematics/Lobby' }; </script>
-    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-
 </head>
 <body>
 
-    <header class="site-header">
-
-  <div class="wrap">
-
-
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
-          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
-            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
-            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
-            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
-      <div class="trigger">
-          <a class="page-link" href="/cfm/">Computing for Mathematics</a>
-          <a class="page-link" href="/cfm/chapters/">Chapters</a>
-      </div>
-    </nav>
-
-  </div>
+    <header>
+    <div class="row">
+        <div class="three.columns">
+            <a class="logo" href="/cfm">Computing for mathematics</a>
+        </div>
+        <div class="nine.columns">
+              <input id="nav" type="checkbox">
+              <label for="nav"></label>
+              <nav>
+                    <ul>
+                      
+                          <li><a href=/cfm/chapters/00/>Introduction to the course</a></li>
+                      
+                          <li><a href=/cfm/chapters/01/>Variables Conditional Statements and Loops</a></li>
+                      
+                          <li><a href=/cfm/chapters/02/>Functions and data structures</a></li>
+                      
+                          <li><a href=/cfm/chapters/03/>Writing to files and recursion</a></li>
+                      
+                          <li><a href=/cfm/chapters/04/>Object oriented programming</a></li>
+                      
+                          <li><a href=/cfm/chapters/05/>Symbolic mathematics with sympy</a></li>
+                      
+                          <li><a href=/cfm/chapters/06/>Scientific libraries</a></li>
+                      
+                    </ul>
+              </nav>
+        </div>
+    </div>
 </header>
 
- <div class="page-content">
-    <div class="wrap">
-      <div class="home">
+    <div class="container">
         
     
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -187,7 +184,7 @@ mathematics.</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>These are fine for numerical work but not when it comes to carrying out <strong>exact</strong> mathematical calculations, where for example we know that:</p>
 <p>$$
-\cos(\pi / 4) = \sqrt{2} / 2
+    \cos(\pi / 4) = \sqrt{2} / 2
 $$</p>
 
 </div>
@@ -902,7 +899,7 @@ $$</p>
 <p>Sympy also has a <code>simplify</code> command that can be powerful. Experiment with all of these as well as more complex expressions.</p>
 <h3 id="3.-Symbolic-equations">3. Symbolic equations<a class="anchor-link" href="#3.-Symbolic-equations">&#182;</a></h3><p>We can use Sympy to solve symbolic equations. Let us solve the following symbolic equation:</p>
 <p>$$
-x ^ 2 + 3 x - 2 = 0
+    x ^ 2 + 3 x - 2 = 0
 $$</p>
 <p>We do this using the <code>solveset</code> function:</p>
 
@@ -948,7 +945,9 @@ $$</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>If our equation had a non zero right hand side we can use one of two
 approaches:</p>
-<p>$$x^2 + 3x - 2=y$$</p>
+<p>$$
+    x^2 + 3x - 2=y
+$$</p>
 <p><code>1</code>. Modify the equation so that it corresponds to an equation with zero right
   hand side:</p>
 
@@ -1807,10 +1806,10 @@ $$</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can solve systems of differential equations like the following:</p>
 <p>$$
-\begin{aligned}
-    \frac{dx}{dt} &amp; = 1-y\\
-    \frac{dy}{dt} &amp; = 1-x\\
-\end{aligned}
+    \begin{aligned}
+        \frac{dx}{dt} &amp; = 1-y\\
+        \frac{dy}{dt} &amp; = 1-x\\
+    \end{aligned}
 $$</p>
 
 </div>
@@ -1990,6 +1989,32 @@ look in to options that can be passed to <code>symbols</code> for this)</li>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -2062,10 +2087,19 @@ $$</p>
         <p align="right"><a href="../06/">Next</a></p>
     
 
-      </div>
-  </div>
-</div>
+    </div>
 
 
+    <script>
+        document.querySelector('header nav ul').addEventListener('click', function(){
+            document.querySelector('#nav').checked = false;
+        });
+
+        var menuHeight = document.querySelector('header').offsetHeight;
+        document.querySelectorAll('.section-title').forEach(function(a){
+            a.style.paddingTop = menuHeight + 'px';
+            a.style.marginTop = '-' + menuHeight + 'px';
+        });
+    </script>
 </body>
 </html>

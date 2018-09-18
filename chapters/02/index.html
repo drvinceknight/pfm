@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Computing for Mathematics</title>
+    <title>Computing for mathematics</title>
 
+  <!-- Mobile Specific Metas –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An undergraduate course introducing programming, through Python, to mathematicians.">
+  <meta name="keywords" content="python, mathematics, jupyter">
+  <meta name="author" content="Vince Knight">
+  <!-- CSS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="/cfm/assets/css/main.css">
+  <link rel="stylesheet" href="/cfm/assets/css/normalize.css">
+  <link rel="stylesheet" href="/cfm/assets/css/skeleton.css">
   <link rel="shortcut icon" type="image/png" href="/cfm/assets/favicon.ico"/>
 
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+  async>
+  </script>
+  <!-- MathJax configuration -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		tex2jax: {
+			inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+			displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+			processEscapes: true,
+			processEnvironments: true
+		},
+		// Center justify equations in code and markdown cells. Elsewhere
+		// we use CSS to left justify single line equations in code cells.
+		displayAlign: 'center',
+		"HTML-CSS": {
+			styles: {'.MathJax_Display': {"margin": 0}},
+			linebreaks: { automatic: true }
+		}
+	});
+	</script>
+	<!-- End of mathjax configuration -->
+</head>
+
    
-<style media="screen" type="text/css">
-
-
-div.input_prompt {
-  color: #303F9F;
-}
-
-div.output_prompt {
-  color: #D84315;
-}
-</style>
-
-    <!-- Loading mathjax macro -->
-    <!-- Load mathjax -->
-        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-        <!-- MathJax configuration -->
-        <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-                processEscapes: true,
-                processEnvironments: true
-            },
-            // Center justify equations in code and markdown cells. Elsewhere
-            // we use CSS to left justify single line equations in code cells.
-            displayAlign: 'center',
-            "HTML-CSS": {
-                styles: {'.MathJax_Display': {"margin": 0}},
-                linebreaks: { automatic: true }
-            }
-        });
-        </script>
-        <!-- End of mathjax configuration --></head>
+  <link rel="stylesheet" href="/cfm/assets/css/notebook.css">
 
 
     <!-- Google Analytics -->
@@ -53,51 +53,48 @@ div.output_prompt {
     ga('create', 'UA-38016329-2', 'auto');
     ga('send', 'pageview');
     </script>
-
-    <!-- gitter side car -->
-
-   <script> ((window.gitter = {}).chat = {}).options = { room: 'computing-for-mathematics/Lobby' }; </script>
-    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-
 </head>
 <body>
 
-    <header class="site-header">
-
-  <div class="wrap">
-
-
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
-          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
-            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
-            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
-            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
-      <div class="trigger">
-          <a class="page-link" href="/cfm/">Computing for Mathematics</a>
-          <a class="page-link" href="/cfm/chapters/">Chapters</a>
-      </div>
-    </nav>
-
-  </div>
+    <header>
+    <div class="row">
+        <div class="three.columns">
+            <a class="logo" href="/cfm">Computing for mathematics</a>
+        </div>
+        <div class="nine.columns">
+              <input id="nav" type="checkbox">
+              <label for="nav"></label>
+              <nav>
+                    <ul>
+                      
+                          <li><a href=/cfm/chapters/00/>Introduction to the course</a></li>
+                      
+                          <li><a href=/cfm/chapters/01/>Variables Conditional Statements and Loops</a></li>
+                      
+                          <li><a href=/cfm/chapters/02/>Functions and data structures</a></li>
+                      
+                          <li><a href=/cfm/chapters/03/>Writing to files and recursion</a></li>
+                      
+                          <li><a href=/cfm/chapters/04/>Object oriented programming</a></li>
+                      
+                          <li><a href=/cfm/chapters/05/>Symbolic mathematics with sympy</a></li>
+                      
+                          <li><a href=/cfm/chapters/06/>Scientific libraries</a></li>
+                      
+                    </ul>
+              </nav>
+        </div>
+    </div>
 </header>
 
- <div class="page-content">
-    <div class="wrap">
-      <div class="home">
+    <div class="container">
         
     
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Lab-Sheet-02:-Data-Structures-and-Functions">Lab Sheet 02: Data Structures and Functions<a class="anchor-link" href="#Lab-Sheet-02:-Data-Structures-and-Functions">&#182;</a></h2><p>This lab sheet will move on to understanding how to write functions (very similar to mathematical functions) and lists (a way of holding data).</p>
+<h2 id="Chapter-02:-Data-Structures-and-Functions">Chapter 02: Data Structures and Functions<a class="anchor-link" href="#Chapter-02:-Data-Structures-and-Functions">&#182;</a></h2><p>This lab sheet will move on to understanding how to write functions (very similar to mathematical functions) and lists (a way of holding data).</p>
 
 </div>
 </div>
@@ -860,8 +857,10 @@ comprehension:</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This is familiar, as it replicates mathematical notation. For example here is how to get the sum of the elements in the following set:</p>
-<p>$$\{n \in S \;| \text{ if } n \text{ is divisible by  2}\}$$</p>
-<p>(This is mathematical notation for "the set of all things in $S$ that are divisible by 2".)</p>
+<p>$$
+    \{n \in S \;| \text{ if } n \text{ is divisible by  2}\}
+$$</p>
+<p>(This is mathematical notation for "the set of all things in $S$ that are divisible by 2.)</p>
 
 </div>
 </div>
@@ -997,11 +996,13 @@ returns a string saying "Hello world":</p>
 way as for mathematical functions!).</p>
 <p>Let us revisit the mathematical function we described in the previous lab
 sheet:</p>
-<p>$$f(n)=\begin{cases}
-1&amp;\text{ if } n\leq 5\\
-2&amp;\text{ if } n&gt; 5\text{ and } n \text{ even}\\
-3&amp;\text{ otherwise }\\
-\end{cases}$$</p>
+<p>$$
+    f(n)=\begin{cases}
+        1&amp;\text{ if } n\leq 5\\
+        2&amp;\text{ if } n&gt; 5\text{ and } n \text{ even}\\
+        3&amp;\text{ otherwise }\\
+    \end{cases}
+$$</p>
 <p>Here is the code that defines this function (compare it to the code we wrote
 in the previous lab sheet):</p>
 
@@ -1239,18 +1240,20 @@ in the previous lab sheet):</p>
 <p><a href="https://youtu.be/h0_nnFmRwUQ">A video demo.</a></p>
 <p>The Fibonacci numbers are defined by the following mathematical formula:</p>
 <p>$$
-f_n = \begin{cases}
-1,\text{ if } n \in \{0, 1\}\\
-f_{n - 1} + f_{n - 2}, \text{ otherwise}
-\end{cases}
+    f_n = \begin{cases}
+    1,\text{ if } n \in \{0, 1\}\\
+    f_{n - 1} + f_{n - 2}, \text{ otherwise}
+    \end{cases}
 $$</p>
 <p>The goal of this question is to verify the following theorem about the sum
 of the first Fibonacci numbers:</p>
-<p>$$\sum_{i=0}^n f_i = f_{n + 2} - 1$$</p>
+<p>$$
+    \sum_{i=0}^n f_i = f_{n + 2} - 1
+$$</p>
 <p>As an example with $n=3$ we have: $f_0=f_1=1, f_2=2, f_3=3$ and
 $f_5=8$. We indeed have:</p>
 <p>$$
-\sum_{i=0}^nf_i = 1 + 1 + 2 + 3 = 7 = 8 - 1 = f_{3 + 2} - 1
+    \sum_{i=0}^nf_i = 1 + 1 + 2 + 3 = 7 = 8 - 1 = f_{3 + 2} - 1
 $$</p>
 <p>We are going to automate checking the formula using Python.
 Let us first write a function for the Fibonacci sequence itself:</p>
@@ -1485,7 +1488,9 @@ Let us first write a function for the Fibonacci sequence itself:</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h3 id="Exercise-2">Exercise 2<a class="anchor-link" href="#Exercise-2">&#182;</a></h3><p>Write a function that returns the triangular numbers $T_n$:</p>
-<p>$$T_n=\frac{n(n+1)}{2}$$</p>
+<p>$$
+    T_n=\frac{n(n+1)}{2}
+$$</p>
 
 </div>
 </div>
@@ -1496,7 +1501,9 @@ Let us first write a function for the Fibonacci sequence itself:</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h3 id="Exercise-3">Exercise 3<a class="anchor-link" href="#Exercise-3">&#182;</a></h3><p>Use code to check that the following relationship is true:</p>
-<p>$$\sum_{i=0}^{n}T_i=\frac{n(n+1)(n+2)}{6}$$</p>
+<p>$$
+    \sum_{i=0}^{n}T_i=\frac{n(n+1)(n+2)}{6}
+$$</p>
 
 </div>
 </div>
@@ -1567,10 +1574,19 @@ Course</a></li>
         <p align="right"><a href="../03/">Next</a></p>
     
 
-      </div>
-  </div>
-</div>
+    </div>
 
 
+    <script>
+        document.querySelector('header nav ul').addEventListener('click', function(){
+            document.querySelector('#nav').checked = false;
+        });
+
+        var menuHeight = document.querySelector('header').offsetHeight;
+        document.querySelectorAll('.section-title').forEach(function(a){
+            a.style.paddingTop = menuHeight + 'px';
+            a.style.marginTop = '-' + menuHeight + 'px';
+        });
+    </script>
 </body>
 </html>
