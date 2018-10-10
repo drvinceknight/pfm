@@ -13,6 +13,7 @@ The class notes are available here: https://vknight.org/cfm/
 
    meetings/index.rst
    tutors/index.rst
+   pedagogic-setting/index.rst
 
 
 Indices and tables
