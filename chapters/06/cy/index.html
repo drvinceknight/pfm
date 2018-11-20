@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Computing for mathematics</title>
+    <title>Cyfrifiadureg ar gyfer mathemateg</title>
 
   <meta charset="UTF-8">
   <!-- Mobile Specific Metas –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="An undergraduate course introducing programming, through Python, to mathematicians.">
+  <meta name="description" content="Cwrs israddedig yn cyflwyno rhaglennu, trwy defnyddio Python, i mathemategwyr.">
   <meta name="keywords" content="python, mathematics, jupyter, mathemateg">
   <meta name="author" content="Vince Knight">
   <!-- CSS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -60,7 +60,7 @@
     <header>
     <div class="row">
         <div class="three.columns">
-            <a class="logo" href="/cfm">Computing for mathematics</a>
+            <a class="logo" href="/cfm/cy">Cyfrifiadureg ar gyfer mathemateg</a>
         </div>
         <div class="nine.columns">
               <input id="nav" type="checkbox">
@@ -68,19 +68,19 @@
               <nav>
                     <ul>
                       
-                          <li><a href=/cfm/chapters/00/>Introduction to the course</a></li>
+                          <li><a href=/cfm/chapters/00/cy/>Cyflwyniad i'r Cwrs</a></li>
                       
-                          <li><a href=/cfm/chapters/01/>Variables Conditional Statements and Loops</a></li>
+                          <li><a href=/cfm/chapters/01/cy/>Newidynnau Datganiadau Amodol a Lwpiau</a></li>
                       
-                          <li><a href=/cfm/chapters/02/>Functions and data structures</a></li>
+                          <li><a href=/cfm/chapters/02/cy/>Ffwythiannau a strwythurau data</a></li>
                       
-                          <li><a href=/cfm/chapters/03/>Writing to files and recursion</a></li>
+                          <li><a href=/cfm/chapters/03/cy/>Ysgrifennu i ffeiliau a ffwythiannau ailadroddol</a></li>
                       
-                          <li><a href=/cfm/chapters/04/>Object oriented programming</a></li>
+                          <li><a href=/cfm/chapters/04/cy/>Rhaglennu gwrthrych gyfeiriol</a></li>
                       
-                          <li><a href=/cfm/chapters/05/>Symbolic mathematics with sympy</a></li>
+                          <li><a href=/cfm/chapters/05/cy/>Mathemateg symbolaidd gyda sympy</a></li>
                       
-                          <li><a href=/cfm/chapters/06/>Scientific libraries</a></li>
+                          <li><a href=/cfm/chapters/06/cy/>Llyfrgelloedd gwyddonol</a></li>
                       
                     </ul>
               </nav>
@@ -95,16 +95,16 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Chapter-06:-An-overview-of-scientific-libaries">Chapter 06: An overview of scientific libaries<a class="anchor-link" href="#Chapter-06:-An-overview-of-scientific-libaries">&#182;</a></h2><p>Further to Sympy, this lab sheet will give a brief overview of a number of popular Python libraries that can be used to tackle a number of different problems:</p>
+<h2 id="Pennod-06:-Trosolwg-o-lyfrgelloedd-gwyddonol">Pennod 06: Trosolwg o lyfrgelloedd gwyddonol<a class="anchor-link" href="#Pennod-06:-Trosolwg-o-lyfrgelloedd-gwyddonol">&#182;</a></h2><p>Yn symud ymlaen o Sympy, bydd y daflen lab yma yn rhoi trosolwg cryno ar nifer o lyfrgelloedd Python poblogaidd a all cael eu defnyddio i ddatrys nifer o broblemau gwahanol:</p>
 <ul>
-<li><a href="http://www.numpy.org/">numpy</a> efficient numeric computations (for example for efficient linear algebra);</li>
-<li><a href="https://matplotlib.org/">matplotlib</a> plotting;</li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/">scipy</a> a general purpose scientif library (for example include algorithms for numeric optimisation);</li>
-<li><a href="https://networkx.github.io/">networkx</a> network/graph theory (for example to compute the chromatic number of a graph);</li>
-<li><a href="https://pandas.pydata.org/">pandas</a> data manipulation (for example to read data from a given source and manipulate it);</li>
-<li><a href="http://scikit-learn.org">scikit-learn</a> machine learning (this is one of Python's most popular libraries).</li>
+<li><a href="http://www.numpy.org/">numpy</a> cyfrifiadau rhifyddeg effeithlon (er enghraifft i wneud algebra llinol effeithlon);</li>
+<li><a href="https://matplotlib.org/">matplotlib</a> plotio;</li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/">scipy</a> llyfrgell wyddonol cyffredinol (er enghraifft mae'n cynnwys algorithmau ar gyfer optimeiddio);</li>
+<li><a href="https://networkx.github.io/">networkx</a> theori graff/rhwydwaith (er enghraifft i gyfrifo rhif cromatig graff);</li>
+<li><a href="https://pandas.pydata.org/">pandas</a> triniaeth data (er enghraifft darllen data o ryw ffynhonnell a'i drin);</li>
+<li><a href="http://scikit-learn.org">scikit-learn</a> dysgu peiriannol (dyma un o lyfrgelloedd mwyaf poblogaidd Python).</li>
 </ul>
-<p>This lab sheet will not good a detailed overview of each library but aim to give a brief introduction to each.</p>
+<p>Ni fydd y daflen lab yma yn rhoi trosolwg manwl o bob llyfrgell ond y nod yw rhoi cyflwyniad cryno o bob un.</p>
 
 </div>
 </div>
@@ -113,8 +113,8 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Numpy---http://www.numpy.org/">Numpy - <a href="http://www.numpy.org/">http://www.numpy.org/</a><a class="anchor-link" href="#Numpy---http://www.numpy.org/">&#182;</a></h3><p>This is a fundamental library for efficient numeric computation. The building block is the <code>numpy.array</code> which can also be used to carry out linear algebraic manipulation.</p>
-<p>Let us import <code>numpy</code> and define two 3 by 3 matrices:</p>
+<h3 id="Numpy---http://www.numpy.org/">Numpy - <a href="http://www.numpy.org/">http://www.numpy.org/</a><a class="anchor-link" href="#Numpy---http://www.numpy.org/">&#182;</a></h3><p>Llyfrgell sylfaenol ar gyfer gwneud cyfrifiadau effeithlon yw hyn. Y bloc adeiladu yma yw'r <code>numpy.array</code> a gall cael ei ddefnyddio ar gyfer triniaeth algebra llinol.</p>
+<p>Gadewch i ni fewnforio <code>numpy</code> a diffinio dau fatrics 3 wrth 3:</p>
 
 </div>
 </div>
@@ -138,7 +138,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can access $A_{02}$ for example:</p>
+<p>Gallwn gael mynediad i $A_{02}$ er enghraifft:</p>
 
 </div>
 </div>
@@ -180,7 +180,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Or an entire row of $A$:</p>
+<p>Neu rhes cyfan o $A$:</p>
 
 </div>
 </div>
@@ -222,7 +222,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Or an entire column:</p>
+<p>Neu golofn gyfan:</p>
 
 </div>
 </div>
@@ -264,7 +264,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can do scalar multiplication:</p>
+<p>Gallwn gyflawni lluosi sgalar:</p>
 
 </div>
 </div>
@@ -308,7 +308,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can raise the matrix to a high power:</p>
+<p>Gallwn godi'r matrics i bŵer uchel:</p>
 
 </div>
 </div>
@@ -352,7 +352,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can carry out matrix addition:</p>
+<p>Gallwn adio matricsau:</p>
 
 </div>
 </div>
@@ -396,7 +396,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>But also more complex things like matrix multiplication:</p>
+<p>A gallwn wneud pethau mwy cymhleth fel lluosi matricsau:</p>
 
 </div>
 </div>
@@ -440,7 +440,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Recent versions of Python have <code>@</code> as shorthand for matrix multiplication:</p>
+<p>A gallwch gael gwrthdro a determinant $A$:</p>
 
 </div>
 </div>
@@ -448,50 +448,6 @@
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span> <span class="o">@</span> <span class="n">B</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[9]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[ 0,  9,  1],
-       [-5, 14,  8],
-       [-2,  7,  3]])</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We can also get the inverse and the determinant of a $A$:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
@@ -507,7 +463,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[10]:</div>
+<div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -528,14 +484,14 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Numpy also has numerous helpful functions that can be useful even if we are not doing any linear algebra. For example let us get an array of 100 values between <code>-2</code> and <code>1</code>:</p>
+<p>Mae hefyd gan Numpy nifer o ffwythiannau defnyddiol all fod yn ddefnyddiol hyd yn oed os nad ydyn yn gwneud algebra llinol. Er enghraifft gadewch i ni greu arae o 100 gwerth rhwng <code>-2</code> ac <code>1</code>:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
@@ -551,7 +507,7 @@
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[11]:</div>
+<div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -590,9 +546,9 @@
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h4 id="Further-resources-for-numpy">Further resources for numpy<a class="anchor-link" href="#Further-resources-for-numpy">&#182;</a></h4><ul>
-<li><a href="https://www.scipy-lectures.org/intro/numpy/index.html">Scipy-lecture notes on numpy</a></li>
-<li><a href="https://docs.scipy.org/doc/numpy/user/quickstart.html">Numpy quick start tutorial</a></li>
+<h4 id="Adnoddau-pellach-ar-gyfer-Numpy">Adnoddau pellach ar gyfer Numpy<a class="anchor-link" href="#Adnoddau-pellach-ar-gyfer-Numpy">&#182;</a></h4><ul>
+<li><a href="https://www.scipy-lectures.org/intro/numpy/index.html">Nodiadau darlith Scipy-lecture ar numpy</a></li>
+<li><a href="https://docs.scipy.org/doc/numpy/user/quickstart.html">Tiwtorial Numpy</a></li>
 </ul>
 
 </div>
@@ -602,24 +558,24 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Matplotlib---https://matplotlib.org/">Matplotlib - <a href="https://matplotlib.org/">https://matplotlib.org/</a><a class="anchor-link" href="#Matplotlib---https://matplotlib.org/">&#182;</a></h3><p>This is the most popular Python library for creating plots. We will illustrate first by creating a plot of the function:</p>
+<h3 id="Matplotlib---https://matplotlib.org/">Matplotlib - <a href="https://matplotlib.org/">https://matplotlib.org/</a><a class="anchor-link" href="#Matplotlib---https://matplotlib.org/">&#182;</a></h3><p>Dyma'r llyfrgell fwyaf poblogaidd ar gyfer Python ar gyfer creu plotiau. Byddwn yn dangos hwn yn gyntaf trwy greu plot o'r ffwythiant:</p>
 <p>$$
     -x ^ 4 + 9x ^ 2 + 4 x - 12
 $$</p>
-<p>We do this by creating a set of $x$ values and computing the corresponding set of $f(x)$ values:</p>
+<p>Rydym yn gwneud hwn trwy greu set o werthoedd $x$ a chyfrifo'r set gyfatebol o werthoedd $f(x)$:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="o">-</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">9</span> <span class="o">*</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">12</span>
 
-<span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># Create 1000 points</span>
+<span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># Creu 1000 o bwyntiau</span>
 <span class="n">ys</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xs</span><span class="p">]</span>
 </pre></div>
 
@@ -632,14 +588,14 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We are now ready to import and use matplotlib:</p>
+<p>Nawr rydym yn barod i fewnforio a defnyddio matplotlib:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -647,7 +603,7 @@ $$</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$x$&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$y$&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>  <span class="c1"># Note the `;` which ensures the plot gets shown here</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>  <span class="c1"># Nodwch yr `;` sy&#39;n sicrhau ond y plot sy&#39;n cael ei ddangos fan hyn</span>
 </pre></div>
 
 </div>
@@ -679,17 +635,17 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can also save that image to a file that can be used elsewhere:</p>
+<p>Gallwn arbed y ddelwedd yma i ffeil i'w ddefnyddio rhywle arall:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;plot.pdf&quot;</span><span class="p">)</span>   <span class="c1"># experiment with `.png`, `.jpg` etc...</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;plot.pdf&quot;</span><span class="p">)</span>   <span class="c1"># arbrofwch gyda `.png`, `.jpg` ayyb...</span>
 </pre></div>
 
 </div>
@@ -721,22 +677,22 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Note that there are numerous other types of plots that can be obtained, for example here is a histogram of 1000 random values generated by numpy:</p>
+<p>Nodwch gallwn greu nifer o wahanol fathau o blotiau, er enghraifft dyma histogram o 1000 haprif a generadwyd gan numpy:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Setting a seed</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Gosod hedyn</span>
 <span class="n">values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">10</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$Value$&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Frequency&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$Gwerth$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Amledd&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
 </pre></div>
 
@@ -756,7 +712,7 @@ $$</p>
 
 
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -772,9 +728,9 @@ $$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h4 id="Further-resources-for-matplotlib">Further resources for matplotlib<a class="anchor-link" href="#Further-resources-for-matplotlib">&#182;</a></h4><ul>
-<li><a href="https://matplotlib.org/users/pyplot_tutorial.html">Matplotlib tutorial</a></li>
-<li><a href="https://www.datacamp.com/community/tutorials/matplotlib-tutorial-python">Interactive matplotlib tutorial</a></li>
+<h4 id="Adnoddau-pellach-ar-gyfer-matplotlib">Adnoddau pellach ar gyfer matplotlib<a class="anchor-link" href="#Adnoddau-pellach-ar-gyfer-matplotlib">&#182;</a></h4><ul>
+<li><a href="https://matplotlib.org/users/pyplot_tutorial.html">Tiwtorial matplotlib</a></li>
+<li><a href="https://www.datacamp.com/community/tutorials/matplotlib-tutorial-python">Tiwtorial rhyngweithiol matplotlib</a></li>
 </ul>
 
 </div>
@@ -784,14 +740,14 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Scipy---https://docs.scipy.org/doc/scipy/reference/">Scipy - <a href="https://docs.scipy.org/doc/scipy/reference/">https://docs.scipy.org/doc/scipy/reference/</a><a class="anchor-link" href="#Scipy---https://docs.scipy.org/doc/scipy/reference/">&#182;</a></h3><p>Scipy is a library bringing together many different capabilities. One thing it can do is find roots using numeric approximation techniques:</p>
+<h3 id="Scipy---https://docs.scipy.org/doc/scipy/reference/">Scipy - <a href="https://docs.scipy.org/doc/scipy/reference/">https://docs.scipy.org/doc/scipy/reference/</a><a class="anchor-link" href="#Scipy---https://docs.scipy.org/doc/scipy/reference/">&#182;</a></h3><p>Llyfrgell yw Scipy sy'n casglu nifer o alluoedd gwahanol. Un peth gall e wneud yw canfod gwreiddiau trwy ddefnyddio technegau brasamcan rhifiadol:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="k">import</span> <span class="n">optimize</span>
@@ -804,7 +760,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">optimize</span><span class="o">.</span><span class="n">root</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -820,7 +776,7 @@ $$</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[17]:</div>
+<div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -845,7 +801,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -861,7 +817,7 @@ $$</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[18]:</div>
+<div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -880,18 +836,18 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It can also minimize functions (of more than one variable):</p>
+<p>Gall hefyd minimeiddio ffwythiannau (gyda mwy nag un newidyn):</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Here we assume g is a function of 2 variables and x is a vector&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;Tybiwn fod g yn ffwythiant o 2 newidyn a bod x yn fector&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 
@@ -902,7 +858,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">optimize</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
@@ -918,7 +874,7 @@ $$</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[20]:</div>
+<div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -947,23 +903,23 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can also fit a function to date, here we will create some data that fits a curve, add some noise and try and recover the function:</p>
+<p>Gallwn hefyd ffitio ffwythiant i ddata, fan hyn byddwn yn creu data sy'n dilyn cromlin, ychwanegu bach o sŵn, a cheisio adfer y ffwythiant:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">ffwyth</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">b</span>
 
 <span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
-<span class="n">a_value</span><span class="p">,</span> <span class="n">b_value</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">70</span>
+<span class="n">gwerth_a</span><span class="p">,</span> <span class="n">gwerth_b</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">70</span>
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">ys</span> <span class="o">=</span> <span class="p">[</span><span class="n">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="n">a_value</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="n">b_value</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xs</span><span class="p">]</span>
+<span class="n">ys</span> <span class="o">=</span> <span class="p">[</span><span class="n">ffwyth</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="n">gwerth_a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="n">gwerth_b</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xs</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -975,14 +931,14 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Let us take a look at the data:</p>
+<p>Edrychwn ar y data:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
@@ -1019,10 +975,10 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">optimize</span><span class="o">.</span><span class="n">curve_fit</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">optimize</span><span class="o">.</span><span class="n">curve_fit</span><span class="p">(</span><span class="n">ffwyth</span><span class="p">,</span> <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1034,14 +990,14 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We recover the original used values of <code>a</code> and <code>b</code>:</p>
+<p>Adferwn ni'r gwerthoedd o <code>a</code> a <code>b</code>:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">popt</span>
@@ -1057,7 +1013,7 @@ $$</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[24]:</div>
+<div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -1074,12 +1030,12 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fitted_ys</span> <span class="o">=</span> <span class="p">[</span><span class="n">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">popt</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xs</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Original data&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">fitted_ys</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Fitted data&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">);</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ys_ffitiwyd</span> <span class="o">=</span> <span class="p">[</span><span class="n">ffwyth</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">popt</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xs</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Data gwreiddiol&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys_ffitiwyd</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Data a ffitiwyd&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">);</span>
 </pre></div>
 
 </div>
@@ -1114,8 +1070,8 @@ $$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h4 id="Further-resources-for-scipy">Further resources for scipy<a class="anchor-link" href="#Further-resources-for-scipy">&#182;</a></h4><ul>
-<li><a href="https://www.scipy-lectures.org/">Scipy lecture notes</a></li>
+<h4 id="Adnoddau-pellach-ar-gyfer-scipy">Adnoddau pellach ar gyfer scipy<a class="anchor-link" href="#Adnoddau-pellach-ar-gyfer-scipy">&#182;</a></h4><ul>
+<li><a href="https://www.scipy-lectures.org/">Nodiadau darlith Scipy</a></li>
 </ul>
 
 </div>
@@ -1125,14 +1081,14 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Networkx---https://networkx.github.io/">Networkx - <a href="https://networkx.github.io/">https://networkx.github.io/</a><a class="anchor-link" href="#Networkx---https://networkx.github.io/">&#182;</a></h3><p>Networkx is used to handle graph theoretic objects. We can create a matrix in a number of ways, one of the simplest is by passing a set of edges. Here we import the library and create a graph object:</p>
+<h3 id="Networkx---https://networkx.github.io/">Networkx - <a href="https://networkx.github.io/">https://networkx.github.io/</a><a class="anchor-link" href="#Networkx---https://networkx.github.io/">&#182;</a></h3><p>Mae Networkx yn delio gyda gwrthrychau o theori graff. Gallwn greu graff mewn nifer o ffyrdd gwahanol, un o'r symlaf yw pasio set o ymylon. Fan hyn rydym yn mewnforio'r llyfrgell a chreu gwrthrych graff:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
@@ -1151,13 +1107,13 @@ $$</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[26]:</div>
+<div class="prompt output_prompt">Out[25]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;networkx.classes.graph.Graph at 0x7fb2c549e240&gt;</pre>
+<pre>&lt;networkx.classes.graph.Graph at 0x101bf155c0&gt;</pre>
 </div>
 
 </div>
@@ -1170,14 +1126,14 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It is possible to obtain the adjacency matrix of the graph:</p>
+<p>Mae'n bosib cael matrics cyfagosrwydd y graff:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">to_numpy_array</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
@@ -1194,7 +1150,7 @@ $$</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[27]:</div>
+<div class="prompt output_prompt">Out[26]:</div>
 
 
 
@@ -1216,14 +1172,14 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It is also possible to draw the graph:</p>
+<p>Mae hefyd yn bosib tynnu llun y graff:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
@@ -1261,18 +1217,18 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can also compute a graph coloring:</p>
+<p>Gallwch gyfrifo lliwio graff:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">coloring</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">greedy_color</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
-<span class="n">coloring</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lliwio</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">greedy_color</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+<span class="n">lliwio</span>
 </pre></div>
 
 </div>
@@ -1285,7 +1241,7 @@ $$</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[29]:</div>
+<div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -1304,17 +1260,17 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We see that the chromatic number of this graph is 3:</p>
+<p>A gwelwn taw rhif cromatig y graff yw 3:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">coloring</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">lliwio</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
 </pre></div>
 
 </div>
@@ -1327,7 +1283,7 @@ $$</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[30]:</div>
+<div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -1347,10 +1303,10 @@ $$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h4 id="Further-resources-for-networkx">Further resources for networkx<a class="anchor-link" href="#Further-resources-for-networkx">&#182;</a></h4><ul>
-<li><a href="https://networkx.github.io/documentation/stable/tutorial.html">Networkx tutorial</a></li>
-<li><a href="https://www.datacamp.com/community/tutorials/networkx-python-graph-tutorial">The chinese postman problem with networkx</a></li>
-<li><a href="https://nikoleta-v3.github.io/blog/2017/10/19/python-graphs-got.html">Analysing Game of Thrones with networkx</a></li>
+<h4 id="Adnoddau-pellach-ar-gyfer-networkx">Adnoddau pellach ar gyfer networkx<a class="anchor-link" href="#Adnoddau-pellach-ar-gyfer-networkx">&#182;</a></h4><ul>
+<li><a href="https://networkx.github.io/documentation/stable/tutorial.html">Tiwtorial Networkx</a></li>
+<li><a href="https://www.datacamp.com/community/tutorials/networkx-python-graph-tutorial">Problem y postmon Tseiniaidd gyda networkx</a></li>
+<li><a href="https://nikoleta-v3.github.io/blog/2017/10/19/python-graphs-got.html">Dadansoddi Game of Thrones gyda networkx</a></li>
 </ul>
 
 </div>
@@ -1360,18 +1316,18 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Pandas---https://pandas.pydata.org/">Pandas - <a href="https://pandas.pydata.org/">https://pandas.pydata.org/</a><a class="anchor-link" href="#Pandas---https://pandas.pydata.org/">&#182;</a></h3><p>Pandas is Python's main library for data manipulation. As an example let us consider this dataset about extra marrital afairs:  <code>affairs.csv</code> (<a href="/cfm/nbs/chapters/affairs.csv">download</a>). This is data from the following research paper:</p>
+<h3 id="Pandas---https://pandas.pydata.org/">Pandas - <a href="https://pandas.pydata.org/">https://pandas.pydata.org/</a><a class="anchor-link" href="#Pandas---https://pandas.pydata.org/">&#182;</a></h3><p>Pandas yw brif lyfrgell Python ar gyfer trin data. Fel enghraifft byddwn yn ystyried set data at affêrau caru ar y slei: <code>affairs.csv</code> (<a href="/cfm/nbs/chapters/affairs.csv">download</a>). Mae'r data yma o'r papur ymchwil canlynol:</p>
 <blockquote><p>Fair, Ray C. "A theory of extramarital affairs." Journal of Political Economy 86.1 (1978): 45-61.</p>
 </blockquote>
-<p>A pdf can be found here: <a href="https://fairmodel.econ.yale.edu/rayfair/pdf/1978A200.PDF">https://fairmodel.econ.yale.edu/rayfair/pdf/1978A200.PDF</a></p>
-<p>Let us import pandas and read the dataset in:</p>
+<p>Mae pdf ar gael fan hyn: <a href="https://fairmodel.econ.yale.edu/rayfair/pdf/1978A200.PDF">https://fairmodel.econ.yale.edu/rayfair/pdf/1978A200.PDF</a></p>
+<p>Gadewch i ni fewnforio pandas a darllen y set data:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -1387,14 +1343,14 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can look at the top of the data set:</p>
+<p>Gallwn weld pen y set data:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -1410,7 +1366,7 @@ $$</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[32]:</div>
+<div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -1520,25 +1476,25 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>From the paper we read that the variables are:</p>
+<p>O'r papur gallwn ddarllen y newidynnau:</p>
 <ul>
-<li><code>sex</code>: The reported gender of the individual;</li>
-<li><code>age</code>: The age of the individual;</li>
-<li><code>ym</code>: Number of years married;</li>
-<li><code>child</code>: Whether or not the individual has a child;</li>
-<li><code>religious</code>: How religious the individual is (<code>5</code>: "very", <code>1</code>: "not");</li>
-<li><code>education</code>: Level of education (<code>9</code>: grade school, <code>20</code>: PhD or MD);</li>
-<li><code>occupation</code>: Occupation based on a scalle called the "Hollingshead classification";</li>
-<li><code>rate</code>: Individual rating of marriage (<code>5</code>: "very happy", <code>1</code>: "very unhappy").</li>
+<li><code>sex</code>: Rhyw a adroddwyd yr unigolyn;</li>
+<li><code>age</code>: Oedran yr unigolyn;</li>
+<li><code>ym</code>: Nifer o flynyddoedd yn briod;</li>
+<li><code>child</code>: Os oes gan yr unigolyn plentyn;</li>
+<li><code>religious</code>: Pa mor grefyddol yw'r unigolyn (<code>5</code>: "iawn", <code>1</code>: "dim");</li>
+<li><code>education</code>: Lefel addysg (<code>9</code>: ysgol gradd, <code>20</code>: PhD neu MD);</li>
+<li><code>occupation</code>: Swydd yn seiliedig ar raddfa o'r enw "Hollingshead classification";</li>
+<li><code>rate</code>: Mesur yr unigolyn o'i briodas (<code>5</code>: "hapus iawn", <code>1</code>: "anhapus iawn").</li>
 </ul>
-<p>We can obtain a quick overview of the data using the <code>describe()</code> method:</p>
+<p>Gallwn gael trosolwg gloi o'r data gan ddefnyddio'r dull <code>describe()</code>:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -1554,7 +1510,7 @@ $$</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[33]:</div>
+<div class="prompt output_prompt">Out[32]:</div>
 
 
 
@@ -1682,14 +1638,14 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can also choose to slice our data set in specific ways, for example how is the mean number of affairs related to the rating of the marriage and whether or not the individual is male or female?</p>
+<p>Gallwn hefyd sleisio'r data mewn ffyrdd penodol, er enghraifft sut y mae'r rhif cymedrig o affêrau yn perthyn i fesur y briodas ac os yw'r unigolyn yn wryw neu’n fenyw?</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;sex&quot;</span><span class="p">,</span> <span class="s2">&quot;rate&quot;</span><span class="p">])[</span><span class="s2">&quot;nbaffairs&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -1705,7 +1661,7 @@ $$</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[34]:</div>
+<div class="prompt output_prompt">Out[33]:</div>
 
 
 
@@ -1735,14 +1691,14 @@ Name: nbaffairs, dtype: float64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can also choose to slice our data manually, for example let us only look at the data set for males:</p>
+<p>Gallwn hefyd sleisio'r data gyda llaw, er enghraifft os hoffwn y data ar gyfer pobl wryw yn unig:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;sex&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;male&quot;</span><span class="p">]</span>
@@ -1758,7 +1714,7 @@ Name: nbaffairs, dtype: float64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[35]:</div>
+<div class="prompt output_prompt">Out[34]:</div>
 
 
 
@@ -2541,14 +2497,14 @@ Name: nbaffairs, dtype: float64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can combine this with matplotlib to get a plot of the mean number of affairs based on rating by gender:</p>
+<p>Gallwn gyfuno hwn gyda matplotlib er mwyn cael plot y rhif cymedrig o affêrau ar sail mesur priodas a rhyw:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
@@ -2590,9 +2546,9 @@ Name: nbaffairs, dtype: float64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Further-resources-for-pandas">Further resources for pandas<a class="anchor-link" href="#Further-resources-for-pandas">&#182;</a></h4><ul>
-<li><a href="https://pandas.pydata.org/pandas-docs/stable/tutorials.html">pandas tutorials</a></li>
-<li><a href="https://www.datacamp.com/community/tutorials/pandas-tutorial-dataframe-python">an interactive pandas tutorial</a></li>
+<h4 id="Adnoddau-pellach-ar-gyfer-pandas">Adnoddau pellach ar gyfer pandas<a class="anchor-link" href="#Adnoddau-pellach-ar-gyfer-pandas">&#182;</a></h4><ul>
+<li><a href="https://pandas.pydata.org/pandas-docs/stable/tutorials.html">tiwtorial pandas</a></li>
+<li><a href="https://www.datacamp.com/community/tutorials/pandas-tutorial-dataframe-python">tiwtorial pandas rhyngweithiol</a></li>
 </ul>
 
 </div>
@@ -2602,15 +2558,15 @@ Name: nbaffairs, dtype: float64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Scikit-learn---http://scikit-learn.org">Scikit-learn - <a href="http://scikit-learn.org">http://scikit-learn.org</a><a class="anchor-link" href="#Scikit-learn---http://scikit-learn.org">&#182;</a></h3><p>The scikit learn library is a popular library for machine learning. As an example, let us aim to train a model that will predict whether or not someone will have an affair using the data above.</p>
-<p>First let us create a new variable <code>male</code> and also change the <code>child</code>  variable to be a boolean and store this data in a new dataframe called <code>X</code> which will be used to predict a new variable a new variable <code>cheat</code> (stored in <code>y</code>):</p>
+<h3 id="Scikit-learn---http://scikit-learn.org">Scikit-learn - <a href="http://scikit-learn.org">http://scikit-learn.org</a><a class="anchor-link" href="#Scikit-learn---http://scikit-learn.org">&#182;</a></h3><p>Mae'r llyfrgell scikit learn yn llyfrgell boblogaidd ar gyfer dysgu peiriannau. Er enghraifft, gadewch i ni hyfforddi model a fydd yn rhagfynegi os bydd rhywun yn cael affêr gan ddefnyddio'r data uchod.</p>
+<p>Yn gyntaf byddwn yn creu newidyn newydd o'r enw <code>male</code> a hefyd newid y newidyn <code>child</code> i fod yn boolean a storio'r data yma mewn ffrâm data newydd o'r enw <code>X</code> a fyddwn yn defnyddio i ragfynegi newidyn newydd arall o'r enw <code>cheat</code> (wedi'i storio yn <code>y</code>):</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;bool_child&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;child&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;yes&quot;</span>
@@ -2628,14 +2584,14 @@ Name: nbaffairs, dtype: float64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now let us import the specifit classifier for the algorithm we want to use:</p>
+<p>Nawr i fewnforio'r dosbarthydd penodol bydd yr algorithm yn defnyddio:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="k">import</span> <span class="n">RandomForestClassifier</span>
@@ -2655,7 +2611,7 @@ Name: nbaffairs, dtype: float64</pre>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>/home/vince/anaconda3/envs/cfm/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
+<pre>/Users/geraintianpalmer/anaconda3/envs/cfm/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
   from numpy.core.umath_tests import inner1d
 </pre>
 </div>
@@ -2667,7 +2623,7 @@ Name: nbaffairs, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">seed</span> <span class="o">=</span> <span class="mi">3</span>
@@ -2685,7 +2641,7 @@ Name: nbaffairs, dtype: float64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[39]:</div>
+<div class="prompt output_prompt">Out[38]:</div>
 
 
 
@@ -2707,7 +2663,7 @@ Name: nbaffairs, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">feature</span><span class="p">,</span> <span class="n">importance</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">clf</span><span class="o">.</span><span class="n">feature_importances_</span><span class="p">):</span>
@@ -2748,27 +2704,27 @@ male 0.04834
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The most important feature seems to be the <code>age</code> of the individual. Let us use our trained model to predict whether or not some given individual is likely to have an affair over their lifetime:</p>
+<p>Y briodwedd fwyaf pwysig fan hyn yw oedran yr unigolyn. Gadewch i ni ddefnyddio ein model a hyfforddwn i ragfynegi os bydd rhyw unigolyn yn debygol o gael affêr dros ei fywyd:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ages</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">35</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="n">probability_of_affair</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">age</span> <span class="ow">in</span> <span class="n">ages</span><span class="p">:</span>
-    <span class="n">ym</span> <span class="o">=</span> <span class="n">age</span> <span class="o">-</span> <span class="mi">24</span>
-    <span class="n">vince_knight</span> <span class="o">=</span> <span class="p">[[</span><span class="n">age</span><span class="p">,</span> <span class="n">ym</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">]]</span>
-    <span class="n">probability_of_affair</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">vince_knight</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">oedrannau</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">35</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">tebygolrwydd_o_cael_affer</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">oed</span> <span class="ow">in</span> <span class="n">oedrannau</span><span class="p">:</span>
+    <span class="n">ym</span> <span class="o">=</span> <span class="n">oed</span> <span class="o">-</span> <span class="mi">24</span>
+    <span class="n">vince_knight</span> <span class="o">=</span> <span class="p">[[</span><span class="n">oed</span><span class="p">,</span> <span class="n">ym</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">]]</span>
+    <span class="n">tebygolrwydd_o_cael_affer</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">vince_knight</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>    
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ages</span><span class="p">,</span> <span class="n">probability_of_affair</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Vince&#39;s age&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Vince&#39;s probability of having an affair&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">oedrannau</span><span class="p">,</span> <span class="n">tebygolrwydd_o_cael_affer</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Oedran Vince&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Tebygolrwydd Vince o cael affêr&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
@@ -2782,7 +2738,7 @@ male 0.04834
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[41]:</div>
+<div class="prompt output_prompt">Out[40]:</div>
 
 
 
@@ -2801,7 +2757,7 @@ male 0.04834
 
 
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -2816,10 +2772,10 @@ male 0.04834
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Further-resources-for-scikit-learn">Further resources for scikit-learn<a class="anchor-link" href="#Further-resources-for-scikit-learn">&#182;</a></h4><ul>
-<li><a href="http://scikit-learn.org/stable/tutorial/index.html">scikit-learn tutorials</a></li>
-<li><a href="https://www.datacamp.com/community/tutorials/machine-learning-python">an interactive scikit-learn tutorial</a></li>
-<li><a href="https://machinelearningmastery.com/a-gentle-introduction-to-scikit-learn-a-python-machine-learning-library/">A "gentle introduction" to scikit-learn</a></li>
+<h4 id="Adnoddau-pellach-ar-gyfer-scikit-learn">Adnoddau pellach ar gyfer scikit-learn<a class="anchor-link" href="#Adnoddau-pellach-ar-gyfer-scikit-learn">&#182;</a></h4><ul>
+<li><a href="http://scikit-learn.org/stable/tutorial/index.html">tiwtorial scikit-learn</a></li>
+<li><a href="https://www.datacamp.com/community/tutorials/machine-learning-python">tiwtorial rhyngweithiol scikit-learn</a></li>
+<li><a href="https://machinelearningmastery.com/a-gentle-introduction-to-scikit-learn-a-python-machine-learning-library/">Cyflwyniad ysgafn ("gentle introduction") i scikit-learn</a></li>
 </ul>
 
 </div>
@@ -2830,7 +2786,7 @@ male 0.04834
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<p><strong>This is a brief overview of the type of thing each library can do, depending on what you want to do be sure to explore them fully and there are many other libraries in the Python ecosystem.</strong></p>
+<p><strong>Dyma drosolwg cryno o'r mathau o bethau gall pob llyfrgell eu gwneud, yn ddibynnau ar beth hoffwch wneud gwnewch yn siŵr o'u harchwilio'n llawn ac mae nifer o lyfrgelloedd arall yn yr ecosystem Python.</strong></p>
 
 </div>
 </div>
@@ -2840,10 +2796,10 @@ male 0.04834
 
 
     
-        <a href="../05/">Previous</a>
+        <a href="../../05/cy/">Blaenorol</a>
     
     
-        <p align="right"><a href="../00/">Next</a></p>
+        <p align="right"><a href="../../00/cy/">Nesaf</a></p>
     
 
     </div>
@@ -2851,14 +2807,16 @@ male 0.04834
     <div class="container">
         <center>
             <p style="font-size: small;">
-            Source code:
+            Ffynhonnell cod:
             <a href="https://github.com/drvinceknight/cfm">@drvinceknight</a>
-            Powered by:
+            Wedi'i greu gan:
                 <a href="https://www.python.org/">Python</a>
                 <a href="http://jupyter.org/">Jupyter</a>
                 <a href="https://www.mathjax.org/">Mathjax</a>
                 <a href="https://pages.github.com/">Github pages</a>
                 <a href="http://getskeleton.com/">Skeleton css</a>
+            Cyfieithiad gan:
+                <a href="http://www.geraintianpalmer.org.uk">Geraint Palmer</a>
             </p>
         </center>
     </div>

@@ -7,7 +7,14 @@
         </h5>
     </center>
 
-    {% include 'partials/list_of_chapters.html' %}
+    <h1>Chapters</h1>
+      <ol start=0>
+          {% for chapter in chapters %}
+              <li><a href=/{{root}}/chapters/{{ chapter.dir }}/>{{ chapter.title }}</a>
+                  (<a href=/{{root}}/{{ chapter.nb }}>ipynb</a>)</li>
+          {% endfor %}
+      </ol>
+
 
     <h1>Other materials</h1>
 
@@ -23,6 +30,9 @@
           </li>
           <li>
                <a href=/tch-phi/>Teaching philosophy</a>
+          </li>
+          <li>
+              <a href=/{{root}}/cy/>Welsh language version of this course</a>
           </li>
         </ul>
 {% endblock %}

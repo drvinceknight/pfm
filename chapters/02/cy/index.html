@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Computing for mathematics</title>
+    <title>Cyfrifiadureg ar gyfer mathemateg</title>
 
   <meta charset="UTF-8">
   <!-- Mobile Specific Metas –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="An undergraduate course introducing programming, through Python, to mathematicians.">
+  <meta name="description" content="Cwrs israddedig yn cyflwyno rhaglennu, trwy defnyddio Python, i mathemategwyr.">
   <meta name="keywords" content="python, mathematics, jupyter, mathemateg">
   <meta name="author" content="Vince Knight">
   <!-- CSS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -60,7 +60,7 @@
     <header>
     <div class="row">
         <div class="three.columns">
-            <a class="logo" href="/cfm">Computing for mathematics</a>
+            <a class="logo" href="/cfm/cy">Cyfrifiadureg ar gyfer mathemateg</a>
         </div>
         <div class="nine.columns">
               <input id="nav" type="checkbox">
@@ -68,19 +68,19 @@
               <nav>
                     <ul>
                       
-                          <li><a href=/cfm/chapters/00/>Introduction to the course</a></li>
+                          <li><a href=/cfm/chapters/00/cy/>Cyflwyniad i'r Cwrs</a></li>
                       
-                          <li><a href=/cfm/chapters/01/>Variables Conditional Statements and Loops</a></li>
+                          <li><a href=/cfm/chapters/01/cy/>Newidynnau Datganiadau Amodol a Lwpiau</a></li>
                       
-                          <li><a href=/cfm/chapters/02/>Functions and data structures</a></li>
+                          <li><a href=/cfm/chapters/02/cy/>Ffwythiannau a strwythurau data</a></li>
                       
-                          <li><a href=/cfm/chapters/03/>Writing to files and recursion</a></li>
+                          <li><a href=/cfm/chapters/03/cy/>Ysgrifennu i ffeiliau a ffwythiannau ailadroddol</a></li>
                       
-                          <li><a href=/cfm/chapters/04/>Object oriented programming</a></li>
+                          <li><a href=/cfm/chapters/04/cy/>Rhaglennu gwrthrych gyfeiriol</a></li>
                       
-                          <li><a href=/cfm/chapters/05/>Symbolic mathematics with sympy</a></li>
+                          <li><a href=/cfm/chapters/05/cy/>Mathemateg symbolaidd gyda sympy</a></li>
                       
-                          <li><a href=/cfm/chapters/06/>Scientific libraries</a></li>
+                          <li><a href=/cfm/chapters/06/cy/>Llyfrgelloedd gwyddonol</a></li>
                       
                     </ul>
               </nav>
@@ -95,7 +95,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Chapter-02:-Data-Structures-and-Functions">Chapter 02: Data Structures and Functions<a class="anchor-link" href="#Chapter-02:-Data-Structures-and-Functions">&#182;</a></h2><p>This lab sheet will move on to understanding how to write functions (very similar to mathematical functions) and lists (a way of holding data).</p>
+<h2 id="Pennod-02:-Strwythurau-Data-a-Ffwythiannau">Pennod 02: Strwythurau Data a Ffwythiannau<a class="anchor-link" href="#Pennod-02:-Strwythurau-Data-a-Ffwythiannau">&#182;</a></h2><p>Bydd y daflen lab yma yn symud ymlaen i ddeall sut i ysgrifennu ffwythiannau (yn debyg iawn i ffwythiannau mathemategol) a rhestrau (ffordd o gynnal data).</p>
 
 </div>
 </div>
@@ -104,14 +104,12 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Tutorial">Tutorial<a class="anchor-link" href="#Tutorial">&#182;</a></h2><p>Work through the following:</p>
+<h2 id="Tiwtorial">Tiwtorial<a class="anchor-link" href="#Tiwtorial">&#182;</a></h2><p>Gweithiwch trwy'r canlynol:</p>
 <hr>
-<h3 id="1.-Lists">1. Lists<a class="anchor-link" href="#1.-Lists">&#182;</a></h3><p><a href="https://youtu.be/oLrrdPQzZas">A video describing the concept.</a></p>
-<p><a href="https://youtu.be/E3BNVFwLWkM">A video demo.</a></p>
-<p>Another type of variable in Python (we have already seen numeric and
-character variables) is the list. This type acts as a container that can hold
-multiple other items in an ordered way.</p>
-<p>Here is a list of my favourite numbers:</p>
+<h3 id="1.-Rhestrau">1. Rhestrau<a class="anchor-link" href="#1.-Rhestrau">&#182;</a></h3><p><a href="https://youtu.be/oLrrdPQzZas">Fideo yn disgrifio'r cysyniad.</a></p>
+<p><a href="https://youtu.be/E3BNVFwLWkM">Fideo demo.</a></p>
+<p>Math arall o newidyn yn Python (rydym yn barod wedi gweld newidynnau rhifiadol a newidynnau o gymeriadau) yw rhestr. Mae hwn yn ymddwyn fel cynhwysydd sy'n dal nifer o eitemau arall mewn trefn.</p>
+<p>Dyma restr o'm hoff rifau:</p>
 
 </div>
 </div>
@@ -121,8 +119,8 @@ multiple other items in an ordered way.</p>
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">favourite_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
-<span class="n">favourite_numbers</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hoff_rhifau</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="n">hoff_rhifau</span>
 </pre></div>
 
 </div>
@@ -155,7 +153,7 @@ multiple other items in an ordered way.</p>
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">favourite_numbers</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">hoff_rhifau</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -187,7 +185,7 @@ multiple other items in an ordered way.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can do various things to the items in the list:</p>
+<p>Gallwn wneud amryw o bethau i eitemau mewn rhestr:</p>
 
 </div>
 </div>
@@ -197,7 +195,7 @@ multiple other items in an ordered way.</p>
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">favourite_numbers</span><span class="p">)</span>  <span class="c1"># Adding all the elements of our list</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">hoff_rhifau</span><span class="p">)</span>  <span class="c1"># Adio&#39;r holl elfennau yn y rhestr</span>
 </pre></div>
 
 </div>
@@ -230,7 +228,7 @@ multiple other items in an ordered way.</p>
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="n">favourite_numbers</span><span class="p">)</span>  <span class="c1"># Getting the largest element of a list</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="n">hoff_rhifau</span><span class="p">)</span>  <span class="c1"># Cael yr elfen mwyaf yn y rhestr</span>
 </pre></div>
 
 </div>
@@ -263,7 +261,7 @@ multiple other items in an ordered way.</p>
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">min</span><span class="p">(</span><span class="n">favourite_numbers</span><span class="p">)</span>  <span class="c1"># Getting the minimum element of a list</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">min</span><span class="p">(</span><span class="n">hoff_rhifau</span><span class="p">)</span>  <span class="c1"># Cael yr elfen lleiaf yn y rhestr</span>
 </pre></div>
 
 </div>
@@ -296,8 +294,8 @@ multiple other items in an ordered way.</p>
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">favourite_numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># Add another element to a list</span>
-<span class="n">favourite_numbers</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hoff_rhifau</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># Ychwanegu elfen arall i&#39;r rhestr</span>
+<span class="n">hoff_rhifau</span>
 </pre></div>
 
 </div>
@@ -329,7 +327,7 @@ multiple other items in an ordered way.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can also go in to our lists and get specific items. This works just as it did with strings:</p>
+<p>Hefyd gallwn adfer eitemau penodol o'r rhestr. Mae hwn yn gweithio yn yr un modd â gyda strings:</p>
 
 </div>
 </div>
@@ -339,7 +337,7 @@ multiple other items in an ordered way.</p>
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">favourite_numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># Getting the first element of a list</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hoff_rhifau</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># Cael elfen cyntaf y rhestr</span>
 </pre></div>
 
 </div>
@@ -372,7 +370,7 @@ multiple other items in an ordered way.</p>
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">favourite_numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Getting the second element of a list</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hoff_rhifau</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Cael ail elfen y rhestr</span>
 </pre></div>
 
 </div>
@@ -405,7 +403,7 @@ multiple other items in an ordered way.</p>
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">favourite_numbers</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Getting the last element of a list</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hoff_rhifau</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Cael elfen olaf y rhestr</span>
 </pre></div>
 
 </div>
@@ -438,7 +436,7 @@ multiple other items in an ordered way.</p>
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">favourite_numbers</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>  <span class="c1"># Getting the 3rd till the 4th element of a list</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hoff_rhifau</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>  <span class="c1"># Cael y 3ydd i&#39;r 4ydd elfen y rhestr</span>
 </pre></div>
 
 </div>
@@ -470,9 +468,7 @@ multiple other items in an ordered way.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Strings (see in in the previous lab sheet) and lists are similar in that they
-   are 'containers' for items. A lot of the manipulation that works with lists
-   also works with strings:</p>
+<p>Mae strings (gweler y daflen lab diwethaf) a rhestrau yn debyg iawn yn y ffordd maent yn 'cynwysyddion' ar gyfer eitemau. Mae lot o'r gweithrediadau sy'n gweithio gyda rhestrau hefyd yn gweithio gyda strings:</p>
 
 </div>
 </div>
@@ -482,8 +478,8 @@ multiple other items in an ordered way.</p>
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">firstname</span> <span class="o">=</span> <span class="s2">&quot;Vince&quot;</span>
-<span class="nb">len</span><span class="p">(</span><span class="n">firstname</span><span class="p">)</span>  <span class="c1"># How many characters are in the variable</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">enwcyntaf</span> <span class="o">=</span> <span class="s2">&quot;Vince&quot;</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">enwcyntaf</span><span class="p">)</span>  <span class="c1"># Faint o gymeriadau sydd yn y newidyn</span>
 </pre></div>
 
 </div>
@@ -516,7 +512,7 @@ multiple other items in an ordered way.</p>
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">firstname</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># We can point at individual characters, 0 is the first</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">enwcyntaf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># Gallwn pwyntio at cymeriadau unigol, 0 yw&#39;r cyntaf</span>
 </pre></div>
 
 </div>
@@ -549,7 +545,7 @@ multiple other items in an ordered way.</p>
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">firstname</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">enwcyntaf</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -582,7 +578,7 @@ multiple other items in an ordered way.</p>
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">firstname</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># We can use negative number to start counting from the end</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">enwcyntaf</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Gallwn defnyddio rhifau negatif i dechau&#39;r cyfri o&#39;r diwedd</span>
 </pre></div>
 
 </div>
@@ -615,7 +611,7 @@ multiple other items in an ordered way.</p>
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">firstname</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>  <span class="c1"># We can &#39;slice&#39; strings</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">enwcyntaf</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>  <span class="c1"># Gallwn &#39;sleisio&#39; strings</span>
 </pre></div>
 
 </div>
@@ -647,7 +643,7 @@ multiple other items in an ordered way.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Experiment by creating lists and manipulating them.</strong></p>
+<p><strong>Arbrofwch trwy creu rhestrau a'u trin.</strong></p>
 
 </div>
 </div>
@@ -656,11 +652,9 @@ multiple other items in an ordered way.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.-For-loops.">2. For loops.<a class="anchor-link" href="#2.-For-loops.">&#182;</a></h3><p><a href="https://youtu.be/icgb6I85pX8">A video describing the concept.</a></p>
-<p><a href="https://youtu.be/npJqdB1pqdQ">A video demo.</a></p>
-<p>In the previous sheet, we saw that a <code>while</code> loop can be used to repeat a
-code chunk until a boolean condition is <code>False</code>. It is also possible to
-repeat an action for all elements of a list.</p>
+<h3 id="2.-Lwpiau-'for'.">2. Lwpiau 'for'.<a class="anchor-link" href="#2.-Lwpiau-'for'.">&#182;</a></h3><p><a href="https://youtu.be/icgb6I85pX8">Fideo yn disgrifio'r cysyniad.</a></p>
+<p><a href="https://youtu.be/npJqdB1pqdQ">Fideo demo.</a></p>
+<p>Yn y daflen lab diwethaf, gwelwn gallwn ddefnyddio lwp <code>while</code> i ailadrodd darn o god nes bod amod boolean yn <code>False</code>. Mae hefyd yn bosib ailadrodd rhyw weithrediad ar gyfer pob elfen mewn rhestr.</p>
 
 </div>
 </div>
@@ -670,11 +664,11 @@ repeat an action for all elements of a list.</p>
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">items</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>  <span class="c1"># Creating a list</span>
-<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
-    <span class="n">total</span> <span class="o">+=</span> <span class="n">item</span>
-<span class="n">total</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">eitemmau</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>  <span class="c1"># Creu rhestr</span>
+<span class="n">cyfanswm</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">eitem</span> <span class="ow">in</span> <span class="n">eitemmau</span><span class="p">:</span>
+    <span class="n">cyfanswm</span> <span class="o">+=</span> <span class="n">eitem</span>
+<span class="n">cyfanswm</span>
 </pre></div>
 
 </div>
@@ -706,7 +700,7 @@ repeat an action for all elements of a list.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A quick way to get a list of integers is the <code>range</code> command:</p>
+<p>Ffordd gyflym o gael rhestr o gyfanrifau yw'r gorchymyn <code>range</code>:</p>
 
 </div>
 </div>
@@ -756,7 +750,7 @@ repeat an action for all elements of a list.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Experiment by summing (or perhaps multiplying?) over a different list of items.</strong></p>
+<p><strong>Arbrofwch trwy symio (neu efallai lluosi?) dros wahanol restrau o eitemau.</strong></p>
 
 </div>
 </div>
@@ -765,9 +759,9 @@ repeat an action for all elements of a list.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.-List-comprehension">3. List comprehension<a class="anchor-link" href="#3.-List-comprehension">&#182;</a></h3><p><a href="https://youtu.be/tEyxAfVWEGE">A video describing the concept.</a></p>
-<p><a href="https://youtu.be/893eu9F75gI">A video demo.</a></p>
-<p>Here is a list of squares, done using the <code>append</code> method and a for loop.</p>
+<h3 id="3.-Cyfansoddiad-rhestrau">3. Cyfansoddiad rhestrau<a class="anchor-link" href="#3.-Cyfansoddiad-rhestrau">&#182;</a></h3><p><a href="https://youtu.be/tEyxAfVWEGE">Fideo yn disgrifio'r cysyniad.</a></p>
+<p><a href="https://youtu.be/893eu9F75gI">Fideo demo.</a></p>
+<p>Dyma restr o rifau sgwâr, wedi'i gynhyrchu trwy ddefnyddio'r dull <code>append</code> a lwp 'for'.</p>
 
 </div>
 </div>
@@ -777,11 +771,11 @@ repeat an action for all elements of a list.</p>
 <div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">square_of_favourite_numbers</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># Create an empty list</span>
-<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">favourite_numbers</span><span class="p">:</span>
-    <span class="n">square_of_favourite_numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">square_of_favourite_numbers</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cyfanswm</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">hoff_rhifau_sgwar</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># Creu rhestr gwag</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">hoff_rhifau</span><span class="p">:</span>
+    <span class="n">hoff_rhifau_sgwar</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">hoff_rhifau_sgwar</span>
 </pre></div>
 
 </div>
@@ -813,8 +807,7 @@ repeat an action for all elements of a list.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can however do this using some nice Python syntax called a list
-comprehension:</p>
+<p>Ond gallwn ni gwneud hwn trwy ddefnyddio cystrawen Python o'r enw cyfansoddiad rhestrau:</p>
 
 </div>
 </div>
@@ -824,8 +817,8 @@ comprehension:</p>
 <div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">square_of_favourite_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">favourite_numbers</span><span class="p">]</span>
-<span class="n">square_of_favourite_numbers</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hoff_rhifau_sgwar</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">hoff_rhifau</span><span class="p">]</span>
+<span class="n">hoff_rhifau_sgwar</span>
 </pre></div>
 
 </div>
@@ -857,11 +850,11 @@ comprehension:</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This is familiar, as it replicates mathematical notation. For example here is how to get the sum of the elements in the following set:</p>
+<p>Mae hwn yn gyfarwydd, gan ei fod yn dyblygu nodiant mathemategol. Er enghraifft dyma sut gallwn gael swm yr elfennau yn y set ganlynol:</p>
 <p>$$
-    \{n \in S \;| \text{ if } n \text{ is divisible by  2}\}
+    \{n \in S \;| \text{ os yw } n \text{ yn rhanadwy gan 2}\}
 $$</p>
-<p>(This is mathematical notation for "the set of all things in $S$ that are divisible by 2.)</p>
+<p>(Dyma nodiant mathemategol ar gyfer "y set o'r holl bethau yn $S$ sy'n rhanadwy gan 2".)</p>
 
 </div>
 </div>
@@ -871,7 +864,7 @@ $$</p>
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sum</span><span class="p">([</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">favourite_numbers</span> <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sum</span><span class="p">([</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">hoff_rhifau</span> <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -903,7 +896,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Experiment by modifying this code to create a different list.</strong></p>
+<p><strong>Arbrofwch trwy newid y cod yma i greu rhestr wahanol.</strong></p>
 
 </div>
 </div>
@@ -912,11 +905,9 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="4.-Writing-simple-functions.">4. Writing simple functions.<a class="anchor-link" href="#4.-Writing-simple-functions.">&#182;</a></h3><p><a href="https://youtu.be/_8gcT7_o84U">A video describing the concept.</a></p>
-<p><a href="https://youtu.be/FHXiY22e6NQ">A video demo.</a></p>
-<p>Often we want to be able to use code more than once. The way to do this is to
-write a function. Here is a very simple example. This creates a function that
-returns a string saying "Hello world":</p>
+<h3 id="4.-Ysgrifennu-ffwythiannau-syml.">4. Ysgrifennu ffwythiannau syml.<a class="anchor-link" href="#4.-Ysgrifennu-ffwythiannau-syml.">&#182;</a></h3><p><a href="https://youtu.be/_8gcT7_o84U">Fideo yn disgrifio'r cysyniad.</a></p>
+<p><a href="https://youtu.be/FHXiY22e6NQ">Fideo demo.</a></p>
+<p>Yn aml bydd angen defnyddio cod mwy nag unwaith. Y ffordd o wneud hwn yw ysgrifennu ffwythiant. Dyma enghraifft syml. Mae'n ffwythiant sy'n allbynnu string yn dweud "Helo byd":</p>
 
 </div>
 </div>
@@ -926,8 +917,8 @@ returns a string saying "Hello world":</p>
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">say_hi</span><span class="p">():</span>
-    <span class="k">return</span> <span class="s2">&quot;Hello world&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">dweud_hi</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">&quot;Helo byd&quot;</span>
 </pre></div>
 
 </div>
@@ -939,7 +930,7 @@ returns a string saying "Hello world":</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now, to <strong>use</strong> that function we need to call the function, which we do using a pair of brackets: <code>()</code>.</p>
+<p>Nawr, i <strong>ddefnyddio'r</strong> ffwythiant mae angen galw'r ffwythiant, gallwn wneud hwn trwy ddefnyddio pâr o gromfachau <code>()</code>.</p>
 
 </div>
 </div>
@@ -949,7 +940,7 @@ returns a string saying "Hello world":</p>
 <div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">say_hi</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dweud_hi</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -968,7 +959,7 @@ returns a string saying "Hello world":</p>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;Hello world&#39;</pre>
+<pre>&#39;Helo byd&#39;</pre>
 </div>
 
 </div>
@@ -981,8 +972,8 @@ returns a string saying "Hello world":</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It is good practice to break down code in to smaller functions that make it easier to read.</p>
-<p>Experiment with changing what the <code>say_hi</code> function says.</p>
+<p>Mae'n ymarfer da i dorri cod lawr i ffwythiannau bach er mwyn i'w wneud yn haws i'w ddarllen.</p>
+<p>Arbrofwch gyda newid beth mae'r ffwythiant <code>dweud_hi</code> yn dweud.</p>
 
 </div>
 </div>
@@ -991,21 +982,18 @@ returns a string saying "Hello world":</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="5.-Functions-with-variables.">5. Functions with variables.<a class="anchor-link" href="#5.-Functions-with-variables.">&#182;</a></h3><p><a href="https://youtu.be/S-pzofb4Ok0">A video describing the concept.</a></p>
-<p><a href="https://youtu.be/X13uTM0GPjI">A video demo.</a></p>
-<p>It is more useful to include variables in our functions (in the exact same
-way as for mathematical functions!).</p>
-<p>Let us revisit the mathematical function we described in the previous lab
-sheet:</p>
+<h3 id="5.-Ffwythiannau-gyda-newidynnau.">5. Ffwythiannau gyda newidynnau.<a class="anchor-link" href="#5.-Ffwythiannau-gyda-newidynnau.">&#182;</a></h3><p><a href="https://youtu.be/S-pzofb4Ok0">Fideo yn disgrifio'r cysyniad.</a></p>
+<p><a href="https://youtu.be/X13uTM0GPjI">Fideo demo.</a></p>
+<p>Mae'n fwy defnyddio i gynnwys newidynnau yn ein ffwythiannau (yn yr union un modd a ffwythiannau mathemategol!).</p>
+<p>Gadewch i ni ail-edrych ar y ffwythiant mathemategol disgrifion ni yn y daflen lab diwethaf:</p>
 <p>$$
     f(n)=\begin{cases}
-        1&amp;\text{ if } n\leq 5\\
-        2&amp;\text{ if } n&gt; 5\text{ and } n \text{ even}\\
-        3&amp;\text{ otherwise }\\
+        1&amp;\text{ os yw } n\leq 5\\
+        2&amp;\text{ os yw } n&gt; 5\text{ ac } n \text{ yn eilrif }\\
+        3&amp;\text{ fel arall }\\
     \end{cases}
 $$</p>
-<p>Here is the code that defines this function (compare it to the code we wrote
-in the previous lab sheet):</p>
+<p>Dyma'r cod sy'n diffinio'r ffwythiant yma (cymharwch hwn gyda'r cod ysgrifennon ni yn y daflen lab diwethaf):</p>
 
 </div>
 </div>
@@ -1017,15 +1005,16 @@ in the previous lab sheet):</p>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This is text in between triple quoatation marks is a doc string.</span>
-<span class="sd">    We use it to describe what a function does. For example here we would</span>
-<span class="sd">    write: This function returns f(n) as described above.</span>
+<span class="sd">    Fe elwir yr ysgrifen sydd rhwng dyfynodau triphlyg yn &#39;doc string&#39;.</span>
+<span class="sd">    Defnyddiwn hwn i ddisgrifio beth mae&#39;r ffwythiant yn gwneud. Er</span>
+<span class="sd">    enghraifft byddwn yn ysgrifennu: Mae&#39;r ffwythiant yma yn allbynnu</span>
+<span class="sd">    f(n) fel y disgrifir uchod.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">elif</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Otherwise if (else if)</span>
+    <span class="k">elif</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># fel arall, os</span>
         <span class="k">return</span> <span class="mi">2</span>
-    <span class="k">else</span><span class="p">:</span>  <span class="c1"># Otherwise</span>
+    <span class="k">else</span><span class="p">:</span>  <span class="c1"># fel arall</span>
         <span class="k">return</span> <span class="mi">3</span>
 <span class="n">f</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
 </pre></div>
@@ -1059,7 +1048,7 @@ in the previous lab sheet):</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can also have functions with more than 1 variable:</p>
+<p>Gallwn hefyd cael ffwythiannau gyda mwy nag un newidyn:</p>
 
 </div>
 </div>
@@ -1069,10 +1058,10 @@ in the previous lab sheet):</p>
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">simple_sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns the sum of a and b&quot;&quot;&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">swm_syml</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Allbynu swm a ac b&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-<span class="n">simple_sum</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="n">swm_syml</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1104,7 +1093,7 @@ in the previous lab sheet):</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It is also possible to have default variables:</p>
+<p>Mae hefyd yn bosib gosod newidynnau diofyn:</p>
 
 </div>
 </div>
@@ -1114,8 +1103,8 @@ in the previous lab sheet):</p>
 <div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">simple_sum</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns the sum of a and b&quot;&quot;&quot;</span>   
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">swm_syml</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Allbynu swm a ac b&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 </pre></div>
 
@@ -1129,7 +1118,7 @@ in the previous lab sheet):</p>
 <div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">simple_sum</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">swm_syml</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -1162,7 +1151,7 @@ in the previous lab sheet):</p>
 <div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">simple_sum</span><span class="p">(</span><span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">swm_syml</span><span class="p">(</span><span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1195,7 +1184,7 @@ in the previous lab sheet):</p>
 <div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">simple_sum</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">swm_syml</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1227,7 +1216,7 @@ in the previous lab sheet):</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Experiment by creating your own function.</strong></p>
+<p><strong>Arbrofwch trwy greu ffwythiant eich hun</strong></p>
 
 </div>
 </div>
@@ -1237,27 +1226,26 @@ in the previous lab sheet):</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="Worked-example">Worked example<a class="anchor-link" href="#Worked-example">&#182;</a></h3><p><a href="https://youtu.be/Y1mdHL7OZiU">A video describing the concept.</a></p>
-<p><a href="https://youtu.be/h0_nnFmRwUQ">A video demo.</a></p>
-<p>The Fibonacci numbers are defined by the following mathematical formula:</p>
+<h3 id="Enghraifft-weithredol">Enghraifft weithredol<a class="anchor-link" href="#Enghraifft-weithredol">&#182;</a></h3><p><a href="https://youtu.be/Y1mdHL7OZiU">Fideo yn disgrifio'r cysyniad.</a></p>
+<p><a href="https://youtu.be/h0_nnFmRwUQ">Fideo demo.</a></p>
+<p>Diffinnir y rhifau Fibonacci gan y fformiwla fathemategol:</p>
 <p>$$
     f_n = \begin{cases}
-    1,\text{ if } n \in \{0, 1\}\\
-    f_{n - 1} + f_{n - 2}, \text{ otherwise}
+    1,\text{ is yw } n \in \{0, 1\}\\
+    f_{n - 1} + f_{n - 2}, \text{ fel arall }
     \end{cases}
 $$</p>
-<p>The goal of this question is to verify the following theorem about the sum
-of the first Fibonacci numbers:</p>
+<p>Nod y cwestiwn yma yw gwirio'r theorem ganlynol am swm y rhifau Fibonacci cyntaf:</p>
 <p>$$
     \sum_{i=0}^n f_i = f_{n + 2} - 1
 $$</p>
-<p>As an example with $n=3$ we have: $f_0=f_1=1, f_2=2, f_3=3$ and
-$f_5=8$. We indeed have:</p>
+<p>Fel enghraifft gyda $n=2$ mae gennym $f_0=f_1=1, f_2=2, f_3=3$ ac $f_5=8$.
+Felly mae gennym:</p>
 <p>$$
     \sum_{i=0}^nf_i = 1 + 1 + 2 + 3 = 7 = 8 - 1 = f_{3 + 2} - 1
 $$</p>
-<p>We are going to automate checking the formula using Python.
-Let us first write a function for the Fibonacci sequence itself:</p>
+<p>Byddwn yn gwirio'r fformiwla trwy ddefnyddio Python.
+Yn gyntaf ysgrifennwn ffwythiant ar gyfer y dilyniant Fibonacci ei hun:</p>
 
 </div>
 </div>
@@ -1268,15 +1256,15 @@ Let us first write a function for the Fibonacci sequence itself:</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns the n th fibonacci number&quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>  <span class="c1"># The special case of n being 0 or 1</span>
+    <span class="sd">&quot;&quot;&quot;Allbynnu&#39;r n fed rhif fibonacci&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>  <span class="c1"># Yr achos arbennig o n for yn 0 neu 1</span>
         <span class="k">return</span> <span class="mi">1</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Setting the starting values</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Gosod y gwerthoedd cychwynnol</span>
     <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>  <span class="c1"># Going through the first n - 1 terms</span>
-        <span class="n">temp</span> <span class="o">=</span> <span class="n">b</span>  <span class="c1"># A temporary variable to remember the value of b</span>
-        <span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>  <span class="c1"># New value of b</span>
-        <span class="n">a</span> <span class="o">=</span> <span class="n">temp</span>  <span class="c1"># New value of a (old value of b)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>  <span class="c1"># Yn mynd trwy;r n - 1 term cyntaf</span>
+        <span class="n">drosdro</span> <span class="o">=</span> <span class="n">b</span>  <span class="c1"># Newidyn dros dro i cofio gweth b</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>  <span class="c1"># Gwerth newydd b</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">drosdro</span>  <span class="c1"># Gwerth newydd a (hen werth b)</span>
     <span class="k">return</span> <span class="n">b</span>
 </pre></div>
 
@@ -1289,7 +1277,7 @@ Let us first write a function for the Fibonacci sequence itself:</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Let us now call this function to check that it is correct:</p>
+<p>Gadewch i ni alw'r ffwythiant yma i wirio ei fod yn gywir:</p>
 
 </div>
 </div>
@@ -1334,7 +1322,7 @@ Let us first write a function for the Fibonacci sequence itself:</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can now obtain a list of the first $K$ fibonacci numbers and check the theorem:</p>
+<p>Gallwn nawr cael rhestr o'r $K$ rhif fibonacci cyntaf a gwirio'r theorem:</p>
 
 </div>
 </div>
@@ -1345,8 +1333,8 @@ Let us first write a function for the Fibonacci sequence itself:</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">K</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">list_of_fib</span> <span class="o">=</span> <span class="p">[</span><span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">K</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
-<span class="nb">sum</span><span class="p">(</span><span class="n">list_of_fib</span><span class="p">)</span> <span class="o">==</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">K</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">rhestr_fib</span> <span class="o">=</span> <span class="p">[</span><span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">K</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
+<span class="nb">sum</span><span class="p">(</span><span class="n">rhestr_fib</span><span class="p">)</span> <span class="o">==</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">K</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
 </pre></div>
 
 </div>
@@ -1378,7 +1366,7 @@ Let us first write a function for the Fibonacci sequence itself:</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can put this code that checks if a relationship is true in to a new function:</p>
+<p>Gallwn nawr rhoi'r cod yma, sy'n gwirio os yw'r perthynas yn wir, i mewn i ffwythiant newydd:</p>
 
 </div>
 </div>
@@ -1388,12 +1376,12 @@ Let us first write a function for the Fibonacci sequence itself:</p>
 <div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">check_theorem</span><span class="p">(</span><span class="n">K</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">gwirio_theorem</span><span class="p">(</span><span class="n">K</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Check the relationship for the sum of the first K fibonacci numbers</span>
+<span class="sd">    Gwirio&#39;r perthynas ar gyfer swm y K rhif fibonacci cyntaf</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">list_of_fib</span> <span class="o">=</span> <span class="p">[</span><span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">K</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
-    <span class="k">return</span>  <span class="nb">sum</span><span class="p">(</span><span class="n">list_of_fib</span><span class="p">)</span> <span class="o">==</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">K</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">rhestr_fib</span> <span class="o">=</span> <span class="p">[</span><span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">K</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
+    <span class="k">return</span>  <span class="nb">sum</span><span class="p">(</span><span class="n">rhestr_fib</span><span class="p">)</span> <span class="o">==</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">K</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
 </pre></div>
 
 </div>
@@ -1405,7 +1393,7 @@ Let us first write a function for the Fibonacci sequence itself:</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Let us now check that our theorem can be checked for the first 200 values of $K$:</p>
+<p>Nawr gwiriwn ni'r theorem ar gyfer y 200 gwerth cyntaf $K$:</p>
 
 </div>
 </div>
@@ -1415,8 +1403,8 @@ Let us first write a function for the Fibonacci sequence itself:</p>
 <div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">checks</span> <span class="o">=</span> <span class="p">[</span><span class="n">check_theorem</span><span class="p">(</span><span class="n">K</span><span class="p">)</span> <span class="k">for</span> <span class="n">K</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">200</span><span class="p">)]</span>
-<span class="nb">all</span><span class="p">(</span><span class="n">checks</span><span class="p">)</span>  <span class="c1"># `all` combines all booleans in a list</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gwiriadau</span> <span class="o">=</span> <span class="p">[</span><span class="n">gwirio_theorem</span><span class="p">(</span><span class="n">K</span><span class="p">)</span> <span class="k">for</span> <span class="n">K</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">200</span><span class="p">)]</span>
+<span class="nb">all</span><span class="p">(</span><span class="n">gwiriadau</span><span class="p">)</span>  <span class="c1"># Mae `all` yn cyfuno pob boolean mewn rhestr</span>
 </pre></div>
 
 </div>
@@ -1449,15 +1437,15 @@ Let us first write a function for the Fibonacci sequence itself:</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h2><p>Here are a number of exercises that are possible to carry out using the code concepts discussed:</p>
+<h2 id="Ymarferion">Ymarferion<a class="anchor-link" href="#Ymarferion">&#182;</a></h2><p>Dyma nifer o ymarferion sy'n bosib cario allan trwy ddefnyddio'r cysyniadau a thrafodwyd:</p>
 <ul>
-<li>Lists, for example: <code>odd_numbers = [1, 3, 5, 7]</code></li>
-<li>For loops, for example:<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">odd_numbers</span><span class="p">:</span>
+<li>Rhestrau, er enghraifft: <code>rhifau_od = [1, 3, 5, 7]</code></li>
+<li>Lwpiau 'for', er enghraifft:<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">rhifau_od</span><span class="p">:</span>
       <span class="k">print</span><span class="p">(</span><span class="n">i</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </li>
-<li>List comprehensions, for example: <code>square_of_odd_numbers = [n ** 2 for n in odd_numbers]</code></li>
-<li>Functions, for example:<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">division</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<li>Cyfansoddiadau rhestrau, er enghraifft: <code>rhifau_od_sgwar = [n ** 2 for n in rhifau_od]</code></li>
+<li>Ffwythiannau, er enghraifft:<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rhannu</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
       <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
 </pre></div>
 </li>
@@ -1471,13 +1459,12 @@ Let us first write a function for the Fibonacci sequence itself:</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="Exercise-1">Exercise 1<a class="anchor-link" href="#Exercise-1">&#182;</a></h3><p><strong>Debugging exercise</strong></p>
-<p>The following is an attempt to write $n!$ as a function. Find
-   and fix all the bugs.</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-       <span class="sd">&quot;&quot;&quot;A function that returns factorial n&quot;&quot;&quot;</span>
+<h3 id="Ymarfer-1">Ymarfer 1<a class="anchor-link" href="#Ymarfer-1">&#182;</a></h3><p><strong>Ymarfer datbygio</strong></p>
+<p>Mae'r cod canlynol yn ceisio ysgrifennu $n!$ fel ffwythiant. Canfyddwch a chywirwch yr holl bygs.</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ffactorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+       <span class="sd">&quot;&quot;&quot;Ffwythiant sy&#39;n allbynnu ffactorial n&quot;&quot;&quot;</span>
        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-           <span class="n">prod</span> <span class="o">*=</span> <span class="n">i</span>
+           <span class="n">lluoswm</span> <span class="o">*=</span> <span class="n">i</span>
 </pre></div>
 
 </div>
@@ -1488,7 +1475,7 @@ Let us first write a function for the Fibonacci sequence itself:</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="Exercise-2">Exercise 2<a class="anchor-link" href="#Exercise-2">&#182;</a></h3><p>Write a function that returns the triangular numbers $T_n$:</p>
+<h3 id="Ymarfer-2">Ymarfer 2<a class="anchor-link" href="#Ymarfer-2">&#182;</a></h3><p>Ysgrifennwch ffwythiant sy'n allbynnu'r rhifau triongl $T_n$:</p>
 <p>$$
     T_n=\frac{n(n+1)}{2}
 $$</p>
@@ -1501,7 +1488,7 @@ $$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="Exercise-3">Exercise 3<a class="anchor-link" href="#Exercise-3">&#182;</a></h3><p>Use code to check that the following relationship is true:</p>
+<h3 id="Ymarfer-3">Ymarfer 3<a class="anchor-link" href="#Ymarfer-3">&#182;</a></h3><p>Defnyddiwch god i wirio fod y perthynas yma yn wir:</p>
 <p>$$
     \sum_{i=0}^{n}T_i=\frac{n(n+1)(n+2)}{6}
 $$</p>
@@ -1514,7 +1501,7 @@ $$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="Exercise-4">Exercise 4<a class="anchor-link" href="#Exercise-4">&#182;</a></h3><p>Create a list with the first 1300 integers divisible by 3. What is the largest such number? What is the smallest such number? What is the mean of these numbers?</p>
+<h3 id="Ymarfer-4">Ymarfer 4<a class="anchor-link" href="#Ymarfer-4">&#182;</a></h3><p>Crëwch restr gyda'r 1300 cyfanrif cyntaf sy'n rhanadwy â 3. Beth  yw'r rhif mwyaf yma? Beth yw'r rhif lleiaf? Beth yw cymedr y rhifau yma?</p>
 
 </div>
 </div>
@@ -1524,15 +1511,12 @@ $$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="Exercise-5">Exercise 5<a class="anchor-link" href="#Exercise-5">&#182;</a></h3><p>Investigate the use of the Python <code>random</code> library. Use this to simulate the
-<a href="https://en.wikipedia.org/wiki/Monty_Hall_problem">Monty hall problem</a>:</p>
+<h3 id="Ymarfer-5">Ymarfer 5<a class="anchor-link" href="#Ymarfer-5">&#182;</a></h3><p>Archwiliwch i mewn i ddefnydd y llyfrgell Python <code>random</code>. Defnyddiwch hwn i
+efelychi'r <a href="https://en.wikipedia.org/wiki/Monty_Hall_problem">problem Monty hall</a>:</p>
 <ul>
-<li>Write a function that simulates the play of the game when you 'stick' with
-the initial choice.</li>
-<li>Write a function that simulates the play of the game when you 'change' your
-choice.</li>
-<li>Repeat the play of the game using both those functions and compare the
-probability of winning.</li>
+<li>Ysgrifennwch ffwythiant sy'n efelychu'r gem pan rydych yn cadw at eich dewis gwreiddiol.</li>
+<li>Ysgrifennwch ffwythiant sy'n efelychu'r gem pan rydych yn newid eich dewis.</li>
+<li>Ailadroddwch chwarae'r em gan ddefnyddio'r ddau ffwythiant a chymharwch y tebygolrwydd o ennill.</li>
 </ul>
 
 </div>
@@ -1543,7 +1527,7 @@ probability of winning.</li>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="Exercise-6">Exercise 6<a class="anchor-link" href="#Exercise-6">&#182;</a></h3><p>A data type that we have not considered are dictionaries. These are a specific type of what is generally called a 'hash table'. Find information about dictionaries and experiment with them.</p>
+<h3 id="Ymarfer-6">Ymarfer 6<a class="anchor-link" href="#Ymarfer-6">&#182;</a></h3><p>Un math o ddata nad ydym wedi ystyried yw geiriaduron. Mae'r rhain yn fath penodol o rywbeth a elwir yn 'dabl stwnsh' (hash table). Canfyddwch wybodaeth am eiriaduron ac arbrofwch gyda nhw.</p>
 
 </div>
 </div>
@@ -1553,12 +1537,11 @@ probability of winning.</li>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="Further-resources">Further resources<a class="anchor-link" href="#Further-resources">&#182;</a></h2><ul>
-<li><a href="https://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Defining_Functions">A non programmers tutorial for
-Python:
-Functions</a></li>
-<li><a href="http://www.python-course.eu/python3_functions.php">A nice tutorial from The Python
-Course</a></li>
+<h2 id="Adnoddau-pellach">Adnoddau pellach<a class="anchor-link" href="#Adnoddau-pellach">&#182;</a></h2><ul>
+<li><a href="https://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Defining_Functions">Tiwtorial Python ar gyfer rheini sydd ddim yn rhaglenwyr:
+Ffwythiannau</a></li>
+<li><a href="http://www.python-course.eu/python3_functions.php">Tiwtorial neis o "The Python
+Course"</a></li>
 </ul>
 
 </div>
@@ -1569,10 +1552,10 @@ Course</a></li>
 
 
     
-        <a href="../01/">Previous</a>
+        <a href="../../01/cy/">Blaenorol</a>
     
     
-        <p align="right"><a href="../03/">Next</a></p>
+        <p align="right"><a href="../../03/cy/">Nesaf</a></p>
     
 
     </div>
@@ -1580,14 +1563,16 @@ Course</a></li>
     <div class="container">
         <center>
             <p style="font-size: small;">
-            Source code:
+            Ffynhonnell cod:
             <a href="https://github.com/drvinceknight/cfm">@drvinceknight</a>
-            Powered by:
+            Wedi'i greu gan:
                 <a href="https://www.python.org/">Python</a>
                 <a href="http://jupyter.org/">Jupyter</a>
                 <a href="https://www.mathjax.org/">Mathjax</a>
                 <a href="https://pages.github.com/">Github pages</a>
                 <a href="http://getskeleton.com/">Skeleton css</a>
+            Cyfieithiad gan:
+                <a href="http://www.geraintianpalmer.org.uk">Geraint Palmer</a>
             </p>
         </center>
     </div>

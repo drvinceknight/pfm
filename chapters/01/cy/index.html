@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Computing for mathematics</title>
+    <title>Cyfrifiadureg ar gyfer mathemateg</title>
 
   <meta charset="UTF-8">
   <!-- Mobile Specific Metas –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="An undergraduate course introducing programming, through Python, to mathematicians.">
+  <meta name="description" content="Cwrs israddedig yn cyflwyno rhaglennu, trwy defnyddio Python, i mathemategwyr.">
   <meta name="keywords" content="python, mathematics, jupyter, mathemateg">
   <meta name="author" content="Vince Knight">
   <!-- CSS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -60,7 +60,7 @@
     <header>
     <div class="row">
         <div class="three.columns">
-            <a class="logo" href="/cfm">Computing for mathematics</a>
+            <a class="logo" href="/cfm/cy">Cyfrifiadureg ar gyfer mathemateg</a>
         </div>
         <div class="nine.columns">
               <input id="nav" type="checkbox">
@@ -68,19 +68,19 @@
               <nav>
                     <ul>
                       
-                          <li><a href=/cfm/chapters/00/>Introduction to the course</a></li>
+                          <li><a href=/cfm/chapters/00/cy/>Cyflwyniad i'r Cwrs</a></li>
                       
-                          <li><a href=/cfm/chapters/01/>Variables Conditional Statements and Loops</a></li>
+                          <li><a href=/cfm/chapters/01/cy/>Newidynnau Datganiadau Amodol a Lwpiau</a></li>
                       
-                          <li><a href=/cfm/chapters/02/>Functions and data structures</a></li>
+                          <li><a href=/cfm/chapters/02/cy/>Ffwythiannau a strwythurau data</a></li>
                       
-                          <li><a href=/cfm/chapters/03/>Writing to files and recursion</a></li>
+                          <li><a href=/cfm/chapters/03/cy/>Ysgrifennu i ffeiliau a ffwythiannau ailadroddol</a></li>
                       
-                          <li><a href=/cfm/chapters/04/>Object oriented programming</a></li>
+                          <li><a href=/cfm/chapters/04/cy/>Rhaglennu gwrthrych gyfeiriol</a></li>
                       
-                          <li><a href=/cfm/chapters/05/>Symbolic mathematics with sympy</a></li>
+                          <li><a href=/cfm/chapters/05/cy/>Mathemateg symbolaidd gyda sympy</a></li>
                       
-                          <li><a href=/cfm/chapters/06/>Scientific libraries</a></li>
+                          <li><a href=/cfm/chapters/06/cy/>Llyfrgelloedd gwyddonol</a></li>
                       
                     </ul>
               </nav>
@@ -95,48 +95,35 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Chapter-01:-Variables,-Conditional-Statements-and-Loops">Chapter 01: Variables, Conditional Statements and Loops<a class="anchor-link" href="#Chapter-01:-Variables,-Conditional-Statements-and-Loops">&#182;</a></h2><p>This first lab sheet will introduce you to programming. You are expected to work
-through the tutorial and the worked example. <strong>worked
-example</strong>. There are other exercises that aim to push your understanding
-further. Finally at the end of the sheet there are links to other resources and
-tutorials that you might find helpful and/or interesting.</p>
-<p>There are videos throughout the sheets describing the concepts as well as
-showing demos.</p>
-<p><a href="https://youtu.be/IB1wc1qgb7Q">Here is an overview of the course.</a></p>
-<h3 id="Installing-and-running-Python">Installing and running Python<a class="anchor-link" href="#Installing-and-running-Python">&#182;</a></h3><p>Python is a programming language. There are various other programming languages:</p>
+<h2 id="Pennod-01:-Newidynnau,-Datganiadau-Amodol-a-Lwpiau">Pennod 01: Newidynnau, Datganiadau Amodol a Lwpiau<a class="anchor-link" href="#Pennod-01:-Newidynnau,-Datganiadau-Amodol-a-Lwpiau">&#182;</a></h2><p>Bydd y daflen lab cyntaf yma yn eich cyflwyno i raglenni. Mae disgwyl i chi gweithio trwy'r holl diwtorial a hefyd yr <strong>enghraifft weithredol</strong>. Mae ymarferion eraill sy'n anelu at wthio'ch dealltwriaeth ymhellach. Yn olaf ar ddiwedd y daflen mae linciau i adnoddau a thiwtorialau eraill efallai bydd yn help neu o ddiddordeb.</p>
+<p>Mae fideos trwy gydol y taflenni yn disgrifio'r cysyniadau yn ogystal â dangos demos.</p>
+<p><a href="https://youtu.be/IB1wc1qgb7Q">Dyma drosolwg o'r cwrs.</a></p>
+<h3 id="Gosod-a-rhedeg-Python">Gosod a rhedeg Python<a class="anchor-link" href="#Gosod-a-rhedeg-Python">&#182;</a></h3><p>Mae Python yn iaith rhaglenni. Mae yna nifer o ieithoedd rhaglenni gwahanol:</p>
 <ul>
 <li>Java</li>
 <li>C</li>
 <li>C++</li>
 <li>Ruby</li>
 <li>VBA</li>
-<li>and many more.</li>
+<li>a llawer mwy.</li>
 </ul>
-<p>A programming language allows you to write a program which is a sequence of
-instructions that specifies how to perform a computation.</p>
-<p>When writing a program you need two things:</p>
+<p>Mae iaith rhaglenni yn galluogi ni i ysgrifennu rhaglen sy'n ddilyniant o gyfarwyddiadau sy'n nodi sut mae perfformio cyfrifiad.</p>
+<p>Wrth ysgrifennu rhaglen mae angen dau beth:</p>
 <ul>
-<li>Something to save the code (a text editor for example)</li>
-<li>Something to run the code</li>
+<li>Rhywbeth i arbed y cod (golygydd testun er enghraifft)</li>
+<li>Rhywbeth i redeg y cod</li>
 </ul>
-<p>We will be using a combination of these 2 things called <strong>notebooks</strong>.</p>
-<h3 id="Install-Python">Install Python<a class="anchor-link" href="#Install-Python">&#182;</a></h3><p>There are various distributions of Python, we will use
-<a href="https://www.continuum.io/why-anaconda">Anaconda</a> which comes packaged with a
-variety of other useful tools (including the notebooks I mentioned above).</p>
-<p>To install it on your personal machine follow these steps:</p>
+<p>Byddwn ni'n defnyddio cyfuniad o'r ddau beth yma o'r enw <strong>notebook</strong>.</p>
+<h3 id="Gosod-Python">Gosod Python<a class="anchor-link" href="#Gosod-Python">&#182;</a></h3><p>Mae nifer o ddosbarthiadau o Python, byddwn ni'n defnyddio <a href="https://www.continuum.io/why-anaconda">Anaconda</a> sy'n dod wedi'i becynnu gydag amryw o offerynnau defnyddiol (gan gynnwys y notebooks soniais amdanynt uchod).</p>
+<p>I'w osod ar eich peiriant personol dilynwch y camau yma:</p>
 <ol>
-<li>Go to this webpage:
-<a href="https://www.continuum.io/downloads">www.continuum.io/downloads</a>.</li>
-<li>Identify and download the version of Python 3 for your operating system
-(Windows, Mac OSX, Linux).</li>
-<li>Run the installer.</li>
+<li>Ewch i'r wefan: <a href="https://www.continuum.io/downloads">www.continuum.io/downloads</a>.</li>
+<li>Adnabyddwch a lawrlwythwch y fersiwn o Python 3 ar gyfer eich system weithredu (Windows, Mac OSX, Linux).</li>
+<li>Rhedwch yr osodwr.</li>
 </ol>
-<p>We will use a Jupyter notebook which runs in your browser. To open a local
-server find the Continuum navigator and click on Jupyter. You do not need to be
-connected to the internet to use this.</p>
-<p><a href="https://youtu.be/Zk0RhwCiiNA">This video is a demo of using a notebook.</a></p>
-<p>These lab sheets will include code snippets. They show what code you should
-write but also the output you should see. Try the following:</p>
+<p>Byddwn yn defnyddio notebooks Jupyter sy'n rhedeg tu fewn i'r porthwr we. I agor gweinydd lleol ffeindiwch y porthwr Continuum a chliciwch ar Jupyter. Does dim angen cael cysylltiad i'r we er mwyn defnyddio hwn.</p>
+<p><a href="https://youtu.be/Zk0RhwCiiNA">Mae'r fideo yma yn dangos demo o ddefnyddio notebook.</a></p>
+<p>Bydd y taflenni lab yma yn cynnwys pytiau cod. Maent yn dangos y cod dylech chi ysgrifennu ond hefyd yr allbwn disgwyliedig. Rhowch gynnig ar y canlynol:</p>
 
 </div>
 </div>
@@ -146,7 +133,7 @@ write but also the output you should see. Try the following:</p>
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Helo byd&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -163,7 +150,7 @@ write but also the output you should see. Try the following:</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Hello world
+<pre>Helo byd
 </pre>
 </div>
 </div>
@@ -176,13 +163,11 @@ write but also the output you should see. Try the following:</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Tutorial">Tutorial<a class="anchor-link" href="#Tutorial">&#182;</a></h2><p>Work through the following:</p>
+<h2 id="Tiwtorial">Tiwtorial<a class="anchor-link" href="#Tiwtorial">&#182;</a></h2><p>Gweithiwch trwy'r canlynol:</p>
 <hr>
-<h3 id="1:-Creating-numeric-variables.">1: Creating numeric variables.<a class="anchor-link" href="#1:-Creating-numeric-variables.">&#182;</a></h3><p><a href="https://youtu.be/KtDrCIauto0">A video describing the concept.</a></p>
-<p><a href="https://youtu.be/Esp-5f0kmpE">A video demo.</a></p>
-<p>One of the building block of any
-programming language is variables. This is how we store a particular variable
-that we can reuse:</p>
+<h3 id="1:-Creu-newidynnau-rhifiadol.">1: Creu newidynnau rhifiadol.<a class="anchor-link" href="#1:-Creu-newidynnau-rhifiadol.">&#182;</a></h3><p><a href="https://youtu.be/KtDrCIauto0">Fideo yn disgrifio'r cysyniad.</a></p>
+<p><a href="https://youtu.be/Esp-5f0kmpE">Fideo demo.</a></p>
+<p>Un o'r blociau adeiladu unrhyw iaith rhaglenni yw newidynnau. Dyma sut rydym yn storio newidyn penodol gallwn ei ail-ddefnyddio:</p>
 
 </div>
 </div>
@@ -192,8 +177,8 @@ that we can reuse:</p>
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">age</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">oedran</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">oedran</span>
 </pre></div>
 
 </div>
@@ -225,7 +210,7 @@ that we can reuse:</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It is possible to carry out a variety of numeric operations and reassigning the value of the variable:</p>
+<p>Mae'n bosib cario allan nifer o weithrediadau rhifiadol ac u ail-aseinio gwerth y newidyn:</p>
 
 </div>
 </div>
@@ -235,8 +220,8 @@ that we can reuse:</p>
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># Adding 1 to age</span>
-<span class="n">age</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">oedran</span> <span class="o">=</span> <span class="n">oedran</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># Ychwanegu 1 i&#39;r oedran</span>
+<span class="n">oedran</span>
 </pre></div>
 
 </div>
@@ -268,7 +253,7 @@ that we can reuse:</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Python has some <strong>short hand</strong> for the above:</p>
+<p>Mae gan Python <strong>llaw fer</strong> ar gyfer y cod uchod:</p>
 
 </div>
 </div>
@@ -278,8 +263,8 @@ that we can reuse:</p>
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Adding 1 to age</span>
-<span class="n">age</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">oedran</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Ychwanegu 1 i&#39;r oedran</span>
+<span class="n">oedran</span>
 </pre></div>
 
 </div>
@@ -311,14 +296,13 @@ that we can reuse:</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can do more than just addition (experiment with these as you might need
-them later on):</p>
+<p>Gallwn wneud mwy na adio yn unig (arbrofwch gyda rhain oherwydd efallai bydd eu hangen nes ymlaen):</p>
 <ul>
-<li>Subtraction: <code>-</code></li>
-<li>Multiplication: <code>*</code></li>
-<li>Division: <code>/</code></li>
-<li>Exponentiation: <code>**</code></li>
-<li>Modulo division: <code>%</code></li>
+<li>Tynnu: <code>-</code></li>
+<li>Lluosi: <code>*</code></li>
+<li>Rhannu: <code>/</code></li>
+<li>Esbonyddu: <code>**</code></li>
+<li>Rhannu modwlo: <code>%</code></li>
 </ul>
 
 </div>
@@ -328,7 +312,7 @@ them later on):</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can check the type of our variables, this can be particularly helpful when trying to understand errors and/or undexpected behaviour:</p>
+<p>Gallwn wirio math ein newidynnau, mae hwn yn ddefnyddiol iawn wrth geisio deall gwallau ac/neu ymddygiad annisgwyl:</p>
 
 </div>
 </div>
@@ -338,7 +322,7 @@ them later on):</p>
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># An integer</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># Cyfanrif</span>
 </pre></div>
 
 </div>
@@ -371,7 +355,7 @@ them later on):</p>
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mf">5.4</span><span class="p">)</span>  <span class="c1"># A &#39;float&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mf">5.4</span><span class="p">)</span>  <span class="c1"># &#39;float&#39;</span>
 </pre></div>
 
 </div>
@@ -403,7 +387,7 @@ them later on):</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Experiment with manipulating numeric variables.</strong></p>
+<p><strong>Arbrofwch gyda thrin newidynnau rhifiadol.</strong></p>
 
 </div>
 </div>
@@ -413,10 +397,9 @@ them later on):</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="2:-Creating-character-variables.">2: Creating character variables.<a class="anchor-link" href="#2:-Creating-character-variables.">&#182;</a></h3><p><a href="https://youtu.be/8-lY3TepDKc">A video describing the concept.</a></p>
-<p><a href="https://youtu.be/v3HBPbf0I3s">A video demo.</a></p>
-<p>Another type of variable used is called a character variable. <strong>In
-programming these are called strings</strong>.</p>
+<h3 id="2:-Creu-newidynnau-o-gymeriadau.">2: Creu newidynnau o gymeriadau.<a class="anchor-link" href="#2:-Creu-newidynnau-o-gymeriadau.">&#182;</a></h3><p><a href="https://youtu.be/8-lY3TepDKc">Fideo yn disgrifio'r cysyniad.</a></p>
+<p><a href="https://youtu.be/v3HBPbf0I3s">Fideo demo.</a></p>
+<p>Math arall o newidyn a defnyddiwn yw newidyn o gymeriadau. <strong>Mewn rhaglenni fe elwir y rhain yn 'strings'</strong>.</p>
 
 </div>
 </div>
@@ -426,8 +409,8 @@ programming these are called strings</strong>.</p>
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">firstname</span> <span class="o">=</span> <span class="s2">&quot;Vince&quot;</span>
-<span class="n">firstname</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">enwcyntaf</span> <span class="o">=</span> <span class="s2">&quot;Vince&quot;</span>
+<span class="n">enwcyntaf</span>
 </pre></div>
 
 </div>
@@ -460,7 +443,7 @@ programming these are called strings</strong>.</p>
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">firstname</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">enwcyntaf</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -492,7 +475,7 @@ programming these are called strings</strong>.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can also create new strings from other ones:</p>
+<p>Gallwn hefyd creu strings newydd o rhai eraill:</p>
 
 </div>
 </div>
@@ -502,9 +485,9 @@ programming these are called strings</strong>.</p>
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lastname</span> <span class="o">=</span> <span class="s2">&quot;Knight&quot;</span>
-<span class="n">fullname</span> <span class="o">=</span> <span class="n">firstname</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">lastname</span>
-<span class="n">fullname</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">enwolaf</span> <span class="o">=</span> <span class="s2">&quot;Knight&quot;</span>
+<span class="n">enwllawn</span> <span class="o">=</span> <span class="n">enwcyntaf</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">enwolaf</span>
+<span class="n">enwllawn</span>
 </pre></div>
 
 </div>
@@ -536,7 +519,7 @@ programming these are called strings</strong>.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Experiment by creating your own strings variables.</strong></p>
+<p><strong>Arbrofwch trwy greu newidynnau string eich hun.</strong></p>
 
 </div>
 </div>
@@ -546,11 +529,9 @@ programming these are called strings</strong>.</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="3.-Boolean-variables-and-if-statements.">3. Boolean variables and if statements.<a class="anchor-link" href="#3.-Boolean-variables-and-if-statements.">&#182;</a></h3><p><a href="https://youtu.be/IxU67BAFtHI">A video describing the concept.</a></p>
-<p><a href="https://youtu.be/EVAbSgT2Fvk">A video demo.</a></p>
-<p>Programming languages can be used to check if statements are true or not. A
-variable that can either be <code>True</code> or <code>False</code> is called a boolean variable.
-Here is a simple example:</p>
+<h3 id="3.-Newidynnau-Boolean-a-datganiadau-'if'.">3. Newidynnau Boolean a datganiadau 'if'.<a class="anchor-link" href="#3.-Newidynnau-Boolean-a-datganiadau-'if'.">&#182;</a></h3><p><a href="https://youtu.be/IxU67BAFtHI">Fideo yn disgrifio'r cysyniad.</a></p>
+<p><a href="https://youtu.be/EVAbSgT2Fvk">Fideo demo.</a></p>
+<p>Gallwn ddefnyddio ieithoedd rhaglenni i wirio os yw datganiad yn wir neu beidio. Fe elwir newidyn sy'n gallu bod yn <code>True</code> neu yn <code>False</code> yn newidyn boolean. Dyma enghraifft:</p>
 
 </div>
 </div>
@@ -562,7 +543,7 @@ Here is a simple example:</p>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">8</span> <span class="o">/</span> <span class="mi">2</span>
-<span class="n">a</span> <span class="o">==</span> <span class="n">b</span> <span class="c1"># Check if a is equal to b</span>
+<span class="n">a</span> <span class="o">==</span> <span class="n">b</span> <span class="c1"># Gwirio os yw a yn hafal i b</span>
 </pre></div>
 
 </div>
@@ -595,7 +576,7 @@ Here is a simple example:</p>
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">!=</span> <span class="n">b</span> <span class="c1"># Check if a is NOT equal to b</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">!=</span> <span class="n">b</span> <span class="c1"># Gwirio os NAD yw a yn hafal i b</span>
 </pre></div>
 
 </div>
@@ -628,7 +609,7 @@ Here is a simple example:</p>
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">&gt;=</span> <span class="n">b</span> <span class="c1"># Check if a is bigger or equal to b</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">&gt;=</span> <span class="n">b</span> <span class="c1"># Gwirio os yw a yn fwy na neu&#39;n hafal i b</span>
 </pre></div>
 
 </div>
@@ -661,7 +642,7 @@ Here is a simple example:</p>
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># Check if a is stricly smaller than b + 1</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># Gwirio os yw a yn llai na b + 1</span>
 </pre></div>
 
 </div>
@@ -693,7 +674,7 @@ Here is a simple example:</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Note that we can set the statement to be a variable itself:</p>
+<p>Nodwch gallwch osod y datganiad ei hun i fod yn newidyn:</p>
 
 </div>
 </div>
@@ -703,8 +684,8 @@ Here is a simple example:</p>
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">statement</span> <span class="o">=</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
-<span class="n">statement</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">datganiad</span> <span class="o">=</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
+<span class="n">datganiad</span>
 </pre></div>
 
 </div>
@@ -737,7 +718,7 @@ Here is a simple example:</p>
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">datganiad</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -769,7 +750,7 @@ Here is a simple example:</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can use this to carry out different operations depending on whether or not a boolean is True or False.</p>
+<p>Gallwn ddefnyddio hwn i gwblhau gweithrediadau gwahanol yn dibynnu os yw boolean yn wir neu beidio.</p>
 
 </div>
 </div>
@@ -780,13 +761,13 @@ Here is a simple example:</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">11</span>
-<span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">:</span>  <span class="c1"># Experiment by changing the value of n</span>
-    <span class="n">value</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">elif</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Otherwise if (else if)</span>
-    <span class="n">value</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="k">else</span><span class="p">:</span>  <span class="c1"># Otherwise</span>
-    <span class="n">value</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">value</span>
+<span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">:</span>  <span class="c1"># Arbrofwch trwy newid gwerth n</span>
+    <span class="n">gwerth</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">elif</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># fel arall, os</span>
+    <span class="n">gwerth</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">else</span><span class="p">:</span>  <span class="c1"># fel arall</span>
+    <span class="n">gwerth</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">gwerth</span>
 </pre></div>
 
 </div>
@@ -818,15 +799,14 @@ Here is a simple example:</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>The indentation is important: everything indented after the <code>if</code>, <code>elif</code>,
-<code>else</code> statements is what will be evaluated in that specific case.</strong></p>
-<p>The above is in essence producing:</p>
+<p><strong>Mae mewnoliadau yn bwysig: bydd popeth sydd wedi'u mewnoli ar ôl y datganiadau <code>if</code>, <code>elif</code>, <code>else</code> yn rhedeg ar gyfer yr achos penodol yna.</strong></p>
+<p>Mae'r cod uchod yn cynhyrchu:</p>
 <p>$$f(n)=\begin{cases}
-1&amp;\text{ if } n\leq 5\\
-2&amp;\text{ if } n&gt; 5\text{ and } n \text{ even}\\
-3&amp;\text{ otherwise }\\
+1&amp;\text{ os yw } n\leq 5\\
+2&amp;\text{ os yw } n&gt; 5\text{ ac } n \text{ yn eilrif }\\
+3&amp;\text{ fel arall }\\
 \end{cases}$$</p>
-<p><strong>Experiment by changing the function $f$ and modifying the code.</strong></p>
+<p><strong>Arbrofwch trwy newid y ffwythiant $f$ a newid y cod.</strong></p>
 
 </div>
 </div>
@@ -836,11 +816,9 @@ Here is a simple example:</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="4.-While-loops.">4. While loops.<a class="anchor-link" href="#4.-While-loops.">&#182;</a></h3><p><a href="https://youtu.be/MnKlyszfa7g">A video describing the concept.</a></p>
-<p><a href="https://youtu.be/orAnw7ZiFV4">A video demo.</a></p>
-<p>It is possible to use code to repeat various actions. Here is a <code>while</code> loop
-that repeats whatever is indented until the boolean condition is no longer
-true:</p>
+<h3 id="4.-Lwpiau-'while'.">4. Lwpiau 'while'.<a class="anchor-link" href="#4.-Lwpiau-'while'.">&#182;</a></h3><p><a href="https://youtu.be/MnKlyszfa7g">Fideo yn disgrifio'r cysyniad.</a></p>
+<p><a href="https://youtu.be/orAnw7ZiFV4">Fideo demo.</a></p>
+<p>Mae'n bosib defnyddio cod i ailadrodd gweithrediadau. Dyma lwp <code>while</code> sy'n ailadrodd beth bynnag sydd wedi'i mewnoli oddi tanodd nes nad yw'r amod boolean yn wir ragor:</p>
 
 </div>
 </div>
@@ -850,12 +828,12 @@ true:</p>
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># A variable to count</span>
-<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># We will sum the first ten numbers</span>
-<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>  <span class="c1"># Keep repeating until count if &gt;= 10</span>
-    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Adding 1 to count</span>
-    <span class="n">total</span> <span class="o">+=</span> <span class="n">count</span>  <span class="c1"># Adding the count to the total</span>
-<span class="n">total</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cyfrif</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Newidyn i gyfri</span>
+<span class="n">cyfanswm</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Byddwn yn symio&#39;r deg rhif cyntaf</span>
+<span class="k">while</span> <span class="n">cyfrif</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>  <span class="c1"># Cadw ailadrodd nes i&#39;r cyfrif nes i&#39;r cyfrif &gt;= 10</span>
+    <span class="n">cyfrif</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Adio 1 i&#39;r cyfrif</span>
+    <span class="n">cyfanswm</span> <span class="o">+=</span> <span class="n">cyfrif</span>  <span class="c1"># Adio&#39;r cyfrif i&#39;r cyfanswm</span>
+<span class="n">cyfanswm</span>
 </pre></div>
 
 </div>
@@ -887,8 +865,7 @@ true:</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Experiment by summing (or perhaps multiplying?) over a different list of
-items.</strong></p>
+<p><strong>Arbrofwch trwy symio (neu efallai lluosi?) dros wahanol restrau o eitemau.</strong></p>
 
 </div>
 </div>
@@ -898,16 +875,14 @@ items.</strong></p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="Worked-example">Worked example<a class="anchor-link" href="#Worked-example">&#182;</a></h3><p><a href="https://youtu.be/cPfHwhJgeik">A video describing the concept.</a></p>
-<p><a href="https://www.youtube.com/watch?v=im6yVzlFrys">A video demo.</a></p>
-<p>This is a slightly more complex example that brings together the various
-concepts above.</p>
-<p>Let us aim to verify (<strong>this is not a proof!</strong>) that the following statement is
-true:</p>
+<h3 id="Enghraifft-weithredol">Enghraifft weithredol<a class="anchor-link" href="#Enghraifft-weithredol">&#182;</a></h3><p><a href="https://youtu.be/cPfHwhJgeik">Fideo yn disgrifio'r cysyniad.</a></p>
+<p><a href="https://www.youtube.com/watch?v=im6yVzlFrys">Fideo demo.</a></p>
+<p>Dyma enghraifft fach fwy cymhleth sy'n cyfuno'r cysyniadau amryw uchod.</p>
+<p>Gadewch i ni wirio (<strong>nid prawf yw hwn!</strong>) bod y datganiad canlynol yn wir:</p>
 <p>$$
 \sum_{i=0}^n i ^ 2 = \frac{n(n+1)(2n+1)}{6}
 $$</p>
-<p>We will do this by computing the left hand side and the right hand side:</p>
+<p>Byddwn yn gwneud hwn trwy gyfrifo'r ochr chwith a'r ochr de:</p>
 
 </div>
 </div>
@@ -956,7 +931,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can put all of the above in a <code>while</code> loop that will check it for a large number of values of n:</p>
+<p>Gallwn roi'r holl beth mewn i lwp <code>while</code> er mwyn ei wirio ar gyfer nifer mawr o werthoedd o n:</p>
 
 </div>
 </div>
@@ -966,9 +941,9 @@ $$</p>
 <div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">max_n</span> <span class="o">=</span> <span class="mi">2000</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_macs</span> <span class="o">=</span> <span class="mi">2000</span>
 <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">max_n</span><span class="p">:</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">n_macs</span><span class="p">:</span>
     <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="n">rhs</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">+</span>  <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">6</span>
     <span class="n">lhs</span> <span class="o">=</span> <span class="mi">0</span>
@@ -990,12 +965,12 @@ $$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h2><p>Here are a number of exercises that are possible to carry out using the code concepts discussed:</p>
+<h2 id="Ymarferion">Ymarferion<a class="anchor-link" href="#Ymarferion">&#182;</a></h2><p>Dyma nifer o ymarferion sy'n bosib cyflawni gan ddefnyddio'r cysyniadau cod a thrafodir:</p>
 <ul>
-<li>Variable assignement: for example <code>a = 5</code></li>
-<li>Arithmetic manipulation: for example <code>a += 2</code></li>
-<li>Conditional statements: for example <code>if a == 7:</code></li>
-<li>While loops: for example <code>while a &lt;= 10:</code></li>
+<li>Aseinio newidynnau: er enghraifft <code>a = 5</code></li>
+<li>Triniaeth rhifyddeg: er enghraifft <code>a += 1</code></li>
+<li>Datganiadau amodol: er enghraifft <code>if a == 7:</code></li>
+<li>Lwpiau 'while': er enghraifft <code>while a &lt;= 10:</code></li>
 </ul>
 
 </div>
@@ -1006,18 +981,16 @@ $$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="Exercise-1">Exercise 1<a class="anchor-link" href="#Exercise-1">&#182;</a></h3><p><strong>Debugging exercise</strong></p>
-<p><a href="https://youtu.be/NvAEDqMRSEw">A video demo.</a></p>
-<p>Below is code that attempts to verify the following identity for all values
-less than 2000.</p>
+<h3 id="Ymarfer-1">Ymarfer 1<a class="anchor-link" href="#Ymarfer-1">&#182;</a></h3><p><strong> Ymarfer datbygio</strong></p>
+<p><a href="https://youtu.be/NvAEDqMRSEw">Fideo demo.</a></p>
+<p>Isod yw cod sy'n ceisio gwirio'r unfathiant canlynol ar gyfer holl gwerthoedd llai na 200.</p>
 <p>$$
 \sum_{i=0}^ni ^ 3 = \frac{\left(n ^ 2 + n\right)^{2}}{4}
 $$</p>
-<p><strong>There is at least one error (also called a bug) in the
-code</strong>. Find and fix all the bugs.</p>
-<div class="highlight"><pre><span></span><span class="n">max_n</span> <span class="o">=</span> <span class="mi">2000</span>
+<p><strong>Mae o leiaf un gwall (hefyd elwir yn byg) yn y cod</strong>. Canfyddwch a chywirwch yr holl bygs.</p>
+<div class="highlight"><pre><span></span><span class="n">n_macs</span> <span class="o">=</span> <span class="mi">2000</span>
 <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="n">max_n</span><span class="p">:</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="n">n_macs</span><span class="p">:</span>
    <span class="n">n</span> <span class="o">+=</span> <span class="mi">2</span>
    <span class="n">rhs</span> <span class="o">=</span> <span class="p">((</span><span class="n">n</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">n</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4</span>
    <span class="n">lhs</span> <span class="o">=</span> <span class="mi">0</span>
@@ -1037,11 +1010,11 @@ code</strong>. Find and fix all the bugs.</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="Exercise-2">Exercise 2<a class="anchor-link" href="#Exercise-2">&#182;</a></h3><p>Use code to check the following identity:</p>
+<h3 id="Ymarfer-2">Ymarfer 2<a class="anchor-link" href="#Ymarfer-2">&#182;</a></h3><p>Defnyddiwch god i wirio'r unfathiant canlynol:</p>
 <p>$$
     \sum_{i=0}^{n}i=\frac{n(n+1)}{2}
 $$</p>
-<p>for $n=20$.</p>
+<p>ar gyfer $n=20$.</p>
 
 </div>
 </div>
@@ -1051,7 +1024,7 @@ $$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="Exercise-3">Exercise 3<a class="anchor-link" href="#Exercise-3">&#182;</a></h3><p>Modify <strong>the above</strong> (Exercise 2) to check it for all values less than 2000.</p>
+<h3 id="Ymarfer-3">Ymarfer 3<a class="anchor-link" href="#Ymarfer-3">&#182;</a></h3><p>Newidiwch <strong>yr uchod</strong> (Ymarfer 2) i wirio os yw'n wir ar gyfer pob gwerth llai na 2000.</p>
 
 </div>
 </div>
@@ -1061,7 +1034,7 @@ $$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="Exercise-4">Exercise 4<a class="anchor-link" href="#Exercise-4">&#182;</a></h3><p>Calculate the sum of the first natural numbers less than 1000 that are not divisible by 3.</p>
+<h3 id="Ymarfer-4">Ymarfer 4<a class="anchor-link" href="#Ymarfer-4">&#182;</a></h3><p>Cyfrifwch swm y rhifau naturiol llai na 1000 nad yw'n rhanadwy gan 3.</p>
 
 </div>
 </div>
@@ -1071,7 +1044,7 @@ $$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="Exercise-5">Exercise 5<a class="anchor-link" href="#Exercise-5">&#182;</a></h3><p>Calculate the sum of the first 1000 natural numbers that are not divisible by 3.</p>
+<h3 id="Ymarfer-5">Ymarfer 5<a class="anchor-link" href="#Ymarfer-5">&#182;</a></h3><p>Cyfrifwch swm y 1000 rhif naturiol cyntaf nad yw'n rhanadwy gan 3.</p>
 
 </div>
 </div>
@@ -1081,12 +1054,11 @@ $$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h3 id="Exercise-6">Exercise 6<a class="anchor-link" href="#Exercise-6">&#182;</a></h3><p>It can be shown (you are not required to check this) that the following sequence:</p>
+<h3 id="Ymarfer-6">Ymarfer 6<a class="anchor-link" href="#Ymarfer-6">&#182;</a></h3><p>Fe ellir dangos (does dim angen profi hwn) bod y dilyniant canlynol:</p>
 <p>$$
     x_{n+1}=\frac{x_n + K / x_{n}}{2}
 $$</p>
-<p>approaches $\sqrt{K}$ as $n$ increases. Write some code to
-verify this to any given level of precision.</p>
+<p>yn agosáu ar $\sqrt{K}$ wrth i $n$ cynyddu. Ysgrifennwch god i wirio hwn ar gyfer unrhyw lefel o drachywiredd.</p>
 
 </div>
 </div>
@@ -1096,28 +1068,21 @@ verify this to any given level of precision.</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="Further-resources">Further resources<a class="anchor-link" href="#Further-resources">&#182;</a></h2><ul>
-<li><a href="https://docs.python.org/3/tutorial/introduction.html">The official Python introduction
-tutorial</a></li>
-<li><a href="https://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3">A non programmers tutorial for
-Python</a>:<ul>
-<li><a href="https://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Hello,_World">Variables</a>.</li>
-<li><a href="https://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Debugging">Debugging</a>.</li>
-<li><a href="https://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Boolean_Expressions">Boolean
-variables</a>.</li>
-<li><a href="https://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Decisions">If
-statements</a>.</li>
-<li><a href="https://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/For_Loops">For</a>
-and
-<a href="https://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Count_to_10">while</a>
-loops.</li>
+<h2 id="Adnoddau-pellach">Adnoddau pellach<a class="anchor-link" href="#Adnoddau-pellach">&#182;</a></h2><ul>
+<li><a href="https://docs.python.org/3/tutorial/introduction.html">Y tiwtorial Python swyddogol</a></li>
+<li><a href="https://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3">Tiwtorial Python ar gyfer rheini sydd ddim yn rhaglenwyr</a>:<ul>
+<li><a href="https://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Hello,_World">Newidynnau</a>.</li>
+<li><a href="https://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Debugging">Datbygio</a>.</li>
+<li><a href="https://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Boolean_Expressions">Newidynau boolean</a>.</li>
+<li><a href="https://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Decisions">Datganiadau 'if</a>.</li>
+<li><a href="https://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/For_Loops">Lwpiau 'For'</a>
+a
+<a href="https://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Count_to_10">'while'</a>.</li>
 </ul>
 </li>
-<li><a href="https://learnxinyminutes.com/docs/python3/">Learn X in Y minutes for Python3</a></li>
-<li><a href="https://www.youtube.com/watch?v=HBxCHonP6Ro&amp;list=PL6gx4Cwl9DGAcbMi1sH6oAMk4JHw91mC_">A good youtube
-playlist</a></li>
-<li><a href="https://automatetheboringstuff.com/">Automating the boring stuff: a nice
-book</a></li>
+<li><a href="https://learnxinyminutes.com/docs/python3/">'Learn X in Y minutes for Python3'</a></li>
+<li><a href="https://www.youtube.com/watch?v=HBxCHonP6Ro&amp;list=PL6gx4Cwl9DGAcbMi1sH6oAMk4JHw91mC_">Rhestr chwarae da</a></li>
+<li><a href="https://automatetheboringstuff.com/">'Automating the boring stuff': llyfr neis</a></li>
 </ul>
 
 </div>
@@ -1128,10 +1093,10 @@ book</a></li>
 
 
     
-        <a href="../00/">Previous</a>
+        <a href="../../00/cy/">Blaenorol</a>
     
     
-        <p align="right"><a href="../02/">Next</a></p>
+        <p align="right"><a href="../../02/cy/">Nesaf</a></p>
     
 
     </div>
@@ -1139,14 +1104,16 @@ book</a></li>
     <div class="container">
         <center>
             <p style="font-size: small;">
-            Source code:
+            Ffynhonnell cod:
             <a href="https://github.com/drvinceknight/cfm">@drvinceknight</a>
-            Powered by:
+            Wedi'i greu gan:
                 <a href="https://www.python.org/">Python</a>
                 <a href="http://jupyter.org/">Jupyter</a>
                 <a href="https://www.mathjax.org/">Mathjax</a>
                 <a href="https://pages.github.com/">Github pages</a>
                 <a href="http://getskeleton.com/">Skeleton css</a>
+            Cyfieithiad gan:
+                <a href="http://www.geraintianpalmer.org.uk">Geraint Palmer</a>
             </p>
         </center>
     </div>

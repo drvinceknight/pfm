@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <center>
+        <h5>
+            {{ description }}
+        </h5>
+    </center>
+
+    <h1>Pennodau</h1>
+      <ol start=0>
+          {% for chapter in chapters %}
+              <li><a href=/{{root}}/chapters/{{ chapter.dir }}/>{{ chapter.title }}</a>
+                  (<a href=/{{root}}/{{ chapter.nb }}>ipynb</a>)</li>
+          {% endfor %}
+      </ol>
+
+    <h1>Adnoddau eraill</h1>
+
+        <ul>
+          <li>
+               <a href=/{{root}}/other/assessment/cy/>Aseiniad</a>
+          </li>
+          <li>
+               <a href=/tex/>\(LaTeX\) (Saesneg)</a>
+          </li>
+          <li>
+               <a
+                   href=http://www.geraintianpalmer.org.uk/teaching/latex-refresher/cy/>Tiwtorial
+               LaTeX</a>
+          </li>
+          <li>
+               <a href=https://vkcfm.readthedocs.io/en/latest/>Dogfennaeth y cwrs (Saesneg)</a>
+          </li>
+          <li>
+               <a href=/tch-phi/>Credau addysgu (Saesneg)</a>
+          </li>
+          <li>
+              <a href=http://www.geraintianpalmer.org.uk/teaching/tiwtorialau-python/>Fideo tiwtorialau Python</a>
+          </li>
+          <li>
+              <a href=/{{root}}/>Fersiwn Saesneg y cwrs yma</a>
+          </li>
+        </ul>
+{% endblock %}

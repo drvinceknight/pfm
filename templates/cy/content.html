@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+<html lang="en">
+
+{% block head %}
+  <link rel="stylesheet" href="/{{root}}/assets/css/notebook.css">
+{% endblock %}
+
+
+
+{% block body %}
+    {{ nb }}
+
+    {% if previous_url %}
+        <a href="../../{{previous_url}}/cy/">Blaenorol</a>
+    {% endif %}
+    {% if next_url %}
+        <p align="right"><a href="../../{{next_url}}/cy/">Nesaf</a></p>
+    {% endif %}
+{% endblock %}
+
+</html>

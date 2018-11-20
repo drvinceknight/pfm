@@ -13,8 +13,10 @@ from nbconvert import HTMLExporter, PDFExporter
 
 ROOT = "cfm"
 TITLE = "Computing for mathematics"
+TITLE_CY = "Cyfrifiadureg ar gyfer mathemateg"
 DESCRIPTION = "An undergraduate course introducing programming, through Python, to mathematicians."
-KEYWORDS = "python, mathematics, jupyter"
+DESCRIPTION_CY = "Cwrs israddedig yn cyflwyno rhaglennu, trwy defnyddio Python, i mathemategwyr."
+KEYWORDS = "python, mathematics, jupyter, mathemateg"
 AUTHOR = "Vince Knight"
 
 
@@ -78,17 +80,23 @@ def render_template(template_file, template_vars, searchpath="./templates/"):
 
 
 def make_dir(
-    path, directory, previous_url=None, next_url=None, chapters=None, **kwargs
+    path, directory, previous_url=None, next_url=None, chapters=None,
+    suffix=None, **kwargs
 ):
     """
     Create a directory for the name of the file
     """
     path_id = get_id(path)
     p = pathlib.Path(f"./{directory}/{path_id}")
+    if suffix is not None:
+        p = p / pathlib.Path(suffix)
     p.mkdir(exist_ok=True)
     nb, _ = convert_html(path)
-    check = False
     nb = nb.replace("{{root}}", ROOT)
+    if suffix is not None:
+        searchpath = "./templates/cy/"
+    else:
+        searchpath = "./templates/"
     html = render_template(
         "content.html",
         {
@@ -100,6 +108,7 @@ def make_dir(
             "chapters": chapters,
             **kwargs,
         },
+        searchpath=searchpath,
     )
     (p / "index.html").write_text(html)
 
@@ -137,24 +146,33 @@ if __name__ == "__main__":
 
     nb_dir = pathlib.Path("nbs")
     chapter_paths = sorted(nb_dir.glob("./chapters/*ipynb"))
+    chapter_paths_cy = sorted(nb_dir.glob("./cy/chapters/*ipynb"))
     other_paths = list(nb_dir.glob("./other/*ipynb"))
+    other_paths_cy = list(nb_dir.glob("./cy/other/*ipynb"))
 
     chapters = []
-    for path in tqdm.tqdm(sorted(chapter_paths)):
+    chapters_cy = []
+    for path, path_cy in tqdm.tqdm(zip(chapter_paths, chapter_paths_cy)):
+        chapters_cy.append(Chapter(f"{get_id(path_cy)}/cy", get_name(path_cy),
+            str(path_cy)))
         chapters.append(Chapter(f"{get_id(path)}", get_name(path), str(path)))
 
-    for paths, directory in [
-        (chapter_paths, "chapters"),
-        (other_paths, "other"),
+
+    for paths, directory, suffix, title, list_of_chapters, description in [
+        (chapter_paths, "chapters", None, TITLE, chapters, DESCRIPTION),
+        (chapter_paths_cy, "chapters", "cy", TITLE_CY, chapters_cy, DESCRIPTION_CY),
+        (other_paths, "other", None, TITLE, chapters, DESCRIPTION),
+        (other_paths_cy, "other", "cy", TITLE_CY, chapters_cy, DESCRIPTION_CY),
     ]:
         make_collection(
             paths=paths,
             directory=directory,
-            chapters=chapters,
-            title=TITLE,
-            description=DESCRIPTION,
+            chapters=list_of_chapters,
+            title=title,
+            description=description,
             keywords=KEYWORDS,
             author=AUTHOR,
+            suffix=suffix,
         )
 
     html = render_template(
@@ -170,3 +188,18 @@ if __name__ == "__main__":
     )
     with open("index.html", "w") as f:
         f.write(html)
+
+    html_cy = render_template(
+        "home.html",
+        {
+            "chapters": chapters_cy,
+            "root": ROOT,
+            "title": TITLE_CY,
+            "description": DESCRIPTION_CY,
+            "keywords": KEYWORDS,
+            "author": AUTHOR,
+        },
+        searchpath="./templates/cy/"
+    )
+    with open("cy/index.html", "w") as f:
+        f.write(html_cy)

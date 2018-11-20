@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cyfrifiadureg ar gyfer mathemateg</title>
+
+  <meta charset="UTF-8">
+  <!-- Mobile Specific Metas –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cwrs israddedig yn cyflwyno rhaglennu, trwy defnyddio Python, i mathemategwyr.">
+  <meta name="keywords" content="python, mathematics, jupyter, mathemateg">
+  <meta name="author" content="Vince Knight">
+  <!-- CSS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="/cfm/assets/css/main.css">
+  <link rel="stylesheet" href="/cfm/assets/css/normalize.css">
+  <link rel="stylesheet" href="/cfm/assets/css/skeleton.css">
+  <link rel="shortcut icon" type="image/png" href="/cfm/assets/favicon.ico"/>
+
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+  async>
+  </script>
+  <!-- MathJax configuration -->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		tex2jax: {
+			inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+			displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+			processEscapes: true,
+			processEnvironments: true
+		},
+		// Center justify equations in code and markdown cells. Elsewhere
+		// we use CSS to left justify single line equations in code cells.
+		displayAlign: 'center',
+		"HTML-CSS": {
+			styles: {'.MathJax_Display': {"margin": 0}},
+			linebreaks: { automatic: true }
+		}
+	});
+	</script>
+	<!-- End of mathjax configuration -->
+</head>
+
+   
+  <link rel="stylesheet" href="/cfm/assets/css/notebook.css">
+
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-38016329-2', 'auto');
+    ga('send', 'pageview');
+    </script>
+</head>
+<body>
+
+    <header>
+    <div class="row">
+        <div class="three.columns">
+            <a class="logo" href="/cfm/cy">Cyfrifiadureg ar gyfer mathemateg</a>
+        </div>
+        <div class="nine.columns">
+              <input id="nav" type="checkbox">
+              <label for="nav"></label>
+              <nav>
+                    <ul>
+                      
+                          <li><a href=/cfm/chapters/00/cy/>Cyflwyniad i'r Cwrs</a></li>
+                      
+                          <li><a href=/cfm/chapters/01/cy/>Newidynnau Datganiadau Amodol a Lwpiau</a></li>
+                      
+                          <li><a href=/cfm/chapters/02/cy/>Ffwythiannau a strwythurau data</a></li>
+                      
+                          <li><a href=/cfm/chapters/03/cy/>Ysgrifennu i ffeiliau a ffwythiannau ailadroddol</a></li>
+                      
+                          <li><a href=/cfm/chapters/04/cy/>Rhaglennu gwrthrych gyfeiriol</a></li>
+                      
+                          <li><a href=/cfm/chapters/05/cy/>Mathemateg symbolaidd gyda sympy</a></li>
+                      
+                          <li><a href=/cfm/chapters/06/cy/>Llyfrgelloedd gwyddonol</a></li>
+                      
+                    </ul>
+              </nav>
+        </div>
+    </div>
+</header>
+
+    <div class="container">
+        
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Aseiniad">Aseiniad<a class="anchor-link" href="#Aseiniad">&#182;</a></h2><p>Dyddiad cau: I'w drafod yn y dosbarth.</p>
+<p>Ysgrifennwch bapur ymchwil tair tudalen ar bwnc mathemategol. Rhaid ysgrifennu'r adroddiad yn LaTeX a rhaid defnyddio agweddau rhaglenni (Python) i dangos y pwnc penodol.</p>
+<p>Anogir i chi dewis eich pwnc eich hunain, os ydych chi yn gwneud hwn argymhellir i chi gwirio gyda fi (Vince Knight) bod y pwnc yn briodol.</p>
+<h2 id="Meini-prawf-marcio">Meini prawf marcio<a class="anchor-link" href="#Meini-prawf-marcio">&#182;</a></h2><p>Defnyddir y cynllun marcio canlynol:</p>
+<ul>
+<li>Cod (50% o bwys)<ul>
+<li>50%: Defnyddiwyd cod priodol gyda'r cysyniadau a ddysgir yn y taflenni lab.</li>
+<li>70%: Defnyddiwyd cod o'r taflenni lab er mwyn dangos cysyniadau yn glir.</li>
+<li>90%: Mae'r cod a defnyddiwyd yn gyfuniad o'r cod a ddysgir yn y dosbarth a chod a archwiliwyd yn unigol. Defnyddir hwn i esbonio cysyniadau yn glir mewn ffordd wreiddiol.</li>
+</ul>
+</li>
+<li>Cynnwys (25% o bwys)<ul>
+<li>50%: Mae'r cynnwys yn gywir ac agweddau o'r pwnc wedi'u hesbonio.</li>
+<li>70%: Mae’r cynnwys yn gywir a chafodd bach o ymchwil ei wneud (wedi'i gyfeirio'n gywir) i dangos agweddau diddorol y pwnc.</li>
+<li>90%: Mae'r pwnc a ddewiswyd yn wreiddiol ac mae dealltwriaeth fawr wedi ei ddangos.</li>
+</ul>
+</li>
+<li>Cyflwyniad (20% o bwys)<ul>
+<li>50%: Cafodd y gwaith ei ysgrifennu'n dda ond gyda bach neu dim  o gynnwys graffigol, ac mae hefyd yn cynnwys camgymeriadau sillafu a gramadeg.</li>
+<li>70%:  Cafodd y gwaith ei ysgrifennu'n dda gyda rhai graffiau a delweddau a man camgymeriadau sillafu a gramadeg.</li>
+<li>90%: Mae'r gwaith yn glir, yn fathemategol trylwyr gyda graffiau a delweddau o ansawdd gwych, a does dim camgymeriadau sillafu na gramadeg.</li>
+</ul>
+</li>
+<li>Gwaith lab (5%)<ul>
+<li>100%: Cyfraniad unigol o syniadau'r prosiect, datrys problemau, a thrafodaethau a chwestiynau o werth.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Rhaid cynnwys holl god rydych eisiau cael ei ystyried am farciau o fewn y cyfyngiad 3 tudalen.</strong></p>
+<h2 id="Cyflwyno">Cyflwyno<a class="anchor-link" href="#Cyflwyno">&#182;</a></h2><p>I gyflwyno'r gwaith byddwch yn defnyddio learning central. Canfyddwch y modiwl “MA1003 Computing For Mathematics“, o fewn hwnna canfyddwch y ffolder “Assessment” ac yna'r eitem “Computing For Mathematics: Individual Coursework”. Yna cliciwch ar “View/Complete” a dilynwch y cyfarwyddiadau. Gweler  fideo yma sy’n dangos sut i gyflwyno'r gwaith: <a href="https://vimeo.com/114969438">https://vimeo.com/114969438</a>.</p>
+<p>Rydych yn cyflwyno'r pdf (nid y ffynhonnell LaTex neu unrhyw notebooks Jupyter).</p>
+<p>Byddwch yn cyflwyno’r gwaith yn y ffordd yma gan fod “Turnitin” yn gynnyrch a phrynwyd gan y Brifysgol sy'n gwirio am lên-ladrad.</p>
+<p>DYMA'CH UNIG SIAWNS I GYFLWYNO GWAITH: PEIDIWCH ADAEL Y CYFLWYNO NES Y MUNUD OLAF. OS NAD YDYCH YN CYFLWYNO BYDDWCH YN ENNILL MARC O 0.</p>
+
+</div>
+</div>
+</div>
+ 
+
+
+
+    
+        <a href="../../assessment/cy/">Blaenorol</a>
+    
+    
+        <p align="right"><a href="../../assessment/cy/">Nesaf</a></p>
+    
+
+    </div>
+
+    <div class="container">
+        <center>
+            <p style="font-size: small;">
+            Ffynhonnell cod:
+            <a href="https://github.com/drvinceknight/cfm">@drvinceknight</a>
+            Wedi'i greu gan:
+                <a href="https://www.python.org/">Python</a>
+                <a href="http://jupyter.org/">Jupyter</a>
+                <a href="https://www.mathjax.org/">Mathjax</a>
+                <a href="https://pages.github.com/">Github pages</a>
+                <a href="http://getskeleton.com/">Skeleton css</a>
+            Cyfieithiad gan:
+                <a href="http://www.geraintianpalmer.org.uk">Geraint Palmer</a>
+            </p>
+        </center>
+    </div>
+
+    <script>
+        document.querySelector('header nav ul').addEventListener('click', function(){
+            document.querySelector('#nav').checked = false;
+        });
+
+        var menuHeight = document.querySelector('header').offsetHeight;
+        document.querySelectorAll('.section-title').forEach(function(a){
+            a.style.paddingTop = menuHeight + 'px';
+            a.style.marginTop = '-' + menuHeight + 'px';
+        });
+    </script>
+</body>
+</html>

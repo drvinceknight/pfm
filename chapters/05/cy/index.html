@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Computing for mathematics</title>
+    <title>Cyfrifiadureg ar gyfer mathemateg</title>
 
   <meta charset="UTF-8">
   <!-- Mobile Specific Metas –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="An undergraduate course introducing programming, through Python, to mathematicians.">
+  <meta name="description" content="Cwrs israddedig yn cyflwyno rhaglennu, trwy defnyddio Python, i mathemategwyr.">
   <meta name="keywords" content="python, mathematics, jupyter, mathemateg">
   <meta name="author" content="Vince Knight">
   <!-- CSS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -60,7 +60,7 @@
     <header>
     <div class="row">
         <div class="three.columns">
-            <a class="logo" href="/cfm">Computing for mathematics</a>
+            <a class="logo" href="/cfm/cy">Cyfrifiadureg ar gyfer mathemateg</a>
         </div>
         <div class="nine.columns">
               <input id="nav" type="checkbox">
@@ -68,19 +68,19 @@
               <nav>
                     <ul>
                       
-                          <li><a href=/cfm/chapters/00/>Introduction to the course</a></li>
+                          <li><a href=/cfm/chapters/00/cy/>Cyflwyniad i'r Cwrs</a></li>
                       
-                          <li><a href=/cfm/chapters/01/>Variables Conditional Statements and Loops</a></li>
+                          <li><a href=/cfm/chapters/01/cy/>Newidynnau Datganiadau Amodol a Lwpiau</a></li>
                       
-                          <li><a href=/cfm/chapters/02/>Functions and data structures</a></li>
+                          <li><a href=/cfm/chapters/02/cy/>Ffwythiannau a strwythurau data</a></li>
                       
-                          <li><a href=/cfm/chapters/03/>Writing to files and recursion</a></li>
+                          <li><a href=/cfm/chapters/03/cy/>Ysgrifennu i ffeiliau a ffwythiannau ailadroddol</a></li>
                       
-                          <li><a href=/cfm/chapters/04/>Object oriented programming</a></li>
+                          <li><a href=/cfm/chapters/04/cy/>Rhaglennu gwrthrych gyfeiriol</a></li>
                       
-                          <li><a href=/cfm/chapters/05/>Symbolic mathematics with sympy</a></li>
+                          <li><a href=/cfm/chapters/05/cy/>Mathemateg symbolaidd gyda sympy</a></li>
                       
-                          <li><a href=/cfm/chapters/06/>Scientific libraries</a></li>
+                          <li><a href=/cfm/chapters/06/cy/>Llyfrgelloedd gwyddonol</a></li>
                       
                     </ul>
               </nav>
@@ -95,8 +95,8 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Chapter-05:-Symbolic-mathematics-with-Sympy">Chapter 05: Symbolic mathematics with Sympy<a class="anchor-link" href="#Chapter-05:-Symbolic-mathematics-with-Sympy">&#182;</a></h2><p>This lab sheet introduces a specific mathematical library called Sympy which allows us to carry out symbolic mathematics.</p>
-<p>In the previous week we saw a variety of different libraries:</p>
+<h2 id="Pennod-05:-Mathemateg-symbolaidd-gyda-Sympy">Pennod 05: Mathemateg symbolaidd gyda Sympy<a class="anchor-link" href="#Pennod-05:-Mathemateg-symbolaidd-gyda-Sympy">&#182;</a></h2><p>Mae'r daflen lab yma yn cyflwyno'r llyfrgell fathemategol Sympy sy'n gadael i ni gario allan mathemateg symbolaidd.</p>
+<p>Wythnos diwethaf gwelon ni amryw o lyfrgelloedd gwahanol:</p>
 
 </div>
 </div>
@@ -119,14 +119,14 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>and there are many more. These libraries are part of the ''standard library''.
-This means that they come with the base version of Python. There are a variety
-of other libraries that exist and are developed independently. Some of these
-come as standard with Anaconda.</p>
-<p>This lab sheet will introduce one such library:
-<a href="http://www.sympy.org/en/index.html">SymPy</a> which allows us to do symbolic
-mathematics.</p>
-<h3 id="1.-Exact-calculations">1. Exact calculations<a class="anchor-link" href="#1.-Exact-calculations">&#182;</a></h3><p>Using Python we can calculate the square root and trigonometric values of numbers (we do this by importing the math library)::</p>
+<p>ac mae llawer mwy. Mae'r llyfrgelloedd yma yn rhan o'r ''llyfrgell safonol''.
+Mae hwn yn golygu eu bod yn dod gyda'r fersiwn Python sylfaenol. Mae amryw o
+llyfrgelloedd eraill yn bodoli a ddatblygwyd yn annibynnol. Mae rhai i rain
+yn dod gyda Anaconda.</p>
+<p>Bydd y daflen lab yma yn cyflwyno un o'r llyfrgelloedd yma:
+<a href="http://www.sympy.org/en/index.html">SymPy</a> sy'n galluogi ni i gwneud
+mathemateg symbolaidd.</p>
+<h3 id="1.-Cyfrifiadau-union">1. Cyfrifiadau union<a class="anchor-link" href="#1.-Cyfrifiadau-union">&#182;</a></h3><p>Yn defnyddio Python gallwch gyfrifo ail-israddau a gwerthoedd trigonometrig (gallwn wneud hyn trwy fewnforio'r llyfrgell math)::</p>
 
 </div>
 </div>
@@ -202,7 +202,7 @@ mathematics.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>These are fine for numerical work but not when it comes to carrying out <strong>exact</strong> mathematical calculations, where for example we know that:</p>
+<p>Mae hwn yn iawn ar gyfer gwaith rhifiadol ond dim pan mae'n dod i gario allan cyfrifiadau mathemategol <strong>union</strong>, er enghraifft gwyddon fod:</p>
 <p>$$
     \cos(\pi / 4) = \sqrt{2} / 2
 $$</p>
@@ -214,7 +214,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This is where Sympy is useful: it can carry out exact mathematical calculations:</p>
+<p>Dyma le mae Sympy yn ddefnyddiol: gall cario allan cyfrifiadau mathemategol union:</p>
 
 </div>
 </div>
@@ -290,7 +290,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We also have access to complex numbers:</p>
+<p>Mae hefyd yn rhoi rhifau cymhlyg:</p>
 
 </div>
 </div>
@@ -365,7 +365,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Sympy aslo has numerous functions to manipulate natural numbers:</p>
+<p>Mae gan Sympy nifer o ffwythiannau i drin rhifau naturiol:</p>
 
 </div>
 </div>
@@ -442,7 +442,7 @@ $$</p>
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">all</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">isprime</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">sym</span><span class="o">.</span><span class="n">primefactors</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>  <span class="c1"># All prime factors are prime</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">all</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">isprime</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">sym</span><span class="o">.</span><span class="n">primefactors</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>  <span class="c1"># Mae holl ffactoriau cysefin yn rhifau cysefin</span>
 </pre></div>
 
 </div>
@@ -508,7 +508,7 @@ $$</p>
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">N</span> <span class="o">==</span> <span class="mi">3</span> <span class="o">**</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">7</span>  <span class="c1"># Checking the output of `factorint`</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">N</span> <span class="o">==</span> <span class="mi">3</span> <span class="o">**</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">7</span>  <span class="c1"># Gwirio allbwn `factorint`</span>
 </pre></div>
 
 </div>
@@ -540,8 +540,8 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Repeat the above example with a different value of <code>N</code>.</p>
-<h3 id="2.-Symbolic-expressions">2. Symbolic expressions<a class="anchor-link" href="#2.-Symbolic-expressions">&#182;</a></h3><p>Using Sympy it is possible to carry out symbolic computations. To do this we need to creates instances of the Sympy Symbols class.</p>
+<p>Ailadroddwch yr enghraifft uchod gyda gwerth gwahanol o <code>N</code>.</p>
+<h3 id="2.-Mynegiadau-symbolaidd">2. Mynegiadau symbolaidd<a class="anchor-link" href="#2.-Mynegiadau-symbolaidd">&#182;</a></h3><p>Gan ddefnyddio Sympy mae'n bosib cario allan cyfrifiadau symbolaidd. I wneud hwn mae angen creu achosion o ddosbarth Symbols Sympy.</p>
 
 </div>
 </div>
@@ -617,7 +617,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can then manipulate this abstract symbolic object without giving it a specific numerical value:</p>
+<p>Yna gallwn drin y gwrthrych symbol yma heb roi gwerthoedd rhifol penodol iddo:</p>
 
 </div>
 </div>
@@ -725,7 +725,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Sympy has a helpful <code>symbols</code> (with a small <code>s</code>) function that lets us create multiple <code>sympy.Symbol</code> objects at a time:</p>
+<p>Mae gan Sympy ffwythiant defnyddiol <code>symbols</code> (gyda <code>s</code> bach) sy'n galluogi ni creu mwy nag un gwrthrych <code>sympy.Symbol</code> ar yr un pryd:</p>
 
 </div>
 </div>
@@ -768,12 +768,12 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Symbolic expressions can be manipulated using Sympy's:</p>
+<p>Gallwn drin mynegiannau symbolaidd gan ddefnyddio'r dulliau Sympy:</p>
 <ul>
-<li><code>factor</code></li>
-<li><code>expand</code></li>
+<li><code>factor</code> (ffactoreiddio)</li>
+<li><code>expand</code> (ehangu)</li>
 </ul>
-<p>Here we confirm some well known formula:</p>
+<p>Fan hyn rydym yn cadarnhau rhyw fformiwla enwog:</p>
 
 </div>
 </div>
@@ -783,8 +783,8 @@ $$</p>
 <div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expr</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="o">+</span> <span class="n">y</span> <span class="o">**</span> <span class="mi">2</span>
-<span class="n">expr</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myn</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="o">+</span> <span class="n">y</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="n">myn</span>
 </pre></div>
 
 </div>
@@ -817,7 +817,7 @@ $$</p>
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expr</span><span class="o">.</span><span class="n">factor</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myn</span><span class="o">.</span><span class="n">factor</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -850,8 +850,8 @@ $$</p>
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expr</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
-<span class="n">expr</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myn</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">myn</span>
 </pre></div>
 
 </div>
@@ -884,7 +884,7 @@ $$</p>
 <div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>  <span class="c1"># Note we could also use `expr.expand`</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">myn</span><span class="p">)</span>  <span class="c1"># Nodwch gallwn hefyd defnyddio `myn.expand`</span>
 </pre></div>
 
 </div>
@@ -916,12 +916,12 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Sympy also has a <code>simplify</code> command that can be powerful. Experiment with all of these as well as more complex expressions.</p>
-<h3 id="3.-Symbolic-equations">3. Symbolic equations<a class="anchor-link" href="#3.-Symbolic-equations">&#182;</a></h3><p>We can use Sympy to solve symbolic equations. Let us solve the following symbolic equation:</p>
+<p>Mae gan Sympy gorchymyn <code>simplify</code> sy'n bwerus iawn. Arbrofwch gyda rhain a hefyd gyda mynegiannau mwy cymhleth.</p>
+<h3 id="3.-Hafaliadau-symbolaidd">3. Hafaliadau symbolaidd<a class="anchor-link" href="#3.-Hafaliadau-symbolaidd">&#182;</a></h3><p>Gallwn ddefnyddio Sympy i ddatrys hafaliadau symbolaidd. Gadewch i ni ddatrys yr hafaliad symbolaidd canlynol:</p>
 <p>$$
     x ^ 2 + 3 x - 2 = 0
 $$</p>
-<p>We do this using the <code>solveset</code> function:</p>
+<p>Rydym yn gwneud hwn try defnyddio'r ffwythiant <code>solveset</code>:</p>
 
 </div>
 </div>
@@ -963,13 +963,11 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>If our equation had a non zero right hand side we can use one of two
-approaches:</p>
+<p>Os oedd gan ein hafaliad ochr dde nad oedd yn sero mae dwy ffordd o deilo â hwn:</p>
 <p>$$
     x^2 + 3x - 2=y
 $$</p>
-<p><code>1</code>. Modify the equation so that it corresponds to an equation with zero right
-  hand side:</p>
+<p><code>1</code>. Newid yr hafaliad fel ei bod yn cyfateb â hafaliad gyda sero ar yr ochr dde:</p>
 
 </div>
 </div>
@@ -1011,7 +1009,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>2</code>. Create an <code>Eq</code> object:</p>
+<p><code>2</code>. Creu gwrthrych <code>Eq</code>:</p>
 
 </div>
 </div>
@@ -1021,8 +1019,8 @@ $$</p>
 <div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">eqn</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="n">sym</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">eqn</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">haf</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">haf</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1054,8 +1052,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can also specify a domain. For example the following equation has two
-solutions (it's a quadratic):</p>
+<p>Gallwn hefyd nodi parth. Er enghraifft mae gan yr hafaliad canlynol canlynol dau ddatrysiad (gan ei fod yn gwadratig):</p>
 <p>$$
     x^2 = -9
 $$</p>
@@ -1100,7 +1097,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>However if we restrict ourselves to the Reals this is no longer the case:</p>
+<p>Ond os cyfyngwn ni ein hunain i'r rhifau real, dim hwn yw'r achos rhagor:</p>
 
 </div>
 </div>
@@ -1142,12 +1139,12 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="4.-Symbolic-calculus">4. Symbolic calculus<a class="anchor-link" href="#4.-Symbolic-calculus">&#182;</a></h3><p>It is possible to carry out various symbolic calculus related operations using Sympy:</p>
-<p>Let us consider the function:</p>
+<h3 id="4.-Calcwlws-symbolaidd">4. Calcwlws symbolaidd<a class="anchor-link" href="#4.-Calcwlws-symbolaidd">&#182;</a></h3><p>Mae'n bosib cario allan amryw o weithrediadau calcwlws gan ddefnyddio Sympy:</p>
+<p>Ystyriwch y ffwythiant:</p>
 <p>$$
     f(x) = 1 / x
 $$</p>
-<p>We will do this by defining a standard Python function:</p>
+<p>I wneud hwn diffiniwn ffwythiant Python arferol:</p>
 
 </div>
 </div>
@@ -1170,7 +1167,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>and passing it our symbolic variable:</p>
+<p>a rhoi newidyn symbolaidd iddo:</p>
 
 </div>
 </div>
@@ -1212,7 +1209,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can compute the limits at $\pm\infty$</p>
+<p>Gallwn gyfrifo'r terfannau yn $\pm\infty$</p>
 
 </div>
 </div>
@@ -1320,7 +1317,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can also compute the limit at $0$ however we must be careful here (you will recall from basic calculus that the limit depends on the direction):</p>
+<p>Gallwn gyfrifo'r terfan yn $0$ ond rhaid bod yn ofalus fan hyn (cofiwch o galcwlws sylfaenol bod y terfan yn dibynnu ar y cyfeiriad):</p>
 
 </div>
 </div>
@@ -1330,7 +1327,7 @@ $$</p>
 <div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># The default direction of approach is positive.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># Y cyfeiriad diofyn yw&#39;r positive</span>
 </pre></div>
 
 </div>
@@ -1428,7 +1425,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can use Sympy to carry out differentiation:</p>
+<p>Gallwn ddefnyddio Sympy i ddifferu:</p>
 
 </div>
 </div>
@@ -1503,7 +1500,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can carry out various orders of differentiation. These all give the second order derivative of $\cos(x)$:</p>
+<p>Gallwn gario allan nifer o raddau o ddifferu. Mae'r rhain i gyd yn rhoi'r deilliad ail radd o $\cos(x)$:</p>
 
 </div>
 </div>
@@ -1611,8 +1608,8 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As well as differentiation it is possible to carry out integration.</p>
-<p>We can do both definite and indefinite integrals:</p>
+<p>Yn ogystal â differu gallwn hefyd integru.</p>
+<p>Gallwn wneud integrynnau pendant ac integrynnau amhendant:</p>
 
 </div>
 </div>
@@ -1622,7 +1619,7 @@ $$</p>
 <div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>  <span class="c1"># An indefinite integral</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>  <span class="c1"># Integryn amhendant</span>
 </pre></div>
 
 </div>
@@ -1655,7 +1652,7 @@ $$</p>
 <div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sym</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">sym</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">5</span><span class="p">)))</span>  <span class="c1"># A definite integral</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sym</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">sym</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">5</span><span class="p">)))</span>  <span class="c1"># Integryn pendant</span>
 </pre></div>
 
 </div>
@@ -1687,7 +1684,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="5.-Differential-equations">5. Differential equations<a class="anchor-link" href="#5.-Differential-equations">&#182;</a></h3><p>We can use SymPy to solve differential equations. For example:</p>
+<h3 id="5.-Hafaliadau-differol">5. Hafaliadau differol<a class="anchor-link" href="#5.-Hafaliadau-differol">&#182;</a></h3><p>Gallwn ddefnyddio Sympy i ddatrys hafaliadau differol. Er enghraifft:</p>
 <p>$$
     \frac{dy}{dx} = y
 $$</p>
@@ -1702,8 +1699,8 @@ $$</p>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
-<span class="n">sol</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">dsolve</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">Derivative</span><span class="p">(</span><span class="n">y</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">y</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">y</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-<span class="n">sol</span>
+<span class="n">dat</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">dsolve</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">Derivative</span><span class="p">(</span><span class="n">y</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">y</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">y</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">dat</span>
 </pre></div>
 
 </div>
@@ -1735,7 +1732,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Let us verify that the solution is correct:</p>
+<p>Gwiriwn os yw'r datrysiad hwn yn gywir:</p>
 
 </div>
 </div>
@@ -1745,7 +1742,7 @@ $$</p>
 <div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">sol</span><span class="o">.</span><span class="n">rhs</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="n">sol</span><span class="o">.</span><span class="n">rhs</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">dat</span><span class="o">.</span><span class="n">rhs</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="n">dat</span><span class="o">.</span><span class="n">rhs</span>
 </pre></div>
 
 </div>
@@ -1777,7 +1774,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can also solve higher order differential equations. For example, the following can be used to model the position of a mass on a spring:</p>
+<p>Gallwn ddatrys hafaliadau differol o radd uwch. Er enghraifft, defnyddir yr hafaliad canlynol i fodelu lleoliad rhyw fàs ar linyn:</p>
 <p>$$
     m\frac{d^2x}{dt^2} + c\frac{dx}{dt} + kx = 0
 $$</p>
@@ -1824,7 +1821,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can solve systems of differential equations like the following:</p>
+<p>Gallwn ddatrys system o hafaliadau differol fel y rhain:</p>
 <p>$$
     \begin{aligned}
         \frac{dx}{dt} &amp; = 1-y\\
@@ -1874,7 +1871,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The solution is given as:</p>
+<p>Rhoddir y datrysiad:</p>
 <p>$$
     \begin{align}
         x(t) &amp; =-C_1e^{-t}-C_2e^{t} + 1\\
@@ -1889,7 +1886,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="6.-Displaying-output-using-$\LaTeX$">6. Displaying output using $\LaTeX$<a class="anchor-link" href="#6.-Displaying-output-using-$\LaTeX$">&#182;</a></h3><p>We can make use of $\LaTeX$ to display the output of Sympy in a human friendly way:</p>
+<h3 id="6.-Dangos-allbynnau-gyda-$\LaTeX$">6. Dangos allbynnau gyda $\LaTeX$<a class="anchor-link" href="#6.-Dangos-allbynnau-gyda-$\LaTeX$">&#182;</a></h3><p>Gallwn ddefnyddio $\LaTeX$ i dangos allbwn Sympy mewn ffordd sy'n haws i bobl darllen:</p>
 
 </div>
 </div>
@@ -1934,7 +1931,7 @@ $$x{\left (t \right )} = C_{1} e^{\frac{t}{2 m} \left(- c - \sqrt{c^{2} - 4 k m}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>On some occasions it might be helpful to be able to turn this off (for example if we wanted to copy and paste the output):</p>
+<p>Weithiau mae'n ddefnyddiol diffodd hwn (er enghraifft os oeddwn angen copïo a gludo allbwn):</p>
 
 </div>
 </div>
@@ -1980,15 +1977,14 @@ $$x{\left (t \right )} = C_{1} e^{\frac{t}{2 m} \left(- c - \sqrt{c^{2} - 4 k m}
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">&#182;</a></h2><p>Here are a number of exercises that are possible to carry out using Sympy:</p>
+<h2 id="Ymarferion">Ymarferion<a class="anchor-link" href="#Ymarferion">&#182;</a></h2><p>Dyma nifer o ymarferion sy'n bosib cwblhau trwy ddefnyddio Sympy:</p>
 <ul>
-<li>Using exact arithmetic;</li>
-<li>Algebraic manipulation of symbolic variables;</li>
-<li>Limits, differentiation and integration;</li>
-<li>Solving differential equations.</li>
+<li>Defnyddio rhifyddeg union;</li>
+<li>Trin newidynnau symbolaidd yn algebraidd;</li>
+<li>Terfannau, differu ac integru;</li>
+<li>Datrys hafaliadau differol.</li>
 </ul>
-<h3 id="Exercise-1.">Exercise 1.<a class="anchor-link" href="#Exercise-1.">&#182;</a></h3><p>Use SymPy to write the first $10^3$ prime numbers to file. Compare this
-file to <code>primes.csv</code> (<a href="/cfm/nbs/chapters/primes.csv">download</a>) (not by hand!) and check that it is the same.</p>
+<h3 id="Ymarfer-1.">Ymarfer 1.<a class="anchor-link" href="#Ymarfer-1.">&#182;</a></h3><p>Defnyddiwch SymPy i ysgrifennu'r $10^3$ rhif cysefin cyntaf i ffeil. Cymharwch hwn i'r ffeil <code>cysefin.csv</code> (<a href="/cfm/nbs/cy/chapters/cysefin.csv">lawrlwytho</a>) (nid gyda llaw!) a gwirio os yw'n unfath.</p>
 
 </div>
 </div>
@@ -1997,13 +1993,12 @@ file to <code>primes.csv</code> (<a href="/cfm/nbs/chapters/primes.csv">download
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise-2.">Exercise 2.<a class="anchor-link" href="#Exercise-2.">&#182;</a></h3><p>Use Sympy's <code>simplify</code> method (and other things) to verify the follow trigonometric identities:</p>
+<h3 id="Ymarfer-2.">Ymarfer 2.<a class="anchor-link" href="#Ymarfer-2.">&#182;</a></h3><p>Defnyddiwch ddull <code>simplify</code> Sympy (ar y cyd gyda phethau eraill) i wirio'r unfathiannau trigonometrig canlynol:</p>
 <ol>
 <li>$\sin^2(\theta) + \cos^2(\theta) = 1$</li>
 <li>$2\cos(\theta) \sin(\theta) = \sin(2\theta)$</li>
 <li>$(1 - \cos(\theta)) / 2 = \sin^2(\theta / 2)$</li>
-<li>$\cos(n\pi)=(-1) ^ n$ (for $n\in\mathbb{Z}$ (Hint: you will need to
-look in to options that can be passed to <code>symbols</code> for this)</li>
+<li>$\cos(n\pi)=(-1) ^ n$ (for $n\in\mathbb{Z}$) (Awgrym: bydd angen i chi edrych ar yr opsiynau gallwch basio i <code>symbols</code> er mwyn gwneud hwn)</li>
 </ol>
 
 </div>
@@ -2013,14 +2008,14 @@ look in to options that can be passed to <code>symbols</code> for this)</li>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise-3.">Exercise 3.<a class="anchor-link" href="#Exercise-3.">&#182;</a></h3><p>The point of this question is to investigate the definition of a derivative:</p>
+<h3 id="Ymarfer-3.">Ymarfer 3.<a class="anchor-link" href="#Ymarfer-3.">&#182;</a></h3><p>Nod y cwestiwn yma yw archwilio i mewn i ddiffiniad y deilliad:</p>
 <p>$$
     \frac{df}{dx}=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}
 $$</p>
 <ol>
-<li>Consider $f(x) = x^3 + 3x - 20$;</li>
-<li>Compute $\frac{f(x+h)-f(x)}{h}$;</li>
-<li>Compute the above limit as $h\to 0$ and verify that this is the derivative of $f$.</li>
+<li>Ystyriwch $f(x) = x^3 + 3x - 20$;</li>
+<li>Cyfrifwch $\frac{f(x+h)-f(x)}{h}$;</li>
+<li>Cyfrifwch y terfan uchod wrth i $h\to 0$ a gwirio taw hwn yw deilliad $f$.</li>
 </ol>
 
 </div>
@@ -2030,7 +2025,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise-4.">Exercise 4.<a class="anchor-link" href="#Exercise-4.">&#182;</a></h3><p>Find the general solutions to the following 4 differential equations:</p>
+<h3 id="Ymarfer-4.">Ymarfer 4.<a class="anchor-link" href="#Ymarfer-4.">&#182;</a></h3><p>Canfyddwch ddatrysiad cyffredinol y 4 hafaliad differol:</p>
 <ol>
 <li>$\frac{dy}{dx}-6y=3e^x$</li>
 <li>$\frac{dy}{dx}+\frac{x(2x-3)}{x^2+1}=\sin(x)$</li>
@@ -2045,14 +2040,14 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise-5.">Exercise 5.<a class="anchor-link" href="#Exercise-5.">&#182;</a></h3><p>A battle between two armies can be modelled with the following set of differential equations:</p>
+<h3 id="Ymarfer5.">Ymarfer5.<a class="anchor-link" href="#Ymarfer5.">&#182;</a></h3><p>Gallwn fodelu brwydr rhwng dwy fyddin gyda'r set o hafaliadau differol canlynol:</p>
 <p>$$
    \begin{cases}
      \frac{dx}{dt} = - y\\
      \frac{dy}{dt} = -5x
    \end{cases}
 $$</p>
-<p>Obtain the solution to this system of equations.</p>
+<p>Canfyddwch ddatrysiad i'r system yma o hafaliadau.</p>
 
 </div>
 </div>
@@ -2062,9 +2057,9 @@ $$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="Further-resources">Further resources<a class="anchor-link" href="#Further-resources">&#182;</a></h2><ul>
-<li><a href="https://www.scipy-lectures.org/packages/sympy.html">Sympy lecture scipy-lecture notes</a></li>
-<li><a href="https://docs.sympy.org/dev/modules/solvers/ode.html">Sympy documentation for differential equations</a></li>
+<h2 id="Adnoddau-pellach">Adnoddau pellach<a class="anchor-link" href="#Adnoddau-pellach">&#182;</a></h2><ul>
+<li><a href="https://www.scipy-lectures.org/packages/sympy.html">Nodiaday darlith scipy-lecture ar Sympy</a></li>
+<li><a href="https://docs.sympy.org/dev/modules/solvers/ode.html">Dogfennaeth Sympy ar hafaliadau differol</a></li>
 </ul>
 
 </div>
@@ -2075,10 +2070,10 @@ $$</p>
 
 
     
-        <a href="../04/">Previous</a>
+        <a href="../../04/cy/">Blaenorol</a>
     
     
-        <p align="right"><a href="../06/">Next</a></p>
+        <p align="right"><a href="../../06/cy/">Nesaf</a></p>
     
 
     </div>
@@ -2086,14 +2081,16 @@ $$</p>
     <div class="container">
         <center>
             <p style="font-size: small;">
-            Source code:
+            Ffynhonnell cod:
             <a href="https://github.com/drvinceknight/cfm">@drvinceknight</a>
-            Powered by:
+            Wedi'i greu gan:
                 <a href="https://www.python.org/">Python</a>
                 <a href="http://jupyter.org/">Jupyter</a>
                 <a href="https://www.mathjax.org/">Mathjax</a>
                 <a href="https://pages.github.com/">Github pages</a>
                 <a href="http://getskeleton.com/">Skeleton css</a>
+            Cyfieithiad gan:
+                <a href="http://www.geraintianpalmer.org.uk">Geraint Palmer</a>
             </p>
         </center>
     </div>
