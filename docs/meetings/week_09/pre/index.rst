@@ -13,8 +13,12 @@ reminder/revision of what was discussed during Library session.
 
 **Writing mathematics**
 
-Ask students to spend 5 minutes reading
-`<../../../../assets/pdf/writing-mathematics-guidelines/main.pdf>`_.
+Ask students to spend 5 minutes reading :download:`Some Guidelines for Good
+Mathematical Writing
+<../../../../assets/pdf/writing-mathematics-guidelines/main.pdf>`. A welsh
+language version is available too: :download:`Rhai Canllawiau ar Gyfer
+Ysgrifennu Mathemategol Da
+<../../../../assets/pdf/writing-mathematics-guidelines/cy/main.pdf>`
 
 Spend 5 minutes in groups discussing principles of mathematical writing.
 

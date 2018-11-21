@@ -1,0 +1,319 @@
+\documentclass{article}
+
+\usepackage{fullpage}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{parskip}
+
+\title{Rhai Canllawiau ar Gyfer Ysgrifennu Mathemategol Da}
+\author{Francis Edward Su\\\small{Cyfieithu gan Geraint Palmer}}
+\date{}
+
+\renewcommand\familydefault{\sfdefault}
+
+\begin{document}
+
+\maketitle
+
+\begin{multicols}{2}
+
+Mae cyfathrebu mathemateg yn dda yn rhan bwysig o wneud mathemateg.
+Fel mae nifer ohonom yn gwybod o ysgrifennu papurau neu'n rhoi cyflwyniadau, nid
+yn unig yw cyfathrebu'n effeithiol yn helpu'r gynulleidfa, ond mae hefyd yn
+egluro a strwythuro meddwl ein hunain.
+Mae yna ceinder a chelf i ysgrifennu da y dylai pob awdur anelu ato.
+
+Fan hyn, rydw i'n rhannu'r cyngor rydw i'n rhoi i'm myfyrwyr i i'w helpu nhw
+ysgrifennu.
+Mae adnoddau mwy eang (e.e. gweler ``How to Write Mathematics'' gan Paul
+Halmos), ond hoffwn roi cyflwyniad byr.
+Felly datblygais y canllawiau isod.
+
+\section*{Sylfeini}
+
+\textbf{Adnabod eich cynulleidfa.}
+Hwn yw'r ystyriaeth fwyaf pwysig ar gyfer awduron.
+Rhowch eich hunain o fewn esgidiau eich darllenwyr.
+Pa gefndir gallwn dybio bod ganddynt?
+Pa derminoleg sydd angen i ni ddiffinio?
+Pa fath o ``lais'' ydych chi eisiau taflu: ffurfiol neu'n anffurfiol, difrifol
+neu'n ddeniadol, cryno neu'n siaradus?
+
+Os ydych chi'n fyfyriwr yn ysgrifennu datrysiadau ar gyfer gwaith cartref a
+rhoddir gan athro sydd heb nodi pwy yw'r gynulleidfa, rheol dda yw tybio eich
+bod yn ysgrifennu ar gyfer myfyriwr arall ar y cwrs sydd heb wneud yr aseiniad.
+Er gallwch dybio eu bod wedi mynychu'r un darlithoedd a darllen yr un gwerslyfr
+a chi, mae'n fater o gwrteisi i atgoffa'ch darllenwyr o unrhyw eitemau
+perthnasol rydych wedi dysgu'n ddiweddar yn y dosbarth neu yn y gwerslyfr, neu
+bethau efallai maent wedi anghofio.
+
+Er enghraifft, os oedd cysyniad rhif cymarebol wedi'i dysgu'n ddiweddar, efallai
+byddwch yn ychwanegu ``Cofiwch gall ysgrifennu rhif cymarebol fel ffracsiwn'',
+cyn dweud ``gan fod $x$ yn gymarebol, $x = m/n$ lle mae $m$ ac $n$ yn
+gyfanrifau.''
+
+\vspace{4mm}
+
+\textbf{Gosod t\^{o}n gwahoddiol.}
+Mae'r traddodiadol i greu awyrgylch gwahoddiol o fewn ysgrifennu mathemategol.
+Mewn effaith, rydym yn gwahodd darllenwyr i ymuno a'n broses resymeg trwy
+ysgrifennu yn yr amser presennol, trwy ddefnyddio'r rhagenw ``ni'' yn lle ``fi''
+(e.e. ``rydym yn adeiladau pl\^{a}n tangiadol...''), a trwy gyfarwyddo'r
+darllenwyr gyda gorchmynion ysgafn (e.e. ``gadewch i $n$...'', ``cofiwch
+fod...'', neu ``ystyriwch y set o...'').
+
+\vspace{4mm}
+
+\textbf{Defnyddiwch frawddegau llawn.}
+Dyle pob darn o fathemateg cael eu hysgrifennu mewn brawddegau.
+Agorwch unrhyw werslyfr mathemateg a gwelwch fod hwn yn wir.
+Mae gan hafaliadau, hyd yn oed rhai arddangosiedig, atalnodi sy'n helpu ni gweld
+ble maent yn ffitio mewn i gyd-destun brawddegau mwy.
+Ystyriwch y darn o ysgrifennu canlynol:
+
+\begin{align*}
+(x - 2)^2 + (x - 1)^2 &= 5^2 5^2 = 25\\
+(x - 2)^2 = x^2 - 4x + 4 &+ x^2 - 2x + 1 = 25.\\
+2x^2 - 6x &- 20\\
+2(x + 2)(x - 5)x = &-2, 5 \quad x > 0 \quad x = 5
+\end{align*}
+
+Allwch chi weithio allan beth mae'r awdur yn gwneud?
+Beth sydd wedi cael eu tybio?
+Beth sy'n cael eu profi?
+Ble mae un syniad yn gorffen ac un arall yn dechrau?
+Beth yw'r perthynas rhwng yr ymadroddion?
+Mae rhai ymadroddion yn anghyflawn, ac nid yw rhai yn wir hyd yn oed.
+Ni ddylai'r darllenwr gorfod gweithio allan beth oedd yr awdur yn meddwl.
+
+Nawr ystyriwch waith awdur arall yn ceisio'r un broblem:
+
+\setlength{\leftskip}{0.7cm}
+
+\textbf{Problem.} Canfyddwch bwynt ar y llinell $y = x$ sy'n bellter 5 o'r pwynt
+(2, 1) ac mae ei chyfesuryn-$x$ yn bositif.
+
+\textbf{Datrysiad.} Y pwynt dymunol yw (5, 5).
+I weld hwn, rydym yn datrys $(x - 2)^2 + (x - 1)^2 = 5^2$, hafaliad a gafwyd o'r
+fformiwla pellter yn y pl\^{a}n.
+Mae bach o algebra yn troi'r hafaliad yma i mewn i:
+
+\begin{equation*}
+2x^2 - 6x - 20 = 0.
+\end{equation*}
+
+Yn ffactoreiddio'r ochr chwith, cawn
+
+\begin{equation*}
+2(x + 2)(x - 5) = 0,
+\end{equation*}
+
+a'i datrysiadau yw $x = -2$ ac $x = 5$.
+Oherwydd tybion ni fod $x > 0$, cawn (5, 5) fel y pwynt dymunol ar y llinell
+$y = x$.
+
+\setlength{\leftskip}{0pt}
+
+Fan hyn mae'r awdur wedi nodi'r broblem yn glir ac wedi disgrifio'i llwybr i'w
+datrysiad.
+Mae wedi gosod t\^{o}n gwahoddiol, ac mae pob syniad wedi'i mynegi mewn
+brawddegau llawn.
+Mae'n glir bod $x > 0$ yn amod, nid yn ganlyniad.
+Sylwch ar ei atalnodi yn ei hafaliadau: fe wnaeth un bennu gydag atalnod llawn
+gan fod ei syniad yn gyflawn, ac fe wnaeth un arall bennu gydag atalnod oherwydd
+roedd hi eisiau parhau gyda'r syniad.
+
+Oherwydd tybiodd hi fod ei chynulleidfa yn gallu gwneud algebra, ni ddiflasodd
+hi nhw gyda'r driniaeth algebra, a fydd yn cuddio llif y ddadleuon.
+Ond fe wnaeth hi dangos y darn hanfodol a'r darn fwyaf diddorol: y ffactoreiddio
+a'r canlyniad.
+A sicrhaodd ei bod wedi ateb y cwestiwn gwreiddiol.
+
+\vspace{4mm}
+
+\textbf{Defnyddiwch eiriau i roi cyd-destun i hafaliadau.}
+Ystyriwch y gwahaniaeth ystyr rhwng y tri datganiad: ``Gadawer i $A = 5$'',
+``Tybiwch fod $A = 5$'', ac ``Felly mae $A = 5$''.
+Yna meddyliwch am ba mor amwys yw'r datganiad ``$A = 5$''.
+
+\vspace{4mm}
+
+\textbf{Osgoi llaw-fer mewn ysgrifennu ffurfiol.}
+Mae nifer fawr o fathau o ysgrifennu mathemategol, a gallwn ei grwpio yn fras i
+mewn i ysgrifennu ffurfiol ac anffurfiol.
+Mae ysgrifennu anffurfiol yn cynnwys ysgrifennu ar fwrdd du yn ystod darlith,
+neu esbonio rhywbeth i ffrind ar ddarn o bapur sgrap.
+Mae ysgrifennu ffurfiol yn cynnwys y math o ysgrifennu a ddisgwylir am
+aseiniadau gwaith cartref, neu mewn papur academaidd.
+Mae gwahaniaethau o ran beth sy'n dderbyniol.
+Er enghraifft mewn ysgrifennu anffurfiol mae'n gyffredin iawn i ddefnyddio
+llaw-fer ar gyfer meintiolwyr a goblygiadau: symbolau megis $\forall$,
+$\exists$, $\Rightarrow$, $\Leftrightarrow$, neu fyrfoddau megis ``iff'' a
+``s.t.''.
+Ond, mewn ysgrifennu ffurfiol, dylen osgoi llaw-fer fel hyn yn gyffredinol.
+Dylen ysgrifennu allan ``ar gyfer pob'', ``bodoler'', ``yn awgrymu'', ``os ac yn
+unig os'', ac ``fel bod''.
+
+Mae rhan fwyaf o symbolau eraill yn dderbyniol mewn ysgrifennu ffurfiol, ar
+\^{o}l eu diffinio lle mae angen.
+Mae'r symbol aelodaeth $\in$ yn draddodiadol yn dderbyniol mewn ysgrifennu
+ffurfiol, yn ogystal \^{a} pherthnasau (e.e. $<$, $+$, $\cup$, ayyb.), enwau
+newidynnau (e.e. $x$, $y$, $z$), a symbolau ar gyfer setiau (e.e. $\mathbb{R}$).
+Dyma ddefnydd derbyniol symbolau mewn ysgrifennu mathemategol ffurfiol:
+
+\setlength{\leftskip}{0.7cm}
+
+Gadawer i $A$ a $B$ bod yn is-setiau o $\mathbb{R}$.
+Dywedwn fod $A$ \textit{yn dominyddu} $B$ os ar gyfer pob $x \in A$ bodoler
+$y \in B$ fel bod $y > x$.
+
+\setlength{\leftskip}{0pt}
+
+\vspace{4mm}
+
+\textbf{Dysgwch yr arferion.}
+Mae'r enghraifft uchod hefyd yn dangos dau gonfensiwn cyffredin arferion
+mathemategol.
+Mae'r arferol peidio dechrau brawddegau neu ymadroddion gyda rhif neu symbol
+oherwydd gall hyn fod yn ddryslyd.
+Mae hefyd yn arferol i bwysleisio geiriau anghyfarwydd y rydym ar fin diffinio,
+er enghraifft trwy ei rhoi yn italig.
+Gall dysgu arferion eraill trwy arsylwi ar y normau a ddefnyddiwyd yn eich maes
+astudiaeth.
+
+
+\section*{Tuag at ceinder}
+
+\textbf{Penderfynwch beth sy'n bwysig i'w ddweud.}
+Nid yw ysgrifennu'n dda yn angenrheidiol yn golygu ysgrifennu mwy.
+Os yw eich datrysiad yn rhy eiriol, gall hwn weithiau cuddio'r pwyntiau rydych
+yn ceisio i'w gwneud.
+
+Mae datrysiad sydd wedi'i ysgrifennu'n dda yn cyflwyno jyst digon o fanylion a'r
+darnau mwyaf diddorol y ddadl.
+Pa theoremau neu acsiomau oedd yn hanfodol wrth gael eich datrysiad, a phryd a
+ble y defnyddiwyd?
+Nid eich prif r\^{o}l chi fel awdur yw rhoi manylion (er bod hynny'n bwysig
+iawn).
+Eich prif r\^{o}l chi yw rhoi mewnwelediad.
+
+\vspace{4mm}
+
+\textbf{Uwcholeuwch strwythur.}
+Os yw eich dadl yn un hir, gyda nifer mawr o fanylion technegol, yna helpwch
+eich darllenwyr trwy grynhoi amlinelliad eich dadl ar y dechrau.
+Yna, trwy gydol yr ysgrifennu, helpwch eich darllenwyr gweld sut ydych yn symud
+ymlaen trwy'r amlinelliad hynny.
+
+\vspace{4mm}
+
+\textbf{Defnyddiwch baragraffau i bwysleisio blociau o syniadau sy'n perthyn.}
+Mae swydd y frawddeg gyntaf mewn paragraff yn hollbwysig: dychmygwch ddarllenwr
+yn sgimio dros eich ysgrifennu, ond yn darllen y brawddegau cyntaf.
+A fyddai'n gallu dilyn llif y ddadl?
+Yn debyg, efallai byddwch ond eisiau dangos yr hafaliadau mwyaf pwysig.
+Mae amnewid rhyw ddadl sy'n cael ei ailadrodd tro ac \^{o}l tro gyda lema da yn
+gallu symleiddio'r llif yn ogystal \^{a} uwcholeuo syniad allweddol.
+
+\vspace{4mm}
+
+\textbf{Dewiswch enghreifftiau da.}
+Fe ellir gwneud rhyw syniad anodd yn haws i'w ddeall os rhoddir enghraifft ochr
+yn ochr efo.
+Dewiswch un enghraifft digon syml i'w ddilyn, ond sy'n ddigon diddorol i gadw'r
+nodweddion pwysig.
+Gall prawf o rhyw syniad cyffredinol dod cyn rhyw enghraifft sy'n ei defnydddio
+mewn cyd-destun penodol.
+Gallwn wella rhyw amlygiad hir trwy ddefnyddio enghraifft barhaol - un lle
+defnyddir yr un enghraifft mewn nifer o gyd-destunau.
+
+\vspace{4mm}
+
+\textbf{Osgoi ysgadan sych!}
+\textit{Gadewch allan unrhyw fanylion nad oes ganddynt unrhyw bwys i ddatrysiad
+y broblem, oherwydd gallant gamarwain y darllenydd.}
+Er enghraifft, os dywedwn ``gallwn fynegi'r rhif cymarebol $r$ fel $m/n$ lle nad
+oes gan $m$ ac $n$ unrhyw ffactorau cyffredin'', rydych yn gadael cliw y byddwch
+yn defnyddio'r syniad nad oes ``unrhyw ffactorau cyffredin'' nes ymlaen.
+Felly os nad ydych yn defnyddio'r ffaith yma, ni ddylech ei ddweud.
+Mae'n amherthnasol.
+Efallai bod ysgadan sych gwneud nofelau dirgelwch yn hwyl, ond mewn ysgrifennu
+mathemategol eich g\^{o}l yw cael gwared a'r dirgelwch!
+
+
+\vspace{4mm}
+
+\textbf{Cymerwch gam yn \^{o}l a symleiddiwch.}
+Ar \^{o}l ysgrifennu prawf, cymerwch gam yn \^{o}l a gofynnwch:
+Sut allaf i symleiddio'r ddadl yma?
+A ddefnyddiais i bob offeryn yma i ddatrys y broblem?
+A allaf i symleiddio'r ddadl?
+Er enghraifft, ystyriwch y prawf trwy wrthddywediad canlynol:
+
+\setlength{\leftskip}{0.7cm}
+
+\textbf{Problem.}
+Dangoswch os yw 4 yn rhannu cyfanrif $n$, yna mae $n$ yn eilrif.
+
+\textit{Prawf.}
+Tybiwch nad yw $n$ yn eilrif.
+Gan fod 4 yn rhannu ag $n$, mae gennym $n = 4k$ ar gyfer rhyw gyfanrif $k$.
+Felly $n = 2(2k)$, sy'n eilrif.
+Mae hwn yn gwrthddweud ein damcaniaeth gwreiddiol nad yw $n$ yn eilrif. QED.
+
+\setlength{\leftskip}{0pt}
+
+A welwch pam nad yw hwn wir yn brawf trwy wrthddywediad?
+Ni ddefnyddiwyd y damcaniaeth anghyson gwreiddiol!
+Tynnwch i ffwrdd y frawddeg gyntaf a'r frawddeg olaf, ac mae gennym brawf
+uniongyrchol, cain.
+
+\vspace{4mm}
+
+\textbf{Mireiniwch, mireiniwch, mireiniwch.}
+Mae ysgrifennu da yn broses o frasamcanion olynol.
+Ni ddylech chi ddisgwyl i'ch drafft cyntaf fod yn berffaith.
+Wrth i chi adolygu'ch ysgrifennu byddwch yn gweld ffyrdd o grynhoi dadl neu i'w
+ddweud mewn ffordd well.
+Dyma'r rhan o'r broses ysgrifennu a fydd yn helpu chi egluro'ch meddwl eich
+hunain hefyd.
+
+Fel arfer, ar \^{o}l cwblhau drafft, bydd awdur yn sylwi ar ryw ddewis mewn
+nodiant neu ddiffiniad nad yw'n gorau bosibl.
+Bydd awdur diog yn gadael pethau fel y mae, ond bydd awdur meddylgar yn cymryd
+amser i fynd n\^{o}l a gwneud newidiadau.
+
+\vspace{4mm}
+
+\textbf{Arsylwch ar y diwylliant.}
+Nid yw cyfathrebu da yn arwahanol i'r diwylliant lle mae'n digwydd.
+Efallai bod y sylweddiad yma yn anghyfforddus i fathemategwyr buddiol, sydd wedi
+denu i natur resymegol ac absoliwt mathemateg.
+Ond mae hyd yn oed yr absoliwtau yma wedi'i mynegi'n wahanol mewn oesoedd
+gwahanol, cymharwch ysgrifennu Newton i werslyfrau calcwlws heddiw.
+Mae rheolau arferion mathemateg wedi esblygu.
+
+Er bod y canllawiau yma yn ceisio uwcholeuo egwyddorion ysgrifennu ffurfiol, mae
+trwy'r amser eithriadau - gan fod gan rhai meysydd mathemategol normau
+gwahanol i'w gilydd.
+Y ffordd gorau i gael teimlad o beth sy'n dderbyniol yn eich cyd-destun chi yw
+pori dros nifer o destunau uchel eu parch neu bapurau sy'n gysylltiedig \^{a}'r
+ddogfen rydych yn ysgrifennu.
+
+\vspace{4mm}
+
+\textbf{Mwynhewch ysgrifennu.}
+Mae ysgrifennu yn amser i adlewyrchu ar syniadau prydferth a'i beintio ar canfas
+gyda gofal artistig manwl.
+
+\vspace{4mm}
+
+\textbf{Cydnabyddiadau.}
+Mae'n bwysig adnabyddi'r cymorth rydych wedi derbyn.
+Mae fy adolygiadau o canllawiau yma wedi buddio o'r adborth defnyddiol gan Jon
+Jacobsen a Lesley Ward.
+
+\end{multicols}
+\end{document}
