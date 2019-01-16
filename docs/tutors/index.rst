@@ -27,3 +27,13 @@ Guidance
   criteria etc...).
 - Make an effort to ensure you are fair and not advantaging a given student.
 - Aim to be encouraging and enthusiastic.
+
+FAQ
+---
+
+It is possible that some students might not have the same version of the library
+as used in the notes. This is unlikely to be the source of bugs (as they are
+likely to have versions of the library that are backwards compatible) but you
+can compare the version they are using (for example by running:
+:code:`np.__version__`) to the list of libraries available here:
+https://github.com/drvinceknight/cfm/blob/master/environment.yml
