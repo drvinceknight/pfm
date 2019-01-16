@@ -41,7 +41,8 @@
 </head>
 
    
-   
+  <link rel="stylesheet" href="/cfm/assets/css/notebook.css">
+
 
     <!-- Google Analytics -->
     <script>
@@ -89,64 +90,114 @@
 
     <div class="container">
         
-    <center>
-        <h5>
-            An undergraduate course introducing programming, through Python, to mathematicians.
-        </h5>
-    </center>
+    
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Using-nbtutor">Using nbtutor<a class="anchor-link" href="#Using-nbtutor">&#182;</a></h2><p>In class at times you might see me use a Jupyter extension called <code>nbtutor</code> to help visualise what is happening.</p>
+<p>If you would like to use <code>nbtutor</code> yourself you need to install it.</p>
+<h3 id="Installing-nbtutor">Installing nbtutor<a class="anchor-link" href="#Installing-nbtutor">&#182;</a></h3><p>To do this:</p>
+<ul>
+<li>On Windows open <strong>Anaconda prompt</strong></li>
+<li>On Mac OSX open <strong>terminal</strong></li>
+</ul>
+<p>type the following:</p>
+<p><code>pip install nbtutor</code></p>
+<p>press <code>Enter</code> and it should download.</p>
+<h3 id="Using-nbtutor">Using nbtutor<a class="anchor-link" href="#Using-nbtutor">&#182;</a></h3><p>In Jupyter, include the following in a cell to load <code>nbtutor</code>: <code>%load_ext nbtutor</code></p>
 
-    <h1>Chapters</h1>
-      <ol start=0>
-          
-              <li><a href=/cfm/chapters/00/>Introduction to the course</a>
-                  (<a href=/cfm/nbs/chapters/00-Introduction-to-the-course.ipynb>ipynb</a>)</li>
-          
-              <li><a href=/cfm/chapters/01/>Variables Conditional Statements and Loops</a>
-                  (<a href=/cfm/nbs/chapters/01-Variables-Conditional-Statements-and-Loops.ipynb>ipynb</a>)</li>
-          
-              <li><a href=/cfm/chapters/02/>Functions and data structures</a>
-                  (<a href=/cfm/nbs/chapters/02-Functions-and-data-structures.ipynb>ipynb</a>)</li>
-          
-              <li><a href=/cfm/chapters/03/>Writing to files and recursion</a>
-                  (<a href=/cfm/nbs/chapters/03-Writing-to-files-and-recursion.ipynb>ipynb</a>)</li>
-          
-              <li><a href=/cfm/chapters/04/>Object oriented programming</a>
-                  (<a href=/cfm/nbs/chapters/04-Object-oriented-programming.ipynb>ipynb</a>)</li>
-          
-              <li><a href=/cfm/chapters/05/>Symbolic mathematics with sympy</a>
-                  (<a href=/cfm/nbs/chapters/05-Symbolic-mathematics-with-sympy.ipynb>ipynb</a>)</li>
-          
-              <li><a href=/cfm/chapters/06/>Scientific libraries</a>
-                  (<a href=/cfm/nbs/chapters/06-Scientific-libraries.ipynb>ipynb</a>)</li>
-          
-      </ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> nbtutor
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Then to use it in any given cell type: <code>%%nbtutor</code>. Here is an example:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">nbtutor</span>
+
+cumulative_sum = 0
+for i in range(10):
+    cumulative_sum += i
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
 
 
-    <h1>Other materials</h1>
+<div class="output_area">
 
-        <ul>
-          <li>
-               <a href=/cfm/other/assessment/>Assessment</a>
-          </li>
-          <li>
-               <a href=/tex/>\(LaTeX\)</a>
-          </li>
-          <li>
-              <a href=/cfm/assets/pdf/writing-mathematics-guidelines/main.pdf>Mathematical writing guidelines</a>
-          </li>
-          <li>
-               <a href=https://vkcfm.readthedocs.io/en/latest/>Course documentation</a>
-          </li>
-          <li>
-               <a href=/tch-phi/>Teaching philosophy</a>
-          </li>
-          <li>
-              <a href=/cfm/other/using-nbtutor/>Using nbtutor</a>
-          </li>
-          <li>
-              <a href=/cfm/cy/>Welsh language version of this course</a>
-          </li>
-        </ul>
+<div class="prompt"></div>
+
+
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This will display an interactive environment that looks like the following picture:</p>
+<p><img src="/cfm/assets/img/using-nbtutor.png" alt=""></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can click on <code>next</code> to step through the code whilst visualising what it is doing, you can also change the dropdown box from <code>Memory</code> to <code>Timeline</code>.</p>
+<ul>
+<li><code>Memory</code>: shows what Python has in memory and what pointers are being used at any given point in time;</li>
+<li><code>Timeline</code>: shows the various objects over time.</li>
+</ul>
+<p>If you would like to read the documentation for <code>nbtutor</code> you can find it here: <a href="https://nbtutor.readthedocs.io/en/">https://nbtutor.readthedocs.io/en/</a></p>
+
+</div>
+</div>
+</div>
+ 
+
+
+
+    
+        <a href="../assessment/">Previous</a>
+    
+    
+        <p align="right"><a href="../assessment/">Next</a></p>
+    
 
     </div>
 

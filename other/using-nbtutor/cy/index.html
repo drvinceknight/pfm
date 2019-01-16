@@ -95,39 +95,80 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Aseiniad">Aseiniad<a class="anchor-link" href="#Aseiniad">&#182;</a></h2><p>Dyddiad cau: I'w drafod yn y dosbarth.</p>
-<p>Ysgrifennwch bapur ymchwil tair tudalen ar bwnc mathemategol. Rhaid ysgrifennu'r adroddiad yn LaTeX a rhaid defnyddio agweddau rhaglenni (Python) i dangos y pwnc penodol.</p>
-<p>Anogir i chi dewis eich pwnc eich hunain, os ydych chi yn gwneud hwn argymhellir i chi gwirio gyda fi (Vince Knight) bod y pwnc yn briodol.</p>
-<h2 id="Meini-prawf-marcio">Meini prawf marcio<a class="anchor-link" href="#Meini-prawf-marcio">&#182;</a></h2><p>Defnyddir y cynllun marcio canlynol:</p>
+<h2 id="Defnyddio-nbtutor">Defnyddio nbtutor<a class="anchor-link" href="#Defnyddio-nbtutor">&#182;</a></h2><p>Weithiau yn y dosbarth byddwch yn fy ngweld yn defnyddio estyniad Jupyter o'r enw <code>nbtutor</code> i helpu delweddu beth sy'n digwydd.</p>
+<p>Os hoffwch chi ddefnyddio <code>nbtutor</code> eich hun mae angen ei osod.</p>
+<h3 id="Gosod-nbtutor">Gosod nbtutor<a class="anchor-link" href="#Gosod-nbtutor">&#182;</a></h3><p>I wneud hwn:</p>
 <ul>
-<li>Cod (50% o bwys)<ul>
-<li>50%: Defnyddiwyd cod priodol gyda'r cysyniadau a ddysgir yn y taflenni lab.</li>
-<li>70%: Defnyddiwyd cod o'r taflenni lab er mwyn dangos cysyniadau yn glir.</li>
-<li>90%: Mae'r cod a defnyddiwyd yn gyfuniad o'r cod a ddysgir yn y dosbarth a chod a archwiliwyd yn unigol. Defnyddir hwn i esbonio cysyniadau yn glir mewn ffordd wreiddiol.</li>
+<li>Ar Windows agorwch <strong>Anaconda prompt</strong></li>
+<li>Ar Mac OSX agorwch <strong>terminal</strong></li>
 </ul>
-</li>
-<li>Cynnwys (25% o bwys)<ul>
-<li>50%: Mae'r cynnwys yn gywir ac agweddau o'r pwnc wedi'u hesbonio.</li>
-<li>70%: Mae’r cynnwys yn gywir a chafodd bach o ymchwil ei wneud (wedi'i gyfeirio'n gywir) i dangos agweddau diddorol y pwnc.</li>
-<li>90%: Mae'r pwnc a ddewiswyd yn wreiddiol ac mae dealltwriaeth fawr wedi ei ddangos.</li>
+<p>teipiwch y canlynol:</p>
+<p><code>pip install nbtutor</code></p>
+<p>gwasgwch <code>Enter</code> ac fe ddylai lawrlwytho.</p>
+<h3 id="Defnyddio-nbtutor">Defnyddio nbtutor<a class="anchor-link" href="#Defnyddio-nbtutor">&#182;</a></h3><p>Yn Jupyter, rhowch y canlynol mewn cell i lwytho <code>nbtutor</code>: <code>%load_ext nbtutor</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> nbtutor
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Yna i'w ddefnyddio ar unrhyw gell: <code>%%nbtutor</code>. Dyma enghraifft:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">nbtutor</span>
+
+cumulative_sum = 0
+for i in range(10):
+    cumulative_sum += i
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Bydd hwn yn arddangos amgylchedd rhyngweithiol sy'n edrych fel y llun canlynol:</p>
+<p><img src="/cfm/assets/img/using-nbtutor.png" alt=""></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Gallwch chi glicio ar <code>next</code> i gamu trwy'r cod tra ei bod yn delweddu beth y mae'n ei wneud, gallwch hefyd newid y bocs opsiwn o <code>Memory</code> i <code>Timeline</code>.</p>
+<ul>
+<li><code>Memory</code>: yn dangos beth sydd gan Python yn ei chof a pa gyfeirgwn sydd gan Python yn ei chof a beth y mae'r cyfeirgwn hynny yn cyfeirio atynt ar y pryd;</li>
+<li><code>Timeline</code>: yn dangos yr amryw o wrthrychau dros amser.</li>
 </ul>
-</li>
-<li>Cyflwyniad (20% o bwys)<ul>
-<li>50%: Cafodd y gwaith ei ysgrifennu'n dda ond gyda bach neu dim  o gynnwys graffigol, ac mae hefyd yn cynnwys camgymeriadau sillafu a gramadeg.</li>
-<li>70%:  Cafodd y gwaith ei ysgrifennu'n dda gyda rhai graffiau a delweddau a man camgymeriadau sillafu a gramadeg.</li>
-<li>90%: Mae'r gwaith yn glir, yn fathemategol trylwyr gyda graffiau a delweddau o ansawdd gwych, a does dim camgymeriadau sillafu na gramadeg.</li>
-</ul>
-</li>
-<li>Gwaith lab (5%)<ul>
-<li>100%: Cyfraniad unigol o syniadau'r prosiect, datrys problemau, a thrafodaethau a chwestiynau o werth.</li>
-</ul>
-</li>
-</ul>
-<p><strong>Rhaid cynnwys holl god rydych eisiau cael ei ystyried am farciau o fewn y cyfyngiad 3 tudalen.</strong></p>
-<h2 id="Cyflwyno">Cyflwyno<a class="anchor-link" href="#Cyflwyno">&#182;</a></h2><p>I gyflwyno'r gwaith byddwch yn defnyddio learning central. Canfyddwch y modiwl “MA1003 Computing For Mathematics“, o fewn hwnna canfyddwch y ffolder “Assessment” ac yna'r eitem “Computing For Mathematics: Individual Coursework”. Yna cliciwch ar “View/Complete” a dilynwch y cyfarwyddiadau. Gweler  fideo yma sy’n dangos sut i gyflwyno'r gwaith: <a href="https://vimeo.com/114969438">https://vimeo.com/114969438</a>.</p>
-<p>Rydych yn cyflwyno'r pdf (nid y ffynhonnell LaTex neu unrhyw notebooks Jupyter).</p>
-<p>Byddwch yn cyflwyno’r gwaith yn y ffordd yma gan fod “Turnitin” yn gynnyrch a phrynwyd gan y Brifysgol sy'n gwirio am lên-ladrad.</p>
-<p>DYMA'CH UNIG SIAWNS I GYFLWYNO GWAITH: PEIDIWCH ADAEL Y CYFLWYNO NES Y MUNUD OLAF. OS NAD YDYCH YN CYFLWYNO BYDDWCH YN ENNILL MARC O 0.</p>
+<p>Os hoffwch ddarllen y ddogfennaeth ar gyfer <code>nbtutor</code> gallwch ei weld fan hyn: <a href="https://nbtutor.readthedocs.io/en/">https://nbtutor.readthedocs.io/en/</a></p>
 
 </div>
 </div>
@@ -137,10 +178,10 @@
 
 
     
-        <a href="../../using-nbtutor/cy/">Blaenorol</a>
+        <a href="../../assessment/cy/">Blaenorol</a>
     
     
-        <p align="right"><a href="../../using-nbtutor/cy/">Nesaf</a></p>
+        <p align="right"><a href="../../assessment/cy/">Nesaf</a></p>
     
 
     </div>

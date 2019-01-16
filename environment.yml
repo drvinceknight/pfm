@@ -133,5 +133,6 @@ dependencies:
     - coverage==4.5.1
     - nbval==0.9.0
     - tqdm==4.23.3
+    - nbtutor==1.0.4
 prefix: /home/vince/anaconda3/envs/cfm
 
