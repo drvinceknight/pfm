@@ -14,7 +14,8 @@ Email to students
 
 Send this to students in preparation (BCc tutors)::
 
-    Subject: Lab session goal: deciding on a programming strategy.
+    Subject: Lab session goal: deciding on a programming strategy + prep
+    references
 
     ---
 
@@ -31,6 +32,10 @@ Send this to students in preparation (BCc tutors)::
     have an idea of this before the lab session. The outcome of your
     conversation should be an agreed set of programming concepts to consider for
     your topic.
+
+    Your lab tutor will also remind you to identify at least 2 references
+    relevant to your topic choice and to bring these to the next class meeting
+    for discussion.
 
     Thanks,
     Vince
