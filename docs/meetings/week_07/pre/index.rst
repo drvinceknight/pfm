@@ -16,12 +16,18 @@ Monty Hall
 
 https://vknight.org/cfm/assets/rsc/monty-hall/main.pdf
 
+https://vknight.org/cfm/assets/rsc/monty-hall/cy/main.pdf
+
 Page Rank
 ---------
 
 https://vknight.org/cfm/assets/rsc/page-rank/main.pdf
 
+https://vknight.org/cfm/assets/rsc/page-rank/cy/main.pdf
+
 SIR Model
 ---------
 
 https://vknight.org/cfm/assets/rsc/sir/main.pdf
+
+https://vknight.org/cfm/assets/rsc/sir/cy/main.pdf
