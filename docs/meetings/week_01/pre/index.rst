@@ -83,6 +83,9 @@ on it.
 
 **As a group discuss hand in date.**
 
+Show some past feedback: :download:`past feedback
+<../../../../assets/pdf/past-feedback/2017-2018/main.pdf>`
+
 Finally, discuss the goal of this week which is just to install Jupyter.
 
 - Demo Jupyter on computer;
