@@ -78,6 +78,8 @@ Highlight the importance of personal work which ensures contact time is most use
 Discuss difficulty and being comfortable with being uncomfortable. Show and/or draw something like
 :download:`understanding <../../../_static/understanding/main.pdf>`
 
+Point at https://vknight.org/tch-phi/
+
 Discuss Assessment: explain that there is time at the end of the class to work
 on it.
 
