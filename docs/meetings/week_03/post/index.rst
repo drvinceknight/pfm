@@ -7,6 +7,10 @@ Discuss with students what we have seen this week:
 - For loops;
 - Functions.
 
+Ask students to go over the corresponding topics in the list of topics. With
+their neighbour discuss the expected output, the code itself and ask them to
+write their own examples.
+
 Small group exercises (**without a computer**) what does the following
 produce::
 

@@ -14,6 +14,10 @@ Start by highlighting that we have seen 3 things:
 - If statements;
 - While loops.
 
+Ask students to read the first few topics in the list of topics. With their
+neighbour discuss the expected output, the code itself and ask them to write
+their own examples.
+
 Explain that today we will go over exercise 4 and 5.
 
 Before doing that: show that this is going to be a very small modification of

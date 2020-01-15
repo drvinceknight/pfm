@@ -2,8 +2,14 @@
 Tests for main.py
 """
 import pathlib
+import sys
+
+import pytest
 
 import main
+
+if sys.platform.startswith("win"):
+    pytest.skip("skipping windows-only tests", allow_module_level=True)
 
 def test_get_id():
     path = pathlib.Path("./nbs/chapters/00-Introduction-to-the-course.ipynb")

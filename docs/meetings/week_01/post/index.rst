@@ -32,3 +32,6 @@ Give overview of Python as a programming language:
   - PyDiff
   - PyData
   - Old code club
+
+- Ask students to identify one of the topics on the list of topics document to
+  discuss as a group.

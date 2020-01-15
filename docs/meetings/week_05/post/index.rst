@@ -1,7 +1,10 @@
 Post: Reactive discussion + peer exercise
 =========================================
 
-Discuss briefly the need to work through tutorials.
+Ask students to go over the corresponding topics in the list of topics. With
+their neighbour discuss the expected output, the code itself and ask them to
+write their own examples.
+
 
 Go over solutions to Quadratic question.
 

@@ -1,0 +1,22 @@
+# Scientific libraries
+
+scipy
+numpy
+networkx
+matplotlib
+scikit-learn
+sympy
+pandas
+
+# Utility libraries
+
+nbtutor
+
+# Testing requirements
+
+pytest
+nbval
+jinja2
+tqdm
+jupyter
+pytest

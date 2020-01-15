@@ -83,7 +83,7 @@ We can find the roots of this derivative using Sympy's function called
 
     >>> poi = sym.solveset(der, x)  # Find the points of inflection
     >>> poi
-    {-2, 1 + sqrt(6)/2, -sqrt(6)/2 + 1}
+    FiniteSet(-2, 1 - sqrt(6)/2, 1 + sqrt(6)/2)
 
 
 Finally, we can take the second derivative and evaluate it at each point::
@@ -92,8 +92,8 @@ Finally, we can take the second derivative and evaluate it at each point::
     >>> for point in list(poi):  # We convert the poi to a list
     ...     print(point, (second_der.subs({x: point})) > 0)
     -2 False
+    1 - sqrt(6)/2 True
     1 + sqrt(6)/2 False
-    -sqrt(6)/2 + 1 True
 
 We see that 2 points of inflection give negative second derivative (so they are
 local maxima), whereas the other is a local minimum.

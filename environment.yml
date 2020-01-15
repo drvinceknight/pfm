@@ -130,5 +130,6 @@ dependencies:
     - nbval==0.9.0
     - tqdm==4.23.3
     - nbtutor==1.0.4
+    - pygame==1.9.6
 prefix: /home/vince/anaconda3/envs/cfm
 
