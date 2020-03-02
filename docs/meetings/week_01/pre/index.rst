@@ -96,7 +96,7 @@ on it.
 **As a group discuss hand in date.**
 
 Show some past feedback: :download:`past feedback
-<../../../../assets/fdb/2019/main.pdf>`
+<../../../../assets/fdb/2020/main.pdf>`
 
 Finally, discuss the goal of this week which is just to install Jupyter.
 
