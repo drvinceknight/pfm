@@ -1,22 +1,4 @@
-# Scientific libraries
-
-scipy
-numpy
-networkx
-matplotlib
-scikit-learn
-sympy
-pandas
-
-# Utility libraries
-
-nbtutor
-
-# Testing requirements
-
-pytest
-nbval
-jinja2
-tqdm
+# Versions are not pinned to ensure CI catches updates to libraries.
 jupyter
-pytest
+sympy
+matplotlib

@@ -1,2 +1,0 @@
-Lab: Object Oriented Programming
-================================

@@ -22,3 +22,5 @@ docs/_build/*
 nbs/chapters/plot.pdf
 *bbl
 *blg
+*xdv
+*.ipynb_checkpoints*
