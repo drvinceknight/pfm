@@ -13,7 +13,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        os: [ubuntu-latest, macOS-latest]
+        os: [ubuntu-latest]
         python-version: [3.8]
 
     steps:
@@ -43,7 +43,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '12'
-    - name: Install alex - checker for inconsiderate / insensitive writing (only on ubuntu)
+    - name: Install alex - checker for inconsiderate / insensitive writing
       run: |
         npm install alex --global
     - name: Run alex
