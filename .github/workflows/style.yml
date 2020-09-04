@@ -1,4 +1,4 @@
-name: CI
+name: Test prose and style
 
 on:
   push:
@@ -13,7 +13,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        os: [ubuntu-latest, macOS-latest, windows-latest]
+        os: [ubuntu-latest, macOS-latest]
         python-version: [3.8]
 
     steps:
@@ -29,9 +29,23 @@ jobs:
     - name: Install testing dependencies
       run: |
         python -m pip install -r test_requirements.txt
-    - name: Test notebooks give expected output
+    - name: Test code formatting with black of all py files
       run: |
-        python -m pytest --ignore=nbs/drafts --nbval --current-env
+        python -m black --check .
+    - name: Test code formatting with black of all md files
+      run: |
+        python ./utils/run_black/main.py
     - name: Test prose of markdown files
       run: |
-        python -m proselint nbs/**/*md 
+        python ./utils/run_proselint/main.py
+    - uses: actions/checkout@v2
+    - name: Install node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12'
+    - name: Install alex - checker for inconsiderate / insensitive writing (only on ubuntu)
+      run: |
+        npm install alex --global
+    - name: Run alex
+      run: |
+        python ./utils/run_alex/main.py

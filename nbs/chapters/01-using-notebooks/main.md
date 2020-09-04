@@ -35,7 +35,8 @@ and Leibniz denoted the derivate with the now more commonly used notation:
 
 The mathematics itself is unchanged: what changes is the language/notation used to communicate it.
 
-Similarly when giving instructions through code to a computer there are a number of different notations, more commonly called languages available.
+Similarly when giving instructions through code to a computer there are a number
+of notations, more commonly called languages available.
 
 We will be using a language called [**Python**](https://www.python.org).
 
@@ -44,7 +45,7 @@ Python was originally designed as a teaching language but it is now popular both
 In this chapter we will cover:
 
 - Installing the specific distribution of Python on your computer.
-- Using something called a Jupyter notebook to write and execute Python code.
+- Using something called a Jupyter notebook to write and run Python code.
 - Writing descriptive notes using `markdown` and \\(\LaTeX\\) (pronounced Lay-tech).
 
 ### Tutorial
@@ -96,12 +97,13 @@ Once this is done let us close the notebook by simlpy closing the corresponding 
 
 #### Organising our files
 
-Open your file browser (TODO check name of this no Windows):
+Open your file browser:
 
 1. File Explorer on **Windows**
 2. Finder on **OS X**
 
-Navigate to where your notebook is (this might not be immediately obvious): you should see a `introduction.ipynb` file.
+Navigate to where your notebook is (this might not be immediately evident): you
+should see a `introduction.ipynb` file.
 
 Let us rearrange things.
 
@@ -121,7 +123,7 @@ Use the interface to navigate to the `cfm` directory and inside that the `nbs` d
 
 ![](./img/opening_notebook/main.png)
 
-In the first available "cell" write a simple calculation:
+In the first available "cell" write the following calculation:
 
 ```python
 2 + 2
@@ -157,13 +159,15 @@ As well as using Python in Jupyter notebooks we can also write using Markdown. T
 
 ```
 
-When you execute that it should look like:
+When you run that it should look like:
 
 ![](./img/rendering_markdown/main.png)
 
 #### Saving your notebook to a different format
 
-Click on `File` and `Download As` this brings up a number of different formats that Jupyter notebooks can be exported to. Some of these might need other tools installed on your computer but a very portable option is `HTML`.
+Click on `File` and `Download As` this brings up a number of formats that
+Jupyter notebooks can be exported to. Some of these might need other tools
+installed on your computer but a portable option is `HTML`.
 
 Click on `HTML (.html)`.
 
@@ -196,7 +200,7 @@ Using a file browser you can navigate the directories and files on your computer
 
 You cannot double click on these to open them, you need to navigate to them through the Jupyter interface.
 
-#### Execute simple Python code
+#### Run Python code
 
 In a Jupyter notebook cell write an instruction, for example:
 
@@ -225,12 +229,13 @@ In later chapters we will see what the specific instructions are to carry out mo
 
 To write markdown click no a cell and change the type to `Markdown`, you can do this by click on `Cell`, `Cell Type` or by using the scroll wheel in the menu bar.
 
-Markdown is a simple "mark up" language that allows you to write and include various types of formatting which include:
+Markdown is a lightweight "mark up" language that allows you to write and
+include various types of formatting which include:
 
 1. Headings;
 2. Bold and italics;
 3. Ordered and unordered lists;
-4. Code (which will only be displayed but not executed);
+4. Code (which will only be displayed but not run);
 5. Hyperlinks
 
 The syntax is relatively straightfoward and the following is a good guide:
@@ -240,7 +245,7 @@ https://www.markdownguide.org/cheat-sheet/
 
 #### Write basic LaTeX
 
-Jupyter notebooks allow for markdown cells to not just include markdown but also include mathematics using another "mark up" language called \\(\LaTeX\\). In the second part of the course we will see how to write \\(\LaTeX\\) more formally (usually it is not written inside of a Jupyter notebook).
+Jupyter notebooks allow for markdown cells to not only include markdown but also include mathematics using another "mark up" language called \\(\LaTeX\\). In the second part of the course we will see how to write \\(\LaTeX\\) more formally (usually it is not written inside of a Jupyter notebook).
 
 Here is a brief overview of the syntax for arithmetic operations:
 
@@ -311,7 +316,10 @@ gives:
 
 #### Save the output in a different format
 
-Click on `File` then `Download as` and choose the format you want to use. `HTML` is a portable option that can be viewed on most devices, note however that you cannot execute the cells: what you are downloading a is static version of your notebook.
+Click on `File` then `Download as` and choose the format you want to use. `HTML`
+is a portable option that can be viewed on most devices, note however that you
+cannot run the cells: what you are downloading a is static version of your
+notebook.  
 <!-- #endregion -->
 
 ### Exercises
@@ -321,7 +329,7 @@ Click on `File` then `Download as` and choose the format you want to use. `HTML`
 **If you are not sure how to do something, have a look at the "How To" section.**
 
 1. Create a new notebook rename it "exercises". Navigate to it using your file browser to make sure you can find it.
-2. Write and execute some Python code to carry out the following calculations
+2. Write and run some Python code to carry out the following calculations
     1. \\(3 + 8\\)
     2. \\(3 / 7\\)
     3. \\(456 / 21\\)
@@ -358,7 +366,7 @@ If you want to read more about this here are some web resources:
 
 #### Why use Jupyter?
 
-There are are variety of ways to write and execute Python:
+There are are variety of ways to write and run Python:
 
 1. Using an interactive notebook environment like Jupyter;
 2. Using an integrated development environment and/or editor.
@@ -392,7 +400,13 @@ Some further information on using Jupyter:
 
 #### Why can I not double click on a Jupyter notebook file
 
-When you double click on a file and your computer opens it in an application that is because a default is set for the particular file extension. For example double clicking on `main.docx` will automatically open up the document in a word processor (like Microsoft word). This is because the file has the extension `.docx` and your operating system has set that anything with that extension will be opened in that particular application. You could of course also open the application and navigate to the file and open it directly.
+When you double click on a file and your computer opens it in an application
+that is because a default is set for the particular file extension. For example
+double clicking on `main.docx` will automatically open up the document using a
+word processor (like Microsoft word). This is because the file has the extension
+`.docx` and your operating system has set that anything with that extension will
+be opened in that particular application. You could also open the
+application and navigate to the file and open it directly.
 
 With Jupyter notebooks no default is set by the operating system as the application that opens it is in fact a local web server in your browser. As such you do not have a choice and need to open it in the Jupyter interface.
 
@@ -411,7 +425,9 @@ As described here https://www.latex-project.org/about/:
 
 > LaTeX is not a word processor! Instead, LaTeX encourages authors not to worry too much about the appearance of their documents but to concentrate on getting the right content.
 
-We will learn more about \\(\LaTeX\\) in the later part of this course but for now we just need to know that it we can use \\(\LaTeX\\) to write an instruction for Jupyter to display mathematics.
+We will learn more about \\(\LaTeX\\) in the later part of this course but for
+now we only need to know that it we can use \\(\LaTeX\\) to write an instruction
+for Jupyter to display mathematics.
 
 #### What is a markup language
 
@@ -428,5 +444,5 @@ In general whilst it might take a little while to learn all the intricacies of a
 Markup languages differ in complexity:
 
 - \\(\LaTeX\\) is incredibly sophisticated and has a huge range of capabilities.
-- Markdown is designed to be simple with just a few specific annotations to remember.
+- Markdown is designed to be basic with a few specific annotations to remember.
 <!-- #endregion -->
