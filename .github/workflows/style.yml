@@ -32,9 +32,12 @@ jobs:
     - name: Test code formatting with black of all py files
       run: |
         python -m black --check .
-    - name: Test code formatting with black of all md files
+    - name: Test import order of all py files
       run: |
-        python ./utils/run_black/main.py
+        python -m isort --check-only .
+    - name: Test style of python snippets of all md files
+      run: |
+        python ./utils/run_style_checkers/main.py
     - name: Test prose of markdown files
       run: |
         python ./utils/run_proselint/main.py
@@ -49,3 +52,9 @@ jobs:
     - name: Run alex
       run: |
         python ./utils/run_alex/main.py
+    - name: Install aspell (spell checker)
+      run: |
+        sudo apt-get install aspell aspell-en
+    - name: Run spell checker
+      run: |
+        python ./utils/run_spell_checker/main.py

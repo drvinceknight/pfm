@@ -41,7 +41,7 @@ For each of those 3 steps we will usually make use of our **mathematical techniq
 
    \\[2x-3 =0 \Rightarrow x = 3/2\\]
 
-3. Use the second derivate test on the solution:
+3. Use the second derivative test on the solution:
 
    \\[\frac{d^2f}{dx^2} = 2 > 0\text{ for all values of }x\\]
 
@@ -49,7 +49,7 @@ For each of those 3 steps we will usually make use of our **mathematical techniq
 
 ---
 
-As we progress as mathematicians **mathematical knowledge** is more prominant than **mathematical technique**: often knowing what to do is the real problem as opposed to having the technical ability to do it.
+As we progress as mathematicians **mathematical knowledge** is more prominent than **mathematical technique**: often knowing what to do is the real problem as opposed to having the technical ability to do it.
 
 This is what this course will cover: **programming** allows us to instruct a computer to carry out mathematical techniques.
 
@@ -74,7 +74,7 @@ sym.diff(x ** 2 - 3 * x + 1, x)
 sym.solveset(2 * x - 3, x)
 ```
 
-3. Use the second derivate test on the solution:
+3. Use the second derivative test on the solution:
 
 ```python
 sym.diff(x ** 2 - 3 * x + 1, x, 2)
@@ -91,7 +91,7 @@ Most programming courses introduce students to the building blocks of programmin
 
 This is akin to teaching someone how to forge metal so as to make a nail and then slowly work our way to using more sophisticated tools such as power tools to build a house.
 
-This course will do thing differentially: we will start with using and understanding tools that are helpful to mathematicians. In the later part of the course we will cover the building blocks and you will be able to build your own sophisticated tools.
+This course will do thing in a different way: we will start with using and understanding tools that are helpful to mathematicians. In the later part of the course we will cover the building blocks and you will be able to build your own sophisticated tools.
 
 1. Tools for mathematics;
 2. Building tools.
@@ -110,7 +110,7 @@ In the second part of the course you will be encouraged to build your own tools 
 
 ## Assessment
 
-There are two pieces of coursework for this coures:
+There are two pieces of coursework for this course:
 
 1. An individual piece of coursework: this will be a collection of secondary school type problems that you will solve using programming. This will assess the first part of the course.
 2. A group piece of coursework culminating in a presentation. This will assess the second part of the course.
@@ -126,6 +126,6 @@ There are two pieces of coursework for this coures:
 Every chapter will have 4 parts:
 
 - A tutorial: you will be walked through solving a problem. You will be specifically told what to do and what to expect.
-- A how to section: this will be a shorter more succint section that will detail how to carry out specific things.
+- A how to section: this will be a shorter more succinct section that will detail how to carry out specific things.
 - A reference section: this will be a section with references to further resources as well as background information about specific things in the chapter.
 - An exercise section: this will be a number of exercises that you can work on.

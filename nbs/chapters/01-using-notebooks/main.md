@@ -29,7 +29,7 @@ Newton denoted the derivative of a function \\(f\\) as:
 
 \\[Df\\]
 
-and Leibniz denoted the derivate with the now more commonly used notation:
+and Leibniz denoted the derivative with the now more commonly used notation:
 
 \\[\frac{df}{dx}\\]
 
@@ -60,7 +60,7 @@ In this chapter we will cover:
 
 #### Starting a Jupyter notebook server
 
-We are going to use **Jupyter notebooks** for the first part of this course. This interface to Python works inside your web brouser but does not require an internet connect.
+We are going to use **Jupyter notebooks** for the first part of this course. This interface to Python works inside your web browser but does not require an internet connect.
 
 Open a command line tool:
 
@@ -93,7 +93,7 @@ Let us change the name of the notebook by clicking on "Untitled" and changing th
 
 ![](./img/changing_notebook_name/main.png)
 
-Once this is done let us close the notebook by simlpy closing the corresponding tab of your web browser.
+Once this is done let us close the notebook by closing the corresponding tab of your web browser.
 
 #### Organising our files
 
@@ -155,7 +155,7 @@ Create a new cell and change the cell type to `Markdown`. Now write the followin
 As well as using Python in Jupyter notebooks we can also write using Markdown. This allows us to use basic \\(\LaTeX\\) as a way to display mathematics. For example:
 
 1. \\(\frac{2}{3}\\)
-2. \\(\sum_{i=0}^ni\\)
+2. \\(\sum_{i=0}^n i\\)
 
 ```
 
@@ -238,7 +238,7 @@ include various types of formatting which include:
 4. Code (which will only be displayed but not run);
 5. Hyperlinks
 
-The syntax is relatively straightfoward and the following is a good guide:
+The syntax is relatively straightforward and the following is a good guide:
 
 https://www.markdownguide.org/cheat-sheet/
 
@@ -258,7 +258,7 @@ Here is a brief overview of the syntax for arithmetic operations:
 - `\\\(a/b\\\)` gives \\(a/b\\)
 - `\\\(\frac{a}{b}\\\)` gives \\(\frac{a}{b}\\)
 
-The `\\\(<expression>\\\)` delimeters create what is called an "inline" mathematics. You can change the brackets to `\\\[<expression>\\\]` to give "displayed mathematics".
+The `\\\(<expression>\\\)` delimiters create what is called an "inline" mathematics. You can change the brackets to `\\\[<expression>\\\]` to give "displayed mathematics".
 
 We can write a matrix:
 
@@ -287,14 +287,14 @@ We can write integrals:
 
 ```
 \\\[
-    \int_{0}^{\infty}xdx
+    \int_{0}^{\infty}x dx
 \\\]
 ```
 
 gives:
 
 \\[
-    \int_{0}^{\infty}xdx
+    \int_{0}^{\infty}x dx
 \\]
 
 We can write summations:
@@ -343,7 +343,7 @@ notebook.
      e ^ {i\pi} = -1
  \\\]
     ```
-4. Render the following expressons by writing markdown
+4. Render the following expressions by writing markdown
    1. \\(\frac{4 ^ 3 + 2}{2\times 5}\\)
    2. \\(- 5 ^ {\frac{1}{2}}\\)
    3. \\(\frac{df}{dx}\\)
@@ -356,7 +356,7 @@ notebook.
 
 #### Why use anaconda?
 
-Python is a free an open source piece of software. One of the main reasons for its popularity is that there are a number of seperate tools that work well with it, these are called libraries. Sometimes installing these libraries can require an understanding of some potential pitfalls. In scientific circles the Anaconda distribution was developed to give a single download of not only Python but a lot of commonly used libraries.
+Python is a free an open source piece of software. One of the main reasons for its popularity is that there are a number of separate tools that work well with it, these are called libraries. Sometimes installing these libraries can require an understanding of some potential pitfalls. In scientific circles the Anaconda distribution was developed to give a single download of not only Python but a lot of commonly used libraries.
 
 If you want to read more about this here are some web resources:
 
@@ -384,7 +384,7 @@ In general:
 1. Jupyter is a fantastic way to interactively use and communicate code;
 2. Integrated development environments and/or editors are the correct tool to write software.
 
-In this course you will learn to use either approach in the appropriate manner for the right task. For the first part we will mainly be using code interactevily and so we will use Jupyter notebooks.
+In this course you will learn to use either approach in the appropriate manner for the right task. For the first part we will mainly be using code interactively and so we will use Jupyter notebooks.
 
 If you are interested here are some further resources:
 
@@ -414,7 +414,7 @@ With Jupyter notebooks no default is set by the operating system as the applicat
 
 As described here https://www.markdownguide.org/getting-started/:
 
-> Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. Created by John Gruber in 2004, Markdown is now one of the world’s most popular markup languages
+> Markdown is a lightweight markup language that you can use to add formatting elements to plain text text documents. Created by John Gruber in 2004, Markdown is now one of the world’s most popular markup languages
 
 
 #### What is LaTeX

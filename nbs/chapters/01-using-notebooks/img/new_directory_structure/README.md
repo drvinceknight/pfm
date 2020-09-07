@@ -1,1 +1,1 @@
-A screenshot showing a new directory structure created in thefile explorer
+A screenshot showing a new directory structure created in the file explorer

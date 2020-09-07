@@ -13,7 +13,7 @@ To create a paired `md` for a given `main.ipynb`:
 jupytext --set-formats ipynb,md main.ipynb
 ```
 
-To sync (using the `black` autoformatting tool):
+To sync (using the `black` auto formatting tool):
 
 ```bash
 jupytext --sync --pipe black main.ipynb
