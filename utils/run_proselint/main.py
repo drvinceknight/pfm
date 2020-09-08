@@ -2,20 +2,78 @@ import pathlib
 import subprocess
 import sys
 
+import proselint
+
 
 def get_root_path():
     return pathlib.Path(__file__).absolute().parent.parent.parent
 
 
-root = get_root_path()
-max_exit_code = 0
-for markdown_file_path in root.glob("**/*md"):
-    output = subprocess.run(
-        ["proselint", markdown_file_path], capture_output=True, check=False
+known_exceptions = {
+    "02-algebra": set(
+        (
+            (
+                "needless_variants.misc",
+                "Needless variant. 'discriminating' is the preferred form.",
+                129,
+                43,
+                3782,
+                3795,
+                13,
+                "warning",
+                "discriminating",
+            ),
+            (
+                "needless_variants.misc",
+                "Needless variant. 'discriminating' is the preferred form.",
+                132,
+                6,
+                3813,
+                3826,
+                13,
+                "warning",
+                "discriminating",
+            ),
+            (
+                "needless_variants.misc",
+                "Needless variant. 'discriminating' is the preferred form.",
+                128,
+                43,
+                3781,
+                3794,
+                13,
+                "warning",
+                "discriminating",
+            ),
+            (
+                "needless_variants.misc",
+                "Needless variant. 'discriminating' is the preferred form.",
+                131,
+                6,
+                3812,
+                3825,
+                13,
+                "warning",
+                "discriminating",
+            ),
+        )
     )
+}
 
-    if (exit_code := output.returncode) > 0:
-        max_exit_code = max(max_exit_code, exit_code)
-        print(output.stdout.decode("utf-8"))
+root = get_root_path()
+exit_code = 0
+for markdown_file_path in filter(
+    lambda path: ".ipynb_checkpoints" not in str(path), root.glob("**/*md")
+):
 
-sys.exit(max_exit_code)
+    markdown = markdown_file_path.read_text()
+    suggestions = proselint.tools.lint(markdown)
+    exceptions = known_exceptions.get(markdown_file_path.parent.name, set(()))
+    for suggestion in filter(
+        lambda suggestion: suggestion not in exceptions, suggestions
+    ):
+        print(f"Proselint suggests the following in {markdown_file_path}")
+        print(suggestion)
+        exit_code = 1
+
+sys.exit(exit_code)
