@@ -28,6 +28,7 @@ words = set(
         "math",
         "md",
         "nbs",
+        "oo",
         "pdf",
         "png",
         "rhs",
@@ -36,6 +37,7 @@ words = set(
         "sym",
         "sympy",
         "tex",
+        "th",
         "url",
         "xelatex",
     )

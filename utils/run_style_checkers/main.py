@@ -43,7 +43,12 @@ for markdown_file_path in filter(
                 "1 file would be reformatted", "1 code snippet does not follow black:"
             )
             print(stderr_with_snippet_wording)
-            print(python_code)
+            output = subprocess.run(
+                ["black", "--diff", temporary_file_path],
+                capture_output=True,
+                check=False,
+            )
+            print(output.stdout.decode("utf-8"))
 
         output = subprocess.run(
             ["isort", "--check-only", temporary_file_path],
