@@ -18,6 +18,8 @@ known_exceptions = {
     ),
 }
 
+suggestions_to_ignore = {"05-probability": set(("typography.symbols.curly_quotes",))}
+
 root = get_root_path()
 exit_code = 0
 for markdown_file_path in filter(
@@ -31,8 +33,13 @@ for markdown_file_path in filter(
         markdown = markdown.replace(markdown, exception)
 
     suggestions = proselint.tools.lint(markdown)
-
-    for suggestion in suggestions:
+    ignored_suggestions = suggestions_to_ignore.get(
+        markdown_file_path.parent.name, set(())
+    )
+    for suggestion in filter(
+        lambda suggestion: suggestion[0] not in ignored_suggestions, suggestions
+    ):
+        print(ignored_suggestions)
         print(f"Proselint suggests the following in {markdown_file_path}")
         print(suggestion)
         exit_code = 1
