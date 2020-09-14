@@ -1,7 +1,5 @@
 words = set(
     (
-        "nbval",
-        "len",
         "Bertolt",
         "Df",
         "Eq",
@@ -38,10 +36,13 @@ words = set(
         "jupytext",
         "kernelspec",
         "latexmk",
+        "len",
         "lhs",
         "math",
+        "matplotlib",
         "md",
         "nbs",
+        "nbval",
         "numpy",
         "oo",
         "pdf",
@@ -55,5 +56,6 @@ words = set(
         "th",
         "url",
         "xelatex",
+        "xlim",
     )
 )
