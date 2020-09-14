@@ -18,7 +18,10 @@ known_exceptions = {
     ),
 }
 
-suggestions_to_ignore = {"05-probability": set(("typography.symbols.curly_quotes",))}
+suggestions_to_ignore = {
+    "05-combinations-permutations": set(("leonard.exclamation.30ppm",)),
+    "06-probability": set(("typography.symbols.curly_quotes",)),
+}
 
 root = get_root_path()
 exit_code = 0
@@ -39,7 +42,6 @@ for markdown_file_path in filter(
     for suggestion in filter(
         lambda suggestion: suggestion[0] not in ignored_suggestions, suggestions
     ):
-        print(ignored_suggestions)
         print(f"Proselint suggests the following in {markdown_file_path}")
         print(suggestion)
         exit_code = 1

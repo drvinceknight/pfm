@@ -219,7 +219,8 @@ The python code for the following arithmetic operations are:
 3. Multiplication, \\(3 \times 5\\): `3 * 5`;
 5. Division, \\(20 / 5\\): `20 / 5`;
 6. Exponentiation, \\(2 ^ 4\\): `2 ** 4`;
-7. Combining operations, \\(\frac{2 ^ 3 + 1}{4}\\): `(2 ** 3 + 1) / 4`;
+7. Integer remainder, \\(5 \mod 2\\): `5 % 2`;
+8. Combining operations, \\(\frac{2 ^ 3 + 1}{4}\\): `(2 ** 3 + 1) / 4`;
 
 **Note** that instructions to a computer (through the code we write) need to be specific. For example the `^` symbol in Python does not mean exponentiation. If you were to type `2 ^ 4` you would get an error.
 
