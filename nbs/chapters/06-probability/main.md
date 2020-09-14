@@ -256,33 +256,7 @@ Using Bayes' theorem this is given theoretically by:
 20 / 41
 ```
 
-<!-- #region -->
 ### How to
-
-
-#### Create a tuple
-
-To create a tuple which is an ordered collection of objects that cannot be changed we use the `()` brackets:
-<!-- #endregion -->
-
-```python
-basket = ("Bread", "Biscuits", "Coffee")
-basket
-```
-
-<!-- #region -->
-If we need to we can access elements of this collection using `[]` brackets. The first element is has index `0`:
-
-```python
-tuple[index]
-```
-
-For example:
-<!-- #endregion -->
-
-```python
-basket[1]
-```
 
 #### Create a list
 
@@ -367,44 +341,6 @@ x_cubed(5)
 ```python
 x = sym.Symbol("x")
 x_cubed(x)
-```
-
-#### Creating boolean variables
-
-A boolean variable has one of two values: `True` or `False`.
-
-To create a boolean variable we can use:
-
-- Equality: `value == other_value`
-- Inequality `value != other_value`
-- Strictly less than `value < other_value`
-- Less than or equal`value <= other_value`
-
-This a subset of the operators available.
-
-For example:
-
-```python
-value = 5
-other_value = 10
-
-value == other_value
-```
-
-```python
-value != other_value
-```
-
-```python
-value <= other_value
-```
-
-```python
-value < value
-```
-
-```python
-value <= value
 ```
 
 <!-- #region -->
