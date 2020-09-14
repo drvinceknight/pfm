@@ -10,54 +10,12 @@ def get_root_path():
 
 
 known_exceptions = {
-    "02-algebra": set(
+    "02-algebra": set(("We can immediately use this to compute the discriminant:")),
+    "04-matrices": set(
         (
-            (
-                "needless_variants.misc",
-                "Needless variant. 'discriminating' is the preferred form.",
-                129,
-                43,
-                3782,
-                3795,
-                13,
-                "warning",
-                "discriminating",
-            ),
-            (
-                "needless_variants.misc",
-                "Needless variant. 'discriminating' is the preferred form.",
-                132,
-                6,
-                3813,
-                3826,
-                13,
-                "warning",
-                "discriminating",
-            ),
-            (
-                "needless_variants.misc",
-                "Needless variant. 'discriminating' is the preferred form.",
-                128,
-                43,
-                3781,
-                3794,
-                13,
-                "warning",
-                "discriminating",
-            ),
-            (
-                "needless_variants.misc",
-                "Needless variant. 'discriminating' is the preferred form.",
-                131,
-                6,
-                3812,
-                3825,
-                13,
-                "warning",
-                "discriminating",
-            ),
+            "4. Q1 The matrix \\(D\\) is given by \\(D = \begin{pmatrix} a & 2 & 0\\ 3 & 1 & 2\\ 0 & -1 & 1\end{pmatrix}\\) where \\(a\ne 2\\)."
         )
-    )
+    ),
 }
 
 root = get_root_path()
@@ -67,11 +25,14 @@ for markdown_file_path in filter(
 ):
 
     markdown = markdown_file_path.read_text()
-    suggestions = proselint.tools.lint(markdown)
     exceptions = known_exceptions.get(markdown_file_path.parent.name, set(()))
-    for suggestion in filter(
-        lambda suggestion: suggestion not in exceptions, suggestions
-    ):
+
+    for exception in exceptions:
+        markdown = markdown.replace(markdown, exception)
+
+    suggestions = proselint.tools.lint(markdown)
+
+    for suggestion in suggestions:
         print(f"Proselint suggests the following in {markdown_file_path}")
         print(suggestion)
         exit_code = 1
