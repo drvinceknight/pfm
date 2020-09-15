@@ -21,6 +21,7 @@ known_exceptions = {
 suggestions_to_ignore = {
     "05-combinations-permutations": set(("leonard.exclamation.30ppm",)),
     "06-probability": set(("typography.symbols.curly_quotes",)),
+    "07-sequences": set(("typography.symbols.curly_quotes",)),
 }
 
 root = get_root_path()
