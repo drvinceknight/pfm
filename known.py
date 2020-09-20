@@ -77,5 +77,7 @@ words = set(
 
 prose_exceptions = {}
 prose_suggestions_to_ignore = {
-    "nbs/book/02-algebra/introduction/main.md": set(("typography.symbols.curly_quotes",))
-    }
+    "nbs/book/02-algebra/introduction/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    )
+}
