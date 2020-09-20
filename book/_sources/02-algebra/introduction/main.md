@@ -12,6 +12,7 @@ kernelspec:
   name: python3
 ---
 
+
 # Algebra
 
 ## Introduction
@@ -39,27 +40,31 @@ Here is a note
 Here is a warning
 ```
 
+
 Here is some inline mathematics $2 + 3$.
 
 Here is some displaystyle mathematics
 
 $$22 + 23$$
 
+
 ```{code-cell} ipython3
 import sympy as sym
 
 x = sym.Symbol("x")
-x** 2
+x ** 2
 ```
 
 ```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 import matplotlib.pyplot as plt
 
-plt.plot([1, 2], [3, 4]);
+plt.plot([1, 2], [3, 4])
 ```
 
-````{toggle}
 ```python
-3 + 2
+def function(a, b):
+    """Good docstring"""
+    return a + b
 ```
-````
