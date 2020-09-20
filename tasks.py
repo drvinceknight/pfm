@@ -28,6 +28,8 @@ def path_in_book(path):
     """
     if ".ipynb_checkpoints" in str(path):
         return False
+    if "README.md" in str(path):
+        return False
     return True
 
 
