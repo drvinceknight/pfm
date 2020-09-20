@@ -32,7 +32,8 @@ jobs:
     - name: Test notebooks give expected output
       run: |
         inv testnbs
-    - name: Backup notebooks and confirm results are still expected
+    - name: Backup notebooks and confirm results are still expected (only on OSX)
+      if: matrix.python-version == 3.8 && matrix.os == 'macOS-latest'
       run: |
         inv backupbook
         inv testnbs
