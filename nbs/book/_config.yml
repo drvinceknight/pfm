@@ -1,0 +1,11 @@
+# Book settings
+title: Computing for mathematics
+author: Vincent Knight
+execute:
+  execute_notebooks: force
+parse:
+  myst_extended_syntax: true
+exclude_patterns: ["*.bcp.ipynb", "**/*.bcp.ipynb"]
+latex:
+  latex_documents:
+    targetname: book.tex
