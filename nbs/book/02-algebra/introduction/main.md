@@ -61,10 +61,8 @@ import matplotlib.pyplot as plt
 plt.plot([1, 2], [3, 4])
 ```
 
-````{toggle}
 ```python
-def func(a, b):
+def function(a, b):
     """Good docstring"""
     return a + b
 ```
-````
