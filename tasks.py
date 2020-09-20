@@ -19,6 +19,8 @@ MD_PATTERN = re.compile(
     re.DOTALL | re.MULTILINE,
 )
 
+TAGS_PATTERN = re.compile(r":tags: \[.*\]\n\n")
+
 
 def path_in_book(path):
     """
@@ -38,7 +40,7 @@ def get_book_source_files(root=ROOT):
 
 
 @task
-def stylecheck(c, root=ROOT, md_pattern=MD_PATTERN):
+def stylecheck(c, root=ROOT, md_pattern=MD_PATTERN, tags_pattern=TAGS_PATTERN):
     """
     Run all code snippets in book through:
 
@@ -219,3 +221,11 @@ def backupbook(c, root=ROOT):
         markdown_file_to_delete = backup_path.with_suffix(".md")
         c.run(f"jupytext --to notebook --execute {markdown_file_path} -o {backup_path}")
         markdown_file_to_delete.unlink(missing_ok=True)
+
+
+@task
+def testnbs(c, root=ROOT):
+    """
+    Remove previous build and rebuild the book.
+    """
+    c.run(f"python -m pytest --ignore={root}/nbs/drafts --nbval --current-env")
