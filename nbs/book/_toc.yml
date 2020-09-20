@@ -1,2 +1,7 @@
 - file: intro
-- file: 02-algebra/introduction/main.ipynb
+- part: Tools for mathematics
+  chapters:
+  - file: 01-using-notebooks/introduction/main
+    sections:
+    - file: 01-using-notebooks/tutorial/main
+  - file: 02-algebra/introduction/main
