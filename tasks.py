@@ -51,12 +51,25 @@ def stylecheck(c, root=ROOT, md_pattern=MD_PATTERN, tags_pattern=TAGS_PATTERN):
     This is done by capturing the code snippets using the `md_pattern` regex,
     writing them to a temporary file and running the cli tools on the temporary
     files.
+
+    Tags are ignored from the checker as they are removed using the
+    `tags_pattern` regex. Tags need to be written in to cells using the
+    following convention:
+
+    ```{code-cell} ipython3
+    :tags: [tag1, tag2]
+
+    <Code>
+
+    Note that blank space is required.
     """
     max_exit_code = 0
     for markdown_file_path in get_book_source_files():
         markdown_string = markdown_file_path.read_text()
         for match in re.finditer(pattern=md_pattern, string=markdown_string):
             python_code = match.group(4)
+            python_code = re.sub(pattern=tags_pattern, repl="", string=python_code)
+
             temporary_file = tempfile.NamedTemporaryFile(suffix=".py")
             temporary_file_path = pathlib.Path(temporary_file.name)
             temporary_file_path.write_text(python_code)
@@ -89,6 +102,15 @@ def stylecheck(c, root=ROOT, md_pattern=MD_PATTERN, tags_pattern=TAGS_PATTERN):
                 capture_output=True,
                 check=False,
             )
+
+
+            if (exit_code := output.returncode) > 0:
+                max_exit_code = max(max_exit_code, exit_code)
+                stderr_with_correct_filename = output.stderr.decode("utf-8").replace(
+                    str(temporary_file_path), str(markdown_file_path)
+                )
+                print(stderr_with_correct_filename)
+                print(python_code)
 
             if ("def" in python_code) or ("class" in python_code):
                 if (exit_code := output.returncode) > 0:

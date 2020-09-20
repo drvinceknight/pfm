@@ -31,11 +31,11 @@ jobs:
         python -m pip install -r requirements-dev.txt
     - name: Test notebooks give expected output
       run: |
-        python -m pytest --ignore=nbs/drafts --nbval --current-env
+        inv testnbs
     - name: Backup notebooks and confirm results are still expected
       run: |
         inv backupbook
-        python -m pytest --ignore=nbs/drafts --nbval --current-env
+        inv testnbs
     - name: Confirm that book builds
       run: |
         inv buildbook
