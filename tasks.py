@@ -103,7 +103,6 @@ def stylecheck(c, root=ROOT, md_pattern=MD_PATTERN, tags_pattern=TAGS_PATTERN):
                 check=False,
             )
 
-
             if (exit_code := output.returncode) > 0:
                 max_exit_code = max(max_exit_code, exit_code)
                 stderr_with_correct_filename = output.stderr.decode("utf-8").replace(
