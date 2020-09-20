@@ -28,19 +28,16 @@ jobs:
         python -m pip install -r requirements.txt
     - name: Install testing dependencies
       run: |
-        python -m pip install -r test_requirements.txt
+        python -m pip install -r requirements-dev.txt
     - name: Test code formatting with black of all py files
       run: |
         python -m black --check .
     - name: Test import order of all py files
       run: |
         python -m isort --check-only .
-    - name: Test style of python snippets of all md files
+    - name: Test style of python snippets of all book md files
       run: |
-        python ./utils/run_style_checkers/main.py
-    - name: Test prose of markdown files
-      run: |
-        python ./utils/run_proselint/main.py
+        inv stylecheck
     - uses: actions/checkout@v2
     - name: Install node
       uses: actions/setup-node@v1
@@ -49,12 +46,12 @@ jobs:
     - name: Install alex - checker for inconsiderate / insensitive writing
       run: |
         npm install alex --global
-    - name: Run alex
+    - name: Test prose of all book md files
       run: |
-        python ./utils/run_alex/main.py
+        inv prosecheck
     - name: Install aspell (spell checker)
       run: |
         sudo apt-get install aspell aspell-en
     - name: Run spell checker
       run: |
-        python ./utils/run_spell_checker/main.py
+        inv spellcheck

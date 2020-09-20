@@ -1,5 +1,10 @@
 words = set(
     (
+        "displaystyle",
+        "ipython",
+        "myst",
+        "plt",
+        "pyplot",
         "Ashville",
         "Bertolt",
         "Bewton",
@@ -69,3 +74,8 @@ words = set(
         "xlim",
     )
 )
+
+prose_exceptions = {}
+prose_suggestions_to_ignore = {
+    "nbs/book/02-algebra/introduction/main.md": set(("typography.symbols.curly_quotes",))
+    }
