@@ -5,7 +5,7 @@ execute:
   execute_notebooks: force
 parse:
   myst_extended_syntax: true
-exclude_patterns: ["*.bcp.ipynb", "**/*.bcp.ipynb"]
+exclude_patterns: ["*.bcp.ipynb", "**/*.bcp.ipynb", "**/README.md"]
 latex:
   latex_documents:
     targetname: book.tex
