@@ -1,0 +1,607 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why &#8212; Python for mathematics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Sequences" href="../../07-sequences/introduction/main.html" />
+    <link rel="prev" title="Exercises" href="../exercises/main.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Python for mathematics</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Python for Mathematics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Tools for mathematics
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../01-using-notebooks/introduction/main.html">
+   Using notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../02-algebra/introduction/main.html">
+   Algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../03-calculus/introduction/main.html">
+   Calculus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../04-matrices/introduction/main.html">
+   Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../05-combinations-permutations/introduction/main.html">
+   Combinatorics
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="../introduction/main.html">
+   Probability
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../how/main.html">
+     How to
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Why
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../07-sequences/introduction/main.html">
+   Sequences
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../../_sources/06-probability/why/main.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/06-probability/why/main.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/06-probability/why/main.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-the-difference-between-a-python-list-and-a-python-tuple">
+   What is the difference between a Python list and a Python tuple?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-does-the-sum-of-booleans-counts-the-trues">
+   Why does the sum of booleans counts the
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     True
+    </span>
+   </code>
+   s?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-the-difference-between-print-and-return">
+   What is the difference between
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     print
+    </span>
+   </code>
+   and
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     return
+    </span>
+   </code>
+   ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-does-python-sample-randomness">
+   How does Python sample randomness?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-the-difference-between-a-docstring-and-a-comment">
+   What is the difference between a docstring and a comment
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="why">
+<h1>Why<a class="headerlink" href="#why" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-the-difference-between-a-python-list-and-a-python-tuple">
+<h2>What is the difference between a Python list and a Python tuple?<a class="headerlink" href="#what-is-the-difference-between-a-python-list-and-a-python-tuple" title="Permalink to this headline">¶</a></h2>
+<p>Two of the most used Python iterables are lists and tuples. In practice they
+have a number of similarities, they are both ordered collections of objects that
+can be used in list comprehensions as well as in other ways.</p>
+<ul class="simple">
+<li><p>Tuples are <strong>immutable</strong></p></li>
+<li><p>Lists are <strong>mutable</strong></p></li>
+</ul>
+<p>This means that once created tuples cannot be changed and lists can.</p>
+<p>As a general rule of thumb: if you do not need to modify your iterable then use
+a tuple as they are more computationally efficient.</p>
+<p>This blog post is a good explanation of the difference:
+<a class="reference external" href="https://www.afternerd.com/blog/difference-between-list-tuple/">https://www.afternerd.com/blog/difference-between-list-tuple/</a></p>
+</div>
+<div class="section" id="why-does-the-sum-of-booleans-counts-the-trues">
+<h2>Why does the sum of booleans counts the <code class="docutils literal notranslate"><span class="pre">True</span></code>s?<a class="headerlink" href="#why-does-the-sum-of-booleans-counts-the-trues" title="Permalink to this headline">¶</a></h2>
+<p>In the tutorial and elsewhere we created a list of booleans and then take the
+sum. Here are some of the steps:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">samples</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Red&quot;</span><span class="p">,</span> <span class="s2">&quot;Red&quot;</span><span class="p">,</span> <span class="s2">&quot;Blue&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">booleans</span> <span class="o">=</span> <span class="p">[</span><span class="n">sample</span> <span class="o">==</span> <span class="s2">&quot;Red&quot;</span> <span class="k">for</span> <span class="n">sample</span> <span class="ow">in</span> <span class="n">samples</span><span class="p">]</span>
+<span class="n">booleans</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[True, True, False]
+</pre></div>
+</div>
+</div>
+</div>
+<p>When we take the <code class="docutils literal notranslate"><span class="pre">sum</span></code> of that list we get a numeric value:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">booleans</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<p>This has in fact counted the <code class="docutils literal notranslate"><span class="pre">True</span></code> values as 1 and the <code class="docutils literal notranslate"><span class="pre">False</span></code> values as 0.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="what-is-the-difference-between-print-and-return">
+<h2>What is the difference between <code class="docutils literal notranslate"><span class="pre">print</span></code> and <code class="docutils literal notranslate"><span class="pre">return</span></code>?<a class="headerlink" href="#what-is-the-difference-between-print-and-return" title="Permalink to this headline">¶</a></h2>
+<p>In functions you see we use the <code class="docutils literal notranslate"><span class="pre">return</span></code> statement. This does two things:</p>
+<ol class="simple">
+<li><p>Assigns a value to the function run;</p></li>
+<li><p>Ends the function.</p></li>
+</ol>
+<p>The <code class="docutils literal notranslate"><span class="pre">print</span></code> statement <strong>only</strong> displays the output.</p>
+<p>As an example let us create the following set:</p>
+<div class="math notranslate nohighlight">
+\[
+    S = \{f(x)\text{ for }x \in \{0, \pi / 4, \pi / 2, 3\pi / 4\}\}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(f(x)= \cos^2(x)\)</span>.</p>
+<p>The correct way to do this is:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the square of the cosine of x</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">sym</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+
+
+<span class="n">S</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sym</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="n">sym</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">sym</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)]</span>
+<span class="n">S</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 1/2, 0, 1/2]
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we replaced the <code class="docutils literal notranslate"><span class="pre">return</span></code> statement in the function definition with a <code class="docutils literal notranslate"><span class="pre">print</span></code> we obtain:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the square of the cosine of x</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+
+<span class="n">S</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sym</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="n">sym</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">sym</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+1/2
+0
+1/2
+</pre></div>
+</div>
+</div>
+</div>
+<p>We see now that as the function has been run it displays the output.</p>
+<p><strong>However</strong> if we look at what <code class="docutils literal notranslate"><span class="pre">S</span></code> is we see that the function has not returned
+anything:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[None, None, None, None]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here are some other materials on this subject:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.tutorialspoint.com/Why-would-you-use-the-return-statement-in-Python">https://www.tutorialspoint.com/Why-would-you-use-the-return-statement-in-Python</a></p></li>
+<li><p><a class="reference external" href="https://pythonprinciples.com/blog/print-vs-return/">https://pythonprinciples.com/blog/print-vs-return/</a></p></li>
+</ul>
+</div>
+<div class="section" id="how-does-python-sample-randomness">
+<h2>How does Python sample randomness?<a class="headerlink" href="#how-does-python-sample-randomness" title="Permalink to this headline">¶</a></h2>
+<p>When using the Python random module we are in fact generating a pseudo random
+process. True randomness is actually not common.</p>
+<p>Pseudo randomness is an important area of mathematics as strong algorithms that
+create unpredictable sequences of numbers are vital to cryptographic security.</p>
+<p>The specific algorithm using in Python for randomness is called the Mersenne
+twister algorithm is state of the art.</p>
+<p>You can read more about this here:
+<a class="reference external" href="https://docs.python.org/3/library/random.html#module-random">https://docs.python.org/3/library/random.html#module-random</a>.</p>
+</div>
+<div class="section" id="what-is-the-difference-between-a-docstring-and-a-comment">
+<h2>What is the difference between a docstring and a comment<a class="headerlink" href="#what-is-the-difference-between-a-docstring-and-a-comment" title="Permalink to this headline">¶</a></h2>
+<p>In Python it is possible to write statements that are ignored using the <code class="docutils literal notranslate"><span class="pre">#</span></code>
+symbol. This creates something called a “comment”. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a list to represent the tokens in a bag</span>
+<span class="n">bag</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Red&quot;</span><span class="p">,</span> <span class="s2">&quot;Red&quot;</span><span class="p">,</span> <span class="s2">&quot;Blue&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A docstring however is something that is “attached” to a function and can be
+accessed by Python.</p>
+<p>If we rewrite the function to sample the experiment of the tutorial without a
+docstring but using comments we will have:</p>
+<div class="cell tag_style-check-ignore docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sample_experiment</span><span class="p">(</span><span class="n">bag</span><span class="p">):</span>
+    <span class="c1"># Select a token</span>
+    <span class="n">selected_token</span> <span class="o">=</span> <span class="n">pick_a_token</span><span class="p">(</span><span class="n">container</span><span class="o">=</span><span class="n">bag</span><span class="p">)</span>
+
+    <span class="c1"># If the token is red then the probability of selecting heads is 2/3</span>
+    <span class="k">if</span> <span class="n">selected_token</span> <span class="o">==</span> <span class="s2">&quot;Red&quot;</span><span class="p">:</span>
+        <span class="n">probability_of_selecting_heads</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">3</span>
+    <span class="c1"># Otherwise it is 1 / 2</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">probability_of_selecting_heads</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span>
+
+    <span class="c1"># Select a coin according to the probability.</span>
+    <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">probability_of_selecting_heads</span><span class="p">:</span>
+        <span class="n">coin</span> <span class="o">=</span> <span class="s2">&quot;Heads&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">coin</span> <span class="o">=</span> <span class="s2">&quot;Tails&quot;</span>
+
+    <span class="c1"># Return both the selected token and the coin.</span>
+    <span class="k">return</span> <span class="n">selected_token</span><span class="p">,</span> <span class="n">coin</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now if we try to access the help for the function we will not get it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">sample_experiment</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function sample_experiment in module __main__:
+
+sample_experiment(bag)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Furthermore, if you look at the code with comments you will see that because of
+the choice of variable names the comments are in fact redundant.</p>
+<p>In software engineering it is generally accepted that comments indicate that
+your code is not clear and so it is preferable to write clear documentation
+explaining why something is done through docstrings.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sample_experiment</span><span class="p">(</span><span class="n">bag</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This samples a token from a given bag and then</span>
+<span class="sd">    selects a coin with a given probability.</span>
+
+<span class="sd">    If the sampled token is red then the probability</span>
+<span class="sd">    of selecting heads is 2/3 otherwise it is 1/2.</span>
+
+<span class="sd">    This function returns both the selected token</span>
+<span class="sd">    and the coin face.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">selected_token</span> <span class="o">=</span> <span class="n">pick_a_token</span><span class="p">(</span><span class="n">container</span><span class="o">=</span><span class="n">bag</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">selected_token</span> <span class="o">==</span> <span class="s2">&quot;Red&quot;</span><span class="p">:</span>
+        <span class="n">probability_of_selecting_heads</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">3</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">probability_of_selecting_heads</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span>
+
+    <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">probability_of_selecting_heads</span><span class="p">:</span>
+        <span class="n">coin</span> <span class="o">=</span> <span class="s2">&quot;Heads&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">coin</span> <span class="o">=</span> <span class="s2">&quot;Tails&quot;</span>
+    <span class="k">return</span> <span class="n">selected_token</span><span class="p">,</span> <span class="n">coin</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here are some resources on this:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://blog.codinghorror.com/coding-without-comments/">https://blog.codinghorror.com/coding-without-comments/</a></p></li>
+<li><p><a class="reference external" href="https://visualstudiomagazine.com/articles/2013/07/26/why-commenting-code-is-still-bad.aspx">https://visualstudiomagazine.com/articles/2013/07/26/why-commenting-code-is-still-bad.aspx</a></p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./06-probability/why"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../exercises/main.html" title="previous page">Exercises</a>
+    <a class='right-next' id="next-link" href="../../07-sequences/introduction/main.html" title="next page">Sequences</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Vincent Knight<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>
