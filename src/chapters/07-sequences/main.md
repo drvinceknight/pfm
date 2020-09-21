@@ -1,19 +1,17 @@
 ---
-jupyter:
-  jupytext:
-    formats: ipynb,md
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.2'
-      jupytext_version: 1.6.0
-  kernelspec:
-    display_name: Python 3
-    language: python
-    name: python3
+jupytext:
+  formats: ipynb,md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.12
+    jupytext_version: 1.6.0
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
 ---
 
-<!-- #region -->
 ## Sequences
 
 ### Introduction
@@ -28,7 +26,7 @@ We will solve the following problem using a computer to using a programming tech
 
 ---
 
-A sequence \\(a_1, a_2, a_3, …\\) is defined by:
+A sequence \\(a_1, a_2, a_3, ...\\) is defined by:
 
 \\[
     \left\{
@@ -48,13 +46,12 @@ where \\(k\\) is a constant.
 ---
 
 We will use a Python to define a function that reproduces the mathematical definition of \\(a_k\\):
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 def generate_a(k_value, n):
     """
     Uses recursion to return a_n for a given value of k:
-
+    
     a_1 = k
     a_n = 2a_n - 7
     """
@@ -65,22 +62,23 @@ def generate_a(k_value, n):
 
 **Note** that similarly to the mathematical definition the Python definition of the function refers to itself.
 
++++
 
 We can use this to compute \\(a_3\\) for \\(k=4\\):
 
-```python
+```{code-cell} ipython3
 generate_a(k_value=4, n=3)
 ```
 
 We can use this to compute \\(a_5\\) for \\(k=1\\):
 
-```python
+```{code-cell} ipython3
 generate_a(k_value=1, n=5)
 ```
 
 Finally it is also possible to pass a symbolic value to `k_value`. This allows us to answer the first question:
 
-```python
+```{code-cell} ipython3
 import sympy as sym
 
 k = sym.Symbol("k")
@@ -89,7 +87,7 @@ generate_a(k_value=k, n=2)
 
 Likewise for \\(a_3\\):
 
-```python
+```{code-cell} ipython3
 generate_a(k_value=k, n=3)
 ```
 
@@ -99,14 +97,14 @@ For the last question we start by computing the sum:
     \sum_{r=1}^4 a_r = 43
 \\]
 
-```python
+```{code-cell} ipython3
 sum_of_first_four_terms = sum(generate_a(k_value=k, n=r) for r in range(1, 5))
 sum_of_first_four_terms
 ```
 
 This allows us to create the given equation and solve it:
 
-```python
+```{code-cell} ipython3
 equation = sym.Eq(sum_of_first_four_terms, 43)
 sym.solveset(equation, k)
 ```
@@ -136,14 +134,14 @@ Consider the following mathematical expression:
 
 In Python this can be written as:
 
-```python
+```{code-cell} ipython3
 def generate_sequence(n):
     """
     Generate the sequence defined by:
-
+    
     a_1 = 1
     a_n = 2 a_{n - 1}
-
+    
     This is done using recursion.
     """
     if n == 1:
@@ -153,7 +151,7 @@ def generate_sequence(n):
 
 Here we can get the first 7 terms:
 
-```python
+```{code-cell} ipython3
 values_of_sequence = [generate_sequence(n) for n in range(1, 8)]
 values_of_sequence
 ```
@@ -183,7 +181,7 @@ values_of_sequence
 
     1. The value of \\(d\\).
     2. The value of \\(a\\).
-    3. The total number of houses built in Oldtown over 40 years.
+    3. The total number of houses biult in Oldtown over the 40 year period.
     4. On a randomly chose day, the probability of an individual travelling to school by car, bicycle or on foot is \\(1/2\\), \\(1/6\\) and \\(1/3\\) respectively. The probability of being late when using these methods of travel is \\(1/5\\), \\(2/5\\) and \\(1/10\\) respectively.
 4. A sequence is given by:
 
@@ -215,14 +213,14 @@ When giving instructions to a computer it is possible to use recursion to direct
 
 We can define this in Python as follows:
 
-```python
+```{code-cell} ipython3
 def generate_sequence(n):
     """
     Generate the sequence defined by:
-
+    
     a_1 = 1
     a_n = 3 a_{n - 1}
-
+    
     This is done using recursion.
     """
     if n == 1:
@@ -232,40 +230,44 @@ def generate_sequence(n):
 
 The first 6 terms:
 
-```python
+```{code-cell} ipython3
 [generate_sequence(n) for n in range(1, 7)]
 ```
 
 We note that in this case this corresponds to powers of \\(3\\), and indeed we can prove that: \\(a_n = 3 ^ {n - 1}\\). We will not carry out the proof here but one approach to doing it would be to use proof by induction which is closely related to recursive functions.
 
-We can write a different python function that uses this formulae. This is called **iteration**:
+We can of course write a different python function that uses this formulae. This is called **iteration**:
 
-```python
+```{code-cell} ipython3
 def calculate_sequence(n):
     """
     Calculate the nth term of the sequence defined by:
-
+    
     a_1 = 1
     a_n = 3 a_{n - 1}
-
+    
     This is done using iteration using the direct formula:
-
+    
     a_n = 3 ^ n
     """
     return 3 ** (n - 1)
 ```
 
-```python
+```{code-cell} ipython3
 [calculate_sequence(n) for n in range(1, 7)]
 ```
 
-We can in fact use a Jupyter [magic command](https://ipython.readthedocs.io/en/stable/interactive/magics.html) to time the run of a command. It is clear that recursion is slower.
+We can in fact use a Jupyter [magic command](https://ipython.readthedocs.io/en/stable/interactive/magics.html) to time the execution of a command. It is clear that recursion is slower.
 
-```python tags=["nbval-ignore-output"]
+```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 %timeit [generate_sequence(n) for n in range(1, 25)]
 ```
 
-```python tags=["naval-ignore-output"]
+```{code-cell} ipython3
+:tags: [naval-ignore-output]
+
 %timeit [calculate_sequence(n) for n in range(1, 25)]
 ```
 
@@ -274,7 +276,8 @@ In practice:
 - Using recursion is powerful as it can be used to directly implement recursive definitions.
 - Using iteration is more computationally efficient but it is not always straightforward to obtain an iterative formula.
 
-<!-- #region -->
++++
+
 #### What is caching
 
 One of the reasons that recursion is computationally inefficient is that it always has to recalculate previously calculated values.
@@ -292,34 +295,31 @@ For example:
 One way to overcome this is to use caching which means that when a function is called for a value it has already computed it remembers the value.
 
 Python has a caching tool available in the functools library:
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 import functools
-
 
 def generate_sequence(n):
     """
     Generate the sequence defined by:
-
+    
     a_1 = 1
     a_n = 3 a_{n - 1}
-
+    
     This is done using recursion.
     """
     if n == 1:
         return 1
     return 3 * generate_sequence(n - 1)
 
-
 @functools.lru_cache()
 def cached_generate_sequence(n):
     """
     Generate the sequence defined by:
-
+    
     a_1 = 1
     a_n = 3 a_{n - 1}
-
+    
     This is done using recursion but also includes a cache.
     """
     if n == 1:
@@ -329,10 +329,14 @@ def cached_generate_sequence(n):
 
 Timing both these approaches confirms a substantial increase in time for the cached version.
 
-```python tags=["nbval-ignore-output"]
+```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 %timeit [generate_sequence(n) for n in range(1, 25)]
 ```
 
-```python tags=["nbval-ignore-output"]
+```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 %timeit [cached_generate_sequence(n) for n in range(1, 25)]
 ```

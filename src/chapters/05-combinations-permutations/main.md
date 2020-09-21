@@ -1,19 +1,17 @@
 ---
-jupyter:
-  jupytext:
-    formats: ipynb,md
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.2'
-      jupytext_version: 1.6.0
-  kernelspec:
-    display_name: Python 3
-    language: python
-    name: python3
+jupytext:
+  formats: ipynb,md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.12
+    jupytext_version: 1.6.0
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
 ---
 
-<!-- #region -->
 ## Combinatorics
 
 ### Introduction
@@ -38,9 +36,8 @@ The digits 1, 2, 3, 4 and 5 are arranged in random order, for form a five-digit 
 ---
 
 First we are going to get the 5 digits. Python has a nice tool for this called `range` which gives us directly the integers from a given bound to another:
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 import itertools
 
 digits = range(1, 6)
@@ -49,7 +46,7 @@ digits
 
 At present that is only the instructions containing the integers from 1 to 5 (the 6 is a strict upper bound). We can transform this to a tuple, using the `tuple` tool:
 
-```python
+```{code-cell} ipython3
 tuple(range(1, 6))
 ```
 
@@ -57,33 +54,34 @@ The question is asking us to get all the permutations of size 5 of that set of i
 
 The main tool we use for this is a library specifically designed to iterate over objects in different ways: `itertools`.
 
-```python tags=["nbval-ignore-output"]
+```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 permutations = itertools.permutations(digits)
 permutations
 ```
 
 That is again only the set of instructions, to view the actual permutations we will again transform this in to a tuple. We will do this an overwrite the value of `permutations` to not be the instructions but the actual tuple of all the permutations:
 
-```python
+```{code-cell} ipython3
 permutations = tuple(permutations)
 permutations
 ```
 
 Now to answer the question we need to find out how many tuples are in that tuple. We do this using the Python `len` tool which returns the length of something:
 
-```python
+```{code-cell} ipython3
 len(permutations)
 ```
 
 We can confirm this to be correct as we know that there are \\(5!\\) ways of arranging those numbers. The `math` library has a `factorial` tool:
 
-```python
+```{code-cell} ipython3
 import math
 
 math.factorial(5)
 ```
 
-<!-- #region -->
 In order to find out how many 5 digit numbers are odd we are going to compute the following sum:
 
 
@@ -94,15 +92,14 @@ In order to find out how many 5 digit numbers are odd we are going to compute th
 Where \\(\Pi\\) is the set of permutations and \\(\pi_5\\) denotes the 5th (and last) element of the permutation. So for example, if the first element of \\(\Pi\\) was \\((1, 2, 3, 4, 5)\\) then \\(\pi_5=5\\) and \\(5 \mod 2=1\\).
 
 To do this we use the `sum` tool in python coupled with the expressions `for` and `in`. We also access the 5th element of a `permutation` using `[4]` (the first element is denoted with a 0, so the 5th is 4):
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 sum(permutation[4] % 2 for permutation in permutations)
 ```
 
 We can again check this theoretically, there are three valid choices for the last digit of a given tuple to be odd: \\(1\\), \\(3\\) and \\(5\\). For each of those, there are then 4 choices for the remaining digits:
 
-```python
+```{code-cell} ipython3
 math.factorial(4) * 3
 ```
 
@@ -118,7 +115,7 @@ Thus we are going to compute the following sum:
     \sum_{\pi \in \Pi \text{ if }\pi_1 10 ^ 4 + \pi_2 10 ^ 3 + \pi_3 10 ^ 2 + \pi_4 10 + \pi_5 \leq 2300} 1
 \\]
 
-```python
+```{code-cell} ipython3
 sum(
     1
     for permutation in permutations
@@ -136,25 +133,22 @@ We can again confirm this theoretically, for a given tuple to be less than 2300 
 - If it is 1 then any of the other \\(4!\\) permutations of the other digits is valid;
 - If it is 2 then the second digit must be 1 and any of the other \\(3!\\) permutations of the other digits is valid.
 
-```python
+```{code-cell} ipython3
 (math.factorial(4) + math.factorial(3))
 ```
 
-<!-- #region -->
 ### How to
 
 
 #### Create a tuple
 
 To create a tuple which is an ordered collection of objects that cannot be changed we use the `()` brackets:
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 basket = ("Bread", "Biscuits", "Coffee")
 basket
 ```
 
-<!-- #region -->
 #### How to access particular elements in a tuple
 
 If we need to we can access elements of this collection using `[]` brackets. The first element is has index `0`:
@@ -164,9 +158,8 @@ tuple[index]
 ```
 
 For example:
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 basket[1]
 ```
 
@@ -185,26 +178,26 @@ This a subset of the operators available.
 
 For example:
 
-```python
+```{code-cell} ipython3
 value = 5
 other_value = 10
 
 value == other_value
 ```
 
-```python
+```{code-cell} ipython3
 value != other_value
 ```
 
-```python
+```{code-cell} ipython3
 value <= other_value
 ```
 
-```python
+```{code-cell} ipython3
 value < value
 ```
 
-```python
+```{code-cell} ipython3
 value <= value
 ```
 
@@ -214,22 +207,23 @@ A common use of list comprehensions is to combine it with the `range` tool which
 
 For example:
 
-```python
+```{code-cell} ipython3
 tuple(range(10))
 ```
 
 Note that `range(N)` gives the integers from 0 until \\(N - 1\\) (inclusive).
 
++++
 
 It is also possible to pass two values as inputs so that we have a different lower bound:
 
-```python
+```{code-cell} ipython3
 tuple(range(4, 10))
 ```
 
 It is also possible to pass a third value as an step size:
 
-```python
+```{code-cell} ipython3
 tuple(range(4, 10, 3))
 ```
 
@@ -237,7 +231,7 @@ tuple(range(4, 10, 3))
 
 The python `itertools` library has a `permutations` tool that will generate all permutations of a given set:
 
-```python
+```{code-cell} ipython3
 import itertools
 
 basket = ("Bread", "Biscuits", "Coffee")
@@ -246,7 +240,7 @@ tuple(itertools.permutations(basket))
 
 It is possible to limit the size to only be permutations of size `r`:
 
-```python
+```{code-cell} ipython3
 tuple(itertools.permutations(basket, r=2))
 ```
 
@@ -254,22 +248,22 @@ tuple(itertools.permutations(basket, r=2))
 
 The python `itertools` library has a `combinations` tool that will generate all combinations of size `r` of a given set:
 
-```python
+```{code-cell} ipython3
 tuple(itertools.combinations(basket, r=2))
 ```
 
 A combination does not care about order so by default the combinations generated are sorted.
 
++++
 
 #### Adding items in a tuple
 
 We can compute the sum of items in a list using the `sum` tool:
 
-```python
+```{code-cell} ipython3
 sum((1, 2, 3))
 ```
 
-<!-- #region -->
 We can also directly use the `sum` without specifically creating the list. This corresponds to the following mathematical notation:
 
 \\[
@@ -289,13 +283,11 @@ Here is an example of calculating the following sum:
 \\[
     \sum_{n=0}^{10} n ^ 2
 \\]
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 sum(n ** 2 for n in range(11))
 ```
 
-<!-- #region -->
 Finally we can compute conditionally sums by only summing over elements that meet a given condition using the following:
 
 ```python
@@ -307,9 +299,8 @@ Here is an example of calculating the following sum:
 \\[
     \sum_{\begin{array}{c}n=0\\\text{ if }n\text{ odd}\end{array}}^{10} n ^ 2
 \\]
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 sum(n ** 2 for n in range(11) if n % 2 == 1)
 ```
 
@@ -317,7 +308,7 @@ sum(n ** 2 for n in range(11) if n % 2 == 1)
 
 The `math` library has a `factorial` tool:
 
-```python
+```{code-cell} ipython3
 math.factorial(5)
 ```
 
@@ -325,7 +316,7 @@ math.factorial(5)
 
 The `scipy.special` library has a `comb` tool:
 
-```python
+```{code-cell} ipython3
 import scipy.special
 
 scipy.special.comb(3, 2)
@@ -335,10 +326,9 @@ scipy.special.comb(3, 2)
 
 The `scipy.special` library has a `perm` tool:
 
-```python
+```{code-cell} ipython3
 scipy.special.perm(3, 2)
 ```
-
 
 ### Exercises
 

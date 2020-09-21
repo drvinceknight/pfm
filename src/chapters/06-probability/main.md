@@ -1,19 +1,17 @@
 ---
-jupyter:
-  jupytext:
-    formats: ipynb,md
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.2'
-      jupytext_version: 1.6.0
-  kernelspec:
-    display_name: Python 3
-    language: python
-    name: python3
+jupytext:
+  formats: ipynb,md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.12
+    jupytext_version: 1.6.0
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
 ---
 
-<!-- #region -->
 ## Probability
 
 ### Introduction
@@ -51,9 +49,8 @@ When a blue token is selected a fair coin is spun.
 We will use the `random` library from the Python standard library to do this.
 
 First we start off by building a Python **tuple** to represent the bag with the tokens. We assign this to a variable `bag`:
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 bag = (
     "Red",
     "Red",
@@ -77,6 +74,7 @@ opposed to `{}` or `[]` is in fact important as it instructs Python to do
 different things (we will learn about this later). You can use `"` or `'`
 interchangeably.
 
++++
 
 Instead of writing every entry out we can create a Python **list** which allows for us to carry out some basic algebra on the items. Here we essentially:
 
@@ -84,14 +82,16 @@ Instead of writing every entry out we can create a Python **list** which allows 
 - Create a list with 7 `"Blue"`s.
 - Combine both lists:
 
-```python
+```{code-cell} ipython3
 bag = ["Red"] * 5 + ["Blue"] * 7
 bag
 ```
 
 Now to sample from that we use the `random` library which has a `choice` command:
 
-```python tags=["nbval-ignore-output"]
+```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 import random
 
 
@@ -100,13 +100,15 @@ random.choice(bag)
 
 If we run this many times we will not always get the same outcome:
 
-```python tags=["nbval-ignore-output"]
+```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 random.choice(bag)
 ```
 
 **Note** that the `bag` variable is unchanged:
 
-```python
+```{code-cell} ipython3
 bag
 ```
 
@@ -114,7 +116,7 @@ In order to answer the first question (what is the probability of picking a red 
 
 We do this by defining a Python function (which is akin to a mathematical function) that allows us to repeat code:
 
-```python
+```{code-cell} ipython3
 def pick_a_token(container):
     """
     A function to randomly sample from a `container`.
@@ -124,11 +126,15 @@ def pick_a_token(container):
 
 We can then call this function, passing our `bag` to it as the `container` from which to pick:
 
-```python tags=["nbval-ignore-output"]
+```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 pick_a_token(container=bag)
 ```
 
-```python tags=["nbval-ignore-output"]
+```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 pick_a_token(container=bag)
 ```
 
@@ -138,7 +144,9 @@ In order to simulate the probability of picking a red token we need to repeat th
     S_1 = \{f(x)\text{ for }x\text{ in }S_2\}
 \\]
 
-```python tags=["nbval-ignore-output"]
+```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 number_of_repetitions = 10000
 samples = [pick_a_token(container=bag) for repetition in range(number_of_repetitions)]
 samples
@@ -146,22 +154,27 @@ samples
 
 We can confirm that we have the correct number of samples:
 
-```python
+```{code-cell} ipython3
 len(samples)
 ```
 
 `len` is the Python tool to get the length of a given Python iterable.
 
++++
 
 Using this we can now use `==` (double `=`) to check how many of those samples are `Red`:
 
-```python tags=["nbval-ignore-output"]
+```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 sum(token == "Red" for token in samples) / number_of_repetitions
 ```
 
 We have sampled  probability of around .41. The theoretic value is \\(\frac{5}{5 + 7}\\):
 
-```python tags=["nbval-ignore-output"]
+```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 5 / (5 + 7)
 ```
 
@@ -173,7 +186,7 @@ To answer the second question (What is the probability of obtaining Heads?) we n
 
 **Note** that for the second random selection (flipping a coin) we will not choose from a list but instead select a random number between 0 and 1.
 
-```python
+```{code-cell} ipython3
 import random
 
 
@@ -204,30 +217,38 @@ def sample_experiment(bag):
 
 Using this we can sample according to the problem description:
 
-```python tags=["nbval-ignore-output"]
+```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 sample_experiment(bag=bag)
 ```
 
-```python tags=["nbval-ignore-output"]
+```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 sample_experiment(bag=bag)
 ```
 
 We can now find out the probability of selecting heads by carrying out a large number of repetitions and checking which ones have a coin that is heads:
 
-```python tags=["nbval-ignore-output"]
+```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 samples = [sample_experiment(bag=bag) for repetition in range(number_of_repetitions)]
 sum(coin == "Heads" for token, coin in samples) / number_of_repetitions
 ```
 
 We can compute this theoretically as well, the expected probability is:
 
-```python
+```{code-cell} ipython3
 import sympy as sym
 
 sym.S(5) / (12) * sym.S(2) / 3 + sym.S(7) / (12) * sym.S(1) / 2
 ```
 
-```python tags=["nbval-ignore-output"]
+```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 41 / 72
 ```
 
@@ -237,7 +258,9 @@ We can also use our samples to calculate the conditional probability that a toke
     S_3 = \{x \in S_1  | \text{ if some property of \(x\) holds}\}
 \\]
 
-```python tags=["nbval-ignore-output"]
+```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 samples_with_heads = [(token, coin) for token, coin in samples if coin == "Heads"]
 sum(token == "Red" for token, coin in samples_with_heads) / len(samples_with_heads)
 ```
@@ -248,11 +271,13 @@ Using Bayes' theorem this is given theoretically by:
     P(\text{Red}|\text{Heads}) = \frac{P(\text{Heads} | \text{Red})P(\text{Red})}{P(\text{Heads})}
 \\]
 
-```python
+```{code-cell} ipython3
 (sym.S(2) / 3 * sym.S(5) / 12) / (sym.S(41) / 72)
 ```
 
-```python tags=["nbval-ignore-output"]
+```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 20 / 41
 ```
 
@@ -262,21 +287,21 @@ Using Bayes' theorem this is given theoretically by:
 
 To create a list which is an ordered collection of objects that **can** be changed we use the `[]` brackets:
 
-```python
+```{code-cell} ipython3
 basket = ["Bread", "Biscuits", "Coffee"]
 basket
 ```
 
 We can add to our list by appending to it:
 
-```python
+```{code-cell} ipython3
 basket.append("Tea")
 basket
 ```
 
 We can also combine lists together:
 
-```python
+```{code-cell} ipython3
 other_basket = ["Toothpaste"]
 basket = basket + other_basket
 basket
@@ -284,7 +309,7 @@ basket
 
 As for tuples we can also access elements using their indices:
 
-```python
+```{code-cell} ipython3
 basket[3]
 ```
 
@@ -305,7 +330,7 @@ INCLUDE IMAGE HERE
 
 We can for example define \\(f:\mathbb{R}\to\mathbb{R}\\) given by \\(f(x) = x ^ 3\\) using the following:
 
-```python
+```{code-cell} ipython3
 def x_cubed(x):
     """
     A function to return x ^ 3
@@ -315,7 +340,7 @@ def x_cubed(x):
 
 It is important to include the *docstring* as this allows us to make sure our code is clear. We can access that docstring using `help`:
 
-```python
+```{code-cell} ipython3
 help(x_cubed)
 ```
 
@@ -327,23 +352,23 @@ Once a function is defined we call it using the `()`:
 name(variable1, variable2, ...)
 ```
 
++++
 
 For example:
 
-```python
+```{code-cell} ipython3
 x_cubed(2)
 ```
 
-```python
+```{code-cell} ipython3
 x_cubed(5)
 ```
 
-```python
+```{code-cell} ipython3
 x = sym.Symbol("x")
 x_cubed(x)
 ```
 
-<!-- #region -->
 #### Conditional running of code
 
 To run code depending on whether or not a particular condition is met we use something called an `if` statement.
@@ -355,7 +380,8 @@ if condition:
 else:
     OTHER INDENTED BLOCK OF CODE TO RUM IF CONDITION IS NOT TRUE
 ```
-<!-- #endregion -->
+
++++
 
 These `if` statements are most useful when combined with functions. For example we can define the following function:
 
@@ -366,7 +392,7 @@ These `if` statements are most useful when combined with functions. For example 
             \end{cases}
 \\]
 
-```python
+```{code-cell} ipython3
 def f(x):
     """
     A function that returns x ^ 3 if x is negative.
@@ -377,21 +403,21 @@ def f(x):
     return x ** 2
 ```
 
-```python
+```{code-cell} ipython3
 f(0)
 ```
 
-```python
+```{code-cell} ipython3
 f(-1)
 ```
 
-```python
+```{code-cell} ipython3
 f(3)
 ```
 
 Here is another example of a function that returns the price of a given item, if the item is not specific in the function then the price is free:
 
-```python
+```{code-cell} ipython3
 def get_price_of_item(item):
     """
     Returns the price of an item:
@@ -417,19 +443,18 @@ def get_price_of_item(item):
     return 0
 ```
 
-```python
+```{code-cell} ipython3
 get_price_of_item("Toothpaste")
 ```
 
-```python
+```{code-cell} ipython3
 get_price_of_item("Biscuits")
 ```
 
-```python
+```{code-cell} ipython3
 get_price_of_item("Rollerblades")
 ```
 
-<!-- #region -->
 #### Create a list using a list comprehension
 
 We can create a new list from an old list using a **list comprehension**. This corresponds to building a set from another set in the usual mathematical notation:
@@ -450,9 +475,8 @@ In Python this is done as follows:
 ```python
 new_list = [object for object in old_list]
 ```
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 s_1 = [2, 5, 10]
 s_2 = [x - 5 for x in s_1]
 s_2
@@ -462,7 +486,7 @@ We can combine this with functions to write succinct efficient code.
 
 For example we can compute the price of a basket of goods using the following:
 
-```python
+```{code-cell} ipython3
 basket = ["Tea", "Tea", "Toothpaste", "Bread"]
 prices = [get_price_of_item(item) for item in basket]
 prices
@@ -474,22 +498,22 @@ A common use of list comprehensions is to combine it with the `range` tool which
 
 For example:
 
-```python
+```{code-cell} ipython3
 [number for number in range(10)]
 ```
 
 Note that `range(N)` gives the integers from 0 until \\(N - 1\\) (inclusive).
 
++++
 
 #### Adding items in a list
 
 We can compute the sum of items in a list using the `sum` tool:
 
-```python
+```{code-cell} ipython3
 sum([1, 2, 3])
 ```
 
-<!-- #region -->
 We can also directly use the `sum` without specifically creating the list. This corresponds to the following mathematical notation:
 
 \\[
@@ -513,9 +537,8 @@ sum([f(object) for object in old_list])
 but it is not as efficient.
 
 Here is an example of getting the total price of a basket of goods:
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 basket = ["Tea", "Tea", "Toothpaste", "Bread"]
 total_price = sum(get_price_of_item(item) for item in basket)
 total_price
@@ -525,7 +548,9 @@ total_price
 
 To randomly sample from any collection of items (this is called an **iterable**) we use the random library and the `choice` tool:
 
-```python tags=["nbval-ignore-output"]
+```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 import random
 
 
@@ -537,7 +562,9 @@ random.choice(basket)
 
 To sample a random number between 0 and 1 we use the random library and the `random` tool:
 
-```python tags=["nbval-ignore-output"]
+```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 import random
 
 
@@ -548,18 +575,18 @@ random.random()
 
 The random numbers processes generated by the Python random module are what are called pseudo random which means that we can get a computer to reproduce them by **seeding** the random process:
 
-```python
+```{code-cell} ipython3
 import random
 
 random.seed(0)
 random.random()
 ```
 
-```python
+```{code-cell} ipython3
 random.random()
 ```
 
-```python
+```{code-cell} ipython3
 random.seed(0)
 random.random()
 ```
@@ -613,29 +640,28 @@ This blog post is a good explanation of the difference: https://www.afternerd.co
 
 In the tutorial and elsewhere we created a list of booleans and then take the sum. Here are some of the steps:
 
-
-```python
+```{code-cell} ipython3
 samples = ("Red", "Red", "Blue")
 ```
 
-```python
+```{code-cell} ipython3
 booleans = [sample == "Red" for sample in samples]
 booleans
 ```
 
 When we take the `sum` of that list we get a numeric value:
 
-```python
+```{code-cell} ipython3
 sum(booleans)
 ```
 
 This has in fact counted the `True` values as 1 and the `False` values as 0.
 
-```python
+```{code-cell} ipython3
 int(True)
 ```
 
-```python
+```{code-cell} ipython3
 int(False)
 ```
 
@@ -656,10 +682,11 @@ As an example let us create the following set:
 
 where \\(f(x)= \cos^2(x)\\).
 
++++
 
 The correct way to do this is:
 
-```python
+```{code-cell} ipython3
 import sympy as sym
 
 
@@ -676,7 +703,7 @@ S
 
 If we replaced the `return` statement in the function definition with a `print` we obtain:
 
-```python
+```{code-cell} ipython3
 def f(x):
     """
     Return the square of the cosine of x
@@ -691,7 +718,7 @@ We see now that as the function has been run it displays the output.
 
 **However** if we look at what `S` is we see that the function has not returned anything:
 
-```python
+```{code-cell} ipython3
 S
 ```
 
@@ -700,6 +727,7 @@ Here are some other materials on this subject:
 - https://www.tutorialspoint.com/Why-would-you-use-the-return-statement-in-Python
 - https://pythonprinciples.com/blog/print-vs-return/
 
++++
 
 #### How does Python sample randomness?
 
@@ -712,12 +740,13 @@ The specific algorithm using in Python for randomness is called the Mersenne twi
 
 You can read more about this here: https://docs.python.org/3/library/random.html#module-random
 
++++
 
 #### What is the difference between a docstring and a comment
 
 In Python it is possible to write statements that are ignored using the `#` symbol. This creates something called a "comment". For example:
 
-```python
+```{code-cell} ipython3
 # create a list to represent the tokens in a bag
 bag = ["Red", "Red", "Blue"]
 ```
@@ -726,7 +755,7 @@ A docstring however is something that is "attached" to a function and can be acc
 
 If we rewrite the function to sample the experiment of the tutorial without a docstring but using comments we will have:
 
-```python
+```{code-cell} ipython3
 def sample_experiment(bag):
     # Select a token
     selected_token = pick_a_token(container=bag)
@@ -750,7 +779,7 @@ def sample_experiment(bag):
 
 Now if we try to access the help for the function we will not get it:
 
-```python
+```{code-cell} ipython3
 help(sample_experiment)
 ```
 
@@ -758,7 +787,7 @@ Furthermore, if you look at the code with comments you will see that because of 
 
 In software engineering it is generally accepted that comments indicate that your code is not clear and so it is preferable to write clear documentation explaining why something is done through docstrings.
 
-```python
+```{code-cell} ipython3
 def sample_experiment(bag):
     """
     This samples a token from a given bag and then

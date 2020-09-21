@@ -1,19 +1,17 @@
 ---
-jupyter:
-  jupytext:
-    formats: ipynb,md
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.2'
-      jupytext_version: 1.6.0
-  kernelspec:
-    display_name: Python 3
-    language: python
-    name: python3
+jupytext:
+  formats: ipynb,md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.12
+    jupytext_version: 1.6.0
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
 ---
 
-<!-- #region -->
 ## Matrices
 
 ### Introduction
@@ -51,9 +49,8 @@ The matrix \\(A\\) is given by \\(A=\begin{pmatrix}a & 1 & 1\\ 1 & a & 1\\ 1 & 1
 Sympy is once again the library we will use for this.
 
 We will start by our matrix \\(A\\):
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 import sympy as sym
 
 a = sym.Symbol("a")
@@ -62,14 +59,14 @@ A = sym.Matrix([[a, 1, 1], [1, a, 1], [1, 1, 2]])
 
 We can now create a variable `determinant` and assign it the value of the determinant of \\(A\\):
 
-```python
+```{code-cell} ipython3
 determinant = A.det()
 determinant
 ```
 
 A matrix is singular if it has determinant 0. We can find the values of \\(a\\) for which this occurs:
 
-```python
+```{code-cell} ipython3
 sym.solveset(determinant, a)
 ```
 
@@ -77,31 +74,30 @@ Thus it is not possible to find the determinant of \\(A\\) for \\(a\in\{0, 1\}\\
 
 However for \\(a = 2\\):
 
-```python
+```{code-cell} ipython3
 A.subs({a: 2})
 ```
 
-```python
+```{code-cell} ipython3
 A.subs({a: 2}).inv()
 ```
 
 To carry out matrix multiplication we use the `@` symbol:
 
-```python
+```{code-cell} ipython3
 A.subs({a: 2}).inv() @ A.subs({a: 2})
 ```
 
 and for \\(a = 3\\):
 
-```python
+```{code-cell} ipython3
 A.subs({a: 3}).inv()
 ```
 
-```python
+```{code-cell} ipython3
 A.subs({a: 3}).inv() @ A.subs({a: 3})
 ```
 
-<!-- #region -->
 ### How to
 
 
@@ -118,14 +114,12 @@ For example, the following creates the matrix:
             9 & 10 & 11 & 12
         \end{pmatrix}
 \\]
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 B = sym.Matrix([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
 B
 ```
 
-<!-- #region -->
 **Note** that it is possible to write the code in a more readable way as long as an incomplete line ends with an open bracket:
 
 
@@ -138,7 +132,8 @@ B = sym.Matrix(
     ]
 )
 ```
-<!-- #endregion -->
+
++++
 
 #### Calculate the determinant of a matrix
 
@@ -151,12 +146,11 @@ To calculate the determinant of a matrix, we use the `.det` tool. For example to
     \end{pmatrix}
 \\]
 
-```python
+```{code-cell} ipython3
 matrix = sym.Matrix([[1, 5], [5, 1]])
 matrix.det()
 ```
 
-<!-- #region -->
 #### Calculate the inverse of a matrix
 
 
@@ -168,9 +162,8 @@ To calculate the inverse of a matrix, we use the `.inv` tool. For example to cal
         5     & 0
     \end{pmatrix}
 \\]
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 matrix = sym.Matrix([[sym.S(1) / 2, 1], [5, 0]])
 matrix.inv()
 ```
@@ -186,7 +179,7 @@ To multiple a matrix by a scalar we use the `*` operator. For example to multipl
     \end{pmatrix}
 \\]
 
-```python
+```{code-cell} ipython3
 matrix = sym.Matrix([[sym.S(1) / 5, 1], [1, 1]])
 6 * matrix
 ```
@@ -206,13 +199,12 @@ To add matrices we use the `+` operator. For example to compute:
     \end{pmatrix}
 \\]
 
-```python
+```{code-cell} ipython3
 matrix = sym.Matrix([[sym.S(1) / 5, 1], [1, 1]])
 other_matrix = sym.Matrix([[sym.S(4) / 5, 0], [0, 0]])
 matrix + other_matrix
 ```
 
-<!-- #region -->
 #### Multiply matrices together
 
 To multiply matrices together we use the `@` operator. For example to compute:
@@ -228,9 +220,8 @@ To multiply matrices together we use the `@` operator. For example to compute:
         0 & 0
     \end{pmatrix}
 \\]
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 matrix @ other_matrix
 ```
 
@@ -246,7 +237,7 @@ A vector is essentially a matrix with a single row or column. For example to cre
     \end{pmatrix}
 \\]
 
-```python
+```{code-cell} ipython3
 vector = sym.Matrix([[3], [2], [1]])
 vector
 ```
@@ -263,7 +254,7 @@ To solve a given linear system that can be represented in matrix form, we create
     \end{array}
 \\]
 
-```python
+```{code-cell} ipython3
 A = sym.Matrix([[1, 2, 0], [3, 1, 2], [0, -1, 1]])
 b = sym.Matrix([[3], [4], [1]])
 A.inv() @ b
@@ -318,7 +309,7 @@ A.inv() @ b
 
 With sympy it is in fact possible to use the `*` operator for matrix multiplication:
 
-```python
+```{code-cell} ipython3
 matrix = sym.Matrix([[sym.S(1) / 5, 1], [1, 1]])
 other_matrix = sym.Matrix([[sym.S(4) / 5, 0], [0, 0]])
 matrix * other_matrix
@@ -326,6 +317,7 @@ matrix * other_matrix
 
 However there are other libraries that can be used for linear algebra and in those libraries the `*` does not do matrix multiplication, it does element wise multiplication instead. So for clarity it is preferred to use `@` throughout.
 
++++
 
 #### I have read that `numpy` is a library for linear algebra?|
 

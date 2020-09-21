@@ -1,16 +1,15 @@
 ---
-jupyter:
-  jupytext:
-    formats: ipynb,md
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.2'
-      jupytext_version: 1.6.0
-  kernelspec:
-    display_name: Python 3
-    language: python
-    name: python3
+jupytext:
+  formats: ipynb,md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.12
+    jupytext_version: 1.6.0
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
 ---
 
 ## Algebra
@@ -54,28 +53,27 @@ Often specific sets of tools are separated in to things called **libraries**. We
 start by telling Python that we want to use the specific library for **symbolic
 mathematics**:
 
-```python
+```{code-cell} ipython3
 import sympy
 ```
 
 This allows us to solve the first part of the question. First we create a variable `expression` and **assign** it a value of \\(\frac{1}{\sqrt{2} + 1}\\).
 
-```python
+```{code-cell} ipython3
 expression = 1 / (sympy.sqrt(2) + 1)
 expression
 ```
 
-
 **Note** that this is not what would happen if we plugged the above in to a basic calculator, it would instead give us a value of:
 
-```python
+```{code-cell} ipython3
 float(expression)
 ```
 
 The `sympy` library has a diverse set of tools available, one of which is to
 algorithmically attempt to simplify an expression. Here is how we do that:
 
-```python
+```{code-cell} ipython3
 sympy.simplify(expression)
 ```
 
@@ -95,11 +93,10 @@ The `sympy.simplify` command did not give us much insight in to what happened bu
 
 Here is how we do that:
 
-```python
+```{code-cell} ipython3
 sympy.expand((-1 + sympy.sqrt(2)) * (1 + sympy.sqrt(2)))
 ```
 
-<!-- #region -->
 We see that `sympy` allows us to carry out basic expression manipulation. We will now consider the second part of the question:
 
 
@@ -115,9 +112,8 @@ We see that `sympy` allows us to carry out basic expression manipulation. We wil
 ---
 
 We will start by reassigning the value of the variable `expression` to be the expression: \\(2x ^ 2 + x + 1\\).
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 x = sympy.Symbol("x")
 expression = 2 * x ** 2 + x + 1
 expression
@@ -129,7 +125,7 @@ expression
 
 We can immediately use this to compute the discriminant:
 
-```python
+```{code-cell} ipython3
 sympy.discriminant(expression)
 ```
 
@@ -137,14 +133,14 @@ Now we can complement this with our mathematical knowledge: if a quadratic has a
 
 We can confirm this by directly creating the equation. We do this by creating a variable `equation` and assigning it the equation which has a `lhs` and a `rhs`:
 
-```python
+```{code-cell} ipython3
 equation = sympy.Eq(lhs=expression, rhs=0)
 equation
 ```
 
 and asking Sympy to solve it:
 
-```python
+```{code-cell} ipython3
 sympy.solveset(equation)
 ```
 
@@ -160,7 +156,7 @@ for some values of \\(a, b, c\\).
 
 First let us create variables that have those 3 constants as value but also create a variable `completed_square` and assign it the general expression:
 
-```python
+```{code-cell} ipython3
 a, b, c = sympy.Symbol("a"), sympy.Symbol("b"), sympy.Symbol("c")
 completed_square = a * (x - b) ** 2 + c
 completed_square
@@ -168,7 +164,7 @@ completed_square
 
 We can expand this:
 
-```python
+```{code-cell} ipython3
 sympy.expand(completed_square)
 ```
 
@@ -180,7 +176,7 @@ We will now use sympy to solve the various equations that arise from comparing t
 
 with the completed square.
 
-First, we see that the coefficient of \\(x ^ 2\\) gives us the following equation:
+First, we see that the coefficient of \\(x ^ 2\\) gives us a simple equation:
 
 \\[
     a = 2
@@ -188,14 +184,14 @@ First, we see that the coefficient of \\(x ^ 2\\) gives us the following equatio
 
 For completeness we will write the code that solves this trivial equation:
 
-```python
+```{code-cell} ipython3
 equation = sympy.Eq(a, 2)
 sympy.solveset(equation, a)
 ```
 
 We will now substitute this value of \\(a\\) in to the completed square and update the variable with the new value:
 
-```python
+```{code-cell} ipython3
 completed_square = completed_square.subs({a: 2})
 completed_square
 ```
@@ -204,7 +200,7 @@ completed_square
 
 Now let us look at the expression with our two remaining constants:
 
-```python
+```{code-cell} ipython3
 sympy.expand(completed_square)
 ```
 
@@ -214,7 +210,7 @@ Comparing the coefficients of \\(x\\) we have the equation:
   - 4 b = 1  
 \\]
 
-```python
+```{code-cell} ipython3
 equation = sympy.Eq(-4 * b, 1)
 sympy.solveset(equation, b)
 ```
@@ -223,14 +219,14 @@ We will now substitute this value of \\(b\\) back in to our expression.
 
 **Note** that we make a point to tell sympy to treat \\(1 / 4\\) symbolically and to not calculate the numeric value:
 
-```python
+```{code-cell} ipython3
 completed_square = completed_square.subs({b: -1 / sympy.S(4)})
 completed_square
 ```
 
 Expanding this to see our expression with the one remaining constant gives:
 
-```python
+```{code-cell} ipython3
 sympy.expand(completed_square)
 ```
 
@@ -242,42 +238,40 @@ We have a final equation for the constant term:
 
 We will use sympy to find the value of \\(c\\):
 
-```python
+```{code-cell} ipython3
 sympy.solveset(sympy.Eq(c + sympy.S(1) / 8, 1), c)
 ```
 
 As before we will substitute that in and update the value of `completed_square`:
 
-```python
+```{code-cell} ipython3
 completed_square = completed_square.subs({c: 7 / sympy.S(8)})
 completed_square
 ```
 
 Using this we can see that the there are indeed no values of \\(x\\) which give negative values of \\(f(x)\\) as \\(f(x)\\) is a square added to a constant.
 
-The minimum is when \\(x=-1/4\\) which gives: \\(f(-1/4)=7/8\\):
+The minimum is clearly when \\(x=-1/4\\) which gives: \\(f(-1/4)=7/8\\):
 
-```python
+```{code-cell} ipython3
 completed_square.subs({x: -1 / sympy.S(4)})
 ```
 
-<!-- #region -->
 ### How To
 
 
 #### How to create a symbolic numeric value
 
 To create a symbolic numerical value use `sympy.S`. For example:
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 value = sympy.S(3)
 value
 ```
 
 Note that if we combine a symbolic value with a non symbolic value it will automatically give a symbolic value:
 
-```python
+```{code-cell} ipython3
 1 / value
 ```
 
@@ -290,31 +284,32 @@ We can get the numerical value of a symbolic value using `float` or `int`:
 
 For example, let us create a symbolic numeric variable with value \\(\frac{1}{5}\\):
 
-```python
+```{code-cell} ipython3
 value = 1 / sympy.S(5)
 value
 ```
 
 To get the numerical value:
 
-```python
+```{code-cell} ipython3
 float(value)
 ```
 
 If we wanted the integer value:
 
-```python
+```{code-cell} ipython3
 int(value)
 ```
 
 **Note** this is not rounding to the nearest integer. It is returning the integer part.
 
++++
 
 #### How to factor an expression
 
 We use the `sympy.factor` tool to factor expressions:
 
-```python
+```{code-cell} ipython3
 sympy.factor(x ** 2 - 9)
 ```
 
@@ -322,7 +317,7 @@ sympy.factor(x ** 2 - 9)
 
 We use the `sympy.expand` tool to expand expressions:
 
-```python
+```{code-cell} ipython3
 sympy.expand((x - 3) * (x + 3))
 ```
 
@@ -330,12 +325,13 @@ sympy.expand((x - 3) * (x + 3))
 
 We use the `sympy.simplify` tool to simplify an expression. 
 
-```python
+```{code-cell} ipython3
 sympy.simplify((x - 3) * (x + 3))
 ```
 
 **Note** this will not always give the expected (or any) result. At times it could be more beneficial to use `sympy.expand` and/or `sympy.factor`.
 
++++
 
 #### How to solve an equation
 
@@ -352,28 +348,27 @@ Here is how we can use Sympy to obtain the roots of the general quadratic:
     a x ^ 2 + bx + c
 \\]
 
-```python
+```{code-cell} ipython3
 quadratic = a * x ** 2 + b * x + c
 sympy.solveset(quadratic, x)
 ```
 
 Here is how we would solve the same equation but not for \\(x\\) but for \\(b\\):
 
-```python
+```{code-cell} ipython3
 sympy.solveset(quadratic, b)
 ```
 
 It is however clearer to specifically write the equation that we want to solve:
 
-```python
+```{code-cell} ipython3
 equation = sympy.Eq(a * x ** 2 + b * x + c, 0)
 sympy.solveset(equation, x)
 ```
 
-<!-- #region -->
 #### How to substitute a value in to an expression
 
-Given a Sympy expression it is possible to substitute values in to it using the `.subs()` tool. This takes the variables and their values in the following format:
+Given a Sympy expression it is possible to substite values in to it using the `.subs()` tool. This takes the variables and their values in the following format:
 
 ```python
 expression.subs({variable: value})
@@ -382,9 +377,8 @@ expression.subs({variable: value})
 Note that it is possible to pass multiple variables at a time.
 
 For example we can substitute the values for \\(a, b, c\\) in to our quadratic:
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 quadratic = a * x ** 2 + b * x + c
 quadratic.subs({a: 1, b: sympy.S(7) / 8, c: 0})
 ```
@@ -407,7 +401,7 @@ quadratic.subs({a: 1, b: sympy.S(7) / 8, c: 0})
     4. \\(4 x ^3 + 7x - 24 = 1\\)
 3. Consider the equation: \\(x ^ 2 + 4 - y = \frac{1}{y}\\):
     1. Find the solution to this equation for \\(x\\).
-    2. Obtain the specific solution when \\(y = 5\\). Do this in two ways: substitute the value in to your equation and substitute the value in to your solution.
+    2. Obtain the specific solution when \\(y = 5\\). Do this in two ways: subsitute the value in to your equation and substitue the value in to your solution.
 4. Consider the quadratic: \\(f(x)=4x ^ 2 + 16x + 25\\):
   1. Calculate the descriminant of the quadratic equation \\(4x ^ 2 + 16x + 25 =
      0\\). What does this tell us about the solutions to the equation? What
@@ -420,11 +414,12 @@ quadratic.subs({a: 1, b: sympy.S(7) / 8, c: 0})
      does this tell us about the graph of \\(f(x)\\)?
   2. By completing the square, show that the minimum point of \\(f(x)\\) is
      \\(\left(4, -97\right)\\)
-6. Consider the function \\(f(x) = x^ 2 + a x + b\\).
+6. Consider the function \\(f(x) = x^ 2 +ax + b\\).
   1. Given that \\(f(0) = 0\\) and \\(f(3) = 0\\) obtain the values of \\(a\\) and \\(b\\).
   2. By completing the square confirm that graph of \\(f(x)\\) has a line of symmetry at \\(x=\frac{3}{2}\\)
 
-<!-- #region -->
++++
+
 ### Reference
 
 
@@ -437,13 +432,13 @@ One of the advantages of having code in libraries is that it is more efficient f
 There are two types of Python libraries:
 
 - Those that are part of the so called "standard library": these are part of Python itself.
-- Those that are completely separate: Sympy is one such example of this.
+- Those that are completely seperate: Sympy is one such example of this.
 
-This separation allows for the development of tools to be not dependent on each others. The developers of Sympy do not need to coordinate with the developers of Python to make new releases of the software.
+This seperation allows for the development of tools to be not dependent on each others. The developers of Sympy do not need to coordinate with the developers of Python to make new releases of the software.
 
 #### Why do we need to use sympy?
 
-Sympy is the library for symbolic mathematics. There are other python libraries for carrying out mathematics in Python.
+Sympt is the library for symbolic mathematics. There are other python libraries for carrying out mathematics in Python.
 
 For example, let us compute the value of the following expression:
 
@@ -452,9 +447,8 @@ For example, let us compute the value of the following expression:
 \\]
 
 We could compute this using the `math` library (for the square root tool):
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 import math
 
 (math.sqrt(2) + 2) ** 2 - 2
@@ -466,7 +460,7 @@ We could also make use of the fact that we do not need a square root tool at all
     (\sqrt{2} + 2) ^ 2 - 2 = (2 ^ {1 / 2} + 2) ^ 2 - 2
 \\]
 
-```python
+```{code-cell} ipython3
 (2 ** (1 / 2) + 2) ** 2 - 2
 ```
 
@@ -474,20 +468,20 @@ We see that in both those instances, we have a numeric value for the expression 
 
 However, that is **not** the exact value of that expression. The exact value of the expression needs to be computed symbolically:
 
-```python
+```{code-cell} ipython3
 expression = (sympy.sqrt(2) + 2) ** 2 - 2
 sympy.expand(expression)
 ```
 
-This is one example of why Sympy is an effective tool for mathematicians. The other one seen in this chapter is being able to compute expressions with no numerical value at all:
+This is just one example of why Sympy is an effective tool for mathematicians. The other one seen in this chapter is being able to compute expressions with no numerical value at all:
 
-```python
+```{code-cell} ipython3
 sympy.factor(a ** 2 - b ** 2)
 ```
 
 #### Why do I sometimes see `from sympy import *`?
 
-There a number of resources available from which you can learn to use Sympy. In some instances you will not see `import sympy` but instead you will see `from sympy import *`.
+There a number of resources available from which you can learn to use Sympy. In some isntances you will not see `import sympy` but instead you will see `from sympy import *`.
 
 **This it not a good way to do it.**
 
@@ -497,43 +491,40 @@ The problem with doing this is that it no longer makes your code clear.
 
 An example of this are trigonometric functions. These exist in a number of libraries:
 
-```python
+```{code-cell} ipython3
 import math
-```
-
-```python
 import sympy
 ```
 
-```python
+```{code-cell} ipython3
 sympy.cos(0)
 ```
 
-```python
+```{code-cell} ipython3
 math.cos(0)
 ```
 
 One however allows us to carry out exact computations:
 
-```python
+```{code-cell} ipython3
 sympy.cos(sympy.pi / 4)
 ```
 
-```python
+```{code-cell} ipython3
 math.cos(math.pi / 4)
 ```
 
 If we chose to import all the functionality using `from sympy import *` then we cannot tell immediately which function we are using (except from its output):
 
-```python
+```{code-cell} ipython3
 from sympy import *
 ```
 
-```python
+```{code-cell} ipython3
 from math import *
 ```
 
-```python
+```{code-cell} ipython3
 cos(pi / 4)
 ```
 
@@ -541,19 +532,19 @@ In that case the second import has overwritten the first.
 
 **It is never recommended to use** `import *` this makes your code less clear and you are more likely to make mistakes when your code is not clear.
 
-<!-- #region -->
++++
+
 #### Why do I sometimes see `import sympy as sym`?
 
 In some resources you will see that instead of `import sympy` people use: `import sympy as sym`. This is common and take advantage of the fact that Python can import a library and give it an alias/nickname at the same time:
 
-```
+```python
 import <library> as <nickname>
 ```
 
 So with sympy we can use:
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 import sympy as sym
 
 sym.cos(sym.pi / 4)
@@ -561,7 +552,7 @@ sym.cos(sym.pi / 4)
 
 There is nothing stopping you using whatever alias you want:
 
-```python
+```{code-cell} ipython3
 import sympy as a_poor_name_choice
 
 a_poor_name_choice.cos(a_poor_name_choice.pi / 4)
@@ -569,6 +560,7 @@ a_poor_name_choice.cos(a_poor_name_choice.pi / 4)
 
 **It is important** when doing this to use accepted conventions for these nicknames. For sympy, an accepted convention is indeed `import sympy as sym`.
 
++++
 
 #### Are there other resources for learning sympy?
 
@@ -578,6 +570,6 @@ Here are some resources:
 
 - The main sympy documentation: https://docs.sympy.org/latest/index.html
 - The scientific python lecture notes chapter on sympy: https://scipy-lectures.org/packages/sympy.html
-- A short tutorial is available at: https://github.com/drvinceknight/Python-Mathematics-Handbook/
+- A short tutorial: https://github.com/drvinceknight/Python-Mathematics-Handbook/blob/master/01-Symbolic-mathematics-with-Sympy.ipynb
 
 There are numerous other resources on the web, if you would like to know if they are reliable or not do not hesitate to ask.

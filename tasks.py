@@ -37,7 +37,7 @@ def get_book_source_files(root=ROOT):
     """
     Returns a generator of all the markdown sources files of the book.
     """
-    book_path = ROOT / "nbs/book/"
+    book_path = ROOT / "src/book/"
     return filter(path_in_book, book_path.glob("**/*md"))
 
 
@@ -212,7 +212,7 @@ def buildbook(c, root=ROOT):
     """
     output_path = root / "book/"
     shutil.rmtree(output_path, ignore_errors=True)
-    c.run(f"jb build nbs/book --path-output {root}")
+    c.run(f"jb build src/book --path-output {root}")
 
 
 @task
@@ -247,4 +247,4 @@ def testnbs(c, root=ROOT):
     """
     Remove previous build and rebuild the book.
     """
-    c.run(f"python -m pytest --ignore={root}/nbs/drafts --nbval --current-env")
+    c.run(f"python -m pytest --ignore={root}/src/drafts --nbval --current-env")

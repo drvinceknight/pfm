@@ -1,19 +1,17 @@
 ---
-jupyter:
-  jupytext:
-    formats: ipynb,md
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.2'
-      jupytext_version: 1.6.0
-  kernelspec:
-    display_name: Python 3
-    language: python
-    name: python3
+jupytext:
+  formats: ipynb,md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.12
+    jupytext_version: 1.6.0
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
 ---
 
-<!-- #region -->
 ## Using notebooks
 
 ### Introduction
@@ -132,13 +130,11 @@ In the first available "cell" write the following calculation:
 When you have done that click on the `Run` button (you can also use `Shift + Enter` as a keyboard shortcut).
 
 ![](./img/running_code/main.png)
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 2 + 2
 ```
 
-<!-- #region -->
 We see two different things there:
 
 1. The input: `In [1]` which is the instruction to Python to use the mathematical technique of addition to compute 2 + 2.
@@ -172,9 +168,9 @@ installed on your computer but a portable option is `HTML`.
 Click on `HTML (.html)`.
 
 Now use your file browser and open the downloaded file. This will open in your browser a static version of the file you have been working on. This is a helpful way to share your work with someone who might not have Jupyter (or even Python).
-<!-- #endregion -->
 
-<!-- #region -->
++++
+
 ### How To
 
 #### Install Anaconda
@@ -321,7 +317,8 @@ Click on `File` then `Download as` and choose the format you want to use. `HTML`
 is a portable option that can be viewed on most devices, note however that you
 cannot run the cells: what you are downloading a is static version of your
 notebook.  
-<!-- #endregion -->
+
++++
 
 ### Exercises
 
@@ -352,7 +349,8 @@ notebook.
    5. \\(\begin{pmatrix}4 & 12 & 3\\2 & x & i\\\end{pmatrix}\\)
 5. Save your notebook to `HTML` and open and view it.
 
-<!-- #region -->
++++
+
 ### Reference
 
 #### Why use anaconda?
@@ -446,4 +444,3 @@ Markup languages differ in complexity:
 
 - \\(\LaTeX\\) is incredibly sophisticated and has a huge range of capabilities.
 - Markdown is designed to be basic with a few specific annotations to remember.
-<!-- #endregion -->
