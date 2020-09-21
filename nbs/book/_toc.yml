@@ -8,3 +8,8 @@
     - file: 01-using-notebooks/exercises/main
     - file: 01-using-notebooks/why/main
   - file: 02-algebra/introduction/main
+    sections:
+    - file: 02-algebra/tutorial/main
+    - file: 02-algebra/how/main
+    - file: 02-algebra/exercises/main
+    - file: 02-algebra/why/main
