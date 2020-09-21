@@ -13,3 +13,9 @@
     - file: 02-algebra/how/main
     - file: 02-algebra/exercises/main
     - file: 02-algebra/why/main
+  - file: 03-calculus/introduction/main
+    sections:
+    - file: 03-calculus/tutorial/main
+    - file: 03-calculus/how/main
+    - file: 03-calculus/exercises/main
+    - file: 03-calculus/why/main

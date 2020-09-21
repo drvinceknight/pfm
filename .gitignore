@@ -24,4 +24,4 @@ nbs/chapters/plot.pdf
 *blg
 *xdv
 *.ipynb_checkpoints*
-book/
+_build/

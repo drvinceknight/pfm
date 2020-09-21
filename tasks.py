@@ -214,10 +214,6 @@ def buildbook(c, root=ROOT):
     shutil.rmtree(output_path, ignore_errors=True)
     c.run(f"jb build nbs/book --path-output {root}")
 
-    build_path = root / "_build"
-    shutil.copytree(src=build_path / "html", dst=output_path)
-    shutil.rmtree(build_path, ignore_errors=True)
-
 
 @task
 def backupbook(c, root=ROOT):
