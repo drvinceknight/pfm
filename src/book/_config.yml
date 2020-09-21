@@ -1,5 +1,5 @@
 # Book settings
-title: Computing for mathematics
+title: Python for mathematics
 author: Vincent Knight
 execute:
   execute_notebooks: force

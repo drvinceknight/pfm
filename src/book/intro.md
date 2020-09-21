@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Computing for Mathematics
+# Python for Mathematics
 
 ## Introduction
 
