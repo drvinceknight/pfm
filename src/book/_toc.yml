@@ -25,3 +25,9 @@
     - file: 04-matrices/how/main
     - file: 04-matrices/exercises/main
     - file: 04-matrices/why/main
+  - file: 05-combinations-permutations/introduction/main
+    sections:
+    - file: 05-combinations-permutations/tutorial/main
+    - file: 05-combinations-permutations/how/main
+    - file: 05-combinations-permutations/exercises/main
+    - file: 05-combinations-permutations/why/main
