@@ -19,3 +19,9 @@
     - file: 03-calculus/how/main
     - file: 03-calculus/exercises/main
     - file: 03-calculus/why/main
+  - file: 04-matrices/introduction/main
+    sections:
+    - file: 04-matrices/tutorial/main
+    - file: 04-matrices/how/main
+    - file: 04-matrices/exercises/main
+    - file: 04-matrices/why/main
