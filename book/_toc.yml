@@ -1,0 +1,45 @@
+- file: intro
+- part: Tools for mathematics
+  chapters:
+  - file: 01-using-notebooks/introduction/main
+    sections:
+    - file: 01-using-notebooks/tutorial/main
+    - file: 01-using-notebooks/how/main
+    - file: 01-using-notebooks/exercises/main
+    - file: 01-using-notebooks/why/main
+  - file: 02-algebra/introduction/main
+    sections:
+    - file: 02-algebra/tutorial/main
+    - file: 02-algebra/how/main
+    - file: 02-algebra/exercises/main
+    - file: 02-algebra/why/main
+  - file: 03-calculus/introduction/main
+    sections:
+    - file: 03-calculus/tutorial/main
+    - file: 03-calculus/how/main
+    - file: 03-calculus/exercises/main
+    - file: 03-calculus/why/main
+  - file: 04-matrices/introduction/main
+    sections:
+    - file: 04-matrices/tutorial/main
+    - file: 04-matrices/how/main
+    - file: 04-matrices/exercises/main
+    - file: 04-matrices/why/main
+  - file: 05-combinations-permutations/introduction/main
+    sections:
+    - file: 05-combinations-permutations/tutorial/main
+    - file: 05-combinations-permutations/how/main
+    - file: 05-combinations-permutations/exercises/main
+    - file: 05-combinations-permutations/why/main
+  - file: 06-probability/introduction/main
+    sections:
+    - file: 06-probability/tutorial/main
+    - file: 06-probability/how/main
+    - file: 06-probability/exercises/main
+    - file: 06-probability/why/main
+  - file: 07-sequences/introduction/main
+    sections:
+    - file: 07-sequences/tutorial/main
+    - file: 07-sequences/how/main
+    - file: 07-sequences/exercises/main
+    - file: 07-sequences/why/main
