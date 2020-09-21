@@ -103,12 +103,8 @@ prose_exceptions = {
     ),
 }
 prose_suggestions_to_ignore = {
-    "book/02-algebra/introduction/main.md": set(
-        ("typography.symbols.curly_quotes",)
-    ),
-    "book/06-probability/tutorial/main.md": set(
-        ("typography.symbols.curly_quotes",)
-    ),
+    "book/02-algebra/introduction/main.md": set(("typography.symbols.curly_quotes",)),
+    "book/06-probability/tutorial/main.md": set(("typography.symbols.curly_quotes",)),
     "book/05-combinations-permutations/tutorial/main.md": set(
         ("leonard.exclamation.30ppm",)
     ),
