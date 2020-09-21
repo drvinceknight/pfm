@@ -3,7 +3,25 @@ title: Python for mathematics
 author: Vincent Knight
 parse:
   myst_extended_syntax: true
+
 exclude_patterns: ["*.bcp.ipynb", "**/*.bcp.ipynb", "**/README.md"]
+
 latex:
   latex_documents:
     targetname: book.tex
+
+repository:
+  url                       : https://github.com/drvinceknight/pfm
+  path_to_book              : book
+  branch                    : main
+
+html:
+  favicon: "./favicon.ico"
+  use_repository_button: true
+  use_issues_button: true
+  use_edit_page_button: true
+# Use utterance as a way to add comments via github issues to the book.
+# https://jupyterbook.org/interactive/comments.html
+  comments:
+    utterances:
+      repo: "drvinceknight/pfm"
