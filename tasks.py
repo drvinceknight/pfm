@@ -78,7 +78,9 @@ def stylecheck(c, root=ROOT, md_pattern=MD_PATTERN, tags_pattern=TAGS_PATTERN):
             python_code = match.group(4)
             if "style-check-ignore" not in python_code:
                 original_parse = python_code
-                python_code = re.sub(pattern=tags_pattern, repl="", string=python_code).lstrip()
+                python_code = re.sub(
+                    pattern=tags_pattern, repl="", string=python_code
+                ).lstrip()
 
                 temporary_file = tempfile.NamedTemporaryFile(suffix=".py")
                 temporary_file_path = pathlib.Path(temporary_file.name)
@@ -92,9 +94,9 @@ def stylecheck(c, root=ROOT, md_pattern=MD_PATTERN, tags_pattern=TAGS_PATTERN):
 
                 if (exit_code := output.returncode) > 0:
                     max_exit_code = max(max_exit_code, exit_code)
-                    stderr_with_correct_filename = output.stderr.decode("utf-8").replace(
-                        str(temporary_file_path), str(markdown_file_path)
-                    )
+                    stderr_with_correct_filename = output.stderr.decode(
+                        "utf-8"
+                    ).replace(str(temporary_file_path), str(markdown_file_path))
                     stderr_with_snippet_wording = stderr_with_correct_filename.replace(
                         "1 file would be reformatted",
                         "1 code snippet does not follow black:",
@@ -116,9 +118,9 @@ def stylecheck(c, root=ROOT, md_pattern=MD_PATTERN, tags_pattern=TAGS_PATTERN):
 
                 if (exit_code := output.returncode) > 0:
                     max_exit_code = max(max_exit_code, exit_code)
-                    stderr_with_correct_filename = output.stderr.decode("utf-8").replace(
-                        str(temporary_file_path), str(markdown_file_path)
-                    )
+                    stderr_with_correct_filename = output.stderr.decode(
+                        "utf-8"
+                    ).replace(str(temporary_file_path), str(markdown_file_path))
                     print(stderr_with_correct_filename)
                     print(python_code)
 
