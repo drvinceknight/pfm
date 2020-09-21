@@ -37,7 +37,7 @@ def get_book_source_files(root=ROOT):
     """
     Returns a generator of all the markdown sources files of the book.
     """
-    book_path = ROOT / "src/book/"
+    book_path = ROOT / "book/"
     return filter(path_in_book, book_path.glob("**/*md"))
 
 
@@ -217,9 +217,9 @@ def prosecheck(c, root=ROOT):
 @task
 def buildbook(c, root=ROOT):
     """
-    Remove previous build and rebuild the book.
+    Build the book.
     """
-    c.run(f"jb build src/book --path-output {root}")
+    c.run(f"jb build book --path-output {root}")
 
 
 @task
@@ -242,7 +242,6 @@ def backupbook(c, root=ROOT):
     continuous integrations ensures this will become apparent.
     """
     for markdown_file_path in get_book_source_files():
-        print(markdown_file_path)
         backup_path = markdown_file_path.with_suffix(".bcp.ipynb")
         markdown_file_to_delete = backup_path.with_suffix(".md")
         c.run(f"jupytext --to notebook --execute {markdown_file_path} -o {backup_path}")
@@ -252,6 +251,6 @@ def backupbook(c, root=ROOT):
 @task
 def testnbs(c, root=ROOT):
     """
-    Remove previous build and rebuild the book.
+    Test all notebooks.
     """
-    c.run(f"python -m pytest --ignore={root}/src/drafts --nbval --current-env")
+    c.run(f"python -m pytest --nbval --current-env")

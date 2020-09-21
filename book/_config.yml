@@ -1,8 +1,6 @@
 # Book settings
 title: Python for mathematics
 author: Vincent Knight
-execute:
-  execute_notebooks: force
 parse:
   myst_extended_syntax: true
 exclude_patterns: ["*.bcp.ipynb", "**/*.bcp.ipynb", "**/README.md"]
