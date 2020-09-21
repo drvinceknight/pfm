@@ -62,76 +62,85 @@ def stylecheck(c, root=ROOT, md_pattern=MD_PATTERN, tags_pattern=TAGS_PATTERN):
     :tags: [tag1, tag2]
 
     <Code>
+    ```
 
-    Note that blank space is required.
+    Any leading blank lines are striped (as these are not
+    included in the built book).
+
+    Cells can be ignored by include `style-check-ignore` as a tag.
     """
     max_exit_code = 0
     for markdown_file_path in get_book_source_files():
-        markdown_string = markdown_file_path.read_text()
-        for match in re.finditer(pattern=md_pattern, string=markdown_string):
+
+        markdown = markdown_file_path.read_text()
+
+        for match in re.finditer(pattern=md_pattern, string=markdown):
             python_code = match.group(4)
-            python_code = re.sub(pattern=tags_pattern, repl="", string=python_code)
+            if "style-check-ignore" not in python_code:
+                original_parse = python_code
+                python_code = re.sub(pattern=tags_pattern, repl="", string=python_code).lstrip()
 
-            temporary_file = tempfile.NamedTemporaryFile(suffix=".py")
-            temporary_file_path = pathlib.Path(temporary_file.name)
-            temporary_file_path.write_text(python_code)
+                temporary_file = tempfile.NamedTemporaryFile(suffix=".py")
+                temporary_file_path = pathlib.Path(temporary_file.name)
+                temporary_file_path.write_text(python_code)
 
-            output = subprocess.run(
-                ["black", "--check", temporary_file_path],
-                capture_output=True,
-                check=False,
-            )
-
-            if (exit_code := output.returncode) > 0:
-                max_exit_code = max(max_exit_code, exit_code)
-                stderr_with_correct_filename = output.stderr.decode("utf-8").replace(
-                    str(temporary_file_path), str(markdown_file_path)
-                )
-                stderr_with_snippet_wording = stderr_with_correct_filename.replace(
-                    "1 file would be reformatted",
-                    "1 code snippet does not follow black:",
-                )
-                print(stderr_with_snippet_wording)
                 output = subprocess.run(
-                    ["black", "--diff", temporary_file_path],
+                    ["black", "--check", temporary_file_path],
                     capture_output=True,
                     check=False,
                 )
-                print(output.stdout.decode("utf-8"))
 
-            output = subprocess.run(
-                ["isort", "--check-only", temporary_file_path],
-                capture_output=True,
-                check=False,
-            )
-
-            if (exit_code := output.returncode) > 0:
-                max_exit_code = max(max_exit_code, exit_code)
-                stderr_with_correct_filename = output.stderr.decode("utf-8").replace(
-                    str(temporary_file_path), str(markdown_file_path)
-                )
-                print(stderr_with_correct_filename)
-                print(python_code)
-
-            if ("def" in python_code) or ("class" in python_code):
                 if (exit_code := output.returncode) > 0:
                     max_exit_code = max(max_exit_code, exit_code)
-                    stderr_with_correct_filename = output.stderr.decode(
-                        "utf-8"
-                    ).replace(str(temporary_file_path), str(markdown_file_path))
+                    stderr_with_correct_filename = output.stderr.decode("utf-8").replace(
+                        str(temporary_file_path), str(markdown_file_path)
+                    )
+                    stderr_with_snippet_wording = stderr_with_correct_filename.replace(
+                        "1 file would be reformatted",
+                        "1 code snippet does not follow black:",
+                    )
+                    print(stderr_with_snippet_wording)
+                    output = subprocess.run(
+                        ["black", "--diff", temporary_file_path],
+                        capture_output=True,
+                        check=False,
+                    )
+                    print(output.stdout.decode("utf-8"))
+                    print(original_parse)
+
+                output = subprocess.run(
+                    ["isort", "--check-only", temporary_file_path],
+                    capture_output=True,
+                    check=False,
+                )
+
+                if (exit_code := output.returncode) > 0:
+                    max_exit_code = max(max_exit_code, exit_code)
+                    stderr_with_correct_filename = output.stderr.decode("utf-8").replace(
+                        str(temporary_file_path), str(markdown_file_path)
+                    )
                     print(stderr_with_correct_filename)
-
-                output = subprocess.run(
-                    ["interrogate", "-v", "-M", "-f", "100", temporary_file_path],
-                    capture_output=True,
-                    check=False,
-                )
-
-                if (exit_code := output.returncode) > 0:
-                    max_exit_code = max(max_exit_code, exit_code)
-                    print(f"Docstring missing in {markdown_file_path}")
-                    print("\n")
                     print(python_code)
+
+                if ("def" in python_code) or ("class" in python_code):
+                    if (exit_code := output.returncode) > 0:
+                        max_exit_code = max(max_exit_code, exit_code)
+                        stderr_with_correct_filename = output.stderr.decode(
+                            "utf-8"
+                        ).replace(str(temporary_file_path), str(markdown_file_path))
+                        print(stderr_with_correct_filename)
+
+                    output = subprocess.run(
+                        ["interrogate", "-v", "-M", "-f", "100", temporary_file_path],
+                        capture_output=True,
+                        check=False,
+                    )
+
+                    if (exit_code := output.returncode) > 0:
+                        max_exit_code = max(max_exit_code, exit_code)
+                        print(f"Docstring missing in {markdown_file_path}")
+                        print("\n")
+                        print(python_code)
 
     sys.exit(max_exit_code)
 
@@ -181,7 +190,7 @@ def prosecheck(c, root=ROOT):
         exceptions = known.prose_exceptions.get(relative_markdown_path, set(()))
 
         for exception in exceptions:
-            markdown = markdown.replace(markdown, exception)
+            markdown = markdown.replace(exception, "")
 
         suggestions = proselint.tools.lint(markdown)
         ignored_suggestions = known.prose_suggestions_to_ignore.get(
@@ -210,8 +219,6 @@ def buildbook(c, root=ROOT):
     """
     Remove previous build and rebuild the book.
     """
-    output_path = root / "book/"
-    shutil.rmtree(output_path, ignore_errors=True)
     c.run(f"jb build src/book --path-output {root}")
 
 

@@ -37,3 +37,9 @@
     - file: 06-probability/how/main
     - file: 06-probability/exercises/main
     - file: 06-probability/why/main
+  - file: 07-sequences/introduction/main
+    sections:
+    - file: 07-sequences/tutorial/main
+    - file: 07-sequences/how/main
+    - file: 07-sequences/exercises/main
+    - file: 07-sequences/why/main

@@ -156,6 +156,8 @@ If we rewrite the function to sample the experiment of the tutorial without a
 docstring but using comments we will have:
 
 ```{code-cell} ipython3
+:tags: [style-check-ignore]
+
 def sample_experiment(bag):
     # Select a token
     selected_token = pick_a_token(container=bag)

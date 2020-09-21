@@ -291,7 +291,6 @@ we use the random library and the `choice` tool:
 
 import random
 
-
 basket = ["Tea", "Tea", "Toothpaste", "Bread"]
 random.choice(basket)
 ```
@@ -305,7 +304,6 @@ To sample a random number between 0 and 1 we use the random library and the
 :tags: [nbval-ignore-output]
 
 import random
-
 
 random.random()
 ```

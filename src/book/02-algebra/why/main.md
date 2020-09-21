@@ -103,6 +103,9 @@ libraries:
 
 ```{code-cell} ipython3
 import math
+```
+
+```{code-cell} ipython3
 import sympy
 ```
 
@@ -153,7 +156,7 @@ In some resources you will see that instead of `import sympy` people use:
 advantage of the fact that Python can import a library and give it an
 alias/nickname at the same time:
 
-```python
+```
 import <library> as <nickname>
 ```
 

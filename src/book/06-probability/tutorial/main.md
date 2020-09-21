@@ -86,7 +86,6 @@ command:
 
 import random
 
-
 random.choice(bag)
 ```
 

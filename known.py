@@ -25,7 +25,7 @@ words = set(
         "combinatorial",
         "combinatorics",
         "cryptographic",
-        "descriminant",
+        "discriminant",
         "det",
         "df",
         "displaystyle",
@@ -76,9 +76,45 @@ words = set(
     )
 )
 
-prose_exceptions = {}
+prose_exceptions = {
+    "src/book/02-algebra/tutorial/main.md": set(
+        (
+            "We can immediately use this to compute the discriminant:",
+            "sympy.discriminant(expression)",
+            "negative discriminant then it does not have any roots and all the values are of",
+            "1. Calculate the discriminant of the quadratic equation $2x ^ 2 + x + 1 =",
+        )
+    ),
+    "src/book/02-algebra/exercises/main.md": set(
+        (
+            "1. Calculate the discriminant of the quadratic equation $4x ^ 2 + 16x + 25 =",
+            "1. Calculate the discriminant of the quadratic equation $-3x ^ 2 + 24x - 97 =",
+        )
+    ),
+    "src/book/04-matrices/exercises/main.md": set(
+        (
+            r"4. Q1 The matrix $D$ is given by $D = \begin{pmatrix} a & 2 & 0\\ 3 & 1 & 2\\ 0 & -1 & 1\end{pmatrix}$ where $a\ne 2$.",
+        )
+    ),
+    "src/book/04-matrices/exercises/main.md": set(
+        (
+            r"4. Q1 The matrix $D$ is given by $D = \begin{pmatrix} a & 2 & 0\\ 3 & 1 & 2\\ 0 & -1 & 1\end{pmatrix}$ where $a\ne 2$.",
+        )
+    ),
+}
 prose_suggestions_to_ignore = {
-    "nbs/book/02-algebra/introduction/main.md": set(
+    "src/book/02-algebra/introduction/main.md": set(
         ("typography.symbols.curly_quotes",)
-    )
+    ),
+    "src/book/06-probability/tutorial/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "src/book/05-combinations-permutations/tutorial/main.md": set(
+        ("leonard.exclamation.30ppm",)
+    ),
+    "src/book/06-probability/why/main.md": set(("typography.symbols.curly_quotes",)),
+    "src/book/06-probability/how/main.md": set(("typography.symbols.curly_quotes",)),
+    "src/book/07-sequences/how/main.md": set(("typography.symbols.curly_quotes",)),
+    "src/book/07-sequences/why/main.md": set(("typography.symbols.curly_quotes",)),
+    "src/book/07-sequences/tutorial/main.md": set(("typography.symbols.curly_quotes",)),
 }

@@ -21,7 +21,7 @@ will solve the following two problems:
 
 1. Rationalise the denominator of $\frac{1}{\sqrt{2} + 1}$
 2. Consider the quadratic: $f(x)=2x ^ 2 + x + 1$:
-  1. Calculate the descriminant of the quadratic equation $2x ^ 2 + x + 1 =
+  1. Calculate the discriminant of the quadratic equation $2x ^ 2 + x + 1 =
      0$. What does this tell us about the solutions to the equation? What
      does this tell us about the graph of $f(x)$?
   2. By completing the square, show that the minimum point of $f(x)$ is
@@ -91,7 +91,7 @@ will now consider the second part of the question:
 ```{admonition} Problem
 
 2. Consider the quadratic: $f(x)=2x ^ 2 + x + 1$:
-  1. Calculate the descriminant of the quadratic equation $2x ^ 2 + x + 1 =
+  1. Calculate the discriminant of the quadratic equation $2x ^ 2 + x + 1 =
      0$. What does this tell us about the solutions to the equation? What
      does this tell us about the graph of $f(x)$?
   2. By completing the square, show that the minimum point of $f(x)$ is
@@ -120,9 +120,12 @@ We can immediately use this to compute the discriminant:
 sympy.discriminant(expression)
 ```
 
-Now we can complement this with our mathematical knowledge: if a quadratic has a negative descriminant then it does not have any roots and all the values are of the same sign as the coefficient of $x ^ 2 $. Which in this case is $2>0$.
+Now we can complement this with our mathematical knowledge: if a quadratic has a
+negative discriminant then it does not have any roots and all the values are of
+the same sign as the coefficient of $x ^ 2 $. Which in this case is $2>0$.
 
-We can confirm this by directly creating the equation. We do this by creating a variable `equation` and assigning it the equation which has a `lhs` and a `rhs`:
+We can confirm this by directly creating the equation. We do this by creating a
+variable `equation` and assigning it the equation which has a `lhs` and a `rhs`:
 
 ```{code-cell} ipython3
 equation = sympy.Eq(lhs=expression, rhs=0)
@@ -167,7 +170,7 @@ $$
 
 with the completed square.
 
-First, we see that the coefficient of $x ^ 2$ gives us a simple equation:
+First, we see that the coefficient of $x ^ 2$ gives us an equation:
 
 $$
     a = 2

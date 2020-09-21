@@ -30,7 +30,7 @@ So for example, here is a plot of $f(x)=x^2 + 3x + 1$:
 import sympy as sym
 
 x = sym.Symbol("x")
-sym.plot(x ** 2 + 3 * x + 1);
+sym.plot(x ** 2 + 3 * x + 1)
 ```
 
 It is possible to specify the x limits and combine it with other plots:
@@ -38,7 +38,7 @@ It is possible to specify the x limits and combine it with other plots:
 ```{code-cell} ipython3
 :tags: [nbval-ignore-output]
 
-sym.plot(x ** 2 + 3 * x + 1, xlim=(-5, 5));
+sym.plot(x ** 2 + 3 * x + 1, xlim=(-5, 5))
 ```
 
 **This plotting solution is fine it you want to take a look at a function quickly but it is not recommended.** The main library for plotting is called `matplotlib` and we will see how to use that at a later date.
