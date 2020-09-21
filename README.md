@@ -1,8 +1,6 @@
-# Computing for mathematics
+# Python for mathematics
 
 ## Development
-
-### Book
 
 The book is written in files found in `nbs/book` in the [MySt markdown
 format](https://myst-nb.readthedocs.io/en/latest/).
