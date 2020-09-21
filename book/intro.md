@@ -14,7 +14,7 @@ kernelspec:
 
 ```{warning}
 This book is a work in progress and should be considered currently to be in a
-**pre** draft state. Work is actively taking place in preparation for October
+**pre**draft state. Work is actively taking place in preparation for October
 2020.
 
 If you happen to find this and notice any typos and/or have any suggestions
