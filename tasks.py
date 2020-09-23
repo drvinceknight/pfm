@@ -4,8 +4,8 @@ import shutil
 import subprocess
 import sys
 import tempfile
-import proselint
 
+import proselint
 from invoke import task
 
 import known
