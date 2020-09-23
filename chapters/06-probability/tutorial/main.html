@@ -1,0 +1,1776 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial &#8212; Python for mathematics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/sphinx-book-theme.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "drvinceknight/pfm");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="How to" href="../how/main.html" />
+    <link rel="prev" title="Probability" href="../introduction/main.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Python for mathematics</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   Python for Mathematics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Tools for mathematics
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../01-using-notebooks/introduction/main.html">
+   Using notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../02-algebra/introduction/main.html">
+   Algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../03-calculus/introduction/main.html">
+   Calculus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../04-matrices/introduction/main.html">
+   Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../05-combinations-permutations/introduction/main.html">
+   Combinatorics
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="../introduction/main.html">
+   Probability
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../how/main.html">
+     How to
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../why/main.html">
+     Why
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../07-sequences/introduction/main.html">
+   Sequences
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../appendix/01-numpy/introduction/main.html">
+   Numpy
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../../../_sources/chapters/06-probability/tutorial/main.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/chapters/06-probability/tutorial/main.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/drvinceknight/pfm"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/drvinceknight/pfm/issues/new?title=Issue%20on%20page%20%2Fchapters/06-probability/tutorial/main.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/drvinceknight/pfm/edit/main/book/chapters/06-probability/tutorial/main.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/drvinceknight/pfm/main?urlpath=tree/book/chapters/06-probability/tutorial/main.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="tutorial">
+<h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h1>
+<p>We will solve the following problem using a computer to estimate the expected
+probabilities:</p>
+<div class="admonition-problem admonition">
+<p class="admonition-title">Problem</p>
+<p>An experiment consists of selecting a token from a bag and spinning a coin. The
+bag contains 5 red tokens and 7 blue tokens. A token is selected at random from
+the bag, its colour is noted and then the token is returned to the bag.</p>
+<p>When a red token is selected, a biased coin with probability <span class="math notranslate nohighlight">\(\frac{2}{3}\)</span>
+of landing heads is spun.</p>
+<p>When a blue token is selected a fair coin is spun.</p>
+<ol class="simple">
+<li><p>What is the probability of picking a red token?</p></li>
+<li><p>What is the probability of obtaining Heads?</p></li>
+<li><p>If a heads is obtained, what is the probability of having selected a red
+token.</p></li>
+</ol>
+</div>
+<p>We will use the <code class="docutils literal notranslate"><span class="pre">random</span></code> library from the Python standard library to do this.</p>
+<p>First we start off by building a Python <strong>tuple</strong> to represent the bag with the
+tokens. We assign this to a variable <code class="docutils literal notranslate"><span class="pre">bag</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bag</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;Red&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Red&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Red&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Red&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Red&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Blue&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Blue&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Blue&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Blue&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Blue&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Blue&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Blue&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">bag</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>We are there using the circular brackets <code class="docutils literal notranslate"><span class="pre">()</span></code> and the quotation marks
+<code class="docutils literal notranslate"><span class="pre">&quot;</span></code>. Those are important and cannot be omitted. The choice of brackets <code class="docutils literal notranslate"><span class="pre">()</span></code> as
+opposed to <code class="docutils literal notranslate"><span class="pre">{}</span></code> or <code class="docutils literal notranslate"><span class="pre">[]</span></code> is in fact important as it instructs Python to do
+different things (we will learn about this later). You can use <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">'</span></code>
+interchangeably.</p>
+</div>
+<p>Instead of writing every entry out we can create a Python <strong>list</strong> which allows
+for us to carry out some basic algebra on the items. Here we essentially:</p>
+<ul class="simple">
+<li><p>Create a list with 5 <code class="docutils literal notranslate"><span class="pre">&quot;Red&quot;</span></code>s.</p></li>
+<li><p>Create a list with 7 <code class="docutils literal notranslate"><span class="pre">&quot;Blue&quot;</span></code>s.</p></li>
+<li><p>Combine both lists:</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bag</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Red&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;Blue&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">7</span>
+<span class="n">bag</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now to sample from that we use the <code class="docutils literal notranslate"><span class="pre">random</span></code> library which has a <code class="docutils literal notranslate"><span class="pre">choice</span></code>
+command:</p>
+<div class="cell tag_nbval-ignore-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">bag</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Blue&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we run this many times we will not always get the same outcome:</p>
+<div class="cell tag_nbval-ignore-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">bag</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Red&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">bag</span></code> variable is unchanged:</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bag</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>In order to answer the first question (what is the probability of picking a red
+token) we want to repeat this many times.</p>
+<p>We do this by defining a Python function (which is akin to a mathematical
+function) that allows us to repeat code:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pick_a_token</span><span class="p">(</span><span class="n">container</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A function to randomly sample from a `container`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">container</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can then call this function, passing our <code class="docutils literal notranslate"><span class="pre">bag</span></code> to it as the <code class="docutils literal notranslate"><span class="pre">container</span></code> from
+which to pick:</p>
+<div class="cell tag_nbval-ignore-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pick_a_token</span><span class="p">(</span><span class="n">container</span><span class="o">=</span><span class="n">bag</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Red&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_nbval-ignore-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pick_a_token</span><span class="p">(</span><span class="n">container</span><span class="o">=</span><span class="n">bag</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Blue&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>In order to simulate the probability of picking a red token we need to repeat
+this not once or twice but tens of thousands of times. We will do this using
+something called a “list comprehension” which is akin to the mathematical
+notation we use all the time to create sets:</p>
+<div class="math notranslate nohighlight">
+\[
+    S_1 = \{f(x)\text{ for }x\text{ in }S_2\}
+\]</div>
+<div class="cell tag_nbval-ignore-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_of_repetitions</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="p">[</span><span class="n">pick_a_token</span><span class="p">(</span><span class="n">container</span><span class="o">=</span><span class="n">bag</span><span class="p">)</span> <span class="k">for</span> <span class="n">repetition</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number_of_repetitions</span><span class="p">)]</span>
+<span class="n">samples</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ ...]
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can confirm that we have the correct number of samples:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">len</span></code> is the Python tool to get the length of a given Python iterable.</p>
+<p>Using this we can now use <code class="docutils literal notranslate"><span class="pre">==</span></code> (double <code class="docutils literal notranslate"><span class="pre">=</span></code>) to check how many of those samples are <code class="docutils literal notranslate"><span class="pre">Red</span></code>:</p>
+<div class="cell tag_nbval-ignore-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">token</span> <span class="o">==</span> <span class="s2">&quot;Red&quot;</span> <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">samples</span><span class="p">)</span> <span class="o">/</span> <span class="n">number_of_repetitions</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.4251
+</pre></div>
+</div>
+</div>
+</div>
+<p>We have sampled  probability of around .41. The theoretic value is <span class="math notranslate nohighlight">\(\frac{5}{5 +
+7}\)</span>:</p>
+<div class="cell tag_nbval-ignore-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">/</span> <span class="p">(</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.4166666666666667
+</pre></div>
+</div>
+</div>
+</div>
+<p>To answer the second question (What is the probability of obtaining Heads?) we
+need to make use of another Python tool: an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement. This will allow us
+to write a function that does precisely what is described in the problem:</p>
+<ul class="simple">
+<li><p>Choose a token;</p></li>
+<li><p>Set the probability of flipping a given coin;</p></li>
+<li><p>Select that coin.</p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>For the second random selection (flipping a coin) we will not choose from a list
+but instead select a random number between 0 and 1.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+
+<span class="k">def</span> <span class="nf">sample_experiment</span><span class="p">(</span><span class="n">bag</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This samples a token from a given bag and then</span>
+<span class="sd">    selects a coin with a given probability.</span>
+
+<span class="sd">    If the sampled token is red then the probability</span>
+<span class="sd">    of selecting heads is 2/3 otherwise it is 1/2.</span>
+
+<span class="sd">    This function returns both the selected token</span>
+<span class="sd">    and the coin face.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">selected_token</span> <span class="o">=</span> <span class="n">pick_a_token</span><span class="p">(</span><span class="n">container</span><span class="o">=</span><span class="n">bag</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">selected_token</span> <span class="o">==</span> <span class="s2">&quot;Red&quot;</span><span class="p">:</span>
+        <span class="n">probability_of_selecting_heads</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">3</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">probability_of_selecting_heads</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span>
+
+    <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">probability_of_selecting_heads</span><span class="p">:</span>
+        <span class="n">coin</span> <span class="o">=</span> <span class="s2">&quot;Heads&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">coin</span> <span class="o">=</span> <span class="s2">&quot;Tails&quot;</span>
+    <span class="k">return</span> <span class="n">selected_token</span><span class="p">,</span> <span class="n">coin</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using this we can sample according to the problem description:</p>
+<div class="cell tag_nbval-ignore-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_experiment</span><span class="p">(</span><span class="n">bag</span><span class="o">=</span><span class="n">bag</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;Blue&#39;, &#39;Tails&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_nbval-ignore-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_experiment</span><span class="p">(</span><span class="n">bag</span><span class="o">=</span><span class="n">bag</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;Blue&#39;, &#39;Heads&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can now find out the probability of selecting heads by carrying out a large
+number of repetitions and checking which ones have a coin that is heads:</p>
+<div class="cell tag_nbval-ignore-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">samples</span> <span class="o">=</span> <span class="p">[</span><span class="n">sample_experiment</span><span class="p">(</span><span class="n">bag</span><span class="o">=</span><span class="n">bag</span><span class="p">)</span> <span class="k">for</span> <span class="n">repetition</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number_of_repetitions</span><span class="p">)]</span>
+<span class="nb">sum</span><span class="p">(</span><span class="n">coin</span> <span class="o">==</span> <span class="s2">&quot;Heads&quot;</span> <span class="k">for</span> <span class="n">token</span><span class="p">,</span> <span class="n">coin</span> <span class="ow">in</span> <span class="n">samples</span><span class="p">)</span> <span class="o">/</span> <span class="n">number_of_repetitions</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.563
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can compute this theoretically as well, the expected probability is:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="o">*</span> <span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span> <span class="o">+</span> <span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="o">*</span> <span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{41}{72}\]</div>
+</div>
+</div>
+<div class="cell tag_nbval-ignore-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">41</span> <span class="o">/</span> <span class="mi">72</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5694444444444444
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also use our samples to calculate the conditional probability that a
+token was read if the coin is heads. This is done again using the list
+comprehension notation but including an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement which allows us to
+emulate the mathematical notation:</p>
+<div class="math notranslate nohighlight">
+\[
+    S_3 = \{x \in S_1  | \text{ if some property of \(x\) holds}\}
+\]</div>
+<div class="cell tag_nbval-ignore-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">samples_with_heads</span> <span class="o">=</span> <span class="p">[(</span><span class="n">token</span><span class="p">,</span> <span class="n">coin</span><span class="p">)</span> <span class="k">for</span> <span class="n">token</span><span class="p">,</span> <span class="n">coin</span> <span class="ow">in</span> <span class="n">samples</span> <span class="k">if</span> <span class="n">coin</span> <span class="o">==</span> <span class="s2">&quot;Heads&quot;</span><span class="p">]</span>
+<span class="nb">sum</span><span class="p">(</span><span class="n">token</span> <span class="o">==</span> <span class="s2">&quot;Red&quot;</span> <span class="k">for</span> <span class="n">token</span><span class="p">,</span> <span class="n">coin</span> <span class="ow">in</span> <span class="n">samples_with_heads</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">samples_with_heads</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.4882770870337478
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using Bayes’ theorem this is given theoretically by:</p>
+<div class="math notranslate nohighlight">
+\[
+    P(\text{Red}|\text{Heads}) = \frac{P(\text{Heads} | \text{Red})P(\text{Red})}{P(\text{Heads})}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">/</span> <span class="mi">12</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">41</span><span class="p">)</span> <span class="o">/</span> <span class="mi">72</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{20}{41}\]</div>
+</div>
+</div>
+<div class="cell tag_nbval-ignore-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">20</span> <span class="o">/</span> <span class="mi">41</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.4878048780487805
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters/06-probability/tutorial"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../introduction/main.html" title="previous page">Probability</a>
+    <a class='right-next' id="next-link" href="../how/main.html" title="next page">How to</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Vincent Knight<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../../_static/js/index.js"></script>
+    
+  </body>
+</html>

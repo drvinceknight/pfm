@@ -1,0 +1,502 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why &#8212; Python for mathematics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/sphinx-book-theme.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "drvinceknight/pfm");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Algebra" href="../../02-algebra/introduction/main.html" />
+    <link rel="prev" title="Exercises" href="../exercises/main.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Python for mathematics</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   Python for Mathematics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Tools for mathematics
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="../introduction/main.html">
+   Using notebooks
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Why
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../02-algebra/introduction/main.html">
+   Algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../03-calculus/introduction/main.html">
+   Calculus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../04-matrices/introduction/main.html">
+   Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../05-combinations-permutations/introduction/main.html">
+   Combinatorics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../06-probability/introduction/main.html">
+   Probability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../07-sequences/introduction/main.html">
+   Sequences
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../appendix/01-numpy/introduction/main.html">
+   Numpy
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../../../_sources/chapters/01-using-notebooks/why/main.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/chapters/01-using-notebooks/why/main.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/drvinceknight/pfm"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/drvinceknight/pfm/issues/new?title=Issue%20on%20page%20%2Fchapters/01-using-notebooks/why/main.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/drvinceknight/pfm/edit/main/book/chapters/01-using-notebooks/why/main.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/drvinceknight/pfm/main?urlpath=tree/book/chapters/01-using-notebooks/why/main.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-use-anaconda">
+   Why use anaconda?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-use-jupyter">
+   Why use Jupyter?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-can-i-not-double-click-on-a-jupyter-notebook-file">
+   Why can I not double click on a Jupyter notebook file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-markdown">
+   What is markdown
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-latex">
+   What is LaTeX
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-a-markup-language">
+   What is a markup language
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="why">
+<h1>Why<a class="headerlink" href="#why" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="why-use-anaconda">
+<h2>Why use anaconda?<a class="headerlink" href="#why-use-anaconda" title="Permalink to this headline">¶</a></h2>
+<p>Python is a free an open source piece of software. One of the main reasons for its popularity is that there are a number of separate tools that work well with it, these are called libraries. Sometimes installing these libraries can require an understanding of some potential pitfalls. In scientific circles the Anaconda distribution was developed to give a single download of not only Python but a lot of commonly used libraries.</p>
+<p>If you want to read more about this here are some web resources:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://medium.com/&#64;RustyComer/why-use-anaconda-524bb6765e4d">https://medium.com/&#64;RustyComer/why-use-anaconda-524bb6765e4d</a></p></li>
+<li><p><a class="reference external" href="https://medium.com/pankajmathur/what-is-anaconda-and-why-should-i-bother-about-it-4744915bf3e6">https://medium.com/pankajmathur/what-is-anaconda-and-why-should-i-bother-about-it-4744915bf3e6</a></p></li>
+<li><p><a class="reference external" href="https://www.reddit.com/r/Python/comments/betkoj/why_use_anaconda/">https://www.reddit.com/r/Python/comments/betkoj/why_use_anaconda/</a></p></li>
+</ul>
+</div>
+<div class="section" id="why-use-jupyter">
+<h2>Why use Jupyter?<a class="headerlink" href="#why-use-jupyter" title="Permalink to this headline">¶</a></h2>
+<p>There are are variety of ways to write and run Python:</p>
+<ol class="simple">
+<li><p>Using an interactive notebook environment like Jupyter;</p></li>
+<li><p>Using an integrated development environment and/or editor.</p></li>
+</ol>
+<p>We will in fact use the second approach in the second part of this course.</p>
+<p>One strength of Jupyter are that it allows you to include communication (writing
+through markdown) with your code. This allows you to use code and describe what
+you’re using it for.</p>
+<p>Another advantage is that it allows you to immediately have your output next to your input.</p>
+<p>There are some limitations to Jupyter as an editor which is why we will explore
+using a powerful editor in the second part of the course.</p>
+<p>In general:</p>
+<ol class="simple">
+<li><p>Jupyter is a fantastic way to interactively use and communicate code;</p></li>
+<li><p>Integrated development environments and/or editors are the correct tool to
+write software.</p></li>
+</ol>
+<p>In this course you will learn to use either approach in the appropriate manner
+for the right task. For the first part we will mainly be using code
+interactively and so we will use Jupyter notebooks.</p>
+<p>If you are interested here are some further resources:</p>
+<ul class="simple">
+<li><p>Why Jupyter Notebooks Are So Popular Among Data Scientists: <a class="reference external" href="https://analyticsindiamag.com/why-jupyter-notebooks-are-so-popular-among-data-scientists/">https://analyticsindiamag.com/why-jupyter-notebooks-are-so-popular-among-data-scientists/</a></p></li>
+<li><p>10 reasons why data scientists love Jupyter notebooks: <a class="reference external" href="https://hub.packtpub.com/10-reasons-data-scientists-love-jupyter-notebooks/">https://hub.packtpub.com/10-reasons-data-scientists-love-jupyter-notebooks/</a></p></li>
+<li><p>I don’t like notebooks - Joel Grus (Allen Institute for Artificial Intelligence): <a class="reference external" href="https://www.youtube.com/watch?v=7jiPeIFXb6U">https://www.youtube.com/watch?v=7jiPeIFXb6U</a></p></li>
+</ul>
+<p>Some further information on using Jupyter:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyter-notebook-beginner-guide.readthedocs.io/">https://jupyter-notebook-beginner-guide.readthedocs.io/</a></p></li>
+<li><p><a class="reference external" href="https://www.analyticsvidhya.com/blog/2018/05/starters-guide-jupyter-notebook/">https://www.analyticsvidhya.com/blog/2018/05/starters-guide-jupyter-notebook/</a></p></li>
+</ul>
+</div>
+<div class="section" id="why-can-i-not-double-click-on-a-jupyter-notebook-file">
+<h2>Why can I not double click on a Jupyter notebook file<a class="headerlink" href="#why-can-i-not-double-click-on-a-jupyter-notebook-file" title="Permalink to this headline">¶</a></h2>
+<p>When you double click on a file and your computer opens it in an application
+that is because a default is set for the particular file extension. For example
+double clicking on <code class="docutils literal notranslate"><span class="pre">main.docx</span></code> will automatically open up the document using a
+word processor (like Microsoft word). This is because the file has the extension
+<code class="docutils literal notranslate"><span class="pre">.docx</span></code> and your operating system has set that anything with that extension will
+be opened in that particular application. You could also open the
+application and navigate to the file and open it directly.</p>
+<p>With Jupyter notebooks no default is set by the operating system as the
+application that opens it is in fact a local web server in your browser. As such
+you do not have a choice and need to open it in the Jupyter interface.</p>
+</div>
+<div class="section" id="what-is-markdown">
+<h2>What is markdown<a class="headerlink" href="#what-is-markdown" title="Permalink to this headline">¶</a></h2>
+<p>As described here <a class="reference external" href="https://www.markdownguide.org/getting-started/">https://www.markdownguide.org/getting-started/</a>:</p>
+<blockquote>
+<div><p>Markdown is a lightweight markup language that you can use to add formatting
+elements to plain text text documents. Created by John Gruber in 2004,
+Markdown is now one of the world’s most popular markup languages</p>
+</div></blockquote>
+</div>
+<div class="section" id="what-is-latex">
+<h2>What is LaTeX<a class="headerlink" href="#what-is-latex" title="Permalink to this headline">¶</a></h2>
+<p>As described here <a class="reference external" href="https://www.latex-project.org/about/">https://www.latex-project.org/about/</a>:</p>
+<blockquote>
+<div><p>LaTeX, which is pronounced «Lah-tech» or «Lay-tech» (to rhyme with «blech» or
+«Bertolt Brecht»), is a document preparation system for high-quality
+typesetting. It is most often used for medium-to-large technical or scientific
+documents but it can be used for almost any form of publishing.</p>
+</div></blockquote>
+<blockquote>
+<div><p>LaTeX is not a word processor! Instead, LaTeX encourages authors not to worry
+too much about the appearance of their documents but to concentrate on getting
+the right content.</p>
+</div></blockquote>
+<p>We will learn more about <span class="math notranslate nohighlight">\(\LaTeX\)</span> in the later part of this course but for
+now we only need to know that it we can use <span class="math notranslate nohighlight">\(\LaTeX\)</span> to write an instruction
+for Jupyter to display mathematics.</p>
+</div>
+<div class="section" id="what-is-a-markup-language">
+<h2>What is a markup language<a class="headerlink" href="#what-is-a-markup-language" title="Permalink to this headline">¶</a></h2>
+<p><span class="math notranslate nohighlight">\(\LaTeX\)</span> and markdown are both examples of what is called a <strong>markup language</strong>.
+Another common example of a markup language is html (the way web pages are
+written).</p>
+<p>A markup language is a system that allows us to write content alongside
+annotations to specify how the content is to appear.</p>
+<p>This description of markdown from
+<a class="reference external" href="https://www.markdownguide.org/getting-started/">https://www.markdownguide.org/getting-started/</a> is not specific to markdown but
+to any markup language:</p>
+<blockquote>
+<div><p>Using Markdown is different than using a WYSIWYG editor. In an application
+like Microsoft Word, you click buttons to format words and phrases, and the
+changes are visible immediately. Markdown isn’t like that. When you create a
+Markdown-formatted file, you add Markdown syntax to the text to indicate which
+words and phrases should look different.</p>
+</div></blockquote>
+<p>In general whilst it might take a little while to learn all the intricacies of a
+markup language it allows for more portability and precision.</p>
+<p>Markup languages differ in complexity:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\LaTeX\)</span> is incredibly sophisticated and has a huge range of capabilities.</p></li>
+<li><p>Markdown is designed to be basic with a few specific annotations to remember.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters/01-using-notebooks/why"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../exercises/main.html" title="previous page">Exercises</a>
+    <a class='right-next' id="next-link" href="../../02-algebra/introduction/main.html" title="next page">Algebra</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Vincent Knight<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../../_static/js/index.js"></script>
+    
+  </body>
+</html>
