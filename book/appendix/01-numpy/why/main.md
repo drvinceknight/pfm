@@ -71,7 +71,7 @@ Some example of this include using the `numpy.max` function over the standard
 library `max` function.
 
 ```{code-cell} ipython3
-:tag: [style-check-ignore, nbval-ignore-output]
+:tags: [style-check-ignore, nbval-ignore-output]
 
 import numpy as np
 
@@ -81,7 +81,7 @@ big_array = np.random.random(10 ** 7)
 ```
 
 ```{code-cell} ipython3
-:tag: [style-check-ignore, nbval-ignore-output]
+:tags: [style-check-ignore, nbval-ignore-output]
 
 import numpy as np
 
