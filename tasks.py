@@ -4,8 +4,8 @@ import shutil
 import subprocess
 import sys
 import tempfile
-import proselint
 
+import proselint
 from invoke import task
 
 import known
@@ -77,7 +77,6 @@ def stylecheck(c, root=ROOT, md_pattern=MD_PATTERN, tags_pattern=TAGS_PATTERN):
         for match in re.finditer(pattern=md_pattern, string=markdown):
             python_code = match.group(4)
             if "style-check-ignore" not in python_code:
-                original_parse = python_code
                 python_code = re.sub(
                     pattern=tags_pattern, repl="", string=python_code
                 ).lstrip()
@@ -108,7 +107,6 @@ def stylecheck(c, root=ROOT, md_pattern=MD_PATTERN, tags_pattern=TAGS_PATTERN):
                         check=False,
                     )
                     print(output.stdout.decode("utf-8"))
-                    print(original_parse)
 
                 output = subprocess.run(
                     ["isort", "--check-only", temporary_file_path],
@@ -122,7 +120,6 @@ def stylecheck(c, root=ROOT, md_pattern=MD_PATTERN, tags_pattern=TAGS_PATTERN):
                         "utf-8"
                     ).replace(str(temporary_file_path), str(markdown_file_path))
                     print(stderr_with_correct_filename)
-                    print(python_code)
 
                 if ("def" in python_code) or ("class" in python_code):
                     if (exit_code := output.returncode) > 0:
@@ -142,7 +139,6 @@ def stylecheck(c, root=ROOT, md_pattern=MD_PATTERN, tags_pattern=TAGS_PATTERN):
                         max_exit_code = max(max_exit_code, exit_code)
                         print(f"Docstring missing in {markdown_file_path}")
                         print("\n")
-                        print(python_code)
 
     sys.exit(max_exit_code)
 
