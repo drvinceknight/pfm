@@ -43,3 +43,11 @@
     - file: chapters/07-sequences/how/main
     - file: chapters/07-sequences/exercises/main
     - file: chapters/07-sequences/why/main
+- part: Appendix
+  chapters:
+  - file: appendix/01-numpy/introduction/main
+    sections:
+    - file: appendix/01-numpy/tutorial/main
+    - file: appendix/01-numpy/how/main
+    - file: appendix/01-numpy/exercises/main
+    - file: appendix/01-numpy/why/main
