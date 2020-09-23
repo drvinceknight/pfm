@@ -115,15 +115,27 @@ prose_exceptions = {
     ),
 }
 prose_suggestions_to_ignore = {
-    "book/chapters/02-algebra/introduction/main.md": set(("typography.symbols.curly_quotes",)),
-    "book/chapters/06-probability/tutorial/main.md": set(("typography.symbols.curly_quotes",)),
+    "book/chapters/02-algebra/introduction/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/chapters/06-probability/tutorial/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
     "book/chapters/05-combinations-permutations/tutorial/main.md": set(
         ("leonard.exclamation.30ppm",)
     ),
-    "book/chapters/06-probability/why/main.md": set(("typography.symbols.curly_quotes",)),
-    "book/chapters/06-probability/how/main.md": set(("typography.symbols.curly_quotes",)),
+    "book/chapters/06-probability/why/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/chapters/06-probability/how/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
     "book/chapters/07-sequences/how/main.md": set(("typography.symbols.curly_quotes",)),
     "book/chapters/07-sequences/why/main.md": set(("typography.symbols.curly_quotes",)),
-    "book/chapters/07-sequences/tutorial/main.md": set(("typography.symbols.curly_quotes",)),
-    "book/appendix/01-numpy/tutorial/main.md": set(("typography.symbols.curly_quotes",)),
+    "book/chapters/07-sequences/tutorial/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/appendix/01-numpy/tutorial/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
 }
