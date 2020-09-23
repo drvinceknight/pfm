@@ -14,6 +14,7 @@ kernelspec:
 
 # Why
 
+(difference_between_a_list_and_a_tuple)=
 ## What is the difference between a Python list and a Python tuple?
 
 Two of the most used Python iterables are lists and tuples. In practice they

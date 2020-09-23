@@ -49,5 +49,4 @@
     sections:
     - file: appendix/01-numpy/tutorial/main
     - file: appendix/01-numpy/how/main
-    - file: appendix/01-numpy/exercises/main
     - file: appendix/01-numpy/why/main
