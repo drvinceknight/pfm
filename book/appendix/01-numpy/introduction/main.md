@@ -12,19 +12,10 @@ kernelspec:
   name: python3
 ---
 
-# Calculus
+# Numpy
 
-As of 2020, the A-level syllabus includes Calculus which
-<https://www.cambridgeinternational.org/Images/415060-2020-2022-syllabus.pdf>
-describes as:
-
-> Calculus: this is a fundamental element which describes change in dynamic
-> situations and underlines the links between functions and graphs.
-
-In practice this often means:
-
-- taking limits of functions;
-- differentiating functions;
-- integrating functions.
-
-Here we will see how to instruct a computer to carry out these techniques.
+One of the most popular Python libraries for scientific computing is `numpy`.
+Python is not renowned for its run speed but its speed of writing.
+`Numpy` helps with this at is brings fast numeric computations to Python. It is
+also powerful tool for linear algebra (matrices) although it cannot handle
+symbolic variables.
