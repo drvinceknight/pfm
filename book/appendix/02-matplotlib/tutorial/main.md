@@ -175,7 +175,7 @@ standard deviation.
 We will now use `matplotlib` to plot a scatter plot of all the data sets:
 
 ```{code-cell} ipython3
-:tags: [nbval-ignore-output]
+:tags: [nbval-ignore-output, style-check-ignore]
 
 import matplotlib.pyplot as plt
 
@@ -187,7 +187,7 @@ plt.ylabel("$y$");
 ```
 
 ```{code-cell} ipython3
-:tags: [nbval-ignore-output]
+:tags: [nbval-ignore-output, style-check-ignore]
 
 import matplotlib.pyplot as plt
 
@@ -199,7 +199,7 @@ plt.ylabel("$y$");
 ```
 
 ```{code-cell} ipython3
-:tags: [nbval-ignore-output]
+:tags: [nbval-ignore-output, style-check-ignore]
 
 import matplotlib.pyplot as plt
 
@@ -211,7 +211,7 @@ plt.ylabel("$y$");
 ```
 
 ```{code-cell} ipython3
-:tags: [nbval-ignore-output]
+:tags: [nbval-ignore-output, style-check-ignore]
 
 import matplotlib.pyplot as plt
 
