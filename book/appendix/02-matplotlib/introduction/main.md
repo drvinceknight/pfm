@@ -18,23 +18,3 @@ Visualisation of data is important in mathematics. This often starts by plotting
 a quadratic before using differentiation to find local and global optima but can
 then also be expanded to visualise a data set so as to gain further insights.
 Python has a powerful library for visualisation called `matplotlib`.
-
-Plotting plotting plotting.
-
-Tutorial: visualise Anscombe's quartet
-
-How:
-
-- scatter
-- hist
-- line
-- violonplot
-- boxplot
-- combine plots
-- save plots
-- multiple plots
-
-Why:
-
-- Extra information
-- Gallery
