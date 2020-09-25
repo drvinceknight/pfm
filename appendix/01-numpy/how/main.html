@@ -181,6 +181,11 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
   </ul>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../02-matplotlib/introduction/main.html">
+   Matplotlib
+  </a>
+ </li>
 </ul>
 
 </nav>
@@ -324,6 +329,11 @@ commentsRunWhenDOMLoaded(addUtterances);
    How to raise a matrix to a power
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-fit-a-line-of-best-fit">
+   How to fit a line of best fit
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -455,7 +465,7 @@ the array.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0651869232398603
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8645519302881253
 </pre></div>
 </div>
 </div>
@@ -470,9 +480,9 @@ the array.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.11611126, 0.19075878, 0.82625905, 0.95908011, 0.30153852],
-       [0.63171238, 0.58632213, 0.42957786, 0.56406962, 0.45544047],
-       [0.2201934 , 0.09419078, 0.84145599, 0.33160224, 0.29756009]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.72840643, 0.78352594, 0.13636631, 0.02206484, 0.21463819],
+       [0.31065022, 0.55211212, 0.2959818 , 0.86667604, 0.65170465],
+       [0.88550055, 0.12036326, 0.5848005 , 0.40839529, 0.90801643]])
 </pre></div>
 </div>
 </div>
@@ -597,6 +607,36 @@ out element wise exponentiation. To raise a matrix to a power we use
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[19, 18],
        [27, 19]])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="how-to-fit-a-line-of-best-fit">
+<h2>How to fit a line of best fit<a class="headerlink" href="#how-to-fit-a-line-of-best-fit" title="Permalink to this headline">¶</a></h2>
+<p>Numpy can be used to fit polynomials to a points. This is done with the
+<code class="docutils literal notranslate"><span class="pre">numpy.polyfit</span></code> tool. This takes an array of x values, an array of y values and
+a degree. It returns the coefficients of a polynomial of given degree that best
+approximates <span class="math notranslate nohighlight">\(f(x)=y\)</span>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>For example, the code below creates <code class="docutils literal notranslate"><span class="pre">y</span></code> using a quadratic and recovers the
+coefficients of the quadratic:</p>
+<div class="cell tag_nbval-ignore-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2.0000000000000004, 3.0000000000000013, 1.0000000000000036)
 </pre></div>
 </div>
 </div>

@@ -203,3 +203,28 @@ import numpy as np
 matrix = np.array(((1, 2), (3, 1)))
 np.linalg.matrix_power(matrix, 3)
 ```
+
+## How to fit a line of best fit
+
+Numpy can be used to fit polynomials to a points. This is done with the
+`numpy.polyfit` tool. This takes an array of x values, an array of y values and
+a degree. It returns the coefficients of a polynomial of given degree that best
+approximates $f(x)=y$.
+
+````{tip}
+```
+np.polyfit(x, y, degree)
+```
+````
+
+For example, the code below creates `y` using a quadratic and recovers the
+coefficients of the quadratic:
+
+```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
+x = np.array((1, 2, 3, 4))
+y = 2 * x ** 2 + 3 * x + 1
+a, b, c = np.polyfit(x, y, 2)
+a, b, c
+```
