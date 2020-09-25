@@ -1,5 +1,12 @@
 words = set(
     (
+        "Anscombe's",
+        "color",
+        "polyfit",
+        "xlabel",
+        "ylabel",
+        "matplotlib",
+        "Matplotlib",
         "Ashville",
         "Bertolt",
         "Bewton",
@@ -136,6 +143,9 @@ prose_suggestions_to_ignore = {
         ("typography.symbols.curly_quotes",)
     ),
     "book/appendix/01-numpy/tutorial/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/appendix/02-matplotlib/tutorial/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
 }

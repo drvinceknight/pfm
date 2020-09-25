@@ -51,3 +51,5 @@
     - file: appendix/01-numpy/how/main
     - file: appendix/01-numpy/why/main
   - file: appendix/02-matplotlib/introduction/main
+    sections:
+    - file: appendix/02-matplotlib/tutorial/main
