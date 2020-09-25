@@ -25,3 +25,4 @@ nbs/chapters/plot.pdf
 *xdv
 *.ipynb_checkpoints*
 _build/
+book/appendix/02-matplotlib/how/plot.pdf
