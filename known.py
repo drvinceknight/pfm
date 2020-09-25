@@ -1,5 +1,6 @@
 words = set(
     (
+        "Anscombe's",
         "Ashville",
         "Bertolt",
         "Bewton",
@@ -12,6 +13,7 @@ words = set(
         "Jupyter",
         "LaTeX",
         "Lah",
+        "Matplotlib",
         "Mersenne",
         "Numpy",
         "OSX",
@@ -24,6 +26,7 @@ words = set(
         "boolean",
         "booleans",
         "cfm",
+        "color",
         "combinatorial",
         "combinatorics",
         "cryptographic",
@@ -36,6 +39,7 @@ words = set(
         "docx",
         "dx",
         "endregion",
+        "fname",
         "functools",
         "galton",
         "github",
@@ -58,6 +62,7 @@ words = set(
         "lru",
         "math",
         "matplotlib",
+        "matplotlib",
         "md",
         "myst",
         "nbs",
@@ -68,14 +73,17 @@ words = set(
         "pdf",
         "plt",
         "png",
+        "polyfit",
         "pre",
         "pyplot",
         "repo",
         "rhs",
+        "savefig",
         "scipy",
         "solveset",
         "sqrt",
         "str",
+        "svg",
         "sym",
         "sympy",
         "tex",
@@ -84,7 +92,9 @@ words = set(
         "vectorized",
         "wikipedia",
         "xelatex",
+        "xlabel",
         "xlim",
+        "ylabel",
     )
 )
 
@@ -136,6 +146,15 @@ prose_suggestions_to_ignore = {
         ("typography.symbols.curly_quotes",)
     ),
     "book/appendix/01-numpy/tutorial/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/appendix/02-matplotlib/tutorial/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/appendix/02-matplotlib/how/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/appendix/02-matplotlib/why/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
 }

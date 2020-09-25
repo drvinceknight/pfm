@@ -238,9 +238,13 @@ def backupbook(c, root=ROOT):
 
     Using backup notebooks alongside with unpinned dependencies for the
     continuous integrations ensures this will become apparent.
+
+    Notebooks at <path/name.md> are backed up to <path/.name.bcp.ipynb>.
     """
     for markdown_file_path in get_book_source_files():
-        backup_path = markdown_file_path.with_suffix(".bcp.ipynb")
+        backup_path = markdown_file_path.parent / (
+            f".{markdown_file_path.name}.bcp.ipynb"
+        )
         markdown_file_to_delete = backup_path.with_suffix(".md")
         c.run(f"jupytext --to notebook --execute {markdown_file_path} -o {backup_path}")
         markdown_file_to_delete.unlink(missing_ok=True)
