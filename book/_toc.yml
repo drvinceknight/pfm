@@ -43,6 +43,14 @@
     - file: chapters/07-sequences/how/main
     - file: chapters/07-sequences/exercises/main
     - file: chapters/07-sequences/why/main
+- part: Building tools
+  chapters:
+  - file: chapters/08-variables-conditionals-loops/introduction/main
+    sections:
+    - file: chapters/08-variables-conditionals-loops/tutorial/main
+    - file: chapters/08-variables-conditionals-loops/how/main
+    - file: chapters/08-variables-conditionals-loops/exercises/main
+    - file: chapters/08-variables-conditionals-loops/why/main
 - part: Appendix
   chapters:
   - file: appendix/01-numpy/introduction/main
