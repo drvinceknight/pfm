@@ -1,0 +1,877 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How &#8212; Python for mathematics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/sphinx-book-theme.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "drvinceknight/pfm");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Exercises" href="../exercises/main.html" />
+    <link rel="prev" title="Tutorial" href="../tutorial/main.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Python for mathematics</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   Python for Mathematics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Tools for mathematics
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../01-using-notebooks/introduction/main.html">
+   Using notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../02-algebra/introduction/main.html">
+   Algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../03-calculus/introduction/main.html">
+   Calculus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../04-matrices/introduction/main.html">
+   Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../05-combinations-permutations/introduction/main.html">
+   Combinatorics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../06-probability/introduction/main.html">
+   Probability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../07-sequences/introduction/main.html">
+   Sequences
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Building tools
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="../introduction/main.html">
+   Variables, conditionals and loops
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../why/main.html">
+     Why
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../appendix/01-numpy/introduction/main.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../appendix/02-matplotlib/introduction/main.html">
+   Matplotlib
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../../../_sources/chapters/08-variables-conditionals-loops/how/main.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/chapters/08-variables-conditionals-loops/how/main.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/drvinceknight/pfm"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/drvinceknight/pfm/issues/new?title=Issue%20on%20page%20%2Fchapters/08-variables-conditionals-loops/how/main.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/drvinceknight/pfm/edit/main/book/chapters/08-variables-conditionals-loops/how/main.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/drvinceknight/pfm/main?urlpath=tree/book/chapters/08-variables-conditionals-loops/how/main.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-an-integer-variable">
+   Define an integer variable
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-a-string-variable">
+   Define a string variable
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-a-boolean-variable">
+   Define a boolean variable
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-check-the-type-of-a-variable">
+   How to check the type of a variable
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-combine-boolean-variables">
+   How to combine boolean variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#run-code-if-a-condition-holds">
+   Run code
+   <strong>
+    if
+   </strong>
+   a condition holds
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#repeat-code-for-a-given-set-of-variables">
+   Repeat code
+   <strong>
+    for
+   </strong>
+   a given set of variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#repeat-code-while-a-given-condition-holds">
+   Repeat code
+   <strong>
+    while
+   </strong>
+   a given condition holds
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="how">
+<h1>How<a class="headerlink" href="#how" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="define-an-integer-variable">
+<h2>Define an integer variable<a class="headerlink" href="#define-an-integer-variable" title="Permalink to this headline">¶</a></h2>
+<p>To define an integer variable we use the <code class="docutils literal notranslate"><span class="pre">=</span></code> operator which is the assignment
+operator. We create the name of the variable then the assignment operator
+followed by the integer value.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name_of_variable</span> <span class="o">=</span> <span class="n">int_value</span>
+</pre></div>
+</div>
+</div>
+<p>For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">year</span> <span class="o">=</span> <span class="mi">2020</span>
+<span class="n">year</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2020
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>When choosing a variable name there are some rules to follow:</p>
+<ul class="simple">
+<li><p>No spaces, use <code class="docutils literal notranslate"><span class="pre">_</span></code> instead.</p></li>
+<li><p>Cannot start with a number or other special characters.</p></li>
+</ul>
+<p>There are other important conventions:</p>
+<ul class="simple">
+<li><p>Use explicit names that clearly describe what the variable is (try not to use
+<code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">a</span></code> unless those refer to specific mathematical variables).</p></li>
+<li><p>Do not use <code class="docutils literal notranslate"><span class="pre">CamelCase</span></code> but use <code class="docutils literal notranslate"><span class="pre">snake_case</span></code> when combining words. This follows
+the Python convention called <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP8</a></p></li>
+</ul>
+</div>
+<p>## Define a float variable</p>
+<p>To define a float variable we use the <code class="docutils literal notranslate"><span class="pre">=</span></code> operator which is the assignment
+operator. We create the name of the variable then the assignment operator
+followed by the real value.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name_of_variable</span> <span class="o">=</span> <span class="n">float_value</span>
+</pre></div>
+</div>
+</div>
+<p>For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cms_in_an_inch</span> <span class="o">=</span> <span class="mf">2.54</span>
+<span class="n">cms_in_an_inch</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.54
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="define-a-string-variable">
+<h2>Define a string variable<a class="headerlink" href="#define-a-string-variable" title="Permalink to this headline">¶</a></h2>
+<p>To define a string variable we use the <code class="docutils literal notranslate"><span class="pre">=</span></code> operator which is the assignment
+operator. We create the name of the variable then the assignment operator
+followed by the string which is a combination of characters between quotation
+marks.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name_of_variable</span> <span class="o">=</span> <span class="n">string_value</span>
+</pre></div>
+</div>
+</div>
+<p>For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">capital_of_dominica</span> <span class="o">=</span> <span class="s2">&quot;roseau&quot;</span>
+<span class="n">capital_of_dominica</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;roseau&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="define-a-boolean-variable">
+<h2>Define a boolean variable<a class="headerlink" href="#define-a-boolean-variable" title="Permalink to this headline">¶</a></h2>
+<p>A boolean variable is one of two things: <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. To define a boolean
+variable we again use the <code class="docutils literal notranslate"><span class="pre">=</span></code> operator which is the assignment operator. We
+create the name of the variable then the assignment operator followed by the
+boolean variable (either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>).</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name_of_variable</span> <span class="o">=</span> <span class="n">boolean_value</span>
+</pre></div>
+</div>
+</div>
+<p>For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">john_nash_has_a_noble</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">john_nash_has_a_noble</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><a class="reference internal" href="../../05-combinations-permutations/how/main.html#creating-boolean-variables"><span class="std std-ref">Creating boolean variables</span></a> gives an overview of how to create boolean
+variables from other variables.</p>
+</div>
+</div>
+<div class="section" id="how-to-check-the-type-of-a-variable">
+<h2>How to check the type of a variable<a class="headerlink" href="#how-to-check-the-type-of-a-variable" title="Permalink to this headline">¶</a></h2>
+<p>We can get the type of a variable using the <code class="docutils literal notranslate"><span class="pre">type</span></code> tool.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Where <code class="docutils literal notranslate"><span class="pre">object</span></code> is any variable.</p>
+</div>
+<p>For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">year</span> <span class="o">=</span> <span class="mi">2020</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cms_in_an_inch</span> <span class="o">=</span> <span class="mf">2.54</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">cms_in_an_inch</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">capital_of_dominica</span> <span class="o">=</span> <span class="s2">&quot;roseau&quot;</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">capital_of_dominica</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If a numeric variable is given with any decimal part (including 0) then it is
+considered to be a float.</p>
+</div>
+<p>## How to manipulate numeric variables</p>
+<p>Numeric values can be combined to create new numeric variables.</p>
+<ol class="simple">
+<li><p>Addition, <span class="math notranslate nohighlight">\(2 + 2\)</span>: <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">+</span> <span class="pre">2</span></code>;</p></li>
+<li><p>Subtraction, <span class="math notranslate nohighlight">\(3 - 1\)</span>: <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">-</span> <span class="pre">1</span></code>;</p></li>
+<li><p>Multiplication, <span class="math notranslate nohighlight">\(3 \times 5\)</span>: <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">5</span></code>;</p></li>
+<li><p>Division, <span class="math notranslate nohighlight">\(20 / 5\)</span>: <code class="docutils literal notranslate"><span class="pre">20</span> <span class="pre">/</span> <span class="pre">5</span></code>;</p></li>
+<li><p>Exponentiation, <span class="math notranslate nohighlight">\(2 ^ 4\)</span>: <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">**</span> <span class="pre">4</span></code>;</p></li>
+<li><p>Integer remainder, <span class="math notranslate nohighlight">\(5 \mod 2\)</span>: <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">%</span> <span class="pre">2</span></code>;</p></li>
+<li><p>Combining operations, <span class="math notranslate nohighlight">\(\frac{2 ^ 3 + 1}{4}\)</span>: <code class="docutils literal notranslate"><span class="pre">(2</span> <span class="pre">**</span> <span class="pre">3</span> <span class="pre">+</span> <span class="pre">1)</span> <span class="pre">/</span> <span class="pre">4</span></code>;</p></li>
+</ol>
+<p>For example:</p>
+<div class="cell tag_nbval-ignore-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cms_in_an_inch</span> <span class="o">=</span> <span class="mf">2.54</span>
+<span class="n">average_male_height_in_cms</span> <span class="o">=</span> <span class="mi">170</span>
+<span class="n">average_male_height_in_inches</span> <span class="o">=</span> <span class="n">average_male_height_in_cms</span> <span class="o">/</span> <span class="n">cms_in_an_inch</span>
+<span class="n">average_male_height_in_inches</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>66.92913385826772
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This is similar to what we did in
+<a class="reference internal" href="../../01-using-notebooks/how/main.html#carry-out-basic-arithmetic-operations"><span class="std std-ref">Carry out basic arithmetic operations</span></a>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Some languages, including Python have a shortcut to manipulate a variable “in
+place”. The following takes the variable <code class="docutils literal notranslate"><span class="pre">money</span></code> and replaces it by 3 times
+<code class="docutils literal notranslate"><span class="pre">money</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">money</span> <span class="o">*=</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p>This is equivalent to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">money</span> <span class="o">=</span> <span class="n">money</span> <span class="o">*</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<p>## How to include variables in strings</p>
+<p>Variables can be used in strings using <em>string formatting</em>. There are numerous
+ways this can be done in Python but the current best practice is to use
+<code class="docutils literal notranslate"><span class="pre">f</span></code>-strings.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">variable</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</div>
+<p>For example the following creates a string that uses a random number:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">random_number</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+<span class="n">string</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Here is a random number: </span><span class="si">{</span><span class="n">random_number</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">string</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Here is a random number: 0.8444218515250481&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="how-to-combine-boolean-variables">
+<h2>How to combine boolean variables<a class="headerlink" href="#how-to-combine-boolean-variables" title="Permalink to this headline">¶</a></h2>
+<p>Boolean variables can be combined using the logical operators <code class="docutils literal notranslate"><span class="pre">and</span></code> and <code class="docutils literal notranslate"><span class="pre">or</span></code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">new_boolean</span> <span class="o">=</span> <span class="n">first_boolean</span> <span class="ow">and</span> <span class="n">second_boolean</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">new_boolean</span> <span class="o">=</span> <span class="n">first_boolean</span> <span class="ow">or</span> <span class="n">second_boolean</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<p>For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">is_tall</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">is_strong</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">is_tall_and_strong</span> <span class="o">=</span> <span class="n">is_tall</span> <span class="ow">and</span> <span class="n">is_strong</span>
+<span class="n">is_tall_and_strong</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">is_tall</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">is_strong</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">is_tall_or_strong</span> <span class="o">=</span> <span class="n">is_tall</span> <span class="ow">or</span> <span class="n">is_strong</span>
+<span class="n">is_tall_or_strong</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="run-code-if-a-condition-holds">
+<h2>Run code <strong>if</strong> a condition holds<a class="headerlink" href="#run-code-if-a-condition-holds" title="Permalink to this headline">¶</a></h2>
+<p>An important part of giving instructions to a computer is to specify when to do
+different things.
+This is done using what is called an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement. Following an <code class="docutils literal notranslate"><span class="pre">if</span></code> a boolean
+variable is expected, if that boolean is <code class="docutils literal notranslate"><span class="pre">True</span></code> then the indented code that
+follows is run. Otherwise it is not.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">boolean</span><span class="p">:</span>
+    <span class="n">code</span> <span class="n">to</span> <span class="n">run</span> <span class="k">if</span> <span class="n">boolean</span> <span class="ow">is</span> <span class="n">true</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">code</span> <span class="n">to</span> <span class="n">run</span> <span class="k">if</span> <span class="n">boolean</span> <span class="ow">is</span> <span class="n">false</span>
+<span class="n">code</span> <span class="n">to</span> <span class="n">run</span> <span class="n">after</span> <span class="n">either</span> <span class="n">of</span> <span class="n">two</span> <span class="n">previous</span> <span class="n">code</span> <span class="n">blocks</span> <span class="n">are</span> <span class="n">run</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>An <code class="docutils literal notranslate"><span class="pre">else</span></code> statement is not always necessary. Specifically when combined with
+functions as seen in <a class="reference internal" href="../../06-probability/introduction/main.html#probability"><span class="std std-ref">Probability</span></a> when combined with <code class="docutils literal notranslate"><span class="pre">return</span></code> statement
+the <code class="docutils literal notranslate"><span class="pre">else</span></code> is often not needed.</p>
+</div>
+<p>For example the following code selects a random integer between 0 and 100 and
+then prints a different string depending on what the number was.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">random_number</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">is_even</span> <span class="o">=</span> <span class="n">random_number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">if</span> <span class="n">is_even</span><span class="p">:</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;The random number (</span><span class="si">{</span><span class="n">random_number</span><span class="si">}</span><span class="s2">) is even.&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;The random number (</span><span class="si">{</span><span class="n">random_number</span><span class="si">}</span><span class="s2">) is odd.&quot;</span>
+<span class="n">message</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The random number (49) is odd.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="repeat-code-for-a-given-set-of-variables">
+<h2>Repeat code <strong>for</strong> a given set of variables<a class="headerlink" href="#repeat-code-for-a-given-set-of-variables" title="Permalink to this headline">¶</a></h2>
+<p>Given an iterable, it is possible to repeat some code for every item in the
+iterable. This is done using what is called a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. Following the <code class="docutils literal notranslate"><span class="pre">for</span></code> a
+dummy variable is given then followed by the <code class="docutils literal notranslate"><span class="pre">in</span></code> keyword and the iterable.
+After that the indented code that will be repeated for every value of the
+iterable.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for dummy_variable in iterable:
+    code to repeat
+    ```
+</pre></div>
+</div>
+</div>
+<p>For example the following will print a message for every given value in the
+iterable:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iterable</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Dog&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">:</span>
+    <span class="n">type_of_variable</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;The variable </span><span class="si">{</span><span class="n">item</span><span class="si">}</span><span class="s2"> has type </span><span class="si">{</span><span class="n">type_of_variable</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The variable Dog has type &lt;class &#39;str&#39;&gt;
+The variable 3 has type &lt;class &#39;int&#39;&gt;
+The variable 2 has type &lt;class &#39;int&#39;&gt;
+The variable -1.0 has type &lt;class &#39;float&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p><code class="docutils literal notranslate"><span class="pre">for</span></code> loops are a common tool across most programming languages. They are
+similar to the list comprehensions we saw in
+<a class="reference internal" href="../../06-probability/how/main.html#create-a-list-using-a-list-comprehension"><span class="std std-ref">Create a list using a list comprehension</span></a>.</p>
+<ul class="simple">
+<li><p>List comprehensions should be
+specifically used when the goal is to create a collection of items.</p></li>
+<li><p>Traditional <code class="docutils literal notranslate"><span class="pre">for</span></code> loops should be used when the code to run for every
+iteration is more complex.</p></li>
+</ul>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Similarly to <a class="reference internal" href="../../06-probability/how/main.html#creating-an-iterable-with-a-given-number-of-items"><span class="std std-ref">Creating an iterable with a given number of items</span></a> a common
+use case of <code class="docutils literal notranslate"><span class="pre">for</span></code> loops is to combine them with a <code class="docutils literal notranslate"><span class="pre">range</span></code> statement to repeat
+code a known number of items.</p>
+</div>
+</div>
+<div class="section" id="repeat-code-while-a-given-condition-holds">
+<span id="id1"></span><h2>Repeat code <strong>while</strong> a given condition holds<a class="headerlink" href="#repeat-code-while-a-given-condition-holds" title="Permalink to this headline">¶</a></h2>
+<p>To repeat code while a condition holds a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop can be used. Similarly to
+the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement, Following a <code class="docutils literal notranslate"><span class="pre">while</span></code> a boolean
+variable is expected, if that boolean is <code class="docutils literal notranslate"><span class="pre">True</span></code> then the indented code that
+follows is repeated. After it is run, the boolean is checked once more. When the
+boolean is <code class="docutils literal notranslate"><span class="pre">False</span></code> the indented code is skipped.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">boolean</span><span class="p">:</span>
+    <span class="n">code</span> <span class="n">to</span> <span class="n">repeat</span> <span class="n">before</span> <span class="n">checking</span> <span class="n">boolean</span> <span class="n">once</span> <span class="n">more</span>
+<span class="n">code</span> <span class="n">to</span> <span class="n">run</span> <span class="n">once</span> <span class="n">boolean</span> <span class="ow">is</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+<p>Here is some code that repeatedly selects a random number until that number is
+even.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">selected_integer</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">number_of_selections</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">selected_integer</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">selected_integer</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">number_of_selections</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="n">number_of_selections</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters/08-variables-conditionals-loops/how"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../tutorial/main.html" title="previous page">Tutorial</a>
+    <a class='right-next' id="next-link" href="../exercises/main.html" title="next page">Exercises</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Vincent Knight<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../../_static/js/index.js"></script>
+    
+  </body>
+</html>

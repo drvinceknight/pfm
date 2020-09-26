@@ -47,6 +47,7 @@ In a Jupyter notebook cell write an instruction, for example:
 
 and click on the `Run` button or use `Shift + Enter` as a keyboard shortcut.
 
+(carry_out_basic_arithmetic_operations)=
 ## Carry out basic arithmetic operations
 
 The python code for the following arithmetic operations are:
