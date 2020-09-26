@@ -30,7 +30,7 @@ $$
 Verify the following that the following identify holds for $n\leq 500$:
 
 $$
-    \sum_{i=0}^na_i = a_{n + 2} - 1
+    \sum_{i=0}^n a_i = a_{n + 2} - 1
 $$
 ```
 
@@ -38,6 +38,7 @@ We will start by defining a function for $a(n)$:
 
 ```{code-cell} ipython3
 import functools
+
 
 @functools.lru_cache()
 def get_fibonacci(n):
@@ -73,7 +74,7 @@ def check_theorem(n):
     Check the relationship for the sum of the first n fibonacci numbers
     """
     sum_of_fibonacci = sum(get_fibonacci(n) for n in range(n + 1))
-    return  sum_of_fibonacci == get_fibonacci(n + 2) - 1
+    return sum_of_fibonacci == get_fibonacci(n + 2) - 1
 ```
 
 We can then generate checks for $n\leq 500$:

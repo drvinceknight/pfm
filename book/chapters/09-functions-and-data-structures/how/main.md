@@ -80,7 +80,7 @@ pairs.
 
 ````{tip}
 ```
-{key_1: value, key_2: value, ...}
+{key_1: value, key_2: value, …}
 ```
 ````
 
