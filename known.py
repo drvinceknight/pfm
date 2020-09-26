@@ -20,6 +20,7 @@ words = set(
         "OSX",
         "Oldtown",
         "Pseudo",
+        "Riggins",
         "Rollerblades",
         "Sympy",
         "algorithmically",
@@ -43,6 +44,7 @@ words = set(
         "dx",
         "endregion",
         "factorint",
+        "fibonacci",
         "fname",
         "functools",
         "galton",
@@ -157,6 +159,9 @@ prose_suggestions_to_ignore = {
         ("typography.symbols.curly_quotes",)
     ),
     "book/chapters/08-variables-conditionals-loops/how/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/chapters/09-functions-and-data-structures/tutorial/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
     "book/appendix/01-numpy/tutorial/main.md": set(

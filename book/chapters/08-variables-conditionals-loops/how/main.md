@@ -214,6 +214,7 @@ string = f"Here is a random number: {random_number}"
 string
 ```
 
+(how_to_combine_boolean_variables)=
 ## How to combine boolean variables
 
 Boolean variables can be combined using the logical operators `and` and `or`.
