@@ -35,4 +35,4 @@ updated libraries.
 
 To generate the book to the `book` directory:
 
-    inv buildbook
+    inv build

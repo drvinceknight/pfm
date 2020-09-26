@@ -35,7 +35,7 @@ jobs:
     # Build the book
     - name: Build the book
       run: |
-        inv buildbook
+        inv build
 
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
