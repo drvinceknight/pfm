@@ -51,6 +51,12 @@
     - file: chapters/08-variables-conditionals-loops/how/main
     - file: chapters/08-variables-conditionals-loops/exercises/main
     - file: chapters/08-variables-conditionals-loops/why/main
+  - file: chapters/09-functions-and-data-structures/introduction/main
+    sections:
+    - file: chapters/09-functions-and-data-structures/tutorial/main
+    - file: chapters/09-functions-and-data-structures/how/main
+    - file: chapters/09-functions-and-data-structures/exercises/main
+    - file: chapters/09-functions-and-data-structures/why/main
 - part: Appendix
   chapters:
   - file: appendix/01-numpy/introduction/main

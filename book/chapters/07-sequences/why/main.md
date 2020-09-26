@@ -99,6 +99,7 @@ In practice:
   straightforward to obtain an iterative formula.
 
 
+(what_is_caching)=
 ## What is caching
 
 One of the reasons that recursion is computationally inefficient is that it
