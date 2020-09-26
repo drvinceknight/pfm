@@ -213,7 +213,7 @@ def prosecheck(c, root=ROOT):
 
 
 @task
-def buildbook(c, root=ROOT):
+def build(c, root=ROOT):
     """
     Build the book.
     """

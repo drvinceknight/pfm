@@ -38,6 +38,7 @@ For example:
 basket[1]
 ```
 
+(creating_boolean_variables)=
 ## Creating boolean variables
 
 A boolean variable has one of two values: `True` or `False`.

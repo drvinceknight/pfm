@@ -12,6 +12,7 @@ kernelspec:
   name: python3
 ---
 
+(probability)=
 # Probability
 
 Probability is the study of random events. Computers are particularly helpful

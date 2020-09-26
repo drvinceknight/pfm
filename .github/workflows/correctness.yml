@@ -40,4 +40,4 @@ jobs:
     - name: Confirm that book builds (only on OSX and ubuntu)
       if: matrix.os != 'windows-latest'
       run: |
-        inv buildbook
+        inv build

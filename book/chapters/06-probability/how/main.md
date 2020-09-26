@@ -190,6 +190,7 @@ get_price_of_item("Rollerblades")
 ```
 
 
+(create_a_list_using_a_list_comprehension)=
 ## Create a list using a list comprehension
 
 We can create a new list from an old list using a **list comprehension**. This
@@ -229,6 +230,7 @@ prices = [get_price_of_item(item) for item in basket]
 prices
 ```
 
+(creating_an_iterable_with_a_given_number_of_items)=
 ## Creating an iterable with a given number of items
 
 A common use of list comprehensions is to combine it with the `range` tool which gives a given number of integers.
