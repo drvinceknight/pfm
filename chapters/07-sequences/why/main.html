@@ -186,6 +186,11 @@ commentsRunWhenDOMLoaded(addUtterances);
    Variables, conditionals and loops
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../09-functions-and-data-structures/introduction/main.html">
+   Functions and data structures
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -421,7 +426,7 @@ time the run time of a command. It is clear that recursion is slower.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>49.2 µs ± 548 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>42.7 µs ± 218 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
 </div>
@@ -433,7 +438,7 @@ time the run time of a command. It is clear that recursion is slower.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10.8 µs ± 290 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10.3 µs ± 18.8 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
 </div>
@@ -447,7 +452,7 @@ straightforward to obtain an iterative formula.</p></li>
 </ul>
 </div>
 <div class="section" id="what-is-caching">
-<h2>What is caching<a class="headerlink" href="#what-is-caching" title="Permalink to this headline">¶</a></h2>
+<span id="id1"></span><h2>What is caching<a class="headerlink" href="#what-is-caching" title="Permalink to this headline">¶</a></h2>
 <p>One of the reasons that recursion is computationally inefficient is that it
 always has to recalculate previously calculated values.</p>
 <p>For example:</p>
@@ -506,7 +511,7 @@ cached version.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>47.6 µs ± 1 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>43.5 µs ± 140 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
 </div>
@@ -518,7 +523,7 @@ cached version.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.98 µs ± 62.3 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.84 µs ± 15.5 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
 </div>
