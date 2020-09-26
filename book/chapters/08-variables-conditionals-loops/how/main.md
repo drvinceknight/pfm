@@ -42,7 +42,7 @@ When choosing a variable name there are some rules to follow:
 There are other important conventions:
 
 - Use explicit names that clearly describe what the variable is (try not to use
-  `i`, `a` unless those refer to specific mathemtical variables).
+  `i`, `a` unless those refer to specific mathematical variables).
 - Do not use `CamelCase` but use `snake_case` when combining words. This follows
   the Python convention called [PEP8](https://www.python.org/dev/peps/pep-0008/)
 ```
@@ -333,6 +333,7 @@ use case of `for` loops is to combine them with a `range` statement to repeat
 code a known number of items.
 ```
 
+(repeat_code_while_a_given_condition_holds)=
 ## Repeat code **while** a given condition holds
 
 To repeat code while a condition holds a `while` loop can be used. Similarly to

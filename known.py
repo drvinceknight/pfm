@@ -4,6 +4,7 @@ words = set(
         "Ashville",
         "Bertolt",
         "Bewton",
+        "CamelCase",
         "Combinatorics",
         "Df",
         "Eq",
@@ -26,6 +27,7 @@ words = set(
         "boolean",
         "booleans",
         "cfm",
+        "cms",
         "color",
         "combinatorial",
         "combinatorics",
@@ -37,8 +39,10 @@ words = set(
         "docstring",
         "docstrings",
         "docx",
+        "dominica",
         "dx",
         "endregion",
+        "factorint",
         "fname",
         "functools",
         "galton",
@@ -48,6 +52,7 @@ words = set(
         "inv",
         "ipynb",
         "ipython",
+        "isprime",
         "iterable",
         "iterables",
         "itertools",
@@ -65,6 +70,7 @@ words = set(
         "matplotlib",
         "md",
         "myst",
+        "nash",
         "nbs",
         "nbval",
         "np",
@@ -76,8 +82,10 @@ words = set(
         "polyfit",
         "pre",
         "pyplot",
+        "randint",
         "repo",
         "rhs",
+        "roseau",
         "savefig",
         "scipy",
         "solveset",
@@ -143,6 +151,12 @@ prose_suggestions_to_ignore = {
     "book/chapters/07-sequences/how/main.md": set(("typography.symbols.curly_quotes",)),
     "book/chapters/07-sequences/why/main.md": set(("typography.symbols.curly_quotes",)),
     "book/chapters/07-sequences/tutorial/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/chapters/08-variables-conditionals-loops/tutorial/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/chapters/08-variables-conditionals-loops/how/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
     "book/appendix/01-numpy/tutorial/main.md": set(
