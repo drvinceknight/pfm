@@ -59,8 +59,6 @@ def name(variable1, variable2, ...):
     return output
 ```
 
-INCLUDE IMAGE HERE
-
 We can for example define $f:\mathbb{R}\to\mathbb{R}$ given by $f(x) = x ^
 3$ using the following:
 
