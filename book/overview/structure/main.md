@@ -56,8 +56,8 @@ Every chapter will have 4 parts:
   specifically told what to do and what to expect.
 - A how to section: this will be a shorter more succinct section that will
   detail how to carry out specific things.
-- An answers sections: this will be a section with references to further
-  resources as well as background information about specific things in the
-  chapter and answer to common questions.
+- A further information section: this will be a section with references to
+  further resources as well as background information about specific things in
+  the chapter and answers to common questions.
 - An exercise section: this will be a number of exercises that you can work on.
 ```

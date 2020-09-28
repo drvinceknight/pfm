@@ -14,7 +14,8 @@ kernelspec:
 
 # Tutorial
 
-We will solve the following problem using a computer to illustrate how a computer can be used to solve combinatorial problems:
+We will solve the following problem using a computer to illustrate how a
+computer can be used to solve combinatorial problems:
 
 
 ```{admonition} Problem
@@ -150,4 +151,13 @@ that is only possible if the first digit is 1 or 2:
 
 ```{code-cell} ipython3
 (math.factorial(4) + math.factorial(3))
+```
+
+```{important}
+In this tutorial we have
+
+- Created permutations of a given tuples.
+- Created permutations of a given tuples that obey a given condition.
+- Counted how many permutations exist.
+- Directly computed the expected number of permutations.
 ```

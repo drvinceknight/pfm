@@ -19,3 +19,9 @@ potential repetitions.
 
 The study of these sequences leads to many interesting results. Here we will
 concentrate on using recursive definitions to generate the values in a sequence.
+
+```{important}
+In this chapter we will cover:
+
+- Using recursion.
+```

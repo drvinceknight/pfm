@@ -16,8 +16,15 @@ kernelspec:
 
 ## Create a matrix
 
-We create a matrix using the `sym.Matrix` tool. We combine this with the square
-brackets `[]` which we nest so that every row is also inside square brackets.
+We create a matrix using the `sympy.Matrix` tool. We combine this with
+square brackets `[]` which we nest so that every row is also inside square
+brackets.
+
+````{tip}
+```
+sympy.Matrix([values])
+```
+````
 
 For example, the following creates the matrix:
 
@@ -36,7 +43,10 @@ B = sym.Matrix([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
 B
 ```
 
-**Note** that it is possible to write the code in a more readable way as long as an incomplete line ends with an open bracket:
+```{attention}
+It is possible to write the code in a more readable way as long as an incomplete
+line ends with an open bracket:
+```
 
 
 ```
@@ -51,7 +61,17 @@ B = sym.Matrix(
 
 ## Calculate the determinant of a matrix
 
-To calculate the determinant of a matrix, we use the `.det` tool. For example to calculate the determinant of:
+To calculate the determinant of a matrix, we use the `.det` tool. For example to
+calculate the determinant of:
+
+````{tip}
+```
+matrix = sympy.Matrix([values])
+matrix.det()
+```
+````
+
+For example, the determinant of the following matrix:
 
 $$
     \begin{pmatrix}
@@ -67,8 +87,17 @@ matrix.det()
 
 ## Calculate the inverse of a matrix
 
+To calculate the inverse of a matrix, we use the `.inv` tool.
 
-To calculate the inverse of a matrix, we use the `.inv` tool. For example to calculate the inverse of:
+````{tip}
+```
+matrix = sympy.Matrix([values])
+matrix.inv()
+```
+````
+
+For example to
+calculate the inverse of:
 
 $$
     \begin{pmatrix}
@@ -84,7 +113,8 @@ matrix.inv()
 
 ## Multiply matrices by a scalar
 
-To multiple a matrix by a scalar we use the `*` operator. For example to multiply the following matrix by $6$:
+To multiple a matrix by a scalar we use the `*` operator. For example to
+multiply the following matrix by $6$:
 
 $$
     \begin{pmatrix}

@@ -12,15 +12,17 @@ kernelspec:
   name: python3
 ---
 
-# Why
+# Further information
 
-## I plot a function
+## How can we plot a function
 
-It is possible to plot a function using Sympy using the `sym.plot` function:
+It is possible to plot a function using `sympy` using the `sympy.plot` function:
 
+````{tip}
 ```
-sym.plot(f(x))
+sympy.plot(expression)
 ```
+````
 
 So for example, here is a plot of $f(x)=x^2 + 3x + 1$:
 
@@ -41,7 +43,10 @@ It is possible to specify the x limits and combine it with other plots:
 sym.plot(x ** 2 + 3 * x + 1, xlim=(-5, 5))
 ```
 
-**This plotting solution is fine it you want to take a look at a function quickly but it is not recommended.** The main library for plotting is called `matplotlib` and we will see how to use that at a later date.
+**This plotting solution is fine it you want to take a look at a function
+quickly but it is not recommended.** The main library for plotting is called
+`matplotlib` and {ref}`matplotlib` covers this.
 
-- Here is the Sympy documentation for plotting: <https://docs.sympy.org/latest/modules/plotting.html>
-- Here is the official matplotlib documentation: <https://matplotlib.org>
+- Here is the `sympy` documentation for plotting:
+  <https://docs.sympy.org/latest/modules/plotting.html>
+- Here is the official `matplotlib` documentation: <https://matplotlib.org>

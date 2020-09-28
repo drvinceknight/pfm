@@ -29,3 +29,11 @@ In practice studying probability will often involve:
   occurring.
 
 Here we will see how to instruct a computer to sample such events.
+
+```{important}
+In this chapter we will cover:
+
+- Generating random numbers.
+- Randomly sample from a given collection of items.
+- Write python functions to be able to repeat experiments.
+```

@@ -12,11 +12,16 @@ kernelspec:
   name: python3
 ---
 
-# Why
+# Further information
 
 ## Why use anaconda?
 
-Python is a free an open source piece of software. One of the main reasons for its popularity is that there are a number of separate tools that work well with it, these are called libraries. Sometimes installing these libraries can require an understanding of some potential pitfalls. In scientific circles the Anaconda distribution was developed to give a single download of not only Python but a lot of commonly used libraries.
+Python is a free an open source piece of software. One of the main reasons for
+its popularity is that there are a number of separate tools that work well with
+it, these are called libraries. Sometimes installing these libraries can require
+an understanding of some potential pitfalls. In scientific circles the Anaconda
+distribution was developed to give a single download of not only Python but a
+lot of commonly used libraries.
 
 If you want to read more about this here are some web resources:
 

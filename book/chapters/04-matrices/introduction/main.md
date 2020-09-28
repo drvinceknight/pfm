@@ -28,3 +28,9 @@ their own right and manipulating matrices usually corresponds to:
 - calculating the inverse of a matrix.
 
 Here we will see how to instruct a computer to carry out these techniques.
+
+```{important}
+In this chapter we will cover:
+
+- Creating and manipulating matrices
+```

@@ -44,8 +44,10 @@ We will be using a language called [**Python**](https://www.python.org).
 Python was originally designed as a teaching language but it is now popular both
 in academia and in industry.
 
+```{important}
 In this chapter we will cover:
 
 - Installing the specific distribution of Python on your computer.
 - Using something called a Jupyter notebook to write and run Python code.
 - Writing descriptive notes using `markdown` and $\LaTeX$ (pronounced Lay-tech).
+```

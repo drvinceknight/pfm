@@ -289,3 +289,14 @@ $$
 
 20 / 41
 ```
+
+
+```{important}
+In this tutorial we have
+
+- Randomly sampled from an iterable.
+- Randomly sampled a number between 0 and 1.
+- Written a function to represent a random experiment.
+- Created a list using list comprehensions.
+- Counted outcomes of random experiments.
+```

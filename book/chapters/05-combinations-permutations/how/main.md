@@ -18,7 +18,16 @@ kernelspec:
 (create_a_tuple)=
 ## Create a tuple
 
-To create a tuple which is an ordered collection of objects that cannot be changed we use the `()` brackets:
+To create a tuple which is an ordered collection of objects that cannot be
+changed we use the `()` brackets.
+
+````{tip}
+```
+collection = (value_1, value_2, value_3, …, value_n)
+```
+````
+
+For example:
 
 ```{code-cell} ipython3
 basket = ("Bread", "Biscuits", "Coffee")
@@ -27,7 +36,8 @@ basket
 
 ## How to access particular elements in a tuple
 
-If we need to we can access elements of this collection using `[]` brackets. The first element is has index `0`:
+If we need to we can access elements of this collection using `[]` brackets. The
+first element is has index `0`:
 
 ```python
 tuple[index]
@@ -78,9 +88,16 @@ value < value
 value <= value
 ```
 
+(creating_an_iterable_with_a_given_number_of_items)=
 ## Creating an iterable with a given number of items
 
-A common use of list comprehensions is to combine it with the `range` tool which gives a given number of integers.
+The `range` tool gives a given number of integers.
+
+````{tip}
+```
+range(number_of_integers)
+```
+````
 
 For example:
 
@@ -106,7 +123,14 @@ tuple(range(4, 10, 3))
 
 ## Creating permutations of a given set of elements
 
-The python `itertools` library has a `permutations` tool that will generate all permutations of a given set:
+The python `itertools` library has a `permutations` tool that will generate all
+permutations of a given set.
+
+````{tip}
+```
+itertools.permutations(iterable)
+```
+````
 
 ```{code-cell} ipython3
 import itertools
@@ -125,11 +149,21 @@ tuple(itertools.permutations(basket, r=2))
 
 The python `itertools` library has a `combinations` tool that will generate all combinations of size `r` of a given set:
 
+````{tip}
+```
+itertools.combinations(iterable, r)
+```
+````
+
+For example:
+
 ```{code-cell} ipython3
+basket = ("Bread", "Biscuits", "Coffee")
 tuple(itertools.combinations(basket, r=2))
 ```
 
-A combination does not care about order so by default the combinations generated are sorted.
+A combination does not care about order so by default the combinations generated
+are sorted.
 
 ## Adding items in a tuple
 
@@ -139,7 +173,8 @@ We can compute the sum of items in a list using the `sum` tool:
 sum((1, 2, 3))
 ```
 
-We can also directly use the `sum` without specifically creating the list. This corresponds to the following mathematical notation:
+We can also directly use the `sum` without specifically creating the list. This
+corresponds to the following mathematical notation:
 
 $$
     \sum_{s\in S}f(s)
@@ -163,7 +198,8 @@ $$
 sum(n ** 2 for n in range(11))
 ```
 
-Finally we can compute conditionally sums by only summing over elements that meet a given condition using the following:
+Finally we can compute conditionally sums by only summing over elements that
+meet a given condition using the following:
 
 ```python
 sum(f(object) for object in old_list if condition)
@@ -181,7 +217,13 @@ sum(n ** 2 for n in range(11) if n % 2 == 1)
 
 ## Directly computing \\(n!\\)
 
-The `math` library has a `factorial` tool:
+The `math` library has a `factorial` tool.
+
+````{tip}
+```
+math.factorial(N)
+```
+````
 
 ```{code-cell} ipython3
 import math
@@ -189,9 +231,17 @@ import math
 math.factorial(5)
 ```
 
-## Directly computing \\({n \choose i}\\)
+## Directly computing ${n \choose i}$
 
-The `scipy.special` library has a `comb` tool:
+The `scipy.special` library has a `comb` tool.
+
+````{tip}
+```
+scipy.special.comb(n, i)
+```
+````
+
+For example:
 
 ```{code-cell} ipython3
 import scipy.special
@@ -199,9 +249,15 @@ import scipy.special
 scipy.special.comb(3, 2)
 ```
 
-## Directly computing \\(^n P_r\\)
+## Directly computing $^n P_i$
 
-The `scipy.special` library has a `perm` tool:
+The `scipy.special` library has a `perm` tool.
+
+````{tip}
+```
+scipy.special.perm(n, i)
+```
+````
 
 ```{code-cell} ipython3
 scipy.special.perm(3, 2)

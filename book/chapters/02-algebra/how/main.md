@@ -16,7 +16,15 @@ kernelspec:
 
 ## How to create a symbolic numeric value
 
-To create a symbolic numerical value use `sympy.S`. For example:
+To create a symbolic numerical value use `sympy.S`.
+
+````{tip}
+```
+sympy.S(a)
+```
+````
+
+For example:
 
 ```{code-cell} ipython3
 import sympy
@@ -26,7 +34,8 @@ value
 ```
 
 ```{attention}
-If we combine a symbolic value with a non symbolic value it will automatically give a symbolic value:
+If we combine a symbolic value with a non symbolic value it will automatically
+give a symbolic value:
 ```
 
 ```{code-cell} ipython3
@@ -38,9 +47,20 @@ If we combine a symbolic value with a non symbolic value it will automatically g
 We can get the numerical value of a symbolic value using `float` or `int`:
 
 - `float` will give the numeric approximation in \\(\mathbb{R}\\)
+  ````{tip}
+  ```
+  float(x)
+  ```
+  ````
 - `int` will give the integer value
+  ````{tip}
+  ```
+  int(x)
+  ```
+  ````
 
-For example, let us create a symbolic numeric variable with value \\(\frac{1}{5}\\):
+For example, let us create a symbolic numeric variable with value
+\\(\frac{1}{5}\\):
 
 ```{code-cell} ipython3
 value = 1 / sympy.S(5)
@@ -63,10 +83,17 @@ int(value)
 This is not rounding to the nearest integer. It is returning the integer part.
 ```
 
-
 ## How to factor an expression
 
-We use the `sympy.factor` tool to factor expressions:
+We use the `sympy.factor` tool to factor expressions.
+
+````{tip}
+```
+sympy.factor(expression)
+```
+````
+
+For example:
 
 ```{code-cell} ipython3
 x = sympy.Symbol("x")
@@ -75,7 +102,15 @@ sympy.factor(x ** 2 - 9)
 
 ## How to expand an expression
 
-We use the `sympy.expand` tool to expand expressions:
+We use the `sympy.expand` tool to expand expressions.
+
+````{tip}
+```
+sympy.expand(expression)
+```
+````
+
+For example:
 
 ```{code-cell} ipython3
 sympy.expand((x - 3) * (x + 3))
@@ -84,6 +119,14 @@ sympy.expand((x - 3) * (x + 3))
 ## How to simplify an expression
 
 We use the `sympy.simplify` tool to simplify an expression.
+
+````{tip}
+```
+sympy.simplify(expression)
+```
+````
+
+For example:
 
 ```{code-cell} ipython3
 sympy.simplify((x - 3) * (x + 3))
@@ -94,17 +137,23 @@ This will not always give the expected (or any) result. At times it could be
 more beneficial to use `sympy.expand` and/or `sympy.factor`.
 ```
 
-
 ## How to solve an equation
 
-We use the `sympy.solveset` tool to solve an equation. It takes two values as inputs. The first is either:
+We use the `sympy.solveset` tool to solve an equation. It takes two values as
+inputs. The first is either:
 
 - An expression for which a root is to be found
 - An equation
 
 The second is the variable we want to solve for.
 
-Here is how we can use Sympy to obtain the roots of the general quadratic:
+````{tip}
+```
+sympy.solveset(equation, variable)
+```
+````
+
+Here is how we can use `sympy` to obtain the roots of the general quadratic:
 
 \\[
     a x ^ 2 + bx + c
@@ -118,7 +167,8 @@ quadratic = a * x ** 2 + b * x + c
 sympy.solveset(quadratic, x)
 ```
 
-Here is how we would solve the same equation but not for \\(x\\) but for \\(b\\):
+Here is how we would solve the same equation but not for \\(x\\) but for
+\\(b\\):
 
 ```{code-cell} ipython3
 sympy.solveset(quadratic, b)
@@ -133,11 +183,14 @@ sympy.solveset(equation, x)
 
 ## How to substitute a value in to an expression
 
-Given a Sympy expression it is possible to substitute values in to it using the `.subs()` tool. This takes the variables and their values in the following format:
+Given a `sympy` expression it is possible to substitute values in to it using
+the `.subs()` tool.
 
-```python
+````{tip}
+```
 expression.subs({variable: value})
 ```
+````
 
 ```{attention}
 It is possible to pass multiple variables at a time.

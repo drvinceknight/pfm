@@ -12,6 +12,7 @@ kernelspec:
   name: python3
 ---
 
+(numpy)=
 # Numpy
 
 One of the most popular Python libraries for scientific computing is `numpy`.
