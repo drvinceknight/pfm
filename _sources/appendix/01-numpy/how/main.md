@@ -14,7 +14,7 @@ kernelspec:
 
 # How
 
-`Numpy` is a large library with incredible functionality all of which will not be
+`numpy` is a large library with incredible functionality all of which will not be
 listed here. Instead some specific tools will be described so as to give a
 sufficient understanding of the capabilities of the library.
 
@@ -39,13 +39,13 @@ array
 
 ## How to create a given number of values between two bounds
 
-`Numpy` has a popular tool to create a linear space: `numpy.linspace` which take
+`numpy` has a popular tool to create a linear space: `numpy.linspace` which take
 a lower bound, an upper bounds and a number. It returns the given number of points
 uniformly spaced between the bounds.
 
 ````{tip}
 ```
-np.linspace(lower_bound, upper_bound, number)
+numpy.linspace(lower_bound, upper_bound, number)
 ```
 ````
 
@@ -87,7 +87,7 @@ np.zeros((3, 5))
 
 ## How to generate random arrays
 
-`Numpy` has a powerful random number generator. It can be accessed from
+`numpy` has a powerful random number generator. It can be accessed from
 `numpy.random` and has multiple tools. The simplest of which is
 `numpy.random.random`. This takes an optional argument that is the dimension of
 the array.
@@ -158,7 +158,7 @@ array1 * array2
 
 ## How to invert a matrix
 
-`Numpy` can invert a matrix using `np.linalg.inv`. There are numerous other
+`numpy` can invert a matrix using `np.linalg.inv`. There are numerous other
 linear algebraic tools available in `np.linalg`.
 
 ````{tip}
@@ -206,7 +206,7 @@ np.linalg.matrix_power(matrix, 3)
 
 ## How to fit a line of best fit
 
-Numpy can be used to fit polynomials to a points. This is done with the
+`numpy` can be used to fit polynomials to a points. This is done with the
 `numpy.polyfit` tool. This takes an array of x values, an array of y values and
 a degree. It returns the coefficients of a polynomial of given degree that best
 approximates $f(x)=y$.

@@ -91,7 +91,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Why" href="../why/main.html" />
+    <link rel="next" title="Further information" href="../why/main.html" />
     <link rel="prev" title="Tutorial" href="../tutorial/main.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -226,7 +226,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../why/main.html">
-     Why
+     Further information
     </a>
    </li>
   </ul>
@@ -398,7 +398,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 
   <div class="section" id="how">
 <h1>How<a class="headerlink" href="#how" title="Permalink to this headline">¶</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">Numpy</span></code> is a large library with incredible functionality all of which will not be
+<p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> is a large library with incredible functionality all of which will not be
 listed here. Instead some specific tools will be described so as to give a
 sufficient understanding of the capabilities of the library.</p>
 <div class="section" id="how-to-create-an-array">
@@ -429,12 +429,12 @@ sufficient understanding of the capabilities of the library.</p>
 </div>
 <div class="section" id="how-to-create-a-given-number-of-values-between-two-bounds">
 <h2>How to create a given number of values between two bounds<a class="headerlink" href="#how-to-create-a-given-number-of-values-between-two-bounds" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">Numpy</span></code> has a popular tool to create a linear space: <code class="docutils literal notranslate"><span class="pre">numpy.linspace</span></code> which take
+<p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> has a popular tool to create a linear space: <code class="docutils literal notranslate"><span class="pre">numpy.linspace</span></code> which take
 a lower bound, an upper bounds and a number. It returns the given number of points
 uniformly spaced between the bounds.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numpy</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -497,7 +497,7 @@ dimensions.</p>
 </div>
 </div>
 <p>## How to generate random arrays</p>
-<p><code class="docutils literal notranslate"><span class="pre">Numpy</span></code> has a powerful random number generator. It can be accessed from
+<p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> has a powerful random number generator. It can be accessed from
 <code class="docutils literal notranslate"><span class="pre">numpy.random</span></code> and has multiple tools. The simplest of which is
 <code class="docutils literal notranslate"><span class="pre">numpy.random.random</span></code>. This takes an optional argument that is the dimension of
 the array.</p>
@@ -517,7 +517,7 @@ the array.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9469847939390373
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.658479909404207
 </pre></div>
 </div>
 </div>
@@ -532,9 +532,9 @@ the array.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.43298713, 0.60438168, 0.26000521, 0.98784044, 0.53056463],
-       [0.99560667, 0.87572953, 0.11192368, 0.4269085 , 0.39317629],
-       [0.37581394, 0.79260702, 0.1270935 , 0.56993652, 0.80487167]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.13458279, 0.36989224, 0.71529821, 0.62768244, 0.17760174],
+       [0.17825479, 0.15434268, 0.69096122, 0.06119147, 0.86166963],
+       [0.74907075, 0.51684134, 0.18135356, 0.51950781, 0.24546063]])
 </pre></div>
 </div>
 </div>
@@ -594,7 +594,7 @@ the array.</p>
 </div>
 <div class="section" id="how-to-invert-a-matrix">
 <h2>How to invert a matrix<a class="headerlink" href="#how-to-invert-a-matrix" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">Numpy</span></code> can invert a matrix using <code class="docutils literal notranslate"><span class="pre">np.linalg.inv</span></code>. There are numerous other
+<p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> can invert a matrix using <code class="docutils literal notranslate"><span class="pre">np.linalg.inv</span></code>. There are numerous other
 linear algebraic tools available in <code class="docutils literal notranslate"><span class="pre">np.linalg</span></code>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -666,7 +666,7 @@ out element wise exponentiation. To raise a matrix to a power we use
 </div>
 <div class="section" id="how-to-fit-a-line-of-best-fit">
 <h2>How to fit a line of best fit<a class="headerlink" href="#how-to-fit-a-line-of-best-fit" title="Permalink to this headline">¶</a></h2>
-<p>Numpy can be used to fit polynomials to a points. This is done with the
+<p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> can be used to fit polynomials to a points. This is done with the
 <code class="docutils literal notranslate"><span class="pre">numpy.polyfit</span></code> tool. This takes an array of x values, an array of y values and
 a degree. It returns the coefficients of a polynomial of given degree that best
 approximates <span class="math notranslate nohighlight">\(f(x)=y\)</span>.</p>
@@ -725,7 +725,7 @@ coefficients of the quadratic:</p>
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="../tutorial/main.html" title="previous page">Tutorial</a>
-    <a class='right-next' id="next-link" href="../why/main.html" title="next page">Why</a>
+    <a class='right-next' id="next-link" href="../why/main.html" title="next page">Further information</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

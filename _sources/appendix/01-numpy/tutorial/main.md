@@ -176,3 +176,10 @@ corresponds to a matrix of size $\frac{(N+1)(N+2)}{2}=231$.
 
 %timeit get_distribution(N=20, p=0.5)
 ```
+
+```{important}
+In this chapter we have:
+
+- Written a function to create a `numpy` array.
+- Used `numpy` to efficiently carry out matrix multiplication.
+```
