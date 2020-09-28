@@ -1,6 +1,7 @@
 # Book settings
-title: Python for mathematics
-author: Vincent Knight
+title: "Python for mathematics"
+author: "Vincent Knight"
+logo: "./img/cover/main.png"
 parse:
   myst_extended_syntax: true
 
@@ -16,7 +17,7 @@ repository:
   branch                    : main
 
 html:
-  favicon: "./favicon.ico"
+  favicon: "./img/favicon/favicon.ico"
   use_repository_button: true
   use_issues_button: true
   use_edit_page_button: true
