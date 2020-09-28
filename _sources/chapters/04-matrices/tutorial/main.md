@@ -22,7 +22,8 @@ The matrix $A$ is given by $A=\begin{pmatrix}a & 1 & 1\\ 1 & a & 1\\ 1 & 1 & 2\e
 
 1. Find the determinant of $A$
 2. Hence find the values of $a$ for which $A$ is singular.
-3. For the following values of $a$, when possible obtain $A ^ {- 1}$ and confirm the result by computing $AA^{-1}$:
+3. For the following values of $a$, when possible obtain $A ^ {- 1}$ and confirm
+   the result by computing $AA^{-1}$:
     1. $a = 0$;
     2. $a = 1$;
     3. $a = 2$;
@@ -30,7 +31,7 @@ The matrix $A$ is given by $A=\begin{pmatrix}a & 1 & 1\\ 1 & a & 1\\ 1 & 1 & 2\e
 
 ```
 
-Sympy is once again the library we will use for this.
+`sympy` is once again the library we will use for this.
 
 We will start by our matrix $A$:
 
@@ -82,4 +83,13 @@ A.subs({a: 3}).inv()
 
 ```{code-cell} ipython3
 A.subs({a: 3}).inv() @ A.subs({a: 3})
+```
+
+```{important}
+In this tutorial we have
+
+- Created a matrix.
+- Calculated the determinant of the matrix.
+- Substituted values in the matrix.
+- Inverted the matrix.
 ```

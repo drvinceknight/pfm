@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 <html>
@@ -7,15 +6,35 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>How to &#8212; Python for mathematics</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../../../_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.css" type="text/css" />
+    
+  <link rel="stylesheet" href="../../../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-dropdown.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.30270b6e4c972e43c488.js">
+
     <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -24,7 +43,6 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/sphinx-book-theme.js"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -60,6 +78,7 @@ var addUtterances = () => {
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -75,8 +94,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="next" title="Exercises" href="../exercises/main.html" />
     <link rel="prev" title="Tutorial" href="../tutorial/main.html" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
 
 
 
@@ -178,7 +197,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../why/main.html">
-     Why
+     Further information
     </a>
    </li>
   </ul>
@@ -325,6 +344,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
+        
         <div class="tocsection onthispage pt-5 pb-3">
             <i class="fas fa-list"></i> Contents
         </div>
@@ -356,11 +376,6 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creating-an-iterable-with-a-given-number-of-items">
-   Creating an iterable with a given number of items
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#adding-items-in-a-list">
    Adding items in a list
   </a>
@@ -383,6 +398,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 
         </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -395,7 +411,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="create-a-list">
 <span id="id1"></span><h2>Create a list<a class="headerlink" href="#create-a-list" title="Permalink to this headline">¶</a></h2>
 <p>To create a list which is an ordered collection of objects that <strong>can</strong> be
-changed we use the <code class="docutils literal notranslate"><span class="pre">[]</span></code> brackets:</p>
+changed we use the <code class="docutils literal notranslate"><span class="pre">[]</span></code> brackets.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>collection = [value_1, value_2, value_3, …, value_n]
+</pre></div>
+</div>
+</div>
+<p>For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">basket</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Bread&quot;</span><span class="p">,</span> <span class="s2">&quot;Biscuits&quot;</span><span class="p">,</span> <span class="s2">&quot;Coffee&quot;</span><span class="p">]</span>
@@ -455,6 +478,8 @@ changed we use the <code class="docutils literal notranslate"><span class="pre">
 <div class="section" id="define-a-function">
 <h2>Define a function<a class="headerlink" href="#define-a-function" title="Permalink to this headline">¶</a></h2>
 <p>We define a function using the <code class="docutils literal notranslate"><span class="pre">def</span></code> keyword (short for define):</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="n">variable1</span><span class="p">,</span> <span class="n">variable2</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A docstring between triple quotation to describe what is happening</span>
@@ -462,6 +487,7 @@ changed we use the <code class="docutils literal notranslate"><span class="pre">
     <span class="n">INDENTED</span> <span class="n">BLOCK</span> <span class="n">OF</span> <span class="n">CODE</span>
     <span class="k">return</span> <span class="n">output</span>
 </pre></div>
+</div>
 </div>
 <p>We can for example define <span class="math notranslate nohighlight">\(f:\mathbb{R}\to\mathbb{R}\)</span> given by <span class="math notranslate nohighlight">\(f(x) = x ^
 3\)</span> using the following:</p>
@@ -497,8 +523,11 @@ x_cubed(x)
 <div class="section" id="call-a-function">
 <h2>Call a function<a class="headerlink" href="#call-a-function" title="Permalink to this headline">¶</a></h2>
 <p>Once a function is defined we call it using the <code class="docutils literal notranslate"><span class="pre">()</span></code>:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="p">(</span><span class="n">variable1</span><span class="p">,</span> <span class="n">variable2</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
 </pre></div>
+</div>
 </div>
 <p>For example:</p>
 <div class="cell docutils container">
@@ -544,11 +573,14 @@ x_cubed(x)
 <h2>Conditional running of code<a class="headerlink" href="#conditional-running-of-code" title="Permalink to this headline">¶</a></h2>
 <p>To run code depending on whether or not a particular condition is met we use
 something called an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
     <span class="n">INDENTED</span> <span class="n">BLOCK</span> <span class="n">OF</span> <span class="n">CODE</span> <span class="n">TO</span> <span class="n">RUN</span> <span class="n">IF</span> <span class="n">CONDITION</span> <span class="n">IS</span> <span class="n">TRUE</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="n">OTHER</span> <span class="n">INDENTED</span> <span class="n">BLOCK</span> <span class="n">OF</span> <span class="n">CODE</span> <span class="n">TO</span> <span class="n">RUM</span> <span class="n">IF</span> <span class="n">CONDITION</span> <span class="n">IS</span> <span class="n">NOT</span> <span class="n">TRUE</span>
 </pre></div>
+</div>
 </div>
 <p>These <code class="docutils literal notranslate"><span class="pre">if</span></code> statements are most useful when combined with functions. For example
 we can define the following function:</p>
@@ -609,7 +641,8 @@ we can define the following function:</p>
 </div>
 </div>
 </div>
-<p>Here is another example of a function that returns the price of a given item, if the item is not specific in the function then the price is free:</p>
+<p>Here is another example of a function that returns the price of a given item, if
+the item is not specific in the function then the price is free:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_price_of_item</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
@@ -678,8 +711,14 @@ we can define the following function:</p>
 </div>
 <div class="section" id="create-a-list-using-a-list-comprehension">
 <span id="id2"></span><h2>Create a list using a list comprehension<a class="headerlink" href="#create-a-list-using-a-list-comprehension" title="Permalink to this headline">¶</a></h2>
-<p>We can create a new list from an old list using a <strong>list comprehension</strong>. This
-corresponds to building a set from another set in the usual mathematical
+<p>We can create a new list from an old list using a <strong>list comprehension</strong>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">collection</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<p>This corresponds to building a set from another set in the usual mathematical
 notation:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -724,24 +763,6 @@ S_2 = \{-3, 0, 5\}
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="creating-an-iterable-with-a-given-number-of-items">
-<span id="id3"></span><h2>Creating an iterable with a given number of items<a class="headerlink" href="#creating-an-iterable-with-a-given-number-of-items" title="Permalink to this headline">¶</a></h2>
-<p>A common use of list comprehensions is to combine it with the <code class="docutils literal notranslate"><span class="pre">range</span></code> tool which gives a given number of integers.</p>
-<p>For example:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">number</span> <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-</pre></div>
-</div>
-</div>
-</div>
-<p>Note that <code class="docutils literal notranslate"><span class="pre">range(N)</span></code> gives the integers from 0 until <span class="math notranslate nohighlight">\(N - 1\)</span> (inclusive).</p>
 </div>
 <div class="section" id="adding-items-in-a-list">
 <h2>Adding items in a list<a class="headerlink" href="#adding-items-in-a-list" title="Permalink to this headline">¶</a></h2>
@@ -791,8 +812,14 @@ corresponds to the following mathematical notation:</p>
 </div>
 <div class="section" id="sample-from-an-iterable">
 <h2>Sample from an iterable<a class="headerlink" href="#sample-from-an-iterable" title="Permalink to this headline">¶</a></h2>
-<p>To randomly sample from any collection of items (this is called an <strong>iterable</strong>)
-we use the random library and the <code class="docutils literal notranslate"><span class="pre">choice</span></code> tool:</p>
+<p>To randomly sample from any collection of items
+we use the random library and the <code class="docutils literal notranslate"><span class="pre">choice</span></code> tool.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">collection</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 <div class="cell tag_nbval-ignore-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
@@ -812,7 +839,14 @@ we use the random library and the <code class="docutils literal notranslate"><sp
 <div class="section" id="sample-a-random-number">
 <h2>Sample a random number<a class="headerlink" href="#sample-a-random-number" title="Permalink to this headline">¶</a></h2>
 <p>To sample a random number between 0 and 1 we use the random library and the
-<code class="docutils literal notranslate"><span class="pre">random</span></code> tool:</p>
+<code class="docutils literal notranslate"><span class="pre">random</span></code> tool.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p>For example:</p>
 <div class="cell tag_nbval-ignore-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
@@ -822,7 +856,7 @@ we use the random library and the <code class="docutils literal notranslate"><sp
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.2617247156760808
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6244985329793111
 </pre></div>
 </div>
 </div>
@@ -832,7 +866,13 @@ we use the random library and the <code class="docutils literal notranslate"><sp
 <h2>Reproduce random events<a class="headerlink" href="#reproduce-random-events" title="Permalink to this headline">¶</a></h2>
 <p>The random numbers processes generated by the Python random module are what are
 called pseudo random which means that we can get a computer to reproduce them by
-<strong>seeding</strong> the random process:</p>
+<strong>seeding</strong> the random process.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
@@ -924,7 +964,10 @@ called pseudo random which means that we can get a computer to reproduce them by
       </div>
     </div>
 
-    <script src="../../../_static/js/index.js"></script>
+    
+  <script src="../../../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
     
   </body>
 </html>

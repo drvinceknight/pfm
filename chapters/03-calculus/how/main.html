@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 <html>
@@ -7,15 +6,35 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>How &#8212; Python for mathematics</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../../../_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.css" type="text/css" />
+    
+  <link rel="stylesheet" href="../../../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-dropdown.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.30270b6e4c972e43c488.js">
+
     <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -24,7 +43,6 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/sphinx-book-theme.js"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -60,6 +78,7 @@ var addUtterances = () => {
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -75,8 +94,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="next" title="Exercises" href="../exercises/main.html" />
     <link rel="prev" title="Tutorial" href="../tutorial/main.html" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
 
 
 
@@ -163,7 +182,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../why/main.html">
-     Why
+     Further information
     </a>
    </li>
   </ul>
@@ -325,6 +344,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
+        
         <div class="tocsection onthispage pt-5 pb-3">
             <i class="fas fa-list"></i> Contents
         </div>
@@ -361,6 +381,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 
         </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -372,7 +393,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h1>How<a class="headerlink" href="#how" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="calculate-the-derivative-of-an-expression">
 <h2>Calculate the derivative of an expression.<a class="headerlink" href="#calculate-the-derivative-of-an-expression" title="Permalink to this headline">¶</a></h2>
-<p>We can calculate the derivative of an expression using <code class="docutils literal notranslate"><span class="pre">sym.diff(&lt;expression&gt;,</span> <span class="pre">&lt;variable&gt;,</span> <span class="pre">[&lt;degree&gt;])</span></code>.</p>
+<p>We can calculate the derivative of an expression using <code class="docutils literal notranslate"><span class="pre">sympy.diff</span></code> which takes,
+an expression, a variable and a degree.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">expression</span><span class="p">,</span> <span class="n">variable</span><span class="p">,</span> <span class="n">degree</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>The default value of <code class="docutils literal notranslate"><span class="pre">degree</span></code> is 1.</p>
 <p>For example to compute <span class="math notranslate nohighlight">\(\frac{d (4 x ^ 3 + 2 x + 1}{dx}\)</span>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -404,7 +433,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="section" id="calculate-the-indefinite-integral-of-an-expression">
 <h2>Calculate the indefinite integral of an expression.<a class="headerlink" href="#calculate-the-indefinite-integral-of-an-expression" title="Permalink to this headline">¶</a></h2>
-<p>We can calculate the indefinite integral of an expression using <code class="docutils literal notranslate"><span class="pre">sym.integrate(&lt;expression&gt;,</span> <span class="pre">&lt;variable&gt;)</span></code>.</p>
+<p>We can calculate the indefinite integral of an expression using
+<code class="docutils literal notranslate"><span class="pre">sympy.integrate</span></code>. Which takes an expression and a variable.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">expression</span><span class="p">,</span> <span class="n">variable</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 <p>For example to compute <span class="math notranslate nohighlight">\(\int 4x^3 + 2x + 1 dx\)</span>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -421,7 +457,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="calculate-the-definite-integral-of-an-expression">
 <h2>Calculate the definite integral of an expression.<a class="headerlink" href="#calculate-the-definite-integral-of-an-expression" title="Permalink to this headline">¶</a></h2>
 <p>We can calculate the definite integral of an expression using
-<code class="docutils literal notranslate"><span class="pre">sym.integrate(&lt;expression&gt;,</span> <span class="pre">(&lt;variable&gt;,</span> <span class="pre">&lt;lower_bound&gt;,</span> <span class="pre">&lt;upper_bound&gt;))</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">sympy.integrate</span></code>. The first argument is an expression but instead of passing a
+variable as the second argument we pass a tuple with the variable and the upper
+and lower bounds of integration.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">expression</span><span class="p">,</span> <span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
 <p>For example to compute <span class="math notranslate nohighlight">\(\int_0^4 4x^3 + 2x + 1 dx\)</span>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -437,7 +481,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="section" id="use-infty">
 <h2>Use <span class="math notranslate nohighlight">\(\infty\)</span><a class="headerlink" href="#use-infty" title="Permalink to this headline">¶</a></h2>
-<p>In sympy we can access <span class="math notranslate nohighlight">\(\infty\)</span> using <code class="docutils literal notranslate"><span class="pre">sym.oo</span></code>:</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">sympy</span></code> we can access <span class="math notranslate nohighlight">\(\infty\)</span> using <code class="docutils literal notranslate"><span class="pre">sym.oo</span></code>:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">oo</span>
+</pre></div>
+</div>
+</div>
+<p>For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">oo</span>
@@ -452,8 +503,16 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="section" id="calculate-limits">
 <h2>Calculate limits<a class="headerlink" href="#calculate-limits" title="Permalink to this headline">¶</a></h2>
-<p>We can calculate limits using <code class="docutils literal notranslate"><span class="pre">sym.limit(&lt;expression&gt;,</span> <span class="pre">&lt;variable&gt;,</span> <span class="pre">&lt;value&gt;)</span></code>.</p>
-<p>For example to compute <span class="math notranslate nohighlight">\(\lim_{h \to 0} \frac{4(x - h)^3 + 2(x - h) + 1  - 4x^3 - 2x - 1}{h}\)</span>:</p>
+<p>We can calculate limits using <code class="docutils literal notranslate"><span class="pre">sympy.limit</span></code>. The first argument is the
+expression, then the variable and finally the expression the variable tends to.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="n">expression</span><span class="p">,</span> <span class="n">variable</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>For example to compute <span class="math notranslate nohighlight">\(\lim_{h \to 0} \frac{4(x - h)^3 + 2(x - h) + 1  - 4x^3 -
+2x - 1}{h}\)</span>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;h&quot;</span><span class="p">)</span>
@@ -518,7 +577,10 @@ commentsRunWhenDOMLoaded(addUtterances);
       </div>
     </div>
 
-    <script src="../../../_static/js/index.js"></script>
+    
+  <script src="../../../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
     
   </body>
 </html>

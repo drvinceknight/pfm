@@ -12,11 +12,11 @@ kernelspec:
   name: python3
 ---
 
-# Why
+# Further information
 
 ## Why do we use `@` for matrix multiplication and not `*`?
 
-With sympy it is in fact possible to use the `*` operator for matrix
+With `sympy` it is in fact possible to use the `*` operator for matrix
 multiplication:
 
 ```{code-cell} ipython3
@@ -36,4 +36,5 @@ multiplication instead. So for clarity it is preferred to use `@` throughout.
 `numpy` is one of the most popular and important libraries in the Python
 ecosystem. It is in fact the best library to use when doing linear algebra as it
 is computationally efficient, **however** it cannot handle symbolic variables
-which is why we are seeing how to use `Sympy` here.
+which is why we are seeing how to use `Sympy` here. {ref}`numpy` gives an
+introduction to `numpy`.

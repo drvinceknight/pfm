@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Why
+# Further information
 
 ## Why is some code in separate libraries?
 
@@ -27,15 +27,15 @@ There are two types of Python libraries:
 
 - Those that are part of the so called "standard library": these are part of
   Python itself.
-- Those that are completely separate: Sympy is one such example of this.
+- Those that are completely separate: `sympy` is one such example of this.
 
 This separation allows for the development of tools to be not dependent on each
-others. The developers of Sympy do not need to coordinate with the developers of
-Python to make new releases of the software.
+others. The developers of `sympy` do not need to coordinate with the developers
+of Python to make new releases of the software.
 
 ## Why do we need to use sympy?
 
-Sympy is the library for symbolic mathematics. There are other python libraries
+`sympy` is the library for symbolic mathematics. There are other python libraries
 for carrying out mathematics in Python.
 
 For example, let us compute the value of the following expression:
@@ -75,7 +75,7 @@ expression = (sympy.sqrt(2) + 2) ** 2 - 2
 sympy.expand(expression)
 ```
 
-This is one example of why Sympy is an effective tool for mathematicians.
+This is one example of why `sympy` is an effective tool for mathematicians.
 The other one seen in this chapter is being able to compute expressions with no
 numerical value at all:
 
@@ -87,7 +87,7 @@ sympy.factor(a ** 2 - b ** 2)
 
 ## Why do I sometimes see `from sympy import *`?
 
-There a number of resources available from which you can learn to use Sympy. In
+There a number of resources available from which you can learn to use `sympy`. In
 some instances you will not see `import sympy` but instead you will see `from
 sympy import *`.
 
@@ -178,17 +178,19 @@ a_poor_name_choice.cos(a_poor_name_choice.pi / 4)
 
 ```{attention}
 **It is important** when aliasing to use accepted conventions for these
-nicknames. For sympy, an accepted convention is indeed `import sympy as sym`.
+nicknames. For `sympy`, an accepted convention is indeed `import sympy as sym`.
 ```
 
 ## Are there other resources for learning sympy?
 
-There are a large number of resources for learning Sympy. Not all concentrate on
-the algebra that we have considered in this chapter, and we will be covering
-further Sympy functionality in the next chapters.
+There are a large number of resources for learning `sympy`. Not all concentrate
+on the algebra that we have considered in this chapter, and we will be covering
+further `sympy` functionality in the next chapters.
 
 Here are some resources:
 
-- The main sympy documentation: <https://docs.sympy.org/latest/index.html>
-- The scientific python lecture notes chapter on sympy: <https://scipy-lectures.org/packages/sympy.html>
-- A short tutorial: <https://github.com/drvinceknight/Python-Mathematics-Handbook/>
+- The main `sympy` documentation: <https://docs.sympy.org/latest/index.html>
+- The scientific python lecture notes chapter on `sympy`:
+  <https://scipy-lectures.org/packages/sympy.html>
+- A short tutorial:
+  <https://github.com/drvinceknight/Python-Mathematics-Handbook/>

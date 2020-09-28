@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Why
+# Further information
 
 ## Why can I not only use a `while` loop
 

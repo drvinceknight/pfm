@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 <html>
@@ -7,15 +6,35 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>How &#8212; Python for mathematics</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../../../_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.css" type="text/css" />
+    
+  <link rel="stylesheet" href="../../../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-dropdown.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.30270b6e4c972e43c488.js">
+
     <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -24,7 +43,6 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/sphinx-book-theme.js"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -60,6 +78,7 @@ var addUtterances = () => {
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -75,8 +94,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="next" title="Exercises" href="../exercises/main.html" />
     <link rel="prev" title="Tutorial" href="../tutorial/main.html" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
 
 
 
@@ -158,7 +177,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../why/main.html">
-     Why
+     Further information
     </a>
    </li>
   </ul>
@@ -325,6 +344,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
+        
         <div class="tocsection onthispage pt-5 pb-3">
             <i class="fas fa-list"></i> Contents
         </div>
@@ -368,6 +388,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 
         </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -379,7 +400,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h1>How<a class="headerlink" href="#how" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="how-to-create-a-symbolic-numeric-value">
 <h2>How to create a symbolic numeric value<a class="headerlink" href="#how-to-create-a-symbolic-numeric-value" title="Permalink to this headline">¶</a></h2>
-<p>To create a symbolic numerical value use <code class="docutils literal notranslate"><span class="pre">sympy.S</span></code>. For example:</p>
+<p>To create a symbolic numerical value use <code class="docutils literal notranslate"><span class="pre">sympy.S</span></code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span>
@@ -396,7 +424,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>If we combine a symbolic value with a non symbolic value it will automatically give a symbolic value:</p>
+<p>If we combine a symbolic value with a non symbolic value it will automatically
+give a symbolic value:</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -413,11 +442,26 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="how-to-get-the-numerical-value-of-a-symbolic-expression">
 <h2>How to get the numerical value of a symbolic expression<a class="headerlink" href="#how-to-get-the-numerical-value-of-a-symbolic-expression" title="Permalink to this headline">¶</a></h2>
 <p>We can get the numerical value of a symbolic value using <code class="docutils literal notranslate"><span class="pre">float</span></code> or <code class="docutils literal notranslate"><span class="pre">int</span></code>:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">float</span></code> will give the numeric approximation in \(\mathbb{R}\)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">int</span></code> will give the integer value</p></li>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">float</span></code> will give the numeric approximation in \(\mathbb{R}\)</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">int</span></code> will give the integer value</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</li>
 </ul>
-<p>For example, let us create a symbolic numeric variable with value \(\frac{1}{5}\):</p>
+<p>For example, let us create a symbolic numeric variable with value
+\(\frac{1}{5}\):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">sympy</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -463,7 +507,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="section" id="how-to-factor-an-expression">
 <h2>How to factor an expression<a class="headerlink" href="#how-to-factor-an-expression" title="Permalink to this headline">¶</a></h2>
-<p>We use the <code class="docutils literal notranslate"><span class="pre">sympy.factor</span></code> tool to factor expressions:</p>
+<p>We use the <code class="docutils literal notranslate"><span class="pre">sympy.factor</span></code> tool to factor expressions.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">factor</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
@@ -479,7 +530,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="section" id="how-to-expand-an-expression">
 <h2>How to expand an expression<a class="headerlink" href="#how-to-expand-an-expression" title="Permalink to this headline">¶</a></h2>
-<p>We use the <code class="docutils literal notranslate"><span class="pre">sympy.expand</span></code> tool to expand expressions:</p>
+<p>We use the <code class="docutils literal notranslate"><span class="pre">sympy.expand</span></code> tool to expand expressions.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">expand</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">3</span><span class="p">))</span>
@@ -495,6 +553,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="how-to-simplify-an-expression">
 <h2>How to simplify an expression<a class="headerlink" href="#how-to-simplify-an-expression" title="Permalink to this headline">¶</a></h2>
 <p>We use the <code class="docutils literal notranslate"><span class="pre">sympy.simplify</span></code> tool to simplify an expression.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">simplify</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">3</span><span class="p">))</span>
@@ -514,13 +579,20 @@ more beneficial to use <code class="docutils literal notranslate"><span class="p
 </div>
 <div class="section" id="how-to-solve-an-equation">
 <h2>How to solve an equation<a class="headerlink" href="#how-to-solve-an-equation" title="Permalink to this headline">¶</a></h2>
-<p>We use the <code class="docutils literal notranslate"><span class="pre">sympy.solveset</span></code> tool to solve an equation. It takes two values as inputs. The first is either:</p>
+<p>We use the <code class="docutils literal notranslate"><span class="pre">sympy.solveset</span></code> tool to solve an equation. It takes two values as
+inputs. The first is either:</p>
 <ul class="simple">
 <li><p>An expression for which a root is to be found</p></li>
 <li><p>An equation</p></li>
 </ul>
 <p>The second is the variable we want to solve for.</p>
-<p>Here is how we can use Sympy to obtain the roots of the general quadratic:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">equation</span><span class="p">,</span> <span class="n">variable</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Here is how we can use <code class="docutils literal notranslate"><span class="pre">sympy</span></code> to obtain the roots of the general quadratic:</p>
 <p>\[
 a x ^ 2 + bx + c
 \]</p>
@@ -539,7 +611,8 @@ a x ^ 2 + bx + c
 \[\displaystyle \left\{- \frac{b}{2 a} - \frac{\sqrt{- 4 a c + b^{2}}}{2 a}, - \frac{b}{2 a} + \frac{\sqrt{- 4 a c + b^{2}}}{2 a}\right\}\]</div>
 </div>
 </div>
-<p>Here is how we would solve the same equation but not for \(x\) but for \(b\):</p>
+<p>Here is how we would solve the same equation but not for \(x\) but for
+\(b\):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">quadratic</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
@@ -567,9 +640,13 @@ a x ^ 2 + bx + c
 </div>
 <div class="section" id="how-to-substitute-a-value-in-to-an-expression">
 <h2>How to substitute a value in to an expression<a class="headerlink" href="#how-to-substitute-a-value-in-to-an-expression" title="Permalink to this headline">¶</a></h2>
-<p>Given a Sympy expression it is possible to substitute values in to it using the <code class="docutils literal notranslate"><span class="pre">.subs()</span></code> tool. This takes the variables and their values in the following format:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">expression</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">variable</span><span class="p">:</span> <span class="n">value</span><span class="p">})</span>
+<p>Given a <code class="docutils literal notranslate"><span class="pre">sympy</span></code> expression it is possible to substitute values in to it using
+the <code class="docutils literal notranslate"><span class="pre">.subs()</span></code> tool.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">expression</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">variable</span><span class="p">:</span> <span class="n">value</span><span class="p">})</span>
 </pre></div>
+</div>
 </div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
@@ -639,7 +716,10 @@ a x ^ 2 + bx + c
       </div>
     </div>
 
-    <script src="../../../_static/js/index.js"></script>
+    
+  <script src="../../../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
     
   </body>
 </html>

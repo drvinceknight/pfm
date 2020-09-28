@@ -98,7 +98,8 @@ will now consider the second part of the question:
      $\left(-\frac{1}{4}, \frac{7}{8}\right)$
 ```
 
-We will start by reassigning the value of the variable `expression` to be the expression: $2x ^ 2 + x + 1$.
+We will start by reassigning the value of the variable `expression` to be the
+expression: $2x ^ 2 + x + 1$.
 
 ```{code-cell} ipython3
 x = sympy.Symbol("x")
@@ -132,7 +133,7 @@ equation = sympy.Eq(lhs=expression, rhs=0)
 equation
 ```
 
-and asking Sympy to solve it:
+and asking `sympy` to solve it:
 
 ```{code-cell} ipython3
 sympy.solveset(equation)
@@ -162,7 +163,8 @@ We can expand this:
 sympy.expand(completed_square)
 ```
 
-We will now use sympy to solve the various equations that arise from comparing the coefficients of:
+We will now use `sympy` to solve the various equations that arise from comparing
+the coefficients of:
 
 $$
     f(x) = 2x ^2 + x + 1
@@ -256,4 +258,15 @@ The minimum is when $x=-1/4$ which gives: $f(-1/4)=7/8$:
 
 ```{code-cell} ipython3
 completed_square.subs({x: -1 / sympy.S(4)})
+```
+
+```{important}
+In this tutorial we have
+
+- Created symbolic expressions.
+- Obtained approximate values for numerical symbolic expressions.
+- Expanded and simplified symbolic expressions.
+- Created symbolic equations.
+- Solve symbolic equations.
+- Substituted values in to symbolic expressions.
 ```

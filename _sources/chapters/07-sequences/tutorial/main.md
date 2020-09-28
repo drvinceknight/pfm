@@ -105,3 +105,10 @@ This allows us to create the given equation and solve it:
 equation = sym.Eq(sum_of_first_four_terms, 43)
 sym.solveset(equation, k)
 ```
+
+```{important}
+In this tutorial we have
+
+- Defined a function using recursion.
+- Called this function using both numeric and symbolic values.
+```

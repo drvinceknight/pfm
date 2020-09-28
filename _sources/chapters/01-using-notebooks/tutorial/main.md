@@ -17,7 +17,8 @@ kernelspec:
 ## Installation
 
 1. Navigate to https://www.anaconda.com/products/individual.
-2. Identify and download the version of Python 3 for your operating system (Windows, Mac OSX, Linux).
+2. Identify and download the version of Python 3 for your operating system
+   (Windows, Mac OSX, Linux).
 3. Run the installer.
 
 ```{warning}
@@ -205,3 +206,14 @@ Click on `HTML (.html)`.
 Now use your file browser and open the downloaded file. This will open in your
 browser a static version of the file you have been working on. This is a helpful
 way to share your work with someone who might not have Jupyter (or even Python).
+
+```{important}
+In this tutorial we have
+
+- Installed the Anaconda distribution of Python.
+- Started a notebook server.
+- Created a new notebook.
+- Run some Python code.
+- Written some markdown.
+- Saved our notebook to a different format.
+```

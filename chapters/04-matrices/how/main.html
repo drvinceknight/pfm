@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 <html>
@@ -7,15 +6,35 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>How &#8212; Python for mathematics</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../../../_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.css" type="text/css" />
+    
+  <link rel="stylesheet" href="../../../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-dropdown.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.30270b6e4c972e43c488.js">
+
     <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -24,7 +43,6 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/sphinx-book-theme.js"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -60,6 +78,7 @@ var addUtterances = () => {
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -75,8 +94,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="next" title="Exercises" href="../exercises/main.html" />
     <link rel="prev" title="Tutorial" href="../tutorial/main.html" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
 
 
 
@@ -168,7 +187,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../why/main.html">
-     Why
+     Further information
     </a>
    </li>
   </ul>
@@ -325,6 +344,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
+        
         <div class="tocsection onthispage pt-5 pb-3">
             <i class="fas fa-list"></i> Contents
         </div>
@@ -373,6 +393,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 
         </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -384,8 +405,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h1>How<a class="headerlink" href="#how" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="create-a-matrix">
 <h2>Create a matrix<a class="headerlink" href="#create-a-matrix" title="Permalink to this headline">¶</a></h2>
-<p>We create a matrix using the <code class="docutils literal notranslate"><span class="pre">sym.Matrix</span></code> tool. We combine this with the square
-brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code> which we nest so that every row is also inside square brackets.</p>
+<p>We create a matrix using the <code class="docutils literal notranslate"><span class="pre">sympy.Matrix</span></code> tool. We combine this with
+square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code> which we nest so that every row is also inside square
+brackets.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="n">values</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
 <p>For example, the following creates the matrix:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -409,7 +437,11 @@ brackets <code class="docutils literal notranslate"><span class="pre">[]</span><
 \[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 2 &amp; 3 &amp; 4\\5 &amp; 6 &amp; 7 &amp; 8\\9 &amp; 10 &amp; 11 &amp; 12\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
-<p><strong>Note</strong> that it is possible to write the code in a more readable way as long as an incomplete line ends with an open bracket:</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>It is possible to write the code in a more readable way as long as an incomplete
+line ends with an open bracket:</p>
+</div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">B</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">(</span>
     <span class="p">[</span>
         <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
@@ -422,7 +454,16 @@ brackets <code class="docutils literal notranslate"><span class="pre">[]</span><
 </div>
 <div class="section" id="calculate-the-determinant-of-a-matrix">
 <h2>Calculate the determinant of a matrix<a class="headerlink" href="#calculate-the-determinant-of-a-matrix" title="Permalink to this headline">¶</a></h2>
-<p>To calculate the determinant of a matrix, we use the <code class="docutils literal notranslate"><span class="pre">.det</span></code> tool. For example to calculate the determinant of:</p>
+<p>To calculate the determinant of a matrix, we use the <code class="docutils literal notranslate"><span class="pre">.det</span></code> tool. For example to
+calculate the determinant of:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="n">values</span><span class="p">])</span>
+<span class="n">matrix</span><span class="o">.</span><span class="n">det</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p>For example, the determinant of the following matrix:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
     \begin{pmatrix}
@@ -445,7 +486,16 @@ brackets <code class="docutils literal notranslate"><span class="pre">[]</span><
 </div>
 <div class="section" id="calculate-the-inverse-of-a-matrix">
 <h2>Calculate the inverse of a matrix<a class="headerlink" href="#calculate-the-inverse-of-a-matrix" title="Permalink to this headline">¶</a></h2>
-<p>To calculate the inverse of a matrix, we use the <code class="docutils literal notranslate"><span class="pre">.inv</span></code> tool. For example to calculate the inverse of:</p>
+<p>To calculate the inverse of a matrix, we use the <code class="docutils literal notranslate"><span class="pre">.inv</span></code> tool.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="n">values</span><span class="p">])</span>
+<span class="n">matrix</span><span class="o">.</span><span class="n">inv</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p>For example to
+calculate the inverse of:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
     \begin{pmatrix}
@@ -468,7 +518,8 @@ brackets <code class="docutils literal notranslate"><span class="pre">[]</span><
 </div>
 <div class="section" id="multiply-matrices-by-a-scalar">
 <h2>Multiply matrices by a scalar<a class="headerlink" href="#multiply-matrices-by-a-scalar" title="Permalink to this headline">¶</a></h2>
-<p>To multiple a matrix by a scalar we use the <code class="docutils literal notranslate"><span class="pre">*</span></code> operator. For example to multiply the following matrix by <span class="math notranslate nohighlight">\(6\)</span>:</p>
+<p>To multiple a matrix by a scalar we use the <code class="docutils literal notranslate"><span class="pre">*</span></code> operator. For example to
+multiply the following matrix by <span class="math notranslate nohighlight">\(6\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
     \begin{pmatrix}
@@ -645,7 +696,10 @@ solve the following equations:</p>
       </div>
     </div>
 
-    <script src="../../../_static/js/index.js"></script>
+    
+  <script src="../../../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
     
   </body>
 </html>

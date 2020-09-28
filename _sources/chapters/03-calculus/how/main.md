@@ -17,7 +17,16 @@ kernelspec:
 
 ## Calculate the derivative of an expression.
 
-We can calculate the derivative of an expression using `sym.diff(<expression>, <variable>, [<degree>])`.
+We can calculate the derivative of an expression using `sympy.diff` which takes,
+an expression, a variable and a degree.
+
+````{tip}
+```
+sympy.diff(expression, variable, degree=1)
+```
+````
+
+The default value of `degree` is 1.
 
 For example to compute $\frac{d (4 x ^ 3 + 2 x + 1}{dx}$:
 
@@ -37,7 +46,14 @@ sym.diff(expression, x, 2)
 
 ## Calculate the indefinite integral of an expression.
 
-We can calculate the indefinite integral of an expression using `sym.integrate(<expression>, <variable>)`.
+We can calculate the indefinite integral of an expression using
+`sympy.integrate`. Which takes an expression and a variable.
+
+````{tip}
+```
+sympy.integrate(expression, variable)
+```
+````
 
 For example to compute $\int 4x^3 + 2x + 1 dx$:
 
@@ -48,7 +64,15 @@ sym.integrate(expression, x)
 ## Calculate the definite integral of an expression.
 
 We can calculate the definite integral of an expression using
-`sym.integrate(<expression>, (<variable>, <lower_bound>, <upper_bound>))`.
+`sympy.integrate`. The first argument is an expression but instead of passing a
+variable as the second argument we pass a tuple with the variable and the upper
+and lower bounds of integration.
+
+````{tip}
+```
+sympy.integrate(expression, (variable, lower_bound, upper_bound))
+```
+````
 
 For example to compute $\int_0^4 4x^3 + 2x + 1 dx$:
 
@@ -58,7 +82,15 @@ sym.integrate(expression, (x, 0, 4))
 
 ## Use $\infty$
 
-In sympy we can access $\infty$ using `sym.oo`:
+In `sympy` we can access $\infty$ using `sym.oo`:
+
+````{tip}
+```
+sympy.oo
+```
+````
+
+For example:
 
 ```{code-cell} ipython3
 sym.oo
@@ -66,9 +98,17 @@ sym.oo
 
 ## Calculate limits
 
-We can calculate limits using `sym.limit(<expression>, <variable>, <value>)`.
+We can calculate limits using `sympy.limit`. The first argument is the
+expression, then the variable and finally the expression the variable tends to.
 
-For example to compute $\lim_{h \to 0} \frac{4(x - h)^3 + 2(x - h) + 1  - 4x^3 - 2x - 1}{h}$:
+````{tip}
+```
+sympy.limit(expression, variable, value)
+```
+````
+
+For example to compute $\lim_{h \to 0} \frac{4(x - h)^3 + 2(x - h) + 1  - 4x^3 -
+2x - 1}{h}$:
 
 ```{code-cell} ipython3
 h = sym.Symbol("h")

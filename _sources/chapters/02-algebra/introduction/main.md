@@ -30,3 +30,10 @@ In practice this often means:
 - Solving equations.
 
 We can use a computer to carry out some of these techniques.
+
+```{important}
+In this chapter we will cover:
+
+- Manipulating numeric and symbolic expressions.
+- Solving equations.
+```
