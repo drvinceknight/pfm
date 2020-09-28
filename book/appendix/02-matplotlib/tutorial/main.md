@@ -343,5 +343,5 @@ which is clear once visualised.
 In this chapter we have:
 
 - Plotted a scatter plot.
-- Overlayed a plot of a line to our scatter plot.
+- Add a plot of a line to our scatter plot.
 ```
