@@ -1,4 +1,10 @@
-- file: intro
+- file: cover
+- part: Overview
+  chapters:
+  - file: overview/introduction/main
+    sections:
+    - file: overview/structure/main
+    - file: overview/how_to_use_this_book/main
 - part: Tools for mathematics
   chapters:
   - file: chapters/01-using-notebooks/introduction/main
