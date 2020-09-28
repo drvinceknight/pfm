@@ -17,6 +17,16 @@ kernelspec:
 
 One of the most popular Python libraries for scientific computing is `numpy`.
 Python is not renowned for its run speed but its speed of writing.
-`Numpy` helps with this at is brings fast numeric computations to Python. It is
+`numpy` helps with this at is brings fast numeric computations to Python. It is
 also powerful tool for linear algebra (matrices) although it cannot handle
 symbolic variables.
+
+```{important}
+In this chapter we will cover:
+
+- How to create and manipulate `numpy` arrays.
+- How to create specific `numpy` arrays like linear spaces.
+- How to use `numpy`'s random number generator.
+- How to invert a matrix.
+- How to fit a polynomial to data.
+```
