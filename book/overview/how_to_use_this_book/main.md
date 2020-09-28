@@ -29,7 +29,7 @@ designed with the following suggestion in mind:
   in the how to section. Solutions are available in this section as well.
 - After working through those three section it is possible that some readers
   have further questions or would like to find more information about a
-  given topic. This is covered in the answers section.
+  given topic. This is covered in the further information section.
 
 ```{attention}
 Every chapter will have 4 parts:

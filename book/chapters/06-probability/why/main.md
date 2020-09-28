@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Why
+# Further information
 
 (difference_between_a_list_and_a_tuple)=
 ## What is the difference between a Python list and a Python tuple?

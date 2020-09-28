@@ -12,11 +12,13 @@ kernelspec:
   name: python3
 ---
 
-# References
+# Further information
 
 ## What are the differences between recursion and iteration?
 
-When giving instructions to a computer it is possible to use recursion to directly implement a common mathematical definition. For example consider the following sequence:
+When giving instructions to a computer it is possible to use recursion to
+directly implement a common mathematical definition. For example consider the
+following sequence:
 
 $$
     \left\{\begin{array}{l}

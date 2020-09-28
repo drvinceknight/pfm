@@ -28,3 +28,11 @@ In practice this often means:
 - integrating functions.
 
 Here we will see how to instruct a computer to carry out these techniques.
+
+```{important}
+In this chapter we will cover:
+
+- Taking limits.
+- Differentiating functions.
+- Computing definite and indefinite integrals.
+```

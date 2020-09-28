@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Why
+# Further information
 
 ## A part from removing duplicates and set operations what are they advantages to using `set`?
 
