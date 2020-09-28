@@ -338,3 +338,10 @@ Anscombe's quartet is often used to demonstrate the importance of visualising
 data. In this particular exercise we have seen that 4 data sets have the same
 mean, standard deviation and line of best fit but are immediately different
 which is clear once visualised.
+
+```{important}
+In this chapter we have:
+
+- Plotted a scatter plot.
+- Add a plot of a line to our scatter plot.
+```

@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Why
+# Further information
 
 ## What is the difference between an array and other Python iterables?
 

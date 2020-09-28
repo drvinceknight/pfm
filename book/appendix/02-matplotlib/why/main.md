@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Why
+# Further information.
 
 ## Why do we import `matplotlib.pyplot as plt`?
 
