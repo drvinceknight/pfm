@@ -18,6 +18,7 @@
     - file: chapters/02-algebra/tutorial/main
     - file: chapters/02-algebra/how/main
     - file: chapters/02-algebra/exercises/main
+    - file: chapters/02-algebra/solutions/main
     - file: chapters/02-algebra/why/main
   - file: chapters/03-calculus/introduction/main
     sections:
