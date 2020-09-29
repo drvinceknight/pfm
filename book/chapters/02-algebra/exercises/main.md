@@ -43,8 +43,8 @@ kernelspec:
   1. Calculate the discriminant of the quadratic equation $-3x ^ 2 + 24x - 97 =
      0$. What does this tell us about the solutions to the equation? What
      does this tell us about the graph of $f(x)$?
-  2. By completing the square, show that the minimum point of $f(x)$ is
-     $\left(4, -97\right)$
+  2. By completing the square, show that the maximum point of $f(x)$ is
+     $\left(4, -49\right)$
 6. Consider the function $f(x) = x^ 2 + a x + b$.
   1. Given that $f(0) = 0$ and $f(3) = 0$ obtain the values of $a$ and $b$.
   2. By completing the square confirm that graph of $f(x)$ has a line of symmetry at $x=\frac{3}{2}$

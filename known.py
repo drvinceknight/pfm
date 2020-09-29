@@ -138,6 +138,7 @@ prose_suggestions_to_ignore = {
     "book/chapters/02-algebra/introduction/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
+    "book/chapters/02-algebra/solutions/main.md": set(("needless_variants.misc",)),
     "book/chapters/06-probability/tutorial/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
