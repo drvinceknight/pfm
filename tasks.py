@@ -130,7 +130,7 @@ def stylecheck(c, root=ROOT, md_pattern=MD_PATTERN, tags_pattern=TAGS_PATTERN):
                         print(stderr_with_correct_filename)
 
                     output = subprocess.run(
-                        ["interrogate", "-v", "-M", "-f", "100", temporary_file_path],
+                        ["interrogate", "-v", "-M", "-i", "-f", "100", temporary_file_path],
                         capture_output=True,
                         check=False,
                     )

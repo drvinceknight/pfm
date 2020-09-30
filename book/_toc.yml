@@ -64,6 +64,12 @@
     - file: chapters/09-functions-and-data-structures/how/main
     - file: chapters/09-functions-and-data-structures/exercises/main
     - file: chapters/09-functions-and-data-structures/why/main
+  - file: chapters/10-objects/introduction/main
+    sections:
+    - file: chapters/10-objects/tutorial/main
+    - file: chapters/10-objects/how/main
+    - file: chapters/10-objects/exercises/main
+    - file: chapters/10-objects/why/main
 - part: Appendix
   chapters:
   - file: appendix/01-numpy/introduction/main

@@ -20,6 +20,8 @@ words = set(
         "OSX",
         "Oldtown",
         "Pseudo",
+        "QuadraticExpression",
+        "QuadraticExpressionWithAllRoots",
         "Riggins",
         "Rollerblades",
         "Sympy",
@@ -50,7 +52,9 @@ words = set(
         "galton",
         "github",
         "html",
+        "im",
         "img",
+        "init",
         "inv",
         "ipynb",
         "ipython",
@@ -86,6 +90,7 @@ words = set(
         "pyplot",
         "randint",
         "repo",
+        "repr",
         "rhs",
         "roseau",
         "savefig",
@@ -164,6 +169,9 @@ prose_suggestions_to_ignore = {
     ),
     "book/chapters/09-functions-and-data-structures/tutorial/main.md": set(
         ("typography.symbols.curly_quotes",)
+    ),
+    "book/chapters/10-objects/tutorial/main.md": set(
+        (("typography.symbols.curly_quotes"), ("needless_variants.misc"))
     ),
     "book/appendix/01-numpy/tutorial/main.md": set(
         ("typography.symbols.curly_quotes",)
