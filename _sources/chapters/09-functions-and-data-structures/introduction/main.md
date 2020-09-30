@@ -19,9 +19,11 @@ our mathematical knowledge more efficiently. In this chapter as we
 continue to gain the knowledge necessary to build these tools we will cover the
 following topics:
 
-- Defining and using functions;
-- Understanding multiple data structures:
-    - Tuples;
-    - Lists;
+```{important}
+In this chapter we will cover:
+
+- Defining and using functions
+- Defining and using two new data structures:
     - Sets;
     - Dictionaries.
+```
