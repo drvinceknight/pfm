@@ -12,6 +12,7 @@ kernelspec:
   name: python3
 ---
 
+(objects_tutorial)=
 # Tutorial
 
 We will here write some code to create and manipulate quadratic expressions.
@@ -56,23 +57,24 @@ class QuadraticExpression:
         return ()
 
     def __add__(self, other):
-        """A special method: let's us have addition between expressions"""
+        """A magic method: let's us have addition between expressions"""
         return QuadraticExpression(self.a + other.a, self.b + other.b, self.c + other.c)
 
     def __repr__(self):
-        """A special method: changes the default way an instance is displayed"""
+        """A magic method: changes the default way an instance is displayed"""
         return f"Quadratic expression: {self.a} x ^ 2 + {self.b} x + {self.c}"
 ```
 
 ```{tip}
 Four functions were created with this class:
 
-- `__init__`: as this is surrounded by `__` (two underscores) this is a special
+- `__init__`: as this is surrounded by `__` (two underscores) this is a magic
   function that is run when we create an instance of our class.
 - `root`: this returns the two real valued roots if the discriminant is
   positive.
-- `__add__`: another special function that is run when the `+` operator is used.
-- `__repr__`: this gives the string representation of the instance.
+- `__add__`: another magic function that is run when the `+` operator is used.
+- `__repr__`: another magic function that gives the string representation of the
+  instance.
 ```
 
 Let us now use this class to solve the specified problem. First we create

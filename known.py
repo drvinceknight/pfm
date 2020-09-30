@@ -16,9 +16,12 @@ words = set(
         "Lah",
         "Matplotlib",
         "Mersenne",
+        "MuggleCountry",
         "Numpy",
         "OSX",
         "Oldtown",
+        "OtherPetDog",
+        "PetDog",
         "Pseudo",
         "QuadraticExpression",
         "QuadraticExpressionWithAllRoots",
@@ -26,6 +29,7 @@ words = set(
         "Rollerblades",
         "Sympy",
         "algorithmically",
+        "auraya",
         "blech",
         "boolean",
         "booleans",
@@ -43,6 +47,7 @@ words = set(
         "docstrings",
         "docx",
         "dominica",
+        "dunder",
         "dx",
         "endregion",
         "factorint",
@@ -54,6 +59,7 @@ words = set(
         "html",
         "im",
         "img",
+        "incircle",
         "init",
         "inv",
         "ipynb",
@@ -92,6 +98,7 @@ words = set(
         "repo",
         "repr",
         "rhs",
+        "riggins",
         "roseau",
         "savefig",
         "scipy",
@@ -173,6 +180,13 @@ prose_suggestions_to_ignore = {
     "book/chapters/10-objects/tutorial/main.md": set(
         (("typography.symbols.curly_quotes"), ("needless_variants.misc"))
     ),
+    "book/chapters/10-objects/how/main.md": set(
+        (("typography.symbols.curly_quotes"), ("needless_variants.misc"))
+    ),
+    "book/chapters/10-objects/exercises/main.md": set(
+        (("typography.symbols.curly_quotes"),)
+    ),
+    "book/chapters/10-objects/why/main.md": set((("typography.symbols.curly_quotes"),)),
     "book/appendix/01-numpy/tutorial/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
