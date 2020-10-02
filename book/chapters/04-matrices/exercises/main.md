@@ -31,6 +31,7 @@ kernelspec:
     1. Find the determinant of $A$
     2. Hence find the values of $a$ for which $A$ is singular.
     3. State, giving a brief reason in each case, whether the simultaneous equations
+
         $$
             \begin{array}
                 a x + 4y + 2z= 3a\\
@@ -42,7 +43,7 @@ kernelspec:
         have any solutions when:
           1. $a = 3$;
           2. $a = 2$
-4. Q1 The matrix $D$ is given by $D = \begin{pmatrix} a & 2 & 0\\ 3 & 1 & 2\\ 0 & -1 & 1\end{pmatrix}$ where $a\ne 2$.
+4. The matrix $D$ is given by $D = \begin{pmatrix} a & 2 & 0\\ 3 & 1 & 2\\ 0 & -1 & 1\end{pmatrix}$ where $a\ne 2$.
     1. Find $D^{-1}$.
     2. Hence of otherwise, solve the equations:
 
