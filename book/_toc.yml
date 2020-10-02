@@ -25,6 +25,7 @@
     - file: chapters/03-calculus/tutorial/main
     - file: chapters/03-calculus/how/main
     - file: chapters/03-calculus/exercises/main
+    - file: chapters/03-calculus/solutions/main
     - file: chapters/03-calculus/why/main
   - file: chapters/04-matrices/introduction/main
     sections:

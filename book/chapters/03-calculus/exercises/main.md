@@ -22,7 +22,7 @@ kernelspec:
     1. $f(x) = x$
     2. $f(x) = x ^{\frac{1}{3}}$
     3. $f(x) = 2 x (x - 3) (\sin(x) - 5)$
-    4. $f(x) = \frac{3  x ^ 3 + 6 \sqrt{x} + 3}{3  x ^ {1 / 4}}$
+    4. $f(x) = 3  x ^ 3 + 6 \sqrt{x} + 3$
 2. Consider the function $f(x)=2x+1$. By differentiating *from first principles* show that $f'(x)=2$.
 3. Consider the second derivative $f''(x)=6x+4$ of some cubic function $f(x)$.
     1. Find $f'(x)$
@@ -33,7 +33,7 @@ kernelspec:
     2. You are given that $f(x)$ has a stationary point at $x=2$. Use this information to find $b$.
     3. Find the coordinates of the other stationary point.
     4. Determine the nature of both stationary points.
-5. Consider the functions $f(x)=-x^2+4x+4x$ and $g(x)=-2x^3+5x^2-2x-1$.
+5. Consider the functions $f(x)=-x^2+4x+4$ and $g(x)=3x^2-2x-2$.
     1. Create a variable `turning_points` which has value the turning points of $f(x)$.
     2. Create variable `intersection_points` which has value of the points where $f(x)$ and $g(x)$ intersect.
-    3. Using your answers to parts 2., calculate the area of the region between $f$ and $g$. Assign this value to a variable `area_of_shaded_region`.
+    3. Using your answers to parts 2., calculate the area of the region between $f$ and $g$. Assign this value to a variable `area_between`.

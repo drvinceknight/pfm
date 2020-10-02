@@ -107,8 +107,7 @@ sympy.limit(expression, variable, value)
 ```
 ````
 
-For example to compute $\lim_{h \to 0} \frac{4(x - h)^3 + 2(x - h) + 1  - 4x^3 -
-2x - 1}{h}$:
+For example to compute $\lim_{h \to 0} \frac{4 x ^ 3 + 2 x + 1 - 4(x - h)^3 - 2(x - h) - 1}{h}$:
 
 ```{code-cell} ipython3
 h = sym.Symbol("h")
