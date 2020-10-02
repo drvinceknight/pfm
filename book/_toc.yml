@@ -33,6 +33,7 @@
     - file: chapters/04-matrices/tutorial/main
     - file: chapters/04-matrices/how/main
     - file: chapters/04-matrices/exercises/main
+    - file: chapters/04-matrices/solutions/main
     - file: chapters/04-matrices/why/main
   - file: chapters/05-combinations-permutations/introduction/main
     sections:
