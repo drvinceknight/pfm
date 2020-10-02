@@ -33,18 +33,24 @@ Click the toggle ("Click to Show") to see a demo of this:
 > `1`. $3 + 8$
 
 ```{code-cell} ipython 3
-3 / 7
+:tags: [nbval-ignore-output]
+
+3 + 8
 ```
 
 > `2`. $3 / 7$
 
 ```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 3 / 7
 ```
 
 > `3`. $456 / 21$
 
 ```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 456 / 21
 ```
 
@@ -52,6 +58,8 @@ Click the toggle ("Click to Show") to see a demo of this:
 > `4`. $\frac{4 ^ 3 + 2}{2\times 5} - 5 ^ {\frac{1}{2}}$
 
 ```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 (4 ** 3 + 2) / (2 * 5) - 5 ** (1 / 2)
 ```
 
