@@ -137,12 +137,7 @@ prose_exceptions = {
     ),
     "book/chapters/04-matrices/exercises/main.md": set(
         (
-            r"4. Q1 The matrix $D$ is given by $D = \begin{pmatrix} a & 2 & 0\\ 3 & 1 & 2\\ 0 & -1 & 1\end{pmatrix}$ where $a\ne 2$.",
-        )
-    ),
-    "book/chapters/04-matrices/exercises/main.md": set(
-        (
-            r"4. Q1 The matrix $D$ is given by $D = \begin{pmatrix} a & 2 & 0\\ 3 & 1 & 2\\ 0 & -1 & 1\end{pmatrix}$ where $a\ne 2$.",
+            r"4. The matrix $D$ is given by $D = \begin{pmatrix} a & 2 & 0\\ 3 & 1 & 2\\ 0 & -1 & 1\end{pmatrix}$ where $a\ne 2$.",
         )
     ),
 }
