@@ -14,7 +14,9 @@ kernelspec:
 
 # Solutions
 
-`1`. Simplify the following expressions:
+## Question 1
+
+> `1`. Simplify the following expressions:
 
 > $\frac{3}{\sqrt{3}}$:
 
@@ -45,7 +47,9 @@ b = sym.Symbol("b")
 sym.factor(a ** 4 * b ** (-2) + a ** 3 * b ** 2 + a ** 4 * b ** 0)
 ```
 
-`2`. Solve the following equations:
+## Question 2
+
+> `2`. Solve the following equations:
 
 > $x + 3 = -1$:
 
@@ -76,7 +80,9 @@ equation = sym.Eq(4 * x ** 3 + 7 * x - 24 * x, 1)
 sym.solveset(equation, x)
 ```
 
-`3`. Consider the equation: $x ^ 2 + 4 - y = \frac{1}{y}$:
+## Question 3
+
+> `3`. Consider the equation: $x ^ 2 + 4 - y = \frac{1}{y}$:
 
 > Find the solution to this equation for $x$.
 
@@ -100,7 +106,9 @@ solution = sym.solveset(equation.subs({y: 5}), x)
 solution
 ```
 
-`4`. Consider the quadratic: $f(x)=4x ^ 2 + 16x + 25$:
+## Question 4
+
+> `4`. Consider the quadratic: $f(x)=4x ^ 2 + 16x + 25$:
 
 > Calculate the discriminant of the quadratic equation $4x ^ 2 + 16x + 25 =
 > 0$. What does this tell us about the solutions to the equation? What
@@ -163,7 +171,9 @@ completed_square
 
 The lowest value of $f(x)$ is for $x=-2$ which gives: $f(-2)=9$ as expected.
 
-`5`. Consider the quadratic: $f(x)=-3x ^ 2 + 24x - 97$:
+## Question 5
+
+> `5`. Consider the quadratic: $f(x)=-3x ^ 2 + 24x - 97$:
 
 > Calculate the discriminant of the quadratic equation $-3x ^ 2 + 24x - 97 =
 > 0$. What does this tell us about the solutions to the equation? What
