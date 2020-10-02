@@ -35,8 +35,11 @@ internet connect.
 Open a command line tool:
 
 1. On **Windows** search for `Anaconda Prompt` (it should be available to you
-   after installing Anaconda.
-2. On **OS X** search for `terminal`
+   after installing Anaconda). See
+   {ref}`fig:starting_the_notebook_server_windows`.
+2. On **OS X** search for `terminal`. See
+   {ref}`fig:starting_the_notebook_server`.
+
 
 In there type:
 
@@ -54,7 +57,15 @@ tool I will prefix them with a `$`. Do not type the `$`.
 width: 75%
 name: fig:starting_the_notebook_server
 ---
-Starting the notebook server
+Starting the notebook server on OS X
+```
+
+```{figure} ./img/starting_the_notebook_server_windows/main.png
+---
+width: 75%
+name: fig:starting_the_notebook_server_windows
+---
+Starting the notebook server on Windows
 ```
 
 This will open a new page in your browser. The url bar at the top should have
@@ -63,7 +74,7 @@ something that looks like: `http://localhost:8888/tree`.
 ```{figure} ./img/the_jupyter_interface/main.png
 ---
 width: 75%
-name: fig:the_jupyter_interface
+name: fig:the_jupyter_interface_windows
 ---
 The Jupyter interface
 ```
@@ -100,15 +111,16 @@ Once this is done let us close the notebook by closing the corresponding tab of 
 
 Open your file browser:
 
-1. File Explorer on **Windows**
-2. Finder on **OS X**
+1. File Explorer on **Windows** (see {ref}`fig:new_directory_structure_windows`).
+2. Finder on **OS X** (see {ref}`fig:new_directory_structure`).
 
 Navigate to where your notebook is (this might not be immediately evident): you
 should see a `introduction.ipynb` file.
 
 Let us rearrange things.
 
-Find a location on your computer where you want to keep the files for this course, using your file browser:
+Find a location on your computer where you want to keep the files for this
+course, using your file browser:
 
 1. Create a new directory called `cfm` (short for "Computer for Mathematics");
 2. Inside that directory create a new directory called `nbs` (short for
@@ -120,7 +132,15 @@ Find a location on your computer where you want to keep the files for this cours
 width: 75%
 name: fig:new_directory_structure
 ---
-Creating a new directory
+Creating a new directory on OS X
+```
+
+```{figure} ./img/new_directory_structure_windows/main.png
+---
+width: 75%
+name: fig:new_directory_structure_windows
+---
+Creating a new directory on Windows
 ```
 
 ## Writing some basic Python code

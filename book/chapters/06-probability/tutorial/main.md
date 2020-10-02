@@ -144,7 +144,7 @@ $$
 $$
 
 ```{code-cell} ipython3
-:tags: [nbval-ignore-output]
+:tags: [nbval-ignore-output, output_scroll]
 
 number_of_repetitions = 10000
 samples = [pick_a_token(container=bag) for repetition in range(number_of_repetitions)]
