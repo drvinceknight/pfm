@@ -23,15 +23,15 @@ kernelspec:
     1. $3 + 8$
     2. $3 / 7$
     3. $456 / 21$
-    5. $\frac{4 ^ 3 + 2}{2\times 5} - 5 ^ {\frac{1}{2}}$
+    4. $\frac{4 ^ 3 + 2}{2\times 5} - 5 ^ {\frac{1}{2}}$
 3. Write a markdown cell with the following and view the rendered version:
 
     ```md
     # Euler's equation
 
-    \\\[
+    \\[
      e ^ {i\pi} = -1
-    \\\]
+    \\]
     ```
 4. Render the following expressions by writing markdown
    1. $\frac{4 ^ 3 + 2}{2\times 5}$
