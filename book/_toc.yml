@@ -12,6 +12,7 @@
     - file: chapters/01-using-notebooks/tutorial/main
     - file: chapters/01-using-notebooks/how/main
     - file: chapters/01-using-notebooks/exercises/main
+    - file: chapters/01-using-notebooks/solutions/main
     - file: chapters/01-using-notebooks/why/main
   - file: chapters/02-algebra/introduction/main
     sections:

@@ -26,3 +26,4 @@ nbs/chapters/plot.pdf
 *.ipynb_checkpoints*
 _build/
 book/appendix/02-matplotlib/how/plot.pdf
+*mov
