@@ -65,6 +65,8 @@ of `permutations` to not be the instructions but the actual tuple of all the
 permutations:
 
 ```{code-cell} ipython3
+:tags: [output_scroll]
+
 permutations = tuple(permutations)
 permutations
 ```
