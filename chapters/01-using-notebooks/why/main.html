@@ -372,22 +372,79 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#why-can-i-not-double-click-on-a-jupyter-notebook-file">
-   Why can I not double click on a Jupyter notebook file
+   Why can I not double click on a Jupyter notebook file?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-markdown">
-   What is markdown
+   What is markdown?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-latex">
-   What is LaTeX
+   What is LaTeX?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-do-we-use-and-instead-of-for-latex">
+   Why do we use
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     \\(
+    </span>
+   </code>
+   and
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     \\)
+    </span>
+   </code>
+   instead of
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     $
+    </span>
+   </code>
+   for LaTeX?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-do-we-use-a-double-for-and-and-not-a-single-as-can-be-seen-elsewhere">
+   Why do we use a double
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     \\
+    </span>
+   </code>
+   for
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     \\(
+    </span>
+   </code>
+   and
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     \\)
+    </span>
+   </code>
+   and not a single
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     \
+    </span>
+   </code>
+   as can be seen elsewhere?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#other-resources-for-latex-syntax">
+   Other resources for LaTeX syntax.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-a-markup-language">
-   What is a markup language
+   What is a markup language?
   </a>
  </li>
 </ul>
@@ -454,7 +511,7 @@ interactively and so we will use Jupyter notebooks.</p>
 </ul>
 </div>
 <div class="section" id="why-can-i-not-double-click-on-a-jupyter-notebook-file">
-<h2>Why can I not double click on a Jupyter notebook file<a class="headerlink" href="#why-can-i-not-double-click-on-a-jupyter-notebook-file" title="Permalink to this headline">¶</a></h2>
+<h2>Why can I not double click on a Jupyter notebook file?<a class="headerlink" href="#why-can-i-not-double-click-on-a-jupyter-notebook-file" title="Permalink to this headline">¶</a></h2>
 <p>When you double click on a file and your computer opens it in an application
 that is because a default is set for the particular file extension. For example
 double clicking on <code class="docutils literal notranslate"><span class="pre">main.docx</span></code> will automatically open up the document using a
@@ -467,7 +524,7 @@ application that opens it is in fact a local web server in your browser. As such
 you do not have a choice and need to open it in the Jupyter interface.</p>
 </div>
 <div class="section" id="what-is-markdown">
-<h2>What is markdown<a class="headerlink" href="#what-is-markdown" title="Permalink to this headline">¶</a></h2>
+<h2>What is markdown?<a class="headerlink" href="#what-is-markdown" title="Permalink to this headline">¶</a></h2>
 <p>As described here <a class="reference external" href="https://www.markdownguide.org/getting-started/">https://www.markdownguide.org/getting-started/</a>:</p>
 <blockquote>
 <div><p>Markdown is a lightweight markup language that you can use to add formatting
@@ -476,7 +533,7 @@ Markdown is now one of the world’s most popular markup languages</p>
 </div></blockquote>
 </div>
 <div class="section" id="what-is-latex">
-<h2>What is LaTeX<a class="headerlink" href="#what-is-latex" title="Permalink to this headline">¶</a></h2>
+<h2>What is LaTeX?<a class="headerlink" href="#what-is-latex" title="Permalink to this headline">¶</a></h2>
 <p>As described here <a class="reference external" href="https://www.latex-project.org/about/">https://www.latex-project.org/about/</a>:</p>
 <blockquote>
 <div><p>LaTeX, which is pronounced «Lah-tech» or «Lay-tech» (to rhyme with «blech» or
@@ -493,8 +550,30 @@ the right content.</p>
 now we only need to know that it we can use <span class="math notranslate nohighlight">\(\LaTeX\)</span> to write an instruction
 for Jupyter to display mathematics.</p>
 </div>
+<div class="section" id="why-do-we-use-and-instead-of-for-latex">
+<h2>Why do we use <code class="docutils literal notranslate"><span class="pre">\\(</span></code> and <code class="docutils literal notranslate"><span class="pre">\\)</span></code> instead of <code class="docutils literal notranslate"><span class="pre">$</span></code> for LaTeX?<a class="headerlink" href="#why-do-we-use-and-instead-of-for-latex" title="Permalink to this headline">¶</a></h2>
+<p>You will see in some places that <code class="docutils literal notranslate"><span class="pre">$</span></code> can be used as a delimiter for LaTeX. This
+is not recommended for a number of reasons one of which is given at
+<a class="reference external" href="https://vknight.org/tex/#12-inline-mathematics">https://vknight.org/tex/#12-inline-mathematics</a>:</p>
+<blockquote>
+<div><p>Note that using ( and ) is preferred over $. One of the reasons is that it
+is easier for humans (and machines) to find the start and end of some
+mathematics.</p>
+</div></blockquote>
+</div>
+<div class="section" id="why-do-we-use-a-double-for-and-and-not-a-single-as-can-be-seen-elsewhere">
+<h2>Why do we use a double <code class="docutils literal notranslate"><span class="pre">\\</span></code> for <code class="docutils literal notranslate"><span class="pre">\\(</span></code> and <code class="docutils literal notranslate"><span class="pre">\\)</span></code> and not a single <code class="docutils literal notranslate"><span class="pre">\</span></code> as can be seen elsewhere?<a class="headerlink" href="#why-do-we-use-a-double-for-and-and-not-a-single-as-can-be-seen-elsewhere" title="Permalink to this headline">¶</a></h2>
+<p>This is one of the particularities of using LaTeX in a Jupyter notebook as
+opposed to using it elsewhere. The <code class="docutils literal notranslate"><span class="pre">\</span></code> symbol could be misinterpreted in Jupyter
+and so it has to be “escaped” with a second <code class="docutils literal notranslate"><span class="pre">\</span></code>.</p>
+</div>
+<div class="section" id="other-resources-for-latex-syntax">
+<h2>Other resources for LaTeX syntax.<a class="headerlink" href="#other-resources-for-latex-syntax" title="Permalink to this headline">¶</a></h2>
+<p>This web page is my recommended set of resources for learning LaTeX:
+<a class="reference external" href="https://vknight.org/tex/">https://vknight.org/tex/</a>.</p>
+</div>
 <div class="section" id="what-is-a-markup-language">
-<h2>What is a markup language<a class="headerlink" href="#what-is-a-markup-language" title="Permalink to this headline">¶</a></h2>
+<h2>What is a markup language?<a class="headerlink" href="#what-is-a-markup-language" title="Permalink to this headline">¶</a></h2>
 <p><span class="math notranslate nohighlight">\(\LaTeX\)</span> and markdown are both examples of what is called a <strong>markup language</strong>.
 Another common example of a markup language is html (the way web pages are
 written).</p>
