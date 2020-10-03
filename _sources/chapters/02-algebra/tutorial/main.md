@@ -21,10 +21,10 @@ will solve the following two problems:
 
 1. Rationalise the denominator of $\frac{1}{\sqrt{2} + 1}$
 2. Consider the quadratic: $f(x)=2x ^ 2 + x + 1$:
-  1. Calculate the discriminant of the quadratic equation $2x ^ 2 + x + 1 =
+    1. Calculate the discriminant of the quadratic equation $2x ^ 2 + x + 1 =
      0$. What does this tell us about the solutions to the equation? What
      does this tell us about the graph of $f(x)$?
-  2. By completing the square, show that the minimum point of $f(x)$ is
+    2. By completing the square, show that the minimum point of $f(x)$ is
      $\left(-\frac{1}{4}, \frac{7}{8}\right)$
 ```
 
