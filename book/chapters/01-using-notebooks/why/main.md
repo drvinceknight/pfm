@@ -68,7 +68,7 @@ Some further information on using Jupyter:
 - <https://jupyter-notebook-beginner-guide.readthedocs.io/>
 - <https://www.analyticsvidhya.com/blog/2018/05/starters-guide-jupyter-notebook/>
 
-## Why can I not double click on a Jupyter notebook file
+## Why can I not double click on a Jupyter notebook file?
 
 When you double click on a file and your computer opens it in an application
 that is because a default is set for the particular file extension. For example
@@ -82,7 +82,7 @@ With Jupyter notebooks no default is set by the operating system as the
 application that opens it is in fact a local web server in your browser. As such
 you do not have a choice and need to open it in the Jupyter interface.
 
-## What is markdown
+## What is markdown?
 
 As described here <https://www.markdownguide.org/getting-started/>:
 
@@ -91,7 +91,7 @@ As described here <https://www.markdownguide.org/getting-started/>:
 > Markdown is now one of the world’s most popular markup languages
 
 
-## What is LaTeX
+## What is LaTeX?
 
 As described here <https://www.latex-project.org/about/>:
 
@@ -108,7 +108,28 @@ We will learn more about $\LaTeX$ in the later part of this course but for
 now we only need to know that it we can use $\LaTeX$ to write an instruction
 for Jupyter to display mathematics.
 
-## What is a markup language
+## Why do we use `\\(` and `\\)` instead of `$` for LaTeX?
+
+You will see in some places that `$` can be used as a delimiter for LaTeX. This
+is not recommended for a number of reasons one of which is given at
+<https://vknight.org/tex/#12-inline-mathematics>:
+
+> Note that using \( and \) is preferred over $. One of the reasons is that it
+> is easier for humans (and machines) to find the start and end of some
+> mathematics.
+
+## Why do we use a double `\\` for `\\(` and `\\)` and not a single `\` as can be seen elsewhere?
+
+This is one of the particularities of using LaTeX in a Jupyter notebook as
+opposed to using it elsewhere. The `\` symbol could be misinterpreted in Jupyter
+and so it has to be "escaped" with a second `\`.
+
+## Other resources for LaTeX syntax.
+
+This web page is my recommended set of resources for learning LaTeX:
+<https://vknight.org/tex/>.
+
+## What is a markup language?
 
 $\LaTeX$ and markdown are both examples of what is called a **markup language**.
 Another common example of a markup language is html (the way web pages are
