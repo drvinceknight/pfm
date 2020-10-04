@@ -34,17 +34,17 @@ kernelspec:
        substitute the value in to your equation and substitute the value in to
        your solution.
 4. Consider the quadratic: $f(x)=4x ^ 2 + 16x + 25$:
-  1. Calculate the discriminant of the quadratic equation $4x ^ 2 + 16x + 25 =
+    1. Calculate the discriminant of the quadratic equation $4x ^ 2 + 16x + 25 =
      0$. What does this tell us about the solutions to the equation? What
      does this tell us about the graph of $f(x)$?
-  2. By completing the square, show that the minimum point of $f(x)$ is
+    2. By completing the square, show that the minimum point of $f(x)$ is
      $\left(-2, 9\right)$
 5. Consider the quadratic: $f(x)=-3x ^ 2 + 24x - 97$:
-  1. Calculate the discriminant of the quadratic equation $-3x ^ 2 + 24x - 97 =
+    1. Calculate the discriminant of the quadratic equation $-3x ^ 2 + 24x - 97 =
      0$. What does this tell us about the solutions to the equation? What
      does this tell us about the graph of $f(x)$?
-  2. By completing the square, show that the maximum point of $f(x)$ is
+    2. By completing the square, show that the maximum point of $f(x)$ is
      $\left(4, -49\right)$
 6. Consider the function $f(x) = x^ 2 + a x + b$.
-  1. Given that $f(0) = 0$ and $f(3) = 0$ obtain the values of $a$ and $b$.
-  2. By completing the square confirm that graph of $f(x)$ has a line of symmetry at $x=\frac{3}{2}$
+    1. Given that $f(0) = 0$ and $f(3) = 0$ obtain the values of $a$ and $b$.
+    2. By completing the square confirm that graph of $f(x)$ has a line of symmetry at $x=\frac{3}{2}$
