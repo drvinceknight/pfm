@@ -59,7 +59,7 @@ techniques**:
 
    $$\frac{d^2f}{dx^2} = 2 > 0\text{ for all values of }x$$
 
-   Thus $x=2/3$ is the global minima of the function.
+   Thus $x=3/2$ is the global minima of the function.
 ```
 
 ```{attention}
