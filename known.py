@@ -175,6 +175,9 @@ prose_suggestions_to_ignore = {
     "book/chapters/07-sequences/tutorial/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
+    "book/chapters/07-sequences/solutions/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
     "book/chapters/08-variables-conditionals-loops/tutorial/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
