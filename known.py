@@ -1,5 +1,6 @@
 words = set(
     (
+        "iOS",
         "Anscombe's",
         "Ashville",
         "Bertolt",
