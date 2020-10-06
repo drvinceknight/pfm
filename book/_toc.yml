@@ -54,6 +54,7 @@
     - file: chapters/07-sequences/tutorial/main
     - file: chapters/07-sequences/how/main
     - file: chapters/07-sequences/exercises/main
+    - file: chapters/07-sequences/solutions/main
     - file: chapters/07-sequences/why/main
 - part: Building tools
   chapters:
