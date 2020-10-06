@@ -273,7 +273,11 @@ seating_arrangements
 For no two students from Bewton to site next to each other the order is fixed:
 
 ```{code-cell} ipython3
-sum(1 for seating_arrangement in seating_arrangements if seating_arrangement == ("Bewton", "Ashville", "Bewton", "Ashville", "Bewton"))
+sum(
+    1
+    for seating_arrangement in seating_arrangements
+    if seating_arrangement == ("Bewton", "Ashville", "Bewton", "Ashville", "Bewton")
+)
 ```
 
 ## Question 4
