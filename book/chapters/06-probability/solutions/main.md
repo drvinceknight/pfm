@@ -26,14 +26,18 @@ kernelspec:
 
 import random
 
+
 def sample_experiment():
     """
     Returns true if a random number is less than 2 / 7
     """
     return random.random() < 2 / 7
 
+
 number_of_experiments = 1000
-sum(sample_experiment() for repetition in range(number_of_experiments)) / number_of_experiments
+sum(
+    sample_experiment() for repetition in range(number_of_experiments)
+) / number_of_experiments
 ```
 
 > `2`. $\frac{1}{10}$
@@ -47,8 +51,11 @@ def sample_experiment():
     """
     return random.random() < 1 / 10
 
+
 number_of_experiments = 1000
-sum(sample_experiment() for repetition in range(number_of_experiments)) / number_of_experiments
+sum(
+    sample_experiment() for repetition in range(number_of_experiments)
+) / number_of_experiments
 ```
 
 
@@ -63,8 +70,11 @@ def sample_experiment():
     """
     return random.random() < 1 / 100
 
+
 number_of_experiments = 1000
-sum(sample_experiment() for repetition in range(number_of_experiments)) / number_of_experiments
+sum(
+    sample_experiment() for repetition in range(number_of_experiments)
+) / number_of_experiments
 ```
 
 > `4`.  $1$
@@ -78,8 +88,11 @@ def sample_experiment():
     """
     return random.random() < 1
 
+
 number_of_experiments = 1000
-sum(sample_experiment() for repetition in range(number_of_experiments)) / number_of_experiments
+sum(
+    sample_experiment() for repetition in range(number_of_experiments)
+) / number_of_experiments
 ```
 
 ````{attention}
@@ -107,7 +120,11 @@ def sample_experiment(number_of_red, number_of_green, number_of_yellow):
     This samples a token from a bag with number_of_red red tokens,
     number_of_green green tokens and number_of_yellow yellow tokens
     """
-    bag = ["Red"] * number_of_red + ["Green"] * number_of_green + ["Yellow"] * number_of_yellow
+    bag = (
+        ["Red"] * number_of_red
+        + ["Green"] * number_of_green
+        + ["Yellow"] * number_of_yellow
+    )
 
     return random.choice(bag)
 ```
@@ -117,21 +134,30 @@ We now use this function:
 ```{code-cell} ipython3
 number_of_experiments = 1000
 random.seed(0)
-sum(sample_experiment(number_of_red=4, number_of_green=4, number_of_yellow=0) == "Red" for repetition in range(number_of_experiments)) / number_of_experiments
+sum(
+    sample_experiment(number_of_red=4, number_of_green=4, number_of_yellow=0) == "Red"
+    for repetition in range(number_of_experiments)
+) / number_of_experiments
 ```
 
 > `2`. A bag with 4 red tokens, 4 green tokens and 10 yellow tokens.
 
 ```{code-cell} ipython3
 random.seed(0)
-sum(sample_experiment(number_of_red=4, number_of_green=4, number_of_yellow=10) == "Red" for repetition in range(number_of_experiments)) / number_of_experiments
+sum(
+    sample_experiment(number_of_red=4, number_of_green=4, number_of_yellow=10) == "Red"
+    for repetition in range(number_of_experiments)
+) / number_of_experiments
 ```
 
 > `3`. A bag with 0 red tokens, 4 green tokens and 10 yellow tokens.
 
 ```{code-cell} ipython3
 random.seed(0)
-sum(sample_experiment(number_of_red=0, number_of_green=4, number_of_yellow=10) == "Red" for repetition in range(number_of_experiments)) / number_of_experiments
+sum(
+    sample_experiment(number_of_red=0, number_of_green=4, number_of_yellow=10) == "Red"
+    for repetition in range(number_of_experiments)
+) / number_of_experiments
 ```
 
 ## Question 3
@@ -248,7 +274,9 @@ samples
 Using this we can approximate the probability:
 
 ```{code-cell} ipython3
-sum(is_late and travel_method == "foot" for travel_method, is_late in samples) / number_of_repetitions
+sum(
+    is_late and travel_method == "foot" for travel_method, is_late in samples
+) / number_of_repetitions
 ```
 
 > `2`. Approximate the probability that an individual is not late.
@@ -263,5 +291,8 @@ sum(not is_late for travel_method, is_late in samples) / number_of_repetitions
 
 ```{code-cell} ipython3
 samples_with_late = [(travel_method, is_late) for travel_method, is_late in samples]
-sum(travel_method != "foot" for travel_method, is_late in samples_with_late) / len(samples_with_late)
+number_of_samples = len(samples_with_late)
+sum(
+    travel_method != "foot" for travel_method, is_late in samples_with_late
+) / number_of_samples
 ```
