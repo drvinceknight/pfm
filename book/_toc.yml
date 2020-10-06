@@ -40,6 +40,7 @@
     - file: chapters/05-combinations-permutations/tutorial/main
     - file: chapters/05-combinations-permutations/how/main
     - file: chapters/05-combinations-permutations/exercises/main
+    - file: chapters/05-combinations-permutations/solutions/main
     - file: chapters/05-combinations-permutations/why/main
   - file: chapters/06-probability/introduction/main
     sections:
