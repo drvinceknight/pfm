@@ -18,12 +18,14 @@ kernelspec:
 
 **If you are not sure how to do something, have a look at the "How To" section.**
 
-1. Simulate the probability of an event occurring with the following chances:
+1. For each of the following, write a function, and repeatedly use it to simulate
+   the probability of an event occurring with the following chances:
     1. $\frac{2}{7}$
     2. $\frac{1}{10}$
     3.  $\frac{1}{100}$
     4.  $1$
-2. Simulate the probability of selecting a red token from each of the following configurations:
+2. Write a function, and repeatedly use it to simulate the probability of
+   selecting a red token from each of the following configurations:
     1. A bag with 4 red tokens and 4 green tokens.
     2. A bag with 4 red tokens, 4 green tokens and 10 yellow tokens.
     3. A bag with 0 red tokens, 4 green tokens and 10 yellow tokens.
@@ -33,11 +35,11 @@ kernelspec:
 
     When a blue token is selected, a biased coin with probability $\frac{2}{5}$ of landing heads is spun.
 
-    1. What is the probability of picking a red token?
-    2. What is the probability of obtaining Heads?
-    3. If a heads is obtained, what is the probability of having selected a red token.
+    1. Approximate the probability of picking a red token?
+    2. Approximate the probability of obtaining Heads?
+    3. If a heads is obtained, approximate the probability of having selected a red token.
 4. On a randomly chose day, the probability of an individual travelling to school by car, bicycle or on foot is $1/2$, $1/6$ and $1/3$ respectively. The probability of being late when using these methods of travel is $1/5$, $2/5$ and $1/10$ respectively.
 
-    1. Find the probability that an individual travels by foot and is late.
-    2. Find the probability that an individual is not late.
-    3. Given that an individual is late, find the probability that they did not travel on foot.
+    1. Approximate the probability that an individual travels by foot and is late.
+    2. Approximate the probability that an individual is not late.
+    3. Given that an individual is late, approximate the probability that they did not travel on foot.
