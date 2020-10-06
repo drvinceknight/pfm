@@ -54,12 +54,13 @@ basket[1]
 
 A boolean variable has one of two values: `True` or `False`.
 
-To create a boolean variable we can use:
+To create a boolean variable here are some of the things we can use:
 
 - Equality: `value == other_value`
 - Inequality `value != other_value`
 - Strictly less than `value < other_value`
 - Less than or equal`value <= other_value`
+- Inclusion `value in iterable`
 
 This a subset of the operators available.
 
@@ -86,6 +87,31 @@ value < value
 
 ```{code-cell} ipython3
 value <= value
+```
+
+```{code-cell} ipython3
+value in (1, 2, 4, 19)
+```
+
+It is also possible to combine booleans to create new booleans:
+
+- And: `first_boolean and second_boolean`
+- Or: `first_boolean or second_boolean`
+
+```{code-cell} ipython3
+True and True
+```
+
+```{code-cell} ipython3
+False and True
+```
+
+```{code-cell} ipython3
+True or False
+```
+
+```{code-cell} ipython3
+False or False
 ```
 
 (creating_an_iterable_with_a_given_number_of_items)=
@@ -231,7 +257,7 @@ import math
 math.factorial(5)
 ```
 
-## Directly computing ${n \choose i}$
+## Directly computing ${n \choose i}$
 
 The `scipy.special` library has a `comb` tool.
 

@@ -191,6 +191,11 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../why/main.html">
      Further information
     </a>
@@ -396,6 +401,14 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#directly-computing-n-choose-i">
+   Directly computing
+   <span class="math notranslate nohighlight">
+    \({n \choose i}\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#directly-computing-n-p-i">
    Directly computing
    <span class="math notranslate nohighlight">
@@ -465,12 +478,13 @@ first element is has index <code class="docutils literal notranslate"><span clas
 <div class="section" id="creating-boolean-variables">
 <span id="id2"></span><h2>Creating boolean variables<a class="headerlink" href="#creating-boolean-variables" title="Permalink to this headline">¶</a></h2>
 <p>A boolean variable has one of two values: <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-<p>To create a boolean variable we can use:</p>
+<p>To create a boolean variable here are some of the things we can use:</p>
 <ul class="simple">
 <li><p>Equality: <code class="docutils literal notranslate"><span class="pre">value</span> <span class="pre">==</span> <span class="pre">other_value</span></code></p></li>
 <li><p>Inequality <code class="docutils literal notranslate"><span class="pre">value</span> <span class="pre">!=</span> <span class="pre">other_value</span></code></p></li>
 <li><p>Strictly less than <code class="docutils literal notranslate"><span class="pre">value</span> <span class="pre">&lt;</span> <span class="pre">other_value</span></code></p></li>
 <li><p>Less than or equal<code class="docutils literal notranslate"><span class="pre">value</span> <span class="pre">&lt;=</span> <span class="pre">other_value</span></code></p></li>
+<li><p>Inclusion <code class="docutils literal notranslate"><span class="pre">value</span> <span class="pre">in</span> <span class="pre">iterable</span></code></p></li>
 </ul>
 <p>This a subset of the operators available.</p>
 <p>For example:</p>
@@ -533,6 +547,71 @@ first element is has index <code class="docutils literal notranslate"><span clas
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">19</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>It is also possible to combine booleans to create new booleans:</p>
+<ul class="simple">
+<li><p>And: <code class="docutils literal notranslate"><span class="pre">first_boolean</span> <span class="pre">and</span> <span class="pre">second_boolean</span></code></p></li>
+<li><p>Or: <code class="docutils literal notranslate"><span class="pre">first_boolean</span> <span class="pre">or</span> <span class="pre">second_boolean</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="ow">and</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="ow">and</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="ow">or</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="ow">or</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
 </pre></div>
 </div>
 </div>
@@ -754,7 +833,9 @@ meet a given condition using the following:</p>
 </div>
 </div>
 </div>
-<p>## Directly computing <span class="math notranslate nohighlight">\({n \choose i}\)</span></p>
+</div>
+<div class="section" id="directly-computing-n-choose-i">
+<h2>Directly computing <span class="math notranslate nohighlight">\({n \choose i}\)</span><a class="headerlink" href="#directly-computing-n-choose-i" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">scipy.special</span></code> library has a <code class="docutils literal notranslate"><span class="pre">comb</span></code> tool.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
