@@ -340,6 +340,40 @@ commentsRunWhenDOMLoaded(addUtterances);
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#differentiate-f-x-to-get-frac-df-dx">
+   Differentiate
+   <span class="math notranslate nohighlight">
+    \(f(x)\)
+   </span>
+   to get
+   <span class="math notranslate nohighlight">
+    \(\frac{df}{dx}\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#equate-frac-df-dx-0">
+   Equate
+   <span class="math notranslate nohighlight">
+    \(\frac{df}{dx}=0\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#use-the-second-derivative-test-on-the-solution">
+   Use the second derivative test on the solution
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -406,9 +440,8 @@ computer which <strong>mathematical technique</strong> to carry out.</p>
 computer.</strong></p>
 <p>The following is an example, do not worry too much about the specific code used
 for now:</p>
-<ol class="simple">
-<li><p>Differentiate <span class="math notranslate nohighlight">\(f(x)\)</span> to get <span class="math notranslate nohighlight">\(\frac{df}{dx}\)</span>;</p></li>
-</ol>
+<div class="section" id="differentiate-f-x-to-get-frac-df-dx">
+<h2>Differentiate <span class="math notranslate nohighlight">\(f(x)\)</span> to get <span class="math notranslate nohighlight">\(\frac{df}{dx}\)</span><a class="headerlink" href="#differentiate-f-x-to-get-frac-df-dx" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
@@ -423,9 +456,9 @@ for now:</p>
 \[\displaystyle 2 x - 3\]</div>
 </div>
 </div>
-<ol class="simple">
-<li><p>Equate <span class="math notranslate nohighlight">\(\frac{df}{dx}=0\)</span>:</p></li>
-</ol>
+</div>
+<div class="section" id="equate-frac-df-dx-0">
+<h2>Equate <span class="math notranslate nohighlight">\(\frac{df}{dx}=0\)</span><a class="headerlink" href="#equate-frac-df-dx-0" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">3</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
@@ -437,9 +470,9 @@ for now:</p>
 \[\displaystyle \left\{\frac{3}{2}\right\}\]</div>
 </div>
 </div>
-<ol class="simple">
-<li><p>Use the second derivative test on the solution:</p></li>
-</ol>
+</div>
+<div class="section" id="use-the-second-derivative-test-on-the-solution">
+<h2>Use the second derivative test on the solution<a class="headerlink" href="#use-the-second-derivative-test-on-the-solution" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
@@ -457,6 +490,7 @@ for now:</p>
 <p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Knowledge versus technique in this book.</span><a class="headerlink" href="#fig-knowledge-vs-technique" title="Permalink to this image">¶</a></p>
 </div>
 <div class="toctree-wrapper compound">
+</div>
 </div>
 </div>
 
