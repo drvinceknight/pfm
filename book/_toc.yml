@@ -47,6 +47,7 @@
     - file: chapters/06-probability/tutorial/main
     - file: chapters/06-probability/how/main
     - file: chapters/06-probability/exercises/main
+    - file: chapters/06-probability/solutions/main
     - file: chapters/06-probability/why/main
   - file: chapters/07-sequences/introduction/main
     sections:

@@ -158,6 +158,9 @@ prose_suggestions_to_ignore = {
     "book/chapters/06-probability/tutorial/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
+    "book/chapters/06-probability/solutions/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
     "book/chapters/05-combinations-permutations/tutorial/main.md": set(
         ("leonard.exclamation.30ppm",)
     ),
