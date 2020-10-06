@@ -155,3 +155,22 @@ Markup languages differ in complexity:
 
 - $\LaTeX$ is incredibly sophisticated and has a huge range of capabilities.
 - Markdown is designed to be basic with a few specific annotations to remember.
+
+## I only have a chromebook: how can I use notebooks?
+
+There are a number of cloud based services that give access to scientific Python
+environments. This medium article gives a brief review of 5 of them:
+<https://medium.com/@siddesh.001/top-5-online-free-notebook-ipynb-and-other-cloud-services-dbf9580d99e3>
+(this is dated 2018).
+
+I recommend using cocalc: <https://cocalc.com>. The free tier does have some
+limitations but it should be sufficient to be able to work through this book.
+
+## I only have a tablet: how can I use notebooks?
+
+There are two iOS apps that I am aware of for notebooks:
+
+- [Carnets](https://apps.apple.com/us/app/carnets-jupyter/id1450994949)
+- [Juno](https://juno.sh)
+
+I have experimented with Carnets but not with Juno.

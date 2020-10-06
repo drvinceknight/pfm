@@ -1,10 +1,12 @@
 words = set(
     (
+        "iOS",
         "Anscombe's",
         "Ashville",
         "Bertolt",
         "Bewton",
         "CamelCase",
+        "Carnets",
         "Combinatorics",
         "Df",
         "Eq",
@@ -34,7 +36,9 @@ words = set(
         "boolean",
         "booleans",
         "cfm",
+        "chromebook",
         "cms",
+        "cocalc",
         "color",
         "combinatorial",
         "combinatorics",
