@@ -20,15 +20,17 @@ kernelspec:
 
 1. Using recursion, obtain the first 10 terms of the following sequences:
     1. $\left\{\begin{array}{l}a_1 = 1,\\a_n = 3a_{n - 1}, n > 1\end{array}\right.$
-    2. $\left\{\begin{array}{l}a_1 = 3,\\a_n = 6a_{n - 1}, n > 1\end{array}\right.$
-    3. $\left\{\begin{array}{l}a_1 = 3,\\a_n = 6a_{n - 1} + 3, n > 1\end{array}\right.$
-    4. $\left\{\begin{array}{l}a_0 = 3,\\a_n = \sqrt{a_{n - 1}} + 3, n > 0\end{array}\right.$
+    2. $\left\{\begin{array}{l}b_1 = 3,\\b_n = 6b_{n - 1}, n > 1\end{array}\right.$
+    3. $\left\{\begin{array}{l}c_1 = 3,\\c_n = 6c_{n - 1} + 3, n > 1\end{array}\right.$
+    4. $\left\{\begin{array}{l}d_0 = 3,\\d_n = \sqrt{d_{n - 1}} + 3, n > 0\end{array}\right.$
 2. Using recursion, obtain the first 5 terms of the Fibonacci sequence:
+
     $$\left\{\begin{array}{l}
         a_0 = 0,\\
         a_1 = 1,\\ 
         a_n = a_{n - 1} + a_{n - 2}, n \geq 2\end{array}\right.
     $$
+    
 3. A 40 year building programme for new houses began in Oldtown in the year 1951 (Year 1) and finished in 1990 (Year 40).
 
     The number of houses built each year form an arithmetic sequence with first term $a$ and common difference $d$.
@@ -38,7 +40,6 @@ kernelspec:
     1. The value of $d$.
     2. The value of $a$.
     3. The total number of houses built in Oldtown over 40 years.
-    4. On a randomly chose day, the probability of an individual travelling to school by car, bicycle or on foot is $1/2$, $1/6$ and $1/3$ respectively. The probability of being late when using these methods of travel is $1/5$, $2/5$ and $1/10$ respectively.
 4. A sequence is given by:
 
     $$
