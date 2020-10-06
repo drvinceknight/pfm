@@ -80,7 +80,7 @@ computer.**
 The following is an example, do not worry too much about the specific code used
 for now:
 
-1. Differentiate $f(x)$ to get $\frac{df}{dx}$;
+## Differentiate $f(x)$ to get $\frac{df}{dx}$
 
 ```{code-cell} ipython3
 import sympy as sym
@@ -89,13 +89,13 @@ x = sym.Symbol("x")
 sym.diff(x ** 2 - 3 * x + 1, x)
 ```
 
-2. Equate $\frac{df}{dx}=0$:
+## Equate $\frac{df}{dx}=0$
 
 ```{code-cell} ipython3
 sym.solveset(2 * x - 3, x)
 ```
 
-3. Use the second derivative test on the solution:
+## Use the second derivative test on the solution
 
 ```{code-cell} ipython3
 sym.diff(x ** 2 - 3 * x + 1, x, 2)
