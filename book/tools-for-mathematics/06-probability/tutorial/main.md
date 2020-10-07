@@ -157,9 +157,9 @@ We can confirm that we have the correct number of samples:
 len(samples)
 ```
 
+```{attention}
 `len` is the Python tool to get the length of a given Python iterable.
-
-+++
+```
 
 Using this we can now use `==` (double `=`) to check how many of those samples are `Red`:
 
@@ -169,7 +169,7 @@ Using this we can now use `==` (double `=`) to check how many of those samples a
 sum(token == "Red" for token in samples) / number_of_repetitions
 ```
 
-We have sampled  probability of around .41. The theoretic value is $\frac{5}{5 +
+We have sampled probability of around .41. The theoretic value is $\frac{5}{5 +
 7}$:
 
 ```{code-cell} ipython3
