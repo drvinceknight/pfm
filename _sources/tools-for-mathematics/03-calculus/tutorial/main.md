@@ -113,10 +113,6 @@ second_equation
 sym.solveset(second_equation, b)
 ```
 
-```{code-cell} ipython3
-sym.root(192, 4)
-```
-
 Recalling the question we know that $b>0$ thus: $b = 2\sqrt{2}\sqrt[4]{3}$ and
 $a=\frac{2\sqrt{2}\sqrt[4]{3}}{3}$.
 
@@ -143,7 +139,7 @@ sym.diff(expression, x).subs({x: 0})
 sym.diff(expression, x, 2).subs({x: 0})
 ```
 
-Now we will calculate the limits using `sym.limit`, these takes 3 inputs:
+Now we will calculate the limits using `sym.limit`, this takes 3 inputs:
 
 - The expression we are taking the limit of.
 - The variable that is changing.
