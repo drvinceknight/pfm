@@ -118,8 +118,12 @@ solution
 quadratic = 4 * x ** 2 + 16 * x + 25
 sym.discriminant(quadratic)
 ```
+ 
+This is negative so we know that the equation does not have any real solutions and
+hence the graph does not cross the x-axis. 
+Since the coefficient of $x^2$ is positive it means that the graph is above 
+the $y=0$ line.
 
-This is negative so we know that the graph is above the $y=0$ line.
 
 > By completing the square, show that the minimum point of $f(x)$ is
 > $\left(-2, 9\right)$
@@ -185,7 +189,10 @@ quadratic = -3 * x ** 2 + 24 * x - 97
 sym.discriminant(quadratic)
 ```
 
-This is negative so we know that the graph is below the $y=0$ line.
+This is negative so we know that the equation does not have any real solutions and
+hence the graph does not cross the x-axis. 
+Since the coefficient of $x^2$ is negative it means that the graph is below 
+the $y=0$ line.
 
 
 > By completing the square, show that the maximum point of $f(x)$ is
