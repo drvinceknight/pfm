@@ -1,0 +1,1016 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solutions &#8212; Python for mathematics</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-dropdown.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "drvinceknight/pfm");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Further information" href="../why/main.html" />
+    <link rel="prev" title="Exercises" href="../exercises/main.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/main.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Python for mathematics</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../cover.html">
+   Python for Mathematics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Overview
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../overview/introduction/main.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Tools for mathematics
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../01-using-notebooks/introduction/main.html">
+   Using notebooks
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="../introduction/main.html">
+   Algebra
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../03-calculus/introduction/main.html">
+   Calculus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../04-matrices/introduction/main.html">
+   Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../05-combinations-permutations/introduction/main.html">
+   Combinatorics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../06-probability/introduction/main.html">
+   Probability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../07-sequences/introduction/main.html">
+   Sequences
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Further information
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../further-information/01-numpy/introduction/main.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../further-information/02-matplotlib/introduction/main.html">
+   Matplotlib
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../../../_sources/tools-for-mathematics/02-algebra/solutions/main.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/tools-for-mathematics/02-algebra/solutions/main.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/drvinceknight/pfm"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/drvinceknight/pfm/issues/new?title=Issue%20on%20page%20%2Ftools-for-mathematics/02-algebra/solutions/main.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/drvinceknight/pfm/edit/main/book/tools-for-mathematics/02-algebra/solutions/main.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/drvinceknight/pfm/main?urlpath=tree/book/tools-for-mathematics/02-algebra/solutions/main.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-1">
+   Question 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-2">
+   Question 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-3">
+   Question 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-4">
+   Question 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-5">
+   Question 5
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="solutions">
+<h1>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="question-1">
+<h2>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">1</span></code>. Simplify the following expressions:</p>
+</div></blockquote>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\frac{3}{\sqrt{3}}\)</span>:</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">expression</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="n">sym</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \sqrt{3}\]</div>
+</div>
+</div>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\frac{2 ^ {78}}{2 ^ {12}2^{-32}}\)</span>:</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">78</span> <span class="o">/</span> <span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">12</span> <span class="o">*</span> <span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="o">-</span><span class="mi">32</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 316912650057057350374175801344\]</div>
+</div>
+</div>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(8^0\)</span>:</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="o">**</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 1\]</div>
+</div>
+</div>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(a^4b^{-2}+a^{3}b^{2}+a^{4}b^0\)</span>:</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">factor</span><span class="p">(</span><span class="n">a</span> <span class="o">**</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">b</span> <span class="o">**</span> <span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">a</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">b</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">a</span> <span class="o">**</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">b</span> <span class="o">**</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{a^{3} \left(a b^{2} + a + b^{4}\right)}{b^{2}}\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="question-2">
+<h2>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">2</span></code>. Solve the following equations:</p>
+</div></blockquote>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(x + 3 = -1\)</span>:</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<span class="n">equation</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">equation</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{-4\right\}\]</div>
+</div>
+</div>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(3 x ^ 2 - 2 x = 5\)</span>:</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">equation</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">equation</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{-1, \frac{5}{3}\right\}\]</div>
+</div>
+</div>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(x (x - 1) (x + 3) = 0\)</span>:</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">equation</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">3</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">equation</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{-3, 0, 1\right\}\]</div>
+</div>
+</div>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(4 x ^3 + 7x - 24 = 1\)</span>:</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">equation</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">24</span> <span class="o">*</span> <span class="n">x</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">equation</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{\frac{\sqrt{51} \cos{\left(\frac{\operatorname{atan}{\left(\frac{\sqrt{14658}}{9} \right)}}{3} \right)}}{3}, - \frac{\sqrt{51} \cos{\left(\frac{\operatorname{atan}{\left(\frac{\sqrt{14658}}{9} \right)}}{3} \right)}}{12} + \frac{17 \operatorname{re}{\left(\frac{1}{\left(- \frac{1}{2} - \frac{\sqrt{3} i}{2}\right) \sqrt[3]{\frac{1}{8} + \frac{\sqrt{14658} i}{72}}}\right)}}{12} + \frac{\sqrt{17} \sin{\left(\frac{\operatorname{atan}{\left(\frac{\sqrt{14658}}{9} \right)}}{3} \right)}}{4} + i \left(- \frac{\sqrt{17} \cos{\left(\frac{\operatorname{atan}{\left(\frac{\sqrt{14658}}{9} \right)}}{3} \right)}}{4} - \frac{\sqrt{51} \sin{\left(\frac{\operatorname{atan}{\left(\frac{\sqrt{14658}}{9} \right)}}{3} \right)}}{12} + \frac{17 \operatorname{im}{\left(\frac{1}{\left(- \frac{1}{2} - \frac{\sqrt{3} i}{2}\right) \sqrt[3]{\frac{1}{8} + \frac{\sqrt{14658} i}{72}}}\right)}}{12}\right), \frac{17 \operatorname{re}{\left(\frac{1}{\left(- \frac{1}{2} + \frac{\sqrt{3} i}{2}\right) \sqrt[3]{\frac{1}{8} + \frac{\sqrt{14658} i}{72}}}\right)}}{12} - \frac{\sqrt{51} \cos{\left(\frac{\operatorname{atan}{\left(\frac{\sqrt{14658}}{9} \right)}}{3} \right)}}{12} - \frac{\sqrt{17} \sin{\left(\frac{\operatorname{atan}{\left(\frac{\sqrt{14658}}{9} \right)}}{3} \right)}}{4} + i \left(\frac{17 \operatorname{im}{\left(\frac{1}{\left(- \frac{1}{2} + \frac{\sqrt{3} i}{2}\right) \sqrt[3]{\frac{1}{8} + \frac{\sqrt{14658} i}{72}}}\right)}}{12} - \frac{\sqrt{51} \sin{\left(\frac{\operatorname{atan}{\left(\frac{\sqrt{14658}}{9} \right)}}{3} \right)}}{12} + \frac{\sqrt{17} \cos{\left(\frac{\operatorname{atan}{\left(\frac{\sqrt{14658}}{9} \right)}}{3} \right)}}{4}\right)\right\}\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="question-3">
+<h2>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">3</span></code>. Consider the equation: <span class="math notranslate nohighlight">\(x ^ 2 + 4 - y = \frac{1}{y}\)</span>:</p>
+</div></blockquote>
+<blockquote>
+<div><p>Find the solution to this equation for <span class="math notranslate nohighlight">\(x\)</span>.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
+<span class="n">equation</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">-</span> <span class="n">y</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">solution</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">equation</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">solution</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{- \sqrt{\frac{y^{2} - 4 y + 1}{y}}, \sqrt{\frac{y^{2} - 4 y + 1}{y}}\right\}\]</div>
+</div>
+</div>
+<blockquote>
+<div><p>Obtain the specific solution when <span class="math notranslate nohighlight">\(y = 5\)</span>. Do this in two ways:
+substitute the value in to your equation and substitute the value in to
+your solution.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">solution</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">y</span><span class="p">:</span> <span class="mi">5</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{- \frac{\sqrt{30}}{5}, \frac{\sqrt{30}}{5}\right\}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">solution</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">equation</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">y</span><span class="p">:</span> <span class="mi">5</span><span class="p">}),</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">solution</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{- \frac{\sqrt{30}}{5}, \frac{\sqrt{30}}{5}\right\}\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="question-4">
+<h2>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">4</span></code>. Consider the quadratic: <span class="math notranslate nohighlight">\(f(x)=4x ^ 2 + 16x + 25\)</span>:</p>
+</div></blockquote>
+<blockquote>
+<div><p>Calculate the discriminant of the quadratic equation <span class="math notranslate nohighlight">\(4x ^ 2 + 16x + 25 =
+0\)</span>. What does this tell us about the solutions to the equation? What
+does this tell us about the graph of <span class="math notranslate nohighlight">\(f(x)\)</span>?</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quadratic</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">16</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">25</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">discriminant</span><span class="p">(</span><span class="n">quadratic</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle -144\]</div>
+</div>
+</div>
+<p>This is negative so we know that the graph is above the <span class="math notranslate nohighlight">\(y=0\)</span> line.</p>
+<blockquote>
+<div><p>By completing the square, show that the minimum point of <span class="math notranslate nohighlight">\(f(x)\)</span> is
+<span class="math notranslate nohighlight">\(\left(-2, 9\right)\)</span></p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">),</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">),</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<span class="n">completed_square</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">c</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">completed_square</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle a b^{2} - 2 a b x + a x^{2} + c\]</div>
+</div>
+</div>
+<p>This gives <span class="math notranslate nohighlight">\(a=4\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">completed_square</span> <span class="o">=</span> <span class="n">completed_square</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">a</span><span class="p">:</span> <span class="mi">4</span><span class="p">})</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">completed_square</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 4 b^{2} - 8 b x + c + 4 x^{2}\]</div>
+</div>
+</div>
+<p>Comparing the coefficients of <span class="math notranslate nohighlight">\(x\)</span> we have the equation:</p>
+<div class="math notranslate nohighlight">
+\[
+  - 8 b = 16
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">equation</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="o">-</span><span class="mi">8</span> <span class="o">*</span> <span class="n">b</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">equation</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{-2\right\}\]</div>
+</div>
+</div>
+<p>Substituting:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">completed_square</span> <span class="o">=</span> <span class="n">completed_square</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">b</span><span class="p">:</span> <span class="o">-</span><span class="mi">2</span><span class="p">})</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">completed_square</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle c + 4 x^{2} + 16 x + 16\]</div>
+</div>
+</div>
+<p>Comparing the coefficients of <span class="math notranslate nohighlight">\(x^0\)</span> this gives:</p>
+<div class="math notranslate nohighlight">
+\[c+16=25\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">equation</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">c</span> <span class="o">+</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">equation</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{9\right\}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">completed_square</span> <span class="o">=</span> <span class="n">completed_square</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">c</span><span class="p">:</span> <span class="mi">9</span><span class="p">})</span>
+<span class="n">completed_square</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 4 \left(x + 2\right)^{2} + 9\]</div>
+</div>
+</div>
+<p>The lowest value of <span class="math notranslate nohighlight">\(f(x)\)</span> is for <span class="math notranslate nohighlight">\(x=-2\)</span> which gives: <span class="math notranslate nohighlight">\(f(-2)=9\)</span> as expected.</p>
+</div>
+<div class="section" id="question-5">
+<h2>Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">5</span></code>. Consider the quadratic: <span class="math notranslate nohighlight">\(f(x)=-3x ^ 2 + 24x - 97\)</span>:</p>
+</div></blockquote>
+<blockquote>
+<div><p>Calculate the discriminant of the quadratic equation <span class="math notranslate nohighlight">\(-3x ^ 2 + 24x - 97 =
+0\)</span>. What does this tell us about the solutions to the equation? What
+does this tell us about the graph of <span class="math notranslate nohighlight">\(f(x)\)</span>?</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quadratic</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span> <span class="o">*</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">24</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">97</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">discriminant</span><span class="p">(</span><span class="n">quadratic</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle -588\]</div>
+</div>
+</div>
+<p>This is negative so we know that the graph is below the <span class="math notranslate nohighlight">\(y=0\)</span> line.</p>
+<blockquote>
+<div><p>By completing the square, show that the maximum point of <span class="math notranslate nohighlight">\(f(x)\)</span> is
+<span class="math notranslate nohighlight">\(\left(4, -49\right)\)</span></p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">),</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">),</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<span class="n">completed_square</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">c</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">completed_square</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle a b^{2} - 2 a b x + a x^{2} + c\]</div>
+</div>
+</div>
+<p>This gives <span class="math notranslate nohighlight">\(a=-3\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">completed_square</span> <span class="o">=</span> <span class="n">completed_square</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">a</span><span class="p">:</span> <span class="o">-</span><span class="mi">3</span><span class="p">})</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">completed_square</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle - 3 b^{2} + 6 b x + c - 3 x^{2}\]</div>
+</div>
+</div>
+<p>Comparing the coefficients of <span class="math notranslate nohighlight">\(x\)</span> we have the equation:</p>
+<div class="math notranslate nohighlight">
+\[
+  6 b = 24
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">equation</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="mi">6</span> <span class="o">*</span> <span class="n">b</span><span class="p">,</span> <span class="mi">24</span><span class="p">)</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">equation</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{4\right\}\]</div>
+</div>
+</div>
+<p>Substituting:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">completed_square</span> <span class="o">=</span> <span class="n">completed_square</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">b</span><span class="p">:</span> <span class="mi">4</span><span class="p">})</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">completed_square</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle c - 3 x^{2} + 24 x - 48\]</div>
+</div>
+</div>
+<p>Comparing the coefficients of <span class="math notranslate nohighlight">\(x^0\)</span> this gives:</p>
+<div class="math notranslate nohighlight">
+\[c-48=-97\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">equation</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">c</span> <span class="o">-</span> <span class="mi">48</span><span class="p">,</span> <span class="o">-</span><span class="mi">97</span><span class="p">)</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">equation</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{-49\right\}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">completed_square</span> <span class="o">=</span> <span class="n">completed_square</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">c</span><span class="p">:</span> <span class="o">-</span><span class="mi">49</span><span class="p">})</span>
+<span class="n">completed_square</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle - 3 \left(x - 4\right)^{2} - 49\]</div>
+</div>
+</div>
+<p>The highest value of <span class="math notranslate nohighlight">\(f(x)\)</span> is for <span class="math notranslate nohighlight">\(x=4\)</span> which gives: <span class="math notranslate nohighlight">\(f(4)=-49\)</span> as expected.</p>
+<p><code class="docutils literal notranslate"><span class="pre">6</span></code>. Consider the function <span class="math notranslate nohighlight">\(f(x) = x^ 2 + a x + b\)</span>.</p>
+<blockquote>
+<div><p>Given that <span class="math notranslate nohighlight">\(f(0) = 0\)</span> and <span class="math notranslate nohighlight">\(f(3) = 0\)</span> obtain the values of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>.</p>
+</div></blockquote>
+<p>Substituting 0 in to <span class="math notranslate nohighlight">\(f\)</span> gives:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expression</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">a</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">b</span>
+<span class="n">expression</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle b\]</div>
+</div>
+</div>
+<p>This implies that <span class="math notranslate nohighlight">\(b=0\)</span>. Substituting back in to the expression:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expression</span> <span class="o">=</span> <span class="n">expression</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">b</span><span class="p">:</span> <span class="mi">0</span><span class="p">})</span>
+<span class="n">expression</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle a x + x^{2}\]</div>
+</div>
+</div>
+<p>Substituting <span class="math notranslate nohighlight">\(x=3\)</span> in to this expression gives:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expression</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">x</span><span class="p">:</span> <span class="mi">3</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 3 a + 9\]</div>
+</div>
+</div>
+<p>This gives the equation:</p>
+<div class="math notranslate nohighlight">
+\[
+    3 a + 9 = 0
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">expression</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">x</span><span class="p">:</span> <span class="mi">3</span><span class="p">}),</span> <span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{-3\right\}\]</div>
+</div>
+</div>
+<p>Our expression is thus:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expression</span> <span class="o">=</span> <span class="n">expression</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">a</span><span class="p">:</span> <span class="o">-</span><span class="mi">3</span><span class="p">})</span>
+<span class="n">expression</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{2} - 3 x\]</div>
+</div>
+</div>
+<blockquote>
+<div><p>By completing the square confirm that graph of <span class="math notranslate nohighlight">\(f(x)\)</span> has a line of symmetry
+at <span class="math notranslate nohighlight">\(x=\frac{3}{2}\)</span></p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">completed_square</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">c</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">completed_square</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle a b^{2} - 2 a b x + a x^{2} + c\]</div>
+</div>
+</div>
+<p>We see that <span class="math notranslate nohighlight">\(a=1\)</span> and. Substituting:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">completed_square</span> <span class="o">=</span> <span class="n">completed_square</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">a</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">completed_square</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle b^{2} - 2 b x + c + x^{2}\]</div>
+</div>
+</div>
+<p>This gives:</p>
+<div class="math notranslate nohighlight">
+\[
+    -2b=-3
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">equation</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="n">b</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">equation</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{\frac{3}{2}\right\}\]</div>
+</div>
+</div>
+<p>Substituting:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">completed_square</span> <span class="o">=</span> <span class="n">completed_square</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">b</span><span class="p">:</span> <span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">})</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">completed_square</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle c + x^{2} - 3 x + \frac{9}{4}\]</div>
+</div>
+</div>
+<p>Which gives:</p>
+<div class="math notranslate nohighlight">
+\[
+    c + 9 / 4 = 0
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">equation</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">c</span> <span class="o">+</span> <span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">equation</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{- \frac{9}{4}\right\}\]</div>
+</div>
+</div>
+<p>Substituting:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">completed_square</span> <span class="o">=</span> <span class="n">completed_square</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">c</span><span class="p">:</span> <span class="o">-</span><span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4</span><span class="p">})</span>
+<span class="n">completed_square</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(x - \frac{3}{2}\right)^{2} - \frac{9}{4}\]</div>
+</div>
+</div>
+<p>Thus <span class="math notranslate nohighlight">\(x=3/2\)</span> is a line of symmetry.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tools-for-mathematics/02-algebra/solutions"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../exercises/main.html" title="previous page">Exercises</a>
+    <a class='right-next' id="next-link" href="../why/main.html" title="next page">Further information</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Vincent Knight<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-38016329-2', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

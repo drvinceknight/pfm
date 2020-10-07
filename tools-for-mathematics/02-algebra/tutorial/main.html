@@ -1,0 +1,777 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial &#8212; Python for mathematics</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-dropdown.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "drvinceknight/pfm");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="How" href="../how/main.html" />
+    <link rel="prev" title="Algebra" href="../introduction/main.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/main.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Python for mathematics</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../cover.html">
+   Python for Mathematics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Overview
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../overview/introduction/main.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Tools for mathematics
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../01-using-notebooks/introduction/main.html">
+   Using notebooks
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="../introduction/main.html">
+   Algebra
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../03-calculus/introduction/main.html">
+   Calculus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../04-matrices/introduction/main.html">
+   Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../05-combinations-permutations/introduction/main.html">
+   Combinatorics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../06-probability/introduction/main.html">
+   Probability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../07-sequences/introduction/main.html">
+   Sequences
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Further information
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../further-information/01-numpy/introduction/main.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../further-information/02-matplotlib/introduction/main.html">
+   Matplotlib
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../../../_sources/tools-for-mathematics/02-algebra/tutorial/main.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/tools-for-mathematics/02-algebra/tutorial/main.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/drvinceknight/pfm"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/drvinceknight/pfm/issues/new?title=Issue%20on%20page%20%2Ftools-for-mathematics/02-algebra/tutorial/main.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/drvinceknight/pfm/edit/main/book/tools-for-mathematics/02-algebra/tutorial/main.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/drvinceknight/pfm/main?urlpath=tree/book/tools-for-mathematics/02-algebra/tutorial/main.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="tutorial">
+<h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h1>
+<p>To demonstrate the ways in which we can use a computer to assist with Algebra we
+will solve the following two problems:</p>
+<div class="admonition-problem admonition">
+<p class="admonition-title">Problem</p>
+<ol class="simple">
+<li><p>Rationalise the denominator of <span class="math notranslate nohighlight">\(\frac{1}{\sqrt{2} + 1}\)</span></p></li>
+<li><p>Consider the quadratic: <span class="math notranslate nohighlight">\(f(x)=2x ^ 2 + x + 1\)</span>:</p>
+<ol class="simple">
+<li><p>Calculate the discriminant of the quadratic equation <span class="math notranslate nohighlight">\(2x ^ 2 + x + 1 =
+0\)</span>. What does this tell us about the solutions to the equation? What
+does this tell us about the graph of <span class="math notranslate nohighlight">\(f(x)\)</span>?</p></li>
+<li><p>By completing the square, show that the minimum point of <span class="math notranslate nohighlight">\(f(x)\)</span> is
+<span class="math notranslate nohighlight">\(\left(-\frac{1}{4}, \frac{7}{8}\right)\)</span></p></li>
+</ol>
+</li>
+</ol>
+</div>
+<p>To do this we will be using a specific collections of tools available in Python.
+Often specific sets of tools are separated in to things called <strong>libraries</strong>. We
+start by telling Python that we want to use the specific library for <strong>symbolic
+mathematics</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This allows us to solve the first part of the question. First we create a
+variable <code class="docutils literal notranslate"><span class="pre">expression</span></code> and <strong>assign</strong> it a value of <span class="math notranslate nohighlight">\(\frac{1}{\sqrt{2} + 1}\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expression</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">sympy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">expression</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{1}{1 + \sqrt{2}}\]</div>
+</div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>This is not what would happen if we plugged the above in to a basic calculator,
+it would instead give us a value of:</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">float</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.41421356237309503
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">sympy</span></code> library has a diverse set of tools available, one of which is to
+algorithmically attempt to simplify an expression. Here is how we do that:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle -1 + \sqrt{2}\]</div>
+</div>
+</div>
+<p>This implies that:</p>
+<div class="math notranslate nohighlight">
+\[
+    \frac{1}{\sqrt{2} + 1} = -1 + \sqrt{2}
+\]</div>
+<p>If we multiply both sides by <span class="math notranslate nohighlight">\({\sqrt{2} + 1}\)</span> we get:</p>
+<div class="math notranslate nohighlight">
+\[
+    1=\frac{1}{\sqrt{2} + 1}\times \left(\sqrt{2} + 1\right) = \left(-1 + \sqrt{2}\right)\times \left(\sqrt{2} + 1\right)
+\]</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">sympy.simplify</span></code> command did not give us much insight in to what happened
+but we can further confirm that above manipulation by expanding <span class="math notranslate nohighlight">\(\left(-1 +
+\sqrt{2}\right)\times \left(\sqrt{2} + 1\right)\)</span>.</p>
+<p>Here is how we do that:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">expand</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span> <span class="o">+</span> <span class="n">sympy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">sympy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 1\]</div>
+</div>
+</div>
+<p>We see that <code class="docutils literal notranslate"><span class="pre">sympy</span></code> allows us to carry out basic expression manipulation. We
+will now consider the second part of the question:</p>
+<div class="admonition-problem admonition">
+<p class="admonition-title">Problem</p>
+<ol class="simple">
+<li><p>Consider the quadratic: <span class="math notranslate nohighlight">\(f(x)=2x ^ 2 + x + 1\)</span>:</p></li>
+<li><p>Calculate the discriminant of the quadratic equation <span class="math notranslate nohighlight">\(2x ^ 2 + x + 1 =
+0\)</span>. What does this tell us about the solutions to the equation? What
+does this tell us about the graph of <span class="math notranslate nohighlight">\(f(x)\)</span>?</p></li>
+<li><p>By completing the square, show that the minimum point of <span class="math notranslate nohighlight">\(f(x)\)</span> is
+<span class="math notranslate nohighlight">\(\left(-\frac{1}{4}, \frac{7}{8}\right)\)</span></p></li>
+</ol>
+</div>
+<p>We will start by reassigning the value of the variable <code class="docutils literal notranslate"><span class="pre">expression</span></code> to be the
+expression: <span class="math notranslate nohighlight">\(2x ^ 2 + x + 1\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<span class="n">expression</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">expression</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2 x^{2} + x + 1\]</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Recall</strong> that the <code class="docutils literal notranslate"><span class="pre">**</span></code> symbol is how we communicate exponentiation.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>We start by communicating to the code that <code class="docutils literal notranslate"><span class="pre">x</span></code> is going to be a symbolic variable.</p>
+</div>
+<p>We can immediately use this to compute the discriminant:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">discriminant</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle -7\]</div>
+</div>
+</div>
+<p>Now we can complement this with our mathematical knowledge: if a quadratic has a
+negative discriminant then it does not have any roots and all the values are of
+the same sign as the coefficient of <span class="math notranslate nohighlight">\(x ^ 2 \)</span>. Which in this case is <span class="math notranslate nohighlight">\(2&gt;0\)</span>.</p>
+<p>We can confirm this by directly creating the equation. We do this by creating a
+variable <code class="docutils literal notranslate"><span class="pre">equation</span></code> and assigning it the equation which has a <code class="docutils literal notranslate"><span class="pre">lhs</span></code> and a <code class="docutils literal notranslate"><span class="pre">rhs</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">equation</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">lhs</span><span class="o">=</span><span class="n">expression</span><span class="p">,</span> <span class="n">rhs</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">equation</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2 x^{2} + x + 1 = 0\]</div>
+</div>
+</div>
+<p>and asking <code class="docutils literal notranslate"><span class="pre">sympy</span></code> to solve it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">equation</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{- \frac{1}{4} - \frac{\sqrt{7} i}{4}, - \frac{1}{4} + \frac{\sqrt{7} i}{4}\right\}\]</div>
+</div>
+</div>
+<p>Indeed the only solutions are imaginary numbers: the graph of <span class="math notranslate nohighlight">\(f(x)\)</span> is thus a convex parabola.</p>
+<p>Let us know complete the square so that we can write:</p>
+<div class="math notranslate nohighlight">
+\[
+    f(x) = a (x - b) ^ 2 + c
+\]</div>
+<p>for some values of <span class="math notranslate nohighlight">\(a, b, c\)</span>.</p>
+<p>First let us create variables that have those 3 constants as value but also create a variable <code class="docutils literal notranslate"><span class="pre">completed_square</span></code> and assign it the general expression:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">),</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">),</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<span class="n">completed_square</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">c</span>
+<span class="n">completed_square</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle a \left(- b + x\right)^{2} + c\]</div>
+</div>
+</div>
+<p>We can expand this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">completed_square</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle a b^{2} - 2 a b x + a x^{2} + c\]</div>
+</div>
+</div>
+<p>We will now use <code class="docutils literal notranslate"><span class="pre">sympy</span></code> to solve the various equations that arise from comparing
+the coefficients of:</p>
+<div class="math notranslate nohighlight">
+\[
+    f(x) = 2x ^2 + x + 1
+\]</div>
+<p>with the completed square.</p>
+<p>First, we see that the coefficient of <span class="math notranslate nohighlight">\(x ^ 2\)</span> gives us an equation:</p>
+<div class="math notranslate nohighlight">
+\[
+    a = 2
+\]</div>
+<p>For completeness we will write the code that solves this trivial equation:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">equation</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">sympy</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">equation</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{2\right\}\]</div>
+</div>
+</div>
+<p>We will now substitute this value of <span class="math notranslate nohighlight">\(a\)</span> in to the completed square and update the variable with the new value:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">completed_square</span> <span class="o">=</span> <span class="n">completed_square</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">a</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
+<span class="n">completed_square</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle c + 2 \left(- b + x\right)^{2}\]</div>
+</div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The different types of brackets being used there: both <code class="docutils literal notranslate"><span class="pre">()</span></code> and <code class="docutils literal notranslate"><span class="pre">{}</span></code>. This is
+important and has specific meaning in Python which we will cover soon.</p>
+</div>
+<p>Now let us look at the expression with our two remaining constants:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">completed_square</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2 b^{2} - 4 b x + c + 2 x^{2}\]</div>
+</div>
+</div>
+<p>Comparing the coefficients of <span class="math notranslate nohighlight">\(x\)</span> we have the equation:</p>
+<div class="math notranslate nohighlight">
+\[
+  - 4 b = 1
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">equation</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span> <span class="o">*</span> <span class="n">b</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">sympy</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">equation</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{- \frac{1}{4}\right\}\]</div>
+</div>
+</div>
+<p>We will now substitute this value of <span class="math notranslate nohighlight">\(b\)</span> back in to our expression.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>We make a point to tell sympy to treat <span class="math notranslate nohighlight">\(1 / 4\)</span> symbolically and to not
+calculate the numeric value:</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">completed_square</span> <span class="o">=</span> <span class="n">completed_square</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">b</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span> <span class="o">/</span> <span class="n">sympy</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">4</span><span class="p">)})</span>
+<span class="n">completed_square</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle c + 2 \left(x + \frac{1}{4}\right)^{2}\]</div>
+</div>
+</div>
+<p>Expanding this to see our expression with the one remaining constant gives:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">completed_square</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle c + 2 x^{2} + x + \frac{1}{8}\]</div>
+</div>
+</div>
+<p>We have a final equation for the constant term:</p>
+<div class="math notranslate nohighlight">
+\[
+    c + 1 / 8 = 1
+\]</div>
+<p>We will use sympy to find the value of <span class="math notranslate nohighlight">\(c\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">sympy</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">c</span> <span class="o">+</span> <span class="n">sympy</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{\frac{7}{8}\right\}\]</div>
+</div>
+</div>
+<p>As before we will substitute that in and update the value of <code class="docutils literal notranslate"><span class="pre">completed_square</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">completed_square</span> <span class="o">=</span> <span class="n">completed_square</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">c</span><span class="p">:</span> <span class="mi">7</span> <span class="o">/</span> <span class="n">sympy</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">8</span><span class="p">)})</span>
+<span class="n">completed_square</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2 \left(x + \frac{1}{4}\right)^{2} + \frac{7}{8}\]</div>
+</div>
+</div>
+<p>Using this we can see that the there are indeed no values of <span class="math notranslate nohighlight">\(x\)</span> which give
+negative values of <span class="math notranslate nohighlight">\(f(x)\)</span> as <span class="math notranslate nohighlight">\(f(x)\)</span> is a square added to a constant.</p>
+<p>The minimum is when <span class="math notranslate nohighlight">\(x=-1/4\)</span> which gives: <span class="math notranslate nohighlight">\(f(-1/4)=7/8\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">completed_square</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">x</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span> <span class="o">/</span> <span class="n">sympy</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">4</span><span class="p">)})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{7}{8}\]</div>
+</div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>In this tutorial we have</p>
+<ul class="simple">
+<li><p>Created symbolic expressions.</p></li>
+<li><p>Obtained approximate values for numerical symbolic expressions.</p></li>
+<li><p>Expanded and simplified symbolic expressions.</p></li>
+<li><p>Created symbolic equations.</p></li>
+<li><p>Solve symbolic equations.</p></li>
+<li><p>Substituted values in to symbolic expressions.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tools-for-mathematics/02-algebra/tutorial"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../introduction/main.html" title="previous page">Algebra</a>
+    <a class='right-next' id="next-link" href="../how/main.html" title="next page">How</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Vincent Knight<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-38016329-2', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>
