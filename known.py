@@ -154,7 +154,9 @@ prose_suggestions_to_ignore = {
     "book/tools-for-mathematics/02-algebra/introduction/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
-    "book/tools-for-mathematics/02-algebra/solutions/main.md": set(("needless_variants.misc",)),
+    "book/tools-for-mathematics/02-algebra/solutions/main.md": set(
+        ("needless_variants.misc",)
+    ),
     "book/tools-for-mathematics/06-probability/tutorial/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
@@ -170,8 +172,12 @@ prose_suggestions_to_ignore = {
     "book/tools-for-mathematics/06-probability/how/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
-    "book/tools-for-mathematics/07-sequences/how/main.md": set(("typography.symbols.curly_quotes",)),
-    "book/tools-for-mathematics/07-sequences/why/main.md": set(("typography.symbols.curly_quotes",)),
+    "book/tools-for-mathematics/07-sequences/how/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/tools-for-mathematics/07-sequences/why/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
     "book/tools-for-mathematics/07-sequences/tutorial/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
@@ -196,7 +202,9 @@ prose_suggestions_to_ignore = {
     "book/building-tools/03-objects/exercises/main.md": set(
         (("typography.symbols.curly_quotes"),)
     ),
-    "book/building-tools/03-objects/why/main.md": set((("typography.symbols.curly_quotes"),)),
+    "book/building-tools/03-objects/why/main.md": set(
+        (("typography.symbols.curly_quotes"),)
+    ),
     "book/further-information/01-numpy/tutorial/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
