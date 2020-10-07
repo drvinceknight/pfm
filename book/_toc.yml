@@ -7,84 +7,84 @@
     - file: overview/how_to_use_this_book/main
 - part: Tools for mathematics
   chapters:
-  - file: chapters/01-using-notebooks/introduction/main
+  - file: tools-for-mathematics/01-using-notebooks/introduction/main
     sections:
-    - file: chapters/01-using-notebooks/tutorial/main
-    - file: chapters/01-using-notebooks/how/main
-    - file: chapters/01-using-notebooks/exercises/main
-    - file: chapters/01-using-notebooks/solutions/main
-    - file: chapters/01-using-notebooks/why/main
-  - file: chapters/02-algebra/introduction/main
+    - file: tools-for-mathematics/01-using-notebooks/tutorial/main
+    - file: tools-for-mathematics/01-using-notebooks/how/main
+    - file: tools-for-mathematics/01-using-notebooks/exercises/main
+    - file: tools-for-mathematics/01-using-notebooks/solutions/main
+    - file: tools-for-mathematics/01-using-notebooks/why/main
+  - file: tools-for-mathematics/02-algebra/introduction/main
     sections:
-    - file: chapters/02-algebra/tutorial/main
-    - file: chapters/02-algebra/how/main
-    - file: chapters/02-algebra/exercises/main
-    - file: chapters/02-algebra/solutions/main
-    - file: chapters/02-algebra/why/main
-  - file: chapters/03-calculus/introduction/main
+    - file: tools-for-mathematics/02-algebra/tutorial/main
+    - file: tools-for-mathematics/02-algebra/how/main
+    - file: tools-for-mathematics/02-algebra/exercises/main
+    - file: tools-for-mathematics/02-algebra/solutions/main
+    - file: tools-for-mathematics/02-algebra/why/main
+  - file: tools-for-mathematics/03-calculus/introduction/main
     sections:
-    - file: chapters/03-calculus/tutorial/main
-    - file: chapters/03-calculus/how/main
-    - file: chapters/03-calculus/exercises/main
-    - file: chapters/03-calculus/solutions/main
-    - file: chapters/03-calculus/why/main
-  - file: chapters/04-matrices/introduction/main
+    - file: tools-for-mathematics/03-calculus/tutorial/main
+    - file: tools-for-mathematics/03-calculus/how/main
+    - file: tools-for-mathematics/03-calculus/exercises/main
+    - file: tools-for-mathematics/03-calculus/solutions/main
+    - file: tools-for-mathematics/03-calculus/why/main
+  - file: tools-for-mathematics/04-matrices/introduction/main
     sections:
-    - file: chapters/04-matrices/tutorial/main
-    - file: chapters/04-matrices/how/main
-    - file: chapters/04-matrices/exercises/main
-    - file: chapters/04-matrices/solutions/main
-    - file: chapters/04-matrices/why/main
-  - file: chapters/05-combinations-permutations/introduction/main
+    - file: tools-for-mathematics/04-matrices/tutorial/main
+    - file: tools-for-mathematics/04-matrices/how/main
+    - file: tools-for-mathematics/04-matrices/exercises/main
+    - file: tools-for-mathematics/04-matrices/solutions/main
+    - file: tools-for-mathematics/04-matrices/why/main
+  - file: tools-for-mathematics/05-combinations-permutations/introduction/main
     sections:
-    - file: chapters/05-combinations-permutations/tutorial/main
-    - file: chapters/05-combinations-permutations/how/main
-    - file: chapters/05-combinations-permutations/exercises/main
-    - file: chapters/05-combinations-permutations/solutions/main
-    - file: chapters/05-combinations-permutations/why/main
-  - file: chapters/06-probability/introduction/main
+    - file: tools-for-mathematics/05-combinations-permutations/tutorial/main
+    - file: tools-for-mathematics/05-combinations-permutations/how/main
+    - file: tools-for-mathematics/05-combinations-permutations/exercises/main
+    - file: tools-for-mathematics/05-combinations-permutations/solutions/main
+    - file: tools-for-mathematics/05-combinations-permutations/why/main
+  - file: tools-for-mathematics/06-probability/introduction/main
     sections:
-    - file: chapters/06-probability/tutorial/main
-    - file: chapters/06-probability/how/main
-    - file: chapters/06-probability/exercises/main
-    - file: chapters/06-probability/solutions/main
-    - file: chapters/06-probability/why/main
-  - file: chapters/07-sequences/introduction/main
+    - file: tools-for-mathematics/06-probability/tutorial/main
+    - file: tools-for-mathematics/06-probability/how/main
+    - file: tools-for-mathematics/06-probability/exercises/main
+    - file: tools-for-mathematics/06-probability/solutions/main
+    - file: tools-for-mathematics/06-probability/why/main
+  - file: tools-for-mathematics/07-sequences/introduction/main
     sections:
-    - file: chapters/07-sequences/tutorial/main
-    - file: chapters/07-sequences/how/main
-    - file: chapters/07-sequences/exercises/main
-    - file: chapters/07-sequences/solutions/main
-    - file: chapters/07-sequences/why/main
+    - file: tools-for-mathematics/07-sequences/tutorial/main
+    - file: tools-for-mathematics/07-sequences/how/main
+    - file: tools-for-mathematics/07-sequences/exercises/main
+    - file: tools-for-mathematics/07-sequences/solutions/main
+    - file: tools-for-mathematics/07-sequences/why/main
 - part: Building tools
   chapters:
-  - file: chapters/08-variables-conditionals-loops/introduction/main
+  - file: building-tools/08-variables-conditionals-loops/introduction/main
     sections:
-    - file: chapters/08-variables-conditionals-loops/tutorial/main
-    - file: chapters/08-variables-conditionals-loops/how/main
-    - file: chapters/08-variables-conditionals-loops/exercises/main
-    - file: chapters/08-variables-conditionals-loops/why/main
-  - file: chapters/09-functions-and-data-structures/introduction/main
+    - file: building-tools/08-variables-conditionals-loops/tutorial/main
+    - file: building-tools/08-variables-conditionals-loops/how/main
+    - file: building-tools/08-variables-conditionals-loops/exercises/main
+    - file: building-tools/08-variables-conditionals-loops/why/main
+  - file: building-tools/09-functions-and-data-structures/introduction/main
     sections:
-    - file: chapters/09-functions-and-data-structures/tutorial/main
-    - file: chapters/09-functions-and-data-structures/how/main
-    - file: chapters/09-functions-and-data-structures/exercises/main
-    - file: chapters/09-functions-and-data-structures/why/main
-  - file: chapters/10-objects/introduction/main
+    - file: building-tools/09-functions-and-data-structures/tutorial/main
+    - file: building-tools/09-functions-and-data-structures/how/main
+    - file: building-tools/09-functions-and-data-structures/exercises/main
+    - file: building-tools/09-functions-and-data-structures/why/main
+  - file: building-tools/10-objects/introduction/main
     sections:
-    - file: chapters/10-objects/tutorial/main
-    - file: chapters/10-objects/how/main
-    - file: chapters/10-objects/exercises/main
-    - file: chapters/10-objects/why/main
-- part: Appendix
+    - file: building-tools/10-objects/tutorial/main
+    - file: building-tools/10-objects/how/main
+    - file: building-tools/10-objects/exercises/main
+    - file: building-tools/10-objects/why/main
+- part: Further information
   chapters:
-  - file: appendix/01-numpy/introduction/main
+  - file: further-information/01-numpy/introduction/main
     sections:
-    - file: appendix/01-numpy/tutorial/main
-    - file: appendix/01-numpy/how/main
-    - file: appendix/01-numpy/why/main
-  - file: appendix/02-matplotlib/introduction/main
+    - file: further-information/01-numpy/tutorial/main
+    - file: further-information/01-numpy/how/main
+    - file: further-information/01-numpy/why/main
+  - file: further-information/02-matplotlib/introduction/main
     sections:
-    - file: appendix/02-matplotlib/tutorial/main
-    - file: appendix/02-matplotlib/how/main
-    - file: appendix/02-matplotlib/why/main
+    - file: further-information/02-matplotlib/tutorial/main
+    - file: further-information/02-matplotlib/how/main
+    - file: further-information/02-matplotlib/why/main

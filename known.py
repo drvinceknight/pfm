@@ -125,7 +125,7 @@ words = set(
 )
 
 prose_exceptions = {
-    "book/chapters/02-algebra/tutorial/main.md": set(
+    "book/tools-for-mathematics/02-algebra/tutorial/main.md": set(
         (
             "We can immediately use this to compute the discriminant:",
             "sympy.discriminant(expression)",
@@ -133,80 +133,88 @@ prose_exceptions = {
             "1. Calculate the discriminant of the quadratic equation $2x ^ 2 + x + 1 =",
         )
     ),
-    "book/chapters/02-algebra/exercises/main.md": set(
+    "book/tools-for-mathematics/02-algebra/exercises/main.md": set(
         (
             "1. Calculate the discriminant of the quadratic equation $4x ^ 2 + 16x + 25 =",
             "1. Calculate the discriminant of the quadratic equation $-3x ^ 2 + 24x - 97 =",
         )
     ),
-    "book/chapters/04-matrices/exercises/main.md": set(
+    "book/tools-for-mathematics/04-matrices/exercises/main.md": set(
         (
             r"4. The matrix $D$ is given by $D = \begin{pmatrix} a & 2 & 0\\ 3 & 1 & 2\\ 0 & -1 & 1\end{pmatrix}$ where $a\ne 2$.",
         )
     ),
-    "book/chapters/04-matrices/solutions/main.md": set(
+    "book/tools-for-mathematics/04-matrices/solutions/main.md": set(
         (
             r"> `4`. The matrix $D$ is given by $D = \begin{pmatrix} a & 2 & 0\\ 3 & 1 & 2\\ 0 & -1 & 1\end{pmatrix}$ where $a\ne 2$.",
         )
     ),
 }
 prose_suggestions_to_ignore = {
-    "book/chapters/02-algebra/introduction/main.md": set(
+    "book/tools-for-mathematics/02-algebra/introduction/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
-    "book/chapters/02-algebra/solutions/main.md": set(("needless_variants.misc",)),
-    "book/chapters/06-probability/tutorial/main.md": set(
+    "book/tools-for-mathematics/02-algebra/solutions/main.md": set(
+        ("needless_variants.misc",)
+    ),
+    "book/tools-for-mathematics/06-probability/tutorial/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
-    "book/chapters/06-probability/solutions/main.md": set(
+    "book/tools-for-mathematics/06-probability/solutions/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
-    "book/chapters/05-combinations-permutations/tutorial/main.md": set(
+    "book/tools-for-mathematics/05-combinations-permutations/tutorial/main.md": set(
         ("leonard.exclamation.30ppm",)
     ),
-    "book/chapters/06-probability/why/main.md": set(
+    "book/tools-for-mathematics/06-probability/why/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
-    "book/chapters/06-probability/how/main.md": set(
+    "book/tools-for-mathematics/06-probability/how/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
-    "book/chapters/07-sequences/how/main.md": set(("typography.symbols.curly_quotes",)),
-    "book/chapters/07-sequences/why/main.md": set(("typography.symbols.curly_quotes",)),
-    "book/chapters/07-sequences/tutorial/main.md": set(
+    "book/tools-for-mathematics/07-sequences/how/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
-    "book/chapters/07-sequences/solutions/main.md": set(
+    "book/tools-for-mathematics/07-sequences/why/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
-    "book/chapters/08-variables-conditionals-loops/tutorial/main.md": set(
+    "book/tools-for-mathematics/07-sequences/tutorial/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
-    "book/chapters/08-variables-conditionals-loops/how/main.md": set(
+    "book/tools-for-mathematics/07-sequences/solutions/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
-    "book/chapters/09-functions-and-data-structures/tutorial/main.md": set(
+    "book/building-tools/01-variables-conditionals-loops/tutorial/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
-    "book/chapters/10-objects/tutorial/main.md": set(
+    "book/building-tools/01-variables-conditionals-loops/how/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/building-tools/02-functions-and-data-structures/tutorial/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/building-tools/03-objects/tutorial/main.md": set(
         (("typography.symbols.curly_quotes"), ("needless_variants.misc"))
     ),
-    "book/chapters/10-objects/how/main.md": set(
+    "book/building-tools/03-objects/how/main.md": set(
         (("typography.symbols.curly_quotes"), ("needless_variants.misc"))
     ),
-    "book/chapters/10-objects/exercises/main.md": set(
+    "book/building-tools/03-objects/exercises/main.md": set(
         (("typography.symbols.curly_quotes"),)
     ),
-    "book/chapters/10-objects/why/main.md": set((("typography.symbols.curly_quotes"),)),
-    "book/appendix/01-numpy/tutorial/main.md": set(
+    "book/building-tools/03-objects/why/main.md": set(
+        (("typography.symbols.curly_quotes"),)
+    ),
+    "book/further-information/01-numpy/tutorial/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
-    "book/appendix/02-matplotlib/tutorial/main.md": set(
+    "book/further-information/02-matplotlib/tutorial/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
-    "book/appendix/02-matplotlib/how/main.md": set(
+    "book/further-information/02-matplotlib/how/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
-    "book/appendix/02-matplotlib/why/main.md": set(
+    "book/further-information/02-matplotlib/why/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
 }
