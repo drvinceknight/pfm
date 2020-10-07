@@ -57,7 +57,7 @@ which this occurs:
 sym.solveset(determinant, a)
 ```
 
-Thus it is not possible to find the determinant of $A$ for $a\in\{0, 1\}$.
+Thus it is not possible to find the inverse of $A$ for $a\in\{0, 1\}$.
 
 However for $a = 2$:
 
