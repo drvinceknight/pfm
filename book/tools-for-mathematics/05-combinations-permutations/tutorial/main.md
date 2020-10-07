@@ -138,7 +138,7 @@ sum(
     + permutation[1] * 10 ** 3
     + permutation[2] * 10 ** 2
     + permutation[3] * 10
-    + permutation[0]
+    + permutation[4]
     <= 23000
 )
 ```
