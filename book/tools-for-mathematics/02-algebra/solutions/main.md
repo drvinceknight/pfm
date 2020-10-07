@@ -121,7 +121,7 @@ sym.discriminant(quadratic)
  
 This is negative so we know that the equation does not have any real solutions and
 hence the graph does not cross the x-axis. 
-Since the coefficient of $x^2$ is positive it means that the whole curve is above 
+Since the coefficient of $x^2$ is positive it means that the graph is above 
 the $y=0$ line.
 
 
@@ -191,7 +191,7 @@ sym.discriminant(quadratic)
 
 This is negative so we know that the equation does not have any real solutions and
 hence the graph does not cross the x-axis. 
-Since the coefficient of $x^2$ is negative it means that the whole curve is below 
+Since the coefficient of $x^2$ is negative it means that the graph is below 
 the $y=0$ line.
 
 
