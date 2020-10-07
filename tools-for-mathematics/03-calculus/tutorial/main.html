@@ -390,16 +390,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="n">x</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
-<span class="n">expression</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="mi">12</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">x</span><span class="p">)))</span> <span class="o">/</span> <span class="p">(</span>
-    <span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="o">**</span> <span class="mi">4</span>
-<span class="p">)</span>
+<span class="n">expression</span> <span class="o">=</span> <span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="p">((</span><span class="n">b</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="o">**</span> <span class="mi">4</span><span class="p">)</span>
 <span class="n">expression</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \frac{24 x \left(a - 4 x\right) + 2 \left(a - 8 x\right) \left(b - 4 x\right)}{\left(b - 4 x\right)^{4}}\]</div>
+\[\displaystyle \frac{24 x \left(a - 4 x\right) + \left(2 a - 16 x\right) \left(b - 4 x\right)}{\left(b - 4 x\right)^{4}}\]</div>
 </div>
 </div>
 <p>now we can will use <code class="docutils literal notranslate"><span class="pre">sympy.diff</span></code> to calculate the derivative. This tool takes two inputs:</p>
@@ -420,7 +418,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \frac{16 a - 16 b - 64 x}{\left(b - 4 x\right)^{4}} + \frac{16 \left(24 x \left(a - 4 x\right) + 2 \left(a - 8 x\right) \left(b - 4 x\right)\right)}{\left(b - 4 x\right)^{5}}\]</div>
+\[\displaystyle \frac{16 a - 16 b - 64 x}{\left(b - 4 x\right)^{4}} + \frac{16 \left(24 x \left(a - 4 x\right) + \left(2 a - 16 x\right) \left(b - 4 x\right)\right)}{\left(b - 4 x\right)^{5}}\]</div>
 </div>
 </div>
 <p>Let us factorise that to make it slightly clearer:</p>
@@ -436,7 +434,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <p>We will now create the first equation, which is obtained by substituting <span class="math notranslate nohighlight">\(x=0\)</span>
-in to the value of the derivative and equating that to <span class="math notranslate nohighlight">\(\pi\)</span>:</p>
+in to the value of the derivative and equating that to <span class="math notranslate nohighlight">\(0\)</span>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_equation</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">derivative</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">}),</span> <span class="mi">0</span><span class="p">)</span>
@@ -539,7 +537,7 @@ third (optional) input to <code class="docutils literal notranslate"><span class
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \frac{24 x \left(- 4 x + \frac{2 \sqrt{2} \sqrt[4]{3}}{3}\right) + 2 \left(- 8 x + \frac{2 \sqrt{2} \sqrt[4]{3}}{3}\right) \left(- 4 x + 2 \sqrt{2} \sqrt[4]{3}\right)}{\left(- 4 x + 2 \sqrt{2} \sqrt[4]{3}\right)^{4}}\]</div>
+\[\displaystyle \frac{24 x \left(- 4 x + \frac{2 \sqrt{2} \sqrt[4]{3}}{3}\right) + \left(- 16 x + \frac{4 \sqrt{2} \sqrt[4]{3}}{3}\right) \left(- 4 x + 2 \sqrt{2} \sqrt[4]{3}\right)}{\left(- 4 x + 2 \sqrt{2} \sqrt[4]{3}\right)^{4}}\]</div>
 </div>
 </div>
 <div class="admonition attention">

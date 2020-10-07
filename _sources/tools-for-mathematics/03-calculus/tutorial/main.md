@@ -40,9 +40,7 @@ import sympy as sym
 x = sym.Symbol("x")
 a = sym.Symbol("a")
 b = sym.Symbol("b")
-expression = (2 * (12 * x * (a - 4 * x) + (a - 8 * x) * (b - 4 * x))) / (
-    (b - 4 * x) ** 4
-)
+expression = (24 * x * (a - 4 * x) + 2 * (a - 8 * x) * (b - 4 * x)) / ((b - 4 * x) ** 4)
 expression
 ```
 
@@ -67,7 +65,7 @@ sym.factor(derivative)
 ```
 
 We will now create the first equation, which is obtained by substituting $x=0$
-in to the value of the derivative and equating that to $\pi$:
+in to the value of the derivative and equating that to $0$:
 
 ```{code-cell} ipython3
 first_equation = sym.Eq(derivative.subs({x: 0}), 0)
