@@ -88,3 +88,10 @@
     - file: further-information/02-matplotlib/tutorial/main
     - file: further-information/02-matplotlib/how/main
     - file: further-information/02-matplotlib/why/main
+- part: About this book
+  chapters:
+  - file: about-this-book/main
+    sections:
+    - file: about-this-book/how-is-this-book-written/main 
+    - file: about-this-book/contributing/main
+  
