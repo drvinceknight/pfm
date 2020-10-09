@@ -4,7 +4,7 @@
 
 ## Development
 
-The book is written in files found in `nbs/book` in the [MySt markdown
+The book is written in files found in `book/` in the [MySt markdown
 format](https://myst-nb.readthedocs.io/en/latest/).
 
 To install development dependencies:
