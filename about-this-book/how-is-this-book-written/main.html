@@ -422,7 +422,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2>Jupyterbook<a class="headerlink" href="#jupyterbook" title="Permalink to this headline">¶</a></h2>
 <p>The book is written using Jupyterbook: <a class="reference external" href="https://jupyterbook.org/">https://jupyterbook.org/</a>.</p>
 <p>The source files are written in the myst format
-(<a class="reference external" href="https://myst-nb.readthedocs.io/">https://myst-nb.readthedocs.io/</a>) format which is a plain text format for
+(<a class="reference external" href="https://myst-nb.readthedocs.io/">https://myst-nb.readthedocs.io/</a>) which is a plain text format for
 Jupyter notebooks. This ensures:</p>
 <ul class="simple">
 <li><p>That the notebooks are version controlled effectively.</p></li>
@@ -436,7 +436,7 @@ using Github Actions which runs a full set of tests.</p>
 <div class="section" id="proselint">
 <h3>Proselint<a class="headerlink" href="#proselint" title="Permalink to this headline">¶</a></h3>
 <p>The proselint <a class="reference external" href="http://proselint.com">http://proselint.com</a> tool is used to check various common
-suggestions about the prose in text:</p>
+suggestions about the prose in text.</p>
 </div>
 <div class="section" id="alex">
 <h3>Alex<a class="headerlink" href="#alex" title="Permalink to this headline">¶</a></h3>
@@ -453,16 +453,16 @@ the text.</p>
 </div>
 <div class="section" id="black">
 <span id="id1"></span><h3>Black<a class="headerlink" href="#black" title="Permalink to this headline">¶</a></h3>
-<p>All code in book is checked to follow the <code class="docutils literal notranslate"><span class="pre">black</span></code> code formatter
-<a class="reference external" href="https://github.com/psf/black">https://github.com/psf/black</a> this ensure that not only PEP8 is followed but
-that specific formatting convention is used.</p>
+<p>All code in book is checked using the <code class="docutils literal notranslate"><span class="pre">black</span></code> code formatter
+<a class="reference external" href="https://github.com/psf/black">https://github.com/psf/black</a> this ensures that not only PEP8 is followed but
+that a specific consistent formatting convention is used.</p>
 <!--alex enable black-->
 </div>
 <div class="section" id="isort">
 <h3>Isort<a class="headerlink" href="#isort" title="Permalink to this headline">¶</a></h3>
-<p>All imports are sorted according using the <code class="docutils literal notranslate"><span class="pre">isort</span></code>
+<p>All imports are sorted using the <code class="docutils literal notranslate"><span class="pre">isort</span></code>
 <a class="reference external" href="https://github.com/PyCQA/isort">https://github.com/PyCQA/isort</a> tool. Similarly to <a class="reference internal" href="#black"><span class="std std-ref">Black</span></a> this ensures
-that all code follows a given condition.</p>
+that all code follows a given convention.</p>
 </div>
 <div class="section" id="nbval">
 <h3>Nbval<a class="headerlink" href="#nbval" title="Permalink to this headline">¶</a></h3>
