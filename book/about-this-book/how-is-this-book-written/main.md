@@ -19,7 +19,7 @@ kernelspec:
 The book is written using Jupyterbook: <https://jupyterbook.org/>.
 
 The source files are written in the myst format
-(<https://myst-nb.readthedocs.io/>) format which is a plain text format for
+(<https://myst-nb.readthedocs.io/>) which is a plain text format for
 Jupyter notebooks. This ensures:
 
 - That the notebooks are version controlled effectively.
@@ -33,7 +33,7 @@ using Github Actions which runs a full set of tests.
 ### Proselint
 
 The proselint <http://proselint.com> tool is used to check various common
-suggestions about the prose in text:
+suggestions about the prose in text.
 
 ### Alex
 
@@ -52,16 +52,16 @@ the text.
 (black)=
 ### Black
 
-All code in book is checked to follow the `black` code formatter
-<https://github.com/psf/black> this ensure that not only PEP8 is followed but
-that specific formatting convention is used.
+All code in book is checked using the `black` code formatter
+<https://github.com/psf/black> this ensures that not only PEP8 is followed but
+that a specific consistent formatting convention is used.
 <!--alex enable black-->
 
 ### Isort
 
-All imports are sorted according using the `isort`
+All imports are sorted using the `isort`
 <https://github.com/PyCQA/isort> tool. Similarly to {ref}`black` this ensures
-that all code follows a given condition.
+that all code follows a given convention.
 
 ### Nbval
 
