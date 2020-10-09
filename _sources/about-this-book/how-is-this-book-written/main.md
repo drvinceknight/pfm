@@ -27,8 +27,9 @@ Jupyter notebooks. This ensures:
 
 ## Continuous integration
 
-The source files of the book are hosted on GitHub and any contribution is tested
-using Github Actions which runs a full set of tests.
+The source files of the book are hosted on GitHub
+<https://github.com/drvinceknight/pfm> and any contribution is tested using
+Github Actions which runs a full set of tests.
 
 ### Proselint
 
