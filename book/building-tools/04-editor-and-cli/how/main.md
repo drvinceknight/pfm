@@ -14,4 +14,12 @@ kernelspec:
 
 # How
 
-## How to define a class 
+## How to navigate directories in the command line
+
+## How to create a new directory in the command line
+
+## How to see the contents of a director in the command line
+
+## How to run code in a file
+
+## How to use a Read–eval–print loop
