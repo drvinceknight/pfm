@@ -12,6 +12,7 @@ kernelspec:
   name: python3
 ---
 
+(algebra_tutorial)=
 # Tutorial
 
 To demonstrate the ways in which we can use a computer to assist with Algebra we
