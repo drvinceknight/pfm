@@ -14,5 +14,8 @@ kernelspec:
 
 # Further information
 
-## How to pronounce the double underscore?
+## Why do we need to use the `print` function with an editor?
 
+## Can I not use a Python plugin to run my code from inside my editor?
+
+## Can I open a Jupyter notebook inside vscode?
