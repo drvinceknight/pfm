@@ -19,7 +19,8 @@ kernelspec:
 1. Navigate to <https://www.anaconda.com/products/individual>.
 2. Identify and download the version of Python 3 for your operating system
    (Windows, Mac OSX, Linux).
-3. Run the installer.
+3. Run the installer. I recommend using the default choices during the
+   installation process.
 
 ```{warning}
 If you have already used Python it is still recommended that you use the
