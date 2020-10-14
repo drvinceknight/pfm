@@ -98,6 +98,7 @@ Here is a brief overview of the syntax for arithmetic operations:
 - `\\(a\times b\\)` gives $a\times b$
 - `\\(a/b\\)` gives $a/b$
 - `\\(\frac{a}{b}\\)` gives $\frac{a}{b}$
+- `\\(a ^ b\\)` gives $a ^ b$
 
 The `\\(<expression>\\)` delimiters create what is called an "inline" mathematics. You can change the brackets to `\\[<expression>\\]` to give "displayed mathematics".
 
