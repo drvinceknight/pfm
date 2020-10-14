@@ -66,7 +66,9 @@ In later chapters we will see what the specific instructions are to carry out mo
 
 ## Write markdown
 
-To write markdown click no a cell and change the type to `Markdown`, you can do this by click on `Cell`, `Cell Type` or by using the scroll wheel in the menu bar.
+To write markdown click on a cell and change the type to `Markdown`, you can do
+this by click on `Cell`, `Cell Type` or by using the scroll wheel in the menu
+bar.
 
 Markdown is a lightweight "mark up" language that allows you to write and
 include various types of formatting which include:
