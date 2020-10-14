@@ -23,3 +23,5 @@ kernelspec:
 ## How to run code in a file
 
 ## How to use a Read–eval–print loop
+
+## How to install VScode plugins
