@@ -67,13 +67,13 @@ Click the toggle ("Click to Show") to see a demo of this:
 
 > 3. Write a markdown cell with the following and view the rendered version:
 
-    ```md
-    # Euler's equation
+```md
+# Euler's equation
 
-    \\[
-     e ^ {i\pi} = -1
-    \\]
-    ```
+\\[
+ e ^ {i\pi} = -1
+\\]
+```
 
 Click the toggle ("Click to Show") to see a demo of this:
 
