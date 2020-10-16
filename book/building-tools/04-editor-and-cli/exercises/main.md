@@ -14,3 +14,12 @@ kernelspec:
 
 # Exercises
 
+Create a new python file and save it in a directory.
+
+Solve the following mathematical problems using a script.
+
+Use a read-eval-print-loop
+
+Install the python plugin.
+
+Install and write markdown
