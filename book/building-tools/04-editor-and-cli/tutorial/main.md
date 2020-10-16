@@ -220,16 +220,16 @@ name: fig:saving_file_in_vscode
 Saving `algebra.py` in VS code.
 ```
 
-VScode now recognises the Python language and adds syntax coloring. It also
+VScode now recognises the Python language and adds syntax colouring. It also
 suggests a plugin specific for the Python language. There is more information
 about plugins in the rest of this chapter.
 
-```{figure} ./img/syntax_coloring_and_plugin_suggestion/main.png
+```{figure} ./img/syntax_colouring_and_plugin_suggestion/main.png
 ---
 width: 75%
-name: fig:syntax_coloring_and_plugin_suggestion
+name: fig:syntax_colouring_and_plugin_suggestion
 ---
-Syntax coloring and plugin suggestion for the now recognised Python file.
+Syntax colouring and plugin suggestion for the now recognised Python file.
 ```
 
 All we have done so far is write the code. We now need to tell Python to run it.

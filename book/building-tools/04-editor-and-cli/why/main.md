@@ -27,14 +27,14 @@ to display the code which is what the `print` statement does.
 
 When using the Python plugin buttons become available that let you run code
 without using the command line. If this helps you with your programming than I
-encourage you to use it. However, tt is good to be comfortable using a
+encourage you to use it. However, It is good to be comfortable using a
 command line tool to fully understand what the underlying process. Furthermore,
 at times when debugging sometimes the user interface might be at fault.
 
 ## Can I open a Jupyter notebook inside vscode?
 
 When using the Python plugin it is actually possible to use Jupyter notebooks
-from within vscode.
+from within VScode.
 
 The notebooks will not look exactly the same but have the same functionality.
 
