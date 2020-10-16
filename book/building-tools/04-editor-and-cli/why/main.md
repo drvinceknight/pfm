@@ -21,3 +21,5 @@ kernelspec:
 ## Can I open a Jupyter notebook inside vscode?
 
 ## What is the difference between an IDE and an editor?
+
+## Why can I not use ``\\(`` and ``\\)`` for markdown in VScode.
