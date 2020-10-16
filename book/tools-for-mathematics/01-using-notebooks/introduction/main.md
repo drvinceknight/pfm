@@ -12,6 +12,7 @@ kernelspec:
   name: python3
 ---
 
+(using_notebooks)=
 # Using notebooks
 
 ## Introduction
