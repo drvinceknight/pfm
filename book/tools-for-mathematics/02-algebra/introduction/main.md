@@ -17,7 +17,7 @@ kernelspec:
 ## Introduction
 
 As of 2020, the A-level syllabus includes Algebra which
-https://www.cambridgeinternational.org/Images/415060-2020-2022-syllabus.pdf
+<https://www.cambridgeinternational.org/Images/415060-2020-2022-syllabus.pdf>
 describes as:
 
 > Algebra: this is an essential tool which supports and expresses mathematical

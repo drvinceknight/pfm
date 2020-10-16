@@ -86,7 +86,7 @@ The syntax is relatively straightforward and the following is a good guide:
 
 ## Write basic LaTeX
 
-Jupyter notebooks allow for markdown cells to not only include markdown but also include mathematics using another "mark up" language called $\LaTeX$. In the second part of the course we will see how to write $\LaTeX$ more formally (usually it is not written inside of a Jupyter notebook).
+Jupyter notebooks allow for markdown cells to not only include markdown but also include mathematics using another "mark up" language called $\LaTeX$.
 
 Here is a brief overview of the syntax for arithmetic operations:
 
@@ -156,7 +156,7 @@ $$
 
 **Note** when writing $\LaTeX$ in jupyter notebooks we need the double slash
 `\\` but when writing $\LaTeX$ in its native environment a single quote is
-the correct syntax. We will see this in the second part of the course.
+the correct syntax.
 
 ## Save the output in a different format
 

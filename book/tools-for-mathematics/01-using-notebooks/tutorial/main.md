@@ -29,7 +29,7 @@ Anaconda distribution. An explanation for this is available later.
 
 ## Starting a Jupyter notebook server
 
-We are going to use **Jupyter notebooks** for the first part of this course.
+We are going to use **Jupyter notebooks** for the first part of this book.
 This interface to Python works inside your web browser but does not require an
 internet connect.
 
@@ -49,7 +49,7 @@ In there type:
 and then press `Enter` on your keyboard.
 
 ```{tip}
-Throughout this course, when there are commands to be typed in a command line
+Throughout this book, when there are commands to be typed in a command line
 tool I will prefix them with a `$`. Do not type the `$`.
 ```
 
@@ -121,7 +121,7 @@ should see a `introduction.ipynb` file.
 Let us rearrange things.
 
 Find a location on your computer where you want to keep the files for this
-course, using your file browser:
+book, using your file browser:
 
 1. Create a new directory called `cfm` (short for "Computer for Mathematics");
 2. Inside that directory create a new directory called `nbs` (short for
