@@ -108,6 +108,7 @@ We will learn more about $\LaTeX$ in the later part of this course but for
 now we only need to know that it we can use $\LaTeX$ to write an instruction
 for Jupyter to display mathematics.
 
+(why_do_we_use_brackets_instead_of_dollars_for_latex)=
 ## Why do we use `\\(` and `\\)` instead of `$` for LaTeX?
 
 You will see in some places that `$` can be used as a delimiter for LaTeX. This
