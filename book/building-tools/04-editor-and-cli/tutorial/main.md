@@ -52,6 +52,11 @@ $ ls
 
 ````
 
+```{tip}
+Throughout this book, when there are commands to be typed in a command line
+tool I will prefix them with a `$`. Do not type the `$`.
+```
+
 This is similar to using your file explorer to view the contents in a given
 directory. Similarly to the way we click on a directory in the file explorer we
 can navigate to a directory in the command line.
@@ -272,7 +277,7 @@ $ ls
 Now we will run the python code in that script:
 
 ```bash
-python algebra.py
+$ python algebra.py
 ```
 
 When doing that you should see the following output:

@@ -48,7 +48,7 @@ In there type:
 and then press `Enter` on your keyboard.
 
 ```{tip}
-Throughout this course, when there are commands to be typed in a command line
+Throughout this book, when there are commands to be typed in a command line
 tool I will prefix them with a `$`. Do not type the `$`.
 ```
 

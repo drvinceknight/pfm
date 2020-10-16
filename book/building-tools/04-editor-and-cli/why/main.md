@@ -16,6 +16,8 @@ kernelspec:
 
 ## Why do we need to use the `print` function with an editor?
 
-## Can I not use a Python plugin to run my code from inside my editor?
+## Can I use a Python plugin to run my code from inside my editor?
 
 ## Can I open a Jupyter notebook inside vscode?
+
+## What is the difference between an IDE and an editor?
