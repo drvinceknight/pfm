@@ -76,7 +76,7 @@ sym.solveset(equation, x)
 > $4 x ^3 + 7x - 24 = 1$:
 
 ```{code-cell} ipython3
-equation = sym.Eq(4 * x ** 3 + 7 * x - 24 * x, 1)
+equation = sym.Eq(4 * x ** 3 + 7 * x - 24, 1)
 sym.solveset(equation, x)
 ```
 
