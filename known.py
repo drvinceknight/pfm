@@ -10,6 +10,7 @@ words = set(
         "Combinatorics",
         "Df",
         "Eq",
+        "Esc",
         "Eval",
         "Galton",
         "Github",
