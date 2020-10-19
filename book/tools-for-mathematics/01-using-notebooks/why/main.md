@@ -82,6 +82,14 @@ With Jupyter notebooks no default is set by the operating system as the
 application that opens it is in fact a local web server in your browser. As such
 you do not have a choice and need to open it in the Jupyter interface.
 
+## Where can I find keyboard shortcuts for using Jupyter
+
+In a notebook if you go to the menu bar and click on `Help` followed by
+`Keyboard Shortcuts` you will find a number of helpful keyboard shortcuts.
+
+For example, when on a cell pressing `Esc` followed by `m` will turn the cell in
+to a markdown cell.
+
 ## What is markdown?
 
 As described here <https://www.markdownguide.org/getting-started/>:
