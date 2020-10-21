@@ -40,7 +40,7 @@ sym.integrate(expression, x)
 > $f(x) = x ^{\frac{1}{3}}$
 
 ```{code-cell} ipython3
-expression = sym.S(1) / 3
+expression = x ** (sym.S(1) / 3)
 sym.diff(expression, x)
 ```
 
