@@ -140,7 +140,8 @@ and asking `sympy` to solve it:
 sympy.solveset(equation)
 ```
 
-Indeed the only solutions are imaginary numbers: the graph of $f(x)$ is thus a convex parabola.
+Indeed the only solutions are imaginary numbers: this confirms that the graph of
+$f(x)$ is a convex parabola that is above the $y=0$ line.
 
 Let us know complete the square so that we can write:
 
