@@ -469,14 +469,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expression</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expression</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span>
 <span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">expression</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle 0\]</div>
+\[\displaystyle \frac{1}{3 x^{\frac{2}{3}}}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -487,7 +487,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle 0\]</div>
+\[\displaystyle - \frac{2}{9 x^{\frac{5}{3}}}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -498,7 +498,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \frac{x}{3}\]</div>
+\[\displaystyle \frac{3 x^{\frac{4}{3}}}{4}\]</div>
 </div>
 </div>
 <blockquote>
