@@ -70,7 +70,7 @@ Four functions were created with this class:
 
 - `__init__`: as this is surrounded by `__` (two underscores) this is a magic
   function that is run when we create an instance of our class.
-- `root`: this returns the two real valued roots if the discriminant is
+- `get_roots`: this returns the two real valued roots if the discriminant is
   positive.
 - `__add__`: another magic function that is run when the `+` operator is used.
 - `__repr__`: another magic function that gives the string representation of the
@@ -107,7 +107,7 @@ h
 ```
 
 We can now iterate over our quadratics and find the roots. This is using the
-`get_root` function in the background:
+`get_roots` function in the background:
 
 ```{code-cell} ipython3
 :tags: [nbval-ignore-output]
