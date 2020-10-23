@@ -433,7 +433,7 @@ class.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">__init__</span></code>: as this is surrounded by <code class="docutils literal notranslate"><span class="pre">__</span></code> (two underscores) this is a magic
 function that is run when we create an instance of our class.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">root</span></code>: this returns the two real valued roots if the discriminant is
+<li><p><code class="docutils literal notranslate"><span class="pre">get_roots</span></code>: this returns the two real valued roots if the discriminant is
 positive.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">__add__</span></code>: another magic function that is run when the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator is used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">__repr__</span></code>: another magic function that gives the string representation of the
@@ -493,7 +493,7 @@ function in the background:</p>
 </div>
 </div>
 <p>We can now iterate over our quadratics and find the roots. This is using the
-<code class="docutils literal notranslate"><span class="pre">get_root</span></code> function in the background:</p>
+<code class="docutils literal notranslate"><span class="pre">get_roots</span></code> function in the background:</p>
 <div class="cell tag_nbval-ignore-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roots</span> <span class="o">=</span> <span class="p">[</span><span class="n">quadratic</span><span class="o">.</span><span class="n">get_roots</span><span class="p">()</span> <span class="k">for</span> <span class="n">quadratic</span> <span class="ow">in</span> <span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">h</span><span class="p">)]</span>
