@@ -132,7 +132,7 @@ cubic.subs({x: 0})
 This gives $c_2=10$. We substitute that back in to our expression for the cubic:
 
 ```{code-cell} ipython3
-cubic = cubic.subs({c1: 10})
+cubic = cubic.subs({c2: 10})
 cubic
 ```
 
@@ -142,10 +142,10 @@ and now substitute $x=1$:
 cubic.subs({x: 1})
 ```
 
-which gives $c_2=0$ which we substitute back in to our expression for the cubic:
+which gives $c_1=-13$ which we substitute back in to our expression for the cubic:
 
 ```{code-cell} ipython3
-cubic = cubic.subs({c2: 0})
+cubic = cubic.subs({c1: -13})
 cubic
 ```
 
@@ -221,13 +221,13 @@ second_derivative = second_derivative.subs({b: b_value})
 second_derivative.subs({x: sym.S(1) / 2})
 ```
 
-This is positive so it is a local minimum.
+This is negative so it is a local maxima.
 
 ```{code-cell} ipython3
 second_derivative.subs({x: 2})
 ```
 
-This is negative so it is a local maximum.
+This is positive so it is a local minima.
 
 ## Question 5
 
