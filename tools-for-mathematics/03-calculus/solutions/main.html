@@ -655,14 +655,14 @@ constant:</p>
 <p>This gives <span class="math notranslate nohighlight">\(c_2=10\)</span>. We substitute that back in to our expression for the cubic:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cubic</span> <span class="o">=</span> <span class="n">cubic</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">c1</span><span class="p">:</span> <span class="mi">10</span><span class="p">})</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cubic</span> <span class="o">=</span> <span class="n">cubic</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">c2</span><span class="p">:</span> <span class="mi">10</span><span class="p">})</span>
 <span class="n">cubic</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle c_{2} + x^{3} + 2 x^{2} + 10 x\]</div>
+\[\displaystyle c_{1} x + x^{3} + 2 x^{2} + 10\]</div>
 </div>
 </div>
 <p>and now substitute <span class="math notranslate nohighlight">\(x=1\)</span>:</p>
@@ -674,20 +674,20 @@ constant:</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle c_{2} + 13\]</div>
+\[\displaystyle c_{1} + 13\]</div>
 </div>
 </div>
-<p>which gives <span class="math notranslate nohighlight">\(c_2=0\)</span> which we substitute back in to our expression for the cubic:</p>
+<p>which gives <span class="math notranslate nohighlight">\(c_1=-13\)</span> which we substitute back in to our expression for the cubic:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cubic</span> <span class="o">=</span> <span class="n">cubic</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">c2</span><span class="p">:</span> <span class="mi">0</span><span class="p">})</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cubic</span> <span class="o">=</span> <span class="n">cubic</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">c1</span><span class="p">:</span> <span class="o">-</span><span class="mi">13</span><span class="p">})</span>
 <span class="n">cubic</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle x^{3} + 2 x^{2} + 10 x\]</div>
+\[\displaystyle x^{3} + 2 x^{2} - 13 x + 10\]</div>
 </div>
 </div>
 <blockquote>
@@ -703,7 +703,7 @@ constant:</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \left\{- \frac{2}{3} - \frac{\sqrt{26} i}{3}, - \frac{2}{3} + \frac{\sqrt{26} i}{3}\right\}\]</div>
+\[\displaystyle \left\{- \frac{2}{3} + \frac{\sqrt{43}}{3}, - \frac{\sqrt{43}}{3} - \frac{2}{3}\right\}\]</div>
 </div>
 </div>
 <p>We see that there are no stationary points in this particular case (the roots of
@@ -813,7 +813,7 @@ information to find <span class="math notranslate nohighlight">\(b\)</span>.</p>
 \[\displaystyle -3\]</div>
 </div>
 </div>
-<p>This is positive so it is a local minimum.</p>
+<p>This is negative so it is a local maxima.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">second_derivative</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">x</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
@@ -825,7 +825,7 @@ information to find <span class="math notranslate nohighlight">\(b\)</span>.</p>
 \[\displaystyle 3\]</div>
 </div>
 </div>
-<p>This is negative so it is a local maximum.</p>
+<p>This is positive so it is a local minima.</p>
 </div>
 <div class="section" id="question-5">
 <h2>Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">¶</a></h2>
