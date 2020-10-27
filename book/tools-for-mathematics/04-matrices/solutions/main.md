@@ -84,7 +84,8 @@ A + B
 > `4`. $500\begin{pmatrix} 1 / 5 & 1\\1 & 1\end{pmatrix}\begin{pmatrix} 1 / \pi & 2\pi\\3/\pi & 1\end{pmatrix}$
 
 ```{code-cell} ipython3
-A @ B
+C = sym.Matrix([[1 / sym.pi, 2 * sym.pi], [3 / sym.pi, 1]])
+A @ C
 ```
 
 ## Question 3
