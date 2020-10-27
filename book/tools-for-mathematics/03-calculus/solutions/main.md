@@ -238,7 +238,8 @@ This is positive so it is a local minima.
 
 ```{code-cell} ipython3
 f = -(x ** 2) + 4 * x + 4
-turning_points = sym.solveset(f, x)
+derivative = sym.diff(f, x)
+turning_points = sym.solveset(derivative, x)
 ```
 
 > `2`. Create variable `intersection_points` which has value of the points where
