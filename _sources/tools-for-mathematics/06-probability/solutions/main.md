@@ -290,7 +290,9 @@ sum(not is_late for travel_method, is_late in samples) / number_of_repetitions
 > `3`. Given that an individual is late, approximate the probability that they did not travel on foot.
 
 ```{code-cell} ipython3
-samples_with_late = [(travel_method, is_late) for travel_method, is_late in samples]
+samples_with_late = [
+    (travel_method, is_late) for travel_method, is_late in samples if is_late is True
+]
 number_of_samples = len(samples_with_late)
 sum(
     travel_method != "foot" for travel_method, is_late in samples_with_late
