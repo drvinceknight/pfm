@@ -85,7 +85,7 @@ b = sympy.Symbol("b")
 sympy.factor(a ** 2 - b ** 2)
 ```
 
-## Why do I sometimes see `from sympy import *`?
+## Why do I sometimes see `from sympy import *`?
 
 There a number of resources available from which you can learn to use `sympy`. In
 some instances you will not see `import sympy` but instead you will see `from
