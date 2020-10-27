@@ -142,10 +142,10 @@ and now substitute $x=1$:
 cubic.subs({x: 1})
 ```
 
-which gives $c_1=-13$ which we substitute back in to our expression for the cubic:
+which gives $c_1=0$ which we substitute back in to our expression for the cubic:
 
 ```{code-cell} ipython3
-cubic = cubic.subs({c1: -13})
+cubic = cubic.subs({c1: 0})
 cubic
 ```
 
