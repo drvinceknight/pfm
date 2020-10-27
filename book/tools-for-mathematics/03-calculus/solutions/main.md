@@ -158,9 +158,6 @@ stationary_points = sym.solveset(sym.diff(cubic, x), x)
 stationary_points
 ```
 
-We see that there are no stationary points in this particular case (the roots of
-the derivative all have non zero imaginary parts).
-
 ## Question 4
 
 > `4`. Consider the function $f(x)=\frac{2}{3}x ^ 3 + b x ^ 2 + 2 x + 3$, where
