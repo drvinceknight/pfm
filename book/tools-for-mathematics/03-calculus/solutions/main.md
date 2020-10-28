@@ -67,7 +67,7 @@ sym.diff(expression, x, 2)
 sym.integrate(expression, x)
 ```
 
-> $f(x) = 3  x ^ 3 + 6 \sqrt{x} + 3
+> $f(x) = 3  x ^ 3 + 6 \sqrt{x} + 3$
 
 ```{code-cell} ipython3
 expression = 3 * x ** 3 + 6 * sym.sqrt(x) + 3
