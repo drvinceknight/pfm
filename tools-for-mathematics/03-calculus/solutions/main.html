@@ -706,6 +706,31 @@ constant:</p>
 \[\displaystyle \left\{- \frac{4}{3}, 0\right\}\]</div>
 </div>
 </div>
+<p>We determine the nature of these turning points by considering the sign of <span class="math notranslate nohighlight">\(\frac{d^2f}{dx^2}\)</span> at each point.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">second_derivative</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">x</span><span class="p">:</span> <span class="o">-</span><span class="mi">4</span> <span class="o">/</span> <span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">3</span><span class="p">)})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle -4\]</div>
+</div>
+</div>
+<p>This is negative, so it is a local maximum.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">second_derivative</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 4\]</div>
+</div>
+</div>
+<p>This is positive, so it is a local minimum.</p>
 </div>
 <div class="section" id="question-4">
 <h2>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h2>

@@ -158,6 +158,20 @@ stationary_points = sym.solveset(sym.diff(cubic, x), x)
 stationary_points
 ```
 
+We determine the nature of these turning points by considering the sign of $\frac{d^2f}{dx^2}$ at each point.
+
+```{code-cell} ipython3
+second_derivative.subs({x: -4 / sym.S(3)})
+```
+
+This is negative, so it is a local maximum.
+
+```{code-cell} ipython3
+second_derivative.subs({x: 0})
+```
+
+This is positive, so it is a local minimum.
+
 ## Question 4
 
 > `4`. Consider the function $f(x)=\frac{2}{3}x ^ 3 + b x ^ 2 + 2 x + 3$, where
