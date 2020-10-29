@@ -245,6 +245,8 @@ completed_square
 
 The highest value of $f(x)$ is for $x=4$ which gives: $f(4)=-49$ as expected.
 
+## Question 6
+
 `6`. Consider the function $f(x) = x^ 2 + a x + b$.
 
 > Given that $f(0) = 0$ and $f(3) = 0$ obtain the values of $a$ and $b$.
