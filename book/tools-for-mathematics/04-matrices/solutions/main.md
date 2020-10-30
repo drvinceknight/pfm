@@ -113,7 +113,7 @@ sym.solveset(determinant, a)
 > $$
 \begin{array}{l}
           a x + 4y + 2z= 3a\\
-           x + a  = 1\\
+           x + a y  = 1\\
             x + 2y + z = 3\\
       \end{array}
 $$
