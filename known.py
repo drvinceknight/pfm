@@ -82,6 +82,7 @@ words = set(
         "formatter",
         "functools",
         "galton",
+        "gif",
         "github",
         "hange",
         "html",
@@ -262,6 +263,9 @@ prose_suggestions_to_ignore = {
         ("typography.symbols.curly_quotes",)
     ),
     "book/further-information/02-matplotlib/why/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/further-information/03-kernel/tutorial/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
 }

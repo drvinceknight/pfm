@@ -55,7 +55,7 @@ e_to_the_pi = sym.exp(sym.pi)
 pi_to_the_e = sym.pi ** sym.exp(1)
 ```
 
-But then running the second cell:
+Running the second cell:
 
 ```python
 max(e_to_the_pi, pi_to_the_e)
@@ -108,8 +108,8 @@ e_to_the_pi = sym.exp(sym.pi)
 pi_to_the_e = sym.pi ** sym.exp(1)
 ```
 
-**However** the second cell was run with an error (not `max = (...)` as opposed
-to `max(...)`):
+**However** the second cell was run with an error (not `max = (…)` as opposed
+to `max(…)`):
 
 ```python
 max = (e_to_the_pi, pi_to_the_e)
