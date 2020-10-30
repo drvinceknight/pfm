@@ -135,6 +135,8 @@ and so it has to be "escaped" with a second `\`.
 
 ## Other resources for LaTeX syntax.
 
+This cheat sheet: <http://tug.ctan.org/info/undergradmath/undergradmath.pdf>
+
 This web page is my recommended set of resources for learning LaTeX:
 <https://vknight.org/tex/>.
 
