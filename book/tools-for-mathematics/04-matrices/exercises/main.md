@@ -33,7 +33,7 @@ kernelspec:
     3. State, giving a brief reason in each case, whether the simultaneous equations
 
         $$
-            \begin{array}
+            \begin{array}{l}
                 a x + 4y + 2z= 3a\\
                 x + a  = 1\\
                 x + 2y + z = 3\\
@@ -48,7 +48,7 @@ kernelspec:
     2. Hence of otherwise, solve the equations:
 
     $$
-    \begin{array}
+    \begin{array}{l}
         a x + 2y = 3\\
         3x + y + 2z = 4\\
         - y + z = 1\\
