@@ -94,6 +94,11 @@
     - file: further-information/02-matplotlib/tutorial/main
     - file: further-information/02-matplotlib/how/main
     - file: further-information/02-matplotlib/why/main
+  - file: further-information/03-kernel/introduction/main
+    sections:
+    - file: further-information/03-kernel/tutorial/main
+    - file: further-information/03-kernel/how/main
+    - file: further-information/03-kernel/why/main
 - part: About this book
   chapters:
   - file: about-this-book/main
