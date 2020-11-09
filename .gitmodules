@@ -1,0 +1,3 @@
+[submodule "book/building-tools/05-modularisation/tutorial/assets/sal"]
+	path = book/building-tools/05-modularisation/tutorial/assets/sal
+	url = https://github.com/drvinceknight/sal.git
