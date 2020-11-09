@@ -196,6 +196,12 @@ prose_exceptions = {
             r"> `4`. The matrix $D$ is given by $D = \begin{pmatrix} a & 2 & 0\\ 3 & 1 & 2\\ 0 & -1 & 1\end{pmatrix}$ where $a\ne 2$.",
         )
     ),
+    "book/building-tools/05-modularisation/why/main.md": set(
+        (
+            r"Code should be obvious",
+            r"easily and make the change quickly without",
+        )
+    ),
     "book/about-this-book/how-is-this-book-written/main.md": set(
         (
             r"black",
@@ -262,6 +268,18 @@ prose_suggestions_to_ignore = {
         ("typography.symbols.curly_quotes",)
     ),
     "book/building-tools/04-editor-and-cli/how/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/building-tools/05-modularisation/tutorial/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/building-tools/05-modularisation/how/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/building-tools/05-modularisation/exercises/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/building-tools/05-modularisation/why/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
     "book/further-information/01-numpy/tutorial/main.md": set(

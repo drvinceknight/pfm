@@ -20,9 +20,13 @@ kernelspec:
 Best practice when writing code is to break up code in to modular parts. One
 guiding principle described in  {cite}`fowler2018refactoring`:
 
+<!--alex disable obvious-->
+<!--alex disable easy-->
 > "Code should be obvious. When someone needs to make a change, they should be
 > able to find the code to be changed easily and make the change quickly without
 > introducing any errors."
+<!--alex enable easy-->
+<!--alex enable obvious-->
 
 Whilst this guiding principle is ambiguous and all concepts related to clean
 code writing and refactoring are not things that can be covered in this book one

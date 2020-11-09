@@ -65,7 +65,7 @@ def add_tip_and_get_bill_share(total, tip_proportion, number_of_payers):
 We can check that this works:
 
 ```{code-cell} ipython3
-add_tip_and_get_bill_share(total=100, tip_proportion=.2, number_of_payers=6)
+add_tip_and_get_bill_share(total=100, tip_proportion=0.2, number_of_payers=6)
 ```
 
 An improvement of the above would be:
@@ -82,6 +82,7 @@ def add_tip(total, tip_proportion):
     tip_amount = tip_proportion * total
     return total + tip_amount
 
+
 def get_bill_share(total, number_of_payers):
     """
     This returns the share of a bill by dividing the total by the number of
@@ -94,7 +95,7 @@ Then to use the above we would be able to explicitly write out each step which
 ensures that there is clarity in what is being done:
 
 ```{code-cell} ipython3
-total = add_tip(total=100, tip_proportion=.2)
+total = add_tip(total=100, tip_proportion=0.2)
 get_bill_share(total=total, number_of_payers=6)
 ```
 

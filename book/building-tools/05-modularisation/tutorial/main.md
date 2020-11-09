@@ -172,8 +172,8 @@ $$
 
 where \mathbb{1} is a column of 1s.
 
-To be able to code this we want to write a function to compute $t$
-but this requires "extracting" $Q$ from $P$:
+To be able to code this we want to write a function to compute $t$ but this 
+requires "extracting" $Q$ from $P$:
 
 ```{code-cell} ipython3
 def compute_t(P):
@@ -213,6 +213,7 @@ def extract_Q(P):
     indices_with_1_in_diagonal = np.where(P.diagonal() != 1)
     Q = P[indices_with_1_in_diagonal.reshape(-1, 1), indices_with_1_in_diagonal]
     return Q
+
 
 def compute_N(Q):
     """
@@ -275,7 +276,7 @@ snakes_and_ladders/
 ```
 
 We can now use all of the code we have written in the notebook, first we can
-import the `absorption.py` functions just like any other python library:
+import the functions in `absorption.py` like any other python library:
 
 ```{code-cell} ipython3
 import absorption
