@@ -105,7 +105,7 @@
     - file: further-information/03-kernel/tutorial/main
     - file: further-information/03-kernel/how/main
     - file: further-information/03-kernel/why/main
-  - file: bibliography
+  - file: zbibliography
 - part: About this book
   chapters:
   - file: about-this-book/main
