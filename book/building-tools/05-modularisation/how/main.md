@@ -54,7 +54,7 @@ applying a tip, the following function will do this:
 ```{code-cell} ipython3
 def add_tip_and_get_bill_share(total, tip_proportion, number_of_payers):
     """
-    This returns the share of a bill to be paid by `number_of_payants`
+    This returns the share of a bill to be paid by `number_of_payers`
     ensuring the total paid includes a tip.
     """
     tip_amount = tip_proportion * total

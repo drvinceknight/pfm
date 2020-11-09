@@ -178,7 +178,7 @@ but this requires "extracting" $Q$ from $P$:
 ```{code-cell} ipython3
 def compute_t(P):
     """
-    For an aborbing Markov chain with transition rate matrix this computes the
+    For an absorbing Markov chain with transition rate matrix this computes the
     vector t which gives the expected number of steps until absorption.
 
     Note that this does not assume P is in the required format.
@@ -203,7 +203,7 @@ up that function in to three separate functions:
 ```{code-cell} ipython3
 def extract_Q(P):
     """
-    For an aborbing Markov chain with transition rate matrix P this computes the
+    For an absorbing Markov chain with transition rate matrix P this computes the
     matrix Q.
 
     Note that this does not assume that P is in the required format. It
@@ -230,7 +230,7 @@ This now allows us to redefine `compute_t` in a simpler way:
 ```{code-cell} ipython3
 def compute_t(P):
     """
-    For an aborbing Markov chain with transition rate matrix this computes the
+    For an absorbing Markov chain with transition rate matrix this computes the
     vector t which gives the expected number of steps until absorption.
 
     Note that this does not assume P is in the required format.
@@ -259,7 +259,7 @@ The three modularised functions in a python file.
 
 We will now use everything we have done so far:
 
-- Downlaod, and extract the data available at 
+- Download, and extract the data available at 
   [10.5281/zenodo.4236275](https://zenodo.org/record/4236275). Put the
   `main.csv` file in the `snakes_and_ladders` directory
 - Open a Jupyter notebook and call it `main.ipynb` also in the

@@ -24,7 +24,7 @@ kernelspec:
    2. $P = \begin{pmatrix}1/2 & 1/4 & 1/4\\ 1/3 & 1/3 & 1/3  \\0 & 0 & 1 \end{pmatrix}$
    3. $P = \begin{pmatrix}1 & 0 \\ 1/2 & 1/2 \end{pmatrix}$
    4. $P = \begin{pmatrix}1/2 & 1/4 & 1/4\\ 1/3 & 1/3 & 1/3  \\1/5 & 0 & 4/5 \end{pmatrix}$
-2. Modularize the following code by converting it to 2 functions:
+2. Modularise the following code by converting it to 2 functions:
    ```
    def sample_experiment(bag):
        """
@@ -50,7 +50,7 @@ kernelspec:
            coin = "Tails"
        return selected_token, coin
    ```
-3. Modularize the following code by converting it to 3 functions:
+3. Modularise the following code by converting it to 3 functions:
    ```
    import math
 
@@ -81,5 +81,5 @@ kernelspec:
    `statistics.median` and `statistics.variance`. Note: the `statistics` library
    is part of the standard python library.
 5. Write a `calculus.py` file with tools to be able to find and qualify (using
-   the second derivate test) the inflection
+   the second derivative test) the inflection
    points of a given quadratic (assumed to be a Sympy expression).
