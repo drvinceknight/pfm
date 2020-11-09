@@ -25,6 +25,10 @@ jobs:
       with:
         python-version: 3.8
 
+    - name: Clone submodules
+      run: |
+        git submodule update --init --recursive
+
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
