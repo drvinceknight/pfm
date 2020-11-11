@@ -5,7 +5,7 @@ logo: "./img/cover/main.png"
 parse:
   myst_extended_syntax: true
 
-exclude_patterns: ["*.bcp.ipynb", "**/*.bcp.ipynb", "**/README.md"]
+exclude_patterns: ["*.bcp.ipynb", "**/*.bcp.ipynb", "**/README.md", "**/documentation_in_vscode/*"]
 
 latex:
   latex_documents:

@@ -35,7 +35,7 @@ def compute_N(Q):
 
 def compute_t(P):
     """
-    For an aborbing Markov chain with transition rate matrix this computes the
+    For an absorbing Markov chain with transition rate matrix this computes the
     vector t which gives the expected number of steps until absorption.
 
     Note that this does not assume P is in the required format.
