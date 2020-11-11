@@ -837,7 +837,7 @@ objects in different ways: <code class="docutils literal notranslate"><span clas
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;itertools.permutations at 0x7f825a7a48b0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;itertools.permutations at 0x7fcb7dd88ae0&gt;
 </pre></div>
 </div>
 </div>
@@ -1048,7 +1048,7 @@ there are then 4 choices for the remaining digits:</p>
 </div>
 </div>
 </div>
-<p>To compute the number of digits that are less than or equal to 2300 we compute a
+<p>To compute the number of digits that are less than or equal to 23000 we compute a
 similar sum except we use the <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> operator and also convert the tuple of digits
 to a number in base 10:</p>
 <div class="math notranslate nohighlight">
@@ -1058,7 +1058,7 @@ to a number in base 10:</p>
 <p>Thus we are going to compute the following sum:</p>
 <div class="math notranslate nohighlight">
 \[
-    \sum_{\pi \in \Pi \text{ if }\pi_1 10 ^ 4 + \pi_2 10 ^ 3 + \pi_3 10 ^ 2 + \pi_4 10 + \pi_5 \leq 2300} 1
+    \sum_{\pi \in \Pi \text{ if }\pi_1 10 ^ 4 + \pi_2 10 ^ 3 + \pi_3 10 ^ 2 + \pi_4 10 + \pi_5 \leq 23000} 1
 \]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1081,7 +1081,7 @@ to a number in base 10:</p>
 </div>
 </div>
 </div>
-<p>We can again confirm this theoretically, for a given tuple to be less than 2300
+<p>We can again confirm this theoretically, for a given tuple to be less than 23000
 that is only possible if the first digit is 1 or 2:</p>
 <ul class="simple">
 <li><p>If it is 1 then any of the other <span class="math notranslate nohighlight">\(4!\)</span> permutations of the other digits is
