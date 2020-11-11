@@ -286,8 +286,10 @@ prose_suggestions_to_ignore = {
         ("typography.symbols.curly_quotes",)
     ),
     "book/building-tools/06-documentation/tutorial/main.md": set(
-        ("typography.symbols.curly_quotes",
-         "typography.symbols.sentence_spacing",)
+        (
+            "typography.symbols.curly_quotes",
+            "typography.symbols.sentence_spacing",
+        )
     ),
     "book/building-tools/06-documentation/tutorial/img/documentation_in_vscode/main.md": set(
         ("typography.symbols.sentence_spacing",)
