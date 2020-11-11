@@ -46,12 +46,11 @@ of the software.
 ```
 
 ````md
-
 ## Tutorial
 
 In this tutorial we will see how to use `absorption` to study an absorbing
 Markov chain. For some background information on absorbing Markov chains we
-recoomend: https://en.wikipedia.org/wiki/Absorbing_Markov_chain
+recommend: <https://en.wikipedia.org/wiki/Absorbing_Markov_chain>.
 
 Given a transition matrix $P$ defined by:
 
@@ -85,7 +84,7 @@ for k in range(10):
 
 This will give:
 
-```python
+```
 [1. 0. 0.]
 [0.5  0.25 0.25]
 [0.33333333 0.20833333 0.45833333]
@@ -110,13 +109,12 @@ absorption.compute_t(P)
 
 This gives:
 
-```python
+```
 array([3.66666667, 3.33333333])
 ```
 
 We see that the expected amounts of steps from the first state is slightly more
 than from the second.
-
 ````
 
 This **tutorial** section allows newcomers to our code to see how it is intended
@@ -133,10 +131,9 @@ Directly underneath what we have written so far we write:
 
 
 ````md
-
 ## How to guides
 
-### How to compute the long run state of a system after a given number of steps
+### How to compute the long run state of a system after a given number of steps
 
 Given a transition matrix $P$ and a state vector $\pi$, the state of the system
 after $k$ steps is given by:
@@ -147,20 +144,20 @@ import numpy as np
 import absorption
 
 pi = np.array([0, 1, 0])
-P = np.array([[1/3, 1/3, 1/3], [1/4, 1/4, 1/2], [0, 0, 1])
+P = np.array([[1 / 3, 1 / 3, 1 / 3], [1 / 4, 1 / 4, 1 / 2], [0, 0, 1])
 absorption.get_long_run_state(pi=pi, k=10, P=P)
 ```
 
 This gives:
 
-```python
+```
 array([0.0019552, 0.0019552, 0.9960896])
 ```
 
 ### How to extract the transitive state transition sub matrix $Q$
 
 Given a transition matrix $P$, the sub matrix $Q$ that
-corresponds to the transitions between transitive (ie not absorbing) states can
+corresponds to the transitions between transitive (i.e. not absorbing) states can
 be extracted:
 
 ```python
@@ -168,19 +165,18 @@ import numpy as np
 
 import absorption
 
-P = np.array([[1/3, 1/3, 1/3], [0, 1, 0], [1/4, 1/4, 1/2]])
+P = np.array([[1 / 3, 1 / 3, 1 / 3], [0, 1, 0], [1 / 4, 1 / 4, 1 / 2]])
 absorption.extract_Q(P=P)
 ```
 
 This gives:
 
-```python
+```
 array([[0.33333333, 0.33333333],
        [0.25      , 0.5       ]])
 ```
 
-
-### How to compute the fundamental matrix $N$
+### How to compute the fundamental matrix $N$
 
 Given a transition matrix $P$, the fundamental matrix $N$
 can be obtained:
@@ -190,19 +186,19 @@ import numpy as np
 
 import absorption
 
-P = np.array([[1/3, 1/3, 1/3], [0, 1, 0], [1/4, 1/4, 1/2]])
+P = np.array([[1 / 3, 1 / 3, 1 / 3], [0, 1, 0], [1 / 4, 1 / 4, 1 / 2]])
 Q = absorption.extract_Q(P=P)
 absorption.compute_N(Q=Q)
 ```
 
 This gives:
 
-```python
+```
 array([[2.        , 1.33333333],
        [1.        , 2.66666667]])
 ```
 
-### How to compute the average steps until absorption
+### How to compute the average steps until absorption
 
 Given a transition matrix $P$ and a state vector $\pi$, the average number of
 steps until absorption from all states can be obtained:
@@ -212,13 +208,13 @@ import numpy as np
 
 import absorption
 
-P = np.array([[1/3, 1/3, 1/3], [0, 1, 0], [1/4, 1/4, 1/2]])
+P = np.array([[1 / 3, 1 / 3, 1 / 3], [0, 1, 0], [1 / 4, 1 / 4, 1 / 2]])
 absorption.compute_t(P=P)
 ```
 
 This gives:
 
-```python
+```
 array([3.33333333, 3.66666667])
 ```
 ````
@@ -237,7 +233,6 @@ In the next section we will write the **explanations** which aims to give more
 in depth understanding not necessarily directly related to the code.
 
 ````md
-
 ## Explanation
 
 ### Brief overview of absorbing markov chains
@@ -261,7 +256,7 @@ The corresponding Markov chain has 3 states and:
   state 1.
 - $P_{23}=0$ means that when in state 2 there is a 0 chance of staying in
   state 1.
-- $P_{22}=$ actutllay implies that once we are in state 2 that the only next
+- $P_{22}=$ actually implies that once we are in state 2 that the only next
   state is state 2.
 
 In general:
@@ -284,7 +279,7 @@ be measured.
 
 Given a vector that describes the state of the system $\pi$ and a transition
 matrix $P$, the state of the system after $k$ iterations will be given by the
-following fector:
+following vector:
 
 $$
     \pi P ^ k
@@ -307,7 +302,6 @@ Where $Q$ is the matrix of transitions between non absorbing states.
 
 For example, the canonical form of $P$ would be:
 
-
 $$
     \begin{pmatrix}
         1 / 3 & 1 / 3 & 1 / 3 \\
@@ -327,7 +321,7 @@ $$
 
 ### The fundamental matrix
 
-Given $Q$ the fundmantal matrix $N$ is defined as:
+Given $Q$ the fundamental matrix $N$ is defined as:
 
 $$N = (I - Q) ^{-1}$$
 
@@ -343,7 +337,6 @@ t = N \mathbb{1}
 $$
 
 where $\mathbb{1}$ denotes a vector of 1s.
-
 ````
 
 This **explanations** section gives background reading as to how the code works.
@@ -354,10 +347,9 @@ In the next section we will write the **reference** which aims to be a concise
 collection of reference material.
 
 ````md
-
 ## Reference
 
-### List of functionaliy
+### List of functionality
 
 The following functions are written in `absorption`:
 
@@ -374,8 +366,7 @@ topic: <https://en.wikipedia.org/wiki/Absorbing_Markov_chain>
 The following text is a recommended reference on Markov chains:
 
 > Stewart, William J. Probability, Markov chains, queues, and simulation: the
-> mathematical basis of performance modeling. Princeton university press, 2009.
-
+> mathematical basis of performance modelling. Princeton university press, 2009.
 ````
 
 Figure {ref}`fig:documentation_in_vscode` shows the start of the markdown file
@@ -406,7 +397,7 @@ Functionality to study the absorbing Markov chains.
 
 In this tutorial we will see how to use `absorption` to study an absorbing
 Markov chain. For some background information on absorbing Markov chains we
-recoomend: https://en.wikipedia.org/wiki/Absorbing_Markov_chain
+recommend: <https://en.wikipedia.org/wiki/Absorbing_Markov_chain>.
 
 Given a transition matrix $P$ defined by:
 
@@ -440,7 +431,7 @@ for k in range(10):
 
 This will give:
 
-```python
+```
 [1. 0. 0.]
 [0.5  0.25 0.25]
 [0.33333333 0.20833333 0.45833333]
@@ -465,7 +456,7 @@ absorption.compute_t(P)
 
 This gives:
 
-```python
+```
 array([3.66666667, 3.33333333])
 ```
 
@@ -485,20 +476,20 @@ import numpy as np
 import absorption
 
 pi = np.array([0, 1, 0])
-P = np.array([[1/3, 1/3, 1/3], [1/4, 1/4, 1/2], [0, 0, 1])
+P = np.array([[1 / 3, 1 / 3, 1 / 3], [1 / 4, 1 / 4, 1 / 2], [0, 0, 1])
 absorption.get_long_run_state(pi=pi, k=10, P=P)
 ```
 
 This gives:
 
-```python
+```
 array([0.0019552, 0.0019552, 0.9960896])
 ```
 
 ##### How to extract the transitive state transition sub matrix $Q$
 
 Given a transition matrix $P$, the sub matrix $Q$ that
-corresponds to the transitions between transitive (ie not absorbing) states can
+corresponds to the transitions between transitive (i.e. not absorbing) states can
 be extracted:
 
 ```python
@@ -506,17 +497,16 @@ import numpy as np
 
 import absorption
 
-P = np.array([[1/3, 1/3, 1/3], [0, 1, 0], [1/4, 1/4, 1/2]])
+P = np.array([[1 / 3, 1 / 3, 1 / 3], [0, 1, 0], [1 / 4, 1 / 4, 1 / 2]])
 absorption.extract_Q(P=P)
 ```
 
 This gives:
 
-```python
+```
 array([[0.33333333, 0.33333333],
        [0.25      , 0.5       ]])
 ```
-
 
 ##### How to compute the fundamental matrix $N$
 
@@ -528,14 +518,14 @@ import numpy as np
 
 import absorption
 
-P = np.array([[1/3, 1/3, 1/3], [0, 1, 0], [1/4, 1/4, 1/2]])
+P = np.array([[1 / 3, 1 / 3, 1 / 3], [0, 1, 0], [1 / 4, 1 / 4, 1 / 2]])
 Q = absorption.extract_Q(P=P)
 absorption.compute_N(Q=Q)
 ```
 
 This gives:
 
-```python
+```
 array([[2.        , 1.33333333],
        [1.        , 2.66666667]])
 ```
@@ -550,13 +540,13 @@ import numpy as np
 
 import absorption
 
-P = np.array([[1/3, 1/3, 1/3], [0, 1, 0], [1/4, 1/4, 1/2]])
+P = np.array([[1 / 3, 1 / 3, 1 / 3], [0, 1, 0], [1 / 4, 1 / 4, 1 / 2]])
 absorption.compute_t(P=P)
 ```
 
 This gives:
 
-```python
+```
 array([3.33333333, 3.66666667])
 ```
 
@@ -583,7 +573,7 @@ The corresponding Markov chain has 3 states and:
   state 1.
 - $P_{23}=0$ means that when in state 2 there is a 0 chance of staying in
   state 1.
-- $P_{22}=$ actutllay implies that once we are in state 2 that the only next
+- $P_{22}=$ actually implies that once we are in state 2 that the only next
   state is state 2.
 
 In general:
@@ -606,7 +596,7 @@ be measured.
 
 Given a vector that describes the state of the system $\pi$ and a transition
 matrix $P$, the state of the system after $k$ iterations will be given by the
-following fector:
+following vector:
 
 $$
     \pi P ^ k
@@ -629,7 +619,6 @@ Where $Q$ is the matrix of transitions between non absorbing states.
 
 For example, the canonical form of $P$ would be:
 
-
 $$
     \begin{pmatrix}
         1 / 3 & 1 / 3 & 1 / 3 \\
@@ -649,7 +638,7 @@ $$
 
 ##### The fundamental matrix
 
-Given $Q$ the fundmantal matrix $N$ is defined as:
+Given $Q$ the fundamental matrix $N$ is defined as:
 
 $$N = (I - Q) ^{-1}$$
 
@@ -668,7 +657,7 @@ where $\mathbb{1}$ denotes a vector of 1s.
 
 #### Reference
 
-##### List of functionaliy
+##### List of functionality
 
 The following functions are written in `absorption`:
 
@@ -685,4 +674,4 @@ topic: <https://en.wikipedia.org/wiki/Absorbing_Markov_chain>
 The following text is a recommended reference on Markov chains:
 
 > Stewart, William J. Probability, Markov chains, queues, and simulation: the
-> mathematical basis of performance modeling. Princeton university press, 2009.
+> mathematical basis of performance modelling. Princeton university press, 2009.

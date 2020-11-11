@@ -38,6 +38,7 @@ words = set(
         "PyCharm",
         "QuadraticExpression",
         "QuadraticExpressionWithAllRoots",
+        "README",
         "REPL",
         "REPLs",
         "Riggins",
@@ -116,6 +117,8 @@ words = set(
         "linspace",
         "loadtxt",
         "lru",
+        "markov",
+        "martraire",
         "math",
         "matplotlib",
         "matplotlib",
@@ -280,6 +283,22 @@ prose_suggestions_to_ignore = {
         ("typography.symbols.curly_quotes",)
     ),
     "book/building-tools/05-modularisation/why/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/building-tools/06-documentation/tutorial/main.md": set(
+        ("typography.symbols.curly_quotes",
+         "typography.symbols.sentence_spacing",)
+    ),
+    "book/building-tools/06-documentation/tutorial/img/documentation_in_vscode/main.md": set(
+        ("typography.symbols.sentence_spacing",)
+    ),
+    "book/building-tools/06-documentation/how/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/building-tools/06-documentation/exercises/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/building-tools/06-documentation/why/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
     "book/further-information/01-numpy/tutorial/main.md": set(

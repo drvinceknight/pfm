@@ -18,6 +18,5 @@ kernelspec:
 
 **If you are not sure how to do something, have a look at the "How To" section.**
 
-
 Write documentation for the code written in the exercises of
 {ref}`modularisation_exercises`.
