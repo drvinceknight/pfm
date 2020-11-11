@@ -116,7 +116,7 @@ there are then 4 choices for the remaining digits:
 math.factorial(4) * 3
 ```
 
-To compute the number of digits that are less than or equal to 2300 we compute a
+To compute the number of digits that are less than or equal to 23000 we compute a
 similar sum except we use the `<=` operator and also convert the tuple of digits
 to a number in base 10:
 
@@ -127,7 +127,7 @@ $$
 Thus we are going to compute the following sum:
 
 $$
-    \sum_{\pi \in \Pi \text{ if }\pi_1 10 ^ 4 + \pi_2 10 ^ 3 + \pi_3 10 ^ 2 + \pi_4 10 + \pi_5 \leq 2300} 1
+    \sum_{\pi \in \Pi \text{ if }\pi_1 10 ^ 4 + \pi_2 10 ^ 3 + \pi_3 10 ^ 2 + \pi_4 10 + \pi_5 \leq 23000} 1
 $$
 
 ```{code-cell} ipython3
@@ -143,7 +143,7 @@ sum(
 )
 ```
 
-We can again confirm this theoretically, for a given tuple to be less than 2300
+We can again confirm this theoretically, for a given tuple to be less than 23000
 that is only possible if the first digit is 1 or 2:
 
 - If it is 1 then any of the other $4!$ permutations of the other digits is
