@@ -1,0 +1,1618 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial &#8212; Python for mathematics</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-dropdown.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "drvinceknight/pfm");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="How" href="../how/main.html" />
+    <link rel="prev" title="Documentation" href="../introduction/main.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/main.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Python for mathematics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../cover.html">
+   Python for Mathematics
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Overview
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../overview/introduction/main.html">
+   Introduction
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../overview/structure/main.html">
+     How this book is structured
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../overview/how_to_use_this_book/main.html">
+     How to use this book
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Tools for mathematics
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../tools-for-mathematics/01-using-notebooks/introduction/main.html">
+   Using notebooks
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/01-using-notebooks/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/01-using-notebooks/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/01-using-notebooks/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/01-using-notebooks/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/01-using-notebooks/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../tools-for-mathematics/02-algebra/introduction/main.html">
+   Algebra
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/02-algebra/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/02-algebra/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/02-algebra/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/02-algebra/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/02-algebra/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../tools-for-mathematics/03-calculus/introduction/main.html">
+   Calculus
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/03-calculus/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/03-calculus/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/03-calculus/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/03-calculus/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/03-calculus/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../tools-for-mathematics/04-matrices/introduction/main.html">
+   Matrices
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/04-matrices/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/04-matrices/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/04-matrices/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/04-matrices/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/04-matrices/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../tools-for-mathematics/05-combinations-permutations/introduction/main.html">
+   Combinatorics
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/05-combinations-permutations/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/05-combinations-permutations/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/05-combinations-permutations/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/05-combinations-permutations/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/05-combinations-permutations/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../tools-for-mathematics/06-probability/introduction/main.html">
+   Probability
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/06-probability/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/06-probability/how/main.html">
+     How to
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/06-probability/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/06-probability/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/06-probability/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../tools-for-mathematics/07-sequences/introduction/main.html">
+   Sequences
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/07-sequences/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/07-sequences/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/07-sequences/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/07-sequences/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/07-sequences/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Building tools
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../01-variables-conditionals-loops/introduction/main.html">
+   Variables, conditionals and loops
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01-variables-conditionals-loops/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01-variables-conditionals-loops/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01-variables-conditionals-loops/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01-variables-conditionals-loops/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../02-functions-and-data-structures/introduction/main.html">
+   Functions and data structures
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02-functions-and-data-structures/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02-functions-and-data-structures/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02-functions-and-data-structures/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02-functions-and-data-structures/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../03-objects/introduction/main.html">
+   Object oriented programming
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03-objects/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03-objects/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03-objects/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03-objects/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../04-editor-and-cli/introduction/main.html">
+   Using a command line and an editor
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04-editor-and-cli/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04-editor-and-cli/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04-editor-and-cli/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04-editor-and-cli/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../05-modularisation/introduction/main.html">
+   Modularisation
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../05-modularisation/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../05-modularisation/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../05-modularisation/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../05-modularisation/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../introduction/main.html">
+   Documentation
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Further information
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../further-information/01-numpy/introduction/main.html">
+   Numpy
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../further-information/01-numpy/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../further-information/01-numpy/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../further-information/01-numpy/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../further-information/02-matplotlib/introduction/main.html">
+   Matplotlib
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../further-information/02-matplotlib/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../further-information/02-matplotlib/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../further-information/02-matplotlib/why/main.html">
+     Further information.
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../further-information/03-kernel/introduction/main.html">
+   Kernels
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../further-information/03-kernel/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../further-information/03-kernel/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../further-information/03-kernel/why/main.html">
+     Further information.
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../zbibliography.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  About this book
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../about-this-book/main.html">
+   About this book
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../about-this-book/how-is-this-book-written/main.html">
+     How this book is written
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../about-this-book/contributing/main.html">
+     Contributing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../about-this-book/citing-this-book/main.html">
+     How to cite this book
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../../../_sources/building-tools/06-documentation/tutorial/main.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/building-tools/06-documentation/tutorial/main.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/drvinceknight/pfm"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/drvinceknight/pfm/issues/new?title=Issue%20on%20page%20%2Fbuilding-tools/06-documentation/tutorial/main.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/drvinceknight/pfm/edit/main/book/building-tools/06-documentation/tutorial/main.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/drvinceknight/pfm/main?urlpath=tree/book/building-tools/06-documentation/tutorial/main.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#writing-a-tutorial">
+   Writing a tutorial
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#writing-the-how-to-guides">
+   Writing the how-to guides
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#writing-the-explanations-section">
+   Writing the explanations section
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#writing-the-reference-section">
+   Writing the reference section
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#documentation-for-absorption">
+   Documentation for
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     absorption
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#absorption">
+     Absorption
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Tutorial
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#how-to-guides">
+       How to guides
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#how-to-compute-the-long-run-state-of-a-system-after-a-given-number-of-steps">
+         How to compute the long run state of a system after a given number of steps
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#how-to-extract-the-transitive-state-transition-sub-matrix-q">
+         How to extract the transitive state transition sub matrix
+         <span class="math notranslate nohighlight">
+          \(Q\)
+         </span>
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#how-to-compute-the-fundamental-matrix-n">
+         How to compute the fundamental matrix
+         <span class="math notranslate nohighlight">
+          \(N\)
+         </span>
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#how-to-compute-the-average-steps-until-absorption">
+         How to compute the average steps until absorption
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#explanation">
+       Explanation
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#brief-overview-of-absorbing-markov-chains">
+         Brief overview of absorbing markov chains
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#calculating-the-state-after-a-given-number-of-iterations">
+         Calculating the state after a given number of iterations
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#the-canonical-form-of-the-transition-matrix">
+         The canonical form of the transition matrix
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#the-fundamental-matrix">
+         The fundamental matrix
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#the-expected-number-of-steps-until-absorption">
+         The expected number of steps until absorption.
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#reference">
+       Reference
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#list-of-functionality">
+         List of functionality
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#bibliography">
+         Bibliography
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="tutorial">
+<span id="documentation"></span><h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial we will make the code we will write documentation for the code
+we wrote in the modularisation <a class="reference internal" href="../../05-modularisation/tutorial/main.html#modularisation-tutorial"><span class="std std-ref">Tutorial</span></a>.</p>
+<p>There are a number of approaches to writing software documentation and
+I recommend reading the <a class="reference internal" href="../why/main.html#documentation-further-information"><span class="std std-ref">Further information</span></a>.</p>
+<p>We will start by creating a new file in VScode called <code class="docutils literal notranslate"><span class="pre">README.md</span></code>.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>We will be writing our documentation in markdown.</p>
+</div>
+<p>Let us start by writing the title of our page and quick single sentence
+description.</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gh"># Absorption</span>
+
+Functionality to study the absorbing Markov chains.
+</pre></div>
+</div>
+<div class="section" id="writing-a-tutorial">
+<h2>Writing a tutorial<a class="headerlink" href="#writing-a-tutorial" title="Permalink to this headline">¶</a></h2>
+<p>We will then write our first section which is a <strong>tutorial</strong>.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The goal of a tutorial is to provide a hands on introduction and demonstration
+of the software.</p>
+</div>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gu">## Tutorial</span>
+
+In this tutorial we will see how to use <span class="sb">`absorption`</span> to study an absorbing
+Markov chain. For some background information on absorbing Markov chains we
+recommend: &lt;https://en.wikipedia.org/wiki/Absorbing_Markov_chain&gt;.
+
+Given a transition matrix $P$ defined by:
+
+$$
+p = \begin{pmatrix}
+   1/2 &amp; 1/4 &amp; 1/4\\
+   1/3 &amp; 1/3 &amp; 1/3\\
+   0   &amp; 0   &amp; 1
+    \end{pmatrix}
+$$
+
+We will start by seeing how the chain evolves over time by starting with an
+initial vector $\pi=(1,0,0)$. In the next code snippet we will import the
+necessary libraries and create both $P$ and $\pi$:
+
+<span class="sb">```python</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">absorption</span>
+
+<span class="n">pi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="sb">```</span>
+
+We now see how the vector $\pi$ changes over time:
+
+<span class="sb">```python</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">absorption</span><span class="o">.</span><span class="n">get_long_run_state</span><span class="p">(</span><span class="n">pi</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">P</span><span class="p">))</span>
+<span class="sb">```</span>
+
+This will give:
+
+<span class="sb">```</span>
+<span class="sb">[1. 0. 0.]</span>
+<span class="sb">[0.5  0.25 0.25]</span>
+<span class="sb">[0.33333333 0.20833333 0.45833333]</span>
+<span class="sb">[0.23611111 0.15277778 0.61111111]</span>
+<span class="sb">[0.16898148 0.1099537  0.72106481]</span>
+<span class="sb">[0.12114198 0.0788966  0.79996142]</span>
+<span class="sb">[0.08686986 0.05658436 0.85654578]</span>
+<span class="sb">[0.06229638 0.04057892 0.8971247 ]</span>
+<span class="sb">[0.0446745 0.0291004 0.9262251]</span>
+<span class="sb">[0.03203738 0.02086876 0.94709386]</span>
+<span class="sb">```</span>
+
+We see that, as expected over time the probability of being in the third state,
+which is absorbing, increases.
+
+We can also use <span class="sb">`absorption`</span> to get the average number of steps until
+absorption from each state:
+
+<span class="sb">```python</span>
+<span class="n">absorption</span><span class="o">.</span><span class="n">compute_t</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
+<span class="sb">```</span>
+
+This gives:
+
+<span class="sb">```</span>
+<span class="sb">array([3.66666667, 3.33333333])</span>
+<span class="sb">```</span>
+
+We see that the expected amounts of steps from the first state is slightly more
+than from the second.
+</pre></div>
+</div>
+<p>This <strong>tutorial</strong> section allows newcomers to our code to see how it is intended
+to be used.</p>
+</div>
+<div class="section" id="writing-the-how-to-guides">
+<h2>Writing the how-to guides<a class="headerlink" href="#writing-the-how-to-guides" title="Permalink to this headline">¶</a></h2>
+<p>In the next section we will write a series of <strong>how to</strong> guides, this is
+targeted
+at someone who has perhaps worked through the tutorial already and wants to
+directly know how to do a specific tasks.</p>
+<p>Directly underneath what we have written so far we write:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gu">## How to guides</span>
+
+<span class="gu">### How to compute the long run state of a system after a given number of steps</span>
+
+Given a transition matrix $P$ and a state vector $\pi$, the state of the system
+after $k$ steps is given by:
+
+<span class="sb">```python</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">absorption</span>
+
+<span class="n">pi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="n">absorption</span><span class="o">.</span><span class="n">get_long_run_state</span><span class="p">(</span><span class="n">pi</span><span class="o">=</span><span class="n">pi</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">P</span><span class="o">=</span><span class="n">P</span><span class="p">)</span>
+<span class="sb">```</span>
+
+This gives:
+
+<span class="sb">```</span>
+<span class="sb">array([0.0019552, 0.0019552, 0.9960896])</span>
+<span class="sb">```</span>
+
+<span class="gu">### How to extract the transitive state transition sub matrix $Q$</span>
+
+Given a transition matrix $P$, the sub matrix $Q$ that
+corresponds to the transitions between transitive (i.e. not absorbing) states can
+be extracted:
+
+<span class="sb">```python</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">absorption</span>
+
+<span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">]])</span>
+<span class="n">absorption</span><span class="o">.</span><span class="n">extract_Q</span><span class="p">(</span><span class="n">P</span><span class="o">=</span><span class="n">P</span><span class="p">)</span>
+<span class="sb">```</span>
+
+This gives:
+
+<span class="sb">```</span>
+<span class="sb">array([[0.33333333, 0.33333333],</span>
+<span class="sb">       [0.25      , 0.5       ]])</span>
+<span class="sb">```</span>
+
+<span class="gu">### How to compute the fundamental matrix $N$</span>
+
+Given a transition matrix $P$, the fundamental matrix $N$
+can be obtained:
+
+<span class="sb">```python</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">absorption</span>
+
+<span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">]])</span>
+<span class="n">Q</span> <span class="o">=</span> <span class="n">absorption</span><span class="o">.</span><span class="n">extract_Q</span><span class="p">(</span><span class="n">P</span><span class="o">=</span><span class="n">P</span><span class="p">)</span>
+<span class="n">absorption</span><span class="o">.</span><span class="n">compute_N</span><span class="p">(</span><span class="n">Q</span><span class="o">=</span><span class="n">Q</span><span class="p">)</span>
+<span class="sb">```</span>
+
+This gives:
+
+<span class="sb">```</span>
+<span class="sb">array([[2.        , 1.33333333],</span>
+<span class="sb">       [1.        , 2.66666667]])</span>
+<span class="sb">```</span>
+
+<span class="gu">### How to compute the average steps until absorption</span>
+
+Given a transition matrix $P$ and a state vector $\pi$, the average number of
+steps until absorption from all states can be obtained:
+
+<span class="sb">```python</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">absorption</span>
+
+<span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">]])</span>
+<span class="n">absorption</span><span class="o">.</span><span class="n">compute_t</span><span class="p">(</span><span class="n">P</span><span class="o">=</span><span class="n">P</span><span class="p">)</span>
+<span class="sb">```</span>
+
+This gives:
+
+<span class="sb">```</span>
+<span class="sb">array([3.33333333, 3.66666667])</span>
+<span class="sb">```</span>
+</pre></div>
+</div>
+<p>This <strong>how to</strong> section is an efficient collection of recipes to be
+able to carry out specific tasks made possible by the software.</p>
+</div>
+<div class="section" id="writing-the-explanations-section">
+<h2>Writing the explanations section<a class="headerlink" href="#writing-the-explanations-section" title="Permalink to this headline">¶</a></h2>
+<p>In the next section we will write the <strong>explanations</strong> which aims to give more
+in depth understanding not necessarily directly related to the code.</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gu">## Explanation</span>
+
+<span class="gu">### Brief overview of absorbing markov chains</span>
+
+A Markov chain with a given transition matrix $P$ is a system that moves from
+state to state randomly with the probabilities given by $P$.
+
+For example:
+
+$$
+P = \begin{pmatrix}
+        1 / 3 &amp; 1 / 3 &amp; 1 / 3 \\
+        0     &amp; 1     &amp; 0     \\
+        1 / 4 &amp; 1 / 4 &amp; 1 / 2
+    \end{pmatrix}
+$$
+
+The corresponding Markov chain has 3 states and:
+
+<span class="k">-</span> $P_{11}=1/3$ means that when in state 1 there is a 1/3 chance of staying in
+  state 1.
+<span class="k">-</span> $P_{23}=0$ means that when in state 2 there is a 0 chance of staying in
+  state 1.
+<span class="k">-</span> $P_{22}=$ actually implies that once we are in state 2 that the only next
+  state is state 2.
+
+In general:
+
+$$
+    P_{ij} &gt; 0 \text{ for all }ij
+$$
+
+$$
+    \sum_{j=0}^{|P|} P_{ij} = 1 \text{ for all }i
+$$
+
+If $P_{ii}=1$ then state $i$ is an absorbing state from which no further changes
+can occur.
+
+In the case of absorbing markov chains there are a number of quantities that can
+be measured.
+
+<span class="gu">### Calculating the state after a given number of iterations</span>
+
+Given a vector that describes the state of the system $\pi$ and a transition
+matrix $P$, the state of the system after $k$ iterations will be given by the
+following vector:
+
+$$
+    \pi P ^ k
+$$
+
+<span class="gu">### The canonical form of the transition matrix</span>
+
+A transition matrix $P$ is written in its canonical form when it can be written
+as:
+
+$$
+  P =
+  \left(\begin{array}{c|c}
+    Q &amp; R \\\hline
+    0 &amp; I
+  \end{array}\right)
+$$
+
+Where $Q$ is the matrix of transitions between non absorbing states.
+
+For example, the canonical form of $P$ would be:
+
+$$
+    \begin{pmatrix}
+        1 / 3 &amp; 1 / 3 &amp; 1 / 3 \\
+        1 / 4 &amp; 1 / 2 &amp; 1 / 4
+        0     &amp;  0    &amp; 1     \\
+    \end{pmatrix}
+$$
+
+which would give:
+
+$$
+Q = \begin{pmatrix}
+    1 / 3 &amp; 1 / 3 \\
+    1 / 4 &amp; 1 / 2
+    \end{pmatrix}
+$$
+
+<span class="gu">### The fundamental matrix</span>
+
+Given $Q$ the fundamental matrix $N$ is defined as:
+
+$$N = (I - Q) ^{-1}$$
+
+$N_{ij}$ corresponds to the expected number of times the chain will be in state
+$j$ given that it started in state $i$.
+
+<span class="gu">### The expected number of steps until absorption.</span>
+
+Given $N$, the expected number of steps until absorption is given by the vector:
+
+$$
+t = N \mathbb{1}
+$$
+
+where $\mathbb{1}$ denotes a vector of 1s.
+</pre></div>
+</div>
+<p>This <strong>explanations</strong> section gives background reading as to how the code works.</p>
+</div>
+<div class="section" id="writing-the-reference-section">
+<h2>Writing the reference section<a class="headerlink" href="#writing-the-reference-section" title="Permalink to this headline">¶</a></h2>
+<p>In the next section we will write the <strong>reference</strong> which aims to be a concise
+collection of reference material.</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gu">## Reference</span>
+
+<span class="gu">### List of functionality</span>
+
+The following functions are written in <span class="sb">`absorption`</span>:
+
+<span class="k">-</span> `get_long_run_state`
+<span class="k">-</span> `extract_Q`
+<span class="k">-</span> `compute_N`
+<span class="k">-</span> `compute_t`
+
+<span class="gu">### Bibliography</span>
+
+The wikipedia page on absorbing Markov chains gives a good overview of the
+topic: &lt;https://en.wikipedia.org/wiki/Absorbing_Markov_chain&gt;
+
+The following text is a recommended reference on Markov chains:
+
+<span class="k">&gt; </span><span class="ge">Stewart, William J. Probability, Markov chains, queues, and simulation: the</span>
+<span class="k">&gt; </span><span class="ge">mathematical basis of performance modelling. Princeton university press, 2009.</span>
+</pre></div>
+</div>
+<p>Figure <a class="reference internal" href="#fig-documentation-in-vscode"><span class="std std-ref">The README.md file in VScode with the rendered preview (using the “Markdown
+All in One” plugin).</span></a> shows the start of the markdown file
+in VScode alongside the preview (the “Markdown All in One” plugin ensures that
+the mathematics is rendered see <a class="reference internal" href="../../04-editor-and-cli/how/main.html#how-to-install-a-vscode-plugin"><span class="std std-ref">How to install VScode plugins</span></a> for
+information on installing plugins).</p>
+<div class="figure align-default" id="fig-documentation-in-vscode">
+<a class="reference internal image-reference" href="../../../_images/main8.png"><img alt="../../../_images/main8.png" src="../../../_images/main8.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">The <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file in VScode with the rendered preview (using the “Markdown
+All in One” plugin).</span><a class="headerlink" href="#fig-documentation-in-vscode" title="Permalink to this image">¶</a></p>
+</div>
+<p>Below is what the rendered documentation would look like:</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="documentation-for-absorption">
+<h2>Documentation for <code class="docutils literal notranslate"><span class="pre">absorption</span></code><a class="headerlink" href="#documentation-for-absorption" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="absorption">
+<h3>Absorption<a class="headerlink" href="#absorption" title="Permalink to this headline">¶</a></h3>
+<p>Functionality to study the absorbing Markov chains.</p>
+<div class="section" id="id1">
+<h4>Tutorial<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>In this tutorial we will see how to use <code class="docutils literal notranslate"><span class="pre">absorption</span></code> to study an absorbing
+Markov chain. For some background information on absorbing Markov chains we
+recommend: <a class="reference external" href="https://en.wikipedia.org/wiki/Absorbing_Markov_chain">https://en.wikipedia.org/wiki/Absorbing_Markov_chain</a>.</p>
+<p>Given a transition matrix <span class="math notranslate nohighlight">\(P\)</span> defined by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+p = \begin{pmatrix}
+   1/2 &amp; 1/4 &amp; 1/4\\
+   1/3 &amp; 1/3 &amp; 1/3\\
+   0   &amp; 0   &amp; 1
+    \end{pmatrix}
+\end{split}\]</div>
+<p>We will start by seeing how the chain evolves over time by starting with an
+initial vector <span class="math notranslate nohighlight">\(\pi=(1,0,0)\)</span>. In the next code snippet we will import the
+necessary libraries and create both <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(\pi\)</span>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">absorption</span>
+
+<span class="n">pi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>We now see how the vector <span class="math notranslate nohighlight">\(\pi\)</span> changes over time:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">absorption</span><span class="o">.</span><span class="n">get_long_run_state</span><span class="p">(</span><span class="n">pi</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">P</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>This will give:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mf">1.</span> <span class="mf">0.</span> <span class="mf">0.</span><span class="p">]</span>
+<span class="p">[</span><span class="mf">0.5</span>  <span class="mf">0.25</span> <span class="mf">0.25</span><span class="p">]</span>
+<span class="p">[</span><span class="mf">0.33333333</span> <span class="mf">0.20833333</span> <span class="mf">0.45833333</span><span class="p">]</span>
+<span class="p">[</span><span class="mf">0.23611111</span> <span class="mf">0.15277778</span> <span class="mf">0.61111111</span><span class="p">]</span>
+<span class="p">[</span><span class="mf">0.16898148</span> <span class="mf">0.1099537</span>  <span class="mf">0.72106481</span><span class="p">]</span>
+<span class="p">[</span><span class="mf">0.12114198</span> <span class="mf">0.0788966</span>  <span class="mf">0.79996142</span><span class="p">]</span>
+<span class="p">[</span><span class="mf">0.08686986</span> <span class="mf">0.05658436</span> <span class="mf">0.85654578</span><span class="p">]</span>
+<span class="p">[</span><span class="mf">0.06229638</span> <span class="mf">0.04057892</span> <span class="mf">0.8971247</span> <span class="p">]</span>
+<span class="p">[</span><span class="mf">0.0446745</span> <span class="mf">0.0291004</span> <span class="mf">0.9262251</span><span class="p">]</span>
+<span class="p">[</span><span class="mf">0.03203738</span> <span class="mf">0.02086876</span> <span class="mf">0.94709386</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>We see that, as expected over time the probability of being in the third state,
+which is absorbing, increases.</p>
+<p>We can also use <code class="docutils literal notranslate"><span class="pre">absorption</span></code> to get the average number of steps until
+absorption from each state:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">absorption</span><span class="o">.</span><span class="n">compute_t</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This gives:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">([</span><span class="mf">3.66666667</span><span class="p">,</span> <span class="mf">3.33333333</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>We see that the expected amounts of steps from the first state is slightly more
+than from the second.</p>
+</div>
+<div class="section" id="how-to-guides">
+<h4>How to guides<a class="headerlink" href="#how-to-guides" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="how-to-compute-the-long-run-state-of-a-system-after-a-given-number-of-steps">
+<h5>How to compute the long run state of a system after a given number of steps<a class="headerlink" href="#how-to-compute-the-long-run-state-of-a-system-after-a-given-number-of-steps" title="Permalink to this headline">¶</a></h5>
+<p>Given a transition matrix <span class="math notranslate nohighlight">\(P\)</span> and a state vector <span class="math notranslate nohighlight">\(\pi\)</span>, the state of the system
+after <span class="math notranslate nohighlight">\(k\)</span> steps is given by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">absorption</span>
+
+<span class="n">pi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="n">absorption</span><span class="o">.</span><span class="n">get_long_run_state</span><span class="p">(</span><span class="n">pi</span><span class="o">=</span><span class="n">pi</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">P</span><span class="o">=</span><span class="n">P</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This gives:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">([</span><span class="mf">0.0019552</span><span class="p">,</span> <span class="mf">0.0019552</span><span class="p">,</span> <span class="mf">0.9960896</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-to-extract-the-transitive-state-transition-sub-matrix-q">
+<h5>How to extract the transitive state transition sub matrix <span class="math notranslate nohighlight">\(Q\)</span><a class="headerlink" href="#how-to-extract-the-transitive-state-transition-sub-matrix-q" title="Permalink to this headline">¶</a></h5>
+<p>Given a transition matrix <span class="math notranslate nohighlight">\(P\)</span>, the sub matrix <span class="math notranslate nohighlight">\(Q\)</span> that
+corresponds to the transitions between transitive (i.e. not absorbing) states can
+be extracted:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">absorption</span>
+
+<span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">]])</span>
+<span class="n">absorption</span><span class="o">.</span><span class="n">extract_Q</span><span class="p">(</span><span class="n">P</span><span class="o">=</span><span class="n">P</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This gives:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">([[</span><span class="mf">0.33333333</span><span class="p">,</span> <span class="mf">0.33333333</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">0.25</span>      <span class="p">,</span> <span class="mf">0.5</span>       <span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-to-compute-the-fundamental-matrix-n">
+<h5>How to compute the fundamental matrix <span class="math notranslate nohighlight">\(N\)</span><a class="headerlink" href="#how-to-compute-the-fundamental-matrix-n" title="Permalink to this headline">¶</a></h5>
+<p>Given a transition matrix <span class="math notranslate nohighlight">\(P\)</span>, the fundamental matrix <span class="math notranslate nohighlight">\(N\)</span>
+can be obtained:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">absorption</span>
+
+<span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">]])</span>
+<span class="n">Q</span> <span class="o">=</span> <span class="n">absorption</span><span class="o">.</span><span class="n">extract_Q</span><span class="p">(</span><span class="n">P</span><span class="o">=</span><span class="n">P</span><span class="p">)</span>
+<span class="n">absorption</span><span class="o">.</span><span class="n">compute_N</span><span class="p">(</span><span class="n">Q</span><span class="o">=</span><span class="n">Q</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This gives:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">([[</span><span class="mf">2.</span>        <span class="p">,</span> <span class="mf">1.33333333</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">1.</span>        <span class="p">,</span> <span class="mf">2.66666667</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-to-compute-the-average-steps-until-absorption">
+<h5>How to compute the average steps until absorption<a class="headerlink" href="#how-to-compute-the-average-steps-until-absorption" title="Permalink to this headline">¶</a></h5>
+<p>Given a transition matrix <span class="math notranslate nohighlight">\(P\)</span> and a state vector <span class="math notranslate nohighlight">\(\pi\)</span>, the average number of
+steps until absorption from all states can be obtained:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">absorption</span>
+
+<span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">]])</span>
+<span class="n">absorption</span><span class="o">.</span><span class="n">compute_t</span><span class="p">(</span><span class="n">P</span><span class="o">=</span><span class="n">P</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This gives:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">([</span><span class="mf">3.33333333</span><span class="p">,</span> <span class="mf">3.66666667</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="explanation">
+<h4>Explanation<a class="headerlink" href="#explanation" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="brief-overview-of-absorbing-markov-chains">
+<h5>Brief overview of absorbing markov chains<a class="headerlink" href="#brief-overview-of-absorbing-markov-chains" title="Permalink to this headline">¶</a></h5>
+<p>A Markov chain with a given transition matrix <span class="math notranslate nohighlight">\(P\)</span> is a system that moves from
+state to state randomly with the probabilities given by <span class="math notranslate nohighlight">\(P\)</span>.</p>
+<p>For example:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+P = \begin{pmatrix}
+        1 / 3 &amp; 1 / 3 &amp; 1 / 3 \\
+        0     &amp; 1     &amp; 0     \\
+        1 / 4 &amp; 1 / 4 &amp; 1 / 2
+    \end{pmatrix}
+\end{split}\]</div>
+<p>The corresponding Markov chain has 3 states and:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P_{11}=1/3\)</span> means that when in state 1 there is a 1/3 chance of staying in
+state 1.</p></li>
+<li><p><span class="math notranslate nohighlight">\(P_{23}=0\)</span> means that when in state 2 there is a 0 chance of staying in
+state 1.</p></li>
+<li><p><span class="math notranslate nohighlight">\(P_{22}=\)</span> actually implies that once we are in state 2 that the only next
+state is state 2.</p></li>
+</ul>
+<p>In general:</p>
+<div class="math notranslate nohighlight">
+\[
+    P_{ij} &gt; 0 \text{ for all }ij
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+    \sum_{j=0}^{|P|} P_{ij} = 1 \text{ for all }i
+\]</div>
+<p>If <span class="math notranslate nohighlight">\(P_{ii}=1\)</span> then state <span class="math notranslate nohighlight">\(i\)</span> is an absorbing state from which no further changes
+can occur.</p>
+<p>In the case of absorbing markov chains there are a number of quantities that can
+be measured.</p>
+</div>
+<div class="section" id="calculating-the-state-after-a-given-number-of-iterations">
+<h5>Calculating the state after a given number of iterations<a class="headerlink" href="#calculating-the-state-after-a-given-number-of-iterations" title="Permalink to this headline">¶</a></h5>
+<p>Given a vector that describes the state of the system <span class="math notranslate nohighlight">\(\pi\)</span> and a transition
+matrix <span class="math notranslate nohighlight">\(P\)</span>, the state of the system after <span class="math notranslate nohighlight">\(k\)</span> iterations will be given by the
+following vector:</p>
+<div class="math notranslate nohighlight">
+\[
+    \pi P ^ k
+\]</div>
+</div>
+<div class="section" id="the-canonical-form-of-the-transition-matrix">
+<h5>The canonical form of the transition matrix<a class="headerlink" href="#the-canonical-form-of-the-transition-matrix" title="Permalink to this headline">¶</a></h5>
+<p>A transition matrix <span class="math notranslate nohighlight">\(P\)</span> is written in its canonical form when it can be written
+as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  P =
+  \left(\begin{array}{c|c}
+    Q &amp; R \\\hline
+    0 &amp; I
+  \end{array}\right)
+\end{split}\]</div>
+<p>Where <span class="math notranslate nohighlight">\(Q\)</span> is the matrix of transitions between non absorbing states.</p>
+<p>For example, the canonical form of <span class="math notranslate nohighlight">\(P\)</span> would be:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    \begin{pmatrix}
+        1 / 3 &amp; 1 / 3 &amp; 1 / 3 \\
+        1 / 4 &amp; 1 / 2 &amp; 1 / 4
+        0     &amp;  0    &amp; 1     \\
+    \end{pmatrix}
+\end{split}\]</div>
+<p>which would give:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+Q = \begin{pmatrix}
+    1 / 3 &amp; 1 / 3 \\
+    1 / 4 &amp; 1 / 2
+    \end{pmatrix}
+\end{split}\]</div>
+</div>
+<div class="section" id="the-fundamental-matrix">
+<h5>The fundamental matrix<a class="headerlink" href="#the-fundamental-matrix" title="Permalink to this headline">¶</a></h5>
+<p>Given <span class="math notranslate nohighlight">\(Q\)</span> the fundamental matrix <span class="math notranslate nohighlight">\(N\)</span> is defined as:</p>
+<div class="math notranslate nohighlight">
+\[N = (I - Q) ^{-1}\]</div>
+<p><span class="math notranslate nohighlight">\(N_{ij}\)</span> corresponds to the expected number of times the chain will be in state
+<span class="math notranslate nohighlight">\(j\)</span> given that it started in state <span class="math notranslate nohighlight">\(i\)</span>.</p>
+</div>
+<div class="section" id="the-expected-number-of-steps-until-absorption">
+<h5>The expected number of steps until absorption.<a class="headerlink" href="#the-expected-number-of-steps-until-absorption" title="Permalink to this headline">¶</a></h5>
+<p>Given <span class="math notranslate nohighlight">\(N\)</span>, the expected number of steps until absorption is given by the vector:</p>
+<div class="math notranslate nohighlight">
+\[
+t = N \mathbb{1}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbb{1}\)</span> denotes a vector of 1s.</p>
+</div>
+</div>
+<div class="section" id="reference">
+<h4>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="list-of-functionality">
+<h5>List of functionality<a class="headerlink" href="#list-of-functionality" title="Permalink to this headline">¶</a></h5>
+<p>The following functions are written in <code class="docutils literal notranslate"><span class="pre">absorption</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">get_long_run_state</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">extract_Q</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">compute_N</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">compute_t</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="bibliography">
+<h5>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h5>
+<p>The wikipedia page on absorbing Markov chains gives a good overview of the
+topic: <a class="reference external" href="https://en.wikipedia.org/wiki/Absorbing_Markov_chain">https://en.wikipedia.org/wiki/Absorbing_Markov_chain</a></p>
+<p>The following text is a recommended reference on Markov chains:</p>
+<blockquote>
+<div><p>Stewart, William J. Probability, Markov chains, queues, and simulation: the
+mathematical basis of performance modelling. Princeton university press, 2009.</p>
+</div></blockquote>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./building-tools/06-documentation/tutorial"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../introduction/main.html" title="previous page">Documentation</a>
+    <a class='right-next' id="next-link" href="../how/main.html" title="next page">How</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Vincent Knight<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-38016329-2', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

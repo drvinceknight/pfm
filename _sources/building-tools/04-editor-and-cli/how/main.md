@@ -134,6 +134,7 @@ This interface to Python is quite limited and should only be used for quick
 access to Python as a way to run simple commands.
 ```
 
+(how_to_install_a_vscode_plugin)=
 ## How to install VScode plugins
 
 VScode is a powerful editor with a number of plugins for different languages and

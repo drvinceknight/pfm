@@ -35,7 +35,7 @@ At that stage it is possible to uses any python object (a `function`, a `class`,
 <file>.variable
 ```
 
-See the {ref}`modularisation` for examples of this.
+See the {ref}`modularisation_tutorial` for examples of this.
 
 ## How to break up code in to modular components
 
