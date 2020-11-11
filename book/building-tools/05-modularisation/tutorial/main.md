@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-(modularisation)=
+(modularisation_tutorial)=
 # Tutorial
 
 We will here consider a specific problem of a general type. We will not

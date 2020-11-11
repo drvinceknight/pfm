@@ -88,6 +88,12 @@
     - file: building-tools/05-modularisation/how/main
     - file: building-tools/05-modularisation/exercises/main
     - file: building-tools/05-modularisation/why/main
+  - file: building-tools/06-documentation/introduction/main
+    sections:
+    - file: building-tools/06-documentation/tutorial/main
+    - file: building-tools/06-documentation/how/main
+    - file: building-tools/06-documentation/exercises/main
+    - file: building-tools/06-documentation/why/main
 - part: Further information
   chapters:
   - file: further-information/01-numpy/introduction/main

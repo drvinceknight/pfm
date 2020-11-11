@@ -30,6 +30,8 @@ def path_in_book(path):
         return False
     if "README.md" in str(path):
         return False
+    if "documentation_in_vscode" in str(path):
+        return False
     return True
 
 

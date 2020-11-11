@@ -12,13 +12,14 @@ kernelspec:
   name: python3
 ---
 
+(modularisation_exercises)=
 # Exercises
 
 **After** completing the tutorial attempt the following exercises.
 
 **If you are not sure how to do something, have a look at the "How To" section.**
 
-1. Use the code written in the {ref}`modularisation` to obtain the average time
+1. Use the code written in the {ref}`modularisation_tutorial` to obtain the average time
    until absorption of the Markov chains with the following transition matrices:
    1. $P = \begin{pmatrix}1/2 & 1/2 \\ 0 & 1 \end{pmatrix}$
    2. $P = \begin{pmatrix}1/2 & 1/4 & 1/4\\ 1/3 & 1/3 & 1/3  \\0 & 0 & 1 \end{pmatrix}$
