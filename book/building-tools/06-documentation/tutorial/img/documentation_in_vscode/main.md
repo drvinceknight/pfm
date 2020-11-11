@@ -85,7 +85,7 @@ import numpy as np
 import absorption
 
 pi = np.array([0, 1, 0])
-P = np.array([[1 / 3, 1 / 3, 1 / 3], [1 / 4, 1 / 4, 1 / 2], [0, 0, 1])
+P = np.array([[1 / 3, 1 / 3, 1 / 3], [1 / 4, 1 / 4, 1 / 2], [0, 0, 1]])
 absorption.get_long_run_state(pi=pi, k=10, P=P)
 ```
 

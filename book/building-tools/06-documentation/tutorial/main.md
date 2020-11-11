@@ -144,7 +144,7 @@ import numpy as np
 import absorption
 
 pi = np.array([0, 1, 0])
-P = np.array([[1 / 3, 1 / 3, 1 / 3], [1 / 4, 1 / 4, 1 / 2], [0, 0, 1])
+P = np.array([[1 / 3, 1 / 3, 1 / 3], [1 / 4, 1 / 4, 1 / 2], [0, 0, 1]])
 absorption.get_long_run_state(pi=pi, k=10, P=P)
 ```
 
@@ -218,11 +218,6 @@ This gives:
 array([3.33333333, 3.66666667])
 ```
 ````
-
-```{attention}
-There is actually a small error in one of the code snippets above. We will see
-how protect our documentation from these errors in the next chapter.
-```
 
 This **how to** section is an efficient collection of recipes to be
 able to carry out specific tasks made possible by the software.
@@ -476,7 +471,7 @@ import numpy as np
 import absorption
 
 pi = np.array([0, 1, 0])
-P = np.array([[1 / 3, 1 / 3, 1 / 3], [1 / 4, 1 / 4, 1 / 2], [0, 0, 1])
+P = np.array([[1 / 3, 1 / 3, 1 / 3], [1 / 4, 1 / 4, 1 / 2], [0, 0, 1]])
 absorption.get_long_run_state(pi=pi, k=10, P=P)
 ```
 
