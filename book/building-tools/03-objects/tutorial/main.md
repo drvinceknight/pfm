@@ -13,6 +13,7 @@ kernelspec:
 ---
 
 (objects_tutorial)=
+
 # Tutorial
 
 We will here write some code to create and manipulate quadratic expressions.
@@ -99,7 +100,6 @@ g
 
 Now we are going to create $h(x) = f(x) + g(x)$. This is using the `__add__`
 function in the background:
-
 
 ```{code-cell} ipython3
 h = f + g

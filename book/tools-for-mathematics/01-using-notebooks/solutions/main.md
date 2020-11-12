@@ -27,7 +27,6 @@ Click the toggle ("Click to Show") to see a demo of this:
 
 ## Question 2
 
-
 > `2`. Write and run some Python code to carry out the following calculations
 
 > `1`. $3 + 8$
@@ -54,7 +53,6 @@ Click the toggle ("Click to Show") to see a demo of this:
 456 / 21
 ```
 
-
 > `4`. $\frac{4 ^ 3 + 2}{2\times 5} - 5 ^ {\frac{1}{2}}$
 
 ```{code-cell} ipython3
@@ -71,7 +69,7 @@ Click the toggle ("Click to Show") to see a demo of this:
 # Euler's equation
 
 \\[
- e ^ {i\pi} = -1
+e ^ {i\pi} = -1
 \\]
 ```
 
@@ -102,6 +100,7 @@ Click the toggle ("Click to Show") to see a demo of this:
 ```
 \\(\frac{df}{dx}\\)
 ```
+
 > `4`. $\int_{5}^{12}x^2dx$
 
 ```

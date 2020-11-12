@@ -13,6 +13,7 @@ kernelspec:
 ---
 
 (modularisation_exercises)=
+
 # Exercises
 
 **After** completing the tutorial attempt the following exercises.
@@ -26,6 +27,7 @@ kernelspec:
    3. $P = \begin{pmatrix}1 & 0 \\ 1/2 & 1/2 \end{pmatrix}$
    4. $P = \begin{pmatrix}1/2 & 1/4 & 1/4\\ 1/3 & 1/3 & 1/3  \\1/5 & 0 & 4/5 \end{pmatrix}$
 2. Modularise the following code by converting it to 2 functions:
+
    ```
    def sample_experiment(bag):
        """
@@ -51,7 +53,9 @@ kernelspec:
            coin = "Tails"
        return selected_token, coin
    ```
+
 3. Modularise the following code by converting it to 3 functions:
+
    ```
    import math
 
@@ -72,8 +76,10 @@ kernelspec:
    ```
 
    Confirm your work by comparing to the results of using `sympy.isprime`.
+
 4. Write a `stats.py` file with two functions to implement the calculations of
    mean, median and variance of the following collections of numbers:
+
    1. $S_1=(1, 2, 3, 4, 4, 4, 4, 4)$
    2. $S_1=(1)$
    3. $S_1=(1, 1, 1, 2, 3, 4, 4, 4, 4, 4)$
@@ -81,6 +87,7 @@ kernelspec:
    Compare your results to the results of using the `statistics.mean`,
    `statistics.median` and `statistics.variance`. Note: the `statistics` library
    is part of the standard python library.
+
 5. Write a `calculus.py` file with tools to be able to find and qualify (using
    the second derivative test) the inflection
    points of a given quadratic (assumed to be a Sympy expression).

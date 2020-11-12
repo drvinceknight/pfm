@@ -13,6 +13,7 @@ kernelspec:
 ---
 
 (matplotlib)=
+
 # Matplotlib
 
 Visualisation of data is important in mathematics. This often starts by plotting

@@ -14,7 +14,6 @@ kernelspec:
 
 # How
 
-
 ## Calculate the derivative of an expression.
 
 We can calculate the derivative of an expression using `sympy.diff` which takes,

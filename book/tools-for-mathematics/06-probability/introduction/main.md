@@ -13,6 +13,7 @@ kernelspec:
 ---
 
 (probability)=
+
 # Probability
 
 Probability is the study of random events. Computers are particularly helpful

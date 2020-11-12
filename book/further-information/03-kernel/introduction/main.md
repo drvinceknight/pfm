@@ -13,11 +13,12 @@ kernelspec:
 ---
 
 (kernels)=
+
 # Kernels
 
 In the first part of the book we used Jupyter notebooks to learn how to
 interactively run python commands.
- 
+
 ```{important}
 In this chapter we will cover:
 

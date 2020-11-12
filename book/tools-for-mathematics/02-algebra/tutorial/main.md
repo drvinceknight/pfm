@@ -13,6 +13,7 @@ kernelspec:
 ---
 
 (algebra_tutorial)=
+
 # Tutorial
 
 To demonstrate the ways in which we can use a computer to assist with Algebra we
@@ -86,8 +87,6 @@ sympy.expand((-1 + sympy.sqrt(2)) * (1 + sympy.sqrt(2)))
 
 We see that `sympy` allows us to carry out basic expression manipulation. We
 will now consider the second part of the question:
-
-
 
 ```{admonition} Problem
 

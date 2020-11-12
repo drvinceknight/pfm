@@ -98,7 +98,6 @@ As described here <https://www.markdownguide.org/getting-started/>:
 > elements to plain text text documents. Created by John Gruber in 2004,
 > Markdown is now one of the world’s most popular markup languages
 
-
 ## What is LaTeX?
 
 As described here <https://www.latex-project.org/about/>:
@@ -117,13 +116,14 @@ now we only need to know that it we can use $\LaTeX$ to write an instruction
 for Jupyter to display mathematics.
 
 (why_do_we_use_brackets_instead_of_dollars_for_latex)=
+
 ## Why do we use `\\(` and `\\)` instead of `$` for LaTeX?
 
 You will see in some places that `$` can be used as a delimiter for LaTeX. This
 is not recommended for a number of reasons one of which is given at
 <https://vknight.org/tex/#12-inline-mathematics>:
 
-> Note that using \( and \) is preferred over $. One of the reasons is that it
+> Note that using \( and \) is preferred over \$. One of the reasons is that it
 > is easier for humans (and machines) to find the start and end of some
 > mathematics.
 

@@ -13,6 +13,7 @@ kernelspec:
 ---
 
 (modularisation_tutorial)=
+
 # Tutorial
 
 We will here consider a specific problem of a general type. We will not
@@ -156,7 +157,7 @@ P = \begin{pmatrix}
     \end{pmatrix}
 $$
 
-In this case the *fundamental matrix* is defined by:
+In this case the _fundamental matrix_ is defined by:
 
 $$
     N = (I - Q) ^ {- 1}
@@ -172,7 +173,7 @@ $$
 
 where \mathbb{1} is a column of 1s.
 
-To be able to code this we want to write a function to compute $t$ but this 
+To be able to code this we want to write a function to compute $t$ but this
 requires "extracting" $Q$ from $P$:
 
 ```{code-cell} ipython3
@@ -227,7 +228,6 @@ def compute_N(Q):
 
 This now allows us to redefine `compute_t` in a simpler way:
 
-
 ```{code-cell} ipython3
 def compute_t(P):
     """
@@ -260,7 +260,7 @@ The three modularised functions in a python file.
 
 We will now use everything we have done so far:
 
-- Download, and extract the data available at 
+- Download, and extract the data available at
   [10.5281/zenodo.4236275](https://zenodo.org/record/4236275). Put the
   `main.csv` file in the `snakes_and_ladders` directory
 - Open a Jupyter notebook and call it `main.ipynb` also in the
@@ -313,4 +313,3 @@ Now to compute the average length of the game:
 t = absorption.compute_t(P)
 t[0]
 ```
-

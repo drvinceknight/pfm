@@ -14,8 +14,8 @@ kernelspec:
 
 # How
 
-
 (create_a_tuple)=
+
 ## Create a tuple
 
 To create a tuple which is an ordered collection of objects that cannot be
@@ -50,6 +50,7 @@ basket[1]
 ```
 
 (creating_boolean_variables)=
+
 ## Creating boolean variables
 
 A boolean variable has one of two values: `True` or `False`.
@@ -115,6 +116,7 @@ False or False
 ```
 
 (creating_an_iterable_with_a_given_number_of_items)=
+
 ## Creating an iterable with a given number of items
 
 The `range` tool gives a given number of integers.
@@ -208,13 +210,11 @@ $$
 
 and is done using the following:
 
-
 ```python
 sum(f(object) for object in old_list)
 ```
 
 Here is an example of calculating the following sum:
-
 
 $$
     \sum_{n=0}^{10} n ^ 2

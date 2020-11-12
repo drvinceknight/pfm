@@ -16,7 +16,6 @@ kernelspec:
 
 We will solve the following problem using a computer to assist with the technical aspects:
 
-
 ```{admonition} Problem
 
 Consider the function $f(x)= \frac{24 x \left(a - 4 x\right) + 2 \left(a - 8 x\right) \left(b - 4 x\right)}{\left(b - 4 x\right)^{4}}$

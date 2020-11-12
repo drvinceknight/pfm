@@ -10,4 +10,4 @@ To compile the LaTeX document:
 
 To convert `main.pdf` to `png`:
 
-    $ convert -density 300 main.pdf -quality 90 main.png 
+    $ convert -density 300 main.pdf -quality 90 main.png

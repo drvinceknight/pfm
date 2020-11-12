@@ -253,7 +253,6 @@ for x, y in (
 All the coefficients are the same, we will go ahead and add a plot of them to
 each plot:
 
-
 ```{code-cell} ipython3
 :tags: [nbval-ignore-output, style-check-ignore]
 

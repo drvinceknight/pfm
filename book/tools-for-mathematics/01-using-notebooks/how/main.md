@@ -48,6 +48,7 @@ In a Jupyter notebook cell write an instruction, for example:
 and click on the `Run` button or use `Shift + Enter` as a keyboard shortcut.
 
 (carry_out_basic_arithmetic_operations)=
+
 ## Carry out basic arithmetic operations
 
 The python code for the following arithmetic operations are:
@@ -55,10 +56,10 @@ The python code for the following arithmetic operations are:
 1. Addition, $2 + 2$: `2 + 2`;
 2. Subtraction, $3 - 1$: `3 - 1`;
 3. Multiplication, $3 \times 5$: `3 * 5`;
-5. Division, $20 / 5$: `20 / 5`;
-6. Exponentiation, $2 ^ 4$: `2 ** 4`;
-7. Integer remainder, $5 \mod 2$: `5 % 2`;
-8. Combining operations, $\frac{2 ^ 3 + 1}{4}$: `(2 ** 3 + 1) / 4`;
+4. Division, $20 / 5$: `20 / 5`;
+5. Exponentiation, $2 ^ 4$: `2 ** 4`;
+6. Integer remainder, $5 \mod 2$: `5 % 2`;
+7. Combining operations, $\frac{2 ^ 3 + 1}{4}$: `(2 ** 3 + 1) / 4`;
 
 **Note** that instructions to a computer (through the code we write) need to be specific. For example the `^` symbol in Python does not mean exponentiation. If you were to type `2 ^ 4` you would get an error.
 
@@ -82,7 +83,6 @@ include various types of formatting which include:
 The syntax is relatively straightforward and the following is a good guide:
 
 <https://www.markdownguide.org/cheat-sheet/>
-
 
 ## Write basic LaTeX
 
@@ -126,7 +126,6 @@ $$
 
 We can write integrals:
 
-
 ```
 \\[
     \int_{0}^{\infty}x dx
@@ -140,7 +139,6 @@ $$
 $$
 
 We can write summations:
-
 
 ```
 \\[

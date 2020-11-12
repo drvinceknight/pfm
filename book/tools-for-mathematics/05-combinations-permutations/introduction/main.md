@@ -22,7 +22,6 @@ Computers are useful when doing this as they can be used to generate the finite
 sets we want. Thus we can essentially count things "by hand" (using a computer)
 to confirm theoretic results. We will see how to do this here.
 
-
 ```{important}
 In this chapter we will cover:
 

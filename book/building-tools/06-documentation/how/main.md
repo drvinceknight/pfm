@@ -58,7 +58,6 @@ Here is some code:
     x = sym.Symbol("x")
 ```
 
-
 Would render as:
 
 ---
@@ -75,7 +74,6 @@ Here is some code:
 Using an indented block does not allow you to specify the language and can lead
 to mistake when combining with other nested statement.
 ```
-
 
 ## How to write a tutorial
 
