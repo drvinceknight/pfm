@@ -23,7 +23,7 @@ The Fibonacci numbers are defined by the following sequence:
 $$
 \left\{\begin{array}{l}
     a_0 = 0,\\
-    a_1 = 1,\\ 
+    a_1 = 1,\\
     a_n = a_{n - 1} + a_{n - 2}, n \geq 2\end{array}\right.
 $$
 

@@ -58,8 +58,7 @@ sum(
 ) / number_of_experiments
 ```
 
-
-> `3`.  $\frac{1}{100}$
+> `3`. $\frac{1}{100}$
 
 ```{code-cell} ipython3
 :tags: [nbval-ignore-output]
@@ -77,7 +76,7 @@ sum(
 ) / number_of_experiments
 ```
 
-> `4`.  $1$
+> `4`. $1$
 
 ```{code-cell} ipython3
 :tags: [nbval-ignore-output]
@@ -205,7 +204,6 @@ def sample_experiment(bag):
     return selected_token, coin
 ```
 
-
 ```{code-cell} ipython3
 :tags: [nbval-ignore-output]
 
@@ -215,7 +213,6 @@ random.seed(0)
 samples = [sample_experiment(bag=bag) for repetition in range(number_of_repetitions)]
 sum(token == "Red" for token, coin in samples) / number_of_repetitions
 ```
-
 
 > `2`. Approximate the probability of obtaining Heads?
 
@@ -233,9 +230,9 @@ sum(token == "Red" for token, coin in samples_with_heads) / len(samples_with_hea
 ## Question 4
 
 > `4`. On a randomly chose day, the probability of an individual travelling to
->    school by car, bicycle or on foot is $1/2$, $1/6$ and $1/3$ respectively.
->    The probability of being late when using these methods of travel is $1/5$,
->    $2/5$ and $1/10$ respectively.
+> school by car, bicycle or on foot is $1/2$, $1/6$ and $1/3$ respectively.
+> The probability of being late when using these methods of travel is $1/5$,
+> $2/5$ and $1/10$ respectively.
 
 > `1`. Approximate the probability that an individual travels by foot and is late.
 
@@ -281,11 +278,9 @@ sum(
 
 > `2`. Approximate the probability that an individual is not late.
 
-
 ```{code-cell} ipython3
 sum(not is_late for travel_method, is_late in samples) / number_of_repetitions
 ```
-
 
 > `3`. Given that an individual is late, approximate the probability that they did not travel on foot.
 

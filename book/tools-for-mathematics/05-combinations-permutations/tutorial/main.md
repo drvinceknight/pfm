@@ -17,7 +17,6 @@ kernelspec:
 We will solve the following problem using a computer to illustrate how a
 computer can be used to solve combinatorial problems:
 
-
 ```{admonition} Problem
 
 The digits 1, 2, 3, 4 and 5 are arranged in random order, for form a five-digit number.
@@ -90,7 +89,6 @@ math.factorial(5)
 
 In order to find out how many 5 digit numbers are odd we are going to compute
 the following sum:
-
 
 $$
     \sum_{\pi \in \Pi} \pi_5 \mod 2

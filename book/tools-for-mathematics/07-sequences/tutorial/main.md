@@ -59,7 +59,6 @@ This is similar to the mathematical definition the Python definition of
 the function refers to itself.
 ```
 
-
 We can use this to compute $a_3$ for $k=4$:
 
 ```{code-cell} ipython3

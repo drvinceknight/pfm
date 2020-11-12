@@ -24,7 +24,6 @@ pattern) or to only use a `while` loop.
 Because of this, it is often the case that you will see code that uses `while`
 loops instead of `for` loops. For example:
 
-
 ```{code-cell} ipython3
 seasons = ("Winter", "Spring", "Summer", "Autumn")
 
@@ -86,7 +85,6 @@ number_of_selections
 ```
 
 However this is not as clear as writing:
-
 
 ```{code-cell} ipython3
 import random

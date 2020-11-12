@@ -33,7 +33,6 @@ def get_sequence_a(n):
 [get_sequence_a(n) for n in range(1, 11)]
 ```
 
-
 > `2`. $\left\{\begin{array}{l}b_1 = 3,\\b_n = 6b_{n - 1}, n > 1\end{array}\right.$
 
 ```{code-cell} ipython3
@@ -102,15 +101,13 @@ def get_sequence_d(n):
 [get_sequence_d(n) for n in range(1, 11)]
 ```
 
-
 2. Using recursion, obtain the first 5 terms of the Fibonacci sequence:
 
-    $$\left\{\begin{array}{l}
-        a_0 = 0,\\
-        a_1 = 1,\\ 
-        a_n = a_{n - 1} + a_{n - 2}, n \geq 2\end{array}\right.
-    $$
-
+   $$
+       a_0 = 0,\\
+       a_1 = 1,\\
+       a_n = a_{n - 1} + a_{n - 2}, n \geq 2\end{array}\right.
+   $$
 
 ```{code-cell} ipython3
 def get_fibonacci(n):
@@ -146,14 +143,13 @@ sequence of the form:
 $$
   \left\{
     \begin{array}{l}
-       a_1 = a,\\ 
+       a_1 = a,\\
        a_n = a_{n - 1} + d
     \end{array}
   \right.
 $$
 
 We will write a function to express this:
-
 
 ```{code-cell} ipython3
 def get_arithmetic_sequence(n, first_term, common_difference):
@@ -197,7 +193,6 @@ sym.solveset(a_10_equation, a)
 
 We substitute this in to the other equation and solve it for $d$:
 
-
 ```{code-cell} ipython3
 sym.solveset(a_40_equation.subs({a: 2400 - 9 * d}), d)
 ```
@@ -223,7 +218,9 @@ sum(
 
 > `4`. A sequence is given by:
 
-> $$ \left\{\begin{array}{l}
+> $$
+> $$
+
         x_1 = 1\\
         x_{n + 1}= x_n(p + x_n), n > 1
         \end{array}\right.

@@ -19,9 +19,9 @@ following problem:
 
 ## Solving the problem
 
-````{admonition} Problem
+```{admonition} Problem
 What is the maximum of $e^{\pi}$ or $\pi ^ e$?
-````
+```
 
 We start by creating variables and assigning them to have the value of the two
 numbers we want to compare:
@@ -72,8 +72,7 @@ name: fig:name_error_because_of_not_running_a_cell
 Getting a name error when not running a cell
 ```
 
-The error message is specifically telling us that the command `max(e_to_the_pi,
-pi_to_the_e)` cannot be run because `e_to_the_pi` is not known.
+The error message is specifically telling us that the command `max(e_to_the_pi, pi_to_the_e)` cannot be run because `e_to_the_pi` is not known.
 
 To fix this we return the first cell and run it before running the second cell
 again. This is shown in Figure {ref}`fig:rerunning_the_name_error`.

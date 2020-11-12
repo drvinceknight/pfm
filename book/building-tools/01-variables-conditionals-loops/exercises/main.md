@@ -32,6 +32,7 @@ kernelspec:
    1. What is the first value of $n$ for which that polynomial is not prime?
    2. How many **unique** primes up until the first non prime value are there?
       (Hint: the `set` tool might prove useful here.)
+
 3. Check the following identify for each value of $n\in\{0, 10, 100, 2000\}$:
 
    $$

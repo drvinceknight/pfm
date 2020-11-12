@@ -17,7 +17,6 @@ kernelspec:
 We will solve the following problem using a computer to estimate the expected
 probabilities:
 
-
 ```{admonition} Problem
 
 An experiment consists of selecting a token from a bag and spinning a coin. The
@@ -289,7 +288,6 @@ $$
 
 20 / 41
 ```
-
 
 ```{important}
 In this tutorial we have

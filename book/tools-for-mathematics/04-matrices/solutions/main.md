@@ -18,7 +18,7 @@ kernelspec:
 
 > `1`. Obtain the determinant and the inverses of the following matrices:
 
->   `1`. $A = \begin{pmatrix} 1 / 5 & 1\\1 & 1\end{pmatrix}$
+> `1`. $A = \begin{pmatrix} 1 / 5 & 1\\1 & 1\end{pmatrix}$
 
 ```{code-cell} ipython3
 import sympy as sym
@@ -31,9 +31,7 @@ A.det()
 A.inv()
 ```
 
-
 > `2`. $B = \begin{pmatrix} 1 / 5 & 1 & 5\\3 & 1 & 6 \\ 1 & 2 & 1\end{pmatrix}$
-
 
 ```{code-cell} ipython3
 B = sym.Matrix([[sym.S(1) / 5, 1, 5], [3, 1, 6], [1, 2, 1]])
@@ -68,7 +66,6 @@ A
 ```
 
 > `2`. $\pi \begin{pmatrix} 1 / \pi & 2\pi\\3/\pi & 1\end{pmatrix}$
-
 
 ```{code-cell} ipython3
 B = sym.pi * sym.Matrix([[1 / sym.pi, 2 * sym.pi], [3 / sym.pi, 1]])
@@ -111,11 +108,14 @@ sym.solveset(determinant, a)
 > `3`. State, giving a brief reason in each case, whether the simultaneous equations
 >
 > $$
-\begin{array}{l}
+> \begin{array}{l}
+> $$
+
           a x + 4y + 2z= 3a\\
            x + a y  = 1\\
             x + 2y + z = 3\\
       \end{array}
+
 $$
 > have any solutions when:
 > `1`. $a = 3$;
@@ -155,3 +155,4 @@ This corresponds to calculating: $D^{-1} \begin{pmatrix}3\\4\\1\end{pmatrix}$
 b = sym.Matrix([[3], [4], [1]])
 D_inverse @ b
 ```
+$$

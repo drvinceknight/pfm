@@ -13,6 +13,7 @@ kernelspec:
 ---
 
 (cli_editor_tutorial)=
+
 # Tutorial
 
 We will here consider a problem we have already solved (in the Algebra
@@ -33,7 +34,6 @@ Open a command line tool:
 
 Whether or not your are on Windows or OS X changes the commands you need to
 type. We will first list the directory we are currently in:
-
 
 ````{panels}
 On Windows:
@@ -63,7 +63,6 @@ can navigate to a directory in the command line.
 
 To do this we use the same command on both operating systems:
 
-
 ````{panels}
 On Windows:
 
@@ -85,7 +84,6 @@ We will do this to navigate to our `cfm` directoy. For example if, as in the
 Algebra {ref}`algebra_tutorial` the `cfm` directory was on the `Desktop`
 directory we would run the following:
 
-
 ````{panels}
 On Windows:
 
@@ -105,15 +103,12 @@ $ cd cfm
 
 ````
 
-
 ```{attention}
 The two statements are written under each other to denote that they are run
 one after the other.
 ```
 
 We will now create a new directory:
-
-
 
 ````{panels}
 On Windows:
@@ -135,7 +130,6 @@ $ mkdir scripts
 Inside this directory we will run the same command as before to see the
 contents:
 
-
 ````{panels}
 On Windows:
 
@@ -156,7 +150,6 @@ $ ls
 If you have followed the same steps described in {ref}`using_notebooks` then you
 will see something similar to:
 
-
 ```{figure} ./img/output_of_dir/main.png
 ---
 width: 75%
@@ -164,7 +157,6 @@ name: fig:output_of_dir
 ---
 The contents of our directory on Windows
 ```
-
 
 ```{figure} ./img/output_of_ls/main.png
 ---
@@ -255,7 +247,6 @@ $ cd scripts
 ````
 
 Now confirm that the `algebra.py` file is in that directory:
-
 
 ````{panels}
 On Windows:

@@ -20,7 +20,6 @@ to include both code and prose in the same document. From this part of the book
 onwards we will explore another approach to use Python which is to use the
 command line as a direct interface to your operating system and a code editor.
 
-
 ```{important}
 In this chapter we will cover:
 

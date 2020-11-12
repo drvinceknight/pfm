@@ -156,7 +156,7 @@ sympy.solveset(equation, variable)
 Here is how we can use `sympy` to obtain the roots of the general quadratic:
 
 \\[
-    a x ^ 2 + bx + c
+a x ^ 2 + bx + c
 \\]
 
 ```{code-cell} ipython3

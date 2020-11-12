@@ -62,7 +62,7 @@ many languages.
 I recommend experimenting with IDEs and/or editors to find what you prefer but
 throughout this book we will use VScode.
 
-## Why can I not use ``\\(`` and ``\\)`` for markdown in VScode.
+## Why can I not use `\\(` and `\\)` for markdown in VScode.
 
 When using Jupyter notebooks or the markdown preview feature in VScode the
 single `$` and `$$` must be used as delimiters for mathematics. (See

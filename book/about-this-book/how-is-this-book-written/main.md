@@ -50,12 +50,15 @@ The aspell <http://aspell.net> spell checker is used to check the spelling of
 the text.
 
 <!--alex disable black-->
+
 (black)=
+
 ### Black
 
 All code in book is checked using the `black` code formatter
 <https://github.com/psf/black> this ensures that not only PEP8 is followed but
 that a specific consistent formatting convention is used.
+
 <!--alex enable black-->
 
 ### Isort

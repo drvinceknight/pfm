@@ -62,6 +62,7 @@ kernelspec:
 
    To approximate $P$ create $N=1000$ instances of Drops and count the
    number of those that are in the circle. Use this to approximate $\pi$.
+
 4. In a similar fashion to question 3, approximate the integral
    $\int_{0}^11-x^2\;dx$. Recall that the integral corresponds to the area
    under a curve.

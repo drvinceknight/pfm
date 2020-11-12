@@ -93,7 +93,6 @@ variable we again use the `=` operator which is the assignment operator. We
 create the name of the variable then the assignment operator followed by the
 boolean variable (either `True` or `False`).
 
-
 ````{tip}
 ```
 name_of_variable = boolean_value
@@ -111,7 +110,6 @@ john_nash_has_a_noble
 {ref}`creating_boolean_variables` gives an overview of how to create boolean
 variables from other variables.
 ```
-
 
 ## How to check the type of a variable
 
@@ -154,10 +152,10 @@ Numeric values can be combined to create new numeric variables.
 1. Addition, $2 + 2$: `2 + 2`;
 2. Subtraction, $3 - 1$: `3 - 1`;
 3. Multiplication, $3 \times 5$: `3 * 5`;
-5. Division, $20 / 5$: `20 / 5`;
-6. Exponentiation, $2 ^ 4$: `2 ** 4`;
-7. Integer remainder, $5 \mod 2$: `5 % 2`;
-8. Combining operations, $\frac{2 ^ 3 + 1}{4}$: `(2 ** 3 + 1) / 4`;
+4. Division, $20 / 5$: `20 / 5`;
+5. Exponentiation, $2 ^ 4$: `2 ** 4`;
+6. Integer remainder, $5 \mod 2$: `5 % 2`;
+7. Combining operations, $\frac{2 ^ 3 + 1}{4}$: `(2 ** 3 + 1) / 4`;
 
 For example:
 
@@ -193,7 +191,7 @@ money = money * 3
 
 ## How to include variables in strings
 
-Variables can be used in strings using *string formatting*. There are numerous
+Variables can be used in strings using _string formatting_. There are numerous
 ways this can be done in Python but the current best practice is to use
 `f`-strings.
 
@@ -215,6 +213,7 @@ string
 ```
 
 (how_to_combine_boolean_variables)=
+
 ## How to combine boolean variables
 
 Boolean variables can be combined using the logical operators `and` and `or`.
@@ -225,7 +224,6 @@ new_boolean = first_boolean and second_boolean
 ```
 ```
 ````
-
 
 ````{tip}
 ```
@@ -276,7 +274,6 @@ the `else` is often not needed.
 
 For example the following code selects a random integer between 0 and 100 and
 then prints a different string depending on what the number was.
-
 
 ```{code-cell} ipython3
 import random
@@ -335,6 +332,7 @@ code a known number of items.
 ```
 
 (repeat_code_while_a_given_condition_holds)=
+
 ## Repeat code **while** a given condition holds
 
 To repeat code while a condition holds a `while` loop can be used. Similarly to
@@ -342,7 +340,6 @@ the `if` statement, Following a `while` a boolean
 variable is expected, if that boolean is `True` then the indented code that
 follows is repeated. After it is run, the boolean is checked once more. When the
 boolean is `False` the indented code is skipped.
-
 
 ````{tip}
 ```

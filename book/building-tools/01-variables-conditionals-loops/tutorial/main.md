@@ -120,7 +120,7 @@ and
 
 ```{code-cell} ipython3
 sym.isprime(p(n))
-````
+```
 
 `sympy` can also factor the number for us:
 

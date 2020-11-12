@@ -20,19 +20,20 @@ kernelspec:
 
 1. Create a new notebook rename it "exercises". Navigate to it using your file browser to make sure you can find it.
 2. Write and run some Python code to carry out the following calculations
-    1. $3 + 8$
-    2. $3 / 7$
-    3. $456 / 21$
-    4. $\frac{4 ^ 3 + 2}{2\times 5} - 5 ^ {\frac{1}{2}}$
+   1. $3 + 8$
+   2. $3 / 7$
+   3. $456 / 21$
+   4. $\frac{4 ^ 3 + 2}{2\times 5} - 5 ^ {\frac{1}{2}}$
 3. Write a markdown cell with the following and view the rendered version:
 
-    ```md
-    # Euler's equation
+   ```md
+   # Euler's equation
 
-    \\[
-     e ^ {i\pi} = -1
-    \\]
-    ```
+   \\[
+   e ^ {i\pi} = -1
+   \\]
+   ```
+
 4. Render the following expressions by writing markdown
    1. $\frac{4 ^ 3 + 2}{2\times 5}$
    2. $- 5 ^ {\frac{1}{2}}$

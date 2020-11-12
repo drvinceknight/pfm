@@ -266,3 +266,15 @@ def testnbs(c, root=ROOT):
     Test all notebooks.
     """
     c.run(f"python -m pytest --nbval --ignore=_build/ --current-env")
+
+
+@task
+def pretty(c, root=ROOT, check=False):
+    """
+    Test all notebooks.
+    """
+    pattern = '*/**/*.{md, yml}'
+    if check is True:
+        c.run(f"npx prettier --check '{pattern}'")
+    if check is False:
+        c.run(f"npx prettier --write '{pattern}'")

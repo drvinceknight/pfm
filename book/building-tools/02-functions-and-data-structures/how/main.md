@@ -46,8 +46,7 @@ Set operations between two sets can be done using Python:
 - $S_1 \cup S_2$: `set_1 | set_2`
 - $S_1 \cap S_2$: `set_1 & set_2`
 - $S_1 \setminus S_2$: `set_1 - set_2`
-- $S_1 \subseteq S_2$ (checking if $S_1$ is a subset of $S_2$): `set_1 <=
-  set_2`
+- $S_1 \subseteq S_2$ (checking if $S_1$ is a subset of $S_2$): `set_1 <= set_2`
 
 Here are some examples of carrying out the above:
 

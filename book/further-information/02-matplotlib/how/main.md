@@ -89,7 +89,6 @@ plt.scatter(x, y)
 For example the following will draw two different functions $f(x) = cos(x)$ and
 $g(x)=sin(x)$ (we include an argument to plot $g$ in red):
 
-
 ```{code-cell} ipython3
 :tags: [nbval-ignore-output, style-check-ignore]
 
@@ -213,7 +212,6 @@ plt.legend();
 
 To save a plot to file we use the `matplotlib.pyplot.savefig` tool that takes a
 string as an argument for the name of the file.
-
 
 ````{tip}
 ```
