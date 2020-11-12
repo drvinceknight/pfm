@@ -78,7 +78,6 @@ import numpy as np
 np.zeros(4)
 ```
 
-
 Or:
 
 ```{code-cell} ipython3

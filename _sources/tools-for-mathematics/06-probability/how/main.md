@@ -15,6 +15,7 @@ kernelspec:
 # How to
 
 (create_a_list)=
+
 ## Create a list
 
 To create a list which is an ordered collection of objects that **can** be
@@ -80,7 +81,7 @@ def x_cubed(x):
     return x ** 3
 ```
 
-It is important to include the *docstring* as this allows us to make sure our
+It is important to include the _docstring_ as this allows us to make sure our
 code is clear. We can access that docstring using `help`:
 
 ```{code-cell} ipython3
@@ -118,7 +119,6 @@ x_cubed(x)
 
 To run code depending on whether or not a particular condition is met we use
 something called an `if` statement.
-
 
 ````{tip}
 ```
@@ -203,11 +203,11 @@ get_price_of_item("Biscuits")
 get_price_of_item("Rollerblades")
 ```
 
-
 (create_a_list_using_a_list_comprehension)=
+
 ## Create a list using a list comprehension
 
-We can create a new list from an old list using a **list comprehension**. 
+We can create a new list from an old list using a **list comprehension**.
 
 ````{tip}
 ```
@@ -229,7 +229,6 @@ S_2 = \{-3, 0, 5\}
 $$
 
 In Python this is done as follows:
-
 
 ```python
 new_list = [object for object in old_list]
@@ -268,13 +267,11 @@ $$
 
 and is done using the following:
 
-
 ```python
 sum(f(object) for object in old_list)
 ```
 
 This gives the same result as:
-
 
 ```python
 sum([f(object) for object in old_list])

@@ -14,10 +14,9 @@ kernelspec:
 
 # How
 
-## How to define a class 
+## How to define a class
 
 We define a class using the `class` keyword:
-
 
 ````{tip}
 ```
@@ -120,7 +119,6 @@ class Name:
 For example let us create a class for a country that has the ability to "spend"
 magic:
 
-
 ```{code-cell} ipython3
 class Country:
     """
@@ -150,6 +148,7 @@ method exists.
 ```
 
 (how_to_create_and_call_magic_methods)=
+
 ## How to create and call magic methods
 
 Some methods can be called in certain situations:

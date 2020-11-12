@@ -46,7 +46,6 @@ $ cd ..
 In the command line the `mkdir` command (short for "*m*a*k*e *dir*ectory) can be
 used to create a new directory.
 
-
 ````{tip}
 ```
 $ mkdir directory
@@ -135,13 +134,13 @@ access to Python as a way to run simple commands.
 ```
 
 (how_to_install_a_vscode_plugin)=
+
 ## How to install VScode plugins
 
 VScode is a powerful editor with a number of plugins for different languages and
 functionalities.
 
-To install a particular plugin in the menu bar, click on `Code > Preferences >
-Extensions`.
+To install a particular plugin in the menu bar, click on `Code > Preferences > Extensions`.
 
 From there you can search for a specific plugin and install it by clicking on
 the install button.

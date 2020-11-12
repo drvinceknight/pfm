@@ -15,6 +15,7 @@ kernelspec:
 # Further information
 
 (difference_between_a_list_and_a_tuple)=
+
 ## What is the difference between a Python list and a Python tuple?
 
 Two of the most used Python iterables are lists and tuples. In practice they
@@ -79,7 +80,6 @@ $$
 
 where $f(x)= \cos^2(x)$.
 
-
 The correct way to do this is:
 
 ```{code-cell} ipython3
@@ -124,7 +124,6 @@ Here are some other materials on this subject:
 - <https://www.tutorialspoint.com/Why-would-you-use-the-return-statement-in-Python>
 - <https://pythonprinciples.com/blog/print-vs-return/>
 
-
 ## How does Python sample randomness?
 
 When using the Python random module we are in fact generating a pseudo random
@@ -138,7 +137,6 @@ twister algorithm is state of the art.
 
 You can read more about this here:
 <https://docs.python.org/3/library/random.html#module-random>.
-
 
 ## What is the difference between a docstring and a comment
 

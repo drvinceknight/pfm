@@ -150,7 +150,7 @@ import scipy.special
 scipy.special.perm(7, 2)
 ```
 
-> `5`. Combinations of size 3 of  $(0, 1, 2, 3, 4, 5)$.
+> `5`. Combinations of size 3 of $(0, 1, 2, 3, 4, 5)$.
 
 Generating them all:
 
@@ -176,7 +176,7 @@ import scipy.special
 scipy.special.comb(6, 3)
 ```
 
-> `6.` Combinations of size 2 of  $(0, 1, 2, 3, 4, 5)$.
+> `6.` Combinations of size 2 of $(0, 1, 2, 3, 4, 5)$.
 
 Generating them all:
 
@@ -202,7 +202,7 @@ import scipy.special
 scipy.special.comb(6, 2)
 ```
 
-> `7`. Combinations of size 5 of  $(0, 1, 2, 3, 4, 5)$.
+> `7`. Combinations of size 5 of $(0, 1, 2, 3, 4, 5)$.
 
 Generating them all:
 
@@ -253,14 +253,12 @@ students then there are 3 Bewton ones):
 sum(1 for committee in committees if committee == ("Ashville", "Ashville", "Bewton", "Bewton", "Bewton"))
 ```
 
-
 > `2`. In fact 2 students, from Ashville and 3 from Bewton are chosen. In order
 > to watch a video, all 5 committee members sit in a row. In how many different
 > orders can they sit if no two students from Bewton sit next to each other.
 
 To answer this we need to consider committees as permutations (as order
 matters):
-
 
 ```{code-cell} ipython3
 :tags: [output_scroll]
@@ -303,7 +301,6 @@ len(selections)
 
 Note that a string is in fact an iterable so we can also do:
 
-
 ```{code-cell} ipython3
 :tags: [output_scroll]
 
@@ -311,7 +308,6 @@ letters = "COMPUTER"
 selections = tuple(itertools.combinations(letters, 3))
 len(selections)
 ```
-
 
 > `2`. Find the number of selections of 3 letters with the letter `P`.
 

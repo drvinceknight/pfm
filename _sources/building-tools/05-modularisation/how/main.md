@@ -19,7 +19,6 @@ kernelspec:
 Given a `<file.py>` file in a directory any other python process in the same
 directory can import that file as it would a normal library.
 
-
 ````{tip}
 ```
 import <file>
@@ -27,7 +26,7 @@ import <file>
 ````
 
 At that stage it is possible to uses any python object (a `function`, a `class`, a
-`variable`) by referring to the `<file.py>` as  library:
+`variable`) by referring to the `<file.py>` as library:
 
 ```
 <file>.function

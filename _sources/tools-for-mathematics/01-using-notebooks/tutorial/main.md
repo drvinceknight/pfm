@@ -41,7 +41,6 @@ Open a command line tool:
 2. On **OS X** search for `terminal`. See
    {ref}`fig:starting_the_notebook_server`.
 
-
 In there type:
 
     $ jupyter notebook
@@ -165,8 +164,7 @@ In the first available "cell" write the following calculation:
 2 + 2
 ```
 
-When you have done that click on the `Run` button (you can also use `Shift +
-Enter` as a keyboard shortcut).
+When you have done that click on the `Run` button (you can also use `Shift + Enter` as a keyboard shortcut).
 
 ```{figure} ./img/running_code/main.png
 ---
@@ -187,7 +185,6 @@ We see two different things there:
 2. The output: `Out [1]` showing the output that Python has returned as a result
    of the instruction.
 
-
 ## Writing markdown
 
 One of the reasons for using Jupyter notebooks is that it allows us to include
@@ -202,8 +199,7 @@ This allows us to use basic \\(\LaTeX\\) as a way to display mathematics.
 For example:
 
 1. \\(\frac{2}{3}\\)
-2. \\(\sum_{i=0}^n i\\)
-
+2. \\(\sum\_{i=0}^n i\\)
 ```
 
 When you run that it should look like:

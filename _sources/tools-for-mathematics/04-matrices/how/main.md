@@ -48,7 +48,6 @@ It is possible to write the code in a more readable way as long as an incomplete
 line ends with an open bracket:
 ```
 
-
 ```
 B = sym.Matrix(
     [
@@ -152,7 +151,6 @@ matrix + other_matrix
 ## Multiply matrices together
 
 To multiply matrices together we use the `@` operator. For example to compute:
-
 
 $$
     \begin{pmatrix}

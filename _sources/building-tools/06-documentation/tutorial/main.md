@@ -13,6 +13,7 @@ kernelspec:
 ---
 
 (documentation)=
+
 # Tutorial
 
 In this tutorial we will make the code we will write documentation for the code
@@ -129,7 +130,6 @@ directly know how to do a specific tasks.
 
 Directly underneath what we have written so far we write:
 
-
 ````md
 ## How to guides
 
@@ -227,7 +227,7 @@ able to carry out specific tasks made possible by the software.
 In the next section we will write the **explanations** which aims to give more
 in depth understanding not necessarily directly related to the code.
 
-````md
+```md
 ## Explanation
 
 ### Brief overview of absorbing markov chains
@@ -332,7 +332,7 @@ t = N \mathbb{1}
 $$
 
 where $\mathbb{1}$ denotes a vector of 1s.
-````
+```
 
 This **explanations** section gives background reading as to how the code works.
 
@@ -341,7 +341,7 @@ This **explanations** section gives background reading as to how the code works.
 In the next section we will write the **reference** which aims to be a concise
 collection of reference material.
 
-````md
+```md
 ## Reference
 
 ### List of functionality
@@ -362,7 +362,7 @@ The following text is a recommended reference on Markov chains:
 
 > Stewart, William J. Probability, Markov chains, queues, and simulation: the
 > mathematical basis of performance modelling. Princeton university press, 2009.
-````
+```
 
 Figure {ref}`fig:documentation_in_vscode` shows the start of the markdown file
 in VScode alongside the preview (the "Markdown All in One" plugin ensures that

@@ -100,15 +100,14 @@ In practice:
 - Using iteration is more computationally efficient but it is not always
   straightforward to obtain an iterative formula.
 
-
 (what_is_caching)=
+
 ## What is caching
 
 One of the reasons that recursion is computationally inefficient is that it
 always has to recalculate previously calculated values.
 
 For example:
-
 
 $$
     \left\{\begin{array}{l}

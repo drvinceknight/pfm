@@ -21,14 +21,16 @@ kernelspec:
 1. Write a function that generates $n!$.
 2. Write a function that generates the $n$th triangular numbers defined by:
 
-    $$
-        T_n = \frac{n(n+1)}{2}
-    $$
+   $$
+       T_n = \frac{n(n+1)}{2}
+   $$
+
 3. Verify the following that the following identify holds for $n\leq 500$:
 
-    $$
-        \sum_{i=0}^n T_i = \frac{n(n+1)(n+2)}{6}
-    $$
+   $$
+       \sum_{i=0}^n T_i = \frac{n(n+1)(n+2)}{6}
+   $$
+
 4. Consider the [Monty Hall
    problem](https://en.wikipedia.org/wiki/Monty_Hall_problem):
    1. Write a function that simulates the play of the game when you 'stick' with

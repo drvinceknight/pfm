@@ -84,8 +84,8 @@ sym.integrate(expression, x)
 
 ## Question 2
 
-> `2`. Consider the function $f(x)=2x+1$. By differentiating *from first
-> principles* show that $f'(x)=2$.
+> `2`. Consider the function $f(x)=2x+1$. By differentiating _from first
+> principles_ show that $f'(x)=2$.
 
 Using the definition of the derivative:
 
@@ -99,7 +99,7 @@ sym.limit((expression - expression.subs({x: x - h})) / h, h, 0)
 
 > `3`. Consider the second derivative $f''(x)=6x+4$ of some cubic function $f(x)$.
 
->    `1`. Find $f'(x)$
+> `1`. Find $f'(x)$
 
 We know the derivative will be the integral of the second derivative with a
 constant:
@@ -112,7 +112,7 @@ derivative = sym.integrate(second_derivative, x) + c1
 derivative
 ```
 
->    `2`. You are given that $f(0)=10$ and $f(1)=13$, find $f(x)$.
+> `2`. You are given that $f(0)=10$ and $f(1)=13$, find $f(x)$.
 
 We know that the cubic will be the integral of the derivative with constant:
 
@@ -179,7 +179,6 @@ This is positive, so it is a local minimum.
 
 > `1`. Find $f'(x)$ and $f''(x)$
 
-
 ```{code-cell} ipython3
 b = sym.Symbol("b")
 expression = sym.S(2) / 3 * x ** 3 + b * x ** 2 + 2 * x + 3
@@ -224,7 +223,6 @@ sym.solveset(derivative)
 
 > `4`. Determine the nature of both stationary points.
 
-
 Substituting both values in to the second derivative:
 
 ```{code-cell} ipython3
@@ -264,7 +262,7 @@ intersection_points
 ```
 
 > `3`. Using your answers to parts 2., calculate the area of the region between
->  $f$ and $g$. Assign this value to a variable `area_between`.
+> $f$ and $g$. Assign this value to a variable `area_between`.
 
 The area between $f$ and $g$ corresponds to the integral of $\pm (f - g)$
 between the points of intersection. We here use $f - g$, if the outcome was

@@ -128,11 +128,11 @@ def get_transition_matrix(N, p):
 get_transition_matrix(N=3, p=0.3)
 ```
 
-````{attention}
+```{attention}
 In the above function we are using the base tool `enumerate` which is a powerful
 Python tool that will iterate over elements in an iterable as well as return the
 index of the items.
-````
+```
 
 Now to find the expected distribution.
 
