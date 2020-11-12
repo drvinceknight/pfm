@@ -273,7 +273,7 @@ def pretty(c, root=ROOT, check=False):
     """
     Test all notebooks.
     """
-    pattern = '*/**/*.{md, yml}'
+    pattern = "*/**/*.{md, yml}"
     if check is True:
         c.run(f"npx prettier --check '{pattern}'")
     if check is False:
