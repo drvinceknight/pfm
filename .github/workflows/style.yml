@@ -56,9 +56,3 @@ jobs:
     - name: Run spell checker
       run: |
         inv spellcheck
-    - name: Install prettier
-      run: |
-        npm install --save-dev --save-exact prettier
-    - name: Check markdown and yml style
-      run: |
-        inv pretty --check
