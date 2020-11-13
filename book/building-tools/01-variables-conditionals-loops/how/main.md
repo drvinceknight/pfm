@@ -292,7 +292,7 @@ message
 
 Given an iterable, it is possible to repeat some code for every item in the
 iterable. This is done using what is called a `for` loop. Following the `for` a
-dummy variable is given then followed by the `in` keyword and the iterable.
+placeholder variable is given then followed by the `in` keyword and the iterable.
 After that the indented code that will be repeated for every value of the
 iterable.
 
