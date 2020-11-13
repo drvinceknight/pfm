@@ -108,15 +108,13 @@ sym.solveset(determinant, a)
 > `3`. State, giving a brief reason in each case, whether the simultaneous equations
 >
 > $$
-> \begin{array}{l}
-> $$
-
+  \begin{array}{l}
           a x + 4y + 2z= 3a\\
-           x + a y  = 1\\
-            x + 2y + z = 3\\
-      \end{array}
+          x + a y  = 1\\
+          x + 2y + z = 3\\
+  \end{array}
+  $$
 
-$$
 > have any solutions when:
 > `1`. $a = 3$;
 
@@ -155,4 +153,3 @@ This corresponds to calculating: $D^{-1} \begin{pmatrix}3\\4\\1\end{pmatrix}$
 b = sym.Matrix([[3], [4], [1]])
 D_inverse @ b
 ```
-$$

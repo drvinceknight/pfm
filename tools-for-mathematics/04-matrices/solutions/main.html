@@ -818,6 +818,11 @@ commentsRunWhenDOMLoaded(addUtterances);
    Question 3
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-4">
+   Question 4
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -1022,37 +1027,56 @@ commentsRunWhenDOMLoaded(addUtterances);
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">3</span></code>. State, giving a brief reason in each case, whether the simultaneous equations</p>
 <div class="math notranslate nohighlight">
-\[
-&gt; \begin{array}{l}
-&gt; \]</div>
-</div></blockquote>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>      a x + 4y + 2z= 3a\\
-       x + a y  = 1\\
-        x + 2y + z = 3\\
+\[\begin{split}
+  \begin{array}{l}
+          a x + 4y + 2z= 3a\\
+          x + a y  = 1\\
+          x + 2y + z = 3\\
   \end{array}
+  \end{split}\]</div>
+</div></blockquote>
+<blockquote>
+<div><p>have any solutions when:
+<code class="docutils literal notranslate"><span class="pre">1</span></code>. <span class="math notranslate nohighlight">\(a = 3\)</span>;</p>
+</div></blockquote>
+<p>When <span class="math notranslate nohighlight">\(a\)</span> is 3 the determinant is none zero, and so the matrix that represents
+that linear system can be inverted.</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">2</span></code>. <span class="math notranslate nohighlight">\(a = 2\)</span></p>
+</div></blockquote>
+<p>When <span class="math notranslate nohighlight">\(a\)</span> is 2 the determinant is zero and so the matrix that represents
+that linear system cannot be inverted.</p>
+</div>
+<div class="section" id="question-4">
+<h2>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">4</span></code>. The matrix <span class="math notranslate nohighlight">\(D\)</span> is given by <span class="math notranslate nohighlight">\(D = \begin{pmatrix} a &amp; 2 &amp; 0\\ 3 &amp; 1 &amp; 2\\ 0 &amp; -1 &amp; 1\end{pmatrix}\)</span> where <span class="math notranslate nohighlight">\(a\ne 2\)</span>.
+<code class="docutils literal notranslate"><span class="pre">1</span></code>. Find <span class="math notranslate nohighlight">\(D^{-1}\)</span>.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="n">D_inverse</span> <span class="o">=</span> <span class="n">D</span><span class="o">.</span><span class="n">inv</span><span class="p">()</span>
+<span class="n">D_inverse</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}- \frac{9}{18 - 9 a} &amp; \frac{6}{18 - 9 a} &amp; - \frac{12}{18 - 9 a}\\\frac{3}{6 - 3 a} &amp; - \frac{a}{6 - 3 a} &amp; \frac{2 a}{6 - 3 a}\\- \frac{3}{3 a - 6} &amp; \frac{a}{3 a - 6} &amp; \frac{a - 6}{3 a - 6}\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">2</span></code>. Hence of otherwise, solve the equations:</p>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}
-&gt; have any solutions when:
-&gt; `1`. $a = 3$;\\When $a$ is 3 the determinant is none zero, and so the matrix that represents
-that linear system can be inverted.\\&gt; `2`. $a = 2$\\When $a$ is 2 the determinant is zero and so the matrix that represents
-that linear system cannot be inverted.\\## Question 4\\\begin{split}&gt; `4`. The matrix $D$ is given by $D = \begin{pmatrix} a &amp; 2 &amp; 0\\ 3 &amp; 1 &amp; 2\\ 0 &amp; -1 &amp; 1\end{pmatrix}$ where $a\ne 2$.
-&gt; `1`. Find $D^{-1}$.\end{split}\\```{code-cell} ipython3
-D = sym.Matrix([[a, 2, 0], [3, 1, 2], [0, -1, 1]])
-D_inverse = D.inv()
-D_inverse
-```\\&gt; `2`. Hence of otherwise, solve the equations:
-&gt;
-&gt; \end{aligned}\end{align} \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>\begin{array}{l}
-    a x + 2y = 3\\
-    3x + y + 2z = 4\\
-    - y + z = 1\\
-\end{array}
-$$
-</pre></div>
-</div>
+\[\begin{split}
+    \begin{array}{l}
+        a x + 2y = 3\\
+        3x + y + 2z = 4\\
+        - y + z = 1\\
+    \end{array}
+    \end{split}\]</div>
+</div></blockquote>
 <p>This corresponds to calculating: <span class="math notranslate nohighlight">\(D^{-1} \begin{pmatrix}3\\4\\1\end{pmatrix}\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1062,18 +1086,10 @@ $$
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">13</span><span class="o">-</span><span class="mi">8</span><span class="n">c69c23df4ab</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">b</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">D_inverse</span> <span class="o">@</span> <span class="n">b</span>
-
-<span class="ne">NameError</span>: name &#39;D_inverse&#39; is not defined
-</pre></div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}- \frac{15}{18 - 9 a}\\- \frac{2 a}{6 - 3 a} + \frac{9}{6 - 3 a}\\\frac{4 a}{3 a - 6} + \frac{a - 6}{3 a - 6} - \frac{9}{3 a - 6}\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
-</div>
-<p>$$</p>
 </div>
 </div>
 
