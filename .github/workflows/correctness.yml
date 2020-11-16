@@ -45,3 +45,6 @@ jobs:
       if: matrix.os != 'windows-latest'
       run: |
         inv build
+    - name: Run tests in chapter on testing
+      run: |
+        inv testtestingchapter

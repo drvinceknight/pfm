@@ -266,3 +266,16 @@ def testnbs(c, root=ROOT):
     Test all notebooks.
     """
     c.run(f"python -m pytest --nbval --ignore=_build/ --current-env")
+
+@task
+def testtestingchapter(c, root=ROOT):
+    """
+    Run the tests in the testing chapter:
+
+    - Doctests
+    - Runs a python script with a number of asserts (this differs to actually
+      runnning this through a real test running).
+    """
+    c.run(f"cd {root}/book/building-tools/07-testing/tutorial")
+    c.run("python test_absorption.py")
+    c.run("python -m doctest main.md")
