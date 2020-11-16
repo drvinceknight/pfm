@@ -13,7 +13,6 @@ kernelspec:
 ---
 
 (documentation)=
-
 # Tutorial
 
 In this tutorial we will make the code we will write documentation for the code
