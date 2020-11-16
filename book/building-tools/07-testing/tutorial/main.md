@@ -89,10 +89,16 @@ $ python test_absorption.py
 
 When running the tests if everything has been done correctly there will be no
 output: the 2 functions we have written have been called and the assertions have
-_passed_. See Figure ... TODO
+_passed_. See Figure {ref}`fig:running_tests_with_no_errors`.
 
-**You can experiment by changing some of the code or the tests and see the way
-the tests fail.** See Figure ... TODO
+```{figure} ./img/running_tests_with_no_errors/main.png
+---
+width: 75%
+name: fig:running_tests_with_no_errors
+---
+Running the tests with no errors.
+```
+
 
 For each of the four functions in `absorption.py` we can now add further tests
 and ensure they are also called at the end. The full `test_absorption.py` file
@@ -167,6 +173,19 @@ passed arrays are equal or approximately equal (respectively).
 
 `numpy.allclose` should be used when comparing numpy arrays that might be
 different due to numerical imprecision.
+```
+
+**You can experiment by changing some of the code or the tests and see the way
+the tests fail.** See Figure {ref}`fig:running_tests_with_error_in_source_code`
+where the following specific error has been introduced in to `absorption.py`:
+`P.diagonal() == 1` is incorrect and should be `P.diagonal() != 1`.
+
+```{figure} ./img/running_tests_with_error_in_source_code/main.png
+---
+width: 75%
+name: fig:running_tests_with_error_in_source_code
+---
+Running the tests with an error in the source code.
 ```
 
 As and when we add more features to `absorption.py` we will also add tests.
@@ -248,6 +267,39 @@ We now see how the vector $\pi$ changes over time:
 
 ```
 ````
+
+
+To test the documentation gives the results that are written, run the following
+at the command line:
+
+```bash
+$ python -m doctest README.md
+```
+
+When testing the documentation, as for the testing of code, if there are no
+errors there will be no output as shown in
+{ref}`fig:running_doctests_with_no_errors`.
+
+```{figure} ./img/running_doctests_with_no_errors/main.png
+---
+width: 75%
+name: fig:running_doctests_with_no_errors
+---
+Running the doctests with no errors.
+```
+
+Similarly to testing the code, if we include an error in the documentation an
+error will be displayed when running the doc tests. This is shown in
+{ref}`fig:running_doctests_with_an_error` where the final output has been
+changed to include an error: `-1` is written instead of `0.94709386`.
+
+```{figure} ./img/running_doctests_with_an_error/main.png
+---
+width: 75%
+name: fig:running_doctests_with_an_error
+---
+Running the doctests with an error
+```
 
 Here is the fully modified tutorial of the documentation:
 
@@ -384,6 +436,8 @@ array([3.33333333, 3.66666667])
 
 ```
 ````
+
+## Documenting the tests
 
 Finally it is important to document how to run the tests. The _reference_
 section is an appropriate place to put this. We will add the following to the
