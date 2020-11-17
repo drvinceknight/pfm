@@ -70,6 +70,8 @@ def stylecheck(c, root=ROOT, md_pattern=MD_PATTERN, tags_pattern=TAGS_PATTERN):
     included in the built book).
 
     Cells can be ignored by include `style-check-ignore` as a tag.
+
+    Does not check doctest style code.
     """
     max_exit_code = 0
     for markdown_file_path in get_book_source_files():
@@ -78,7 +80,7 @@ def stylecheck(c, root=ROOT, md_pattern=MD_PATTERN, tags_pattern=TAGS_PATTERN):
 
         for match in re.finditer(pattern=md_pattern, string=markdown):
             python_code = match.group(4)
-            if "style-check-ignore" not in python_code:
+            if ("style-check-ignore" not in python_code) and (">>>" not in python_code):
                 python_code = re.sub(
                     pattern=tags_pattern, repl="", string=python_code
                 ).lstrip()
@@ -266,3 +268,17 @@ def testnbs(c, root=ROOT):
     Test all notebooks.
     """
     c.run(f"python -m pytest --nbval --ignore=_build/ --current-env")
+
+
+@task
+def testtestingchapter(c, root=ROOT):
+    """
+    Run the tests in the testing chapter:
+
+    - Doctests
+    - Runs a python script with a number of asserts (this differs to actually
+      runnning this through a real test running).
+    """
+    c.run(
+        f"cd {root}/book/building-tools/07-testing/tutorial && python test_absorption.py && python -m doctest main.md"
+    )

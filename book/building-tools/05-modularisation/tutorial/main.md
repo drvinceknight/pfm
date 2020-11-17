@@ -13,7 +13,6 @@ kernelspec:
 ---
 
 (modularisation_tutorial)=
-
 # Tutorial
 
 We will here consider a specific problem of a general type. We will not
