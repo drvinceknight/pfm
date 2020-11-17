@@ -116,7 +116,6 @@ def feedback_on_guess(guess, chosen_number):
     if guess > chosen_number:
         return "Guess is larger than chosen number"
     return "Guess is equal to chosen number"
-
 ```
 
 In this case we would need to write at least 3 tests that check the 3

@@ -54,6 +54,7 @@ def add_one(a):
     """
     return a + 2
 
+
 assert add_one(5) == 6, "The function gave the wrong answer."
 ```
 
@@ -67,6 +68,7 @@ For example:
 ```{code-cell} ipython3
 import random
 
+
 def roll_a_dice():
     """
     Pick a random integer between 1 and 6 (inclusive)
@@ -78,21 +80,24 @@ To test this we can include a number of seeded assertions:
 
 ```{code-cell} ipython3
 random.seed(0)
-assert roll_a_dice() == 4, "The 0 seed did not give the epected result"
+assert roll_a_dice() == 4, "The 0 seed did not give the expected result"
 random.seed(1)
-assert roll_a_dice() == 2, "The 1 seed did not give the epected result"
+assert roll_a_dice() == 2, "The 1 seed did not give the expected result"
 random.seed(2)
-assert roll_a_dice() == 1, "The 2 seed did not give the epected result"
+assert roll_a_dice() == 1, "The 2 seed did not give the expected result"
 random.seed(3)
-assert roll_a_dice() == 2, "The 3 seed did not give the epected result"
+assert roll_a_dice() == 2, "The 3 seed did not give the expected result"
 ```
 
 We can also check behaviour over a number of repetitions:
 
 ```{code-cell} ipython3
+:tags: ["style-check-ignore"]
+
 random.seed(0)
 samples = [roll_a_dice() for repetition in range(1000)]
-assert set(samples) == {1, 2, 3, 4, 5, 6}, "Not all values have been obtained over 1000 repetitions"
+all_values = {1, 2, 3, 4, 5, 6}
+assert set(samples) == all_values, "Not all values have been obtained over 1000 repetitions"
 ```
 
 We can also confirm that the count of a given value is in an expected range:
@@ -116,6 +121,7 @@ For example, if the `dice.py` file contained:
 ```python
 import random
 
+
 def roll_a_dice():
     """
     Pick a random integer between 1 and 6 (inclusive)
@@ -125,21 +131,23 @@ def roll_a_dice():
 
 Then a separate `test_dice.py` file with the following would be written:
 
-```python
+```py
 import dice
+
 
 def test_roll_a_dice_with_specific_values():
     """
     Check the roll a dice function gives specific numbers for a number of seeds.
     """
     random.seed(0)
-    assert dice.roll_a_dice() == 4, "The 0 seed did not give the epected result"
+    assert dice.roll_a_dice() == 4, "The 0 seed did not give the expected result"
     random.seed(1)
-    assert dice.roll_a_dice() == 2, "The 1 seed did not give the epected result"
+    assert dice.roll_a_dice() == 2, "The 1 seed did not give the expected result"
     random.seed(2)
-    assert dice.roll_a_dice() == 1, "The 2 seed did not give the epected result"
+    assert dice.roll_a_dice() == 1, "The 2 seed did not give the expected result"
     random.seed(3)
-    assert dice.roll_a_dice() == 2, "The 3 seed did not give the epected result"
+    assert dice.roll_a_dice() == 2, "The 3 seed did not give the expected result"
+
 
 def test_roll_a_dice_for_a_large_sample():
     """
@@ -147,8 +155,10 @@ def test_roll_a_dice_for_a_large_sample():
     """
     random.seed(0)
     samples = [dice.roll_a_dice() for repetition in range(1000)]
-    assert set(samples) == {1, 2, 3, 4, 5, 6}, "Not all values have been obtained over 1000 repetitions"
-    assert [samples.count(k) for k in range(1, 7)] == [193, 150, 166, 170, 152, 169], "The count of the values is not giving the expected count"
+    all_values = {1, 2, 3, 4, 5, 6}
+    assert set(samples) == all_values, "Not all values have been obtained over 1000 repetitions"
+    expected_counts = [193, 150, 166, 170, 152, 169]
+    assert [samples.count(k) for k in range(1, 7)] == expected_counts, "The count of the values is not giving the expected count"
 
 test_roll_a_dice_with_specific_values()
 test_roll_a_dice_for_a_large_sample()
@@ -184,6 +194,7 @@ file:
 
 ```python
 import random
+
 
 def roll_a_dice():
     """

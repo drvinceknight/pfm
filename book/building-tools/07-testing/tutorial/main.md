@@ -42,7 +42,7 @@ script called: `test_absorption.py`.
 We will write some functions in there to validate each of the functions in
 `absorption.py`:
 
-```python
+```py
 import numpy as np
 
 import absorption
@@ -55,6 +55,7 @@ def test_long_run_state_for_known_number_of_states():
     P = np.array([[1 / 2, 1 / 4, 1 / 4], [1 / 3, 1 / 3, 1 / 3], [0, 0, 1]])
     pi_after_5_steps = absorption.get_long_run_state(pi=pi, k=5, P=P)
     assert np.array_equal(pi_after_5_steps, pi @ np.linalg.matrix_power(P, 5)), "Did not get expected result for pi after 5 steps"
+
 
 def test_long_run_state_when_starting_in_absorbing_state():
     """
@@ -105,7 +106,7 @@ For each of the four functions in `absorption.py` we can now add further tests
 and ensure they are also called at the end. The full `test_absorption.py` file
 should look like:
 
-```python
+```py
 import numpy as np
 
 import absorption
@@ -119,6 +120,7 @@ def test_long_run_state_for_known_number_of_states():
     pi_after_5_steps = absorption.get_long_run_state(pi=pi, k=5, P=P)
     assert np.array_equal(pi_after_5_steps, pi @ np.linalg.matrix_power(P, 5)), "Did not get expected result for pi after 5 steps"
 
+
 def test_long_run_state_when_starting_in_absorbing_state():
     """
     This tests the `long_run_state` for a small example matrix.
@@ -131,6 +133,7 @@ def test_long_run_state_when_starting_in_absorbing_state():
     pi_after_5_steps = absorption.get_long_run_state(pi=pi, k=5, P=P)
     assert np.array_equal(pi_after_5_steps, pi)
 
+
 def test_extract_Q():
     """
     This tests that the submatrix Q can be extracted from a given matrix P.
@@ -140,15 +143,17 @@ def test_extract_Q():
     expected_Q = np.array([[1 / 2, 1 / 4], [1 / 3, 1 / 3]])
     assert np.array_equal(Q, expected_Q), f"The expected Q did not match, the code obtained {Q}"
 
+
 def test_compute_N():
     """
-    This tests the computation of the fundmantal matrix N
+    This tests the computation of the fundamental matrix N
     """
     P = np.array([[1 / 2, 1 / 4, 1 / 4], [1 / 3, 1 / 3, 1 / 3], [0, 0, 1]])
     Q = absorption.extract_Q(P)
     N = absorption.compute_N(Q)
     expected_N = np.array([[8 / 3, 1], [4 / 3, 2]])
     assert np.allclose(N, expected_N), f"The expected N did not match, the code obtained {N}"
+
 
 def test_compute_t():
     """

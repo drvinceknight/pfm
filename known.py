@@ -36,6 +36,7 @@ words = set(
         "Proselint",
         "Pseudo",
         "PyCharm",
+        "PyPi",
         "QuadraticExpression",
         "QuadraticExpressionWithAllRoots",
         "README",
@@ -47,6 +48,7 @@ words = set(
         "VScode",
         "alex",
         "algorithmically",
+        "allclose",
         "aspell",
         "auraya",
         "blech",
@@ -72,6 +74,8 @@ words = set(
         "displaystyle",
         "docstring",
         "docstrings",
+        "doctest",
+        "doctests",
         "docx",
         "dominica",
         "dunder",
@@ -136,9 +140,11 @@ words = set(
         "ntegrated",
         "numpy",
         "nvironment",
+        "oliveira",
         "onwards",
         "oo",
         "pdf",
+        "percival",
         "plt",
         "png",
         "polyfit",
@@ -146,6 +152,7 @@ words = set(
         "proselint",
         "py",
         "pyplot",
+        "pytest",
         "randint",
         "repo",
         "repr",
@@ -158,6 +165,7 @@ words = set(
         "solveset",
         "sqrt",
         "str",
+        "submatrix",
         "svg",
         "sym",
         "sympy",
@@ -301,6 +309,22 @@ prose_suggestions_to_ignore = {
         ("typography.symbols.curly_quotes",)
     ),
     "book/building-tools/06-documentation/why/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/building-tools/07-testing/tutorial/main.md": set(
+        (
+            "typography.symbols.curly_quotes",
+            "typography.symbols.ellipsis",
+            "typography.symbols.sentence_spacing",
+        )
+    ),
+    "book/building-tools/07-testing/how/main.md": set(
+        (
+            "typography.symbols.curly_quotes",
+            "typography.symbols.ellipsis",
+        )
+    ),
+    "book/building-tools/07-testing/why/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
     "book/further-information/01-numpy/tutorial/main.md": set(
