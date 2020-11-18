@@ -248,7 +248,7 @@ def sample_experiment():
         travel_method = "car"
         is_late = random.random() < 1 / 5
         return travel_method, is_late
-    if random_number < 1 / 6:
+    if random_number < 1 / 2 + 1 / 6:
         travel_method = "bicycle"
         is_late = random.random() < 2 / 5
         return travel_method, is_late
