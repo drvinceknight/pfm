@@ -31,9 +31,13 @@ kernelspec:
    6. Obtain the first 5 terms of the sequence defined by:
 
       $$
-          a_0 = 0,\\
-          a_1 = 2,\\
-          a_n = 3 a_{n - 1} + a_{n - 2}, n \geq 2\end{array}\right.
+        \left\{
+            \begin{array}
+              a_0 = 0,\\
+              a_1 = 2,\\
+              a_n = 3 a_{n - 1} + a_{n - 2}, n \geq 2
+            \end{array}
+        \right.
       $$
 
 2. Use the REPL (read eval print loop) to carry out the following calculations:

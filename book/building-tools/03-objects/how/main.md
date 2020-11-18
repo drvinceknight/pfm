@@ -213,7 +213,7 @@ There are numerous other magic methods, such as the `__add__` one used in
 {ref}`objects_tutorial`.
 
 (how_to_use_inheritance)=
-## How to use inheritance
+## How to use inheritance
 
 Inheritance is a tool that allows us to create one class based on another. This
 is done by passing the `Old` class to the `New` class.
