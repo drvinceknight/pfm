@@ -1,5 +1,11 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4074115.svg)](https://doi.org/10.5281/zenodo.4074115)
 
+![Test correctness of notebooks](https://github.com/drvinceknight/pfm/workflows/Test%20correctness%20of%20notebooks/badge.svg)
+
+![Test prose and style](https://github.com/drvinceknight/pfm/workflows/Test%20prose%20and%20style/badge.svg)
+
+![deploy-book](https://github.com/drvinceknight/pfm/workflows/deploy-book/badge.svg)
+
 # Python for mathematics
 
 ## Development
