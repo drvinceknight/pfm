@@ -31,7 +31,7 @@ However there are other libraries that can be used for linear algebra and in
 those libraries the `*` does not do matrix multiplication, it does element wise
 multiplication instead. So for clarity it is preferred to use `@` throughout.
 
-## I have read that `numpy` is a library for linear algebra?|
+## I have read that `numpy` is a library for linear algebra?
 
 `numpy` is one of the most popular and important libraries in the Python
 ecosystem. It is in fact the best library to use when doing linear algebra as it

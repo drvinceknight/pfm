@@ -364,7 +364,7 @@ The following text is a recommended reference on Markov chains:
 ```
 
 Figure {ref}`fig:documentation_in_vscode` shows the start of the markdown file
-in VScode alongside the preview (the "Markdown All in One" plugin ensures that
+in VScode alongside the preview (the `Markdown all in one` plugin ensures that
 the mathematics is rendered see {ref}`how_to_install_a_vscode_plugin` for
 information on installing plugins).
 
@@ -373,8 +373,8 @@ information on installing plugins).
 width: 75%
 name: fig:documentation_in_vscode
 ---
-The `README.md` file in VScode with the rendered preview (using the "Markdown
-All in One" plugin).
+The `README.md` file in VScode with the rendered preview (using the `Markdown
+all in one` plugin).
 ```
 
 Below is what the rendered documentation would look like:
