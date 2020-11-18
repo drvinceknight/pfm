@@ -20,9 +20,6 @@ Probability is the study of random events. Computers are particularly helpful
 here as they can be used to carry out a number of experiments to confirm and/or
 explore theoretic results.
 
-> a group of numbers or other symbols arranged in a rectangle that can be used
-> together as a single unit to solve particular mathematical problems
-
 In practice studying probability will often involve:
 
 - calculating expected chances of an event occurring;
