@@ -309,6 +309,8 @@ We see that it is possible to arrive at the last square in 6 turns.
 Now to compute the average length of the game:
 
 ```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 t = absorption.compute_t(P)
 t[0]
 ```
