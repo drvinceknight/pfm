@@ -30,16 +30,3 @@ designed with the following suggestion in mind:
 - After working through those three section it is possible that some readers
   have further questions or would like to find more information about a
   given topic. This is covered in the further information section.
-
-```{attention}
-Every chapter will have 4 parts:
-
-- A tutorial: you will be walked through solving a problem. You will be
-  specifically told what to do and what to expect.
-- A how to section: this will be a shorter more succinct section that will
-  detail how to carry out specific things.
-- An answers sections: this will be a section with references to further
-  resources as well as background information about specific things in the
-  chapter and answer to common questions.
-- An exercise section: this will be a number of exercises that you can work on.
-```

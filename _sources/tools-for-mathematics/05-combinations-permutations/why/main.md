@@ -14,7 +14,7 @@ kernelspec:
 
 # Further information
 
-## How does tuple indexing work
+## How does tuple indexing work?
 
 We have seen in this chapter how to access a single element in a tuple. There
 are various ways of indexing tuples:
@@ -26,7 +26,7 @@ are various ways of indexing tuples:
 This document gives good information on this:
 <https://www.programiz.com/python-programming/tuple>
 
-## Why does `range`, `itertools.permutations` and `itertools.combinations` not directly give the elements
+## Why does `range`, `itertools.permutations` and `itertools.combinations` not directly give the elements?
 
 When you run either of the three `range`, `itertools.permutations` or
 `itertools.combinations` tools this is an example of creating a **generator**.
