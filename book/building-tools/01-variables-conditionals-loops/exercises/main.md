@@ -29,7 +29,8 @@ kernelspec:
     3 n ^ 3 - 183n ^ 2 + 3318n - 18757
    $$
 
-   1. What is the first value of $n$ for which that polynomial is not prime?
+   1. Use the `sympy.isprime` function to find the first value of $n$ for which
+      that polynomial is not prime?
    2. How many **unique** primes up until the first non prime value are there?
       (Hint: the `set` tool might prove useful here.)
 
