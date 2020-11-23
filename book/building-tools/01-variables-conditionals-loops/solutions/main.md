@@ -55,6 +55,7 @@ Start by defining the cubic:
 ```{code-cell} ipython3
 import sympy as sym
 
+
 def cubic(n):
     """
     Return the value of the absolute value of the cubic for the given value of n
@@ -125,7 +126,7 @@ def check_identity(n):
     Computes lhs and the rhs of the given identity.
     """
     lhs = sum(i ** 2 for i in range(n + 1))
-    rhs = n * (n + 1) * (2 *n + 1) / 6
+    rhs = n * (n + 1) * (2 * n + 1) / 6
     return lhs == rhs
 ```
 
@@ -148,6 +149,7 @@ Write a function to repeat the code from
 ```{code-cell} ipython3
 import random
 
+
 def count_number_of_selections_until_even(seed):
     """
     Repeatedly sample an integer between 0 and 10 for a given random seed.
@@ -168,7 +170,9 @@ Now use this for 1000 random repetitions (we use each repetition as a seed):
 ```{code-cell} ipython3
 :tags: ["output_scroll"]
 
-number_of_selections = [count_number_of_selections_until_even(seed) for seed in range(1000)]
+number_of_selections = [
+    count_number_of_selections_until_even(seed) for seed in range(1000)
+]
 number_of_selections
 ```
 
