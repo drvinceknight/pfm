@@ -63,6 +63,7 @@
     - file: building-tools/01-variables-conditionals-loops/tutorial/main
     - file: building-tools/01-variables-conditionals-loops/how/main
     - file: building-tools/01-variables-conditionals-loops/exercises/main
+    - file: building-tools/01-variables-conditionals-loops/solutions/main
     - file: building-tools/01-variables-conditionals-loops/why/main
   - file: building-tools/02-functions-and-data-structures/introduction/main
     sections:
