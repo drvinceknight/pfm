@@ -41,7 +41,7 @@ def get_sequence_b(n):
     Return the sequence b.
     """
     if n == 1:
-        return 1
+        return 3
     return 6 * get_sequence_b(n - 1)
 
 
@@ -98,12 +98,14 @@ def get_sequence_d(n):
     return math.sqrt(get_sequence_d(n - 1)) + 3
 
 
-[get_sequence_d(n) for n in range(1, 11)]
+[get_sequence_d(n) for n in range(10)]
 ```
 
 2. Using recursion, obtain the first 5 terms of the Fibonacci sequence:
 
    $$
+       \left\{
+       \begin{array}{l}
        a_0 = 0,\\
        a_1 = 1,\\
        a_n = a_{n - 1} + a_{n - 2}, n \geq 2\end{array}\right.
