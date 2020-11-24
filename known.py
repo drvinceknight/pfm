@@ -260,6 +260,12 @@ prose_suggestions_to_ignore = {
     "book/building-tools/01-variables-conditionals-loops/how/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
+    "book/building-tools/01-variables-conditionals-loops/solutions/main.md": set(
+        (
+            "typography.symbols.curly_quotes",
+            "consistency.spacing",
+        )
+    ),
     "book/building-tools/02-functions-and-data-structures/tutorial/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
