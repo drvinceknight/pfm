@@ -275,8 +275,8 @@ prose_suggestions_to_ignore = {
     "book/building-tools/02-functions-and-data-structures/solutions/main.md": set(
         (
             "typography.symbols.curly_quotes",
-             "leonard.exclamation.30ppm",
-         )
+            "leonard.exclamation.30ppm",
+        )
     ),
     "book/building-tools/03-objects/tutorial/main.md": set(
         (("typography.symbols.curly_quotes"), ("needless_variants.misc"))
