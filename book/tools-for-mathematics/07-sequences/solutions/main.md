@@ -220,13 +220,13 @@ sum(
 
 > `4`. A sequence is given by:
 
-> $$
-> $$
+   $$
+       \left\{\begin{array}{l}
+       x_1 = 1\\
+       x_{n + 1}= x_n(p + x_n), n > 1
+       \end{array}\right.
+   $$
 
-        x_1 = 1\\
-        x_{n + 1}= x_n(p + x_n), n > 1
-        \end{array}\right.
-    $$
 
 > for $p\ne0$.
 
