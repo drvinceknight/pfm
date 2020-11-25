@@ -25,7 +25,8 @@ kernelspec:
        T_n = \frac{n(n+1)}{2}
    $$
 
-3. Verify the following that the following identify holds for $n\leq 500$:
+3. Verify the following that the following identify holds for positive integer
+   values $n\leq 500$:
 
    $$
        \sum_{i=0}^n T_i = \frac{n(n+1)(n+2)}{6}
@@ -34,8 +35,9 @@ kernelspec:
 4. Consider the [Monty Hall
    problem](https://en.wikipedia.org/wiki/Monty_Hall_problem):
    1. Write a function that simulates the play of the game when you 'stick' with
-      the initial choice.
+      the initial choice. You might find `random.shuffle` and `pop`ing a list
+      helpful.
    2. Write a function that simulates the play of the game when you 'change'
-      your choice.
+      your choice. You might find `remove`ing from a list helpful.
    3. Repeat the play of the game using both those functions and compare the
       probability of winning.
