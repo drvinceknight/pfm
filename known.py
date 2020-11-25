@@ -100,6 +100,7 @@ words = set(
         "im",
         "img",
         "incircle",
+        "ing",
         "init",
         "inv",
         "ipynb",
@@ -132,10 +133,12 @@ words = set(
         "modularise",
         "modularised",
         "modularising",
+        "monty",
         "myst",
         "nash",
         "nbs",
         "nbval",
+        "ni",
         "np",
         "ntegrated",
         "numpy",
@@ -268,6 +271,12 @@ prose_suggestions_to_ignore = {
     ),
     "book/building-tools/02-functions-and-data-structures/tutorial/main.md": set(
         ("typography.symbols.curly_quotes",)
+    ),
+    "book/building-tools/02-functions-and-data-structures/solutions/main.md": set(
+        (
+            "typography.symbols.curly_quotes",
+            "leonard.exclamation.30ppm",
+        )
     ),
     "book/building-tools/03-objects/tutorial/main.md": set(
         (("typography.symbols.curly_quotes"), ("needless_variants.misc"))
