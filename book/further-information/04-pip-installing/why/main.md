@@ -16,7 +16,7 @@ kernelspec:
 
 ## Why do we do `python -m pip install` and not `pip install`
 
-In some places you will see that to install a python library you can run the
+In some places you will see that to install a Python library you can run the
 following in the command line:
 
 ```bash
@@ -82,7 +82,7 @@ pytest
 
 ## What is the Python package index
 
-The Python package index commonly referred to as PyPi is:
+The Python package index commonly referred to as PyPI is:
 
 > "The Python Package Index (PyPI) is a repository of software for the Python
 > programming language."

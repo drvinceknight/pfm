@@ -32,7 +32,7 @@ $ python -m pip install ciw
 ```
 
 ```{attention}
-Well documented libraries will always have installation installation. It is
+Well documented libraries will always have installation instructions. It is
 recommended to read those before installing a library.
 
 ```
