@@ -186,7 +186,7 @@ game.solve()
 As discussed, this particular pairing will pair any pilots or co-pilots that
 would rather be paired with someone who would rather be paired with them.
 
-The `matching` documentation has an excellent set of documentation that includes
+The `matching` library has an excellent documentation that includes
 a theoretic overview of the mathematics used.
 
 ```{important}
