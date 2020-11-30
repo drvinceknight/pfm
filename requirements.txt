@@ -1,5 +1,7 @@
 # Versions are not pinned to ensure CI catches updates to libraries.
 jupyter
+matching
 matplotlib
+numpy
 scipy
 sympy
