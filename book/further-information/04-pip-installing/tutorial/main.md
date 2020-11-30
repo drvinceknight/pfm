@@ -111,7 +111,7 @@ The airline wants to create a pairing such that no pilot or co-pilot could ask
 to be paired with someone they prefer who also prefers them.
 
 For example, if we paired Emily with Ava, and Mia with Olivia. Then both Emily
-and Olivia would rather be pair with each other.
+and Olivia would rather be paired with each other.
 
 ````
 
