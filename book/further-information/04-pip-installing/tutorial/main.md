@@ -138,28 +138,24 @@ Here we adapt the tutorial to create the pilots and co-pilots:
 ```{code-cell} ipython3
 from matching import Player
 
-pilots = [
-    Player(name="Olivia"),
-    Player(name="Amelia"),
-    Player(name="Isla"),
-    Player(name="Ava"),
-    Player(name="Sophia"),
-]
+olivia = Player(name="Olivia")
+amelia = Player(name="Amelia")
+isla = Player(name="Isla")
+ava = Player(name="Ava")
+sophia = Player(name="Sophia")
+pilots = [olivia, amelia, isla, ava, sophia]
 
-copilots = [
-    Player(name="Emily"),
-    Player(name="Grace"),
-    Player(name="Mia"),
-    Player(name="Poppy"),
-    Player(name="Ella"),
-]
+emily = Player(name="Emily")
+grace = Player(name="Grace")
+mia = Player(name="Mia")
+poppy = Player(name="Poppy")
+ella = Player(name="Ella")
+copilots = [emily, grace, mia, poppy, ella]
 ```
 
 Now we set their preferences:
 
 ```{code-cell} ipython3
-olivia, amelia, isla, ava, sophia = pilots
-
 olivia.set_prefs([emily, mia, grace, poppy, ella])
 amelia.set_prefs([emily, grace, poppy, ella, mia])
 isla.set_prefs([emily, grace, poppy, ella, mia])
