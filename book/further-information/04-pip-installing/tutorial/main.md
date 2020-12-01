@@ -156,6 +156,8 @@ copilots = [emily, grace, mia, poppy, ella]
 Now we set their preferences:
 
 ```{code-cell} ipython3
+:tags: ["nbval-skip"]
+
 olivia.set_prefs([emily, mia, grace, poppy, ella])
 amelia.set_prefs([emily, grace, poppy, ella, mia])
 isla.set_prefs([emily, grace, poppy, ella, mia])
@@ -172,6 +174,8 @@ ella.set_prefs([isla, sophia, ava, amelia, olivia])
 Finally we solve the problem and find a pairing:
 
 ```{code-cell} ipython3
+:tags: ["nbval-skip"]
+
 from matching.games import StableMarriage
 
 game = StableMarriage(pilots, copilots)
