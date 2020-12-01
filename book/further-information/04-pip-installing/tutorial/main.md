@@ -160,7 +160,9 @@ Now we set their preferences:
 ```{code-cell} ipython3
 olivia, amelia, isla, ava, sophia = pilots
 emily, grace, mia, poppy, ella = copilots
+```
 
+```{code-cell} ipython3
 olivia.set_prefs([emily, mia, grace, poppy, ella])
 amelia.set_prefs([emily, grace, poppy, ella, mia])
 isla.set_prefs([emily, grace, poppy, ella, mia])
