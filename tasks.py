@@ -267,7 +267,7 @@ def testnbs(c, root=ROOT):
     """
     Test all notebooks.
     """
-    c.run(f"python -m pytest --nbval --ignore=_build/ --current-env")
+    c.run(f"python -m pytest -vv --nbval --ignore=_build/ --current-env")
 
 
 @task

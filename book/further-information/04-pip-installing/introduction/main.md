@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-(kernels)=
+(installing_libraries)=
 # Installing libraries
 
 The recommended Python distribution for this book is the Anaconda distribution.
