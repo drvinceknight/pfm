@@ -33,6 +33,7 @@ words = set(
         "OSX",
         "Oldtown",
         "OtherPetDog",
+        "PackageNotFoundError",
         "PetDog",
         "Proselint",
         "Pseudo",
@@ -109,6 +110,7 @@ words = set(
         "ij",
         "im",
         "img",
+        "importlib",
         "incircle",
         "ing",
         "init",
@@ -160,6 +162,7 @@ words = set(
         "olivia",
         "onwards",
         "oo",
+        "pathlib",
         "pdf",
         "percival",
         "plt",
@@ -376,6 +379,9 @@ prose_suggestions_to_ignore = {
         ("typography.symbols.curly_quotes",)
     ),
     "book/further-information/04-pip-installing/why/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/about-this-book/software-packages-used/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
 }

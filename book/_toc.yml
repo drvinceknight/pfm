@@ -132,3 +132,4 @@
     - file: about-this-book/how-is-this-book-written/main
     - file: about-this-book/contributing/main
     - file: about-this-book/citing-this-book/main
+    - file: about-this-book/software-packages-used/main
