@@ -15,4 +15,4 @@ kernelspec:
 # How to cite this book
 
 Archived versions of the book can be obtained at
-<https://zenodo.org/record/4074115>. Citation information can be found there.
+<https://zenodo.org/record/4074114>. Citation information can be found there.
