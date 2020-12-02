@@ -378,4 +378,7 @@ prose_suggestions_to_ignore = {
     "book/further-information/04-pip-installing/why/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
+    "book/about-this-book/software-packages-used/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
 }
