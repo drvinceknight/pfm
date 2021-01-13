@@ -42,14 +42,15 @@ kernelspec:
    First create the following class:
 
    ```
-   class Drop():
+   class Drop:
        """
-       A class that to represent a random rain drop falling on a square of
+       A class used to represent a random rain drop falling on a square of
        length r.
        """
+
        def __init__(self, r=1):
-           self.x = (.5 - random.random()) * 2 * r
-           self.y = (.5 - random.random()) * 2 * r
+           self.x = (0.5 - random.random()) * 2 * r
+           self.y = (0.5 - random.random()) * 2 * r
            self.in_circle = (self.y) ** 2 + (self.x) ** 2 <= r ** 2
    ```
 
