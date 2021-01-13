@@ -23,6 +23,7 @@ words = set(
         "Jupyterbook",
         "LaTeX",
         "Lah",
+        "LinearExpression",
         "Matplotlib",
         "Mersenne",
         "Modularisation",
@@ -307,6 +308,9 @@ prose_suggestions_to_ignore = {
     ),
     "book/building-tools/03-objects/exercises/main.md": set(
         (("typography.symbols.curly_quotes"),)
+    ),
+    "book/building-tools/03-objects/solutions/main.md": set(
+        (("typography.symbols.curly_quotes"), ("needless_variants.misc"))
     ),
     "book/building-tools/03-objects/why/main.md": set(
         (("typography.symbols.curly_quotes"),)

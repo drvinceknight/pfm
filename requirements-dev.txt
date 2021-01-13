@@ -8,3 +8,4 @@ nbval==0.9.6
 proselint==0.10.2
 pytest==5.4.3
 appnope==0.1.0  # This is possibly needed for CI on OSX
+sphinxcontrib-bibtex<2.0.0
