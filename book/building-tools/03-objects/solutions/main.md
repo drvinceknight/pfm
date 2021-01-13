@@ -111,7 +111,7 @@ First we define the class:
 import math
 
 class LinearExpression:
-    """A class for a linear expression ax + b"""
+    """A class for a linear expression a x + b"""
 
     def __init__(self, a, b):
         self.a = a
@@ -218,7 +218,7 @@ The number in the circle leads to the probability $P$:
 P = number_in_circle / number_of_instances
 ```
 
-And $\pi$ can be approximted:
+And $\pi$ can be approximated:
 
 ```{code-cell} ipython3
 4 * P
@@ -236,9 +236,10 @@ We create a different drop class changing the `in_circle` attribute to
 ```{code-cell} ipython3
 class Drop():
     """
-    A class that to represent a random rain drop falling on a square of
+    A class used to represent a random rain drop falling on a square of
     length 1.
     """
+
     def __init__(self):
         self.x = random.random()
         self.y = random.random()
@@ -271,6 +272,7 @@ We can confirm this:
 
 ```{code-cell} ipython3
 import sympy as sym
+
 x = sym.Symbol("x")
 sym.integrate(1 - x ** 2, (x, 0, 1))
 ```

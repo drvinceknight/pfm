@@ -78,7 +78,6 @@ def stylecheck(c, root=ROOT, md_pattern=MD_PATTERN, tags_pattern=TAGS_PATTERN):
 
         markdown = markdown_file_path.read_text()
 
-        print(markdown_file_path)
         for match in re.finditer(pattern=md_pattern, string=markdown):
             python_code = match.group(4)
             if ("style-check-ignore" not in python_code) and (">>>" not in python_code):
