@@ -21,7 +21,7 @@ kernelspec:
 1. Use the class created in {ref}`objects_tutorial` to find the roots of the
    following quadratics:
    1. $f(x) = -4x ^ 2 + x + 6$
-   2. $g(x) = 3x - 6$
+   2. $g(x) = 3x ^ 2 - 6$
    3. $h(x) = f(x) + g(x)$
 2. Write a class for a Linear expression and use it to find the roots of the
    following expressions:
@@ -42,15 +42,16 @@ kernelspec:
    First create the following class:
 
    ```
-   class Drop():
+   class Drop:
        """
-       A class that to represent a random rain drop falling on a square of
+       A class used to represent a random rain drop falling on a square of
        length r.
        """
+
        def __init__(self, r=1):
-           self.x = (.5 - random.random()) * 2 * r
-           self.y = (.5 - random.random()) * 2 * r
-           self.incircle = (self.y) ** 2 + (self.x) ** 2 <= r ** 2
+           self.x = (0.5 - random.random()) * 2 * r
+           self.y = (0.5 - random.random()) * 2 * r
+           self.in_circle = (self.y) ** 2 + (self.x) ** 2 <= r ** 2
    ```
 
    Note that the above uses the following equation for a circle centred at
