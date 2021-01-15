@@ -84,6 +84,7 @@
     - file: building-tools/04-editor-and-cli/tutorial/main
     - file: building-tools/04-editor-and-cli/how/main
     - file: building-tools/04-editor-and-cli/exercises/main
+    - file: building-tools/04-editor-and-cli/solutions/main
     - file: building-tools/04-editor-and-cli/why/main
   - file: building-tools/05-modularisation/introduction/main
     sections:
