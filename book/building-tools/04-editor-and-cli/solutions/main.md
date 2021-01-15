@@ -131,7 +131,9 @@ def pick_token():
 
 number_of_repetitions = 10000
 random.seed(0)
-selections_with_red = [pick_token() == "Red" for repetition in range(number_of_repetitions)]
+selections_with_red = [
+    pick_token() == "Red" for repetition in range(number_of_repetitions)
+]
 print(sum(selections_with_red) / number_of_repetitions)
 ```
 
