@@ -120,12 +120,14 @@ Click the toggle ("Click to Show") to see a demo running this:
 ```{code-cell} ipython3
 import random
 
+
 def pick_token():
     """
     Pick a token from a bag with 3 red and 5 blue and a yellow
     """
     bag = ["Red"] * 3 + ["Blue"] * 5 + ["Yellow"]
     return random.choice(bag)
+
 
 number_of_repetitions = 10000
 random.seed(0)
@@ -161,6 +163,7 @@ def get_sequence(n):
     if n == 1:
         return 2
     return 3 * get_sequence(n - 1) + get_sequence(n - 2)
+
 
 for n in range(5):
     print(get_sequence(n=n))
