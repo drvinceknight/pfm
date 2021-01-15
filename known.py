@@ -321,6 +321,9 @@ prose_suggestions_to_ignore = {
     "book/building-tools/04-editor-and-cli/how/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
+    "book/building-tools/04-editor-and-cli/solutions/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
     "book/building-tools/05-modularisation/tutorial/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),

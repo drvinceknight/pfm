@@ -18,7 +18,16 @@ kernelspec:
 
 **If you are not sure how to do something, have a look at the "How To" section.**
 
-1. Use the command line and a python script written in VScode to solve the
+
+1. Use the REPL (read eval print loop) to carry out the following calculations:
+
+   1. $3 + 8$
+   2. $3 / 7$
+   3. $456 / 21$
+   4. $\frac{4 ^ 3 + 2}{2\times 5} - 5 ^ {\frac{1}{2}}$
+
+2. Install the Python plugin for VScode.
+3. Use the command line and a python script written in VScode to solve the
    following problems:
 
    1. Find the solutions to the following equation: $x ^ 2 - 3 x + 2 = 1$.
@@ -39,16 +48,7 @@ kernelspec:
             \end{array}
         \right.
       $$
-
-2. Use the REPL (read eval print loop) to carry out the following calculations:
-
-   1. $3 + 8$
-   2. $3 / 7$
-   3. $456 / 21$
-   4. $\frac{4 ^ 3 + 2}{2\times 5} - 5 ^ {\frac{1}{2}}$
-
-3. Install the Python plugin for VScode.
-4. Install the `Markdown all in one` plugin for markdown in VScode.
+4. Install the `Markdown all in one` plugin for markdown in VScode and then:
    1. Create a new file `main.md`.
    2. Write some basic markdown in it.
    3. Use the plugin to preview the rendered markdown.
