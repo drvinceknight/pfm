@@ -14,6 +14,13 @@ kernelspec:
 
 # Solutions
 
+```{code-cell} ipython3
+:tags: ["remove-input"]
+import setuptools
+# This is only here to avoid an error when compiling the book. Setup tools is
+# not used but needs to be imported before distutils.
+```
+
 ## Question 1
 
 > `1`. Use the code written in the [Modularisation Tutorial](modularisation_tutorial) to obtain the average time
