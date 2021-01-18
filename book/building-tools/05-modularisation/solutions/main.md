@@ -54,7 +54,7 @@ t[0]
 
 
 ```{code-cell} ipython3
-P = np.array(((1 / 2, 1 / 4, 1 / 4), (1 / 3, 1 / 3, 1 / 3), (1 / 5, 0, 4 / 5 )))
+P = np.array(((1 / 2, 1 / 4, 1 / 4), (1 / 3, 1 / 3, 1 / 3), (1 / 5, 0, 4 / 5)))
 t = absorption.compute_t(P)
 t[0]
 ```
@@ -110,7 +110,7 @@ import random
 
 def flip_coin(probability_of_selecting_heads):
     """
-    This flips a coin with a given probablity of selecting heads.
+    This flips a coin with a given probability of selecting heads.
     """
     if random.random() < probability_of_selecting_heads:
         return "Heads"
@@ -187,6 +187,7 @@ Now the `is_prime` function can be written as:
 ```{code-cell} ipython3
 import math
 
+
 def is_prime(N):
     """
     Checks if a number N is prime by checking all that positive integers
@@ -232,6 +233,7 @@ def get_mean(iterable):
     the number of items.
     """
     return sum(iterable) / len(iterable)
+
 
 def get_population_variance(iterable):
     """
@@ -287,6 +289,7 @@ stats.get_population_variance(iterable=s3)
 
 ```{code-cell} ipython3
 import statistics
+
 statistics.mean(s1)
 ```
 

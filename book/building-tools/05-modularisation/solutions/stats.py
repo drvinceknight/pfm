@@ -5,6 +5,7 @@ def get_mean(iterable):
     """
     return sum(iterable) / len(iterable)
 
+
 def get_population_variance(iterable):
     """
     Returns the population variance of a given iterable which is defined as the

@@ -172,6 +172,7 @@ words = set(
         "pre",
         "prefs",
         "proselint",
+        "pvariance",
         "py",
         "pyplot",
         "pytest",
@@ -331,6 +332,9 @@ prose_suggestions_to_ignore = {
         ("typography.symbols.curly_quotes",)
     ),
     "book/building-tools/05-modularisation/exercises/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
+    "book/building-tools/05-modularisation/solutions/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
     "book/building-tools/05-modularisation/why/main.md": set(
