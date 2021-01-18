@@ -174,5 +174,5 @@ $ python test_stats.py
 To run the doctests:
 
 ```bash
-python -m doctest README.md
+$ python -m doctest README.md
 ```
