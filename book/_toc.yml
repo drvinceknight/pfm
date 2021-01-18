@@ -98,12 +98,14 @@
     - file: building-tools/06-documentation/tutorial/main
     - file: building-tools/06-documentation/how/main
     - file: building-tools/06-documentation/exercises/main
+    - file: building-tools/06-documentation/solutions/main
     - file: building-tools/06-documentation/why/main
   - file: building-tools/07-testing/introduction/main
     sections:
     - file: building-tools/07-testing/tutorial/main
     - file: building-tools/07-testing/how/main
     - file: building-tools/07-testing/exercises/main
+    - file: building-tools/07-testing/solutions/main
     - file: building-tools/07-testing/why/main
 - part: Further information
   chapters:

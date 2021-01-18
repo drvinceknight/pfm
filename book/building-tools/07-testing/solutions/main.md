@@ -14,10 +14,43 @@ kernelspec:
 
 # Solutions
 
+**After** completing the tutorial attempt the following exercises.
+
+**If you are not sure how to do something, have a look at the "How To" section.**
+
 > Write documentation for the `statistics.py` file written in the exercises of
 > [Modularisation Exercises](modularisation_exercises).
 
-We put the following in a `README.md` file:
+We start by writing the tests for the code. The following is in a
+`test_stats.py` file:
+
+```py
+import stats
+
+
+def test_get_mean():
+    """
+    This tests the `get_mean` function for a small iterable
+    """
+    iterable = (1, 2, 3)
+    assert stats.get_mean(iterable) == 2
+
+
+def test_get_population_variance():
+    """
+    This tests the `get_population_variance` function for a small iterable
+    """
+    iterable = (1, 2, 3)
+    assert round(stats.get_population_variance(iterable), 3) == 0.667
+
+
+test_get_mean()
+test_get_population_variance()
+```
+
+Next to test the documentation we modify the code snippets in the documentation
+written in [Documentation Exercises](documentation_exercises) so that it
+becomes the following which we put in a file called `README.md`:
 
 ````md
 
@@ -38,25 +71,31 @@ First we import the library:
 
 
 ```python
-import stats
+>>> import stats
+
 ```
 
 Next let us define the data:
 
 ```python
-x = (1, 2, 3, 1, 1, 1, 2, 3, 54, 5, 6, 70, 10, 12, 10)
+>>> x = (1, 2, 3, 1, 1, 1, 2, 3, 54, 5, 6, 70, 10, 12, 10)
+
 ```
 
 To view the mean we use `stats.get_mean`:
 
 ```python
-stats.get_mean(x)
+>>> round(stats.get_mean(x), 5)
+12.06667
+
 ```
 
 To view the population variance we use `stats.get_population_variance`:
 
 ```python
-stats.get_population_variance(x)
+>>> round(stats.get_population_variance(x), 5)
+404.46222
+
 ```
 
 ## How to guide
@@ -66,9 +105,10 @@ stats.get_population_variance(x)
 To compute a mean we use `stats.get_mean`:
 
 ```python
-import stats
+>>> import stats
+>>> stats.get_mean((1, 2, 3, 4))
+2.5
 
-stats.get_mean((1, 2, 3, 4))
 ```
 
 ### How to compute population variance
@@ -76,9 +116,10 @@ stats.get_mean((1, 2, 3, 4))
 To compute a mean we use `stats.get_population_variance`:
 
 ```python
-import stats
+>>> import stats
+>>> stats.get_population_variance((1, 2, 3, 4))
+1.25
 
-stats.get_population_variance((1, 2, 3, 4))
 ```
 
 ## Explanation
@@ -120,3 +161,18 @@ This introductory statistics text book is recommended reading:
 > Ross, Sheldon M. Introductory statistics. Academic Press, 2017.
 
 ````
+
+
+> Run the tests.
+
+To run the tests:
+
+```bash
+$ python test_stats.py
+```
+
+To run the doctests:
+
+```bash
+python -m doctest README.md
+```
