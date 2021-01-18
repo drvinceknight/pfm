@@ -90,7 +90,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Further information" href="../why/main.html" />
+    <link rel="next" title="Solutions" href="../solutions/main.html" />
     <link rel="prev" title="How" href="../how/main.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -562,6 +562,11 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../why/main.html">
      Further information
     </a>
@@ -887,8 +892,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p><strong>After</strong> completing the tutorial attempt the following exercises.</p>
 <p><strong>If you are not sure how to do something, have a look at the “How To” section.</strong></p>
 <ol>
-<li><p>Use the code written in the <a class="reference internal" href="../tutorial/main.html#modularisation-tutorial"><span class="std std-ref">Tutorial</span></a> to obtain the average time
-until absorption of the Markov chains with the following transition matrices:</p>
+<li><p>Use the code written in the <a class="reference internal" href="../tutorial/main.html#modularisation-tutorial"><span class="std std-ref">Modularisation Tutorial</span></a> to obtain the average time
+until absorption from the first state of the Markov chains with the following transition matrices:</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(P = \begin{pmatrix}1/2 &amp; 1/2 \\ 0 &amp; 1 \end{pmatrix}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(P = \begin{pmatrix}1/2 &amp; 1/4 &amp; 1/4\\ 1/3 &amp; 1/3 &amp; 1/3  \\0 &amp; 0 &amp; 1 \end{pmatrix}\)</span></p></li>
@@ -896,7 +901,8 @@ until absorption of the Markov chains with the following transition matrices:</p
 <li><p><span class="math notranslate nohighlight">\(P = \begin{pmatrix}1/2 &amp; 1/4 &amp; 1/4\\ 1/3 &amp; 1/3 &amp; 1/3  \\1/5 &amp; 0 &amp; 4/5 \end{pmatrix}\)</span></p></li>
 </ol>
 </li>
-<li><p>Modularise the following code by converting it to 2 functions:</p>
+<li><p>Modularise the following code by creating a function <code class="docutils literal notranslate"><span class="pre">flip_coin</span></code> that takes a
+<code class="docutils literal notranslate"><span class="pre">probability_of_selecting_heads</span></code> variable.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sample_experiment</span><span class="p">(</span><span class="n">bag</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This samples a token from a given bag and then</span>
@@ -923,7 +929,13 @@ until absorption of the Markov chains with the following transition matrices:</p
 </pre></div>
 </div>
 </li>
-<li><p>Modularise the following code by converting it to 3 functions:</p>
+<li><p>Modularise the following code by writing 2 further functions:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">get_potential_divisors</span></code>: A function to return the integers between 2 and
+<span class="math notranslate nohighlight">\(\sqrt{N}\)</span> for a given <span class="math notranslate nohighlight">\(N\)</span>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">is_divisor</span></code>: A function to check if <span class="math notranslate nohighlight">\(n | N\)</span> (“<span class="math notranslate nohighlight">\(n\)</span> divides <span class="math notranslate nohighlight">\(N\)</span>”) for given
+<span class="math notranslate nohighlight">\(n, N\)</span>.</p></li>
+</ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 
 <span class="k">def</span> <span class="nf">is_prime</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
@@ -945,19 +957,28 @@ until absorption of the Markov chains with the following transition matrices:</p
 <p>Confirm your work by comparing to the results of using <code class="docutils literal notranslate"><span class="pre">sympy.isprime</span></code>.</p>
 </li>
 <li><p>Write a <code class="docutils literal notranslate"><span class="pre">stats.py</span></code> file with two functions to implement the calculations of
-mean, median and variance of the following collections of numbers:</p>
+mean and population variance.</p>
+<p>Note that the mean is defined by:</p>
+<div class="math notranslate nohighlight">
+\[
+    \bar x \frac{\sum_{i=1}^{N} x_i}{N}
+   \]</div>
+<p>The population variance is defined by:</p>
+<div class="math notranslate nohighlight">
+\[
+    \sigma ^ 2 = \frac{\sum_{i=1}^{N} (x_i - \bar x) ^ 2}{N}
+   \]</div>
+<p>Use your functions to compute the mean and population variance of the following
+collections of numbers:</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(S_1=(1, 2, 3, 4, 4, 4, 4, 4)\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(S_1=(1)\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(S_1=(1, 1, 1, 2, 3, 4, 4, 4, 4, 4)\)</span></p></li>
 </ol>
 <p>Compare your results to the results of using the <code class="docutils literal notranslate"><span class="pre">statistics.mean</span></code>,
-<code class="docutils literal notranslate"><span class="pre">statistics.median</span></code> and <code class="docutils literal notranslate"><span class="pre">statistics.variance</span></code>. Note: the <code class="docutils literal notranslate"><span class="pre">statistics</span></code> library
+and <code class="docutils literal notranslate"><span class="pre">statistics.pvariance</span></code>. Note: the <code class="docutils literal notranslate"><span class="pre">statistics</span></code> library
 is part of the standard python library.</p>
 </li>
-<li><p>Write a <code class="docutils literal notranslate"><span class="pre">calculus.py</span></code> file with tools to be able to find and qualify (using
-the second derivative test) the inflection
-points of a given quadratic (assumed to be a Sympy expression).</p></li>
 </ol>
 </div>
 
@@ -990,7 +1011,7 @@ points of a given quadratic (assumed to be a Sympy expression).</p></li>
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="../how/main.html" title="previous page">How</a>
-    <a class='right-next' id="next-link" href="../why/main.html" title="next page">Further information</a>
+    <a class='right-next' id="next-link" href="../solutions/main.html" title="next page">Solutions</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

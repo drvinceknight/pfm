@@ -13,20 +13,20 @@ kernelspec:
 ---
 
 (modularisation_exercises)=
-
 # Exercises
 
 **After** completing the tutorial attempt the following exercises.
 
 **If you are not sure how to do something, have a look at the "How To" section.**
 
-1. Use the code written in the {ref}`modularisation_tutorial` to obtain the average time
-   until absorption of the Markov chains with the following transition matrices:
+1. Use the code written in the [Modularisation Tutorial](modularisation_tutorial) to obtain the average time
+   until absorption from the first state of the Markov chains with the following transition matrices:
    1. $P = \begin{pmatrix}1/2 & 1/2 \\ 0 & 1 \end{pmatrix}$
    2. $P = \begin{pmatrix}1/2 & 1/4 & 1/4\\ 1/3 & 1/3 & 1/3  \\0 & 0 & 1 \end{pmatrix}$
    3. $P = \begin{pmatrix}1 & 0 \\ 1/2 & 1/2 \end{pmatrix}$
    4. $P = \begin{pmatrix}1/2 & 1/4 & 1/4\\ 1/3 & 1/3 & 1/3  \\1/5 & 0 & 4/5 \end{pmatrix}$
-2. Modularise the following code by converting it to 2 functions:
+2. Modularise the following code by creating a function `flip_coin` that takes a
+   `probability_of_selecting_heads` variable.
 
    ```
    def sample_experiment(bag):
@@ -54,7 +54,12 @@ kernelspec:
        return selected_token, coin
    ```
 
-3. Modularise the following code by converting it to 3 functions:
+3. Modularise the following code by writing 2 further functions:
+
+   - `get_potential_divisors`: A function to return the integers between 2 and
+     $\sqrt{N}$ for a given $N$.
+   - `is_divisor`: A function to check if $n | N$ ("$n$ divides $N$") for given
+     $n, N$.
 
    ```
    import math
@@ -78,16 +83,27 @@ kernelspec:
    Confirm your work by comparing to the results of using `sympy.isprime`.
 
 4. Write a `stats.py` file with two functions to implement the calculations of
-   mean, median and variance of the following collections of numbers:
+   mean and population variance.
+
+   Note that the mean is defined by:
+
+   $$
+    \bar x \frac{\sum_{i=1}^{N} x_i}{N}
+   $$
+   
+   The population variance is defined by:
+
+   $$
+    \sigma ^ 2 = \frac{\sum_{i=1}^{N} (x_i - \bar x) ^ 2}{N}
+   $$
+
+   Use your functions to compute the mean and population variance of the following
+   collections of numbers:
 
    1. $S_1=(1, 2, 3, 4, 4, 4, 4, 4)$
    2. $S_1=(1)$
    3. $S_1=(1, 1, 1, 2, 3, 4, 4, 4, 4, 4)$
 
    Compare your results to the results of using the `statistics.mean`,
-   `statistics.median` and `statistics.variance`. Note: the `statistics` library
+    and `statistics.pvariance`. Note: the `statistics` library
    is part of the standard python library.
-
-5. Write a `calculus.py` file with tools to be able to find and qualify (using
-   the second derivative test) the inflection
-   points of a given quadratic (assumed to be a Sympy expression).
