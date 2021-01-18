@@ -91,6 +91,7 @@
     - file: building-tools/05-modularisation/tutorial/main
     - file: building-tools/05-modularisation/how/main
     - file: building-tools/05-modularisation/exercises/main
+    - file: building-tools/05-modularisation/solutions/main
     - file: building-tools/05-modularisation/why/main
   - file: building-tools/06-documentation/introduction/main
     sections:
