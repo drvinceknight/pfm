@@ -12,11 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Exercises
-
-**After** completing the tutorial attempt the following exercises.
-
-**If you are not sure how to do something, have a look at the "How To" section.**
+# Solutions
 
 Write documentation for the `statistics.py` file written in the exercises of
 [Modularisation Exercises](modularisation_exercises).
