@@ -374,6 +374,9 @@ prose_suggestions_to_ignore = {
     "book/building-tools/07-testing/why/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),
+    "book/building-tools/07-testing/solutions/main.md": set(
+        ("typography.symbols.curly_quotes",)
+    ),
     "book/further-information/01-numpy/tutorial/main.md": set(
         ("typography.symbols.curly_quotes",)
     ),

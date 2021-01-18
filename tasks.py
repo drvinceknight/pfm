@@ -282,3 +282,6 @@ def testtestingchapter(c, root=ROOT):
     c.run(
         f"cd {root}/book/building-tools/07-testing/tutorial && python test_absorption.py && python -m doctest main.md"
     )
+    c.run(
+        f"cd {root}/book/building-tools/07-testing/solutions && python test_stats.py && python -m doctest main.md"
+    )
