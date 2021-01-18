@@ -12,6 +12,7 @@ kernelspec:
   name: python3
 ---
 
+(documentation_exercises)=
 # Exercises
 
 **After** completing the tutorial attempt the following exercises.

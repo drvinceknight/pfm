@@ -17,6 +17,8 @@ kernelspec:
 > Write documentation for the `statistics.py` file written in the exercises of
 > [Modularisation Exercises](modularisation_exercises).
 
+We put the following in a `README.md` file:
+
 ````md
 
 # Stats
