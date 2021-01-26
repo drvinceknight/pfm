@@ -72,7 +72,7 @@ all(checks)
 
 ```{attention}
 Using list comprehensions is a mathematical way of repeating code but at times
-it might prove useful to repeat code in a different way using a standard `if`
+it might prove useful to repeat code in a different way using a standard `for`
 statement.
 ```
 
