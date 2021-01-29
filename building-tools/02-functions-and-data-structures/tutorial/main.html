@@ -974,14 +974,14 @@ holds for a given value of <span class="math notranslate nohighlight">\(n\)</spa
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Check the relationship for the sum of the first n fibonacci numbers</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">sum_of_fibonacci</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">get_fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="n">sum_of_fibonacci</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">get_fibonacci</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">sum_of_fibonacci</span> <span class="o">==</span> <span class="n">get_fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
 </pre></div>
 </div>
 </div>
 </div>
 <p>We can then generate checks for <span class="math notranslate nohighlight">\(n\leq 500\)</span>:</p>
-<div class="cell docutils container">
+<div class="cell tag_output_scroll docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">checks</span> <span class="o">=</span> <span class="p">[</span><span class="n">check_theorem</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">501</span><span class="p">)]</span>
 <span class="n">checks</span>

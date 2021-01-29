@@ -73,13 +73,15 @@ def check_theorem(n):
     """
     Check the relationship for the sum of the first n fibonacci numbers
     """
-    sum_of_fibonacci = sum(get_fibonacci(n) for n in range(n + 1))
+    sum_of_fibonacci = sum(get_fibonacci(i) for i in range(n + 1))
     return sum_of_fibonacci == get_fibonacci(n + 2) - 1
 ```
 
 We can then generate checks for $n\leq 500$:
 
 ```{code-cell} ipython3
+:tags: ["output_scroll"]
+
 checks = [check_theorem(n) for n in range(501)]
 checks
 ```
@@ -87,6 +89,7 @@ checks
 Confirm that all the booleans in `check` are `True`:
 
 ```{code-cell} ipython3
+
 all(checks)
 ```
 
