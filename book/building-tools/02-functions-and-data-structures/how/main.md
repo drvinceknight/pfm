@@ -20,7 +20,7 @@ Two important data structures have already been seen in previous chapters:
 - Lists: [Probability: How to create a list](create_a_list).
 
 We covered functions in a previous chapter as well: [Probability: How to define
-a function](define_a_function)
+a function](define_a_function).
 
 ## Create a set
 
