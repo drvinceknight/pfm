@@ -26,7 +26,7 @@ Consider the following quadratics:
 
 $$
 f(x) = 5 x ^ 2 + 2 x - 7\\
-g(x) = 4 x ^ 2 - 3 x + 12\\
+g(x) = - 4 x ^ 2 - 3 x + 12\\
 h(x) = f(x) + g(x)
 $$
 
