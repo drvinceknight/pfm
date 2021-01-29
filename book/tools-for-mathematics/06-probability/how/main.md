@@ -55,6 +55,7 @@ As for tuples we can also access elements using their indices:
 basket[3]
 ```
 
+(define_a_function)=
 ## Define a function
 
 We define a function using the `def` keyword (short for define):
