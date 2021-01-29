@@ -16,8 +16,11 @@ kernelspec:
 
 Two important data structures have already been seen in previous chapters:
 
-- Tuples: {ref}`create_a_tuple`.
-- Lists: {ref}`create_a_list`.
+- Tuples: [Combinatorics: How to create a tuple](create_a_tuple).
+- Lists: [Probability: How to create a list](create_a_list).
+
+We covered functions in a previous chapter as well: [Probability: How to define
+a function](define_a_function)
 
 ## Create a set
 
