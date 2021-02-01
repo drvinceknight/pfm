@@ -121,10 +121,10 @@ The matrix $P$ will look like:
 
 $$
 P = \begin{pmatrix}
-0      & 1/6 & 1/6 & 0   & 1/6    & 1/6    & 1/6    & 1/6    & 0      & \dots 0\\
-0      & 0   & 1/6 & 1/6 & 0      & 1/6    & 1/6    & 1/6    & 1/6    & \dots 0\\
-\vdots & 0   & 0   & 0   & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots    & \vdots\\
-0      & 0   & 0   & 0   & 0      & 0      & 0      & \dots  & 0      & 1\\
+0      & 1/6 & 1/6 & 0 & 1/6    & 1/6    & 1/6    & 0      & 0      & \dots 0\\
+0      & 0   & 1/6 & 0 & 1/6    & 1/6    & 1/6    & 1/6    & 0      & \dots 0\\
+\vdots & 0   & 0   & 0 & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots    & \vdots\\
+0      & 0   & 0   & 0 & 0      & 0      & 0      & \dots  & 0      & 1\\
 \end{pmatrix}
 $$
 
