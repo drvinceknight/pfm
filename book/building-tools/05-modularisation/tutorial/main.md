@@ -24,7 +24,7 @@ type.
 ```{admonition} Problem
 Consider a Markov chain model of the Board Game "Snakes and Ladders":
 
-1. what is shortest number of turns that are possible to win?
+1. what is the shortest number of turns that are possible to win?
 2. what is the average number of turns?
 ```
 
@@ -121,10 +121,10 @@ The matrix $P$ will look like:
 
 $$
 P = \begin{pmatrix}
-0      & 1/6 & 1/6 & 0 & 1/6    & 1/6    & 1/6    & 0      & 0      & \dots 0\\
-0      & 0   & 1/6 & 0 & 1/6    & 1/6    & 1/6    & 1/6    & 0      & \dots 0\\
+0      & 1/6 & 1/6 & 0 & 1/6    & 1/6    & 1/6    & 0      & 0      & \dots  &0\\
+0      & 0   & 1/6 & 0 & 1/6    & 1/6    & 1/6    & 1/6    & 0      & \dots  & 0\\
 \vdots & 0   & 0   & 0 & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots    & \vdots\\
-0      & 0   & 0   & 0 & 0      & 0      & 0      & \dots  & 0      & 1\\
+0      & 0   & 0   & 0 & 0      & 0      & 0      & \dots  & 0      & 0      & 1\\
 \end{pmatrix}
 $$
 
