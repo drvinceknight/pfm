@@ -128,7 +128,7 @@ P = \begin{pmatrix}
 \end{pmatrix}
 $$
 
-Note that because of the ladder on square 3: $P_{14}=9$ and $P_{1, 20}=1$. The
+Note that because of the ladder on square 3: $P_{14}=0$ and $P_{1, 20}=1/6$. The
 first row/column of $P$ corresponds to the state of not being on the board.
 
 A `csv` file containing this matrix $P$ can be found at
