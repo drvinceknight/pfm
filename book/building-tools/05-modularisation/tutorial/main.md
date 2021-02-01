@@ -54,7 +54,7 @@ dice.
 There are snakes and ladders between the squares as given in Table
 {ref}`table:snakes_and_ladders`.
 
-```{list-table} Table with a title
+```{list-table} Snakes and Ladders
 :header-rows: 1
 :name: table:snakes_and_ladders
 
