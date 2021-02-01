@@ -908,7 +908,7 @@ type.</p>
 <p class="admonition-title">Problem</p>
 <p>Consider a Markov chain model of the Board Game “Snakes and Ladders”:</p>
 <ol class="simple">
-<li><p>what is shortest number of turns that are possible to win?</p></li>
+<li><p>what is the shortest number of turns that are possible to win?</p></li>
 <li><p>what is the average number of turns?</p></li>
 </ol>
 </div>
@@ -1025,10 +1025,10 @@ dice.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 P = \begin{pmatrix}
-0      &amp; 1/6 &amp; 1/6 &amp; 0 &amp; 1/6    &amp; 1/6    &amp; 1/6    &amp; 0      &amp; 0      &amp; \dots 0\\
-0      &amp; 0   &amp; 1/6 &amp; 0 &amp; 1/6    &amp; 1/6    &amp; 1/6    &amp; 1/6    &amp; 0      &amp; \dots 0\\
+0      &amp; 1/6 &amp; 1/6 &amp; 0 &amp; 1/6    &amp; 1/6    &amp; 1/6    &amp; 0      &amp; 0      &amp; \dots  &amp;0\\
+0      &amp; 0   &amp; 1/6 &amp; 0 &amp; 1/6    &amp; 1/6    &amp; 1/6    &amp; 1/6    &amp; 0      &amp; \dots  &amp; 0\\
 \vdots &amp; 0   &amp; 0   &amp; 0 &amp; \ddots &amp; \ddots &amp; \ddots &amp; \ddots &amp; \ddots &amp; \ddots    &amp; \vdots\\
-0      &amp; 0   &amp; 0   &amp; 0 &amp; 0      &amp; 0      &amp; 0      &amp; \dots  &amp; 0      &amp; 1\\
+0      &amp; 0   &amp; 0   &amp; 0 &amp; 0      &amp; 0      &amp; 0      &amp; \dots  &amp; 0      &amp; 0      &amp; 1\\
 \end{pmatrix}
 \end{split}\]</div>
 <p>Note that because of the ladder on square 3: <span class="math notranslate nohighlight">\(P_{14}=9\)</span> and <span class="math notranslate nohighlight">\(P_{1, 20}=1\)</span>. The
