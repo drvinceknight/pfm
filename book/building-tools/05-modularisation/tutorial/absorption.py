@@ -18,8 +18,8 @@ def extract_Q(P):
     identifies the rows and columns that have a 1 in the diagonal and removes
     them.
     """
-    indices_with_1_in_diagonal = np.where(P.diagonal() != 1)[0]
-    Q = P[indices_with_1_in_diagonal.reshape(-1, 1), indices_with_1_in_diagonal]
+    indices_without_1_in_diagonal = np.where(P.diagonal() != 1)[0]
+    Q = P[indices_without_1_in_diagonal.reshape(-1, 1), indices_without_1_in_diagonal]
     return Q
 
 
