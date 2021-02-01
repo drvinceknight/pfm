@@ -65,6 +65,8 @@ t[0]
 
 
 ```{code-cell} ipython3
+:tags: ["nbval-ignore-output"]
+
 P = np.array(((1 / 2, 1 / 4, 1 / 4), (1 / 3, 1 / 3, 1 / 3), (1 / 5, 0, 4 / 5)))
 t = absorption.compute_t(P)
 t[0]
