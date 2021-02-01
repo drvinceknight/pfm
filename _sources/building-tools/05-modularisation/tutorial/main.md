@@ -170,7 +170,7 @@ $$
     t = N\mathbb{1}
 $$
 
-where \mathbb{1} is a column of 1s.
+where $\mathbb{1}$ is a column of 1s.
 
 To be able to code this we want to write a function to compute $t$ but this
 requires "extracting" $Q$ from $P$:
