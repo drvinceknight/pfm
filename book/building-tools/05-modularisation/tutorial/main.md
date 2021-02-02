@@ -237,6 +237,7 @@ def compute_t(P):
     """
     Q = extract_Q(P)
     N = compute_N(Q)
+    number_of_rows, _ = Q.shape
     return N @ np.ones(number_of_rows)
 ```
 
