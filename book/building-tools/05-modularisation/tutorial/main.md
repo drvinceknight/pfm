@@ -237,6 +237,7 @@ def compute_t(P):
     """
     Q = extract_Q(P)
     N = compute_N(Q)
+    number_of_rows, _ = Q.shape
     return N @ np.ones(number_of_rows)
 ```
 
@@ -245,9 +246,9 @@ All the code we have written so far is generic in nature so would be better
 placed somewhere that it can be used for different project.
 ```
 
-We are going to put these three functions in `absorption.py` file as can be seen in
-{ref}`fig:absorption.py` and save it in a directory called
-`snakes_and_ladders`.
+We are going to put these three functions (and the necessary `import numpy as
+np` statement) in an `absorption.py` file as can be seen in
+{ref}`fig:absorption.py` and save it in a directory called `snakes_and_ladders`.
 
 ```{figure} ./img/absorption.py/main.png
 ---
