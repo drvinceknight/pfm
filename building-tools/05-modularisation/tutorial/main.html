@@ -1140,6 +1140,7 @@ up that function in to three separate functions:</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">Q</span> <span class="o">=</span> <span class="n">extract_Q</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
     <span class="n">N</span> <span class="o">=</span> <span class="n">compute_N</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>
+    <span class="n">number_of_rows</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">Q</span><span class="o">.</span><span class="n">shape</span>
     <span class="k">return</span> <span class="n">N</span> <span class="o">@</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">number_of_rows</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1150,9 +1151,8 @@ up that function in to three separate functions:</p>
 <p>All the code we have written so far is generic in nature so would be better
 placed somewhere that it can be used for different project.</p>
 </div>
-<p>We are going to put these three functions in <code class="docutils literal notranslate"><span class="pre">absorption.py</span></code> file as can be seen in
-<a class="reference internal" href="#fig-absorption-py"><span class="std std-ref">The three modularised functions in a python file.</span></a> and save it in a directory called
-<code class="docutils literal notranslate"><span class="pre">snakes_and_ladders</span></code>.</p>
+<p>We are going to put these three functions (and the necessary <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">np</span></code> statement) in an <code class="docutils literal notranslate"><span class="pre">absorption.py</span></code> file as can be seen in
+<a class="reference internal" href="#fig-absorption-py"><span class="std std-ref">The three modularised functions in a python file.</span></a> and save it in a directory called <code class="docutils literal notranslate"><span class="pre">snakes_and_ladders</span></code>.</p>
 <div class="figure align-default" id="fig-absorption-py">
 <a class="reference internal image-reference" href="../../../_images/main8.png"><img alt="../../../_images/main8.png" src="../../../_images/main8.png" style="width: 75%;" /></a>
 <p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">The three modularised functions in a python file.</span><a class="headerlink" href="#fig-absorption-py" title="Permalink to this image">¶</a></p>
