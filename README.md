@@ -1,6 +1,10 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4074114.svg)](https://doi.org/10.5281/zenodo.4074114)
 
-![Test correctness of notebooks](https://github.com/drvinceknight/pfm/workflows/Test%20correctness%20of%20notebooks/badge.svg)
+![Validate notebooks on MacOS](https://github.com/drvinceknight/pfm/workflows/Validate%20notebooks%20on%20MacOS/badge.svg)
+
+![Validate notebooks on ubuntu](https://github.com/drvinceknight/pfm/workflows/Validate%20notebooks%20on%20ubuntu/badge.svg)
+
+![Validate notebooks on Windows](https://github.com/drvinceknight/pfm/workflows/Validate%20notebooks%20on%20Windows/badge.svg)
 
 ![Test prose and style](https://github.com/drvinceknight/pfm/workflows/Test%20prose%20and%20style/badge.svg)
 
