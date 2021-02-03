@@ -189,7 +189,7 @@ money = money * 3
 ```
 ````
 
-## How to include variables in strings
+## How to include variables in strings
 
 Variables can be used in strings using _string formatting_. There are numerous
 ways this can be done in Python but the current best practice is to use
