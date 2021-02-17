@@ -17,7 +17,7 @@ kernelspec:
 The following Python libraries and the specific versions are used in this book:
 
 ```{code-cell} ipython3
-:tags: ["remove-input", "style-check-ignore"]
+:tags: ["remove-input", "style-check-ignore", "nbval-ignore-output"]
 
 import pathlib
 from importlib.metadata import version, PackageNotFoundError

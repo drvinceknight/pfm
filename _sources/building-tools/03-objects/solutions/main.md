@@ -101,6 +101,8 @@ h = f + g
 h.get_roots()
 ```
 
+## Question 2
+
 > `2`. Write a class for a Linear expression and use it to find the roots of the
 >  following expressions:
 
