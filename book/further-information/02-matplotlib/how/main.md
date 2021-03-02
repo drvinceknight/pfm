@@ -42,7 +42,7 @@ plt.figure()
 plt.scatter(x, y);
 ```
 
-## How to plot a function
+## How to plot a function
 
 We use the `matplotlib.pyplot.plot` tool. Similarly to
 `matplotlib.pyplot.scatter` this takes two iterables. It plots a line plot. To
