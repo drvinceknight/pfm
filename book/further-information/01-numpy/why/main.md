@@ -39,6 +39,8 @@ collection_as_list
 ```
 
 ```{code-cell} ipython3
+:tags: [nbval-ignore-output]
+
 import numpy as np
 
 collection_as_array = np.array(("dog", 3))
