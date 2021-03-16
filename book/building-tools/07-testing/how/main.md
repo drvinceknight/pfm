@@ -111,7 +111,7 @@ The last assertion used the `count` method on a list that counts a given number
 of items in a list.
 ```
 
-## How to write a test file?
+## How to write a test file?
 
 To write tests assertion statement can be put in to a file separate to the code
 in functions.
