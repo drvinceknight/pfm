@@ -18,7 +18,7 @@ kernelspec:
 
 **If you are not sure how to do something, have a look at the "How To" section.**
 
-> Write documentation for the `statistics.py` file written in the exercises of
+> Write tests for the `statistics.py` file written in the exercises of
 > [Modularisation Exercises](modularisation_exercises).
 
 We start by writing the tests for the code. The following is in a
