@@ -101,7 +101,9 @@ def get_sequence_d(n):
 [get_sequence_d(n) for n in range(10)]
 ```
 
-2. Using recursion, obtain the first 5 terms of the Fibonacci sequence:
+## Question 2
+
+> 2. Using recursion, obtain the first 5 terms of the Fibonacci sequence:
 
    $$
        \left\{
