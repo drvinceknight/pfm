@@ -199,7 +199,7 @@ This allows us to use basic \\(\LaTeX\\) as a way to display mathematics.
 For example:
 
 1. \\(\frac{2}{3}\\)
-2. \\(\sum\_{i=0}^n i\\)
+2. \\(\sum_{i=0}^n i\\)
 ```
 
 When you run that it should look like:
