@@ -221,6 +221,15 @@ derivative = derivative.subs({b: b_value})
 sym.solveset(derivative)
 ```
 
+This confirms that one stationary point is indeed at $x=2$, the other is at
+$x=1/2$.
+To get the full coordinate of this other stationary point we substitute this
+value of $x$ in to $f$:
+
+```{code-cell} ipython3
+expression.subs({b: b_value, x: sym.S(1) / 2})
+```
+
 > `4`. Determine the nature of both stationary points.
 
 Substituting both values in to the second derivative:
