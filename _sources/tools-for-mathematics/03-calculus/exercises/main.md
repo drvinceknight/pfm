@@ -32,7 +32,7 @@ kernelspec:
    1. Find $f'(x)$ and $f''(x)$
    2. You are given that $f(x)$ has a stationary point at $x=2$. Use this information to find $b$.
    3. Find the coordinates of the other stationary point.
-   4. Determine the nature of both stationary points.
+   4. Determine the nature of all stationary points.
 5. Consider the functions $f(x)=-x^2+4x+4$ and $g(x)=3x^2-2x-2$.
    1. Create a variable `turning_points` which has value the turning points of $f(x)$.
    2. Create variable `intersection_points` which has value of the points where $f(x)$ and $g(x)$ intersect.

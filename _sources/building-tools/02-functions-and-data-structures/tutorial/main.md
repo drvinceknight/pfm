@@ -27,7 +27,7 @@ $$
     a_n = a_{n - 1} + a_{n - 2}, n \geq 2\end{array}\right.
 $$
 
-Verify the following that the following identify holds for $n\leq 500$:
+Verify that the following identity holds for $n\leq 500$:
 
 $$
     \sum_{i=0}^n a_i = a_{n + 2} - 1
