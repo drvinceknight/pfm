@@ -1,11 +1,13 @@
-- file: cover
-- part: Overview
+format: jb-book
+root: cover
+parts:
+- caption: Overview
   chapters:
   - file: overview/introduction/main
     sections:
     - file: overview/structure/main
     - file: overview/how_to_use_this_book/main
-- part: Tools for mathematics
+- caption: Tools for mathematics
   chapters:
   - file: tools-for-mathematics/01-using-notebooks/introduction/main
     sections:
@@ -56,7 +58,7 @@
     - file: tools-for-mathematics/07-sequences/exercises/main
     - file: tools-for-mathematics/07-sequences/solutions/main
     - file: tools-for-mathematics/07-sequences/why/main
-- part: Building tools
+- caption: Building tools
   chapters:
   - file: building-tools/01-variables-conditionals-loops/introduction/main
     sections:
@@ -107,7 +109,7 @@
     - file: building-tools/07-testing/exercises/main
     - file: building-tools/07-testing/solutions/main
     - file: building-tools/07-testing/why/main
-- part: Further information
+- caption: Further information
   chapters:
   - file: further-information/01-numpy/introduction/main
     sections:
@@ -129,8 +131,8 @@
     - file: further-information/04-pip-installing/tutorial/main
     - file: further-information/04-pip-installing/how/main
     - file: further-information/04-pip-installing/why/main
-  - file: zbibliography  # This file is named zbibliography to ensure it is compiled last. See: https://jupyterbook.org/content/citations.html#citations-and-bibliographies
-- part: About this book
+  - file: zbibliography
+- caption: About this book
   chapters:
   - file: about-this-book/main
     sections:

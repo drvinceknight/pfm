@@ -195,11 +195,11 @@ following in there:
 
 ```md
 As well as using Python in Jupyter notebooks we can also write using Markdown.
-This allows us to use basic \\(\LaTeX\\) as a way to display mathematics.
+This allows us to use basic $\LaTeX$ as a way to display mathematics.
 For example:
 
-1. \\(\frac{2}{3}\\)
-2. \\(\sum_{i=0}^n i\\)
+1. $\frac{2}{3}$
+2. $\sum_{i=0}^n i$
 ```
 
 When you run that it should look like:

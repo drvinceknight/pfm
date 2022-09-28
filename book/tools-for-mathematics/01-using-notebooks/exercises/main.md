@@ -29,9 +29,9 @@ kernelspec:
    ```md
    # Euler's equation
 
-   \\[
+   $$
    e ^ {i\pi} = -1
-   \\]
+   $$
    ```
 
 4. Render the following expressions by writing markdown
@@ -41,3 +41,6 @@ kernelspec:
    4. $\int_{5}^{12}x^2dx$
    5. $\begin{pmatrix}4 & 12 & 3\\2 & x & i\\\end{pmatrix}$
 5. Save your notebook to `HTML` and open and view it.
+6. Download the notebook available at
+   [10.5281/zenodo.7118738](https://zenodo.org/record/7118738/files/demo.ipynb?download=1) and
+   check that you are able to open it.
