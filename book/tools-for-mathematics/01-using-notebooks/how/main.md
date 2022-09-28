@@ -86,32 +86,35 @@ The syntax is relatively straightforward and the following is a good guide:
 
 ## Write basic LaTeX
 
-Jupyter notebooks allow for markdown cells to not only include markdown but also include mathematics using another "mark up" language called $\LaTeX$.
+Jupyter notebooks allow for markdown cells to not only include markdown but also
+include mathematics using another "mark up" language called $\LaTeX$.
 
 Here is a brief overview of the syntax for arithmetic operations:
 
-- `\\(a+b\\)` gives: $a + b$:
-- `\\(a-b\\)` gives: $a-b$
-- `\\(-a\\)` gives: $-a$
-- `\\(ab\\)` gives $ab$
-- `\\(a\cdot b\\)` gives $a\cdot b$
-- `\\(a\times b\\)` gives $a\times b$
-- `\\(a/b\\)` gives $a/b$
-- `\\(\frac{a}{b}\\)` gives $\frac{a}{b}$
-- `\\(a ^ b\\)` gives $a ^ b$
+- `$a+b$` gives: $a + b$:
+- `$a-b$` gives: $a-b$
+- `$-a$` gives: $-a$
+- `$ab$` gives $ab$
+- `$a\cdot b$` gives $a\cdot b$
+- `$a\times b$` gives $a\times b$
+- `$a/b$` gives $a/b$
+- `$\frac{a}{b}$` gives $\frac{a}{b}$
+- `$a ^ b$` gives $a ^ b$
 
-The `\\(<expression>\\)` delimiters create what is called an "inline" mathematics. You can change the brackets to `\\[<expression>\\]` to give "displayed mathematics".
+The `$<expression>$` delimiters create what is called an "inline" mathematics.
+You can change the brackets to `$$<expression>$$` to give "displayed
+mathematics".
 
 We can write a matrix:
 
 ```
-\\[
+$$
     \begin{pmatrix}
         a&b\\
         c&d\\
         e&f\\
     \end{pmatrix}
-\\]
+$$
 ```
 
 gives:
@@ -127,9 +130,9 @@ $$
 We can write integrals:
 
 ```
-\\[
+$$
     \int_{0}^{\infty}x dx
-\\]
+$$
 ```
 
 gives:
@@ -141,9 +144,9 @@ $$
 We can write summations:
 
 ```
-\\[
+$$
     \sum_{0}^{n}i
-\\]
+$$
 ```
 
 gives:
@@ -152,9 +155,6 @@ $$
     \sum_{0}^{n}i
 $$
 
-**Note** when writing $\LaTeX$ in jupyter notebooks we need the double slash
-`\\` but when writing $\LaTeX$ in its native environment a single quote is
-the correct syntax.
 
 ## Save the output in a different format
 

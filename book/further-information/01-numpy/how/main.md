@@ -84,7 +84,7 @@ Or:
 np.zeros((3, 5))
 ```
 
-## How to generate random arrays
+## How to generate random arrays
 
 `numpy` has a powerful random number generator. It can be accessed from
 `numpy.random` and has multiple tools. The simplest of which is
