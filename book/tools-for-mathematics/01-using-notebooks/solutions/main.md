@@ -122,3 +122,15 @@ Click the toggle ("Click to Show") to see a demo of this:
 ```{toggle}
 ![](./img/saving_and_opening_html/main.gif)
 ```
+
+## Question 6
+
+> `6`. Download the notebook available at
+  [10.5281/zenodo.7118738](https://zenodo.org/record/7118738/files/demo.ipynb?download=1) and
+  check that you are able to open it.
+
+Click the toggle ("Click to Show") to see a demo of this:
+
+```{toggle}
+![](./img/downloading_a_notebook/main.gif)
+```
