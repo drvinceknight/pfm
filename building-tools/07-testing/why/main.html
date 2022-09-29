@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Further information &#8212; Python for mathematics</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,27 +20,28 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -73,9 +76,9 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
-    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
@@ -103,7 +106,21 @@ const thebe_selector_output = ".output, .cell_output"
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -112,14 +129,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -137,14 +150,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../cover.html">
-   Python for Mathematics
-  </a>
- </li>
-</ul>
-<p class="caption">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../cover.html">
+                    Python for Mathematics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Overview
  </span>
@@ -173,7 +187,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Tools for mathematics
  </span>
@@ -439,7 +453,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Building tools
  </span>
@@ -705,7 +719,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Further information
  </span>
@@ -825,7 +839,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   About this book
  </span>
@@ -866,113 +880,243 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
-<div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">Toggle navigation</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
             
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        <a class="dropdown-buttons"
-            href="../../../_sources/building-tools/07-testing/why/main.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../_sources/building-tools/07-testing/why/main.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/drvinceknight/pfm"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/drvinceknight/pfm/issues/new?title=Issue%20on%20page%20%2Fbuilding-tools/07-testing/why/main.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/drvinceknight/pfm/edit/main/book/building-tools/07-testing/why/main.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/drvinceknight/pfm/main?urlpath=tree/book/building-tools/07-testing/why/main.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-        
-    </div>
-</div>
-
         </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/drvinceknight/pfm/main?urlpath=tree/book/building-tools/07-testing/why/main.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/drvinceknight/pfm"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/drvinceknight/pfm/issues/new?title=Issue%20on%20page%20%2Fbuilding-tools/07-testing/why/main.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/drvinceknight/pfm/edit/main/book/building-tools/07-testing/why/main.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/building-tools/07-testing/why/main.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../../../_sources/building-tools/07-testing/why/main.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#why-do-we-write-functions-in-tests">
    Why do we write functions in tests?
@@ -1005,12 +1149,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Further information</h1>
@@ -1059,13 +1202,14 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="further-information">
-<h1>Further information<a class="headerlink" href="#further-information" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="why-do-we-write-functions-in-tests">
-<h2>Why do we write functions in tests?<a class="headerlink" href="#why-do-we-write-functions-in-tests" title="Permalink to this headline">¶</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="further-information">
+<h1>Further information<a class="headerlink" href="#further-information" title="Permalink to this headline">#</a></h1>
+<section id="why-do-we-write-functions-in-tests">
+<h2>Why do we write functions in tests?<a class="headerlink" href="#why-do-we-write-functions-in-tests" title="Permalink to this headline">#</a></h2>
 <p>In <a class="reference internal" href="../tutorial/main.html#testing-tutorial"><span class="std std-ref">Tutorial</span></a> we wrote all the tests using <code class="docutils literal notranslate"><span class="pre">assert</span></code> statements
 inside of functions. **Technically this is not necessary as you could write a
 single script with all the assert statements one after the other.</p>
@@ -1074,9 +1218,9 @@ the test (in the docstring) and the tests themselves are modularised.
 Furthermore, this is actually how to write the tests when using a more
 appropriate way of running tests as described in
 <a class="reference internal" href="#is-there-a-more-efficient-way-to-run-tests"><span class="std std-ref">Is there a more efficient way to run tests?</span></a>.</p>
-</div>
-<div class="section" id="is-there-a-more-efficient-way-to-run-tests">
-<span id="id1"></span><h2>Is there a more efficient way to run tests?<a class="headerlink" href="#is-there-a-more-efficient-way-to-run-tests" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="is-there-a-more-efficient-way-to-run-tests">
+<span id="id1"></span><h2>Is there a more efficient way to run tests?<a class="headerlink" href="#is-there-a-more-efficient-way-to-run-tests" title="Permalink to this headline">#</a></h2>
 <p>Writing tests as a script and directly running them has one immediate problem:
 once the first <code class="docutils literal notranslate"><span class="pre">assert</span></code> statement fails the rest of them are not run.</p>
 <p>There is a Python library for running tests called <code class="docutils literal notranslate"><span class="pre">pytest</span></code> <a class="reference external" href="https://docs.pytest.org/">https://docs.pytest.org/</a>.
@@ -1089,10 +1233,12 @@ installed.</p>
 <p>This uses a python tool called <code class="docutils literal notranslate"><span class="pre">pip</span></code> which lets you install libraries from the
 Python Package Index (PyPi).
 Figure <a class="reference internal" href="#fig-installing-pytest"><span class="std std-ref">Installing pytest from the Python Package Index.</span></a> shows this.</p>
-<div class="figure align-default" id="fig-installing-pytest">
+<figure class="align-default" id="fig-installing-pytest">
 <a class="reference internal image-reference" href="../../../_images/main14.png"><img alt="../../../_images/main14.png" src="../../../_images/main14.png" style="width: 75%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 25 </span><span class="caption-text">Installing pytest from the Python Package Index.</span><a class="headerlink" href="#fig-installing-pytest" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Installing pytest from the Python Package Index.</span><a class="headerlink" href="#fig-installing-pytest" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Once we have <code class="docutils literal notranslate"><span class="pre">pytest</span></code> installed we can actually find all files starting with
 <code class="docutils literal notranslate"><span class="pre">test_</span></code> in the name and all functions in those files starting with <code class="docutils literal notranslate"><span class="pre">test_</span></code> and
 run them with the following command:</p>
@@ -1100,26 +1246,30 @@ run them with the following command:</p>
 </pre></div>
 </div>
 <p>Figure <a class="reference internal" href="#fig-running-pytest"><span class="std std-ref">Running pytest</span></a> shows this.</p>
-<div class="figure align-default" id="fig-running-pytest">
+<figure class="align-default" id="fig-running-pytest">
 <a class="reference internal image-reference" href="../../../_images/main15.png"><img alt="../../../_images/main15.png" src="../../../_images/main15.png" style="width: 75%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 26 </span><span class="caption-text">Running pytest</span><a class="headerlink" href="#fig-running-pytest" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Running pytest</span><a class="headerlink" href="#fig-running-pytest" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>It is also possible to use <code class="docutils literal notranslate"><span class="pre">pytest</span></code> to test the documentation by running the
 doctests:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pytest --doctest-glob<span class="o">=</span><span class="s2">&quot;README.md&quot;</span>
 </pre></div>
 </div>
 <p>Figure <a class="reference internal" href="#fig-running-pytest-with-doctests"><span class="std std-ref">Running pytest with doctests</span></a> shows this.</p>
-<div class="figure align-default" id="fig-running-pytest-with-doctests">
+<figure class="align-default" id="fig-running-pytest-with-doctests">
 <a class="reference internal image-reference" href="../../../_images/main16.png"><img alt="../../../_images/main16.png" src="../../../_images/main16.png" style="width: 75%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 27 </span><span class="caption-text">Running pytest with doctests</span><a class="headerlink" href="#fig-running-pytest-with-doctests" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Running pytest with doctests</span><a class="headerlink" href="#fig-running-pytest-with-doctests" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>When you tests pass or fail you will get more information and there are also a
 number of plugins that exists that all you to extend the capabilities of
 <code class="docutils literal notranslate"><span class="pre">pytest</span></code>.</p>
-</div>
-<div class="section" id="what-should-be-tested">
-<h2>What should be tested?<a class="headerlink" href="#what-should-be-tested" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="what-should-be-tested">
+<h2>What should be tested?<a class="headerlink" href="#what-should-be-tested" title="Permalink to this headline">#</a></h2>
 <p>The short answer to this is that all software should be tested and that software
 is compromised of documentation and code.</p>
 <p>Note that it is often not sufficient to test a function in a single way. For
@@ -1145,17 +1295,17 @@ behaviours.</p>
 <p>In practice there might be some functionality that is not tested but this should
 be made clear and explicit and documentation as to why should be written.</p>
 <p>There are a number of resources from which to learn how to use <code class="docutils literal notranslate"><span class="pre">pytest</span></code> to its
-full extent and <a class="bibtex reference internal" href="../../../zbibliography.html#oliveira2018pytest" id="id2">[Oli18]</a> is a further great resource.</p>
-</div>
-<div class="section" id="why-do-we-need-doc-tests">
-<h2>Why do we need doc tests?<a class="headerlink" href="#why-do-we-need-doc-tests" title="Permalink to this headline">¶</a></h2>
+full extent and <a href="#id2"><span class="problematic" id="id3">:cite:`oliveira2018pytest`</span></a> is a further great resource.</p>
+</section>
+<section id="why-do-we-need-doc-tests">
+<h2>Why do we need doc tests?<a class="headerlink" href="#why-do-we-need-doc-tests" title="Permalink to this headline">#</a></h2>
 <p>The purpose of doctests is to ensure that the code written in documentation is
 correct.</p>
 <p>It is important to not use doctests to test the functionality of the code: this
 risks making the documentation unclear.</p>
-</div>
-<div class="section" id="what-is-test-driven-development">
-<h2>What is test driven development?<a class="headerlink" href="#what-is-test-driven-development" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="what-is-test-driven-development">
+<h2>What is test driven development?<a class="headerlink" href="#what-is-test-driven-development" title="Permalink to this headline">#</a></h2>
 <p>Test driven development is the development process of writing the test before
 you write the code. Whilst this might seem counter-intuitive it is in fact a
 strong approach to writing robust code efficiently.</p>
@@ -1169,10 +1319,10 @@ written).</p></li>
 <li><p>Modify the test and/or the functionality</p></li>
 </ol>
 <p>Steps 4 and 5 might be repeated many times.</p>
-<p>A good overview of test driven development is given in <a class="bibtex reference internal" href="../../../zbibliography.html#percival2014test" id="id3">[Per14]</a>.</p>
-</div>
-<div class="section" id="how-are-modularisation-documentation-and-testing-related">
-<h2>How are modularisation, documentation and testing related.<a class="headerlink" href="#how-are-modularisation-documentation-and-testing-related" title="Permalink to this headline">¶</a></h2>
+<p>A good overview of test driven development is given in <a href="#id4"><span class="problematic" id="id5">:cite:`percival2014test`</span></a>.</p>
+</section>
+<section id="how-are-modularisation-documentation-and-testing-related">
+<h2>How are modularisation, documentation and testing related.<a class="headerlink" href="#how-are-modularisation-documentation-and-testing-related" title="Permalink to this headline">#</a></h2>
 <p>In <a class="reference internal" href="../../05-modularisation/tutorial/main.html#modularisation-tutorial"><span class="std std-ref">Tutorial</span></a>, <a class="reference internal" href="../../06-documentation/tutorial/main.html#documentation"><span class="std std-ref">Tutorial</span></a> and this chapter we have
 seen 3 concepts that move us from writing code that works to writing software
 that is reliable:</p>
@@ -1183,12 +1333,14 @@ that is reliable:</p>
 </ul>
 <p>In reality <strong>all 3</strong> of these concepts are closely related and fundamental to
 good software. Figure <a class="reference internal" href="#fig-best-practice-triangle"><span class="std std-ref">The relationship between modularisation, documentation and testing</span></a> shows this.</p>
-<div class="figure align-default" id="fig-best-practice-triangle">
+<figure class="align-default" id="fig-best-practice-triangle">
 <a class="reference internal image-reference" href="../../../_images/main17.png"><img alt="../../../_images/main17.png" src="../../../_images/main17.png" style="width: 75%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 28 </span><span class="caption-text">The relationship between modularisation, documentation and testing</span><a class="headerlink" href="#fig-best-practice-triangle" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">The relationship between modularisation, documentation and testing</span><a class="headerlink" href="#fig-best-practice-triangle" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1212,9 +1364,11 @@ good software. Figure <a class="reference internal" href="#fig-best-practice-tri
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../solutions/main.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1230,24 +1384,28 @@ good software. Figure <a class="reference internal" href="#fig-best-practice-tri
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Vincent Knight<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Vincent Knight<br/>
-    
-        &copy; Copyright 2020.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
