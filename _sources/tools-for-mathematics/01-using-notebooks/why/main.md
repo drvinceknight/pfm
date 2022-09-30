@@ -116,22 +116,22 @@ now we only need to know that it we can use $\LaTeX$ to write an instruction
 for Jupyter to display mathematics.
 
 (why_do_we_use_brackets_instead_of_dollars_for_latex)=
+## Can I use `\(` and `\)` instead of `$` for LaTeX?
 
-## Why do we use `\\(` and `\\)` instead of `$` for LaTeX?
-
-You will see in some places that `$` can be used as a delimiter for LaTeX. This
-is not recommended for a number of reasons one of which is given at
+You will see in some places that `\(`, `\)` or `\[`, `\]` can be used as
+delimiters for LaTeX when used outside of Jupyter notebooks. This is in fact
+recommended for a number of reasons one of which are given at
 <https://vknight.org/tex/#12-inline-mathematics>:
 
 > Note that using \( and \) is preferred over \$. One of the reasons is that it
 > is easier for humans (and machines) to find the start and end of some
 > mathematics.
 
-## Why do we use a double `\\` for `\\(` and `\\)` and not a single `\` as can be seen elsewhere?
-
-This is one of the particularities of using LaTeX in a Jupyter notebook as
-opposed to using it elsewhere. The `\` symbol could be misinterpreted in Jupyter
-and so it has to be "escaped" with a second `\`.
+```{warning}
+If you want to use `\(`, `\)` or `\[`, `\]` as mathematics delimiters within
+Jupyter notebooks you need to escape the `\` and use: `\\(`, `\\)` or `\\[`,
+`\\]` instead.
+```
 
 ## Other resources for LaTeX syntax.
 

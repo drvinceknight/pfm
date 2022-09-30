@@ -1150,17 +1150,17 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-do-we-use-and-instead-of-for-latex">
-   Why do we use
+  <a class="reference internal nav-link" href="#can-i-use-and-instead-of-for-latex">
+   Can I use
    <code class="docutils literal notranslate">
     <span class="pre">
-     \\(
+     \(
     </span>
    </code>
    and
    <code class="docutils literal notranslate">
     <span class="pre">
-     \\)
+     \)
     </span>
    </code>
    instead of
@@ -1170,35 +1170,6 @@ title="Print to PDF"
     </span>
    </code>
    for LaTeX?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-do-we-use-a-double-for-and-and-not-a-single-as-can-be-seen-elsewhere">
-   Why do we use a double
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     \\
-    </span>
-   </code>
-   for
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     \\(
-    </span>
-   </code>
-   and
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     \\)
-    </span>
-   </code>
-   and not a single
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     \
-    </span>
-   </code>
-   as can be seen elsewhere?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1271,17 +1242,17 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-do-we-use-and-instead-of-for-latex">
-   Why do we use
+  <a class="reference internal nav-link" href="#can-i-use-and-instead-of-for-latex">
+   Can I use
    <code class="docutils literal notranslate">
     <span class="pre">
-     \\(
+     \(
     </span>
    </code>
    and
    <code class="docutils literal notranslate">
     <span class="pre">
-     \\)
+     \)
     </span>
    </code>
    instead of
@@ -1291,35 +1262,6 @@ title="Print to PDF"
     </span>
    </code>
    for LaTeX?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-do-we-use-a-double-for-and-and-not-a-single-as-can-be-seen-elsewhere">
-   Why do we use a double
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     \\
-    </span>
-   </code>
-   for
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     \\(
-    </span>
-   </code>
-   and
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     \\)
-    </span>
-   </code>
-   and not a single
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     \
-    </span>
-   </code>
-   as can be seen elsewhere?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1451,22 +1393,23 @@ the right content.</p>
 now we only need to know that it we can use <span class="math notranslate nohighlight">\(\LaTeX\)</span> to write an instruction
 for Jupyter to display mathematics.</p>
 </section>
-<section id="why-do-we-use-and-instead-of-for-latex">
-<span id="why-do-we-use-brackets-instead-of-dollars-for-latex"></span><h2>Why do we use <code class="docutils literal notranslate"><span class="pre">\\(</span></code> and <code class="docutils literal notranslate"><span class="pre">\\)</span></code> instead of <code class="docutils literal notranslate"><span class="pre">$</span></code> for LaTeX?<a class="headerlink" href="#why-do-we-use-and-instead-of-for-latex" title="Permalink to this headline">#</a></h2>
-<p>You will see in some places that <code class="docutils literal notranslate"><span class="pre">$</span></code> can be used as a delimiter for LaTeX. This
-is not recommended for a number of reasons one of which is given at
+<section id="can-i-use-and-instead-of-for-latex">
+<span id="why-do-we-use-brackets-instead-of-dollars-for-latex"></span><h2>Can I use <code class="docutils literal notranslate"><span class="pre">\(</span></code> and <code class="docutils literal notranslate"><span class="pre">\)</span></code> instead of <code class="docutils literal notranslate"><span class="pre">$</span></code> for LaTeX?<a class="headerlink" href="#can-i-use-and-instead-of-for-latex" title="Permalink to this headline">#</a></h2>
+<p>You will see in some places that <code class="docutils literal notranslate"><span class="pre">\(</span></code>, <code class="docutils literal notranslate"><span class="pre">\)</span></code> or <code class="docutils literal notranslate"><span class="pre">\[</span></code>, <code class="docutils literal notranslate"><span class="pre">\]</span></code> can be used as
+delimiters for LaTeX when used outside of Jupyter notebooks. This is in fact
+recommended for a number of reasons one of which are given at
 <a class="reference external" href="https://vknight.org/tex/#12-inline-mathematics">https://vknight.org/tex/#12-inline-mathematics</a>:</p>
 <blockquote>
 <div><p>Note that using ( and ) is preferred over $. One of the reasons is that it
 is easier for humans (and machines) to find the start and end of some
 mathematics.</p>
 </div></blockquote>
-</section>
-<section id="why-do-we-use-a-double-for-and-and-not-a-single-as-can-be-seen-elsewhere">
-<h2>Why do we use a double <code class="docutils literal notranslate"><span class="pre">\\</span></code> for <code class="docutils literal notranslate"><span class="pre">\\(</span></code> and <code class="docutils literal notranslate"><span class="pre">\\)</span></code> and not a single <code class="docutils literal notranslate"><span class="pre">\</span></code> as can be seen elsewhere?<a class="headerlink" href="#why-do-we-use-a-double-for-and-and-not-a-single-as-can-be-seen-elsewhere" title="Permalink to this headline">#</a></h2>
-<p>This is one of the particularities of using LaTeX in a Jupyter notebook as
-opposed to using it elsewhere. The <code class="docutils literal notranslate"><span class="pre">\</span></code> symbol could be misinterpreted in Jupyter
-and so it has to be “escaped” with a second <code class="docutils literal notranslate"><span class="pre">\</span></code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you want to use <code class="docutils literal notranslate"><span class="pre">\(</span></code>, <code class="docutils literal notranslate"><span class="pre">\)</span></code> or <code class="docutils literal notranslate"><span class="pre">\[</span></code>, <code class="docutils literal notranslate"><span class="pre">\]</span></code> as mathematics delimiters within
+Jupyter notebooks you need to escape the <code class="docutils literal notranslate"><span class="pre">\</span></code> and use: <code class="docutils literal notranslate"><span class="pre">\\(</span></code>, <code class="docutils literal notranslate"><span class="pre">\\)</span></code> or <code class="docutils literal notranslate"><span class="pre">\\[</span></code>,
+<code class="docutils literal notranslate"><span class="pre">\\]</span></code> instead.</p>
+</div>
 </section>
 <section id="other-resources-for-latex-syntax">
 <h2>Other resources for LaTeX syntax.<a class="headerlink" href="#other-resources-for-latex-syntax" title="Permalink to this headline">#</a></h2>
