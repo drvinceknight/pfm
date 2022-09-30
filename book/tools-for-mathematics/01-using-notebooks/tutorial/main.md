@@ -18,7 +18,7 @@ kernelspec:
 
 1. Navigate to <https://www.anaconda.com/products/individual>.
 2. Identify and download the version of Python 3 for your operating system
-   (Windows, Mac OSX, Linux).
+   (Windows, MacOS, Linux).
 3. Run the installer. I recommend using the default choices during the
    installation process.
 
@@ -38,7 +38,7 @@ Open a command line tool:
 1. On **Windows** search for `Anaconda Prompt` (it should be available to you
    after installing Anaconda). See
    {ref}`fig:starting_the_notebook_server_windows`.
-2. On **OS X** search for `terminal`. See
+2. On **MacOS** search for `terminal`. See
    {ref}`fig:starting_the_notebook_server`.
 
 In there type:
@@ -57,7 +57,7 @@ tool I will prefix them with a `$`. Do not type the `$`.
 width: 75%
 name: fig:starting_the_notebook_server
 ---
-Starting the notebook server on OS X
+Starting the notebook server on MacOS
 ```
 
 ```{figure} ./img/starting_the_notebook_server_windows/main.png
@@ -112,7 +112,7 @@ Once this is done let us close the notebook by closing the corresponding tab of 
 Open your file browser:
 
 1. File Explorer on **Windows** (see {ref}`fig:new_directory_structure_windows`).
-2. Finder on **OS X** (see {ref}`fig:new_directory_structure`).
+2. Finder on **MacOS** (see {ref}`fig:new_directory_structure`).
 
 Navigate to where your notebook is (this might not be immediately evident): you
 should see a `introduction.ipynb` file.
@@ -132,7 +132,7 @@ book, using your file browser:
 width: 75%
 name: fig:new_directory_structure
 ---
-Creating a new directory on OS X
+Creating a new directory on MacOS
 ```
 
 ```{figure} ./img/new_directory_structure_windows/main.png
