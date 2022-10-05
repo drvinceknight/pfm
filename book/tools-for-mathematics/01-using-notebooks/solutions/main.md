@@ -68,9 +68,9 @@ Click the toggle ("Click to Show") to see a demo of this:
 ```md
 # Euler's equation
 
-\\[
+$$
 e ^ {i\pi} = -1
-\\]
+$$
 ```
 
 Click the toggle ("Click to Show") to see a demo of this:
@@ -86,31 +86,31 @@ Click the toggle ("Click to Show") to see a demo of this:
 > `1`. $\frac{4 ^ 3 + 2}{2\times 5}$
 
 ```
-\\(\frac{4 ^ 3 + 2}{2\times 5}\\)
+$\frac{4 ^ 3 + 2}{2\times 5}$
 ```
 
 > `2`. $- 5 ^ {\frac{1}{2}}$
 
 ```
-\\(- 5 ^ {\frac{1}{2}}\\)
+$- 5 ^ {\frac{1}{2}}$
 ```
 
 > `3`. $\frac{df}{dx}$
 
 ```
-\\(\frac{df}{dx}\\)
+$\frac{df}{dx}$
 ```
 
 > `4`. $\int_{5}^{12}x^2dx$
 
 ```
-\\(\int_{5}^{12}x^2dx\\)
+$\int_{5}^{12}x^2dx$
 ```
 
 > `5`. $\begin{pmatrix}4 & 12 & 3\\2 & x & i\\\end{pmatrix}$
 
 ```md
-\\(\begin{pmatrix}4 & 12 & 3\\2 & x & i\\\end{pmatrix}\\)
+$\begin{pmatrix}4 & 12 & 3\\2 & x & i\\\end{pmatrix}$
 ```
 
 ## Question 5
