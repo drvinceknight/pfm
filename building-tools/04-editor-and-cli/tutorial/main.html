@@ -1138,8 +1138,24 @@ after installing Anaconda). See
 <li><p>On <strong>OS X</strong> search for <code class="docutils literal notranslate"><span class="pre">terminal</span></code>. See
 <a class="reference internal" href="../../../tools-for-mathematics/01-using-notebooks/tutorial/main.html#fig-starting-the-notebook-server"><span class="std std-ref">Starting the notebook server on MacOS</span></a>.</p></li>
 </ol>
-<p>Whether or not your are on Windows or OS X changes the commands you need to
+<p>Whether or not your are on Windows or MacOS changes the commands you need to
 type. We will first list the directory we are currently in:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="0fbc339e-42b9-4cf1-96b6-db3c904a5aa3" name="3460977c-76f1-4fcc-9906-ade77a3c7e63" type="radio">
+</input><label class="sd-tab-label" for="0fbc339e-42b9-4cf1-96b6-db3c904a5aa3">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ dir
+</pre></div>
+</div>
+</div>
+<input id="b8dd7685-f626-4836-9fc7-d74f5a42e3f5" name="3460977c-76f1-4fcc-9906-ade77a3c7e63" type="radio">
+</input><label class="sd-tab-label" for="b8dd7685-f626-4836-9fc7-d74f5a42e3f5">
+MacOS</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ls
+</pre></div>
+</div>
+</div>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Throughout this book, when there are commands to be typed in a command line
@@ -1149,17 +1165,83 @@ tool I will prefix them with a <code class="docutils literal notranslate"><span 
 directory. Similarly to the way we click on a directory in the file explorer we
 can navigate to a directory in the command line.</p>
 <p>To do this we use the same command on both operating systems:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="0a69843f-6d5a-48ce-a952-7d6f00224975" name="4d90b1fe-61b8-4c07-b5cc-fe23baa73d30" type="radio">
+</input><label class="sd-tab-label" for="0a69843f-6d5a-48ce-a952-7d6f00224975">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> &lt;target_directory_name&gt;
+</pre></div>
+</div>
+</div>
+<input id="cd614ece-3fed-4f52-ab86-c4b65050ebbd" name="4d90b1fe-61b8-4c07-b5cc-fe23baa73d30" type="radio">
+</input><label class="sd-tab-label" for="cd614ece-3fed-4f52-ab86-c4b65050ebbd">
+MacOS</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> &lt;target_directory_name&gt;
+</pre></div>
+</div>
+</div>
+</div>
 <p>We will do this to navigate to our <code class="docutils literal notranslate"><span class="pre">cfm</span></code> directoy. For example if, as in the
 Algebra <a class="reference internal" href="../../../tools-for-mathematics/02-algebra/tutorial/main.html#algebra-tutorial"><span class="std std-ref">Tutorial</span></a> the <code class="docutils literal notranslate"><span class="pre">cfm</span></code> directory was on the <code class="docutils literal notranslate"><span class="pre">Desktop</span></code>
 directory we would run the following:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="a88e81d3-fffc-4fdc-a55d-a41152dc9e68" name="e2feea95-c1e6-4a5f-b14f-ddb7a0ce63b5" type="radio">
+</input><label class="sd-tab-label" for="a88e81d3-fffc-4fdc-a55d-a41152dc9e68">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> Desktop
+$ <span class="nb">cd</span> cfm
+</pre></div>
+</div>
+</div>
+<input id="e5b5231a-9316-4607-b48e-edb21ba6294c" name="e2feea95-c1e6-4a5f-b14f-ddb7a0ce63b5" type="radio">
+</input><label class="sd-tab-label" for="e5b5231a-9316-4607-b48e-edb21ba6294c">
+MacOS</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> Desktop
+$ <span class="nb">cd</span> cfm
+</pre></div>
+</div>
+</div>
+</div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>The two statements are written under each other to denote that they are run
 one after the other.</p>
 </div>
 <p>We will now create a new directory:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="1c5f9e9c-cbd5-49f5-b52e-70541e08c53c" name="2c6dd822-e128-4b39-9763-31d81bc1c498" type="radio">
+</input><label class="sd-tab-label" for="1c5f9e9c-cbd5-49f5-b52e-70541e08c53c">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ mkdir scripts
+</pre></div>
+</div>
+</div>
+<input id="7aef788a-45cf-4a84-8bf6-b535c6340111" name="2c6dd822-e128-4b39-9763-31d81bc1c498" type="radio">
+</input><label class="sd-tab-label" for="7aef788a-45cf-4a84-8bf6-b535c6340111">
+MacOS</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ mkdir scripts
+</pre></div>
+</div>
+</div>
+</div>
 <p>Inside this directory we will run the same command as before to see the
 contents:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="ee793a82-6160-4809-9d16-6105c975ed1f" name="43de0cbb-5083-4e2c-a0a7-33bc52f37e0f" type="radio">
+</input><label class="sd-tab-label" for="ee793a82-6160-4809-9d16-6105c975ed1f">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ dir
+</pre></div>
+</div>
+</div>
+<input id="c64802cc-ebbf-44b0-8a61-3c6cdd7baaf7" name="43de0cbb-5083-4e2c-a0a7-33bc52f37e0f" type="radio">
+</input><label class="sd-tab-label" for="c64802cc-ebbf-44b0-8a61-3c6cdd7baaf7">
+MacOS</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ls
+</pre></div>
+</div>
+</div>
+</div>
 <p>If you have followed the same steps described in <a class="reference internal" href="../../../tools-for-mathematics/01-using-notebooks/introduction/main.html#using-notebooks"><span class="std std-ref">Using notebooks</span></a> then you
 will see something similar to:</p>
 <figure class="align-default" id="fig-output-of-dir">
@@ -1222,7 +1304,39 @@ about plugins in the rest of this chapter.</p>
 <p>All we have done so far is write the code. We now need to tell Python to run it.
 To do this we will use the command line.</p>
 <p>Navigate to the <code class="docutils literal notranslate"><span class="pre">scripts</span></code> directory that we created earlier:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="a2bc27db-db70-498d-8024-5462382d10ee" name="a0c2fbc5-ddcd-4844-9b71-bc6ff8694f1a" type="radio">
+</input><label class="sd-tab-label" for="a2bc27db-db70-498d-8024-5462382d10ee">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> scripts
+</pre></div>
+</div>
+</div>
+<input id="4136cfc2-4f82-480b-b12b-fd7a6eecc687" name="a0c2fbc5-ddcd-4844-9b71-bc6ff8694f1a" type="radio">
+</input><label class="sd-tab-label" for="4136cfc2-4f82-480b-b12b-fd7a6eecc687">
+MacOS</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> scripts
+</pre></div>
+</div>
+</div>
+</div>
 <p>Now confirm that the <code class="docutils literal notranslate"><span class="pre">algebra.py</span></code> file is in that directory:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="2e78b68c-901a-41b8-96b3-4c56a54f9952" name="79d9c58b-b7ac-4f4f-b475-5a7306b2c7b2" type="radio">
+</input><label class="sd-tab-label" for="2e78b68c-901a-41b8-96b3-4c56a54f9952">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ dir
+</pre></div>
+</div>
+</div>
+<input id="4fc5ffa7-f6d9-41e1-bf28-fbc7918d4ca0" name="79d9c58b-b7ac-4f4f-b475-5a7306b2c7b2" type="radio">
+</input><label class="sd-tab-label" for="4fc5ffa7-f6d9-41e1-bf28-fbc7918d4ca0">
+MacOS</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ls
+</pre></div>
+</div>
+</div>
+</div>
 <p>Now we will run the python code in that script:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python algebra.py
 </pre></div>

@@ -12,6 +12,8 @@ kernelspec:
   name: python3
 ---
 
+(modularisation)=
+
 # Modularisation
 
 This is the first of three chapters that aim to move from writing code

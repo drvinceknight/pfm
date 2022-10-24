@@ -1120,6 +1120,11 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-are-we-not-commenting-our-code">
+   Why are we not commenting our code?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#why-do-we-use-for-matrix-multiplication-and-not">
    Why do we use
    <code class="docutils literal notranslate">
@@ -1167,6 +1172,11 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-are-we-not-commenting-our-code">
+   Why are we not commenting our code?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#why-do-we-use-for-matrix-multiplication-and-not">
    Why do we use
    <code class="docutils literal notranslate">
@@ -1206,6 +1216,33 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="further-information">
 <h1>Further information<a class="headerlink" href="#further-information" title="Permalink to this headline">#</a></h1>
+<section id="why-are-we-not-commenting-our-code">
+<h2>Why are we not commenting our code?<a class="headerlink" href="#why-are-we-not-commenting-our-code" title="Permalink to this headline">#</a></h2>
+<p>In Python it is possible to annotate code using <code class="docutils literal notranslate"><span class="pre">#</span></code>. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>  <span class="c1"># Importing the sympy library using the alias sym</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Comments like these often do not add to the readability of the code. In fact
+they can make the code less readable or at worse confusing <span id="id1">[<a class="reference internal" href="../../../zbibliography.html#id3" title="Robert C Martin. Clean code: a handbook of agile software craftsmanship. Pearson Education, 2009.">Martin, 2009</a>]</span>.</p>
+<p>In this section of the book there is in fact no need for comments like this as
+we are mainly using tools that are well documented. Furthermore when using
+Jupyter notebooks we can add far more to the readbility of the code by adding
+prose alongside our code instead of using small brief inline comments.</p>
+<p>This does not mean that readability of code is not important.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Being able to read and understand the code we write is important.</p>
+</div>
+<p>In <a class="reference internal" href="../../06-probability/introduction/main.html#probability"><span class="std std-ref">Probability</span></a> we will start to write our own functions and emphasis will
+be given there on readability and documenting (as opposed to commenting) the
+code we will write.</p>
+<p>In <a class="reference internal" href="../../../building-tools/05-modularisation/introduction/main.html#modularisation"><span class="std std-ref">Modularisation</span></a> and <a class="reference internal" href="../../../building-tools/06-documentation/tutorial/main.html#documentation"><span class="std std-ref">Tutorial</span></a> there is a lot more
+information on how to ensure code is readable and understandable.</p>
+</section>
 <section id="why-do-we-use-for-matrix-multiplication-and-not">
 <h2>Why do we use <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> for matrix multiplication and not <code class="docutils literal notranslate"><span class="pre">*</span></code>?<a class="headerlink" href="#why-do-we-use-for-matrix-multiplication-and-not" title="Permalink to this headline">#</a></h2>
 <p>With <code class="docutils literal notranslate"><span class="pre">sympy</span></code> it is in fact possible to use the <code class="docutils literal notranslate"><span class="pre">*</span></code> operator for matrix
