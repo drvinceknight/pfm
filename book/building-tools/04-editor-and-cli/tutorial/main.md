@@ -32,25 +32,23 @@ Open a command line tool:
 2. On **OS X** search for `terminal`. See
    {ref}`fig:starting_the_notebook_server`.
 
-Whether or not your are on Windows or OS X changes the commands you need to
+Whether or not your are on Windows or MacOS changes the commands you need to
 type. We will first list the directory we are currently in:
 
-````{panels}
-On Windows:
-
+`````{tab-set}
+````{tab-item} Windows
 ```bash
 $ dir
 ```
+````
 
----
-
-On OS X:
-
+````{tab-item} MacOS
 ```bash
 $ ls
 ```
 
 ````
+`````
 
 ```{tip}
 Throughout this book, when there are commands to be typed in a command line
@@ -63,45 +61,37 @@ can navigate to a directory in the command line.
 
 To do this we use the same command on both operating systems:
 
-````{panels}
-On Windows:
-
+`````{tab-set}
+````{tab-item} Windows
 ```bash
 $ cd <target_directory_name>
 ```
-
----
-
-On OS X:
-
-```bash
-$ cd <target_directory_name>
-```
-
 ````
+````{tab-item} MacOS
+```bash
+$ cd <target_directory_name>
+```
+````
+`````
 
 We will do this to navigate to our `cfm` directoy. For example if, as in the
 Algebra {ref}`algebra_tutorial` the `cfm` directory was on the `Desktop`
 directory we would run the following:
 
-````{panels}
-On Windows:
-
+`````{tab-set}
+````{tab-item} Windows
 ```bash
 $ cd Desktop
 $ cd cfm
 ```
-
----
-
-On OS X:
-
-```bash
-$ cd Desktop
-$ cd cfm
-```
-
 ````
+````{tab-item} MacOS
+```bash
+$ cd Desktop
+$ cd cfm
+```
+````
+`````
 
 ```{attention}
 The two statements are written under each other to denote that they are run
@@ -110,42 +100,34 @@ one after the other.
 
 We will now create a new directory:
 
-````{panels}
-On Windows:
-
+`````{tab-set}
+````{tab-item} Windows
 ```bash
 $ mkdir scripts
 ```
-
----
-
-On OS X:
-
-```bash
-$ mkdir scripts
-```
-
 ````
+````{tab-item} MacOS
+```bash
+$ mkdir scripts
+```
+````
+`````
 
 Inside this directory we will run the same command as before to see the
 contents:
 
-````{panels}
-On Windows:
-
+`````{tab-set}
+````{tab-item} Windows
 ```bash
 $ dir
 ```
-
----
-
-On OS X:
-
+````
+````{tab-item} MacOS
 ```bash
 $ ls
 ```
-
 ````
+`````
 
 If you have followed the same steps described in {ref}`using_notebooks` then you
 will see something similar to:
@@ -229,41 +211,34 @@ To do this we will use the command line.
 
 Navigate to the `scripts` directory that we created earlier:
 
-````{panels}
-On Windows:
 
+`````{tab-set}
+````{tab-item} Windows
 ```bash
 $ cd scripts
 ```
-
----
-
-On OS X:
-
-```bash
-$ cd scripts
-```
-
 ````
+````{tab-item} MacOS
+```bash
+$ cd scripts
+```
+````
+`````
 
 Now confirm that the `algebra.py` file is in that directory:
 
-````{panels}
-On Windows:
-
+`````{tab-set}
+````{tab-item} Windows
 ```bash
 $ dir
 ```
-
----
-
-On OS X:
-
+````
+````{tab-item} MacOS
 ```bash
 $ ls
 ```
-
 ````
+`````
 
 Now we will run the python code in that script:
 

@@ -49,7 +49,7 @@ kernelspec:
 4. The matrix $D$ is given by $D = \begin{pmatrix} a & 2 & 0\\ 3 & 1 & 2\\ 0 & -1 & 1\end{pmatrix}$ where $a\ne 2$.
 
    1. Find $D^{-1}$.
-   2. Hence of otherwise, solve the equations:
+   2. Hence or otherwise, solve the equations:
 
    $$
    \begin{array}{l}

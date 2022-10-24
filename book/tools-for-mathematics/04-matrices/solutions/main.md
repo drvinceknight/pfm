@@ -137,7 +137,7 @@ D_inverse = D.inv()
 D_inverse
 ```
 
-> `2`. Hence of otherwise, solve the equations:
+> `2`. Hence or otherwise, solve the equations:
 >
 > $$
     \begin{array}{l}
