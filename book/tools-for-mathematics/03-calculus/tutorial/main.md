@@ -43,10 +43,10 @@ expression = (24 * x * (a - 4 * x) + 2 * (a - 8 * x) * (b - 4 * x)) / ((b - 4 * 
 expression
 ```
 
-now will use `sympy.diff` to calculate the derivative. This tool takes two inputs:
+now we can will use `sympy.diff` to calculate the derivative. This tool takes two inputs:
 
 - the first is the expression we are differentiating. Essentially this is the numerator of $\frac{df}{dx}$.
-- the second is the variable we are differentiating for. Essentially this is the denominator of $\frac{df}{dx}$.
+- the first is the variable we are differentiating for. Essentially this is the denominator of $\frac{df}{dx}$.
 
 ```{attention}
 We have imported `import sympy as sym` so we are going to write `sym.diff`:

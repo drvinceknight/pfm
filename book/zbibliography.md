@@ -14,6 +14,6 @@ kernelspec:
 
 # Bibliography
 
-```{bibliography} ./references.bib
+```{bibliography}
 
 ```
