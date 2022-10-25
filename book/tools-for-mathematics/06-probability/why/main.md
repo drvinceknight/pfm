@@ -138,6 +138,8 @@ twister algorithm is state of the art.
 You can read more about this here:
 <https://docs.python.org/3/library/random.html#module-random>.
 
+(difference_between_a_docstring_and_a_comment)=
+
 ## What is the difference between a docstring and a comment
 
 In Python it is possible to write statements that are ignored using the `#`
