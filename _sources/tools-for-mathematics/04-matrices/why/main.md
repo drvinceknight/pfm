@@ -16,7 +16,8 @@ kernelspec:
 
 ## Why are we not commenting our code?
 
-In Python it is possible to annotate code using `#`. For example:
+In Python it is possible to write statements that are ignored using the `#`
+symbol. This creates something called a "comment". For example:
 
 ```{code-cell} ipython3
 import sympy as sym  # Importing the sympy library using the alias sym
@@ -38,7 +39,9 @@ Being able to read and understand the code we write is important.
 
 In {ref}`probability` we will start to write our own functions and emphasis will
 be given there on readability and documenting (as opposed to commenting) the
-code we will write.
+code we will write. A specific discussion about using a tool called a
+`docstring` as opposed to a comment is here
+{ref}`difference_between_a_docstring_and_a_comment`.
 
 In {ref}`modularisation` and {ref}`documentation` there is a lot more
 information on how to ensure code is readable and understandable.
