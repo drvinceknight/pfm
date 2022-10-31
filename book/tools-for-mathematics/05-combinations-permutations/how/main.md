@@ -193,6 +193,8 @@ tuple(itertools.combinations(basket, r=2))
 A combination does not care about order so by default the combinations generated
 are sorted.
 
+(adding_items_in_a_tuple)=
+
 ## Adding items in a tuple
 
 We can compute the sum of items in a list using the `sum` tool:
