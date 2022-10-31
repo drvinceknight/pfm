@@ -84,6 +84,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -1145,6 +1147,15 @@ title="Print to PDF"
    not directly give the elements?
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-does-the-summation-notation-sum-correspond-to-the-code">
+   How does the summation notation
+   <span class="math notranslate nohighlight">
+    \(\sum\)
+   </span>
+   correspond to the code?
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -1192,6 +1203,15 @@ title="Print to PDF"
    not directly give the elements?
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-does-the-summation-notation-sum-correspond-to-the-code">
+   How does the summation notation
+   <span class="math notranslate nohighlight">
+    \(\sum\)
+   </span>
+   correspond to the code?
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -1224,6 +1244,56 @@ This allows us to create the instructions to build something without building
 it.</p>
 <p>In practice this means that we can create large sets without needing to generate
 them until we wanted to.</p>
+</section>
+<section id="how-does-the-summation-notation-sum-correspond-to-the-code">
+<h2>How does the summation notation <span class="math notranslate nohighlight">\(\sum\)</span> correspond to the code?<a class="headerlink" href="#how-does-the-summation-notation-sum-correspond-to-the-code" title="Permalink to this headline">#</a></h2>
+<p>The <a class="reference internal" href="../how/main.html#adding-items-in-a-tuple"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">sum</span></code></span></a> command corresponds to the mathematical
+<span class="math notranslate nohighlight">\(\sum\)</span> notation. Here are a few examples showing not only the <code class="docutils literal notranslate"><span class="pre">sum</span></code> command,
+<span class="math notranslate nohighlight">\(\sum\)</span> notation but also the prose describing:</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Mathematics</p></th>
+<th class="head"><p>Python</p></th>
+<th class="head"><p>Prose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="math notranslate nohighlight">
+\[\sum_{i=1}^{100}i ^2\]</div>
+</td>
+<td><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">i</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">))</span>
+</pre></div>
+</div>
+</td>
+<td><p>The sum of the square of the integers from 1 to 100 (inclusive).</p></td>
+</tr>
+<tr class="row-odd"><td><div class="math notranslate nohighlight">
+\[\begin{split}\sum_{\begin{array}{c}i=1\\\text{if }i\text{ is prime}\end{array}}^{100}i ^2\end{split}\]</div>
+</td>
+<td><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">i</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">)</span> <span class="k">if</span> <span class="n">sym</span><span class="o">.</span><span class="n">isprime</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</pre></div>
+</div>
+</td>
+<td><p>The sum of the square of the integers from 1 to 100 (inclusive) if they are
+prime.</p></td>
+</tr>
+<tr class="row-even"><td><div class="math notranslate nohighlight">
+\[\begin{split}\sum_{\begin{array}{c}i\in{S}\\\text{if }i\text{ is prime}\end{array}}i ^2\end{split}\]</div>
+</td>
+<td><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">i</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">S</span> <span class="k">if</span> <span class="n">sym</span><span class="o">.</span><span class="n">isprime</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</pre></div>
+</div>
+</td>
+<td><p>The sum of the square of the elements in the collection <span class="math notranslate nohighlight">\(S\)</span> if they are
+prime.</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 
