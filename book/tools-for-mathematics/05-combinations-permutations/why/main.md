@@ -35,3 +35,34 @@ it.
 
 In practice this means that we can create large sets without needing to generate
 them until we wanted to.
+
+## How does the summation notation $\sum$ correspond to the code?
+
+The [`sum`](adding_items_in_a_tuple) command corresponds to the mathematical
+$\sum$ notation. Here are a few examples showing not only the `sum` command,
+$\sum$ notation but also the prose describing:
+
+```{list-table}
+:header-rows: 1
+
+* - Mathematics
+  - Python
+  - Prose
+* - $$\sum_{i=1}^{100}i ^2$$
+  - ```
+    sum(i ** 2 for i in range(1, 101))
+    ```
+  - The sum of the square of the integers from 1 to 100 (inclusive).
+* - $$\sum_{\begin{array}{c}i=1\\\text{if }i\text{ is prime}\end{array}}^{100}i ^2$$
+  - ```
+    sum(i ** 2 for i in range(1, 101) if sym.isprime(i))
+    ```
+  - The sum of the square of the integers from 1 to 100 (inclusive) if they are
+    prime.
+* - $$\sum_{\begin{array}{c}i\in{S}\\\text{if }i\text{ is prime}\end{array}}i ^2$$
+  - ```
+    sum(i ** 2 for i in S if sym.isprime(i))
+    ```
+  - The sum of the square of the elements in the collection $S$ if they are
+    prime.
+```
