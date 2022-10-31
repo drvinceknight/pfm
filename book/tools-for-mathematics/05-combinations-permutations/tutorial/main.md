@@ -19,7 +19,7 @@ computer can be used to solve combinatorial problems:
 
 ```{admonition} Problem
 
-The digits 1, 2, 3, 4 and 5 are arranged in random order, for form a five-digit number.
+The digits 1, 2, 3, 4 and 5 are arranged in random order, to form a five-digit number.
 
 1. How many different five-digit numbers can be formed?
 2. How many different five-digit numbers are:
