@@ -47,7 +47,7 @@ def generate_a(k_value, n):
     Uses recursion to return a_n for a given value of k:
 
     a_1 = k
-    a_n = 2a_n - 7
+    a_n = 2a_{n-1} - 7
     """
     if n == 1:
         return k_value
