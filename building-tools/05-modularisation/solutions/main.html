@@ -1298,7 +1298,7 @@ has no diagonal entry with value 1).</p>
 </div></blockquote>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sample_experiment</span><span class="p">(</span><span class="n">bag</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This samples a token from a given bag and then</span>
 <span class="sd">    selects a coin with a given probability.</span>
 
@@ -1331,7 +1331,7 @@ has no diagonal entry with value 1).</p>
 
 
 <span class="k">def</span> <span class="nf">flip_coin</span><span class="p">(</span><span class="n">probability_of_selecting_heads</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This flips a coin with a given probability of selecting heads.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">probability_of_selecting_heads</span><span class="p">:</span>
@@ -1345,7 +1345,7 @@ has no diagonal entry with value 1).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sample_experiment</span><span class="p">(</span><span class="n">bag</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This samples a token from a given bag and then</span>
 <span class="sd">    selects a coin with a given probability.</span>
 
@@ -1384,7 +1384,7 @@ has no diagonal entry with value 1).</p>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 
 <span class="k">def</span> <span class="nf">is_prime</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-     <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Checks if a number N is prime by checking all that positive integers</span>
 <span class="sd">    numbers less sqrt(N) than it that divide it.</span>
 
@@ -1403,7 +1403,7 @@ has no diagonal entry with value 1).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_potential_divisors</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns the integers between 2 and $\sqrt{N}$.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
@@ -1414,7 +1414,7 @@ has no diagonal entry with value 1).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_divisor</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns a boolean whether or not n divides N</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">N</span> <span class="o">%</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span>
@@ -1429,7 +1429,7 @@ has no diagonal entry with value 1).</p>
 
 
 <span class="k">def</span> <span class="nf">is_prime</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Checks if a number N is prime by checking all that positive integers</span>
 <span class="sd">    numbers less sqrt(N) than it that divide it.</span>
 
@@ -1580,7 +1580,7 @@ mean and population variance.</p></li>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_mean</span><span class="p">(</span><span class="n">iterable</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns the mean of a given iterable which is defined as the sum divided by</span>
 <span class="sd">    the number of items.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1588,7 +1588,7 @@ mean and population variance.</p></li>
 
 
 <span class="k">def</span> <span class="nf">get_population_variance</span><span class="p">(</span><span class="n">iterable</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns the population variance of a given iterable which is defined as the</span>
 <span class="sd">    mean square of the differences from the mean.</span>
 <span class="sd">    &quot;&quot;&quot;</span>

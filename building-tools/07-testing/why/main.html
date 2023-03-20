@@ -1227,7 +1227,7 @@ once the first <code class="docutils literal notranslate"><span class="pre">asse
 Importantly this is not part of the anaconda distribution and needs to be
 installed.</p>
 <p>To do this type the following at the command line:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pip install pytest
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pytest
 </pre></div>
 </div>
 <p>This uses a python tool called <code class="docutils literal notranslate"><span class="pre">pip</span></code> which lets you install libraries from the
@@ -1242,7 +1242,7 @@ Figure <a class="reference internal" href="#fig-installing-pytest"><span class="
 <p>Once we have <code class="docutils literal notranslate"><span class="pre">pytest</span></code> installed we can actually find all files starting with
 <code class="docutils literal notranslate"><span class="pre">test_</span></code> in the name and all functions in those files starting with <code class="docutils literal notranslate"><span class="pre">test_</span></code> and
 run them with the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pytest
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pytest
 </pre></div>
 </div>
 <p>Figure <a class="reference internal" href="#fig-running-pytest"><span class="std std-ref">Running pytest</span></a> shows this.</p>
@@ -1254,7 +1254,7 @@ run them with the following command:</p>
 </figure>
 <p>It is also possible to use <code class="docutils literal notranslate"><span class="pre">pytest</span></code> to test the documentation by running the
 doctests:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pytest --doctest-glob<span class="o">=</span><span class="s2">&quot;README.md&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pytest<span class="w"> </span>--doctest-glob<span class="o">=</span><span class="s2">&quot;README.md&quot;</span>
 </pre></div>
 </div>
 <p>Figure <a class="reference internal" href="#fig-running-pytest-with-doctests"><span class="std std-ref">Running pytest with doctests</span></a> shows this.</p>
@@ -1276,7 +1276,7 @@ is compromised of documentation and code.</p>
 example, if we have a function that does two different things depending on the
 parity of some input:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">feedback_on_guess</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span> <span class="n">chosen_number</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns whether or not a guess is:</span>
 
 <span class="sd">    - Larger than  a chosen_number</span>

@@ -29,6 +29,8 @@ kernelspec:
    `probability_of_selecting_heads` variable.
 
    ```
+   import random
+   
    def sample_experiment(bag):
        """
        This samples a token from a given bag and then
@@ -40,7 +42,7 @@ kernelspec:
        This function returns both the selected token
        and the coin face.
        """
-       selected_token = pick_a_token(container=bag)
+       selected_token = random.choice(bag)
 
        if selected_token == "Red":
            probability_of_selecting_heads = 4 / 5

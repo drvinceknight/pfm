@@ -1214,7 +1214,7 @@ title="Print to PDF"
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Name</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A docstring between triple quotation to describe what the class represents</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">INDENTED</span> <span class="n">BLOCKS</span> <span class="n">OF</span> <span class="n">CODE</span>
@@ -1225,7 +1225,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Country</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A class to represent a country</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 </pre></div>
@@ -1251,7 +1251,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Country at 0x7f071409dc40&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Country at 0x7f8ae097e370&gt;
 </pre></div>
 </div>
 </div>
@@ -1264,7 +1264,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Country at 0x7f071710d580&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Country at 0x7f8ae097e8e0&gt;
 </pre></div>
 </div>
 </div>
@@ -1350,12 +1350,12 @@ magic:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Country</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A class to represent a country</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">spend_magic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount_spent</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Updates the magic attribute by subtracting amount_spent&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Updates the magic attribute by subtracting amount_spent&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">amount_of_magic</span> <span class="o">-=</span> <span class="n">amount_spent</span>
 </pre></div>
 </div>
@@ -1400,7 +1400,7 @@ initialised). For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Country</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A class to represent a country</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -1444,7 +1444,7 @@ example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Country</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A class to represent a country</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -1453,7 +1453,7 @@ example:</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">amount_of_magic</span> <span class="o">=</span> <span class="n">amount_of_magic</span>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns a string representation of the instance&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a string representation of the instance&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> with </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">amount_of_magic</span><span class="si">}</span><span class="s2"> magic.&quot;</span>
 </pre></div>
 </div>
@@ -1491,7 +1491,7 @@ in <a class="reference internal" href="#how-to-create-and-call-magic-methods"><s
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MuggleCountry</span><span class="p">(</span><span class="n">Country</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A class to represent a country with no magic. It only requires the name on</span>
 <span class="sd">    initialisation.</span>
 <span class="sd">    &quot;&quot;&quot;</span>

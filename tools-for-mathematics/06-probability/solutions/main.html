@@ -1205,7 +1205,7 @@ event occurring with the following chances:</p>
 
 
 <span class="k">def</span> <span class="nf">sample_experiment</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns true if a random number is less than 2 / 7</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">7</span>
@@ -1219,7 +1219,7 @@ event occurring with the following chances:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.283
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.303
 </pre></div>
 </div>
 </div>
@@ -1230,7 +1230,7 @@ event occurring with the following chances:</p>
 <div class="cell tag_nbval-ignore-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sample_experiment</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns true if a random number is less than 1 / 10</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">10</span>
@@ -1244,7 +1244,7 @@ event occurring with the following chances:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.105
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.094
 </pre></div>
 </div>
 </div>
@@ -1255,7 +1255,7 @@ event occurring with the following chances:</p>
 <div class="cell tag_nbval-ignore-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sample_experiment</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns true if a random number is less than 1 / 100</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">100</span>
@@ -1269,7 +1269,7 @@ event occurring with the following chances:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.01
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.007
 </pre></div>
 </div>
 </div>
@@ -1280,7 +1280,7 @@ event occurring with the following chances:</p>
 <div class="cell tag_nbval-ignore-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sample_experiment</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns true if a random number is less than 1</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">1</span>
@@ -1303,7 +1303,7 @@ event occurring with the following chances:</p>
 <p class="admonition-title">Attention</p>
 <p>We can in fact write a single function for all the probabilities here:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sample_experiment</span><span class="p">(</span><span class="n">probability</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns true of a random number is less than probability</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">probability</span>
@@ -1323,7 +1323,7 @@ selecting a red token from each of the following configurations:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sample_experiment</span><span class="p">(</span><span class="n">number_of_red</span><span class="p">,</span> <span class="n">number_of_green</span><span class="p">,</span> <span class="n">number_of_yellow</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This samples a token from a bag with number_of_red red tokens,</span>
 <span class="sd">    number_of_green green tokens and number_of_yellow yellow tokens</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1411,14 +1411,14 @@ When a blue token is selected, a biased coin with probability <span class="math 
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pick_a_token</span><span class="p">(</span><span class="n">container</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A function to randomly sample from a `container`.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">container</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">sample_experiment</span><span class="p">(</span><span class="n">bag</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This samples a token from a given bag and then</span>
 <span class="sd">    selects a coin with a given probability.</span>
 
@@ -1507,7 +1507,7 @@ The probability of being late when using these methods of travel is <span class=
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sample_experiment</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Sample a travel method followed by whether or not the individual is late.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">random_number</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
