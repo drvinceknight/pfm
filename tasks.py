@@ -233,6 +233,14 @@ def build(c, root=ROOT):
 
 
 @task
+def build_for_taf(c, root=ROOT):
+    """
+    Build the book for Taylor and Francis
+    """
+    c.run(f"jb build book --builder latex --path-output taylor-and-francis")
+
+
+@task
 def backupbook(c, root=ROOT):
     """
     Backup all markdown files to notebooks.
