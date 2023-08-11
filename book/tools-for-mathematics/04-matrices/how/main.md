@@ -193,9 +193,9 @@ solve the following equations:
 
 $$
     \begin{array}{l}
-        a x + 2y &= 3\\
-        3x + y + 2z &= 4\\
-        - y + z &= 1\\
+        a x + 2y = 3\\
+        3x + y + 2z = 4\\
+        - y + z = 1\\
     \end{array}
 $$
 

@@ -238,6 +238,9 @@ def build_for_taf(c, root=ROOT):
     Build the book for Taylor and Francis
     """
     c.run(f"jb build book --builder latex --path-output taylor-and-francis")
+    c.run("cd taylor-and-francis/_build/latex; python clean.py")
+    # c.run("")
+    c.run("cd taylor-and-francis; latexmk --xelatex main.tex")
 
 
 @task

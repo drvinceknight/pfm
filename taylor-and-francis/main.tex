@@ -1,0 +1,114 @@
+\documentclass[Alon2,singlecolor,11pt]{Alon}%
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{fixltx2e,fix-cm}
+\usepackage[english]{babel}
+\usepackage{epigrafica}
+\usepackage[LGR,OT1]{fontenc}
+\usepackage{lmodern}
+\usepackage{mathptmx,txfonts}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage[breakable,skins]{tcolorbox}
+\setcounter{MaxMatrixCols}{15}
+
+\renewcommand{\sfdefault}{txss}
+
+\usepackage{changepage}% for text width to include margin
+
+
+\frenchspacing
+\tolerance=5000
+
+\makeindex
+
+\include{frontmatter/preamble}%place custom commands and macros here
+\usepackage{version}
+
+\usepackage{jupyterbook}
+\usepackage[,numfigreset=1,mathnumfig]{sphinx}
+
+\fvset{fontsize=\small}
+\usepackage{geometry}
+
+
+% Include hyperref last.
+\usepackage{hyperref}
+% Fix anchor placement for figures with captions.
+\usepackage{hypcap}% it must be loaded after hyperref.
+% Set up styles of URL: it should be placed after hyperref.
+\urlstyle{same}
+
+\addto\captionsenglish{\renewcommand{\contentsname}{Overview}}
+
+\usepackage{sphinxmessages}
+
+
+
+        % Start of preamble defined in sphinx-jupyterbook-latex %
+         \usepackage[Latin,Greek]{ucharclasses}
+        \usepackage{unicode-math}
+        % fixing title of the toc
+        \addto\captionsenglish{\renewcommand{\contentsname}{Contents}}
+        \hypersetup{
+            pdfencoding=auto,
+            psdextra
+        }
+        % End of preamble defined in sphinx-jupyterbook-latex %
+
+
+\title{Python for Mathematics}
+\author{Vincent Knight}
+
+\begin{document}
+
+\frontmatter
+
+%%%\maketitle%This is a placeholder titlepage, it will not be final.
+
+%%%Placeholder for front matter
+
+\halftitle{Python for Mathematics}{Using Python to do Mathematics}%%Placeholder for Half title
+
+%%\seriespg{Series page goes here (if applicable); otherwise blank}%%Comment this line if series page not available
+
+\title{Python for Mathematics} %This is a placeholder titlepage, it will not be final.
+%%
+\subtitle{Using Python to do Mathematics}
+
+\edition{First Edition}
+
+\author{Vincent Knight}%%Used for authored book
+
+%\editor{Editor Name(s)}%%Used for Edited book
+
+\maketitle
+
+\include{frontmatter/dedication}
+\cleardoublepage
+\setcounter{page}{7} %previous pages reserved for frontmatter to be added later
+%% \tableofcontents   %% TODO Fix the toc.
+\listoffigures
+\listoftables
+\include{frontmatter/foreword}
+\include{frontmatter/preface}
+\include{frontmatter/author}
+
+
+\mainmatter
+
+\part{This is a Part}
+\include{_build/latex/main}
+
+% \setcounter{chapter}{10}
+% \include{chapters/chapter2/ch2}
+
+
+% \bibliographystyle{plain}
+% \bibliography{bibtex_example}
+
+\printindex
+\cleardoublepage
+\end{document}
