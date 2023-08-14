@@ -27,6 +27,8 @@
 \include{frontmatter/preamble}%place custom commands and macros here
 \usepackage{version}
 
+% Include hyperref last.
+\usepackage{hyperref}
 \usepackage{jupyterbook}
 \usepackage[,numfigreset=1,mathnumfig]{sphinx}
 
@@ -34,8 +36,6 @@
 \usepackage{geometry}
 
 
-% Include hyperref last.
-\usepackage{hyperref}
 % Fix anchor placement for figures with captions.
 \usepackage{hypcap}% it must be loaded after hyperref.
 % Set up styles of URL: it should be placed after hyperref.
@@ -58,11 +58,11 @@
         }
         % End of preamble defined in sphinx-jupyterbook-latex %
 
-
 \title{Python for Mathematics}
 \author{Vincent Knight}
 
 \begin{document}
+
 
 \frontmatter
 
@@ -89,7 +89,8 @@
 \include{frontmatter/dedication}
 \cleardoublepage
 \setcounter{page}{7} %previous pages reserved for frontmatter to be added later
-%% \tableofcontents   %% TODO Fix the toc.
+
+%\tableofcontents
 \listoffigures
 \listoftables
 \include{frontmatter/foreword}
