@@ -27,7 +27,8 @@ libraries = requirements_path.read_text().split("\n")
 
 for library in filter(lambda line: "#" not in line, libraries):
     try:
-        print(f"{library} version: {version(library)}")
+        if library != "":
+            print(f"{library} version: {version(library)}")
     except PackageNotFoundError:
         pass
 ```
