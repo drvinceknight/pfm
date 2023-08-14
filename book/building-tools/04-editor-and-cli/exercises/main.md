@@ -41,7 +41,7 @@ kernelspec:
 
       $$
         \left\{
-            \begin{array}
+            \begin{array}{l}
               a_0 = 0,\\
               a_1 = 2,\\
               a_n = 3 a_{n - 1} + a_{n - 2}, n \geq 2
