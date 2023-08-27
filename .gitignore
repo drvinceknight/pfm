@@ -40,3 +40,4 @@ taylor-and-francis/_build/latex/*
 *.pdf
 *.pyg
 *.xdy
+env/*

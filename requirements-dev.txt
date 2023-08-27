@@ -1,12 +1,1 @@
-black==22.3.0
-interrogate==1.3.1
-invoke==1.4.1
-isort==4.3.21
-jupyter-book==0.13.1
-jupytext==1.14.1
-nbval==0.9.6
-proselint==0.10.2
-pytest==5.4.3
-appnope==0.1.0  # This is possibly needed for CI on OSX
-sphinxcontrib-bibtex<=2.5.0
-sphinx==4.5.0
+jupyter-book==0.15.1
