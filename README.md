@@ -48,3 +48,11 @@ updated libraries.
 To generate the book to the `book` directory:
 
     inv build
+
+## Generate the book for Taylor and Francis:
+
+Requirements: ImageMagick
+
+Run:
+
+    make taf
