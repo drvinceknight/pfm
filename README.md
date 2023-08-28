@@ -21,6 +21,8 @@ To install development dependencies:
 
     pip install -r requirements-dev.txt
 
+Note that as of the time of writing this: python version needs to be <=3.10.
+
 To check the format of the python code in the markdown files:
 
     inv stylecheck

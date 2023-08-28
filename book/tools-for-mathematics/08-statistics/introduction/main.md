@@ -1,0 +1,25 @@
+---
+jupytext:
+  formats: ipynb,md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.12
+    jupytext_version: 1.6.0
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+---
+
+# Statistics
+
+TODO Add description of statistics
+
+```{important}
+In this chapter we will cover:
+
+- Calculating measures of central tendancy and spread
+- Fitting a line of best fit
+- Carry out basic hypothesis tests
+```
