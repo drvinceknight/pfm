@@ -16,259 +16,485 @@ kernelspec:
 
 ## Question 1
 
-> `1`. Using recursion, obtain the first 10 terms of the following sequences:
+> `1`. For each of the following sets of data:
 
-> `1`. $\left\{\begin{array}{l}a_1 = 1,\\a_n = 3a_{n - 1}, n > 1\end{array}\right.$
+>      Calculate:
 
-```{code-cell} ipython3
-def get_sequence_a(n):
-    """
-    Return the sequence a.
-    """
-    if n == 1:
-        return 1
-    return 3 * get_sequence_a(n - 1)
-
-
-[get_sequence_a(n) for n in range(1, 11)]
-```
-
-> `2`. $\left\{\begin{array}{l}b_1 = 3,\\b_n = 6b_{n - 1}, n > 1\end{array}\right.$
+>      - The mean,
+>      - The median,
+>      - The max,
+>      - The min,
+>      - The population standard deviation,
+>      - The sample standard deviation,
+>      - The population variance,
+>      - The sample variance,
+>      - The quartiles (the set of $n=4$ quantiles),
+>      - The deciles (the set of $n=10$ quantiles),
+>
+> `1`. `data_set_1 = (...)
 
 ```{code-cell} ipython3
-def get_sequence_b(n):
-    """
-    Return the sequence b.
-    """
-    if n == 1:
-        return 3
-    return 6 * get_sequence_b(n - 1)
+import statistics as stat
 
-
-[get_sequence_b(n) for n in range(1, 11)]
-```
-
-> `3`. $\left\{\begin{array}{l}c_1 = 3,\\c_n = 6c_{n - 1} + 3, n > 1\end{array}\right.$
-
-```{code-cell} ipython3
-def get_sequence_c(n):
-    """
-    Return the sequence c.
-    """
-    if n == 1:
-        return 3
-    return 6 * get_sequence_c(n - 1) + 3
-
-
-[get_sequence_c(n) for n in range(1, 11)]
-```
-
-> `4`. $\left\{\begin{array}{l}d_0 = 3,\\d_n = \sqrt{d_{n - 1}} + 3, n > 0\end{array}\right.$
-
-```{code-cell} ipython3
-import sympy as sym
-
-
-def get_sequence_d(n):
-    """
-    Return the sequence c.
-    """
-    if n == 0:
-        return 3
-    return sym.sqrt(get_sequence_d(n - 1)) + 3
-
-
-[get_sequence_d(n) for n in range(1, 11)]
-```
-
-We could use a `sqrt` from a different library. Choosing to use `sympy` as it
-ensures the result is exact although not necessarily readable. Here is an
-approximate approach:
-
-```{code-cell} ipython3
-import math
-
-
-def get_sequence_d(n):
-    """
-    Return the sequence c.
-    """
-    if n == 0:
-        return 3
-    return math.sqrt(get_sequence_d(n - 1)) + 3
-
-
-[get_sequence_d(n) for n in range(10)]
-```
-
-## Question 2
-
-> 2. Using recursion, obtain the first 5 terms of the Fibonacci sequence:
-
-   $$
-       \left\{
-       \begin{array}{l}
-       a_0 = 0,\\
-       a_1 = 1,\\
-       a_n = a_{n - 1} + a_{n - 2}, n \geq 2\end{array}\right.
-   $$
-
-```{code-cell} ipython3
-def get_fibonacci(n):
-    """
-    Return the nth term of the Fibonacci sequence
-    """
-    if n == 0:
-        return 0
-    if n == 1:
-        return 1
-    return get_fibonacci(n - 1) + get_fibonacci(n - 2)
-
-
-[get_fibonacci(n) for n in range(10)]
-```
-
-## Question 3
-
-> `3`. A 40 year building programme for new houses began in Oldtown in the year
-> 1951 (Year 1) and finished in 1990 (Year 40).
-
-> The number of houses built each year form an arithmetic sequence with first
-> term $a$ and common difference $d$.
-
-> Given that 2400 new houses were built in 1960 and 600 new houses were built in
-> 1990, find:
-
-> `1`. The value of $d$.
-
-An arithmetic sequence with first term $a$ and common difference $d$ is a
-sequence of the form:
-
-$$
-  \left\{
-    \begin{array}{l}
-       a_1 = a,\\
-       a_n = a_{n - 1} + d
-    \end{array}
-  \right.
-$$
-
-We will write a function to express this:
-
-```{code-cell} ipython3
-def get_arithmetic_sequence(n, first_term, common_difference):
-    """
-    Return the nth term of an arithmetic sequence with give first_term and
-    common common_difference.
-    """
-    if n == 1:
-        return first_term
-    return (
-        get_arithmetic_sequence(n - 1, first_term, common_difference)
-        + common_difference
-    )
-```
-
-We know that $a_{10}=2400$ and $a_{40}=600$ we can write down equations that
-represent this:
-
-```{code-cell} ipython3
-a = sym.Symbol("a")
-d = sym.Symbol("d")
-
-a_10_equation = sym.Eq(
-    get_arithmetic_sequence(n=10, first_term=a, common_difference=d), 2400
-)
-a_10_equation
-```
-
-```{code-cell} ipython3
-a_40_equation = sym.Eq(
-    get_arithmetic_sequence(n=40, first_term=a, common_difference=d), 600
-)
-a_40_equation
-```
-
-We will solve the first equation for $a$:
-
-```{code-cell} ipython3
-sym.solveset(a_10_equation, a)
-```
-
-We substitute this in to the other equation and solve it for $d$:
-
-```{code-cell} ipython3
-sym.solveset(a_40_equation.subs({a: 2400 - 9 * d}), d)
-```
-
-> `2`. The value of $a$.
-
-We can substitute that value for $d$ back in to the expression for $a$:
-
-```{code-cell} ipython3
-(2400 - 9 * d).subs({d: -60})
-```
-
-> `3`. The total number of houses built in Oldtown over 40 years.
-
-```{code-cell} ipython3
-sum(
-    get_arithmetic_sequence(n=n, first_term=2940, common_difference=-60)
-    for n in range(1, 41)
+data_set_1 = (
+    74,
+    -7,
+    58,
+    82,
+    60,
+    3,
+    49,
+    85,
+    24,
+    99,
+    73,
+    76,
+    11,
+    -4,
+    61,
+    87,
+    93,
+    13,
+    1,
+    28,
 )
 ```
 
-## Question 4
-
-> `4`. A sequence is given by:
-
-   $$
-       \left\{\begin{array}{l}
-       x_1 = 1\\
-       x_{n + 1}= x_n(p + x_n), n > 1
-       \end{array}\right.
-   $$
-
-
-> for $p\ne0$.
-
-> `1`. Find $x_2$ in terms of $p$.
-
-We start by defining a function:
+> - The mean,
 
 ```{code-cell} ipython3
-def get_sequence(n, p):
-    """
-    Return the nth term of the sequence x_n for a given value of p
-    """
-    if n == 1:
-        return 1
-    return get_sequence(n - 1, p) * (p + get_sequence(n - 1, p))
+stat.mean(data_set_1)
 ```
 
-Using this we can answer the question:
+> - The median,
 
 ```{code-cell} ipython3
-p = sym.Symbol("p")
-
-x_2 = get_sequence(n=2, p=p)
-x_2
+stat.median(data_set_1)
 ```
 
-> `2`. Show that $x_3=1+3p+2p^2$.
+> - The max,
 
 ```{code-cell} ipython3
-p = sym.Symbol("p")
-
-x_3 = get_sequence(n=3, p=p)
-sym.expand(x_3)
+max(data_set_1)
 ```
 
-> `3`. Given that $x_3=1$, find the value of $p$
+> - The min,
 
-```{code-cell} ipython
-equation = sym.Eq(x_3, 1)
-sym.solveset(equation, p)
+```{code-cell} ipython3
+min(data_set_1)
 ```
 
-As $p\ne0$ this gives us that $p=-\frac{3}{2}$.
+> - The population standard deviation,
+
+```{code-cell} ipython3
+stat.pstdev(data_set_1)
+```
+
+> - The sample standard deviation,
+
+```{code-cell} ipython3
+stat.stdev(data_set_1)
+```
+
+> - The population variance,
+
+```{code-cell} ipython3
+stat.pvariance(data_set_1)
+```
+
+> - The sample variance,
+
+```{code-cell} ipython3
+stat.variance(data_set_1)
+```
+
+> - The quartiles (the set of $n=4$ quantiles),
+
+```{code-cell} ipython3
+stat.quantiles(data_set_1, n=4)
+```
+
+> - The deciles (the set of $n=10$ quantiles),
+
+```{code-cell} ipython3
+stat.quantiles(data_set_1, n=10)
+```
+
+> `2`. `data_set_2 = (...)
+
+```{code-cell} ipython3
+import statistics as stat
+
+data_set_2 = (
+    65,
+    59,
+    81,
+    81,
+    76,
+    93,
+    91,
+    88,
+    55,
+    97,
+    86,
+    94,
+    79,
+    54,
+    63,
+    56,
+    58,
+    77,
+    85,
+    88,
+)
+```
+
+> - The mean,
+
+```{code-cell} ipython3
+stat.mean(data_set_2)
+```
+
+> - The median,
+
+```{code-cell} ipython3
+stat.median(data_set_2)
+```
+
+> - The max,
+
+```{code-cell} ipython3
+max(data_set_2)
+```
+
+> - The min,
+
+```{code-cell} ipython3
+min(data_set_2)
+```
+
+> - The population standard deviation,
+
+```{code-cell} ipython3
+stat.pstdev(data_set_2)
+```
+
+> - The sample standard deviation,
+
+```{code-cell} ipython3
+stat.stdev(data_set_2)
+```
+
+> - The population variance,
+
+```{code-cell} ipython3
+stat.pvariance(data_set_2)
+```
+
+> - The sample variance,
+
+```{code-cell} ipython3
+stat.variance(data_set_2)
+```
+
+> - The quartiles (the set of $n=4$ quantiles),
+
+```{code-cell} ipython3
+stat.quantiles(data_set_2, n=4)
+```
+
+> - The deciles (the set of $n=10$ quantiles),
+
+```{code-cell} ipython3
+stat.quantiles(data_set_2, n=10)
+```
+
+> `3`. `data_set_3 = (...)
+
+```{code-cell} ipython3
+import statistics as stat
+
+data_set_3 = (
+    0.31,
+    -0.13,
+    0.19,
+    0.46,
+    -0.27,
+    -0.06,
+    0.20,
+    0.42,
+    -0.07,
+    0.11,
+    -0.11,
+    -0.43,
+    -0.36,
+    0.45,
+    -0.42,
+    0.11,
+    0.08,
+    0.31,
+    0.48,
+    0.17,
+)
+```
+
+> - The mean,
+
+```{code-cell} ipython3
+stat.mean(data_set_3)
+```
+
+> - The median,
+
+```{code-cell} ipython3
+stat.median(data_set_3)
+```
+
+> - The max,
+
+```{code-cell} ipython3
+max(data_set_3)
+```
+
+> - The min,
+
+```{code-cell} ipython3
+min(data_set_3)
+```
+
+> - The population standard deviation,
+
+```{code-cell} ipython3
+stat.pstdev(data_set_3)
+```
+
+> - The sample standard deviation,
+
+```{code-cell} ipython3
+stat.stdev(data_set_3)
+```
+
+> - The population variance,
+
+```{code-cell} ipython3
+stat.pvariance(data_set_3)
+```
+
+> - The sample variance,
+
+```{code-cell} ipython3
+stat.variance(data_set_3)
+```
+
+> - The quartiles (the set of $n=4$ quantiles),
+
+```{code-cell} ipython3
+stat.quantiles(data_set_3, n=4)
+```
+
+> - The deciles (the set of $n=10$ quantiles),
+
+```{code-cell} ipython3
+stat.quantiles(data_set_3, n=10)
+```
+
+> `4`. `data_set_4 = (...)
+
+```{code-cell} ipython3
+import statistics as stat
+
+data_set_4 = (
+    2,
+    4,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    2,
+    2,
+    2,
+    4,
+    2,
+    4,
+    2,
+    2,
+    3,
+    4,
+    3,
+    4,
+)
+```
+
+> - The mean,
+
+```{code-cell} ipython3
+stat.mean(data_set_4)
+```
+
+> - The median,
+
+```{code-cell} ipython3
+stat.median(data_set_4)
+```
+
+> - The max,
+
+```{code-cell} ipython3
+max(data_set_4)
+```
+
+> - The min,
+
+```{code-cell} ipython3
+min(data_set_4)
+```
+
+> - The population standard deviation,
+
+```{code-cell} ipython3
+stat.pstdev(data_set_4)
+```
+
+> - The sample standard deviation,
+
+```{code-cell} ipython3
+stat.stdev(data_set_4)
+```
+
+> - The population variance,
+
+```{code-cell} ipython3
+stat.pvariance(data_set_4)
+```
+
+> - The sample variance,
+
+```{code-cell} ipython3
+stat.variance(data_set_4)
+```
+
+> - The quartiles (the set of $n=4$ quantiles),
+
+```{code-cell} ipython3
+stat.quantiles(data_set_4, n=4)
+```
+
+> - The deciles (the set of $n=10$ quantiles),
+
+```{code-cell} ipython3
+stat.quantiles(data_set_4, n=10)
+```
+
+> `2`. Calculate the sample covariance and the correlation coefficient for the
+> following pairs of data sets from question 1:
+
+> `1`. `data_set_1` and `data_set_4`
+
+```{code-cell} ipython3
+stat.covariance(data_set_1, data_set_4)
+```
+
+```{code-cell} ipython3
+stat.correlation(data_set_1, data_set_4)
+```
+
+> `2`. `data_set_3` and `data_set_4`
+
+```{code-cell} ipython3
+stat.covariance(data_set_3, data_set_4)
+```
+
+```{code-cell} ipython3
+stat.correlation(data_set_3, data_set_4)
+```
+
+> `3`. `data_set_2` and `data_set_3`
+
+```{code-cell} ipython3
+stat.covariance(data_set_2, data_set_3)
+```
+
+```{code-cell} ipython3
+stat.correlation(data_set_2, data_set_3)
+```
+
+> `4`. `data_set_1` and `data_set_2`
+
+```{code-cell} ipython3
+stat.covariance(data_set_1, data_set_2)
+```
+
+```{code-cell} ipython3
+stat.correlation(data_set_1, data_set_2)
+```
+
+> `3`. For each of the data sets from question 1 obtain the covariance and
+> correlation coefficient for the data set with itself.
+
+> `1`. `data_set_1 = (...)
+
+```{code-cell} ipython3
+stat.covariance(data_set_1, data_set_1)
+```
+
+```{code-cell} ipython3
+stat.correlation(data_set_1, data_set_1)
+```
+
+> `2`. `data_set_2 = (...)
+
+```{code-cell} ipython3
+stat.covariance(data_set_2, data_set_2)
+```
+
+```{code-cell} ipython3
+stat.correlation(data_set_2, data_set_2)
+```
+
+> `3`. `data_set_3 = (...)
+
+```{code-cell} ipython3
+stat.covariance(data_set_3, data_set_3)
+```
+
+```{code-cell} ipython3
+stat.correlation(data_set_3, data_set_3)
+```
+
+> `4`. `data_set_4 = (...)
+
+```{code-cell} ipython3
+stat.covariance(data_set_4, data_set_4)
+```
+
+```{code-cell} ipython3
+stat.correlation(data_set_4, data_set_4)
+```
+
+> `4`. Obtain a line of best fit for the pairs of data sets from question 2.
+
+> `1`. `data_set_1` and `data_set_4`
+
+```{code-cell} ipython3
+stat.linear_regression(data_set_1, data_set_4)
+```
+
+> `2`. `data_set_3` and `data_set_4`
+
+```{code-cell} ipython3
+stat.linear_regression(data_set_3, data_set_4)
+```
+
+> `3`. `data_set_2` and `data_set_3`
+
+```{code-cell} ipython3
+stat.linear_regression(data_set_2, data_set_3)
+```
+
+> `4`. `data_set_1` and `data_set_2`
+
+```{code-cell} ipython3
+stat.linear_regression(data_set_1, data_set_2)
+```

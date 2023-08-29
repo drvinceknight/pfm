@@ -18,44 +18,127 @@ kernelspec:
 
 **If you are not sure how to do something, have a look at the "How To" section.**
 
-1. Using recursion, obtain the first 10 terms of the following sequences:
-   1. $\left\{\begin{array}{l}a_1 = 1,\\a_n = 3a_{n - 1}, n > 1\end{array}\right.$
-   2. $\left\{\begin{array}{l}b_1 = 3,\\b_n = 6b_{n - 1}, n > 1\end{array}\right.$
-   3. $\left\{\begin{array}{l}c_1 = 3,\\c_n = 6c_{n - 1} + 3, n > 1\end{array}\right.$
-   4. $\left\{\begin{array}{l}d_0 = 3,\\d_n = \sqrt{d_{n - 1}} + 3, n > 0\end{array}\right.$
-2. Using recursion, obtain the first 5 terms of the Fibonacci sequence:
+1. For each of the following sets of data:
 
-   $$
-   \left\{
-       \begin{array}{l}
-           a_0 = 0,\\
-           a_1 = 1,\\
-           a_n = a_{n - 1} + a_{n - 2}, n \geq 2
-       \end{array}
-   \right.
-   $$
+   1. ```
+      data_set_1 = (
+          74,
+          -7,
+          58,
+          82,
+          60,
+          3,
+          49,
+          85,
+          24,
+          99,
+          73,
+          76,
+          11,
+          -4,
+          61,
+          87,
+          93,
+          13,
+          1,
+          28,
+      )
+      ```
+   2. ```
+      data_set_2 = (
+          65,
+          59,
+          81,
+          81,
+          76,
+          93,
+          91,
+          88,
+          55,
+          97,
+          86,
+          94,
+          79,
+          54,
+          63,
+          56,
+          58,
+          77,
+          85,
+          88,
+      )
+      ```
+   3. ```
+      data_set_3 = (
+          0.31,
+          -0.13,
+          0.19,
+          0.46,
+          -0.27,
+          -0.06,
+          0.20,
+          0.42,
+          -0.07,
+          0.11,
+          -0.11,
+          -0.43,
+          -0.36,
+          0.45,
+          -0.42,
+          0.11,
+          0.08,
+          0.31,
+          0.48,
+          0.17,
+      )
+      ```
+   4. ```
+      data_set_4 = (
+          2,
+          4,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          2,
+          2,
+          2,
+          4,
+          2,
+          4,
+          2,
+          2,
+          3,
+          4,
+          3,
+          4,
+      )
+      ```
 
-3. A 40 year building programme for new houses began in Oldtown in the year 1951 (Year 1) and finished in 1990 (Year 40).
+      Calculate:
 
-   The number of houses built each year form an arithmetic sequence with first term $a$ and common difference $d$.
+      - The mean,
+      - The median,
+      - The max,
+      - The min,
+      - The population standard deviation,
+      - The sample standard deviation,
+      - The population variance,
+      - The sample variance,
+      - The quartiles (the set of $n=4$ quantiles),
+      - The deciles (the set of $n=10$ quantiles),
 
-   Given that 2400 new houses were built in 1960 and 600 new houses were built in 1990, find:
+2. Calculate the sample covariance and the correlation coefficient for the
+   following pairs of data sets from question 1:
 
-   1. The value of $d$.
-   2. The value of $a$.
-   3. The total number of houses built in Oldtown over 40 years.
+   1. `data_set_1` and `data_set_4`
+   2. `data_set_3` and `data_set_4`
+   3. `data_set_2` and `data_set_3`
+   4. `data_set_1` and `data_set_2`
 
-4. A sequence is given by:
+3. For each of the data sets from question 1 obtain the covariance and
+   correlation coefficient for the data set with itself.
 
-   $$
-       \left\{\begin{array}{l}
-       x_1 = 1\\
-       x_{n + 1}= x_n(p + x_n), n > 1
-       \end{array}\right.
-   $$
-
-   for $p\ne0$.
-
-   1. Find $x_2$ in terms of $p$.
-   2. Show that $x_3=1+3p+2p^2$.
-   3. Given that $x_3=1$, find the value of $p$
+4. Obtain a line of best fit for the pairs of data sets from question 2.
