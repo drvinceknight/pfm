@@ -1617,14 +1617,7 @@ and <span class="math notranslate nohighlight">\(y=(3, -3, 6, -2, 1, 2)\)</span>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">stat</span><span class="o">.</span><span class="n">covariance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-
-<span class="ne">AttributeError</span>: module &#39;statistics&#39; has no attribute &#39;covariance&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.1666666666666674
 </pre></div>
 </div>
 </div>
@@ -1649,6 +1642,11 @@ and <span class="math notranslate nohighlight">\(y=(3, -3, 6, -2, 1, 2)\)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">stat</span><span class="o">.</span><span class="n">correlation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.05325222181462787
 </pre></div>
 </div>
 </div>
@@ -1677,8 +1675,16 @@ and <span class="math notranslate nohighlight">\(y=(-3, -14, -31, -6, -40, -70)\
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LinearRegression(slope=-3.2338156892612333, intercept=5.543792840822537)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell tag_remove-input tag_style-check-ignore tag_nbval-ignore-output docutils container">
+<div class="cell_output docutils container">
+<img alt="../../../_images/main_24_0.png" src="../../../_images/main_24_0.png" />
+</div>
 </div>
 </section>
 <section id="how-to-create-an-instance-of-the-normal-distribution">
@@ -1698,6 +1704,11 @@ created using <code class="docutils literal notranslate"><span class="pre">stati
 
 <span class="n">distribution</span> <span class="o">=</span> <span class="n">stat</span><span class="o">.</span><span class="n">NormalDist</span><span class="p">(</span><span class="n">mu</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">.5</span><span class="p">)</span>
 <span class="n">distribution</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NormalDist(mu=3.0, sigma=0.5)
 </pre></div>
 </div>
 </div>
@@ -1727,6 +1738,11 @@ variable with <span class="math notranslate nohighlight">\(\mu=3\)</span> and <s
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.02275013194817921
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="how-to-use-the-inverse-cumulative-distribution-function-of-a-normal-distribution">
@@ -1749,6 +1765,11 @@ variable with <span class="math notranslate nohighlight">\(\mu=3\)</span> and <s
 
 <span class="n">distribution</span> <span class="o">=</span> <span class="n">stat</span><span class="o">.</span><span class="n">NormalDist</span><span class="p">(</span><span class="n">mu</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">.5</span><span class="p">)</span>
 <span class="n">distribution</span><span class="o">.</span><span class="n">inv_cdf</span><span class="p">(</span><span class="mf">.7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.2622002563540202
 </pre></div>
 </div>
 </div>
