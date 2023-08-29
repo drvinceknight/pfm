@@ -14,100 +14,382 @@ kernelspec:
 
 # Tutorial
 
-We will solve the following problem using a computer to using a programming
-technique called **recursion**.
+We will solve the following problem using a computer to do some of the more
+tedious calculations.
 
-```{admonition} Problem
+````{admonition} Problem
 
-A sequence $a_1, a_2, a_3, …$ is defined by:
+Anna is investigating the relationship between exercise and resting heart rate.
+She takes a random sample of 19 people in her year group and records for each person
 
-$$
-    \left\{
-    \begin{array}{l}
-        a_1 = k,\\
-        a_{n + 1} = 2a_n – 7, n \geq 1,
-    \end{array}
-    \right.
-$$
+- their resting heart rate, $h$ beats per minute.
+- the number of minutes, $m$, spent exercising each week.
 
-where $k$ is a constant.
+A table with the data is here:
 
+```{list-table} Collected dat from Anna's year group.
+:header-rows: 1
 
-1. Write down an expression for $a_2$ in terms of $k$.
-2. Show that $a_3 = 4k -21$
-3. Given that $\sum_{r=1}^4 a_r = 43$ find the value of $k$.
+* - h
+  - m
+* - 76.0
+  - 5
+* - 72.0
+  - 5
+* - 71.0
+  - 21
+* - 74.0
+  - 30
+* - 71.0
+  - 42
+* - 69.0
+  - 20
+* - 68.0
+  - 20
+* - 68.0
+  - 35
+* - 66
+  - 80.0
+* - 64
+  - 120.0
+* - 65
+  - 140.0
+* - 63
+  - 180.0
+* - 63
+  - 205.0
+* - 62
+  - 225.0
+* - 65
+  - 237.0
+* - 63
+  - 280.0
+* - 65
+  - 300.0
+* - 64
+  - 356.0
+* - 64
+  - 360.0
 ```
 
-We will use a Python to define a function that reproduces the mathematical
-definition of $a_k$:
+You can see a scatter plot below.
+
+1. For all collected values of $h$ and $m$ obtain:
+
+    - The mean
+    - The median
+    - The quartiles
+    - The standard deviation
+    - The variation
+    - The maximum
+    - The minimum
+
+2. Obtain the Pearson Coefficient of correlation for the variables $h$ and $m$.
+3. Obtain the line of best fit for variables $x$ and $y$ as
+   defined by:
+
+   $$x=\ln(m)\qquad y=\ln(h)$$
+
+4. Using the above obtain a relationship between $m$ and $h$ of the form:
+
+   $$h=am^k$$
+````
 
 ```{code-cell} ipython3
-def generate_a(k_value, n):
-    """
-    Uses recursion to return a_n for a given value of k:
+:tags: ["remove-input", "style-check-ignore", "nbval-ignore-output"]
 
-    a_1 = k
-    a_n = 2a_{n-1} - 7
-    """
-    if n == 1:
-        return k_value
-    return 2 * generate_a(k_value, n - 1) - 7
+import matplotlib.pyplot as plt
+
+h_data = (
+    76.0,
+    72.0,
+    71.0,
+    74.0,
+    71.0,
+    69.0,
+    68.0,
+    68.0,
+    66.0,
+    64.0,
+    65.0,
+    63.0,
+    63.0,
+    62.0,
+    65.0,
+    63.0,
+    65.0,
+    64.0,
+    64.0,
+)
+m_data = (
+    5,
+    5,
+    21,
+    30,
+    42,
+    20,
+    20,
+    35,
+    80,
+    120,
+    140,
+    180,
+    205,
+    225,
+    237,
+    280,
+    300,
+    356,
+    360,
+)
+
+plt.figure()
+plt.scatter(x=m_data, y=h_data)
+plt.xlabel("Minutes of exercise: $m$")
+plt.ylabel("Resting heart rate: $h$")
+plt.title("Data collected by Anne");
 ```
 
-```{attention}
-This is similar to the mathematical definition the Python definition of
-the function refers to itself.
-```
-
-We can use this to compute $a_3$ for $k=4$:
+Let us start by inputting all the data:
 
 ```{code-cell} ipython3
-generate_a(k_value=4, n=3)
+h = (
+    76.0,
+    72.0,
+    71.0,
+    74.0,
+    71.0,
+    69.0,
+    68.0,
+    68.0,
+    66.0,
+    64.0,
+    65.0,
+    63.0,
+    63.0,
+    62.0,
+    65.0,
+    63.0,
+    65.0,
+    64.0,
+    64.0,
+)
+m = (
+    5,
+    5,
+    21,
+    30,
+    42,
+    20,
+    20,
+    35,
+    80,
+    120,
+    140,
+    180,
+    205,
+    225,
+    237,
+    280,
+    300,
+    356,
+    360,
+)
 ```
 
-We can use this to compute $a_5$ for $k=1$:
+The main tool we are going to use for this is `statistics`.
 
 ```{code-cell} ipython3
-generate_a(k_value=1, n=5)
+import statistics as st
 ```
 
-Finally it is also possible to pass a symbolic value to `k_value`. This allows
-us to answer the first question:
+To calculate the mean:
+
+```{code-cell} ipython3
+st.mean(h)
+```
+
+```{code-cell} ipython3
+st.mean(m)
+```
+
+To calculate the median:
+
+```{code-cell} ipython3
+st.median(h)
+```
+
+```{code-cell} ipython3
+st.median(m)
+```
+
+To calculate the quartiles, we use `statistics.quantiles` and specify that we
+want to separate the date in to $n=4$ quarters.
+
+```{code-cell} ipython3
+st.quantiles(h, n=4)
+```
+
+```{code-cell} ipython3
+st.quantiles(m, n=4)
+```
+
+Note that this calculation confirms the median which corresponds to the 50%
+quartile.
+
+To calculate the sample standard deviation:
+
+```{code-cell} ipython3
+st.stdev(h)
+```
+
+```{code-cell} ipython3
+st.stdev(m)
+```
+
+To calculate the sample variance:
+
+```{code-cell} ipython3
+st.variance(h)
+```
+
+```{code-cell} ipython3
+st.variance(m)
+```
+
+To compute that maximum:
+
+```{code-cell} ipython3
+max(h)
+```
+
+```{code-cell} ipython3
+max(m)
+```
+
+To compute the minimum:
+
+```{code-cell} ipython3
+min(h)
+```
+
+```{code-cell} ipython3
+min(m)
+```
+
+In order to compute the Pearson Coefficient of correlation we use
+`statistics.correlation`:
+
+```{code-cell} ipython3
+st.correlation(h, m)
+```
+
+This negative value indicates a negative correlation between $h$ and $m$,
+indicating that the more you exercise the lower your heart rate is likely to be.
+
+To calculate the line of best fit for the transformed variables we need to first
+create them. We will do this using a list comprehension. As we are doing
+everything numerically, we will use `math.log` which by default computes the
+natural logarithm:
+
+```{code-cell} ipython3
+import math
+x = [math.log(value) for value in m]
+y = [math.log(value) for value in h]
+```
+
+Now to compute the line of best fit we will use `statistics.linear_regression`:
+
+```{code-cell} ipython3
+slope, intercept = st.linear_regression(x, y)
+```
+
+The slope is:
+
+```{code-cell} ipython3
+slope
+```
+
+The intercept is:
+
+```{code-cell} ipython3
+intercept
+```
+
+If we recall the transformation of the variables:
+
+$$x=\ln(m)\qquad y=\ln(h)$$
+
+We now have the relationship:
+
+$$y=ax + b$$
+
+We can use `sympy` to manipulate the expressions:
 
 ```{code-cell} ipython3
 import sympy as sym
 
-k = sym.Symbol("k")
-generate_a(k_value=k, n=2)
+h = sym.Symbol("h")
+m = sym.Symbol("m")
+a = sym.Symbol("a")
+b = sym.Symbol("b")
+x = sym.ln(m)
+y = sym.ln(h)
 ```
 
-Likewise for $a_3$:
+A general line of best fit for $x$ and $y$ is given by:
 
 ```{code-cell} ipython3
-generate_a(k_value=k, n=3)
+line = sym.Eq(lhs=y, rhs=a * x + b)
+line
 ```
 
-For the last question we start by computing the sum:
+Taking the exponential of both sides gives the required relationship:
+
+```{code-cell} ipython3
+sym.exp(line.lhs)
+```
+
+```{code-cell} ipython3
+sym.exp(line.rhs)
+```
+
+Which can be rewritten as:
 
 $$
-    \sum_{r=1}^4 a_r = 43
+e^bm^a
 $$
 
+Substituting our values for the `slope` and `intercept` in to these expressions
+gives the required relationship:
+
 ```{code-cell} ipython3
-sum_of_first_four_terms = sum(generate_a(k_value=k, n=r) for r in range(1, 5))
-sum_of_first_four_terms
+sym.exp(line.rhs).subs({a: slope, b: intercept})
 ```
 
-This allows us to create the given equation and solve it:
+Below is a plot that shows this relationship:
 
 ```{code-cell} ipython3
-equation = sym.Eq(sum_of_first_four_terms, 43)
-sym.solveset(equation, k)
+:tags: ["remove-input", "style-check-ignore", "nbval-ignore-output"]
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+m_range = np.linspace(np.min(m_data), np.max(m_data), 100)
+relationship_image = np.exp(intercept) * m_range ** (slope)
+
+plt.figure()
+plt.scatter(x=m_data, y=h_data)
+plt.plot(m_range, relationship_image, color="black")
+plt.xlabel("Minutes of exercise: $m$")
+plt.ylabel("Resting heart rate: $h$")
+plt.title(f"Data collected by Anne with fitted relationship: $h={np.exp(intercept):.2f}m^{{{slope:.2f}}}$");
 ```
 
 ```{important}
 In this tutorial we have
 
-- Defined a function using recursion.
-- Called this function using both numeric and symbolic values.
+- Calulated values of central tendancy and spread
+- Calculated some bi variate coefficients
+- Fitted a line of best fit
 ```

@@ -17,3 +17,7 @@ kernelspec:
 ## What about sci-kit learn?
 
 ## What else can be done?
+
+## What is the difference between the sample and the population var and std.
+
+See: https://docs.python.org/3/library/statistics.html#statistics.quantiles

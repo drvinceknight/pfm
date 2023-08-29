@@ -14,7 +14,7 @@ kernelspec:
 
 # Tutorial
 
-We will solve the following problem using a computer to using a programming
+We will solve the following problem using a computer using a programming
 technique called **recursion**.
 
 ```{admonition} Problem
