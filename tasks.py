@@ -223,56 +223,6 @@ def prosecheck(c, root=ROOT):
 
     sys.exit(exit_code)
 
-
-@task
-def build(c, root=ROOT):
-    """
-    Build the book.
-    """
-    c.run(f"jb build book --path-output {root}")
-
-
-@task
-def build_for_taf(c, root=ROOT):
-    """
-    Build the book for Taylor and Francis
-    """
-    c.run(f"jb build book --builder latex --path-output taylor-and-francis")
-    c.run("cd taylor-and-francis/_build/latex; python clean.py")
-    # c.run("")
-    c.run("cd taylor-and-francis; latexmk --xelatex main.tex")
-
-
-@task
-def backupbook(c, root=ROOT):
-    """
-    Backup all markdown files to notebooks.
-
-    This is done so that the notebooks can be tested. Whilst this may seem
-    unnecessary it ensures that the outputs can be tested across different
-    versions of the dependencies.
-
-    An example use case:
-
-    - Content is added with sympy version 1.6.1
-    - Book is updated
-    - Students using the book are using an updated version of sympy that no
-      longer gives the exact same results.
-
-    Using backup notebooks alongside with unpinned dependencies for the
-    continuous integrations ensures this will become apparent.
-
-    Notebooks at <path/name.md> are backed up to <path/.name.bcp.ipynb>.
-    """
-    for markdown_file_path in get_book_source_files():
-        backup_path = markdown_file_path.parent / (
-            f".{markdown_file_path.name}.bcp.ipynb"
-        )
-        markdown_file_to_delete = backup_path.with_suffix(".md")
-        c.run(f"jupytext --to notebook --execute {markdown_file_path} -o {backup_path}")
-        markdown_file_to_delete.unlink(missing_ok=True)
-
-
 @task
 def testnbs(c, root=ROOT):
     """
