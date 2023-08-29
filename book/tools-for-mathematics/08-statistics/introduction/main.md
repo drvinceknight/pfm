@@ -29,5 +29,5 @@ In this chapter we will cover:
 
 - Calculating measures of central tendancy and spread
 - Fitting a line of best fit
-- Carry out basic hypothesis tests
+- Using the Normal distribution
 ```

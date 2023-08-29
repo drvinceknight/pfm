@@ -387,6 +387,8 @@ stat.quantiles(data_set_4, n=4)
 stat.quantiles(data_set_4, n=10)
 ```
 
+## Question 2
+
 > `2`. Calculate the sample covariance and the correlation coefficient for the
 > following pairs of data sets from question 1:
 
@@ -429,6 +431,8 @@ stat.covariance(data_set_1, data_set_2)
 ```{code-cell} ipython3
 stat.correlation(data_set_1, data_set_2)
 ```
+
+## Question 3
 
 > `3`. For each of the data sets from question 1 obtain the covariance and
 > correlation coefficient for the data set with itself.
@@ -473,6 +477,8 @@ stat.covariance(data_set_4, data_set_4)
 stat.correlation(data_set_4, data_set_4)
 ```
 
+## Question 4
+
 > `4`. Obtain a line of best fit for the pairs of data sets from question 2.
 
 > `1`. `data_set_1` and `data_set_4`
@@ -497,4 +503,69 @@ stat.linear_regression(data_set_2, data_set_3)
 
 ```{code-cell} ipython3
 stat.linear_regression(data_set_1, data_set_2)
+```
+
+## Question 5
+
+> `5`. Given a collection of 250 individuals whose height is normally distributed with
+> mean 165 and standard deviation 5. What is the expected number of individuals
+> with height between 150 and 160?
+
+We start by creating the distribution:
+
+```{code-cell} ipython3
+distribution = stat.NormalDist(165, 5)
+distribution
+```
+
+Now let us find the probability of the random variable being between 150 and
+160:
+
+```{code-cell} ipython3
+probability = distribution.cdf(160) - distribution.cdf(150)
+probability
+```
+
+The expected number of individuals is thus given by:
+
+```{code-cell} ipython3
+probability * 250
+```
+
+## Question 6
+
+> `6`. Consider a class test where the score are normally distributed with mean 65
+> and standard deviation 5.
+
+> `1`. What is the probability of failing the class test (a score less than 40)?
+
+We start by creating the distribution:
+
+```{code-cell} ipython3
+distribution = stat.NormalDist(65, 5)
+distribution
+```
+
+The probability is given by:
+
+```{code-cell} ipython3
+distribution.cdf(40)
+```
+
+> `2`. What proportion of the class gets a first class mark (a score above 70)?
+
+The probability is given by:
+
+```{code-cell} ipython3
+1 - distribution.cdf(70)
+```
+
+> `3`. What is the mark that only 5% of the class would expect to get more than?
+
+For this, we use the inverse cdf but we need to find the inverse cdf of $.5$: a
+mark for which 5% of the class gets more than is equivalent to a mark for which
+95% of the class get less than.
+
+```{code-cell} ipython3
+distribution.inv_cdf(.95)
 ```

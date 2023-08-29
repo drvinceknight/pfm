@@ -142,3 +142,14 @@ kernelspec:
    correlation coefficient for the data set with itself.
 
 4. Obtain a line of best fit for the pairs of data sets from question 2.
+
+5. Given a collection of 250 individuals whose height is normally distributed with
+   mean 165 and standard deviation 5. What is the expected number of individuals
+   with height between 150 and 160?
+
+6. Consider a class test where the score are normally distributed with mean 65
+   and standard deviation 5.
+
+   1. What is the probability of failing the class test (a score less than 40)?
+   2. What proportion of the class gets a first class mark (a score above 70)?
+   3. What is the mark that only 10% of the class would expect to get more than?

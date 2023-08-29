@@ -76,7 +76,7 @@ data = (1, 5, 10, 12, 13, 20)
 stat.pstdev(data)
 ```
 
-### Calculate the sample deviation
+### Calculate the sample standard deviation
 
 We can calculate the sample standard deviation of a set of data using `statistics.stdev` which takes an
 iterable.
@@ -279,4 +279,71 @@ plt.plot(x_range, relationship_image, color="black")
 plt.xlabel("$x$")
 plt.ylabel("$y$")
 plt.title(f"Data with fitted line: $y={slope:.2f}x+{intercept:.2f}$");
+```
+
+## How to create an instance of the normal distribution
+
+A normal distribution with mean $\mu$ and standard deviation $\sigma$ can be
+created using `statistics.NormalDist`:
+
+````{tip}
+```
+statistics.NormalDist(mu, sigma)
+```
+````
+
+For example to create the normal distribution with $\mu=3$ and $\sigma=.5$:
+
+```{code-cell} ipython3
+import statistics as stat
+
+distribution = stat.NormalDist(mu=3, sigma=.5)
+distribution
+```
+
+## How to use the cumulative distribution function of a normal distribution
+
+For an instance of a normal distribution with mean $\mu$ and $\sigma$, the
+cumulative distribution function which gives $F(x)=P(X<x)$ (the probability that
+the normally distributed random variable is less than $X$) can be accessed using
+`statistics.NormaDist.cdf`.
+
+````{tip}
+```
+distribution = statistics.NormalDist(mu, sigma)
+distribution.cdf(x)
+```
+````
+
+For example to find the probability that $X<2$ for a normally distributed random
+variable with $\mu=3$ and $\sigma=.5$:
+
+```{code-cell} ipython3
+import statistics as stat
+
+distribution = stat.NormalDist(mu=3, sigma=.5)
+distribution.cdf(2)
+```
+
+## How to use the inverse cumulative distribution function of a normal distribution
+
+For an instance of a normal distribution with mean $\mu$ and $\sigma$, the
+inverse cumulative distribution function which for a given $p$ gives $x$ such that $p=P(X<x)$
+can be accessed using `statistics.NormaDist.inv_cdf`.
+
+````{tip}
+```
+distribution = statistics.NormalDist(mu, sigma)
+distribution.inv_cdf(p)
+```
+````
+
+For example to find the value of $X$ for which a normally distributed random
+variable with $\mu=3$ and $\sigma=.5$ will be less than with probability $.7$.
+
+```{code-cell} ipython3
+import statistics as stat
+
+distribution = stat.NormalDist(mu=3, sigma=.5)
+distribution.inv_cdf(.7)
 ```
