@@ -14,7 +14,7 @@ kernelspec:
 
 # Further information
 
-## What is the difference between the sample and the population variance and standard deviation.
+## What is the difference between the sample and the population variance and standard deviation?
 
 For a given set of $N$ values $x_1, x_2, \dots, x_N$ with mean $\bar x$ the sample
 standard deviation is given by:
