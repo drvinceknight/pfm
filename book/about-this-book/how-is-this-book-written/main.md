@@ -66,11 +66,3 @@ that a specific consistent formatting convention is used.
 All imports are sorted using the `isort`
 <https://github.com/PyCQA/isort> tool. Similarly to {ref}`black` this ensures
 that all code follows a given convention.
-
-### Nbval
-
-All myst format files are backed up to a Jupyter notebook which includes the
-output as well as the input. The Continuous Integration then installs up to
-date versions of all libraries used and validates the outputs using
-<https://nbval.readthedocs.io/en/latest/>. This ensures that the outputs are not
-giving unexpected results as a result of an update of a library.

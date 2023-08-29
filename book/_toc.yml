@@ -58,6 +58,13 @@ parts:
     - file: tools-for-mathematics/07-sequences/exercises/main
     - file: tools-for-mathematics/07-sequences/solutions/main
     - file: tools-for-mathematics/07-sequences/why/main
+  - file: tools-for-mathematics/08-statistics/introduction/main
+    sections:
+    - file: tools-for-mathematics/08-statistics/tutorial/main
+    - file: tools-for-mathematics/08-statistics/how/main
+    - file: tools-for-mathematics/08-statistics/exercises/main
+    - file: tools-for-mathematics/08-statistics/solutions/main
+    - file: tools-for-mathematics/08-statistics/why/main
 - caption: Building tools
   chapters:
   - file: building-tools/01-variables-conditionals-loops/introduction/main
