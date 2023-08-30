@@ -92,7 +92,7 @@ You can see a scatter plot below.
 
 4. Using the above obtain a relationship between $m$ and $h$ of the form:
 
-   $$h=am^k$$
+   $$h=cm^k$$
 ````
 
 ```{code-cell} ipython3
@@ -324,6 +324,12 @@ We now have the relationship:
 
 $$y=ax + b$$
 
+Where $a$ corresponds to the `slope` and $b$ corresponds to the `intercept`.
+
+The question was asking for a relationship between $m$ and $h$ of the form:
+
+$$h=cm^k$$
+
 We can use `sympy` to manipulate the expressions:
 
 ```{code-cell} ipython3
@@ -337,7 +343,8 @@ x = sym.ln(m)
 y = sym.ln(h)
 ```
 
-A general line of best fit for $x$ and $y$ is given by:
+A general line of best fit for $x$ and $y$ can be expressed in terms of $m$ and
+$h$:
 
 ```{code-cell} ipython3
 line = sym.Eq(lhs=y, rhs=a * x + b)
@@ -351,7 +358,7 @@ sym.exp(line.lhs)
 ```
 
 ```{code-cell} ipython3
-sym.exp(line.rhs)
+sym.expand(sym.exp(line.rhs))
 ```
 
 Which can be rewritten as:
