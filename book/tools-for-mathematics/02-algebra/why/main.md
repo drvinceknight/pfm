@@ -148,6 +148,10 @@ In that case the second import has overwritten the first.
 and you are more likely to make mistakes when your code is not clear.
 ```
 
+## How to extract a solution from the output of `sympy.solveset`?
+
+# TODO
+
 ## Why do I sometimes see `import sympy as sym`?
 
 In some resources you will see that instead of `import sympy` people use:
