@@ -1263,7 +1263,7 @@ defined by:</p>
 </li>
 <li><p>Using the above obtain a relationship between <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(h\)</span> of the form:</p>
 <div class="math notranslate nohighlight">
-\[h=am^k\]</div>
+\[h=cm^k\]</div>
 </li>
 </ol>
 </div>
@@ -1576,6 +1576,10 @@ natural logarithm:</p>
 <p>We now have the relationship:</p>
 <div class="math notranslate nohighlight">
 \[y=ax + b\]</div>
+<p>Where <span class="math notranslate nohighlight">\(a\)</span> corresponds to the <code class="docutils literal notranslate"><span class="pre">slope</span></code> and <span class="math notranslate nohighlight">\(b\)</span> corresponds to the <code class="docutils literal notranslate"><span class="pre">intercept</span></code>.</p>
+<p>The question was asking for a relationship between <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(h\)</span> of the form:</p>
+<div class="math notranslate nohighlight">
+\[h=cm^k\]</div>
 <p>We can use <code class="docutils literal notranslate"><span class="pre">sympy</span></code> to manipulate the expressions:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1591,7 +1595,8 @@ natural logarithm:</p>
 </div>
 </div>
 </div>
-<p>A general line of best fit for <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> is given by:</p>
+<p>A general line of best fit for <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> can be expressed in terms of <span class="math notranslate nohighlight">\(m\)</span> and
+<span class="math notranslate nohighlight">\(h\)</span>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">line</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">lhs</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">rhs</span><span class="o">=</span><span class="n">a</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
@@ -1618,13 +1623,13 @@ natural logarithm:</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">rhs</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">rhs</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle e^{a \log{\left(m \right)} + b}\]</div>
+\[\displaystyle e^{b} e^{a \log{\left(m \right)}}\]</div>
 </div>
 </div>
 <p>Which can be rewritten as:</p>
