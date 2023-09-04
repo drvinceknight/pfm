@@ -16,556 +16,226 @@ kernelspec:
 
 ## Question 1
 
-> `1`. For each of the following sets of data:
+> `1`. Create the following differential equations:
 
->      Calculate:
-
->      - The mean,
->      - The median,
->      - The max,
->      - The min,
->      - The population standard deviation,
->      - The sample standard deviation,
->      - The population variance,
->      - The sample variance,
->      - The quartiles (the set of $n=4$ quantiles),
->      - The deciles (the set of $n=10$ quantiles),
->
-> `1`. `data_set_1 = (...)
+> `1`. $\frac{dy}{dx} = \cos(x)$
 
 ```{code-cell} ipython3
-import statistics as stat
+import sympy as sym
 
-data_set_1 = (
-    74,
-    -7,
-    58,
-    82,
-    60,
-    3,
-    49,
-    85,
-    24,
-    99,
-    73,
-    76,
-    11,
-    -4,
-    61,
-    87,
-    93,
-    13,
-    1,
-    28,
-)
+x = sym.Symbol("x")
+y = sym.Function("y")
+
+differential_equation = sym.Eq(sym.diff(y(x), x), sym.cos(x))
+differential_equation
 ```
 
-> - The mean,
+> `2`. $\frac{dy}{dx} = 1 - y$
 
 ```{code-cell} ipython3
-stat.mean(data_set_1)
+differential_equation = sym.Eq(sym.diff(y(x), x), 1 - y(x))
+differential_equation
 ```
 
-> - The median,
+> `3`. $\frac{dy}{dx} = 1 / 10 \left(x - 50\right)$
 
 ```{code-cell} ipython3
-stat.median(data_set_1)
+differential_equation = sym.Eq(sym.diff(y(x), x), (x - 50) / 10)
+differential_equation
 ```
 
-> - The max,
+> `4`. $\frac{dy}{dx} = y ^2 \ln (x)$
 
 ```{code-cell} ipython3
-max(data_set_1)
+differential_equation = sym.Eq(sym.diff(y(x), x), y(x) ** 2 * sym.log(x))
+differential_equation
 ```
 
-> - The min,
+> `5`. $\frac{dy}{dx} = (1 + y) ^ 2$
 
 ```{code-cell} ipython3
-min(data_set_1)
-```
-
-> - The population standard deviation,
-
-```{code-cell} ipython3
-stat.pstdev(data_set_1)
-```
-
-> - The sample standard deviation,
-
-```{code-cell} ipython3
-stat.stdev(data_set_1)
-```
-
-> - The population variance,
-
-```{code-cell} ipython3
-stat.pvariance(data_set_1)
-```
-
-> - The sample variance,
-
-```{code-cell} ipython3
-stat.variance(data_set_1)
-```
-
-> - The quartiles (the set of $n=4$ quantiles),
-
-```{code-cell} ipython3
-stat.quantiles(data_set_1, n=4)
-```
-
-> - The deciles (the set of $n=10$ quantiles),
-
-```{code-cell} ipython3
-stat.quantiles(data_set_1, n=10)
-```
-
-> `2`. `data_set_2 = (...)
-
-```{code-cell} ipython3
-import statistics as stat
-
-data_set_2 = (
-    65,
-    59,
-    81,
-    81,
-    76,
-    93,
-    91,
-    88,
-    55,
-    97,
-    86,
-    94,
-    79,
-    54,
-    63,
-    56,
-    58,
-    77,
-    85,
-    88,
-)
-```
-
-> - The mean,
-
-```{code-cell} ipython3
-stat.mean(data_set_2)
-```
-
-> - The median,
-
-```{code-cell} ipython3
-stat.median(data_set_2)
-```
-
-> - The max,
-
-```{code-cell} ipython3
-max(data_set_2)
-```
-
-> - The min,
-
-```{code-cell} ipython3
-min(data_set_2)
-```
-
-> - The population standard deviation,
-
-```{code-cell} ipython3
-stat.pstdev(data_set_2)
-```
-
-> - The sample standard deviation,
-
-```{code-cell} ipython3
-stat.stdev(data_set_2)
-```
-
-> - The population variance,
-
-```{code-cell} ipython3
-stat.pvariance(data_set_2)
-```
-
-> - The sample variance,
-
-```{code-cell} ipython3
-stat.variance(data_set_2)
-```
-
-> - The quartiles (the set of $n=4$ quantiles),
-
-```{code-cell} ipython3
-stat.quantiles(data_set_2, n=4)
-```
-
-> - The deciles (the set of $n=10$ quantiles),
-
-```{code-cell} ipython3
-stat.quantiles(data_set_2, n=10)
-```
-
-> `3`. `data_set_3 = (...)
-
-```{code-cell} ipython3
-import statistics as stat
-
-data_set_3 = (
-    0.31,
-    -0.13,
-    0.19,
-    0.46,
-    -0.27,
-    -0.06,
-    0.20,
-    0.42,
-    -0.07,
-    0.11,
-    -0.11,
-    -0.43,
-    -0.36,
-    0.45,
-    -0.42,
-    0.11,
-    0.08,
-    0.31,
-    0.48,
-    0.17,
-)
-```
-
-> - The mean,
-
-```{code-cell} ipython3
-stat.mean(data_set_3)
-```
-
-> - The median,
-
-```{code-cell} ipython3
-stat.median(data_set_3)
-```
-
-> - The max,
-
-```{code-cell} ipython3
-max(data_set_3)
-```
-
-> - The min,
-
-```{code-cell} ipython3
-min(data_set_3)
-```
-
-> - The population standard deviation,
-
-```{code-cell} ipython3
-stat.pstdev(data_set_3)
-```
-
-> - The sample standard deviation,
-
-```{code-cell} ipython3
-stat.stdev(data_set_3)
-```
-
-> - The population variance,
-
-```{code-cell} ipython3
-stat.pvariance(data_set_3)
-```
-
-> - The sample variance,
-
-```{code-cell} ipython3
-stat.variance(data_set_3)
-```
-
-> - The quartiles (the set of $n=4$ quantiles),
-
-```{code-cell} ipython3
-stat.quantiles(data_set_3, n=4)
-```
-
-> - The deciles (the set of $n=10$ quantiles),
-
-```{code-cell} ipython3
-stat.quantiles(data_set_3, n=10)
-```
-
-> `4`. `data_set_4 = (...)
-
-```{code-cell} ipython3
-import statistics as stat
-
-data_set_4 = (
-    2,
-    4,
-    2,
-    2,
-    2,
-    2,
-    2,
-    3,
-    2,
-    2,
-    2,
-    4,
-    2,
-    4,
-    2,
-    2,
-    3,
-    4,
-    3,
-    4,
-)
-```
-
-> - The mean,
-
-```{code-cell} ipython3
-stat.mean(data_set_4)
-```
-
-> - The median,
-
-```{code-cell} ipython3
-stat.median(data_set_4)
-```
-
-> - The max,
-
-```{code-cell} ipython3
-max(data_set_4)
-```
-
-> - The min,
-
-```{code-cell} ipython3
-min(data_set_4)
-```
-
-> - The population standard deviation,
-
-```{code-cell} ipython3
-stat.pstdev(data_set_4)
-```
-
-> - The sample standard deviation,
-
-```{code-cell} ipython3
-stat.stdev(data_set_4)
-```
-
-> - The population variance,
-
-```{code-cell} ipython3
-stat.pvariance(data_set_4)
-```
-
-> - The sample variance,
-
-```{code-cell} ipython3
-stat.variance(data_set_4)
-```
-
-> - The quartiles (the set of $n=4$ quantiles),
-
-```{code-cell} ipython3
-stat.quantiles(data_set_4, n=4)
-```
-
-> - The deciles (the set of $n=10$ quantiles),
-
-```{code-cell} ipython3
-stat.quantiles(data_set_4, n=10)
+differential_equation = sym.Eq(sym.diff(y(x), x), (1 + y(x)) ** 2)
+differential_equation
 ```
 
 ## Question 2
 
-> `2`. Calculate the sample covariance and the correlation coefficient for the
-> following pairs of data sets from question 1:
+> `2`. Obtain the general solution for the equations in question 1.
 
-> `1`. `data_set_1` and `data_set_4`
+> `1`. $\frac{dy}{dx} = \cos(x)$
 
 ```{code-cell} ipython3
-stat.covariance(data_set_1, data_set_4)
+differential_equation = sym.Eq(sym.diff(y(x), x), sym.cos(x))
+sym.dsolve(differential_equation, y(x))
 ```
 
+> `2`. $\frac{dy}{dx} = 1 - y$
+
 ```{code-cell} ipython3
-stat.correlation(data_set_1, data_set_4)
+differential_equation = sym.Eq(sym.diff(y(x), x), 1 - y(x))
+sym.dsolve(differential_equation, y(x))
 ```
 
-> `2`. `data_set_3` and `data_set_4`
+> `3`. $\frac{dy}{dx} = \frac{x - 50}{10}$
 
 ```{code-cell} ipython3
-stat.covariance(data_set_3, data_set_4)
+differential_equation = sym.Eq(sym.diff(y(x), x), (x - 50) / 10)
+sym.dsolve(differential_equation, y(x))
 ```
 
+> `4`. $\frac{dy}{dx} = y ^2 \ln (x)$
+
 ```{code-cell} ipython3
-stat.correlation(data_set_3, data_set_4)
+differential_equation = sym.Eq(sym.diff(y(x), x), y(x) ** 2 * sym.log(x))
+sym.dsolve(differential_equation, y(x))
 ```
 
-> `3`. `data_set_2` and `data_set_3`
+> `5`. $\frac{dy}{dx} = (1 + y) ^ 2$
 
 ```{code-cell} ipython3
-stat.covariance(data_set_2, data_set_3)
-```
-
-```{code-cell} ipython3
-stat.correlation(data_set_2, data_set_3)
-```
-
-> `4`. `data_set_1` and `data_set_2`
-
-```{code-cell} ipython3
-stat.covariance(data_set_1, data_set_2)
-```
-
-```{code-cell} ipython3
-stat.correlation(data_set_1, data_set_2)
+differential_equation = sym.Eq(sym.diff(y(x), x), (1 + y(x)) ** 2)
+sym.dsolve(differential_equation, y(x))
 ```
 
 ## Question 3
 
-> `3`. For each of the data sets from question 1 obtain the covariance and
-> correlation coefficient for the data set with itself.
+> `3`. Obtain the particular solution for the equations in question 1 with
+> the following particular conditions:
 
-> `1`. `data_set_1 = (...)
+> `1`. $y(0) = \pi$
 
 ```{code-cell} ipython3
-stat.covariance(data_set_1, data_set_1)
+conditions = {y(0): sym.pi}
+differential_equation = sym.Eq(sym.diff(y(x), x), sym.cos(x))
+sym.dsolve(differential_equation, y(x), ics=conditions)
 ```
 
+> `2`. $y(2) = 3$
+
 ```{code-cell} ipython3
-stat.correlation(data_set_1, data_set_1)
+conditions = {y(2): 3}
+differential_equation = sym.Eq(sym.diff(y(x), x), 1 - y(x))
+sym.dsolve(differential_equation, y(x), ics=conditions)
 ```
 
-> `2`. `data_set_2 = (...)
+> `3`. $y(50) = 1$
 
 ```{code-cell} ipython3
-stat.covariance(data_set_2, data_set_2)
+conditions = {y(50): 1}
+differential_equation = sym.Eq(sym.diff(y(x), x), (x - 50) / 10)
+sym.dsolve(differential_equation, y(x), ics=conditions)
 ```
 
+> `4`. $y(e) = 1$
+
 ```{code-cell} ipython3
-stat.correlation(data_set_2, data_set_2)
+conditions = {y(sym.exp(1)): 1}
+differential_equation = sym.Eq(sym.diff(y(x), x), y(x) ** 2 * sym.log(x))
+sym.dsolve(differential_equation, y(x), ics=conditions)
 ```
 
-> `3`. `data_set_3 = (...)
+> `5`. $y(-1) = 3$
 
 ```{code-cell} ipython3
-stat.covariance(data_set_3, data_set_3)
-```
-
-```{code-cell} ipython3
-stat.correlation(data_set_3, data_set_3)
-```
-
-> `4`. `data_set_4 = (...)
-
-```{code-cell} ipython3
-stat.covariance(data_set_4, data_set_4)
-```
-
-```{code-cell} ipython3
-stat.correlation(data_set_4, data_set_4)
+conditions = {y(-1): 3}
+differential_equation = sym.Eq(sym.diff(y(x), x), (1 + y(x)) ** 2)
+sym.dsolve(differential_equation, y(x), ics=conditions)
 ```
 
 ## Question 4
 
-> `4`. Obtain a line of best fit for the pairs of data sets from question 2.
+> `4`. The rate of increase of a population ($p$) is equal to 1% of the size of the
+> population.
 
-> `1`. `data_set_1` and `data_set_4`
+> `1`. Define the differential equation that models this situation.
 
 ```{code-cell} ipython3
-stat.linear_regression(data_set_1, data_set_4)
+p = sym.Function("p")
+t = sym.Symbol("t")
+
+differential_equation = sym.Eq(sym.diff(p(t), t), p(t) / 100)
+differential_equation
 ```
 
-> `2`. `data_set_3` and `data_set_4`
+> `2`. Given that $p(0)=5000$ find the population after 5 time units.
 
 ```{code-cell} ipython3
-stat.linear_regression(data_set_3, data_set_4)
+condition = {p(0): 5000}
+sym.dsolve(differential_equation, p(t), ics=condition)
 ```
 
-> `3`. `data_set_2` and `data_set_3`
+Thus the population after 5 time units is:
 
 ```{code-cell} ipython3
-stat.linear_regression(data_set_2, data_set_3)
-```
-
-> `4`. `data_set_1` and `data_set_2`
-
-```{code-cell} ipython3
-stat.linear_regression(data_set_1, data_set_2)
+5000 * sym.exp(sym.S(5) / 100)
 ```
 
 ## Question 5
 
-> `5`. Given a collection of 250 individuals whose height is normally distributed with
-> mean 165 and standard deviation 5. What is the expected number of individuals
-> with height between 150 and 160?
+> `5`. The rate of change of the temperature of a hot drink is proportional to the
+> difference between the temperature of the drink ($T$) and the room temperature ($T_R$).
 
-We start by creating the distribution:
+> `1`. Define the differential equation that models this situation.
 
 ```{code-cell} ipython3
-distribution = stat.NormalDist(165, 5)
-distribution
+T = sym.Function("T")
+t = sym.Symbol("t")
+T_r = sym.Symbol("T_r")
+k = sym.Symbol("k")
+
+differential_equation = sym.Eq(sym.diff(T(t), t), k * (T(t) - T_r))
+differential_equation
 ```
 
-Now let us find the probability of the random variable being between 150 and
-160:
+> `2`. Solve the differential equation.
 
 ```{code-cell} ipython3
-probability = distribution.cdf(160) - distribution.cdf(150)
-probability
+sym.dsolve(differential_equation, T(t))
 ```
 
-The expected number of individuals is thus given by:
+> `3`. Given that $T(0) = 100$ and the room temperature is $T_R=20$ obtain the
+> particular solution.
 
 ```{code-cell} ipython3
-probability * 250
+condition = {T(0): 100}
+particular_differential_equation = differential_equation.subs({T_r: 20})
+sym.dsolve(particular_differential_equation, T(t), ics=condition)
 ```
 
-## Question 6
+> `4`. Use the particular solution to identify how on it will take for the drink
+> to be ready for consumption (a temperature of 80) given that after 3 time
+> units $T(3)=90$.
 
-> `6`. Consider a class test where the score are normally distributed with mean 65
-> and standard deviation 5.
-
-> `1`. What is the probability of failing the class test (a score less than 40)?
-
-We start by creating the distribution:
+First let us find the missing variable $k$ by using the fact that $T(3) = 90$:
 
 ```{code-cell} ipython3
-distribution = stat.NormalDist(65, 5)
-distribution
+equation = sym.Eq(80 * sym.exp(k * 3) + 20, 90)
+sym.solveset(equation, k)
 ```
 
-The probability is given by:
+The set of solutions is infinite but contains a single real value element (when
+$n=0$):
 
 ```{code-cell} ipython3
-distribution.cdf(40)
+particular_k = sym.log(sym.S(7) / 8) / 3
 ```
 
-> `2`. What proportion of the class gets a first class mark (a score above 70)?
-
-The probability is given by:
+The final equation to be solved is given by:
 
 ```{code-cell} ipython3
-1 - distribution.cdf(70)
+equation = sym.Eq(80 * sym.exp(particular_k * t) + 20, 80)
+sym.solveset(equation, t)
 ```
 
-> `3`. What is the mark that only 5% of the class would expect to get more than?
-
-For this, we use the inverse cdf but we need to find the inverse cdf of $.5$: a
-mark for which 5% of the class gets more than is equivalent to a mark for which
-95% of the class get less than.
+which has a single real valued element (when $n=0$):
 
 ```{code-cell} ipython3
-distribution.inv_cdf(.95)
+t_ready = 3 * sym.log(sym.S(3) / 4)/ sym.log(sym.S(7) / 8)
+t_ready
+```
+
+Which means the hot drink will be ready in about 7 minutes:
+
+```{code-cell} ipython3
+float(t_ready)
 ```

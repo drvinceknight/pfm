@@ -18,138 +18,38 @@ kernelspec:
 
 **If you are not sure how to do something, have a look at the "How To" section.**
 
-1. For each of the following sets of data:
+1. Create the following differential equations:
 
-   1. ```
-      data_set_1 = (
-          74,
-          -7,
-          58,
-          82,
-          60,
-          3,
-          49,
-          85,
-          24,
-          99,
-          73,
-          76,
-          11,
-          -4,
-          61,
-          87,
-          93,
-          13,
-          1,
-          28,
-      )
-      ```
-   2. ```
-      data_set_2 = (
-          65,
-          59,
-          81,
-          81,
-          76,
-          93,
-          91,
-          88,
-          55,
-          97,
-          86,
-          94,
-          79,
-          54,
-          63,
-          56,
-          58,
-          77,
-          85,
-          88,
-      )
-      ```
-   3. ```
-      data_set_3 = (
-          0.31,
-          -0.13,
-          0.19,
-          0.46,
-          -0.27,
-          -0.06,
-          0.20,
-          0.42,
-          -0.07,
-          0.11,
-          -0.11,
-          -0.43,
-          -0.36,
-          0.45,
-          -0.42,
-          0.11,
-          0.08,
-          0.31,
-          0.48,
-          0.17,
-      )
-      ```
-   4. ```
-      data_set_4 = (
-          2,
-          4,
-          2,
-          2,
-          2,
-          2,
-          2,
-          3,
-          2,
-          2,
-          2,
-          4,
-          2,
-          4,
-          2,
-          2,
-          3,
-          4,
-          3,
-          4,
-      )
-      ```
+   1. $\frac{dy}{dx} = \cos(x)$
+   2. $\frac{dy}{dx} = 1 - y$
+   3. $\frac{dy}{dx} = \frac{x - 50\right}{10}$
+   4. $\frac{dy}{dx} = y ^2 \ln (x)$
+   5. $\frac{dy}{dx} = (1 + y) ^ 2$
 
-      Calculate:
+2. Obtain the general solution for the equations in question 1.
 
-      - The mean,
-      - The median,
-      - The max,
-      - The min,
-      - The population standard deviation,
-      - The sample standard deviation,
-      - The population variance,
-      - The sample variance,
-      - The quartiles (the set of $n=4$ quantiles),
-      - The deciles (the set of $n=10$ quantiles),
+3. Obtain the particular solution for the equations in question 1 with
+   the following particular conditions:
 
-2. Calculate the sample covariance and the correlation coefficient for the
-   following pairs of data sets from question 1:
+   1. $y(0) = \pi$
+   2. $y(2) = 3$
+   3. $y(50) = 1$
+   4. $y(e) = 1$
+   5. $y(-1) = 3$
 
-   1. `data_set_1` and `data_set_4`
-   2. `data_set_3` and `data_set_4`
-   3. `data_set_2` and `data_set_3`
-   4. `data_set_1` and `data_set_2`
+4. The rate of increase of a population ($p$) is equal to 1% of the size of the
+   population.
 
-3. For each of the data sets from question 1 obtain the covariance and
-   correlation coefficient for the data set with itself.
+   1. Define the differential equation that models this situation.
+   2. Given that $p(0)=5000$ find the population after 5 time units.
 
-4. Obtain a line of best fit for the pairs of data sets from question 2.
+5. The rate of change of the temperature of a hot drink is proportional to the
+   difference between the temperature of the drink ($T$) and the room temperature ($T_R$).
 
-5. Given a collection of 250 individuals whose height is normally distributed with
-   mean 165 and standard deviation 5. What is the expected number of individuals
-   with height between 150 and 160?
-
-6. Consider a class test where the score are normally distributed with mean 65
-   and standard deviation 5.
-
-   1. What is the probability of failing the class test (a score less than 40)?
-   2. What proportion of the class gets a first class mark (a score above 70)?
-   3. What is the mark that only 10% of the class would expect to get more than?
+   1. Define the differential equation that models this situation.
+   2. Solve the differentia equation.
+   3. Given that $T(0) = 100$ and the room temperature is $$T_R=20$$ obtain the
+      particular solution.
+   4. Use the particular solution to identify how on it will take for the drink
+      to be ready for consumption (a temperature of 80) given that after 3 time
+      units $T(3)=90$.
