@@ -37,7 +37,7 @@ differential_equation = sym.Eq(sym.diff(y(x), x), 1 - y(x))
 differential_equation
 ```
 
-> `3`. $\frac{dy}{dx} = 1 / 10 \left(x - 50\right)$
+> `3`. $\frac{dy}{dx} = \frac{x - 50}{10}$
 
 ```{code-cell} ipython3
 differential_equation = sym.Eq(sym.diff(y(x), x), (x - 50) / 10)
