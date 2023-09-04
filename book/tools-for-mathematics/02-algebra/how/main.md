@@ -155,9 +155,9 @@ sympy.solveset(equation, variable)
 
 Here is how we can use `sympy` to obtain the roots of the general quadratic:
 
-\\[
+$$
 a x ^ 2 + bx + c
-\\]
+$$
 
 ```{code-cell} ipython3
 a = sympy.Symbol("a")
@@ -180,6 +180,8 @@ It is however clearer to specifically write the equation that we want to solve:
 equation = sympy.Eq(a * x ** 2 + b * x + c, 0)
 sympy.solveset(equation, x)
 ```
+
+(how-to-substitute-a-value-in-to-an-expression)=
 
 ## How to substitute a value in to an expression
 
