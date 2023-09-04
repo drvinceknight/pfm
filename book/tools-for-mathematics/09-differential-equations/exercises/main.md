@@ -22,7 +22,7 @@ kernelspec:
 
    1. $\frac{dy}{dx} = \cos(x)$
    2. $\frac{dy}{dx} = 1 - y$
-   3. $\frac{dy}{dx} = \frac{x - 50\right}{10}$
+   3. $\frac{dy}{dx} = \frac{x - 50}{10}$
    4. $\frac{dy}{dx} = y ^2 \ln (x)$
    5. $\frac{dy}{dx} = (1 + y) ^ 2$
 
