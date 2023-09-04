@@ -1,0 +1,1515 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Further information &#8212; Python for mathematics</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "drvinceknight/pfm");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Variables, conditionals and loops" href="../../../building-tools/01-variables-conditionals-loops/introduction/main.html" />
+    <link rel="prev" title="Solutions" href="../solutions/main.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-38016329-2', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/main.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Python for mathematics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../cover.html">
+                    Python for Mathematics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Overview
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../overview/introduction/main.html">
+   Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../overview/structure/main.html">
+     How this book is structured
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../overview/how_to_use_this_book/main.html">
+     How to use this book
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tools for mathematics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01-using-notebooks/introduction/main.html">
+   Using notebooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01-using-notebooks/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01-using-notebooks/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01-using-notebooks/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01-using-notebooks/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01-using-notebooks/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../02-algebra/introduction/main.html">
+   Algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02-algebra/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02-algebra/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02-algebra/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02-algebra/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02-algebra/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../03-calculus/introduction/main.html">
+   Calculus
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03-calculus/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03-calculus/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03-calculus/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03-calculus/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03-calculus/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../04-matrices/introduction/main.html">
+   Matrices
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04-matrices/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04-matrices/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04-matrices/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04-matrices/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04-matrices/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../05-combinations-permutations/introduction/main.html">
+   Combinatorics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../05-combinations-permutations/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../05-combinations-permutations/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../05-combinations-permutations/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../05-combinations-permutations/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../05-combinations-permutations/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../06-probability/introduction/main.html">
+   Probability
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../06-probability/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../06-probability/how/main.html">
+     How to
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../06-probability/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../06-probability/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../06-probability/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../07-sequences/introduction/main.html">
+   Sequences
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../07-sequences/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../07-sequences/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../07-sequences/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../07-sequences/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../07-sequences/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../08-statistics/introduction/main.html">
+   Statistics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../08-statistics/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../08-statistics/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../08-statistics/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../08-statistics/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../08-statistics/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../introduction/main.html">
+   Differential Equations
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Building tools
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/introduction/main.html">
+   Variables, conditionals and loops
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/introduction/main.html">
+   Functions and data structures
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../building-tools/03-objects/introduction/main.html">
+   Object oriented programming
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/03-objects/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/03-objects/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/03-objects/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/03-objects/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/03-objects/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../building-tools/04-editor-and-cli/introduction/main.html">
+   Using a command line and an editor
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/04-editor-and-cli/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/04-editor-and-cli/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/04-editor-and-cli/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/04-editor-and-cli/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/04-editor-and-cli/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../building-tools/05-modularisation/introduction/main.html">
+   Modularisation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/05-modularisation/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/05-modularisation/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/05-modularisation/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/05-modularisation/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/05-modularisation/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../building-tools/06-documentation/introduction/main.html">
+   Documentation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/06-documentation/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/06-documentation/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/06-documentation/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/06-documentation/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/06-documentation/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../building-tools/07-testing/introduction/main.html">
+   Testing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/07-testing/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/07-testing/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/07-testing/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/07-testing/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/07-testing/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Further information
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../further-information/01-numpy/introduction/main.html">
+   Numpy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../further-information/01-numpy/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../further-information/01-numpy/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../further-information/01-numpy/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../further-information/02-matplotlib/introduction/main.html">
+   Matplotlib
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../further-information/02-matplotlib/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../further-information/02-matplotlib/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../further-information/02-matplotlib/why/main.html">
+     Further information.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../further-information/03-kernel/introduction/main.html">
+   Kernels
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../further-information/03-kernel/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../further-information/03-kernel/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../further-information/03-kernel/why/main.html">
+     Further information.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../further-information/04-pip-installing/introduction/main.html">
+   Installing libraries
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+  <label for="toctree-checkbox-21">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../further-information/04-pip-installing/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../further-information/04-pip-installing/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../further-information/04-pip-installing/why/main.html">
+     Further information.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../zbibliography.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  About this book
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../about-this-book/main.html">
+   About this book
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+  <label for="toctree-checkbox-22">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../about-this-book/how-is-this-book-written/main.html">
+     How this book is written
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../about-this-book/contributing/main.html">
+     Contributing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../about-this-book/citing-this-book/main.html">
+     How to cite this book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../about-this-book/software-packages-used/main.html">
+     List of software packages used
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/drvinceknight/pfm/main?urlpath=tree/book/tools-for-mathematics/09-differential-equations/why/main.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/drvinceknight/pfm"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/drvinceknight/pfm/issues/new?title=Issue%20on%20page%20%2Ftools-for-mathematics/09-differential-equations/why/main.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/drvinceknight/pfm/edit/main/book/tools-for-mathematics/09-differential-equations/why/main.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/tools-for-mathematics/09-differential-equations/why/main.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../../../_sources/tools-for-mathematics/09-differential-equations/why/main.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-solve-a-system-of-differential-equations">
+   How to solve a system of differential equations?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-solve-differential-equations-numerically">
+   How to solve differential equations numerically
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Further information</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-solve-a-system-of-differential-equations">
+   How to solve a system of differential equations?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-solve-differential-equations-numerically">
+   How to solve differential equations numerically
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="further-information">
+<h1>Further information<a class="headerlink" href="#further-information" title="Permalink to this headline">#</a></h1>
+<section id="how-to-solve-a-system-of-differential-equations">
+<h2>How to solve a system of differential equations?<a class="headerlink" href="#how-to-solve-a-system-of-differential-equations" title="Permalink to this headline">#</a></h2>
+<p>Given a system of differential equations like the following:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    \begin{cases}
+        \frac{dx}{dt} =&amp; x - y\\
+        \frac{dy}{dt} =&amp; x + y\\
+        y(0) =&amp; 250\\
+        y(1) =&amp; 300
+    \end{cases}
+\end{split}\]</div>
+<p>We can solve it using <code class="docutils literal notranslate"><span class="pre">sym.dsolve</span></code> but instead of passing a single differential
+equation, we pass an iterable of multiple equations:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;t&quot;</span><span class="p">)</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;alpha&quot;</span><span class="p">)</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;beta&quot;</span><span class="p">)</span>
+
+<span class="n">system_of_equations</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="n">t</span><span class="p">),</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span>
+    <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="n">t</span><span class="p">),</span> <span class="n">beta</span> <span class="o">*</span> <span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span>
+<span class="p">)</span>
+<span class="n">conditions</span> <span class="o">=</span> <span class="p">{</span><span class="n">y</span><span class="p">(</span><span class="mi">0</span><span class="p">):</span> <span class="mi">250</span><span class="p">,</span> <span class="n">y</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span> <span class="mi">300</span><span class="p">}</span>
+
+<span class="n">y_solution</span><span class="p">,</span> <span class="n">x_solution</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">dsolve</span><span class="p">(</span><span class="n">system_of_equations</span><span class="p">,</span> <span class="n">ics</span><span class="o">=</span><span class="n">conditions</span><span class="p">,</span> <span class="nb">set</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">x_solution</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x{\left(t \right)} = - \frac{50 \beta \left(5 e^{\sqrt{\alpha \beta}} - 6\right) e^{\sqrt{\alpha \beta}} e^{- t \sqrt{\alpha \beta}}}{\sqrt{\alpha \beta} \left(e^{2 \sqrt{\alpha \beta}} - 1\right)} + \frac{50 \beta \left(6 e^{\sqrt{\alpha \beta}} - 5\right) e^{t \sqrt{\alpha \beta}}}{\sqrt{\alpha \beta} \left(e^{2 \sqrt{\alpha \beta}} - 1\right)}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_solution</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle y{\left(t \right)} = \frac{50 \cdot \left(5 e^{\sqrt{\alpha \beta}} - 6\right) e^{\sqrt{\alpha \beta}} e^{- t \sqrt{\alpha \beta}}}{e^{2 \sqrt{\alpha \beta}} - 1} + \frac{50 \cdot \left(6 e^{\sqrt{\alpha \beta}} - 5\right) e^{t \sqrt{\alpha \beta}}}{e^{2 \sqrt{\alpha \beta}} - 1}\]</div>
+</div>
+</div>
+</section>
+<section id="how-to-solve-differential-equations-numerically">
+<h2>How to solve differential equations numerically<a class="headerlink" href="#how-to-solve-differential-equations-numerically" title="Permalink to this headline">#</a></h2>
+<p>Some differential equations do not have a closed form solution in terms of
+elementary functions. For example, the <a class="reference external" href="https://en.m.wikipedia.org/wiki/Airy_function">Airy or Stokes equation</a>:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d^2y}{dx^2} = xy
+\]</div>
+<p>Attempting to solve this with Sympy gives:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+
+<span class="n">equation</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">y</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">dsolve</span><span class="p">(</span><span class="n">equation</span><span class="p">,</span> <span class="n">y</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle y{\left(x \right)} = C_{1} Ai\left(x\right) + C_{2} Bi\left(x\right)\]</div>
+</div>
+</div>
+<p>which is a linear combination of <span class="math notranslate nohighlight">\(A_i\)</span> and <span class="math notranslate nohighlight">\(B_i\)</span> which are special functions
+called the Airy functions of the first and second kind.</p>
+<p>Using <code class="docutils literal notranslate"><span class="pre">scipy.integrate</span></code> it is possible to solve this differential equation numerically.</p>
+<p>First, we will define a new variable <span class="math notranslate nohighlight">\(u=\frac{dy}{dx}\)</span> so that the second order
+differential equation can be expressed as a system of single order differential
+equations:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    \begin{cases}
+        \frac{du}{dx}=&amp;xy\\
+        \frac{dy}{dx}=&amp;u
+    \end{cases}
+\end{split}\]</div>
+<p>We now define a python function to that returns the right hand side of that
+system of equations:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">diff</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns the value of the derivates for a given set of state values (u, y).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">u</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">state</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">,</span> <span class="n">u</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can pass this to <code class="docutils literal notranslate"><span class="pre">scipy.integrate.odeint</span></code> which is a tool that carries out
+numerical integration of differential equations. Note, that it is incapable of
+dealing with symbolic variables, thus an initial numeric value of <span class="math notranslate nohighlight">\((u, y)\)</span> is
+required.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy.integrate</span>
+
+<span class="n">condition</span> <span class="o">=</span> <span class="p">(</span><span class="mf">.1</span><span class="p">,</span> <span class="o">-</span><span class="mf">.5</span><span class="p">)</span>
+
+<span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">states</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">integrate</span><span class="o">.</span><span class="n">odeint</span><span class="p">(</span><span class="n">diff</span><span class="p">,</span> <span class="n">y0</span><span class="o">=</span><span class="n">condition</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="n">xs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We make use of
+<a class="reference internal" href="../../../further-information/01-numpy/how/main.html#how-to-create-a-given-number-of-values-between-two-bounds"><span class="std std-ref">How to create a given number of values between two bounds</span></a> to create a set
+of <code class="docutils literal notranslate"><span class="pre">x</span></code> values over which to carry out the numerical integration.</p>
+</div>
+<p>This returns an array of values of <code class="docutils literal notranslate"><span class="pre">states</span></code> corresponding to <span class="math notranslate nohighlight">\((u, y)\)</span>.</p>
+<div class="cell tag_output_scroll docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">states</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 0.1       , -0.5       ],
+       [ 0.09989617, -0.49795991],
+       [ 0.09958578, -0.49592403],
+       [ 0.09907053, -0.49389658],
+       [ 0.09835211, -0.49188172],
+       [ 0.09743216, -0.48988358],
+       [ 0.09631231, -0.48790626],
+       [ 0.09499416, -0.48595381],
+       [ 0.09347927, -0.48403028],
+       [ 0.09176914, -0.48213966],
+       [ 0.08986521, -0.48028592],
+       [ 0.08776887, -0.47847301],
+       [ 0.08548146, -0.47670482],
+       [ 0.08300422, -0.47498526],
+       [ 0.08033831, -0.47331818],
+       [ 0.07748482, -0.47170742],
+       [ 0.07444474, -0.47015681],
+       [ 0.07121895, -0.46867013],
+       [ 0.06780825, -0.46725117],
+       [ 0.06421331, -0.4659037 ],
+       [ 0.06043468, -0.46463147],
+       [ 0.0564728 , -0.46343822],
+       [ 0.05232797, -0.4623277 ],
+       [ 0.04800035, -0.46130363],
+       [ 0.04348998, -0.46036975],
+       [ 0.03879673, -0.45952978],
+       [ 0.03392031, -0.45878746],
+       [ 0.0288603 , -0.45814653],
+       [ 0.02361608, -0.45761074],
+       [ 0.01818687, -0.45718386],
+       [ 0.01257172, -0.45686968],
+       [ 0.00676947, -0.456672  ],
+       [ 0.00077879, -0.45659466],
+       [-0.00540187, -0.45664151],
+       [-0.01177424, -0.45681644],
+       [-0.0183403 , -0.4571234 ],
+       [-0.02510222, -0.45756636],
+       [-0.03206242, -0.45814933],
+       [-0.03922353, -0.4588764 ],
+       [-0.04658846, -0.45975168],
+       [-0.05416033, -0.46077937],
+       [-0.06194255, -0.46196374],
+       [-0.06993879, -0.4633091 ],
+       [-0.07815298, -0.46481986],
+       [-0.08658935, -0.46650053],
+       [-0.09525243, -0.46835567],
+       [-0.10414704, -0.47038996],
+       [-0.11327831, -0.47260818],
+       [-0.12265169, -0.47501521],
+       [-0.13227299, -0.47761605]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>A plot of the above with a comparison to the exact expected values (obtained
+using the Airy functions of the first and second kind):</p>
+<div class="cell tag_remove-input tag_style-check-ignore tag_nbval-ignore-output docutils container">
+<div class="cell_output docutils container">
+<img alt="../../../_images/main_12_0.png" src="../../../_images/main_12_0.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tools-for-mathematics/09-differential-equations/why"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../solutions/main.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Solutions</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../../../building-tools/01-variables-conditionals-loops/introduction/main.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Variables, conditionals and loops</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Vincent Knight<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

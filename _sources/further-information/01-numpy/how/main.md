@@ -37,6 +37,8 @@ array = np.array((0, 12, 3, 1))
 array
 ```
 
+(how-to-create-a-given-number-of-values-between-two-bounds)=
+
 ## How to create a given number of values between two bounds
 
 `numpy` has a popular tool to create a linear space: `numpy.linspace` which take
