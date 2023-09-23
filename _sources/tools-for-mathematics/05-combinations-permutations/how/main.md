@@ -134,7 +134,7 @@ tuple(range(10))
 ```
 
 ```{attention}
-`range(N)` gives the integers from 0 until \\(N - 1\\) (inclusive).
+`range(N)` gives the integers from 0 until $N - 1$ (inclusive).
 ```
 
 It is also possible to pass two values as inputs so that we have a different lower bound:
