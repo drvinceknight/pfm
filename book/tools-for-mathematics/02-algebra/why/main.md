@@ -150,7 +150,58 @@ and you are more likely to make mistakes when your code is not clear.
 
 ## How to extract a solution from the output of `sympy.solveset`?
 
-# TODO
+In some cases you might want to directly access the items in a solution set. For
+example if consider the equation $(x - 1)(x -
+2)$.
+
+```{code-cell} ipython3
+import sympy as sym
+
+x = sym.Symbol("x")
+expression = (x - 1) * (x - 2)
+equation = sym.Eq(expression, 0)
+set_of_solutions = sym.solveset(equation, x)
+set_of_solutions
+```
+
+The `set_of_solutions` has value the **set** of solutions of the equation. If we
+wanted to access them directly we can use the following:
+
+```{code-cell} ipython3
+tuple_of_solutions = set_of_solutions.args
+tuple_of_solutions
+```
+
+This creates a **finite** ordered tuple of the solutions. We can use concepts
+that are covered in {ref}`how_to_access_particular_elements_in_a_tuple` to
+access them directly. Because there are two roots we can use the following to
+create two new variables:
+
+```{code-cell} ipython3
+x1, x2 = tuple_of_solutions
+```
+
+Let us substitute these value directly in to the expression:
+
+```{code-cell} ipython3
+expression.subs({x: x1})
+```
+
+```{code-cell} ipython3
+expression.subs({x: x2})
+```
+
+Note that this is not always possible to get a finite ordered tuple of the
+solutions, for example there are some equations
+where the set of solutions is an infinite set:
+
+```{code-cell} ipython3
+equation = sym.Eq(sym.cos(x / 5), 0)
+set_of_solutions = sym.solveset(equation, x)
+set_of_solutions
+```
+
+In this case, `set_of_solutions.args` does not necessarily make sense to use.
 
 ## Why do I sometimes see `import sympy as sym`?
 

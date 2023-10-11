@@ -34,6 +34,8 @@ basket = ("Bread", "Biscuits", "Coffee")
 basket
 ```
 
+(how_to_access_particular_elements_in_a_tuple)=
+
 ## How to access particular elements in a tuple
 
 If we need to we can access elements of this collection using `[]` brackets. The
