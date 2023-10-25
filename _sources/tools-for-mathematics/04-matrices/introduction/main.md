@@ -32,5 +32,7 @@ Here we will see how to instruct a computer to carry out these techniques.
 ```{important}
 In this chapter we will cover:
 
-- Creating and manipulating matrices
+- Creating matrices.
+- Manipulating matrices.
+- Solving a system of linear equations using matrices.
 ```
