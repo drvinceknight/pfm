@@ -18,7 +18,7 @@ We will solve the following problem using a computer to do some of the more
 tedious calculations.
 
 ```{admonition} Problem
-A container has volume $V$ of liguid which is poured in at a rate proportional
+A container has volume $V$ of liquid which is poured in at a rate proportional
 to $e^{-t}$ (where $t$ is some measurement of time). Initially the container is empty and
 after $t=3$ time units the rate at which the liquid is poured is 15.
 
