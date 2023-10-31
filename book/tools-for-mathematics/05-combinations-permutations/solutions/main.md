@@ -318,5 +318,5 @@ sum(1 for selection in selections if "P" in selection)
 > `3`. Find the number of selections of 3 letters where the 3 letters form the word `TOP`.
 
 ```{code-cell} ipython3
-sum(1 for selection in selections if selection == ("O", "P", "T"))
+sum(1 for selection in selections if sorted(selection) == sorted(("O", "P", "T")))
 ```

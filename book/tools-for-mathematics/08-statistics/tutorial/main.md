@@ -27,7 +27,7 @@ She takes a random sample of 19 people in her year group and records for each pe
 
 A table with the data is here:
 
-```{list-table} Collected dat from Anna's year group.
+```{list-table} Collected data from Anna's year group.
 :header-rows: 1
 
 * - h
@@ -396,7 +396,7 @@ plt.title(f"Data collected by Anne with fitted relationship: $h={np.exp(intercep
 ```{important}
 In this tutorial we have
 
-- Calulated values of central tendancy and spread
-- Calculated some bi variate coefficients
+- Calulated values of central tendency and spread
+- Calculated some bivariate coefficients
 - Fitted a line of best fit
 ```
