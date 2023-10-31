@@ -30,13 +30,13 @@ statistics.mean(data)
 For example to calculate the mean of $(1, 5, 10, 12, 13, 20)$:
 
 ```{code-cell} ipython3
-import statistics as stat
+import statistics as st
 
 data = (1, 5, 10, 12, 13, 20)
-stat.mean(data)
+st.mean(data)
 ```
 
-### Calculate a mean
+### Calculate a median
 
 We can calculate the median of a set of data using `statistics.median` which takes an
 iterable.
@@ -50,10 +50,10 @@ statistics.median(data)
 For example to calculate the median of $(1, 5, 10, 12, 13, 20)$:
 
 ```{code-cell} ipython3
-import statistics as stat
+import statistics as st
 
 data = (1, 5, 10, 12, 13, 20)
-stat.median(data)
+st.median(data)
 ```
 
 ### Calculate the population standard deviation
@@ -70,10 +70,10 @@ statistics.pstdev(data)
 For example to calculate the population standard deviation of $(1, 5, 10, 12, 13, 20)$:
 
 ```{code-cell} ipython3
-import statistics as stat
+import statistics as st
 
 data = (1, 5, 10, 12, 13, 20)
-stat.pstdev(data)
+st.pstdev(data)
 ```
 
 ### Calculate the sample standard deviation
@@ -90,10 +90,10 @@ statistics.stdev(data)
 For example to calculate the sample standard deviation of $(1, 5, 10, 12, 13, 20)$:
 
 ```{code-cell} ipython3
-import statistics as stat
+import statistics as st
 
 data = (1, 5, 10, 12, 13, 20)
-stat.stdev(data)
+st.stdev(data)
 ```
 
 ### Calculate the population variance
@@ -110,10 +110,10 @@ statistics.pvariance(data)
 For example to calculate the population variance of $(1, 5, 10, 12, 13, 20)$:
 
 ```{code-cell} ipython3
-import statistics as stat
+import statistics as st
 
 data = (1, 5, 10, 12, 13, 20)
-stat.pvariance(data)
+st.pvariance(data)
 ```
 
 ### Calculate the sample variance
@@ -130,10 +130,10 @@ statistics.variance(data)
 For example to calculate the sample variance of $(1, 5, 10, 12, 13, 20)$:
 
 ```{code-cell} ipython3
-import statistics as stat
+import statistics as st
 
 data = (1, 5, 10, 12, 13, 20)
-stat.variance(data)
+st.variance(data)
 ```
 
 ### Calculate the maximum
@@ -187,10 +187,10 @@ to 4 intervals of equal probability (in this case the quantiles are called
 quartiles):
 
 ```{code-cell} ipython3
-import statistics as stat
+import statistics as st
 
 data = (1, 5, 10, 12, 13, 20)
-stat.quantiles(data, n=4)
+st.quantiles(data, n=4)
 ```
 
 ## Calculate the sample covariance
@@ -208,11 +208,11 @@ For example to calculate the sample covariance of $x=(1, 5, 10, 12, 13, 20)$
 and $y=(3, -3, 6, -2, 1, 2)$:
 
 ```{code-cell} ipython3
-import statistics as stat
+import statistics as st
 
 x = (1, 5, 10, 12, 13, 20)
 y = (3, -3, 6, -2, 1, 2)
-stat.covariance(x, y)
+st.covariance(x, y)
 ```
 
 ## Calculate the Pearson correlation coefficient
@@ -230,11 +230,11 @@ For example to calculate the correlation coefficient of $x=(1, 5, 10, 12, 13, 20
 and $y=(3, -3, 6, -2, 1, 2)$:
 
 ```{code-cell} ipython3
-import statistics as stat
+import statistics as st
 
 x = (1, 5, 10, 12, 13, 20)
 y = (3, -3, 6, -2, 1, 2)
-stat.correlation(x, y)
+st.correlation(x, y)
 ```
 
 ## Fit a line of best fit
@@ -253,11 +253,11 @@ For example to calculate the correlation coefficient of $x=(1, 5, 10, 12, 13, 20
 and $y=(-3, -14, -31, -6, -40, -70)$:
 
 ```{code-cell} ipython3
-import statistics as stat
+import statistics as st
 
 x = (1, 5, 10, 12, 13, 20)
 y = (-3, -14, -31, -6, -40, -70)
-stat.linear_regression(x, y)
+st.linear_regression(x, y)
 ```
 
 ```{code-cell} ipython3
@@ -268,7 +268,7 @@ import numpy as np
 
 x = (1, 5, 10, 12, 13, 20)
 y = (-3, -14, -31, -6, -40, -70)
-slope, intercept = stat.linear_regression(x, y)
+slope, intercept = st.linear_regression(x, y)
 
 x_range = np.array((np.min(x), np.max(x)))
 relationship_image = slope * x_range + intercept
@@ -295,9 +295,9 @@ statistics.NormalDist(mu, sigma)
 For example to create the normal distribution with $\mu=3$ and $\sigma=.5$:
 
 ```{code-cell} ipython3
-import statistics as stat
+import statistics as st
 
-distribution = stat.NormalDist(mu=3, sigma=.5)
+distribution = st.NormalDist(mu=3, sigma=.5)
 distribution
 ```
 
@@ -319,9 +319,9 @@ For example to find the probability that $X<2$ for a normally distributed random
 variable with $\mu=3$ and $\sigma=.5$:
 
 ```{code-cell} ipython3
-import statistics as stat
+import statistics as st
 
-distribution = stat.NormalDist(mu=3, sigma=.5)
+distribution = st.NormalDist(mu=3, sigma=.5)
 distribution.cdf(2)
 ```
 
@@ -342,8 +342,8 @@ For example to find the value of $X$ for which a normally distributed random
 variable with $\mu=3$ and $\sigma=.5$ will be less than with probability $.7$.
 
 ```{code-cell} ipython3
-import statistics as stat
+import statistics as st
 
-distribution = stat.NormalDist(mu=3, sigma=.5)
+distribution = st.NormalDist(mu=3, sigma=.5)
 distribution.inv_cdf(.7)
 ```
