@@ -16,11 +16,11 @@ kernelspec:
 
 ## How to create a symbolic function
 
-To create a symbolic numerical function use `sympy.Function`.
+To create a symbolic function use `sympy.Function`.
 
 ````{tip}
 ```
-sympy.S("y")
+sympy.Function("y")
 ```
 ````
 
