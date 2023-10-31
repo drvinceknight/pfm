@@ -34,7 +34,7 @@ kernelspec:
 > `1`. `data_set_1 = (...)
 
 ```{code-cell} ipython3
-import statistics as stat
+import statistics as st
 
 data_set_1 = (
     74,
@@ -63,13 +63,13 @@ data_set_1 = (
 > - The mean,
 
 ```{code-cell} ipython3
-stat.mean(data_set_1)
+st.mean(data_set_1)
 ```
 
 > - The median,
 
 ```{code-cell} ipython3
-stat.median(data_set_1)
+st.median(data_set_1)
 ```
 
 > - The max,
@@ -87,43 +87,43 @@ min(data_set_1)
 > - The population standard deviation,
 
 ```{code-cell} ipython3
-stat.pstdev(data_set_1)
+st.pstdev(data_set_1)
 ```
 
 > - The sample standard deviation,
 
 ```{code-cell} ipython3
-stat.stdev(data_set_1)
+st.stdev(data_set_1)
 ```
 
 > - The population variance,
 
 ```{code-cell} ipython3
-stat.pvariance(data_set_1)
+st.pvariance(data_set_1)
 ```
 
 > - The sample variance,
 
 ```{code-cell} ipython3
-stat.variance(data_set_1)
+st.variance(data_set_1)
 ```
 
 > - The quartiles (the set of $n=4$ quantiles),
 
 ```{code-cell} ipython3
-stat.quantiles(data_set_1, n=4)
+st.quantiles(data_set_1, n=4)
 ```
 
 > - The deciles (the set of $n=10$ quantiles),
 
 ```{code-cell} ipython3
-stat.quantiles(data_set_1, n=10)
+st.quantiles(data_set_1, n=10)
 ```
 
 > `2`. `data_set_2 = (...)
 
 ```{code-cell} ipython3
-import statistics as stat
+import statistics as st
 
 data_set_2 = (
     65,
@@ -152,13 +152,13 @@ data_set_2 = (
 > - The mean,
 
 ```{code-cell} ipython3
-stat.mean(data_set_2)
+st.mean(data_set_2)
 ```
 
 > - The median,
 
 ```{code-cell} ipython3
-stat.median(data_set_2)
+st.median(data_set_2)
 ```
 
 > - The max,
@@ -176,43 +176,43 @@ min(data_set_2)
 > - The population standard deviation,
 
 ```{code-cell} ipython3
-stat.pstdev(data_set_2)
+st.pstdev(data_set_2)
 ```
 
 > - The sample standard deviation,
 
 ```{code-cell} ipython3
-stat.stdev(data_set_2)
+st.stdev(data_set_2)
 ```
 
 > - The population variance,
 
 ```{code-cell} ipython3
-stat.pvariance(data_set_2)
+st.pvariance(data_set_2)
 ```
 
 > - The sample variance,
 
 ```{code-cell} ipython3
-stat.variance(data_set_2)
+st.variance(data_set_2)
 ```
 
 > - The quartiles (the set of $n=4$ quantiles),
 
 ```{code-cell} ipython3
-stat.quantiles(data_set_2, n=4)
+st.quantiles(data_set_2, n=4)
 ```
 
 > - The deciles (the set of $n=10$ quantiles),
 
 ```{code-cell} ipython3
-stat.quantiles(data_set_2, n=10)
+st.quantiles(data_set_2, n=10)
 ```
 
 > `3`. `data_set_3 = (...)
 
 ```{code-cell} ipython3
-import statistics as stat
+import statistics as st
 
 data_set_3 = (
     0.31,
@@ -241,13 +241,13 @@ data_set_3 = (
 > - The mean,
 
 ```{code-cell} ipython3
-stat.mean(data_set_3)
+st.mean(data_set_3)
 ```
 
 > - The median,
 
 ```{code-cell} ipython3
-stat.median(data_set_3)
+st.median(data_set_3)
 ```
 
 > - The max,
@@ -265,43 +265,43 @@ min(data_set_3)
 > - The population standard deviation,
 
 ```{code-cell} ipython3
-stat.pstdev(data_set_3)
+st.pstdev(data_set_3)
 ```
 
 > - The sample standard deviation,
 
 ```{code-cell} ipython3
-stat.stdev(data_set_3)
+st.stdev(data_set_3)
 ```
 
 > - The population variance,
 
 ```{code-cell} ipython3
-stat.pvariance(data_set_3)
+st.pvariance(data_set_3)
 ```
 
 > - The sample variance,
 
 ```{code-cell} ipython3
-stat.variance(data_set_3)
+st.variance(data_set_3)
 ```
 
 > - The quartiles (the set of $n=4$ quantiles),
 
 ```{code-cell} ipython3
-stat.quantiles(data_set_3, n=4)
+st.quantiles(data_set_3, n=4)
 ```
 
 > - The deciles (the set of $n=10$ quantiles),
 
 ```{code-cell} ipython3
-stat.quantiles(data_set_3, n=10)
+st.quantiles(data_set_3, n=10)
 ```
 
 > `4`. `data_set_4 = (...)
 
 ```{code-cell} ipython3
-import statistics as stat
+import statistics as st
 
 data_set_4 = (
     2,
@@ -330,13 +330,13 @@ data_set_4 = (
 > - The mean,
 
 ```{code-cell} ipython3
-stat.mean(data_set_4)
+st.mean(data_set_4)
 ```
 
 > - The median,
 
 ```{code-cell} ipython3
-stat.median(data_set_4)
+st.median(data_set_4)
 ```
 
 > - The max,
@@ -354,37 +354,37 @@ min(data_set_4)
 > - The population standard deviation,
 
 ```{code-cell} ipython3
-stat.pstdev(data_set_4)
+st.pstdev(data_set_4)
 ```
 
 > - The sample standard deviation,
 
 ```{code-cell} ipython3
-stat.stdev(data_set_4)
+st.stdev(data_set_4)
 ```
 
 > - The population variance,
 
 ```{code-cell} ipython3
-stat.pvariance(data_set_4)
+st.pvariance(data_set_4)
 ```
 
 > - The sample variance,
 
 ```{code-cell} ipython3
-stat.variance(data_set_4)
+st.variance(data_set_4)
 ```
 
 > - The quartiles (the set of $n=4$ quantiles),
 
 ```{code-cell} ipython3
-stat.quantiles(data_set_4, n=4)
+st.quantiles(data_set_4, n=4)
 ```
 
 > - The deciles (the set of $n=10$ quantiles),
 
 ```{code-cell} ipython3
-stat.quantiles(data_set_4, n=10)
+st.quantiles(data_set_4, n=10)
 ```
 
 ## Question 2
@@ -395,41 +395,41 @@ stat.quantiles(data_set_4, n=10)
 > `1`. `data_set_1` and `data_set_4`
 
 ```{code-cell} ipython3
-stat.covariance(data_set_1, data_set_4)
+st.covariance(data_set_1, data_set_4)
 ```
 
 ```{code-cell} ipython3
-stat.correlation(data_set_1, data_set_4)
+st.correlation(data_set_1, data_set_4)
 ```
 
 > `2`. `data_set_3` and `data_set_4`
 
 ```{code-cell} ipython3
-stat.covariance(data_set_3, data_set_4)
+st.covariance(data_set_3, data_set_4)
 ```
 
 ```{code-cell} ipython3
-stat.correlation(data_set_3, data_set_4)
+st.correlation(data_set_3, data_set_4)
 ```
 
 > `3`. `data_set_2` and `data_set_3`
 
 ```{code-cell} ipython3
-stat.covariance(data_set_2, data_set_3)
+st.covariance(data_set_2, data_set_3)
 ```
 
 ```{code-cell} ipython3
-stat.correlation(data_set_2, data_set_3)
+st.correlation(data_set_2, data_set_3)
 ```
 
 > `4`. `data_set_1` and `data_set_2`
 
 ```{code-cell} ipython3
-stat.covariance(data_set_1, data_set_2)
+st.covariance(data_set_1, data_set_2)
 ```
 
 ```{code-cell} ipython3
-stat.correlation(data_set_1, data_set_2)
+st.correlation(data_set_1, data_set_2)
 ```
 
 ## Question 3
@@ -440,41 +440,41 @@ stat.correlation(data_set_1, data_set_2)
 > `1`. `data_set_1 = (...)
 
 ```{code-cell} ipython3
-stat.covariance(data_set_1, data_set_1)
+st.covariance(data_set_1, data_set_1)
 ```
 
 ```{code-cell} ipython3
-stat.correlation(data_set_1, data_set_1)
+st.correlation(data_set_1, data_set_1)
 ```
 
 > `2`. `data_set_2 = (...)
 
 ```{code-cell} ipython3
-stat.covariance(data_set_2, data_set_2)
+st.covariance(data_set_2, data_set_2)
 ```
 
 ```{code-cell} ipython3
-stat.correlation(data_set_2, data_set_2)
+st.correlation(data_set_2, data_set_2)
 ```
 
 > `3`. `data_set_3 = (...)
 
 ```{code-cell} ipython3
-stat.covariance(data_set_3, data_set_3)
+st.covariance(data_set_3, data_set_3)
 ```
 
 ```{code-cell} ipython3
-stat.correlation(data_set_3, data_set_3)
+st.correlation(data_set_3, data_set_3)
 ```
 
 > `4`. `data_set_4 = (...)
 
 ```{code-cell} ipython3
-stat.covariance(data_set_4, data_set_4)
+st.covariance(data_set_4, data_set_4)
 ```
 
 ```{code-cell} ipython3
-stat.correlation(data_set_4, data_set_4)
+st.correlation(data_set_4, data_set_4)
 ```
 
 ## Question 4
@@ -484,25 +484,25 @@ stat.correlation(data_set_4, data_set_4)
 > `1`. `data_set_1` and `data_set_4`
 
 ```{code-cell} ipython3
-stat.linear_regression(data_set_1, data_set_4)
+st.linear_regression(data_set_1, data_set_4)
 ```
 
 > `2`. `data_set_3` and `data_set_4`
 
 ```{code-cell} ipython3
-stat.linear_regression(data_set_3, data_set_4)
+st.linear_regression(data_set_3, data_set_4)
 ```
 
 > `3`. `data_set_2` and `data_set_3`
 
 ```{code-cell} ipython3
-stat.linear_regression(data_set_2, data_set_3)
+st.linear_regression(data_set_2, data_set_3)
 ```
 
 > `4`. `data_set_1` and `data_set_2`
 
 ```{code-cell} ipython3
-stat.linear_regression(data_set_1, data_set_2)
+st.linear_regression(data_set_1, data_set_2)
 ```
 
 ## Question 5
@@ -514,7 +514,7 @@ stat.linear_regression(data_set_1, data_set_2)
 We start by creating the distribution:
 
 ```{code-cell} ipython3
-distribution = stat.NormalDist(165, 5)
+distribution = st.NormalDist(165, 5)
 distribution
 ```
 
@@ -542,7 +542,7 @@ probability * 250
 We start by creating the distribution:
 
 ```{code-cell} ipython3
-distribution = stat.NormalDist(65, 5)
+distribution = st.NormalDist(65, 5)
 distribution
 ```
 

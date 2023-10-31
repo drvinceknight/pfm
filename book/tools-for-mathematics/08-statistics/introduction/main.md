@@ -27,7 +27,8 @@ will not consider visualisation which is instead considered here: {ref}`matplotl
 ```{important}
 In this chapter we will cover:
 
-- Calculating measures of central tendancy and spread
+- Calculating measures of central tendency and spread
+- Calculating bivariate coefficients
 - Fitting a line of best fit
 - Using the Normal distribution
 ```
