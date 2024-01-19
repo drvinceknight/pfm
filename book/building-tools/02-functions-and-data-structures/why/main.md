@@ -14,6 +14,27 @@ kernelspec:
 
 # Further information
 
+## What formats can be used to write a docstring?
+
+The format used to write a docstring described in {ref}`how_to_write_a_docstring` is the one specified
+by the Numpy project. You can read about that specification here: https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard
+
+Amongst other things you can see how to specify further functionality:
+
+- How to indicate if a parameter is optional.
+- How to specify what types of errors might be raised by a function.
+- How to specify when a function is a generator.
+
+There are 2 other common specifications:
+
+- Google's Python Style Guide: https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings
+- Sphinx Python Style Guide: https://pythonhosted.org/an_example_pypi_project/sphinx.html#function-definitions
+
+## Are there tools available to assist with writing docstrings?
+
+The `darglint` library: https://github.com/terrencepreilly/darglint can be used
+to check if docstrings match a given format.
+
 ## A part from removing duplicates and set operations what are they advantages to using `set`?
 
 One valuable uses of `set` is to efficiently identify is an element

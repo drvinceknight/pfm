@@ -22,6 +22,62 @@ Two important data structures have already been seen in previous chapters:
 We covered functions in a previous chapter as well: [Probability: How to define
 a function](define_a_function).
 
+(how_to_write_a_docstring)=
+
+## How to write a docstring
+
+A docstring is an attribute of a function that describes what it is. This can
+describe what it does, how it does it and/or why it does it.
+Here is how to write a docstring for a function that takes variables and returns
+a value.
+
+````{tip}
+```
+def name(parameter1, parameter2, ...):
+    """
+    <A description of what the function is.>
+
+    Parameters
+    ----------
+    parameter1 : <type of parameter1>
+        <description of parameter1>
+    parameter2 : <type of parameter2>
+        <description of parameter2>
+    ...
+
+    Returns
+    -------
+    <type of what the function returns>
+        <description of what the function returns>
+
+    """
+    INDENTED BLOCK OF CODE
+    return output
+```
+````
+
+For example, here is how to write a function that returns $x ^ 3$ for a given
+$x$:
+
+```{code-cell} ipython3
+def x_cubed(x):
+    """
+    Calculates and returns the cube of x. Does this by using Python
+    exponentionation.
+
+    Parameters
+    ----------
+    x : float
+        The value of x to be raised to the power 3
+
+    Returns
+    -------
+    float
+        The cube.
+    """
+    return x ** 3
+```
+
 ## Create a set
 
 A set is a collection of distinct objects. This can be created in Python using

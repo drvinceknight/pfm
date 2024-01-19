@@ -23,7 +23,17 @@ There are two approaches to do this, the first is to use recursion:
 ```{code-cell} ipython3
 def generate_n_factorial(n):
     """
-    Return n! using recursion.
+    A function to give n! using recursion.
+
+    Parameters
+    ----------
+    n: int
+        The index of the number wanted.
+
+    Returns
+    -------
+    int
+        The value of n!.
     """
     if n == 0:
         return 1
@@ -46,7 +56,17 @@ $$
 ```{code-cell} ipython3
 def generate_n_factorial_using_iteration(n):
     """
-    Return n! using iteration
+    A function to give n! using iteration.
+
+    Parameters
+    ----------
+    n: int
+        The index of the number wanted.
+
+    Returns
+    -------
+    int
+        The value of n!.
     """
     cumulative_product = 1
     for i in range(1, n + 1):
@@ -68,24 +88,45 @@ generate_n_factorial_using_iteration(5)
 ```{code-cell} ipython3
 def generate_triangular_numbers(n):
     """
-    Return the nth triangular number
+    A function to give the nth triangular number defined by:
+
+    $ T_n = \frac{n(n+1)}{2} $
+
+    Parameters
+    ----------
+    n: int
+        The index of the number wanted.
+
+    Returns
+    -------
+    int
+        The value of triangular number
     """
     return n * (n + 1) / 2
 ```
-
 
 ## Question 3
 
 > `3`. Verify the following that the following identify holds for positive integer
 > values $n\leq 500$:
-> $ \sum_{i=0}^n T_i = \frac{n(n+1)(n+2)}{6} $
+> $ \sum\_{i=0}^n T_i = \frac{n(n+1)(n+2)}{6} $
 
 We will write a function to check the equality:
 
 ```{code-cell} ipython3
-def check_inequality(n):
+def check_equality(n):
     """
     Returns a boolean variable whether or not the equality is true for a given n
+
+    Parameters
+    ----------
+    n: int
+        The value for which the equality will be checked.
+
+    Returns
+    -------
+    boolean
+        Whether or not the equality holds.
     """
     lhs = sum(generate_triangular_numbers(i) for i in range(n + 1))
     rhs = n * (n + 1) * (n + 2) / 6
@@ -95,25 +136,23 @@ def check_inequality(n):
 Using this we can check all the values of $n$ as required:
 
 ```{code-cell} ipython3
-all([check_inequality(n) for n in range(1, 501)])
+all([check_equality(n) for n in range(1, 501)])
 ```
 
 Note that we can also use `all` directly without creating the list first (this
 is similar to `sum`):
 
 ```{code-cell} ipython3
-all(check_inequality(n) for n in range(1, 501))
+all(check_equality(n) for n in range(1, 501))
 ```
-
 
 ## Question 4
 
 > `4`. Consider the [Monty Hall
 > problem](https://en.wikipedia.org/wiki/Monty_Hall_problem):
-`1`. Write a
+> `1`. Write a
 > function that simulates the play of the game when you 'stick' with the initial
 > choice.
-
 
 This corresponds to sampling from a list of three choices:
 
@@ -128,6 +167,11 @@ def play_monty_hall_with_stick():
 
     We make use of `random.shuffle` to shuffle and `pop()` to remove the first
     element of a list (and return it).
+
+    Returns
+    -------
+    str
+        Either "goat" or "car"
     """
     doors = ["goat", "goat", "car"]
     random.shuffle(doors)
@@ -151,8 +195,7 @@ play_monty_hall_with_stick()
 ```
 
 > `2`. Write a function that simulates the play of the game when you 'change'
->  your choice.
-
+> your choice.
 
 This corresponds to sampling from a list of three choices, removing that choice
 and then sampling again:
@@ -167,6 +210,11 @@ def play_monty_hall_with_switch():
     element of a list. We then use `remove()` to remove an element from a list.
     We then pop the first
     element of the remaining list (and return it).
+
+    Returns
+    -------
+    str
+        Either "goat" or "car"
     """
     doors = ["goat", "goat", "car"]
     random.shuffle(doors)
