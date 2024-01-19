@@ -1224,7 +1224,20 @@ evidence for a problem.</p>
 <span class="nd">@functools</span><span class="o">.</span><span class="n">lru_cache</span><span class="p">()</span>
 <span class="k">def</span> <span class="nf">get_fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Return the nth Fibonacci number</span>
+<span class="sd">    A function to give the nth Fibonacci number using the recursive</span>
+<span class="sd">    definition.</span>
+
+<span class="sd">    Note that this also uses a cache.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    n: int</span>
+<span class="sd">        The index of the Fibonacci number</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    int</span>
+<span class="sd">        The nth Fibonacci number</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
@@ -1270,7 +1283,24 @@ holds for a given value of <span class="math notranslate nohighlight">\(n\)</spa
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">check_theorem</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Check the relationship for the sum of the first n fibonacci numbers</span>
+<span class="sd">    A function that generate the lhs and rhs of the</span>
+<span class="sd">    following relationship:</span>
+
+<span class="sd">    \sum_{i=0}^n a_i = a_{n + 2} - 1</span>
+
+<span class="sd">    Where `a_i` is the i-th Fibonacci number.</span>
+
+<span class="sd">    It checks if the relationship holds.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    n: int</span>
+<span class="sd">        The index n for which the theorem is to be verified.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    bool</span>
+<span class="sd">        Whether or not the theorem holds for a given n.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">sum_of_fibonacci</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">get_fibonacci</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">sum_of_fibonacci</span> <span class="o">==</span> <span class="n">get_fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>

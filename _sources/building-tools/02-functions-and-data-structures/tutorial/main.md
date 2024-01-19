@@ -43,7 +43,20 @@ import functools
 @functools.lru_cache()
 def get_fibonacci(n):
     """
-    Return the nth Fibonacci number
+    A function to give the nth Fibonacci number using the recursive
+    definition.
+
+    Note that this also uses a cache.
+
+    Parameters
+    ----------
+    n: int
+        The index of the Fibonacci number
+
+    Returns
+    -------
+    int
+        The nth Fibonacci number
     """
     if n == 0:
         return 0
@@ -71,7 +84,24 @@ holds for a given value of $n$, `False` otherwise.
 ```{code-cell} ipython3
 def check_theorem(n):
     """
-    Check the relationship for the sum of the first n fibonacci numbers
+    A function that generate the lhs and rhs of the
+    following relationship:
+
+    \sum_{i=0}^n a_i = a_{n + 2} - 1
+
+    Where `a_i` is the i-th Fibonacci number.
+
+    It checks if the relationship holds.
+
+    Parameters
+    ----------
+    n: int
+        The index n for which the theorem is to be verified.
+
+    Returns
+    -------
+    bool
+        Whether or not the theorem holds for a given n.
     """
     sum_of_fibonacci = sum(get_fibonacci(i) for i in range(n + 1))
     return sum_of_fibonacci == get_fibonacci(n + 2) - 1

@@ -1274,7 +1274,17 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">generate_n_factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Return n! using recursion.</span>
+<span class="sd">    A function to give n! using recursion.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    n: int</span>
+<span class="sd">        The index of the number wanted.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    int</span>
+<span class="sd">        The value of n!.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">1</span>
@@ -1306,7 +1316,17 @@ expression for <span class="math notranslate nohighlight">\(n!\)</span>:</p>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">generate_n_factorial_using_iteration</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Return n! using iteration</span>
+<span class="sd">    A function to give n! using iteration.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    n: int</span>
+<span class="sd">        The index of the number wanted.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    int</span>
+<span class="sd">        The value of n!.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">cumulative_product</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
@@ -1340,7 +1360,19 @@ expression for <span class="math notranslate nohighlight">\(n!\)</span>:</p>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">generate_triangular_numbers</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Return the nth triangular number</span>
+<span class="sd">    A function to give the nth triangular number defined by:</span>
+
+<span class="sd">    $ T_n = \frac{n(n+1)}{2} $</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    n: int</span>
+<span class="sd">        The index of the number wanted.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    int</span>
+<span class="sd">        The value of triangular number</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
 </pre></div>
@@ -1353,14 +1385,24 @@ expression for <span class="math notranslate nohighlight">\(n!\)</span>:</p>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">3</span></code>. Verify the following that the following identify holds for positive integer
 values <span class="math notranslate nohighlight">\(n\leq 500\)</span>:
-<span class="math notranslate nohighlight">\( \sum_{i=0}^n T_i = \frac{n(n+1)(n+2)}{6} \)</span></p>
+<span class="math notranslate nohighlight">\( \sum\_{i=0}^n T_i = \frac{n(n+1)(n+2)}{6} \)</span></p>
 </div></blockquote>
 <p>We will write a function to check the equality:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">check_inequality</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">check_equality</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns a boolean variable whether or not the equality is true for a given n</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    n: int</span>
+<span class="sd">        The value for which the equality will be checked.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    boolean</span>
+<span class="sd">        Whether or not the equality holds.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">lhs</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">generate_triangular_numbers</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
     <span class="n">rhs</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">6</span>
@@ -1372,7 +1414,7 @@ values <span class="math notranslate nohighlight">\(n\leq 500\)</span>:
 <p>Using this we can check all the values of <span class="math notranslate nohighlight">\(n\)</span> as required:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">all</span><span class="p">([</span><span class="n">check_inequality</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">501</span><span class="p">)])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">all</span><span class="p">([</span><span class="n">check_equality</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">501</span><span class="p">)])</span>
 </pre></div>
 </div>
 </div>
@@ -1386,7 +1428,7 @@ values <span class="math notranslate nohighlight">\(n\leq 500\)</span>:
 is similar to <code class="docutils literal notranslate"><span class="pre">sum</span></code>):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">all</span><span class="p">(</span><span class="n">check_inequality</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">501</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">all</span><span class="p">(</span><span class="n">check_equality</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">501</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1419,6 +1461,11 @@ choice.</p>
 
 <span class="sd">    We make use of `random.shuffle` to shuffle and `pop()` to remove the first</span>
 <span class="sd">    element of a list (and return it).</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        Either &quot;goat&quot; or &quot;car&quot;</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">doors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;goat&quot;</span><span class="p">,</span> <span class="s2">&quot;goat&quot;</span><span class="p">,</span> <span class="s2">&quot;car&quot;</span><span class="p">]</span>
     <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">doors</span><span class="p">)</span>
@@ -1483,6 +1530,11 @@ and then sampling again:</p>
 <span class="sd">    element of a list. We then use `remove()` to remove an element from a list.</span>
 <span class="sd">    We then pop the first</span>
 <span class="sd">    element of the remaining list (and return it).</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        Either &quot;goat&quot; or &quot;car&quot;</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">doors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;goat&quot;</span><span class="p">,</span> <span class="s2">&quot;goat&quot;</span><span class="p">,</span> <span class="s2">&quot;car&quot;</span><span class="p">]</span>
     <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">doors</span><span class="p">)</span>

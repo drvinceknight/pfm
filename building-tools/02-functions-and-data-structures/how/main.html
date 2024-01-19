@@ -1194,6 +1194,11 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-write-a-docstring">
+   How to write a docstring
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#create-a-set">
    Create a set
   </a>
@@ -1228,6 +1233,11 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-write-a-docstring">
+   How to write a docstring
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#create-a-set">
    Create a set
   </a>
@@ -1261,6 +1271,62 @@ title="Print to PDF"
 </ul>
 <p>We covered functions in a previous chapter as well: <a class="reference internal" href="../../../tools-for-mathematics/06-probability/how/main.html#define-a-function"><span class="std std-ref">Probability: How to define
 a function</span></a>.</p>
+<section id="how-to-write-a-docstring">
+<span id="id1"></span><h2>How to write a docstring<a class="headerlink" href="#how-to-write-a-docstring" title="Permalink to this headline">#</a></h2>
+<p>A docstring is an attribute of a function that describes what it is. This can
+describe what it does, how it does it and/or why it does it.
+Here is how to write a docstring for a function that takes variables and returns
+a value.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="n">parameter1</span><span class="p">,</span> <span class="n">parameter2</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &lt;A description of what the function is.&gt;</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    parameter1 : &lt;type of parameter1&gt;</span>
+<span class="sd">        &lt;description of parameter1&gt;</span>
+<span class="sd">    parameter2 : &lt;type of parameter2&gt;</span>
+<span class="sd">        &lt;description of parameter2&gt;</span>
+<span class="sd">    ...</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    &lt;type of what the function returns&gt;</span>
+<span class="sd">        &lt;description of what the function returns&gt;</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">INDENTED</span> <span class="n">BLOCK</span> <span class="n">OF</span> <span class="n">CODE</span>
+    <span class="k">return</span> <span class="n">output</span>
+</pre></div>
+</div>
+</div>
+<p>For example, here is how to write a function that returns <span class="math notranslate nohighlight">\(x ^ 3\)</span> for a given
+<span class="math notranslate nohighlight">\(x\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">x_cubed</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates and returns the cube of x. Does this by using Python</span>
+<span class="sd">    exponentionation.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x : float</span>
+<span class="sd">        The value of x to be raised to the power 3</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    float</span>
+<span class="sd">        The cube.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 <section id="create-a-set">
 <h2>Create a set<a class="headerlink" href="#create-a-set" title="Permalink to this headline">#</a></h2>
 <p>A set is a collection of distinct objects. This can be created in Python using

@@ -107,9 +107,23 @@ class Name:
     """
     A docstring between triple quotation to describe what the class represents
     """
-    def name(self, variable1, variable2, …):
+    def name(self, parameter1, parameter2, …):
         """
-        A docstring between triple quotation to describe what is happening
+        <A description of what the method is.>
+
+        Parameters
+        ----------
+        parameter1 : <type of parameter1>
+            <description of parameter1>
+        parameter2 : <type of parameter2>
+            <description of parameter2>
+        ...
+
+        Returns
+        -------
+        <type of what the function returns>
+            <description of what the function returns>
+
         """
         INDENTED BLOCK OF CODE
         return output
@@ -126,7 +140,14 @@ class Country:
     """
 
     def spend_magic(self, amount_spent):
-        """Updates the magic attribute by subtracting amount_spent"""
+        """
+        Updates the magic attribute by subtracting amount_spent
+
+        Parameters
+        ----------
+        amount_spent : float
+            The amount of mana used.
+        """
         self.amount_of_magic -= amount_spent
 ```
 
@@ -213,6 +234,7 @@ There are numerous other magic methods, such as the `__add__` one used in
 {ref}`objects_tutorial`.
 
 (how_to_use_inheritance)=
+
 ## How to use inheritance
 
 Inheritance is a tool that allows us to create one class based on another. This

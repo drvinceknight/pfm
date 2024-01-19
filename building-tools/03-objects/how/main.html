@@ -1325,7 +1325,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Country at 0x7f3c30ce5f30&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Country at 0x7f300ce05c90&gt;
 </pre></div>
 </div>
 </div>
@@ -1338,7 +1338,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Country at 0x7f3c30ce67d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Country at 0x7f300ce05f30&gt;
 </pre></div>
 </div>
 </div>
@@ -1410,9 +1410,23 @@ specific instance that will call the method (it is passed implicitly).</p>
     &quot;&quot;&quot;
     A docstring between triple quotation to describe what the class represents
     &quot;&quot;&quot;
-    def name(self, variable1, variable2, …):
+    def name(self, parameter1, parameter2, …):
         &quot;&quot;&quot;
-        A docstring between triple quotation to describe what is happening
+        &lt;A description of what the method is.&gt;
+
+        Parameters
+        ----------
+        parameter1 : &lt;type of parameter1&gt;
+            &lt;description of parameter1&gt;
+        parameter2 : &lt;type of parameter2&gt;
+            &lt;description of parameter2&gt;
+        ...
+
+        Returns
+        -------
+        &lt;type of what the function returns&gt;
+            &lt;description of what the function returns&gt;
+
         &quot;&quot;&quot;
         INDENTED BLOCK OF CODE
         return output
@@ -1429,7 +1443,14 @@ magic:</p>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">spend_magic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount_spent</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Updates the magic attribute by subtracting amount_spent&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Updates the magic attribute by subtracting amount_spent</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        amount_spent : float</span>
+<span class="sd">            The amount of mana used.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">amount_of_magic</span> <span class="o">-=</span> <span class="n">amount_spent</span>
 </pre></div>
 </div>

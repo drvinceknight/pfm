@@ -1371,9 +1371,11 @@ following problems:</p>
 <p><img alt="" src="../../../_images/main4.gif" /></p>
 </div>
 <blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">4</span></code>. Count the number of ways of picking 2 letters from “ABCD” where order
-does not matter.</p>
+<div><p><code class="docutils literal notranslate"><span class="pre">4</span></code>. Count the number of ways of picking 2 letters from “ABCD” where order</p>
 </div></blockquote>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  does not matter.
+</pre></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">itertools</span>
@@ -1394,9 +1396,11 @@ does not matter.</p>
 <p><img alt="" src="../../../_images/main5.gif" /></p>
 </div>
 <blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">5</span></code>. Simulate the probability of picking a red token from a bag with 3 red
-rokens, 5 blue tokens and a yellow token.</p>
+<div><p><code class="docutils literal notranslate"><span class="pre">5</span></code>. Simulate the probability of picking a red token from a bag with 3 red</p>
 </div></blockquote>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  rokens, 5 blue tokens and a yellow token.
+</pre></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
@@ -1405,6 +1409,11 @@ rokens, 5 blue tokens and a yellow token.</p>
 <span class="k">def</span> <span class="nf">pick_token</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Pick a token from a bag with 3 red and 5 blue and a yellow</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        Either &quot;Red&quot;, &quot;Blue&quot; or &quot;Yellow&quot;</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">bag</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Red&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;Blue&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;Yellow&quot;</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">bag</span><span class="p">)</span>
@@ -1433,22 +1442,34 @@ rokens, 5 blue tokens and a yellow token.</p>
 <div><p><code class="docutils literal notranslate"><span class="pre">6</span></code>. Obtain the first 5 terms of the sequence defined by:</p>
 </div></blockquote>
 <blockquote>
-<div><div class="math notranslate nohighlight">
-\[\begin{split}
-        \left\{
-            \begin{array}{l}
-              a_0 = 0,\\
-              a_1 = 2,\\
-              a_n = 3 a_{n - 1} + a_{n - 2}, n \geq 2
-            \end{array}
-        \right.
-      \end{split}\]</div>
+<div><p>$$</p>
 </div></blockquote>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    \left\{
+        \begin{array}{l}
+          a_0 = 0,\\
+          a_1 = 2,\\
+          a_n = 3 a_{n - 1} + a_{n - 2}, n \geq 2
+        \end{array}
+    \right.
+  $$
+</pre></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_sequence</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Use recursion to obtain the nth term of the sequence a.</span>
+<span class="sd">    A function to give the nth term of the sequence using the recursive</span>
+<span class="sd">    definition.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    n: int</span>
+<span class="sd">        The index of the number</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    int</span>
+<span class="sd">        The nth term of the sequence number</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>

@@ -1192,6 +1192,16 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-formats-can-be-used-to-write-a-docstring">
+   What formats can be used to write a docstring?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#are-there-tools-available-to-assist-with-writing-docstrings">
+   Are there tools available to assist with writing docstrings?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-part-from-removing-duplicates-and-set-operations-what-are-they-advantages-to-using-set">
    A part from removing duplicates and set operations what are they advantages to using
    <code class="docutils literal notranslate">
@@ -1222,6 +1232,16 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-formats-can-be-used-to-write-a-docstring">
+   What formats can be used to write a docstring?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#are-there-tools-available-to-assist-with-writing-docstrings">
+   Are there tools available to assist with writing docstrings?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-part-from-removing-duplicates-and-set-operations-what-are-they-advantages-to-using-set">
    A part from removing duplicates and set operations what are they advantages to using
    <code class="docutils literal notranslate">
@@ -1244,6 +1264,27 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="further-information">
 <h1>Further information<a class="headerlink" href="#further-information" title="Permalink to this headline">#</a></h1>
+<section id="what-formats-can-be-used-to-write-a-docstring">
+<h2>What formats can be used to write a docstring?<a class="headerlink" href="#what-formats-can-be-used-to-write-a-docstring" title="Permalink to this headline">#</a></h2>
+<p>The format used to write a docstring described in <a class="reference internal" href="../how/main.html#how-to-write-a-docstring"><span class="std std-ref">How to write a docstring</span></a> is the one specified
+by the Numpy project. You can read about that specification here: https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard</p>
+<p>Amongst other things you can see how to specify further functionality:</p>
+<ul class="simple">
+<li><p>How to indicate if a parameter is optional.</p></li>
+<li><p>How to specify what types of errors might be raised by a function.</p></li>
+<li><p>How to specify when a function is a generator.</p></li>
+</ul>
+<p>There are 2 other common specifications:</p>
+<ul class="simple">
+<li><p>Google’s Python Style Guide: https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings</p></li>
+<li><p>Sphinx Python Style Guide: https://pythonhosted.org/an_example_pypi_project/sphinx.html#function-definitions</p></li>
+</ul>
+</section>
+<section id="are-there-tools-available-to-assist-with-writing-docstrings">
+<h2>Are there tools available to assist with writing docstrings?<a class="headerlink" href="#are-there-tools-available-to-assist-with-writing-docstrings" title="Permalink to this headline">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">darglint</span></code> library: https://github.com/terrencepreilly/darglint can be used
+to check if docstrings match a given format.</p>
+</section>
 <section id="a-part-from-removing-duplicates-and-set-operations-what-are-they-advantages-to-using-set">
 <h2>A part from removing duplicates and set operations what are they advantages to using <code class="docutils literal notranslate"><span class="pre">set</span></code>?<a class="headerlink" href="#a-part-from-removing-duplicates-and-set-operations-what-are-they-advantages-to-using-set" title="Permalink to this headline">#</a></h2>
 <p>One valuable uses of <code class="docutils literal notranslate"><span class="pre">set</span></code> is to efficiently identify is an element
@@ -1256,7 +1297,7 @@ is in a given iterable or not:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.52 ms ± 14.3 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>727 µs ± 1.21 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1269,7 +1310,7 @@ is in a given iterable or not:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>38.7 ns ± 0.961 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25.3 ns ± 0.962 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
 </pre></div>
 </div>
 </div>

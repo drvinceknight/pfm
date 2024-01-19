@@ -1341,6 +1341,22 @@ P ^ k\)</span> for arbitrary <span class="math notranslate nohighlight">\(\pi\)<
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    For a Markov chain with transition matrix P and starting state vector pi,</span>
 <span class="sd">    obtain the state distribution after k steps.</span>
+
+<span class="sd">    This is done by computing pi P ^ k</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    pi : array</span>
+<span class="sd">        Starting state vector.</span>
+<span class="sd">    k : int</span>
+<span class="sd">        Number of iterations.</span>
+<span class="sd">    P : array</span>
+<span class="sd">        Transition matrix</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    array</span>
+<span class="sd">        The state vector after k iterations</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">pi</span> <span class="o">@</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">matrix_power</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
 </pre></div>
@@ -1379,6 +1395,16 @@ requires “extracting” <span class="math notranslate nohighlight">\(Q\)</span
 <span class="sd">    vector t which gives the expected number of steps until absorption.</span>
 
 <span class="sd">    Note that this does not assume P is in the required format.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    P : array</span>
+<span class="sd">        Transition matrix</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    array</span>
+<span class="sd">        Number of steps until absorption</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">indices_without_1_in_diagonal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">P</span><span class="o">.</span><span class="n">diagonal</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">Q</span> <span class="o">=</span> <span class="n">P</span><span class="p">[</span><span class="n">indices_without_1_in_diagonal</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">indices_without_1_in_diagonal</span><span class="p">]</span>
@@ -1408,6 +1434,16 @@ up that function in to three separate functions:</p>
 <span class="sd">    Note that this does not assume that P is in the required format. It</span>
 <span class="sd">    identifies the rows and columns that have a 1 in the diagonal and removes</span>
 <span class="sd">    them.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    P : array</span>
+<span class="sd">        Transition matrix</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    array</span>
+<span class="sd">        The matrix Q</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">indices_without_1_in_diagonal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">P</span><span class="o">.</span><span class="n">diagonal</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">Q</span> <span class="o">=</span> <span class="n">P</span><span class="p">[</span><span class="n">indices_without_1_in_diagonal</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">indices_without_1_in_diagonal</span><span class="p">]</span>
@@ -1418,6 +1454,16 @@ up that function in to three separate functions:</p>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    For an absorbing Markov chain with transition rate matrix P that gives</span>
 <span class="sd">    matrix Q this computes the fundamental matrix N.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    Q : array</span>
+<span class="sd">        The matrix Q obtained from P</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    array</span>
+<span class="sd">        The funamental matrix N</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">number_of_rows</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">Q</span><span class="o">.</span><span class="n">shape</span>
     <span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">number_of_rows</span><span class="p">)</span> <span class="o">-</span> <span class="n">Q</span><span class="p">)</span>
@@ -1523,7 +1569,7 @@ import the functions in <code class="docutils literal notranslate"><span class="
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>43.491961694971735
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>43.49196169497175
 </pre></div>
 </div>
 </div>

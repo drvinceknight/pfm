@@ -1277,6 +1277,21 @@ applying a tip, the following function will do this:</p>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This returns the share of a bill to be paid by `number_of_payers`</span>
 <span class="sd">    ensuring the total paid includes a tip.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    total : float</span>
+<span class="sd">        The total amount of the bill</span>
+<span class="sd">    tip_proportion : float</span>
+<span class="sd">        The proportion of the bill that should be added as a tip (a number</span>
+<span class="sd">        between 0 and 1)</span>
+<span class="sd">    number_of_payers : int</span>
+<span class="sd">        The number of people sharing the bill</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    float</span>
+<span class="sd">        The amount each person should contribute</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">tip_amount</span> <span class="o">=</span> <span class="n">tip_proportion</span> <span class="o">*</span> <span class="n">total</span>
     <span class="n">total</span> <span class="o">+=</span> <span class="n">tip_amount</span>
@@ -1308,6 +1323,19 @@ applying a tip, the following function will do this:</p>
 <span class="sd">    Note that tip_proportion is a number between 0 and 1. A tip_proportion of 0</span>
 <span class="sd">    corresponds to no tip and a tip_proportion of 1 corresponds to paying the</span>
 <span class="sd">    total twice.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    total : float</span>
+<span class="sd">        The total amount of the bill</span>
+<span class="sd">    tip_proportion : float</span>
+<span class="sd">        The proportion of the bill that should be added as a tip (a number</span>
+<span class="sd">        between 0 and 1)</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    float</span>
+<span class="sd">        The total value of the bill (including tip)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">tip_amount</span> <span class="o">=</span> <span class="n">tip_proportion</span> <span class="o">*</span> <span class="n">total</span>
     <span class="k">return</span> <span class="n">total</span> <span class="o">+</span> <span class="n">tip_amount</span>
@@ -1317,6 +1345,18 @@ applying a tip, the following function will do this:</p>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This returns the share of a bill by dividing the total by the number of</span>
 <span class="sd">    payers.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    total : float</span>
+<span class="sd">        The total amount of the bill</span>
+<span class="sd">    number_of_payers : int</span>
+<span class="sd">        The number of people sharing the bill</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    float</span>
+<span class="sd">        The amount each person should contribute</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">total</span> <span class="o">/</span> <span class="n">number_of_payers</span>
 </pre></div>
