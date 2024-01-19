@@ -26,7 +26,6 @@ kernelspec:
 
 > `4`. $\frac{4 ^ 3 + 2}{2\times 5} - 5 ^ {\frac{1}{2}}$
 
-
 ![](./img/using_the_repl/main.png)
 
 Click the toggle ("Click to Show") to see a demo of this:
@@ -45,7 +44,7 @@ describes how to do this and includes an animation with a demonstration.
 ## Question 3
 
 > `3`. Use the command line and a python script written in VScode to solve the
-   following problems:
+> following problems:
 
 > `1`. Find the solutions to the following equation: $x ^ 2 - 3 x + 2 = 1$.
 
@@ -64,7 +63,6 @@ Click the toggle ("Click to Show") to see a demo running this:
 ```{toggle}
 ![](./img/using_vscode_question_1/main.gif)
 ```
-
 
 > `2`. Differentiate the following function: $f(x) = \cos(x) / 4$
 
@@ -97,8 +95,8 @@ Click the toggle ("Click to Show") to see a demo running this:
 ![](./img/using_vscode_question_3/main.gif)
 ```
 
-
 > `4`. Count the number of ways of picking 2 letters from "ABCD" where order
+
       does not matter.
 
 ```{code-cell} ipython3
@@ -115,6 +113,7 @@ Click the toggle ("Click to Show") to see a demo running this:
 ```
 
 > `5`. Simulate the probability of picking a red token from a bag with 3 red
+
       rokens, 5 blue tokens and a yellow token.
 
 ```{code-cell} ipython3
@@ -124,6 +123,11 @@ import random
 def pick_token():
     """
     Pick a token from a bag with 3 red and 5 blue and a yellow
+
+    Returns
+    -------
+    str
+        Either "Red", "Blue" or "Yellow"
     """
     bag = ["Red"] * 3 + ["Blue"] * 5 + ["Yellow"]
     return random.choice(bag)
@@ -146,6 +150,7 @@ Click the toggle ("Click to Show") to see a demo running this:
 > `6`. Obtain the first 5 terms of the sequence defined by:
 
 > $$
+
         \left\{
             \begin{array}{l}
               a_0 = 0,\\
@@ -158,7 +163,18 @@ Click the toggle ("Click to Show") to see a demo running this:
 ```{code-cell} ipython3
 def get_sequence(n):
     """
-    Use recursion to obtain the nth term of the sequence a.
+    A function to give the nth term of the sequence using the recursive
+    definition.
+
+    Parameters
+    ----------
+    n: int
+        The index of the number
+
+    Returns
+    -------
+    int
+        The nth term of the sequence number
     """
     if n == 0:
         return 0
@@ -181,11 +197,11 @@ Click the toggle ("Click to Show") to see a demo running this:
 
 > `4`. Install the `Markdown all in one` plugin for markdown in VScode and then:
 
->  `1`. Create a new file `main.md`.
+> `1`. Create a new file `main.md`.
 
->  `2`. Write some basic markdown in it.
+> `2`. Write some basic markdown in it.
 
->  `3`. Use the plugin to preview the rendered markdown.
+> `3`. Use the plugin to preview the rendered markdown.
 
 - Go to `Code > Preferences > Extensions`.
 - Search for `Markdown` and click `Install` on `Markdown all in one`.

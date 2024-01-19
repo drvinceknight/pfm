@@ -50,7 +50,14 @@ class QuadraticExpression:
         self.discriminant = self.b ** 2 - 4 * self.a * self.c
 
     def get_roots(self):
-        """Return the real valued roots of the quadratic expression"""
+        """
+        Return the real valued roots of the quadratic expression
+
+        Returns
+        -------
+        array
+            The roots of the quadratic
+        """
         if self.discriminant >= 0:
             x1 = -(self.b + math.sqrt(self.discriminant)) / (2 * self.a)
             x2 = -(self.b - math.sqrt(self.discriminant)) / (2 * self.a)
@@ -138,7 +145,14 @@ class QuadraticExpressionWithAllRoots(QuadraticExpression):
     """
 
     def get_roots(self):
-        """Return the real valued roots of the quadratic expression"""
+        """
+        Return the real valued roots of the quadratic expression
+
+        Returns
+        -------
+        array
+            The roots of the quadratic
+        """
         if self.discriminant >= 0:
             x1 = -(self.b + math.sqrt(self.discriminant)) / (2 * self.a)
             x2 = -(self.b - math.sqrt(self.discriminant)) / (2 * self.a)

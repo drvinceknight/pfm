@@ -17,7 +17,7 @@ kernelspec:
 ## Question 1
 
 > `1`. Use the class created in {ref}`objects_tutorial` to find the roots of the
->  following quadratics:
+> following quadratics:
 
 > `1`. $f(x) = -4x ^ 2 + x + 6$
 
@@ -37,7 +37,14 @@ class QuadraticExpression:
         self.discriminant = self.b ** 2 - 4 * self.a * self.c
 
     def get_roots(self):
-        """Return the real valued roots of the quadratic expression"""
+        """
+        Return the real valued roots of the quadratic expression
+
+        Returns
+        -------
+        array
+            The roots of the quadratic
+        """
         if self.discriminant >= 0:
             x1 = -(self.b + math.sqrt(self.discriminant)) / (2 * self.a)
             x2 = -(self.b - math.sqrt(self.discriminant)) / (2 * self.a)
@@ -62,7 +69,15 @@ class QuadraticExpressionWithAllRoots(QuadraticExpression):
     """
 
     def get_roots(self):
-        """Return the real valued roots of the quadratic expression"""
+        """
+        Return the real valued roots of the quadratic expression
+
+        Returns
+        -------
+        array
+            The roots of the quadratic: each root is represented as an array
+            of the form (Re, Im).
+        """
         if self.discriminant >= 0:
             x1 = -(self.b + math.sqrt(self.discriminant)) / (2 * self.a)
             x2 = -(self.b - math.sqrt(self.discriminant)) / (2 * self.a)
@@ -104,9 +119,9 @@ h.get_roots()
 ## Question 2
 
 > `2`. Write a class for a Linear expression and use it to find the roots of the
->  following expressions:
+> following expressions:
 
->  `1`. $f(x) = 2x + 6$
+> `1`. $f(x) = 2x + 6$
 
 First we define the class:
 
@@ -122,7 +137,14 @@ class LinearExpression:
         self.b = b
 
     def get_roots(self):
-        """Return the roots of the linear expression"""
+        """
+        Return the real valued roots of the linear expression
+
+        Returns
+        -------
+        float
+            The root of the linear expression.
+        """
         if self.a != 0:
             return -self.b / self.a
         return None
@@ -160,12 +182,14 @@ h.get_roots()
 ## Question 3
 
 > `3`. If rain drops were to fall randomly on a square of side length $2r$ the
->  probability of the drops landing in an inscribed circle of radius $r$ would
->  be given by:
+> probability of the drops landing in an inscribed circle of radius $r$ would
+> be given by:
 
->  $$
+> $$
+
       P = \frac{\text{Area of circle}}{\text{Area of square}}=\frac{\pi r ^2}{4r^2}=\frac{\pi}{4}
-  $$
+
+$$
 
 >  Thus, if we can approximate $P$ then we can approximate $\pi$ as $4P$. In this
 >  question we will write code to approximate $P$ using the random library.
@@ -190,15 +214,15 @@ import random
 
 
 class Drop:
-    """
-    A class used to represent a random rain drop falling on a square of
-    length r.
-    """
+  """
+  A class used to represent a random rain drop falling on a square of
+  length r.
+  """
 
     def __init__(self, r=1):
-        self.x = (0.5 - random.random()) * 2 * r
-        self.y = (0.5 - random.random()) * 2 * r
-        self.in_circle = (self.y) ** 2 + (self.x) ** 2 <= r ** 2
+      self.x = (0.5 - random.random()) * 2 * r
+      self.y = (0.5 - random.random()) * 2 * r
+      self.in_circle = (self.y) ** 2 + (self.x) ** 2 <= r ** 2
 ```
 
 >  To approximate $P$ create $N=1000$ instances of Drops and count the
@@ -242,15 +266,15 @@ We create a different drop class changing the `in_circle` attribute to
 
 ```{code-cell} ipython3
 class Drop:
-    """
-    A class used to represent a random rain drop falling on a square of
-    length 1.
-    """
+  """
+  A class used to represent a random rain drop falling on a square of
+  length 1.
+  """
 
     def __init__(self):
-        self.x = random.random()
-        self.y = random.random()
-        self.under_curve = self.y <= 1 - self.x ** 2
+      self.x = random.random()
+      self.y = random.random()
+      self.under_curve = self.y <= 1 - self.x ** 2
 ```
 
 Now we repeat the steps of question 3:
@@ -283,3 +307,4 @@ import sympy as sym
 x = sym.Symbol("x")
 sym.integrate(1 - x ** 2, (x, 0, 1))
 ```
+$$
