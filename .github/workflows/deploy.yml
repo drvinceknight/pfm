@@ -11,6 +11,7 @@ on:
     paths:
       - book/**
       - .github/workflows/deploy.yml
+      - requirements-dev.txt
 
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
