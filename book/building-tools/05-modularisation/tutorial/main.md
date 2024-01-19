@@ -13,6 +13,7 @@ kernelspec:
 ---
 
 (modularisation_tutorial)=
+
 # Tutorial
 
 We will here consider a specific problem of a general type. We will not
@@ -142,6 +143,22 @@ def get_long_run_state(pi, k, P):
     """
     For a Markov chain with transition matrix P and starting state vector pi,
     obtain the state distribution after k steps.
+
+    This is done by computing pi P ^ k
+
+    Parameters
+    ----------
+    pi : array
+        Starting state vector.
+    k : int
+        Number of iterations.
+    P : array
+        Transition matrix
+
+    Returns
+    -------
+    array
+        The state vector after k iterations
     """
     return pi @ np.linalg.matrix_power(P, k)
 ```
@@ -182,6 +199,16 @@ def compute_t(P):
     vector t which gives the expected number of steps until absorption.
 
     Note that this does not assume P is in the required format.
+
+    Parameters
+    ----------
+    P : array
+        Transition matrix
+
+    Returns
+    -------
+    array
+        Number of steps until absorption
     """
     indices_without_1_in_diagonal = np.where(P.diagonal() != 1)[0]
     Q = P[indices_without_1_in_diagonal.reshape(-1, 1), indices_without_1_in_diagonal]
@@ -209,6 +236,16 @@ def extract_Q(P):
     Note that this does not assume that P is in the required format. It
     identifies the rows and columns that have a 1 in the diagonal and removes
     them.
+
+    Parameters
+    ----------
+    P : array
+        Transition matrix
+
+    Returns
+    -------
+    array
+        The matrix Q
     """
     indices_without_1_in_diagonal = np.where(P.diagonal() != 1)[0]
     Q = P[indices_without_1_in_diagonal.reshape(-1, 1), indices_without_1_in_diagonal]
@@ -219,6 +256,16 @@ def compute_N(Q):
     """
     For an absorbing Markov chain with transition rate matrix P that gives
     matrix Q this computes the fundamental matrix N.
+
+    Parameters
+    ----------
+    Q : array
+        The matrix Q obtained from P
+
+    Returns
+    -------
+    array
+        The funamental matrix N
     """
     number_of_rows, _ = Q.shape
     N = np.linalg.inv(np.eye(number_of_rows) - Q)

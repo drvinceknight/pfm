@@ -55,6 +55,21 @@ def add_tip_and_get_bill_share(total, tip_proportion, number_of_payers):
     """
     This returns the share of a bill to be paid by `number_of_payers`
     ensuring the total paid includes a tip.
+
+    Parameters
+    ----------
+    total : float
+        The total amount of the bill
+    tip_proportion : float
+        The proportion of the bill that should be added as a tip (a number
+        between 0 and 1)
+    number_of_payers : int
+        The number of people sharing the bill
+
+    Returns
+    -------
+    float
+        The amount each person should contribute
     """
     tip_amount = tip_proportion * total
     total += tip_amount
@@ -77,6 +92,19 @@ def add_tip(total, tip_proportion):
     Note that tip_proportion is a number between 0 and 1. A tip_proportion of 0
     corresponds to no tip and a tip_proportion of 1 corresponds to paying the
     total twice.
+
+    Parameters
+    ----------
+    total : float
+        The total amount of the bill
+    tip_proportion : float
+        The proportion of the bill that should be added as a tip (a number
+        between 0 and 1)
+
+    Returns
+    -------
+    float
+        The total value of the bill (including tip)
     """
     tip_amount = tip_proportion * total
     return total + tip_amount
@@ -86,6 +114,18 @@ def get_bill_share(total, number_of_payers):
     """
     This returns the share of a bill by dividing the total by the number of
     payers.
+
+    Parameters
+    ----------
+    total : float
+        The total amount of the bill
+    number_of_payers : int
+        The number of people sharing the bill
+
+    Returns
+    -------
+    float
+        The amount each person should contribute
     """
     return total / number_of_payers
 ```
