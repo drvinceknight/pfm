@@ -63,7 +63,7 @@ $x$:
 def x_cubed(x):
     """
     Calculates and returns the cube of x. Does this by using Python
-    exponentionation.
+    exponentiation.
 
     Parameters
     ----------
