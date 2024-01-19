@@ -47,7 +47,7 @@ jobs:
 
       - name: Cat logs
         if: always()
-          cat .html.make.log
+        run: cat .html.make.log
 
       # Push the book's HTML to github-pages
       - name: GitHub Pages action
