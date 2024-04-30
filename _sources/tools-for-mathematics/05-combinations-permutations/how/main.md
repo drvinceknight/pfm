@@ -39,7 +39,7 @@ basket
 ## How to access particular elements in a tuple
 
 If we need to we can access elements of this collection using `[]` brackets. The
-first element is has index `0`:
+first element has index `0`:
 
 ```python
 tuple[index]
@@ -100,6 +100,7 @@ It is also possible to combine booleans to create new booleans:
 
 - And: `first_boolean and second_boolean`
 - Or: `first_boolean or second_boolean`
+- No: `not boolean`
 
 ```{code-cell} ipython3
 True and True
@@ -115,6 +116,14 @@ True or False
 
 ```{code-cell} ipython3
 False or False
+```
+
+```{code-cell} ipython3
+not True
+```
+
+```{code-cell} ipython3
+not False
 ```
 
 (creating_an_iterable_with_a_given_number_of_items)=

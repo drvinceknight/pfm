@@ -47,7 +47,7 @@ While it is possible to use a `while` loop instead of a `for` loop there are no
 advantages to doing that and in fact only disadvantages:
 
 - Using the `while` loop requires iterating over the iterable twice: the first
-  time when counting the length of it using `len` and the second time during the
+  time when counting the length of it using [`len`](find_the_number_of_elements_in_an_iterable) and the second time during the
   `while` statement itself.
 - There is more potential for error in the code: it would not be unlikely to
   have an off by one error in the boolean condition.
@@ -59,7 +59,7 @@ The following is a good guideline:
 - Use a `while` loop when only know a specific condition under which you should
   iterate.
 
-## Why should I not check if a boolean is `True`
+## Why should I not check if a boolean is equal to `True` or `False`
 
 It is possible to create a boolean by comparing another boolean to `True` or
 `False` for example:
@@ -84,7 +84,21 @@ while (selected_integer % 2 == 1) == True:
 number_of_selections
 ```
 
-However this is not as clear as writing:
+or:
+
+```{code-cell} ipython3
+
+random.seed(4)
+selected_integer = random.randint(0, 10)
+number_of_selections = 1
+while (selected_integer % 2 == 1):
+    selected_integer = random.randint(0, 10)
+    number_of_selections += 1
+number_of_selections
+```
+
+However this is not best practice. A better approach is to use `is` instead of
+`==`:
 
 ```{code-cell} ipython3
 import random
@@ -92,8 +106,24 @@ import random
 random.seed(4)
 selected_integer = random.randint(0, 10)
 number_of_selections = 1
-while selected_integer % 2 == 1:
+while (selected_integer % 2 == 1) is True:
     selected_integer = random.randint(0, 10)
     number_of_selections += 1
 number_of_selections
+```
+
+This is due to the fact that when using `==` variables that are not booleans
+will be converted to booleans and this might not be the expected behaviour.
+
+For example:
+
+```{code-cell} ipython3
+number = 0
+number == False
+```
+
+however:
+
+```{code-cell} ipython3
+number is False
 ```

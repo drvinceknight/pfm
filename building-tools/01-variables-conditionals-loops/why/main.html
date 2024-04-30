@@ -1230,11 +1230,17 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-should-i-not-check-if-a-boolean-is-true">
-   Why should I not check if a boolean is
+  <a class="reference internal nav-link" href="#why-should-i-not-check-if-a-boolean-is-equal-to-true-or-false">
+   Why should I not check if a boolean is equal to
    <code class="docutils literal notranslate">
     <span class="pre">
      True
+    </span>
+   </code>
+   or
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     False
     </span>
    </code>
   </a>
@@ -1270,11 +1276,17 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-should-i-not-check-if-a-boolean-is-true">
-   Why should I not check if a boolean is
+  <a class="reference internal nav-link" href="#why-should-i-not-check-if-a-boolean-is-equal-to-true-or-false">
+   Why should I not check if a boolean is equal to
    <code class="docutils literal notranslate">
     <span class="pre">
      True
+    </span>
+   </code>
+   or
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     False
     </span>
    </code>
   </a>
@@ -1343,7 +1355,7 @@ Autumn
 advantages to doing that and in fact only disadvantages:</p>
 <ul class="simple">
 <li><p>Using the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop requires iterating over the iterable twice: the first
-time when counting the length of it using <code class="docutils literal notranslate"><span class="pre">len</span></code> and the second time during the
+time when counting the length of it using <a class="reference internal" href="../../02-functions-and-data-structures/how/main.html#find-the-number-of-elements-in-an-iterable"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">len</span></code></span></a> and the second time during the
 <code class="docutils literal notranslate"><span class="pre">while</span></code> statement itself.</p></li>
 <li><p>There is more potential for error in the code: it would not be unlikely to
 have an off by one error in the boolean condition.</p></li>
@@ -1356,8 +1368,8 @@ have an off by one error in the boolean condition.</p></li>
 iterate.</p></li>
 </ul>
 </section>
-<section id="why-should-i-not-check-if-a-boolean-is-true">
-<h2>Why should I not check if a boolean is <code class="docutils literal notranslate"><span class="pre">True</span></code><a class="headerlink" href="#why-should-i-not-check-if-a-boolean-is-true" title="Permalink to this headline">#</a></h2>
+<section id="why-should-i-not-check-if-a-boolean-is-equal-to-true-or-false">
+<h2>Why should I not check if a boolean is equal to <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code><a class="headerlink" href="#why-should-i-not-check-if-a-boolean-is-equal-to-true-or-false" title="Permalink to this headline">#</a></h2>
 <p>It is possible to create a boolean by comparing another boolean to <code class="docutils literal notranslate"><span class="pre">True</span></code> or
 <code class="docutils literal notranslate"><span class="pre">False</span></code> for example:</p>
 <div class="cell docutils container">
@@ -1395,15 +1407,13 @@ the following:</p>
 </div>
 </div>
 </div>
-<p>However this is not as clear as writing:</p>
+<p>or:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-
-<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="n">selected_integer</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">number_of_selections</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">while</span> <span class="n">selected_integer</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">selected_integer</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
     <span class="n">selected_integer</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
     <span class="n">number_of_selections</span> <span class="o">+=</span> <span class="mi">1</span>
 <span class="n">number_of_selections</span>
@@ -1412,6 +1422,57 @@ the following:</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<p>However this is not best practice. A better approach is to use <code class="docutils literal notranslate"><span class="pre">is</span></code> instead of
+<code class="docutils literal notranslate"><span class="pre">==</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">selected_integer</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">number_of_selections</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">selected_integer</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">selected_integer</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">number_of_selections</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="n">number_of_selections</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is due to the fact that when using <code class="docutils literal notranslate"><span class="pre">==</span></code> variables that are not booleans
+will be converted to booleans and this might not be the expected behaviour.</p>
+<p>For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">number</span> <span class="o">==</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>however:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="ow">is</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
 </pre></div>
 </div>
 </div>

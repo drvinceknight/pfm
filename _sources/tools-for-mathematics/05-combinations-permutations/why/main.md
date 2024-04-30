@@ -14,17 +14,14 @@ kernelspec:
 
 # Further information
 
-## How does tuple indexing work?
+## Are there other ways to access elements in tuples?
 
 We have seen in this chapter how to access a single element in a tuple. There
 are various ways of indexing tuples:
 
-1. Indexing (what we have seen here)
-2. Negative indexing (indexing starting from the end)
-3. Slicing (selecting a number of elements)
-
-This document gives good information on this:
-<https://www.programiz.com/python-programming/tuple>
+1. Indexing (what we have seen [here](how_to_access_particular_elements_in_a_tuple))
+2. [Negative indexing](access_an_element_using_negative_indexing) (indexing starting from the end)
+3. [Slicing](slice_an_iterable) (selecting a number of elements)
 
 ## Why does `range`, `itertools.permutations` and `itertools.combinations` not directly give the elements?
 
@@ -42,7 +39,7 @@ The [`sum`](adding_items_in_a_tuple) command corresponds to the mathematical
 $\sum$ notation. Here are a few examples showing not only the `sum` command,
 $\sum$ notation but also the prose describing:
 
-```{list-table}
+````{list-table}
 :header-rows: 1
 
 * - Mathematics
@@ -65,4 +62,4 @@ $\sum$ notation but also the prose describing:
     ```
   - The sum of the square of the elements in the collection $S$ if they are
     prime.
-```
+````

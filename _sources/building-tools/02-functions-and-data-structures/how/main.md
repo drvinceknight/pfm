@@ -19,8 +19,9 @@ Two important data structures have already been seen in previous chapters:
 - Tuples: [Combinatorics: How to create a tuple](create_a_tuple).
 - Lists: [Probability: How to create a list](create_a_list).
 
-We covered functions in a previous chapter as well: [Probability: How to define
-a function](define_a_function).
+## How to define a function
+
+See: [Probability: How to define a function](define_a_function).
 
 (how_to_write_a_docstring)=
 
@@ -78,6 +79,213 @@ def x_cubed(x):
     return x ** 3
 ```
 
+## Create a tuple
+
+See [Combinatorics: How to create a tuple](create_a_tuple).
+
+## Create a list
+
+See [Probability: How to create a list](create_a_list).
+
+## Create a list using a list comprehension
+
+See [Probability: Create a list using a list comprehension](create_a_list_using_a_list_comprehension).
+
+## Combine lists
+
+Given two lists it is possible to combine them to create a new list using the `+` operator:
+
+````{tip}
+```
+first_list + other_list
+```
+````
+
+Here is an example a single list from two separate lists:
+
+```{code-cell} ipython3
+first_list = [1, 2, 3]
+other_list = [5, 6, 100]
+combined_list = first_list + other_list
+combined_list
+```
+
+## Append an element to a list
+
+Appending an element to a list is done using the `append` method.
+
+````{tip}
+```
+a_list.append(element)
+```
+````
+
+Here is an example where we append a new string to a list of strings:
+
+```{code-cell} ipython3
+names = ["Vince", "Zoe", "Julien", "Kaitlynn"]
+names.append("Riggins")
+names
+```
+
+```{attention}
+It is not possible to do this with a `tuple` as a `tuple` **immutable**](difference_between_a_list_and_a_tuple).
+```
+
+## Remove an element from a list
+
+To remove a given element from a list use the `remove` method.
+
+````{tip}
+```
+a_list.remove(element)
+```
+````
+
+Here is an example where we remove a number from a list of numbers:
+
+```{code-cell} ipython3
+numbers = [1, 94, 23, 202, 5]
+numbers.remove(23)
+numbers
+```
+
+```{attention}
+It is not possible to remove an element from a `tuple` as a `tuple` **immutable**](difference_between_a_list_and_a_tuple).
+```
+
+## Sort a list
+
+To sort a list use the `sort` method.
+
+````{tip}
+```
+a_list.sort()
+```
+````
+
+Here is an example:
+
+```{code-cell} ipython3
+names = ["Vince", "Zoe", "Kaitlynn", "Julien"]
+names.sort()
+names
+```
+
+To sort a list in reverse order use the `sort` method with the `reverse=True`
+parameter.
+
+```{code-cell} ipython3
+names.sort(reverse=True)
+names
+```
+
+```{attention}
+It is not possible to sort a `tuple` as a `tuple` is [**immutable**](difference_between_a_list_and_a_tuple).
+```
+
+## Create a sorted list from an iterable
+
+To create a sorted list from an iterable use the `sorted` function.
+
+````{tip}
+```
+sorted(iterable)
+```
+````
+
+Here is an example:
+
+```{code-cell} ipython3
+tuple_of_numbers = (20, 50, 10, 6, 1, 50, 105)
+sorted(tuple_of_numbers)
+```
+
+## Access an element of an iterable
+
+See: [Combinatorics: How to access particular elements in a tuple](how_to_access_particular_elements_in_a_tuple).
+
+## Find the index of an element in an iterable
+
+To identify the position of an element in an iterable use the `index` method.
+
+````{tip}
+```
+iterable.index(element)
+```
+````
+
+Here is an example:
+
+```{code-cell} ipython3
+numbers = [1, 94, 23, 202, 5]
+numbers.index(23)
+```
+
+```{attention}
+Recall that python uses `0`-based indexing. The first element in an iterable has
+index `0`.
+```
+
+(access_an_element_using_negative_indexing)=
+
+## Access an element of an iterable using negative indexing
+
+It is possible to access an element of an iterable by counting from the end of
+the iterable using negative indexing.
+
+````{tip}
+```
+iterable[-index_from_end]
+```
+````
+
+Here is an example showing how to access the penultimate element in a tuple:
+
+```{code-cell} ipython3
+basket = ("Carrots", "Potatoes", "Strawberries", "Juice", "Ice cream")
+basket[-2]
+```
+
+(slice_an_iterable)=
+
+## Slice an iterable
+
+To create a new iterable from an iterable use `[]` and specify a start
+(inclusive) and end (exclusive) pair of indices.
+
+````{tip}
+```
+iterable[include_start_index: exclusive_end_index]
+```
+````
+
+For example:
+
+```{code-cell} ipython3
+basket = ("Carrots", "Potatoes", "Strawberries", "Juice", "Ice cream")
+basket[2: 5]
+```
+
+(find_the_number_of_elements_in_an_iterable)=
+
+## Find the number of elements in an iterable
+
+To count the number of elements in an iterable use `len`:
+
+````{tip}
+```
+iterable[include_start_index: exclusive_end_index]
+```
+````
+
+For example:
+
+```{code-cell} ipython3
+basket = ("Carrots", "Potatoes", "Strawberries", "Juice", "Ice cream")
+len(basket)
+```
+
 ## Create a set
 
 A set is a collection of distinct objects. This can be created in Python using
@@ -128,7 +336,9 @@ set_1 - set_2
 set_1 <= set_2
 ```
 
-## Using hash tables
+(create_hash_tables) =
+
+## Create hash tables
 
 Lists and tuples allow us to immediately recover a value given its position.
 Hash tables allow us to create arbitrary `key` `value` pairs so that given any
@@ -158,6 +368,85 @@ ages["Riggins"]
 ```
 
 ```{attention}
-If a key is used to recover the value but the key is not in the dictionary then
+If a key is used to recover the value with `[]` but the key is not in the dictionary then
 an error will be raised.
+```
+
+## Access element in a hash table
+
+As described [here](create_hash_tables) to access the value of a `key` in a hash
+table use `[]`.
+
+````{tip}
+```
+dictionary[key]
+```
+````
+
+It is also possible to use the `get` method.
+The `get` method can also be passed the value of a `default` variable to return when the
+`key` is not in the hash table:
+
+````{tip}
+```
+dictionary.get(key, default)
+```
+````
+
+For example:
+
+```{code-cell} ipython3
+ages = {"Riggins": 4, "Chick": 7, "Duck": 7}
+ages.get("Vince", -1)
+```
+
+## Iterate over keys in a hash table
+
+To iterate over the keys in a hash table use the `keys()` method:
+
+````{tip}
+```
+dictionary.keys()
+```
+````
+
+For example:
+
+```{code-cell} ipython3
+ages = {"Riggins": 4, "Chick": 7, "Duck": 7}
+ages.items()
+```
+
+## Iterate over values in a hash table
+
+To iterate over the values in a hash table use the `values()` method:
+
+````{tip}
+```
+dictionary.values()
+```
+````
+
+For example:
+
+```{code-cell} ipython3
+ages = {"Riggins": 4, "Chick": 7, "Duck": 7}
+ages.values()
+```
+
+## Iterate over pairs of keys and value in a hash table
+
+To iterate over pairs of keys and values in a hash table use the `items()` method:
+
+````{tip}
+```
+dictionary.items()
+```
+````
+
+For example:
+
+```{code-cell} ipython3
+ages = {"Riggins": 4, "Chick": 7, "Duck": 7}
+ages.items()
 ```

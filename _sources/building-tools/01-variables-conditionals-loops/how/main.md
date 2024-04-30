@@ -47,7 +47,7 @@ There are other important conventions:
   the Python convention called [PEP8](https://www.python.org/dev/peps/pep-0008/)
 ```
 
-## Define a float variable
+## Define a float variable
 
 To define a float variable we use the `=` operator which is the assignment
 operator. We create the name of the variable then the assignment operator
@@ -145,7 +145,7 @@ If a numeric variable is given with any decimal part (including 0) then it is
 considered to be a float.
 ```
 
-## How to manipulate numeric variables
+## How to manipulate numeric variables
 
 Numeric values can be combined to create new numeric variables.
 
