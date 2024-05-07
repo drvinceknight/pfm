@@ -146,7 +146,7 @@ data = [int(item) for item in data_as_strings_as_list]
 data
 ```
 
-First let us confirm that the formula confirms that the data is correct.
+First let us confirm that the data is correct.
 
 ```{code-cell} ipython3
 check = all(get_A_n(n=i + 1) == value for i, value in enumerate(data))

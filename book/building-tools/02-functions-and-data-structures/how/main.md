@@ -275,7 +275,7 @@ To count the number of elements in an iterable use `len`:
 
 ````{tip}
 ```
-iterable[include_start_index: exclusive_end_index]
+len(iterable)
 ```
 ````
 
