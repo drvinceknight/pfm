@@ -42,3 +42,8 @@ taylor-and-francis/_build/latex/*
 *.pyg
 *.xdy
 env/
+book/further-information/06-working-with-files/how/squares.csv
+book/further-information/06-working-with-files/tutorial/data.txt
+book/further-information/06-working-with-files/tutorial/main.txt
+book/further-information/06-working-with-files/why/array.txt
+book/further-information/06-working-with-files/why/squares.csv

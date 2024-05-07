@@ -150,6 +150,11 @@ parts:
           - file: further-information/05-linear-programming/tutorial/main
           - file: further-information/05-linear-programming/how/main
           - file: further-information/05-linear-programming/why/main
+      - file: further-information/06-working-with-files/introduction/main
+        sections:
+          - file: further-information/06-working-with-files/tutorial/main
+          - file: further-information/06-working-with-files/how/main
+          - file: further-information/06-working-with-files/why/main
       - file: zbibliography
   - caption: About this book
     chapters:
