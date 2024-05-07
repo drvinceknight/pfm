@@ -248,6 +248,34 @@ is_tall_or_strong = is_tall or is_strong
 is_tall_or_strong
 ```
 
+## How to combine collections of boolean of variables
+
+Given an iterable of booleans it is possible to check if any or all of them are
+`True` using `any` or `all`:
+
+````{tip}
+```
+all(iterable)
+```
+````
+
+````{tip}
+```
+any(iterable)
+```
+````
+
+For example:
+
+```{code-cell} ipython3
+iterable = (True, True, False, True, True)
+all(iterable)
+```
+
+```{code-cell} ipython3
+any(iterable)
+```
+
 ## Run code **if** a condition holds
 
 An important part of giving instructions to a computer is to specify when to do
@@ -362,4 +390,43 @@ while selected_integer % 2 == 1:
     selected_integer = random.randint(0, 10)
     number_of_selections += 1
 number_of_selections
+```
+
+## Iterate over pairs of items from two iterables
+
+To create a new iterable of pairs of items from two separate iterables use
+`zip`:
+
+````{tip}
+```
+zip(iterable_1, iterable_2)
+```
+````
+
+For example:
+
+```{code-cell} ipython3
+basket = ("Carrots", "Potatoes", "Strawberries", "Juice", "Ice cream")
+prices = (4, 2, 6, 3, 10)
+pairs = [(item, price) for item, price in zip(basket, prices)]
+pairs
+```
+
+## Iterate over and index items from an iterable
+
+To iterate over items from an iterable and keep track of their index use
+`enumerate`:
+
+````{tip}
+```
+enumerate(iterable)
+```
+````
+
+For example:
+
+```{code-cell} ipython3
+basket = ("Carrots", "Potatoes", "Strawberries", "Juice", "Ice cream")
+indices_and_items = [(count, item) for count, item in enumerate(basket)]
+indices_and_items
 ```

@@ -1,0 +1,1900 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>How &#8212; Python for mathematics</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "drvinceknight/pfm");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Further information." href="../why/main.html" />
+    <link rel="prev" title="Tutorial" href="../tutorial/main.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-38016329-2', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/main.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Python for mathematics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../cover.html">
+                    Python for Mathematics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Overview
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../overview/introduction/main.html">
+   Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../overview/structure/main.html">
+     How this book is structured
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../overview/how_to_use_this_book/main.html">
+     How to use this book
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tools for mathematics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../tools-for-mathematics/01-using-notebooks/introduction/main.html">
+   Using notebooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/01-using-notebooks/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/01-using-notebooks/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/01-using-notebooks/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/01-using-notebooks/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/01-using-notebooks/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../tools-for-mathematics/02-algebra/introduction/main.html">
+   Algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/02-algebra/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/02-algebra/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/02-algebra/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/02-algebra/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/02-algebra/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../tools-for-mathematics/03-calculus/introduction/main.html">
+   Calculus
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/03-calculus/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/03-calculus/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/03-calculus/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/03-calculus/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/03-calculus/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../tools-for-mathematics/04-matrices/introduction/main.html">
+   Matrices
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/04-matrices/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/04-matrices/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/04-matrices/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/04-matrices/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/04-matrices/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../tools-for-mathematics/05-combinations-permutations/introduction/main.html">
+   Combinatorics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/05-combinations-permutations/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/05-combinations-permutations/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/05-combinations-permutations/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/05-combinations-permutations/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/05-combinations-permutations/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../tools-for-mathematics/06-probability/introduction/main.html">
+   Probability
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/06-probability/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/06-probability/how/main.html">
+     How to
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/06-probability/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/06-probability/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/06-probability/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../tools-for-mathematics/07-sequences/introduction/main.html">
+   Sequences
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/07-sequences/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/07-sequences/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/07-sequences/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/07-sequences/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/07-sequences/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../tools-for-mathematics/08-statistics/introduction/main.html">
+   Statistics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/08-statistics/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/08-statistics/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/08-statistics/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/08-statistics/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/08-statistics/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../tools-for-mathematics/09-differential-equations/introduction/main.html">
+   Differential Equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/09-differential-equations/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/09-differential-equations/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/09-differential-equations/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/09-differential-equations/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../tools-for-mathematics/09-differential-equations/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Building tools
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/introduction/main.html">
+   Variables, conditionals and loops
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/introduction/main.html">
+   Functions and data structures
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../building-tools/03-objects/introduction/main.html">
+   Object oriented programming
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/03-objects/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/03-objects/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/03-objects/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/03-objects/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/03-objects/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../building-tools/04-editor-and-cli/introduction/main.html">
+   Using a command line and an editor
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/04-editor-and-cli/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/04-editor-and-cli/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/04-editor-and-cli/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/04-editor-and-cli/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/04-editor-and-cli/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../building-tools/05-modularisation/introduction/main.html">
+   Modularisation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/05-modularisation/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/05-modularisation/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/05-modularisation/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/05-modularisation/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/05-modularisation/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../building-tools/06-documentation/introduction/main.html">
+   Documentation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/06-documentation/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/06-documentation/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/06-documentation/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/06-documentation/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/06-documentation/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../building-tools/07-testing/introduction/main.html">
+   Testing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/07-testing/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/07-testing/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/07-testing/exercises/main.html">
+     Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/07-testing/solutions/main.html">
+     Solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../building-tools/07-testing/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Further information
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01-numpy/introduction/main.html">
+   Numpy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01-numpy/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01-numpy/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01-numpy/why/main.html">
+     Further information
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../02-matplotlib/introduction/main.html">
+   Matplotlib
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02-matplotlib/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02-matplotlib/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02-matplotlib/why/main.html">
+     Further information.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../03-kernel/introduction/main.html">
+   Kernels
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03-kernel/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03-kernel/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../03-kernel/why/main.html">
+     Further information.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../04-pip-installing/introduction/main.html">
+   Installing libraries
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+  <label for="toctree-checkbox-21">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04-pip-installing/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04-pip-installing/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04-pip-installing/why/main.html">
+     Further information.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../05-linear-programming/introduction/main.html">
+   Linear Programming
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+  <label for="toctree-checkbox-22">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../05-linear-programming/tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../05-linear-programming/how/main.html">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../05-linear-programming/why/main.html">
+     Further information.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../introduction/main.html">
+   Working with files
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+  <label for="toctree-checkbox-23">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tutorial/main.html">
+     Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     How
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../why/main.html">
+     Further information.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../zbibliography.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  About this book
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../about-this-book/main.html">
+   About this book
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
+  <label for="toctree-checkbox-24">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../about-this-book/how-is-this-book-written/main.html">
+     How this book is written
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../about-this-book/contributing/main.html">
+     Contributing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../about-this-book/citing-this-book/main.html">
+     How to cite this book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../about-this-book/software-packages-used/main.html">
+     List of software packages used
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/drvinceknight/pfm/main?urlpath=tree/book/further-information/06-working-with-files/how/main.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/drvinceknight/pfm"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/drvinceknight/pfm/issues/new?title=Issue%20on%20page%20%2Ffurther-information/06-working-with-files/how/main.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/drvinceknight/pfm/edit/main/book/further-information/06-working-with-files/how/main.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/further-information/06-working-with-files/how/main.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../../../_sources/further-information/06-working-with-files/how/main.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-write-to-a-file">
+   How to write to a file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-append-to-a-file">
+   How to append to a file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-read-from-a-file">
+   How to read from a file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-turn-a-string-in-to-a-list">
+   How to turn a string in to a list
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>How</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-write-to-a-file">
+   How to write to a file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-append-to-a-file">
+   How to append to a file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-read-from-a-file">
+   How to read from a file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-turn-a-string-in-to-a-list">
+   How to turn a string in to a list
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="how">
+<h1>How<a class="headerlink" href="#how" title="Permalink to this headline">#</a></h1>
+<section id="how-to-write-to-a-file">
+<span id="id1"></span><h2>How to write to a file<a class="headerlink" href="#how-to-write-to-a-file" title="Permalink to this headline">#</a></h2>
+<p>To write to a file use <code class="docutils literal notranslate"><span class="pre">open</span></code> with the <code class="docutils literal notranslate"><span class="pre">w</span></code> parameter:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">temporary_name</span><span class="p">:</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+<p>For example, the following creates a file with the values of integer <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(n^2\)</span> on
+each row for <span class="math notranslate nohighlight">\(1\leq n \leq 100\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;squares.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">):</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">n</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="how-to-append-to-a-file">
+<h2>How to append to a file<a class="headerlink" href="#how-to-append-to-a-file" title="Permalink to this headline">#</a></h2>
+<p>To write to a file without deleting what is already in the file use <code class="docutils literal notranslate"><span class="pre">open</span></code> with the <code class="docutils literal notranslate"><span class="pre">a</span></code> parameter:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">temporary_name</span><span class="p">:</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+<p>For example, the following appends integer <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(n^2\)</span> on
+each row for <span class="math notranslate nohighlight">\(101\leq n \leq 200\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;squares.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="mi">201</span><span class="p">):</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">n</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="how-to-read-from-a-file">
+<h2>How to read from a file<a class="headerlink" href="#how-to-read-from-a-file" title="Permalink to this headline">#</a></h2>
+<p>To read a file use <code class="docutils literal notranslate"><span class="pre">open</span></code> with the <code class="docutils literal notranslate"><span class="pre">r</span></code> parameter:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">temporary_name</span><span class="p">:</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+<p>For example, the following reads the data from <code class="docutils literal notranslate"><span class="pre">squares.csv</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;squares.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">data_as_string</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="n">data_as_string</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1, 1\n2, 4\n3, 9\n4, 16\n5, 25\n6, 36\n7, 49\n8, 64\n9, 81\n10, 100\n11, 121\n12, 144\n13, 169\n14, 196\n15, 225\n16, 256\n17, 289\n18, 324\n19, 361\n20, 400\n21, 441\n22, 484\n23, 529\n24, 576\n25, 625\n26, 676\n27, 729\n28, 784\n29, 841\n30, 900\n31, 961\n32, 1024\n33, 1089\n34, 1156\n35, 1225\n36, 1296\n37, 1369\n38, 1444\n39, 1521\n40, 1600\n41, 1681\n42, 1764\n43, 1849\n44, 1936\n45, 2025\n46, 2116\n47, 2209\n48, 2304\n49, 2401\n50, 2500\n51, 2601\n52, 2704\n53, 2809\n54, 2916\n55, 3025\n56, 3136\n57, 3249\n58, 3364\n59, 3481\n60, 3600\n61, 3721\n62, 3844\n63, 3969\n64, 4096\n65, 4225\n66, 4356\n67, 4489\n68, 4624\n69, 4761\n70, 4900\n71, 5041\n72, 5184\n73, 5329\n74, 5476\n75, 5625\n76, 5776\n77, 5929\n78, 6084\n79, 6241\n80, 6400\n81, 6561\n82, 6724\n83, 6889\n84, 7056\n85, 7225\n86, 7396\n87, 7569\n88, 7744\n89, 7921\n90, 8100\n91, 8281\n92, 8464\n93, 8649\n94, 8836\n95, 9025\n96, 9216\n97, 9409\n98, 9604\n99, 9801\n100, 10000\n101, 10201\n102, 10404\n103, 10609\n104, 10816\n105, 11025\n106, 11236\n107, 11449\n108, 11664\n109, 11881\n110, 12100\n111, 12321\n112, 12544\n113, 12769\n114, 12996\n115, 13225\n116, 13456\n117, 13689\n118, 13924\n119, 14161\n120, 14400\n121, 14641\n122, 14884\n123, 15129\n124, 15376\n125, 15625\n126, 15876\n127, 16129\n128, 16384\n129, 16641\n130, 16900\n131, 17161\n132, 17424\n133, 17689\n134, 17956\n135, 18225\n136, 18496\n137, 18769\n138, 19044\n139, 19321\n140, 19600\n141, 19881\n142, 20164\n143, 20449\n144, 20736\n145, 21025\n146, 21316\n147, 21609\n148, 21904\n149, 22201\n150, 22500\n151, 22801\n152, 23104\n153, 23409\n154, 23716\n155, 24025\n156, 24336\n157, 24649\n158, 24964\n159, 25281\n160, 25600\n161, 25921\n162, 26244\n163, 26569\n164, 26896\n165, 27225\n166, 27556\n167, 27889\n168, 28224\n169, 28561\n170, 28900\n171, 29241\n172, 29584\n173, 29929\n174, 30276\n175, 30625\n176, 30976\n177, 31329\n178, 31684\n179, 32041\n180, 32400\n181, 32761\n182, 33124\n183, 33489\n184, 33856\n185, 34225\n186, 34596\n187, 34969\n188, 35344\n189, 35721\n190, 36100\n191, 36481\n192, 36864\n193, 37249\n194, 37636\n195, 38025\n196, 38416\n197, 38809\n198, 39204\n199, 39601\n200, 40000\n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="how-to-turn-a-string-in-to-a-list">
+<h2>How to turn a string in to a list<a class="headerlink" href="#how-to-turn-a-string-in-to-a-list" title="Permalink to this headline">#</a></h2>
+<p>To split a string on a given character and turn it in to a list use the <code class="docutils literal notranslate"><span class="pre">split</span></code>
+method:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">string</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p>For example to convert the <code class="docutils literal notranslate"><span class="pre">data_as_string</span></code> variable to a list of string:</p>
+<div class="cell tag_output_scroll docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">data_as_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;1, 1&#39;,
+ &#39;2, 4&#39;,
+ &#39;3, 9&#39;,
+ &#39;4, 16&#39;,
+ &#39;5, 25&#39;,
+ &#39;6, 36&#39;,
+ &#39;7, 49&#39;,
+ &#39;8, 64&#39;,
+ &#39;9, 81&#39;,
+ &#39;10, 100&#39;,
+ &#39;11, 121&#39;,
+ &#39;12, 144&#39;,
+ &#39;13, 169&#39;,
+ &#39;14, 196&#39;,
+ &#39;15, 225&#39;,
+ &#39;16, 256&#39;,
+ &#39;17, 289&#39;,
+ &#39;18, 324&#39;,
+ &#39;19, 361&#39;,
+ &#39;20, 400&#39;,
+ &#39;21, 441&#39;,
+ &#39;22, 484&#39;,
+ &#39;23, 529&#39;,
+ &#39;24, 576&#39;,
+ &#39;25, 625&#39;,
+ &#39;26, 676&#39;,
+ &#39;27, 729&#39;,
+ &#39;28, 784&#39;,
+ &#39;29, 841&#39;,
+ &#39;30, 900&#39;,
+ &#39;31, 961&#39;,
+ &#39;32, 1024&#39;,
+ &#39;33, 1089&#39;,
+ &#39;34, 1156&#39;,
+ &#39;35, 1225&#39;,
+ &#39;36, 1296&#39;,
+ &#39;37, 1369&#39;,
+ &#39;38, 1444&#39;,
+ &#39;39, 1521&#39;,
+ &#39;40, 1600&#39;,
+ &#39;41, 1681&#39;,
+ &#39;42, 1764&#39;,
+ &#39;43, 1849&#39;,
+ &#39;44, 1936&#39;,
+ &#39;45, 2025&#39;,
+ &#39;46, 2116&#39;,
+ &#39;47, 2209&#39;,
+ &#39;48, 2304&#39;,
+ &#39;49, 2401&#39;,
+ &#39;50, 2500&#39;,
+ &#39;51, 2601&#39;,
+ &#39;52, 2704&#39;,
+ &#39;53, 2809&#39;,
+ &#39;54, 2916&#39;,
+ &#39;55, 3025&#39;,
+ &#39;56, 3136&#39;,
+ &#39;57, 3249&#39;,
+ &#39;58, 3364&#39;,
+ &#39;59, 3481&#39;,
+ &#39;60, 3600&#39;,
+ &#39;61, 3721&#39;,
+ &#39;62, 3844&#39;,
+ &#39;63, 3969&#39;,
+ &#39;64, 4096&#39;,
+ &#39;65, 4225&#39;,
+ &#39;66, 4356&#39;,
+ &#39;67, 4489&#39;,
+ &#39;68, 4624&#39;,
+ &#39;69, 4761&#39;,
+ &#39;70, 4900&#39;,
+ &#39;71, 5041&#39;,
+ &#39;72, 5184&#39;,
+ &#39;73, 5329&#39;,
+ &#39;74, 5476&#39;,
+ &#39;75, 5625&#39;,
+ &#39;76, 5776&#39;,
+ &#39;77, 5929&#39;,
+ &#39;78, 6084&#39;,
+ &#39;79, 6241&#39;,
+ &#39;80, 6400&#39;,
+ &#39;81, 6561&#39;,
+ &#39;82, 6724&#39;,
+ &#39;83, 6889&#39;,
+ &#39;84, 7056&#39;,
+ &#39;85, 7225&#39;,
+ &#39;86, 7396&#39;,
+ &#39;87, 7569&#39;,
+ &#39;88, 7744&#39;,
+ &#39;89, 7921&#39;,
+ &#39;90, 8100&#39;,
+ &#39;91, 8281&#39;,
+ &#39;92, 8464&#39;,
+ &#39;93, 8649&#39;,
+ &#39;94, 8836&#39;,
+ &#39;95, 9025&#39;,
+ &#39;96, 9216&#39;,
+ &#39;97, 9409&#39;,
+ &#39;98, 9604&#39;,
+ &#39;99, 9801&#39;,
+ &#39;100, 10000&#39;,
+ &#39;101, 10201&#39;,
+ &#39;102, 10404&#39;,
+ &#39;103, 10609&#39;,
+ &#39;104, 10816&#39;,
+ &#39;105, 11025&#39;,
+ &#39;106, 11236&#39;,
+ &#39;107, 11449&#39;,
+ &#39;108, 11664&#39;,
+ &#39;109, 11881&#39;,
+ &#39;110, 12100&#39;,
+ &#39;111, 12321&#39;,
+ &#39;112, 12544&#39;,
+ &#39;113, 12769&#39;,
+ &#39;114, 12996&#39;,
+ &#39;115, 13225&#39;,
+ &#39;116, 13456&#39;,
+ &#39;117, 13689&#39;,
+ &#39;118, 13924&#39;,
+ &#39;119, 14161&#39;,
+ &#39;120, 14400&#39;,
+ &#39;121, 14641&#39;,
+ &#39;122, 14884&#39;,
+ &#39;123, 15129&#39;,
+ &#39;124, 15376&#39;,
+ &#39;125, 15625&#39;,
+ &#39;126, 15876&#39;,
+ &#39;127, 16129&#39;,
+ &#39;128, 16384&#39;,
+ &#39;129, 16641&#39;,
+ &#39;130, 16900&#39;,
+ &#39;131, 17161&#39;,
+ &#39;132, 17424&#39;,
+ &#39;133, 17689&#39;,
+ &#39;134, 17956&#39;,
+ &#39;135, 18225&#39;,
+ &#39;136, 18496&#39;,
+ &#39;137, 18769&#39;,
+ &#39;138, 19044&#39;,
+ &#39;139, 19321&#39;,
+ &#39;140, 19600&#39;,
+ &#39;141, 19881&#39;,
+ &#39;142, 20164&#39;,
+ &#39;143, 20449&#39;,
+ &#39;144, 20736&#39;,
+ &#39;145, 21025&#39;,
+ &#39;146, 21316&#39;,
+ &#39;147, 21609&#39;,
+ &#39;148, 21904&#39;,
+ &#39;149, 22201&#39;,
+ &#39;150, 22500&#39;,
+ &#39;151, 22801&#39;,
+ &#39;152, 23104&#39;,
+ &#39;153, 23409&#39;,
+ &#39;154, 23716&#39;,
+ &#39;155, 24025&#39;,
+ &#39;156, 24336&#39;,
+ &#39;157, 24649&#39;,
+ &#39;158, 24964&#39;,
+ &#39;159, 25281&#39;,
+ &#39;160, 25600&#39;,
+ &#39;161, 25921&#39;,
+ &#39;162, 26244&#39;,
+ &#39;163, 26569&#39;,
+ &#39;164, 26896&#39;,
+ &#39;165, 27225&#39;,
+ &#39;166, 27556&#39;,
+ &#39;167, 27889&#39;,
+ &#39;168, 28224&#39;,
+ &#39;169, 28561&#39;,
+ &#39;170, 28900&#39;,
+ &#39;171, 29241&#39;,
+ &#39;172, 29584&#39;,
+ &#39;173, 29929&#39;,
+ &#39;174, 30276&#39;,
+ &#39;175, 30625&#39;,
+ &#39;176, 30976&#39;,
+ &#39;177, 31329&#39;,
+ &#39;178, 31684&#39;,
+ &#39;179, 32041&#39;,
+ &#39;180, 32400&#39;,
+ &#39;181, 32761&#39;,
+ &#39;182, 33124&#39;,
+ &#39;183, 33489&#39;,
+ &#39;184, 33856&#39;,
+ &#39;185, 34225&#39;,
+ &#39;186, 34596&#39;,
+ &#39;187, 34969&#39;,
+ &#39;188, 35344&#39;,
+ &#39;189, 35721&#39;,
+ &#39;190, 36100&#39;,
+ &#39;191, 36481&#39;,
+ &#39;192, 36864&#39;,
+ &#39;193, 37249&#39;,
+ &#39;194, 37636&#39;,
+ &#39;195, 38025&#39;,
+ &#39;196, 38416&#39;,
+ &#39;197, 38809&#39;,
+ &#39;198, 39204&#39;,
+ &#39;199, 39601&#39;,
+ &#39;200, 40000&#39;,
+ &#39;&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that the last element is an empty row.</p>
+<p>We can use the <code class="docutils literal notranslate"><span class="pre">split</span></code> method on each element of the data splitting on the <code class="docutils literal notranslate"><span class="pre">,</span></code>
+and also convert the entries to an integer.</p>
+<div class="cell tag_output_scroll docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[[</span><span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">row</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data_as_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1, 1],
+ [2, 4],
+ [3, 9],
+ [4, 16],
+ [5, 25],
+ [6, 36],
+ [7, 49],
+ [8, 64],
+ [9, 81],
+ [10, 100],
+ [11, 121],
+ [12, 144],
+ [13, 169],
+ [14, 196],
+ [15, 225],
+ [16, 256],
+ [17, 289],
+ [18, 324],
+ [19, 361],
+ [20, 400],
+ [21, 441],
+ [22, 484],
+ [23, 529],
+ [24, 576],
+ [25, 625],
+ [26, 676],
+ [27, 729],
+ [28, 784],
+ [29, 841],
+ [30, 900],
+ [31, 961],
+ [32, 1024],
+ [33, 1089],
+ [34, 1156],
+ [35, 1225],
+ [36, 1296],
+ [37, 1369],
+ [38, 1444],
+ [39, 1521],
+ [40, 1600],
+ [41, 1681],
+ [42, 1764],
+ [43, 1849],
+ [44, 1936],
+ [45, 2025],
+ [46, 2116],
+ [47, 2209],
+ [48, 2304],
+ [49, 2401],
+ [50, 2500],
+ [51, 2601],
+ [52, 2704],
+ [53, 2809],
+ [54, 2916],
+ [55, 3025],
+ [56, 3136],
+ [57, 3249],
+ [58, 3364],
+ [59, 3481],
+ [60, 3600],
+ [61, 3721],
+ [62, 3844],
+ [63, 3969],
+ [64, 4096],
+ [65, 4225],
+ [66, 4356],
+ [67, 4489],
+ [68, 4624],
+ [69, 4761],
+ [70, 4900],
+ [71, 5041],
+ [72, 5184],
+ [73, 5329],
+ [74, 5476],
+ [75, 5625],
+ [76, 5776],
+ [77, 5929],
+ [78, 6084],
+ [79, 6241],
+ [80, 6400],
+ [81, 6561],
+ [82, 6724],
+ [83, 6889],
+ [84, 7056],
+ [85, 7225],
+ [86, 7396],
+ [87, 7569],
+ [88, 7744],
+ [89, 7921],
+ [90, 8100],
+ [91, 8281],
+ [92, 8464],
+ [93, 8649],
+ [94, 8836],
+ [95, 9025],
+ [96, 9216],
+ [97, 9409],
+ [98, 9604],
+ [99, 9801],
+ [100, 10000],
+ [101, 10201],
+ [102, 10404],
+ [103, 10609],
+ [104, 10816],
+ [105, 11025],
+ [106, 11236],
+ [107, 11449],
+ [108, 11664],
+ [109, 11881],
+ [110, 12100],
+ [111, 12321],
+ [112, 12544],
+ [113, 12769],
+ [114, 12996],
+ [115, 13225],
+ [116, 13456],
+ [117, 13689],
+ [118, 13924],
+ [119, 14161],
+ [120, 14400],
+ [121, 14641],
+ [122, 14884],
+ [123, 15129],
+ [124, 15376],
+ [125, 15625],
+ [126, 15876],
+ [127, 16129],
+ [128, 16384],
+ [129, 16641],
+ [130, 16900],
+ [131, 17161],
+ [132, 17424],
+ [133, 17689],
+ [134, 17956],
+ [135, 18225],
+ [136, 18496],
+ [137, 18769],
+ [138, 19044],
+ [139, 19321],
+ [140, 19600],
+ [141, 19881],
+ [142, 20164],
+ [143, 20449],
+ [144, 20736],
+ [145, 21025],
+ [146, 21316],
+ [147, 21609],
+ [148, 21904],
+ [149, 22201],
+ [150, 22500],
+ [151, 22801],
+ [152, 23104],
+ [153, 23409],
+ [154, 23716],
+ [155, 24025],
+ [156, 24336],
+ [157, 24649],
+ [158, 24964],
+ [159, 25281],
+ [160, 25600],
+ [161, 25921],
+ [162, 26244],
+ [163, 26569],
+ [164, 26896],
+ [165, 27225],
+ [166, 27556],
+ [167, 27889],
+ [168, 28224],
+ [169, 28561],
+ [170, 28900],
+ [171, 29241],
+ [172, 29584],
+ [173, 29929],
+ [174, 30276],
+ [175, 30625],
+ [176, 30976],
+ [177, 31329],
+ [178, 31684],
+ [179, 32041],
+ [180, 32400],
+ [181, 32761],
+ [182, 33124],
+ [183, 33489],
+ [184, 33856],
+ [185, 34225],
+ [186, 34596],
+ [187, 34969],
+ [188, 35344],
+ [189, 35721],
+ [190, 36100],
+ [191, 36481],
+ [192, 36864],
+ [193, 37249],
+ [194, 37636],
+ [195, 38025],
+ [196, 38416],
+ [197, 38809],
+ [198, 39204],
+ [199, 39601],
+ [200, 40000]]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./further-information/06-working-with-files/how"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../tutorial/main.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Tutorial</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../why/main.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Further information.</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Vincent Knight<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
