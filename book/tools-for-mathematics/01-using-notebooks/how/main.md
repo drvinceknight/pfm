@@ -77,8 +77,8 @@ include various types of formatting which include:
 1. Headings;
 2. Bold and italics;
 3. Ordered and unordered lists;
-4. Code (which will only be displayed but not run);
-5. Hyperlinks
+4. [Code](how_to_include_code_in_markdown) (which will only be displayed but not run);
+5. [Hyperlinks](how_to_include_a_hyperlink_in_markdown)
 
 The syntax is relatively straightforward and the following is a good guide:
 
@@ -154,7 +154,6 @@ gives:
 $$
     \sum_{0}^{n}i
 $$
-
 
 ## Save the output in a different format
 
