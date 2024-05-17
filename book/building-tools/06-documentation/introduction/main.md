@@ -21,9 +21,5 @@ to write documentation for our code.
 ```{important}
 In this chapter we will cover:
 
-- Four components of documentation:
-    - Tutorials
-    - How to guides
-    - Explanation
-    - Reference
+- Using the [Diataxis](https://diataxis.fr) framework for documentation.
 ```
