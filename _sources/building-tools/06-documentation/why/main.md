@@ -51,7 +51,7 @@ In {cite}`martraire2019living` there are 4 properties of documentation:
 
 ## What is the purpose of the four separate sections in documentation
 
-As discussed in <https://documentation.divio.com>:
+As discussed in <https://diataxis.fr>:
 
 > "Tutorials are lessons that take the reader by the hand through a series of
 > steps to complete a project of some kind. They are what your project needs in
