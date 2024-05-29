@@ -13,7 +13,7 @@ taf: taylor-and-francis/main.pdf
 
 taylor-and-francis/main.pdf: CLEAN_LATEX
 	@echo "Compiling final latex file"
-	@cd taylor-and-francis; latexmk --xelatex main.tex > .taf.make.log 2>&1 
+	@cd taylor-and-francis; latexmk -c; latexmk --xelatex main.tex > .taf.make.log 2>&1 
 
 CLEAN_LATEX: RAW_LATEX $(CLEAN_SCRIPT)
 	@echo "Cleaning generated latex file"

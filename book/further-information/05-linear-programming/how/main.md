@@ -19,12 +19,12 @@ kernelspec:
 A general linear program of the form
 
 $$
-\begin{align}
+\begin{aligned}
 \text{minimise: } c^t x&  \\
 \text{subject to: } & \nonumber \\
 A_{\text{ub}}x&\leq b_{\text{ub}}\\
 A_{\text{eq}}x&= b_{\text{eq}}\\
-\end{align}
+\end{aligned}
 $$
 
 can be solved using:

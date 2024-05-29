@@ -16,12 +16,23 @@ def read_book(p):
         tex = re.sub(pattern, replacement, tex)
     return tex
 
+def make_replacements(tex):
+    replacements_path = pathlib.Path("./replacements/")
+    for replacements in replacements_path.glob("*/"):
+        if replacements.is_dir():
+            old = (replacements / "old.tex").read_text()
+            new = (replacements / "new.tex").read_text()
+            tex = tex.replace(old, new)
+
+    return tex
+
 
 if __name__ == "__main__":
-    starting_text = "\part{Overview}"
+    starting_text = r"\part{Overview}"
     ending_text = r"\renewcommand{\indexname}{Index}"
     book_path = pathlib.Path("./book.tex")
     tex = read_book(book_path)
+    tex = make_replacements(tex)
     index_of_end_of_preamble = tex.index(starting_text)
     index_of_end_of_book = tex.index(ending_text)
     out_path = pathlib.Path("./main.tex")

@@ -185,39 +185,35 @@ h.get_roots()
 > probability of the drops landing in an inscribed circle of radius $r$ would
 > be given by:
 
-> $$
+> $$P = \frac{\text{Area of circle}}{\text{Area of square}}=\frac{\pi r ^2}{4r^2}=\frac{\pi}{4}$$
 
-      P = \frac{\text{Area of circle}}{\text{Area of square}}=\frac{\pi r ^2}{4r^2}=\frac{\pi}{4}
+> Thus, if we can approximate $P$ then we can approximate $\pi$ as $4P$. In this
+> question we will write code to approximate $P$ using the random library.
 
-$$
+> First create the following class:
 
->  Thus, if we can approximate $P$ then we can approximate $\pi$ as $4P$. In this
->  question we will write code to approximate $P$ using the random library.
-
->  First create the following class:
-
->  ```
->  class Drop:
->      """
->      A class used to represent a random rain drop falling on a square of
->      length r.
->      """
+> ```
+> class Drop:
+>     """
+>     A class used to represent a random rain drop falling on a square of
+>     length r.
+>     """
 >
->      def __init__(self, r=1):
->          self.x = (0.5 - random.random()) * 2 * r
->          self.y = (0.5 - random.random()) * 2 * r
->          self.in_circle = (self.y) ** 2 + (self.x) ** 2 <= r ** 2
->  ```
+>     def __init__(self, r=1):
+>         self.x = (0.5 - random.random()) * 2 * r
+>         self.y = (0.5 - random.random()) * 2 * r
+>         self.in_circle = (self.y) ** 2 + (self.x) ** 2 <= r ** 2
+> ```
 
 ```{code-cell} ipython3
 import random
 
 
 class Drop:
-  """
-  A class used to represent a random rain drop falling on a square of
-  length r.
-  """
+    """
+    A class used to represent a random rain drop falling on a square of
+    length r.
+    """
 
     def __init__(self, r=1):
       self.x = (0.5 - random.random()) * 2 * r
@@ -225,8 +221,8 @@ class Drop:
       self.in_circle = (self.y) ** 2 + (self.x) ** 2 <= r ** 2
 ```
 
->  To approximate $P$ create $N=1000$ instances of Drops and count the
->  number of those that are in the circle. Use this to approximate $\pi$.
+> To approximate $P$ create $N=1000$ instances of Drops and count the
+> number of those that are in the circle. Use this to approximate $\pi$.
 
 We start by creating the required number of drops:
 
@@ -258,18 +254,18 @@ And $\pi$ can be approximated:
 ## Question 4
 
 > `4`. In a similar fashion to question 3, approximate the integral
->  $\int_{0}^11-x^2\;dx$. Recall that the integral corresponds to the area
->  under a curve.
+> $\int_{0}^11-x^2\;dx$. Recall that the integral corresponds to the area
+> under a curve.
 
 We create a different drop class changing the `in_circle` attribute to
 `under_curve` and simplifying where the `x` and `y` are sampled from.
 
 ```{code-cell} ipython3
 class Drop:
-  """
-  A class used to represent a random rain drop falling on a square of
-  length 1.
-  """
+    """
+    A class used to represent a random rain drop falling on a square of
+    length 1.
+    """
 
     def __init__(self):
       self.x = random.random()
@@ -307,4 +303,3 @@ import sympy as sym
 x = sym.Symbol("x")
 sym.integrate(1 - x ** 2, (x, 0, 1))
 ```
-$$
