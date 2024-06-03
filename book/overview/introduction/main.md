@@ -65,7 +65,7 @@ computer to carry out mathematical techniques.
 We will for example learn how to solve the above problem by instructing a
 computer which **mathematical technique** to carry out.
 
-**This book will teach us how to give the correct instructions to a
+**This book covers how to give the correct instructions to a
 computer.**
 
 The following is an example, do not worry too much about the specific code used

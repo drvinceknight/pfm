@@ -1,0 +1,152 @@
+\usepackage{minted}
+\usepackage{tikz}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{xcolor}
+\usepackage{inconsolata}
+
+\definecolor{pyincol}{RGB}{51, 110, 159}
+\definecolor{pyoutcol}{RGB}{78, 169, 244}
+\definecolor{Rincol}{RGB}{55, 151, 59}
+\definecolor{Routcol}{RGB}{132, 203, 47}
+\definecolor{bg}{RGB}{248, 248, 248}
+
+%%% Test environment
+
+\newenvironment{explanation}
+{\begin{mdframed}[nobreak=true, roundcorner=10pt]}
+{\end{mdframed}}
+
+%%% Code environments
+
+\newenvironment{code}[3]
+% The basic code environment.
+% Used to create further environments.
+%
+% Take four arguments:
+% - a string of text to appear, the title
+% - a language for syntax
+% - the color of the box
+%
+% For example:
+%
+% \begin{code}{Python input}{python}{0.4pt}{cyan!5}
+% for i in range(5):
+%   print(i)
+% end{code}
+{\begin{tcolorbox}[enhanced,
+                   colframe=#3,
+                   coltitle=white,
+                   fonttitle=\bfseries\ttfamily\Large,
+                   left=26pt,
+                   colback=bg,
+                   enlarge top by=8pt,%     equivalent to mdframed 'skipabove'
+                   enlarge bottom by=5pt,%  equivalent to mdframed 'skipbelow'
+                   title=#1,
+                   breakable=true,
+                   lines before break=6]
+ \VerbatimEnvironment
+ \begin{minted}[
+    linenos=true,
+    style=friendly,
+    firstnumber=last,
+    ]{#2}}
+{\end{minted}\end{tcolorbox}}
+
+%%%%% Python code environments
+
+\newenvironment{pyin}
+% Python input environment
+% \begin{pyin}
+% for i in range(5):
+%   print(i)
+% end{pyin}
+{
+\VerbatimEnvironment
+\begin{code}{Python input}{python}{pyincol}}
+{\end{code}}
+
+\newenvironment{pyout}
+% Python ouput environment
+% \begin{pyout}
+% 0
+% 1
+% 2
+% 3
+% 4
+% end{pyout}
+{
+\VerbatimEnvironment
+\begin{code}{Python output}{python}{pyoutcol}}
+{\end{code}}
+
+\newenvironment{pyin-no-test}
+% Python input environment that is not tested
+{
+\VerbatimEnvironment
+\begin{pyin}}
+{\end{pyin}}
+
+\newenvironment{pyout-no-test}
+% Python ouput environment that is not tested
+{
+\VerbatimEnvironment
+\begin{pyout}}
+{\end{pyout}}
+
+%%%%% R code environments
+
+\newenvironment{Rin}
+% R input environment
+% for (i in seq(0, 4)) {
+%   print(i)
+% }
+% end{pyin}
+{
+\VerbatimEnvironment
+\begin{code}{R input}{R}{Rincol}}
+{\end{code}}
+
+
+\newenvironment{Rout}
+% R output environment
+% \begin{Rout}
+% 0
+% 1
+% 2
+% 3
+% 4
+% end{Rout}
+{
+\VerbatimEnvironment
+\begin{code}{R output}{R}{Routcol}}
+{\end{code}}
+
+\newenvironment{Rin-no-test}
+% R input environment that will be skipped by doctester
+{
+\VerbatimEnvironment
+\begin{Rin}}
+{\end{Rin}}
+
+\newenvironment{Rout-no-test}
+% R output environment that will be skipped by doctester
+{
+\VerbatimEnvironment
+\begin{Rout}}
+{\end{Rout}}
+
+%%%%% Cli code environments
+
+\newenvironment{cliin}
+{
+\VerbatimEnvironment
+\begin{code}{Cli input}{bash}{white}}
+{\end{code}}
+
+
+\newenvironment{cliout}
+{
+\VerbatimEnvironment
+\begin{code}{Cli output}{bash}{white}}
+{\end{code}}
+

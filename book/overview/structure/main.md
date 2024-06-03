@@ -27,10 +27,11 @@ understanding tools that are helpful to mathematicians. In the later part of the
 book we will cover the building blocks and you will be able to build your own
 sophisticated tools.
 
-The book is in two parts:
+The book is in three parts:
 
 1. Tools for mathematics;
-2. Building tools.
+2. Building tools;
+3. Further Information.
 
 The first part of the book will not make use of any novel mathematics.
 Instead we will consider a number of mathematics problem that are often covered
@@ -38,9 +39,12 @@ in secondary school.
 
 - Algebraic manipulation
 - Calculus (differentiation and integration)
-- Permutations and combinations
+- Combinatorics (permutations and combinations)
 - Probability
 - Linear algebra
+- Sequences
+- Statistics
+- Differential equations
 
 The questions we will tackle will be familiar in their presentation and
 description. **What will be different** is that no **by hand** calculations will
