@@ -40,7 +40,7 @@ We will in fact use the second approach in the second part of this course.
 
 One strength of Jupyter are that it allows you to include communication (writing
 through markdown) with your code. This allows you to use code and describe what
-you're using it for.
+you are using it for.
 
 Another advantage is that it allows you to immediately have your output next to your input.
 
@@ -111,11 +111,12 @@ As described here <https://www.latex-project.org/about/>:
 > too much about the appearance of their documents but to concentrate on getting
 > the right content.
 
-We will learn more about $\LaTeX$ in the later part of this course but for
+We will learn more about $\LaTeX$ in the later part of this book but for
 now we only need to know that it we can use $\LaTeX$ to write an instruction
 for Jupyter to display mathematics.
 
 (why_do_we_use_brackets_instead_of_dollars_for_latex)=
+
 ## Can I use `\(` and `\)` instead of `$` for LaTeX?
 
 You will see in some places that `\(`, `\)` or `\[`, `\]` can be used as
@@ -183,5 +184,3 @@ There are two iOS apps that I am aware of for notebooks:
 
 - [Carnets](https://apps.apple.com/us/app/carnets-jupyter/id1450994949)
 - [Juno](https://juno.sh)
-
-I have experimented with Carnets but not with Juno.

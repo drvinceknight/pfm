@@ -14,8 +14,6 @@ kernelspec:
 
 # Exercises
 
-**After** completing the tutorial attempt the following exercises.
-
 **If you are not sure how to do something, have a look at the "How To" section.**
 
 1. Create a new notebook rename it "exercises". Navigate to it using your file browser to make sure you can find it.

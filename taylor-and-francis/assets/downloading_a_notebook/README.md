@@ -1,0 +1,1 @@
+A gif showing how to download a notebook from the internet.

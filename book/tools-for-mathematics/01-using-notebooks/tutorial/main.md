@@ -122,7 +122,7 @@ Let us rearrange things.
 Find a location on your computer where you want to keep the files for this
 book, using your file browser:
 
-1. Create a new directory called `cfm` (short for "Computer for Mathematics");
+1. Create a new directory called `cfm` (short for "Computing for Mathematics");
 2. Inside that directory create a new directory called `nbs` (short for
    "Notebooks");
 3. Move the `introduction.ipynb` file to this `nbs` directory.

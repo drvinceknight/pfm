@@ -101,8 +101,9 @@ Here is a brief overview of the syntax for arithmetic operations:
 - `$\frac{a}{b}$` gives $\frac{a}{b}$
 - `$a ^ b$` gives $a ^ b$
 
-The `$<expression>$` delimiters create what is called an "inline" mathematics.
-You can change the brackets to `$$<expression>$$` to give "displayed
+The `$<expression>$` delimiters create what is called an "inline" mathematics
+environment.
+You can change these to `$$<expression>$$` to give "displayed
 mathematics".
 
 We can write a matrix:
