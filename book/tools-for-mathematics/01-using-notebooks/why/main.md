@@ -16,18 +16,12 @@ kernelspec:
 
 ## Why use anaconda?
 
-Python is a free an open source piece of software. One of the main reasons for
+Python is a free and open source piece of software. One of the main reasons for
 its popularity is that there are a number of separate tools that work well with
 it, these are called libraries. Sometimes installing these libraries can require
 an understanding of some potential pitfalls. In scientific circles the Anaconda
 distribution was developed to give a single download of not only Python but a
 lot of commonly used libraries.
-
-If you want to read more about this here are some web resources:
-
-- <https://medium.com/@RustyComer/why-use-anaconda-524bb6765e4d>
-- <https://medium.com/pankajmathur/what-is-anaconda-and-why-should-i-bother-about-it-4744915bf3e6>
-- <https://www.reddit.com/r/Python/comments/betkoj/why_use_anaconda/>
 
 ## Why use Jupyter?
 
@@ -36,37 +30,22 @@ There are are variety of ways to write and run Python:
 1. Using an interactive notebook environment like Jupyter;
 2. Using an integrated development environment and/or editor.
 
-We will in fact use the second approach in the second part of this course.
-
-One strength of Jupyter are that it allows you to include communication (writing
+The second part of this book will use an editor.
+One strength of Jupyter is that it allows you to include communication (writing
 through markdown) with your code. This allows you to use code and describe what
 you are using it for.
-
 Another advantage is that it allows you to immediately have your output next to your input.
-
 There are some limitations to Jupyter as an editor which is why we will explore
 using a powerful editor in the second part of the course.
-
 In general:
 
 1. Jupyter is a fantastic way to interactively use and communicate code;
 2. Integrated development environments and/or editors are the correct tool to
    write software.
 
-In this course you will learn to use either approach in the appropriate manner
-for the right task. For the first part we will mainly be using code
-interactively and so we will use Jupyter notebooks.
-
-If you are interested here are some further resources:
-
-- Why Jupyter Notebooks Are So Popular Among Data Scientists: <https://analyticsindiamag.com/why-jupyter-notebooks-are-so-popular-among-data-scientists/>
-- 10 reasons why data scientists love Jupyter notebooks: <https://hub.packtpub.com/10-reasons-data-scientists-love-jupyter-notebooks/>
-- I don't like notebooks - Joel Grus (Allen Institute for Artificial Intelligence): <https://www.youtube.com/watch?v=7jiPeIFXb6U>
-
-Some further information on using Jupyter:
-
-- <https://jupyter-notebook-beginner-guide.readthedocs.io/>
-- <https://www.analyticsvidhya.com/blog/2018/05/starters-guide-jupyter-notebook/>
+In this book you will learn to use either approach in the appropriate manner
+for the right task. For the first part code will be used interactively and so
+you will use Jupyter notebooks.
 
 ## Why can I not double click on a Jupyter notebook file?
 
@@ -111,10 +90,6 @@ As described here <https://www.latex-project.org/about/>:
 > too much about the appearance of their documents but to concentrate on getting
 > the right content.
 
-We will learn more about $\LaTeX$ in the later part of this book but for
-now we only need to know that it we can use $\LaTeX$ to write an instruction
-for Jupyter to display mathematics.
-
 (why_do_we_use_brackets_instead_of_dollars_for_latex)=
 
 ## Can I use `\(` and `\)` instead of `$` for LaTeX?
@@ -134,13 +109,6 @@ Jupyter notebooks you need to escape the `\` and use: `\\(`, `\\)` or `\\[`,
 `\\]` instead.
 ```
 
-## Other resources for LaTeX syntax.
-
-This cheat sheet: <http://tug.ctan.org/info/undergradmath/undergradmath.pdf>
-
-This web page is my recommended set of resources for learning LaTeX:
-<https://vknight.org/tex/>.
-
 ## What is a markup language?
 
 $\LaTeX$ and markdown are both examples of what is called a **markup language**.
@@ -151,7 +119,7 @@ A markup language is a system that allows us to write content alongside
 annotations to specify how the content is to appear.
 
 This description of markdown from
-<https://www.markdownguide.org/getting-started/> is not specific to markdown but
+<https://www.markdownguide.org/getting-started/> applies
 to any markup language:
 
 > Using Markdown is different than using a WYSIWYG editor. In an application
@@ -167,20 +135,3 @@ Markup languages differ in complexity:
 
 - $\LaTeX$ is incredibly sophisticated and has a huge range of capabilities.
 - Markdown is designed to be basic with a few specific annotations to remember.
-
-## I only have a chromebook: how can I use notebooks?
-
-There are a number of cloud based services that give access to scientific Python
-environments. This medium article gives a brief review of 5 of them:
-<https://medium.com/@siddesh.001/top-5-online-free-notebook-ipynb-and-other-cloud-services-dbf9580d99e3>
-(this is dated 2018).
-
-I recommend using cocalc: <https://cocalc.com>. The free tier does have some
-limitations but it should be sufficient to be able to work through this book.
-
-## I only have a tablet: how can I use notebooks?
-
-There are two iOS apps that I am aware of for notebooks:
-
-- [Carnets](https://apps.apple.com/us/app/carnets-jupyter/id1450994949)
-- [Juno](https://juno.sh)

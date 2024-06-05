@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# How
+# How to
 
 ## Install Anaconda
 
@@ -51,7 +51,7 @@ and click on the `Run` button or use `Shift + Enter` as a keyboard shortcut.
 
 ## Carry out basic arithmetic operations
 
-The python code for the following arithmetic operations are:
+The Python code for the following arithmetic operations are:
 
 1. Addition, $2 + 2$: `2 + 2`;
 2. Subtraction, $3 - 1$: `3 - 1`;
@@ -62,7 +62,6 @@ The python code for the following arithmetic operations are:
 7. Combining operations, $\frac{2 ^ 3 + 1}{4}$: `(2 ** 3 + 1) / 4`;
 
 **Note** that instructions to a computer (through the code we write) need to be specific. For example the `^` symbol in Python does not mean exponentiation. If you were to type `2 ^ 4` you would get an error.
-
 In later chapters we will see what the specific instructions are to carry out more complex operations.
 
 ## Write markdown
@@ -70,8 +69,7 @@ In later chapters we will see what the specific instructions are to carry out mo
 To write markdown click on a cell and change the type to `Markdown`, you can do
 this by click on `Cell`, `Cell Type` or by using the scroll wheel in the menu
 bar.
-
-Markdown is a lightweight "mark up" language that allows you to write and
+Markdown is a lightweight mark up language that allows you to write and
 include various types of formatting which include:
 
 1. Headings;
@@ -80,15 +78,14 @@ include various types of formatting which include:
 4. [Code](how_to_include_code_in_markdown) (which will only be displayed but not run);
 5. [Hyperlinks](how_to_include_a_hyperlink_in_markdown)
 
-The syntax is relatively straightforward and the following is a good guide:
+A more detailed guide is given in Section~ref{}.
 
 <https://www.markdownguide.org/cheat-sheet/>
 
 ## Write basic LaTeX
 
 Jupyter notebooks allow for markdown cells to not only include markdown but also
-include mathematics using another "mark up" language called $\LaTeX$.
-
+include mathematics using another mark up language called $\LaTeX$.
 Here is a brief overview of the syntax for arithmetic operations:
 
 - `$a+b$` gives: $a + b$:
@@ -106,7 +103,7 @@ environment.
 You can change these to `$$<expression>$$` to give "displayed
 mathematics".
 
-We can write a matrix:
+You can write a matrix:
 
 ```
 $$

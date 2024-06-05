@@ -14,6 +14,10 @@ kernelspec:
 
 # Tutorial
 
+This tutorial will take the reader through an example of using Jupyter
+notebooks. Jupyter is the interface to the Python programming language used in the
+first part of this book.
+
 ## Installation
 
 1. Navigate to <https://www.anaconda.com/products/individual>.
@@ -23,15 +27,11 @@ kernelspec:
    installation process.
 
 ```{warning}
-If you have already used Python it is still recommended that you use the
+If the reader has already used Python it is still recommended that they use the
 Anaconda distribution. An explanation for this is available later.
 ```
 
 ## Starting a Jupyter notebook server
-
-We are going to use **Jupyter notebooks** for the first part of this book.
-This interface to Python works inside your web browser but does not require an
-internet connect.
 
 Open a command line tool:
 
@@ -41,15 +41,15 @@ Open a command line tool:
 2. On **MacOS** search for `terminal`. See
    {ref}`fig:starting_the_notebook_server`.
 
-In there type:
+In there type (without the `$`):
 
     $ jupyter notebook
 
-and then press `Enter` on your keyboard.
+Press `Enter` on your keyboard.
 
 ```{tip}
 Throughout this book, when there are commands to be typed in a command line
-tool I will prefix them with a `$`. Do not type the `$`.
+tool they will be prefixed with a `$`. Do not type the `$`.
 ```
 
 ```{figure} ./img/starting_the_notebook_server/main.png
@@ -70,6 +70,8 @@ Starting the notebook server on Windows
 
 This will open a new page in your browser. The url bar at the top should have
 something that looks like: `http://localhost:8888/tree`.
+This is the general interface to the Jupyter server. It shows the general file
+structure on your computer.
 
 ```{figure} ./img/the_jupyter_interface/main.png
 ---
@@ -79,12 +81,9 @@ name: fig:the_jupyter_interface_windows
 The Jupyter interface
 ```
 
-This is the general interface to the Jupyter server. It shows the general file
-structure on your computer.
-
 ## Creating a new notebook
 
-In the top right, click on the `new` button and click on `Python 3`.
+In the top right, click on the `New` button and click on `Python 3`.
 
 ```{figure} ./img/creating_a_new_notebook/main.png
 ---
@@ -105,8 +104,6 @@ name: fig:changing_notebook_name
 Changing the notebook name
 ```
 
-Once this is done let us close the notebook by closing the corresponding tab of your web browser.
-
 ## Organising our files
 
 Open your file browser:
@@ -116,9 +113,6 @@ Open your file browser:
 
 Navigate to where your notebook is (this might not be immediately evident): you
 should see a `introduction.ipynb` file.
-
-Let us rearrange things.
-
 Find a location on your computer where you want to keep the files for this
 book, using your file browser:
 
@@ -145,8 +139,7 @@ Creating a new directory on Windows
 
 ## Writing some basic Python code
 
-Go back to our Jupyter notebook server (in your browser).
-
+Go back to the Jupyter notebook server (in your browser).
 Use the interface to navigate to the `cfm` directory and inside that the `nbs`
 directory and open the `introduction.ipynb` notebook.
 
@@ -180,9 +173,9 @@ Running code
 
 We see two different things there:
 
-1. The input: `In [1]` which is the instruction to Python to use the
+1. The input: which is the instruction to Python to use the
    mathematical technique of addition to compute 2 + 2.
-2. The output: `Out [1]` showing the output that Python has returned as a result
+2. The output: showing the output that Python has returned as a result
    of the instruction.
 
 ## Writing markdown
