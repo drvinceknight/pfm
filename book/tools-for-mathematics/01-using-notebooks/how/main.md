@@ -78,9 +78,9 @@ include various types of formatting which include:
 4. [Code](how_to_include_code_in_markdown) (which will only be displayed but not run);
 5. [Hyperlinks](how_to_include_a_hyperlink_in_markdown)
 
-A more detailed guide is given in Section~ref{}.
-
-<https://www.markdownguide.org/cheat-sheet/>
+A more detailed guide for writing markdown is given in [the how to section of
+the documentation
+chapter](how_to_write_markdown).
 
 ## Write basic LaTeX
 
@@ -125,7 +125,7 @@ $$
     \end{pmatrix}
 $$
 
-We can write integrals:
+You can write integrals:
 
 ```
 $$
@@ -139,7 +139,7 @@ $$
     \int_{0}^{\infty}x dx
 $$
 
-We can write summations:
+You can write summations:
 
 ```
 $$

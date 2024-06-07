@@ -1,0 +1,1247 @@
+\chapter{Documentation}
+% \label{\detokenize{building-tools/06-documentation/introduction/main:documentation}}\label{\detokenize{building-tools/06-documentation/introduction/main::doc}}
+%
+% This is the second of three chapters that aim to move from writing code
+% that works to writing software. In this particular chapter we will consider how
+% to write documentation for our code.
+%
+% \begin{sphinxadmonition}{important}{Important:}
+%
+% In this chapter we will cover:
+% \begin{itemize}
+% \item 
+%
+% Using the \href{https://diataxis.fr}{Diataxis} framework for documentation.
+%
+% \end{itemize}
+% \end{sphinxadmonition}
+%
+%
+%
+%
+% \section{Tutorial}
+% \label{\detokenize{building-tools/06-documentation/tutorial/main:tutorial}}\label{\detokenize{building-tools/06-documentation/tutorial/main:documentation}}\label{\detokenize{building-tools/06-documentation/tutorial/main::doc}}
+%
+% In this tutorial we will make the code we will write documentation for the code
+% we wrote in the modularisation {\hyperref[\detokenize{building-tools/05-modularisation/tutorial/main:modularisation-tutorial}]{\sphinxcrossref{\DUrole{std,std-ref}{Tutorial}}}}.
+%
+%
+% There are a number of approaches to writing software documentation and
+% I recommend reading the {\hyperref[\detokenize{building-tools/06-documentation/why/main:documentation-further-information}]{\sphinxcrossref{\DUrole{std,std-ref}{Further information}}}}.
+%
+%
+% We will start by creating a new file in VScode called \texttt{README.md}.
+%
+% \begin{sphinxadmonition}{attention}{Attention:}
+%
+% We will be writing our documentation in markdown.
+% \end{sphinxadmonition}
+%
+%
+% Let us start by writing the title of our page and quick single sentence
+% description.
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% \PYG{g+gh}{\PYGZsh{} Absorption}
+%
+% Functionality to study the absorbing Markov chains.
+% \end{sphinxVerbatim}
+%
+%
+% \subsection{Writing a tutorial}
+% \label{\detokenize{building-tools/06-documentation/tutorial/main:writing-a-tutorial}}
+%
+% We will then write our first section which is a \textbf{tutorial}.
+%
+% \begin{sphinxadmonition}{attention}{Attention:}
+%
+% The goal of a tutorial is to provide a hands on introduction and demonstration
+% of the software.
+% \end{sphinxadmonition}
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{} Tutorial}
+%
+% In this tutorial we will see how to use \PYG{l+s+sb}{`absorption`} to study an absorbing
+% Markov chain. For some background information on absorbing Markov chains we
+% recommend: \PYGZlt{}https://en.wikipedia.org/wiki/Absorbing\PYGZus{}Markov\PYGZus{}chain\PYGZgt{}.
+%
+% Given a transition matrix \PYGZdl{}P\PYGZdl{} defined by:
+%
+% \PYGZdl{}\PYGZdl{}
+% p = \PYGZbs{}begin\PYGZob{}pmatrix\PYGZcb{}
+%    1/2 \PYGZam{} 1/4 \PYGZam{} 1/4\PYGZbs{}\PYGZbs{}
+%    1/3 \PYGZam{} 1/3 \PYGZam{} 1/3\PYGZbs{}\PYGZbs{}
+%    0   \PYGZam{} 0   \PYGZam{} 1
+%     \PYGZbs{}end\PYGZob{}pmatrix\PYGZcb{}
+% \PYGZdl{}\PYGZdl{}
+%
+% We will start by seeing how the chain evolves over time by starting with an
+% initial vector \PYGZdl{}\PYGZbs{}pi=(1,0,0)\PYGZdl{}. In the next code snippet we will import the
+% necessary libraries and create both \PYGZdl{}P\PYGZdl{} and \PYGZdl{}\PYGZbs{}pi\PYGZdl{}:
+%
+% \PYG{l+s+sb}{```}\PYG{l+s+sb}{python}
+% \PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+%
+% \PYG{k+kn}{import} \PYG{n+nn}{absorption}
+%
+% \PYG{n}{pi} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{)}
+% \PYG{n}{P} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{p}{[}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{]}\PYG{p}{)}
+% \PYG{l+s+sb}{```}
+%
+% We now see how the vector \PYGZdl{}\PYGZbs{}pi\PYGZdl{} changes over time:
+%
+% \PYG{l+s+sb}{```}\PYG{l+s+sb}{python}
+% \PYG{k}{for} \PYG{n}{k} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{)}\PYG{p}{:}
+%     \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{absorption}\PYG{o}{.}\PYG{n}{get\PYGZus{}long\PYGZus{}run\PYGZus{}state}\PYG{p}{(}\PYG{n}{pi}\PYG{p}{,} \PYG{n}{k}\PYG{p}{,} \PYG{n}{P}\PYG{p}{)}\PYG{p}{)}
+% \PYG{l+s+sb}{```}
+%
+% This will give:
+%
+% \PYG{l+s+sb}{```}
+% \PYG{l+s+sb}{[1. 0. 0.]}
+% \PYG{l+s+sb}{[0.5  0.25 0.25]}
+% \PYG{l+s+sb}{[0.33333333 0.20833333 0.45833333]}
+% \PYG{l+s+sb}{[0.23611111 0.15277778 0.61111111]}
+% \PYG{l+s+sb}{[0.16898148 0.1099537  0.72106481]}
+% \PYG{l+s+sb}{[0.12114198 0.0788966  0.79996142]}
+% \PYG{l+s+sb}{[0.08686986 0.05658436 0.85654578]}
+% \PYG{l+s+sb}{[0.06229638 0.04057892 0.8971247 ]}
+% \PYG{l+s+sb}{[0.0446745 0.0291004 0.9262251]}
+% \PYG{l+s+sb}{[0.03203738 0.02086876 0.94709386]}
+% \PYG{l+s+sb}{```}
+%
+% We see that, as expected over time the probability of being in the third state,
+% which is absorbing, increases.
+%
+% We can also use \PYG{l+s+sb}{`absorption`} to get the average number of steps until
+% absorption from each state:
+%
+% \PYG{l+s+sb}{```}\PYG{l+s+sb}{python}
+% \PYG{n}{absorption}\PYG{o}{.}\PYG{n}{compute\PYGZus{}t}\PYG{p}{(}\PYG{n}{P}\PYG{p}{)}
+% \PYG{l+s+sb}{```}
+%
+% This gives:
+%
+% \PYG{l+s+sb}{```}
+% \PYG{l+s+sb}{array([3.66666667, 3.33333333])}
+% \PYG{l+s+sb}{```}
+%
+% We see that the expected amounts of steps from the first state is slightly more
+% than from the second.
+% \end{sphinxVerbatim}
+%
+%
+% This \textbf{tutorial} section allows newcomers to our code to see how it is intended
+% to be used.
+%
+%
+% \subsection{Writing the how-to guides}
+% \label{\detokenize{building-tools/06-documentation/tutorial/main:writing-the-how-to-guides}}
+%
+% In the next section we will write a series of \textbf{how to} guides, this is
+% targeted
+% at someone who has perhaps worked through the tutorial already and wants to
+% directly know how to do a specific tasks.
+%
+%
+% Directly underneath what we have written so far we write:
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{} How to guides}
+%
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{}\PYGZsh{} How to compute the long run state of a system after a given number of steps}
+%
+% Given a transition matrix \PYGZdl{}P\PYGZdl{} and a state vector \PYGZdl{}\PYGZbs{}pi\PYGZdl{}, the state of the system
+% after \PYGZdl{}k\PYGZdl{} steps is given by:
+%
+% \PYG{l+s+sb}{```}\PYG{l+s+sb}{python}
+% \PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+%
+% \PYG{k+kn}{import} \PYG{n+nn}{absorption}
+%
+% \PYG{n}{pi} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{)}
+% \PYG{n}{P} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{p}{[}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{]}\PYG{p}{)}
+% \PYG{n}{absorption}\PYG{o}{.}\PYG{n}{get\PYGZus{}long\PYGZus{}run\PYGZus{}state}\PYG{p}{(}\PYG{n}{pi}\PYG{o}{=}\PYG{n}{pi}\PYG{p}{,} \PYG{n}{k}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{n}{P}\PYG{o}{=}\PYG{n}{P}\PYG{p}{)}
+% \PYG{l+s+sb}{```}
+%
+% This gives:
+%
+% \PYG{l+s+sb}{```}
+% \PYG{l+s+sb}{array([0.0019552, 0.0019552, 0.9960896])}
+% \PYG{l+s+sb}{```}
+%
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{}\PYGZsh{} How to extract the transitive state transition sub matrix \PYGZdl{}Q\PYGZdl{}}
+%
+% Given a transition matrix \PYGZdl{}P\PYGZdl{}, the sub matrix \PYGZdl{}Q\PYGZdl{} that
+% corresponds to the transitions between transitive (i.e. not absorbing) states can
+% be extracted:
+%
+% \PYG{l+s+sb}{```}\PYG{l+s+sb}{python}
+% \PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+%
+% \PYG{k+kn}{import} \PYG{n+nn}{absorption}
+%
+% \PYG{n}{P} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{p}{[}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{]}\PYG{p}{)}
+% \PYG{n}{absorption}\PYG{o}{.}\PYG{n}{extract\PYGZus{}Q}\PYG{p}{(}\PYG{n}{P}\PYG{o}{=}\PYG{n}{P}\PYG{p}{)}
+% \PYG{l+s+sb}{```}
+%
+% This gives:
+%
+% \PYG{l+s+sb}{```}
+% \PYG{l+s+sb}{array([[0.33333333, 0.33333333],}
+% \PYG{l+s+sb}{       [0.25      , 0.5       ]])}
+% \PYG{l+s+sb}{```}
+%
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{}\PYGZsh{} How to compute the fundamental matrix \PYGZdl{}N\PYGZdl{}}
+%
+% Given a transition matrix \PYGZdl{}P\PYGZdl{}, the fundamental matrix \PYGZdl{}N\PYGZdl{}
+% can be obtained:
+%
+% \PYG{l+s+sb}{```}\PYG{l+s+sb}{python}
+% \PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+%
+% \PYG{k+kn}{import} \PYG{n+nn}{absorption}
+%
+% \PYG{n}{P} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{p}{[}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{]}\PYG{p}{)}
+% \PYG{n}{Q} \PYG{o}{=} \PYG{n}{absorption}\PYG{o}{.}\PYG{n}{extract\PYGZus{}Q}\PYG{p}{(}\PYG{n}{P}\PYG{o}{=}\PYG{n}{P}\PYG{p}{)}
+% \PYG{n}{absorption}\PYG{o}{.}\PYG{n}{compute\PYGZus{}N}\PYG{p}{(}\PYG{n}{Q}\PYG{o}{=}\PYG{n}{Q}\PYG{p}{)}
+% \PYG{l+s+sb}{```}
+%
+% This gives:
+%
+% \PYG{l+s+sb}{```}
+% \PYG{l+s+sb}{array([[2.        , 1.33333333],}
+% \PYG{l+s+sb}{       [1.        , 2.66666667]])}
+% \PYG{l+s+sb}{```}
+%
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{}\PYGZsh{} How to compute the average steps until absorption}
+%
+% Given a transition matrix \PYGZdl{}P\PYGZdl{} and a state vector \PYGZdl{}\PYGZbs{}pi\PYGZdl{}, the average number of
+% steps until absorption from all states can be obtained:
+%
+% \PYG{l+s+sb}{```}\PYG{l+s+sb}{python}
+% \PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+%
+% \PYG{k+kn}{import} \PYG{n+nn}{absorption}
+%
+% \PYG{n}{P} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{p}{[}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{]}\PYG{p}{)}
+% \PYG{n}{absorption}\PYG{o}{.}\PYG{n}{compute\PYGZus{}t}\PYG{p}{(}\PYG{n}{P}\PYG{o}{=}\PYG{n}{P}\PYG{p}{)}
+% \PYG{l+s+sb}{```}
+%
+% This gives:
+%
+% \PYG{l+s+sb}{```}
+% \PYG{l+s+sb}{array([3.33333333, 3.66666667])}
+% \PYG{l+s+sb}{```}
+% \end{sphinxVerbatim}
+%
+%
+% This \textbf{how to} section is an efficient collection of recipes to be
+% able to carry out specific tasks made possible by the software.
+%
+%
+% \subsection{Writing the explanations section}
+% \label{\detokenize{building-tools/06-documentation/tutorial/main:writing-the-explanations-section}}
+%
+% In the next section we will write the \textbf{explanations} which aims to give more
+% in depth understanding not necessarily directly related to the code.
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{} Explanation}
+%
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{}\PYGZsh{} Brief overview of absorbing markov chains}
+%
+% A Markov chain with a given transition matrix \PYGZdl{}P\PYGZdl{} is a system that moves from
+% state to state randomly with the probabilities given by \PYGZdl{}P\PYGZdl{}.
+%
+% For example:
+%
+% \PYGZdl{}\PYGZdl{}
+% P = \PYGZbs{}begin\PYGZob{}pmatrix\PYGZcb{}
+%         1 / 3 \PYGZam{} 1 / 3 \PYGZam{} 1 / 3 \PYGZbs{}\PYGZbs{}
+%         0     \PYGZam{} 1     \PYGZam{} 0     \PYGZbs{}\PYGZbs{}
+%         1 / 4 \PYGZam{} 1 / 4 \PYGZam{} 1 / 2
+%     \PYGZbs{}end\PYGZob{}pmatrix\PYGZcb{}
+% \PYGZdl{}\PYGZdl{}
+%
+% The corresponding Markov chain has 3 states and:
+%
+% \PYG{k}{\PYGZhy{}}\PYG{+w}{ }\PYGZdl{}P\PYGZus{}\PYGZob{}11\PYGZcb{}=1/3\PYGZdl{} means that when in state 1 there is a 1/3 chance of staying in
+%   state 1.
+% \PYG{k}{\PYGZhy{}}\PYG{+w}{ }\PYGZdl{}P\PYGZus{}\PYGZob{}23\PYGZcb{}=0\PYGZdl{} means that when in state 2 there is a 0 chance of staying in
+%   state 1.
+% \PYG{k}{\PYGZhy{}}\PYG{+w}{ }\PYGZdl{}P\PYGZus{}\PYGZob{}22\PYGZcb{}=\PYGZdl{} actually implies that once we are in state 2 that the only next
+%   state is state 2.
+%
+% In general:
+%
+% \PYGZdl{}\PYGZdl{}
+%     P\PYGZus{}\PYGZob{}ij\PYGZcb{} \PYGZgt{} 0 \PYGZbs{}text\PYGZob{} for all \PYGZcb{}ij
+% \PYGZdl{}\PYGZdl{}
+%
+% \PYGZdl{}\PYGZdl{}
+%     \PYGZbs{}sum\PYGZus{}\PYGZob{}j=0\PYGZcb{}\PYGZca{}\PYGZob{}|P|\PYGZcb{} P\PYGZus{}\PYGZob{}ij\PYGZcb{} = 1 \PYGZbs{}text\PYGZob{} for all \PYGZcb{}i
+% \PYGZdl{}\PYGZdl{}
+%
+% If \PYGZdl{}P\PYGZus{}\PYGZob{}ii\PYGZcb{}=1\PYGZdl{} then state \PYGZdl{}i\PYGZdl{} is an absorbing state from which no further changes
+% can occur.
+%
+% In the case of absorbing markov chains there are a number of quantities that can
+% be measured.
+%
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{}\PYGZsh{} Calculating the state after a given number of iterations}
+%
+% Given a vector that describes the state of the system \PYGZdl{}\PYGZbs{}pi\PYGZdl{} and a transition
+% matrix \PYGZdl{}P\PYGZdl{}, the state of the system after \PYGZdl{}k\PYGZdl{} iterations will be given by the
+% following vector:
+%
+% \PYGZdl{}\PYGZdl{}
+%     \PYGZbs{}pi P \PYGZca{} k
+% \PYGZdl{}\PYGZdl{}
+%
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{}\PYGZsh{} The canonical form of the transition matrix}
+%
+% A transition matrix \PYGZdl{}P\PYGZdl{} is written in its canonical form when it can be written
+% as:
+%
+% \PYGZdl{}\PYGZdl{}
+%   P =
+%   \PYGZbs{}left(\PYGZbs{}begin\PYGZob{}array\PYGZcb{}\PYGZob{}c|c\PYGZcb{}
+%     Q \PYGZam{} R \PYGZbs{}\PYGZbs{}\PYGZbs{}hline
+%     0 \PYGZam{} I
+%   \PYGZbs{}end\PYGZob{}array\PYGZcb{}\PYGZbs{}right)
+% \PYGZdl{}\PYGZdl{}
+%
+% Where \PYGZdl{}Q\PYGZdl{} is the matrix of transitions between non absorbing states.
+%
+% For example, the canonical form of \PYGZdl{}P\PYGZdl{} would be:
+%
+% \PYGZdl{}\PYGZdl{}
+%     \PYGZbs{}begin\PYGZob{}pmatrix\PYGZcb{}
+%         1 / 3 \PYGZam{} 1 / 3 \PYGZam{} 1 / 3 \PYGZbs{}\PYGZbs{}
+%         1 / 4 \PYGZam{} 1 / 2 \PYGZam{} 1 / 4 \PYGZbs{}\PYGZbs{}
+%         0     \PYGZam{}  0    \PYGZam{} 1     \PYGZbs{}\PYGZbs{}
+%     \PYGZbs{}end\PYGZob{}pmatrix\PYGZcb{}
+% \PYGZdl{}\PYGZdl{}
+%
+% which would give:
+%
+% \PYGZdl{}\PYGZdl{}
+% Q = \PYGZbs{}begin\PYGZob{}pmatrix\PYGZcb{}
+%     1 / 3 \PYGZam{} 1 / 3 \PYGZbs{}\PYGZbs{}
+%     1 / 4 \PYGZam{} 1 / 2
+%     \PYGZbs{}end\PYGZob{}pmatrix\PYGZcb{}
+% \PYGZdl{}\PYGZdl{}
+%
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{}\PYGZsh{} The fundamental matrix}
+%
+% Given \PYGZdl{}Q\PYGZdl{} the fundamental matrix \PYGZdl{}N\PYGZdl{} is defined as:
+%
+% \PYGZdl{}\PYGZdl{}N = (I \PYGZhy{} Q) \PYGZca{}\PYGZob{}\PYGZhy{}1\PYGZcb{}\PYGZdl{}\PYGZdl{}
+%
+% \PYGZdl{}N\PYGZus{}\PYGZob{}ij\PYGZcb{}\PYGZdl{} corresponds to the expected number of times the chain will be in state
+% \PYGZdl{}j\PYGZdl{} given that it started in state \PYGZdl{}i\PYGZdl{}.
+%
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{}\PYGZsh{} The expected number of steps until absorption.}
+%
+% Given \PYGZdl{}N\PYGZdl{}, the expected number of steps until absorption is given by the vector:
+%
+% \PYGZdl{}\PYGZdl{}
+% t = N \PYGZbs{}mathbb\PYGZob{}1\PYGZcb{}
+% \PYGZdl{}\PYGZdl{}
+%
+% where \PYGZdl{}\PYGZbs{}mathbb\PYGZob{}1\PYGZcb{}\PYGZdl{} denotes a vector of 1s.
+% \end{sphinxVerbatim}
+%
+%
+% This \textbf{explanations} section gives background reading as to how the code works.
+%
+%
+% \subsection{Writing the reference section}
+% \label{\detokenize{building-tools/06-documentation/tutorial/main:writing-the-reference-section}}
+%
+% In the next section we will write the \textbf{reference} which aims to be a concise
+% collection of reference material.
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{} Reference}
+%
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{}\PYGZsh{} List of functionality}
+%
+% The following functions are written in \PYG{l+s+sb}{`absorption`}:
+%
+% \PYG{k}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+s+sb}{`get\PYGZus{}long\PYGZus{}run\PYGZus{}state`}
+% \PYG{k}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+s+sb}{`extract\PYGZus{}Q`}
+% \PYG{k}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+s+sb}{`compute\PYGZus{}N`}
+% \PYG{k}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+s+sb}{`compute\PYGZus{}t`}
+%
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{}\PYGZsh{} Bibliography}
+%
+% The wikipedia page on absorbing Markov chains gives a good overview of the
+% topic: \PYGZlt{}https://en.wikipedia.org/wiki/Absorbing\PYGZus{}Markov\PYGZus{}chain\PYGZgt{}
+%
+% The following text is a recommended reference on Markov chains:
+%
+% \PYG{k}{\PYGZgt{} }\PYG{g+ge}{Stewart, William J. Probability, Markov chains, queues, and simulation: the}
+% \PYG{k}{\PYGZgt{} }\PYG{g+ge}{mathematical basis of performance modelling. Princeton university press, 2009.}
+% \end{sphinxVerbatim}
+%
+%
+% Figure {\hyperref[\detokenize{building-tools/06-documentation/tutorial/main:fig-documentation-in-vscode}]{\sphinxcrossref{\DUrole{std,std-ref}{The README.md file in VScode with the rendered preview (using the Markdown all in one plugin).}}}} shows the start of the markdown file
+% in VScode alongside the preview (the \texttt{Markdown all in one} plugin ensures that
+% the mathematics is rendered see {\hyperref[\detokenize{building-tools/04-editor-and-cli/how/main:how-to-install-a-vscode-plugin}]{\sphinxcrossref{\DUrole{std,std-ref}{How to install VScode plugins}}}} for
+% information on installing plugins).
+%
+% \begin{figure}[htbp]
+% \centering
+% \capstart
+%
+% \noindent\sphinxincludegraphics[width=0.750\linewidth]{./_build/latex/main9.png}
+% \caption{The \texttt{README.md}} file in VScode with the rendered preview (using the \sphinxcode{\sphinxupquote{Markdown all in one}} plugin).}\label{\detokenize{building-tools/06-documentation/tutorial/main:fig-documentation-in-vscode}\end{figure}
+%
+%
+% Below is what the rendered documentation would look like:
+%
+%
+% \bigskip\hrule\bigskip
+%
+%
+%
+% \subsection{Documentation for \sphinxstyleliteralintitle{\sphinxupquote{absorption}}}
+% \label{\detokenize{building-tools/06-documentation/tutorial/main:documentation-for-absorption}}
+%
+% \subsubsection{Absorption}
+% \label{\detokenize{building-tools/06-documentation/tutorial/main:absorption}}
+%
+% Functionality to study the absorbing Markov chains.
+%
+%
+% \paragraph{Tutorial}
+% \label{\detokenize{building-tools/06-documentation/tutorial/main:id1}}
+%
+% In this tutorial we will see how to use \texttt{absorption} to study an absorbing
+% Markov chain. For some background information on absorbing Markov chains we
+% recommend: \url{https://en.wikipedia.org/wiki/Absorbing\_Markov\_chain}.
+%
+%
+% Given a transition matrix \(P\) defined by:
+% \begin{equation*}
+% \begin{split}
+% p = \begin{pmatrix}
+%    1/2 & 1/4 & 1/4\\
+%    1/3 & 1/3 & 1/3\\
+%    0   & 0   & 1
+%     \end{pmatrix}
+% \end{split}
+% \end{equation*}
+%
+% We will start by seeing how the chain evolves over time by starting with an
+% initial vector \(\pi=(1,0,0)\). In the next code snippet we will import the
+% necessary libraries and create both \(P\) and \(\pi\):
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% \PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+%
+% \PYG{k+kn}{import} \PYG{n+nn}{absorption}
+%
+% \PYG{n}{pi} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{)}
+% \PYG{n}{P} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{p}{[}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{]}\PYG{p}{)}
+% \end{sphinxVerbatim}
+%
+%
+% We now see how the vector \(\pi\) changes over time:
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% \PYG{k}{for} \PYG{n}{k} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{)}\PYG{p}{:}
+%     \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{absorption}\PYG{o}{.}\PYG{n}{get\PYGZus{}long\PYGZus{}run\PYGZus{}state}\PYG{p}{(}\PYG{n}{pi}\PYG{p}{,} \PYG{n}{k}\PYG{p}{,} \PYG{n}{P}\PYG{p}{)}\PYG{p}{)}
+% \end{sphinxVerbatim}
+%
+%
+% This will give:
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% \PYG{p}{[}\PYG{l+m+mf}{1.} \PYG{l+m+mf}{0.} \PYG{l+m+mf}{0.}\PYG{p}{]}
+% \PYG{p}{[}\PYG{l+m+mf}{0.5}  \PYG{l+m+mf}{0.25} \PYG{l+m+mf}{0.25}\PYG{p}{]}
+% \PYG{p}{[}\PYG{l+m+mf}{0.33333333} \PYG{l+m+mf}{0.20833333} \PYG{l+m+mf}{0.45833333}\PYG{p}{]}
+% \PYG{p}{[}\PYG{l+m+mf}{0.23611111} \PYG{l+m+mf}{0.15277778} \PYG{l+m+mf}{0.61111111}\PYG{p}{]}
+% \PYG{p}{[}\PYG{l+m+mf}{0.16898148} \PYG{l+m+mf}{0.1099537}  \PYG{l+m+mf}{0.72106481}\PYG{p}{]}
+% \PYG{p}{[}\PYG{l+m+mf}{0.12114198} \PYG{l+m+mf}{0.0788966}  \PYG{l+m+mf}{0.79996142}\PYG{p}{]}
+% \PYG{p}{[}\PYG{l+m+mf}{0.08686986} \PYG{l+m+mf}{0.05658436} \PYG{l+m+mf}{0.85654578}\PYG{p}{]}
+% \PYG{p}{[}\PYG{l+m+mf}{0.06229638} \PYG{l+m+mf}{0.04057892} \PYG{l+m+mf}{0.8971247} \PYG{p}{]}
+% \PYG{p}{[}\PYG{l+m+mf}{0.0446745} \PYG{l+m+mf}{0.0291004} \PYG{l+m+mf}{0.9262251}\PYG{p}{]}
+% \PYG{p}{[}\PYG{l+m+mf}{0.03203738} \PYG{l+m+mf}{0.02086876} \PYG{l+m+mf}{0.94709386}\PYG{p}{]}
+% \end{sphinxVerbatim}
+%
+%
+% We see that, as expected over time the probability of being in the third state,
+% which is absorbing, increases.
+%
+%
+% We can also use \texttt{absorption} to get the average number of steps until
+% absorption from each state:
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% \PYG{n}{absorption}\PYG{o}{.}\PYG{n}{compute\PYGZus{}t}\PYG{p}{(}\PYG{n}{P}\PYG{p}{)}
+% \end{sphinxVerbatim}
+%
+%
+% This gives:
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% \PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mf}{3.66666667}\PYG{p}{,} \PYG{l+m+mf}{3.33333333}\PYG{p}{]}\PYG{p}{)}
+% \end{sphinxVerbatim}
+%
+%
+% We see that the expected amounts of steps from the first state is slightly more
+% than from the second.
+%
+%
+% \paragraph{How to guides}
+% \label{\detokenize{building-tools/06-documentation/tutorial/main:how-to-guides}}
+%
+% \subparagraph{How to compute the long run state of a system after a given number of steps}
+% \label{\detokenize{building-tools/06-documentation/tutorial/main:how-to-compute-the-long-run-state-of-a-system-after-a-given-number-of-steps}}
+%
+% Given a transition matrix \(P\) and a state vector \(\pi\), the state of the system
+% after \(k\) steps is given by:
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% \PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+%
+% \PYG{k+kn}{import} \PYG{n+nn}{absorption}
+%
+% \PYG{n}{pi} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{)}
+% \PYG{n}{P} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{p}{[}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{]}\PYG{p}{)}
+% \PYG{n}{absorption}\PYG{o}{.}\PYG{n}{get\PYGZus{}long\PYGZus{}run\PYGZus{}state}\PYG{p}{(}\PYG{n}{pi}\PYG{o}{=}\PYG{n}{pi}\PYG{p}{,} \PYG{n}{k}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{n}{P}\PYG{o}{=}\PYG{n}{P}\PYG{p}{)}
+% \end{sphinxVerbatim}
+%
+%
+% This gives:
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% \PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mf}{0.0019552}\PYG{p}{,} \PYG{l+m+mf}{0.0019552}\PYG{p}{,} \PYG{l+m+mf}{0.9960896}\PYG{p}{]}\PYG{p}{)}
+% \end{sphinxVerbatim}
+%
+%
+% \subparagraph{How to extract the transitive state transition sub matrix \protect\(Q\protect\)}
+% \label{\detokenize{building-tools/06-documentation/tutorial/main:how-to-extract-the-transitive-state-transition-sub-matrix-q}}
+%
+% Given a transition matrix \(P\), the sub matrix \(Q\) that
+% corresponds to the transitions between transitive (i.e. not absorbing) states can
+% be extracted:
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% \PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+%
+% \PYG{k+kn}{import} \PYG{n+nn}{absorption}
+%
+% \PYG{n}{P} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{p}{[}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{]}\PYG{p}{)}
+% \PYG{n}{absorption}\PYG{o}{.}\PYG{n}{extract\PYGZus{}Q}\PYG{p}{(}\PYG{n}{P}\PYG{o}{=}\PYG{n}{P}\PYG{p}{)}
+% \end{sphinxVerbatim}
+%
+%
+% This gives:
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% \PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{p}{[}\PYG{l+m+mf}{0.33333333}\PYG{p}{,} \PYG{l+m+mf}{0.33333333}\PYG{p}{]}\PYG{p}{,}
+%        \PYG{p}{[}\PYG{l+m+mf}{0.25}      \PYG{p}{,} \PYG{l+m+mf}{0.5}       \PYG{p}{]}\PYG{p}{]}\PYG{p}{)}
+% \end{sphinxVerbatim}
+%
+%
+% \subparagraph{How to compute the fundamental matrix \protect\(N\protect\)}
+% \label{\detokenize{building-tools/06-documentation/tutorial/main:how-to-compute-the-fundamental-matrix-n}}
+%
+% Given a transition matrix \(P\), the fundamental matrix \(N\)
+% can be obtained:
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% \PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+%
+% \PYG{k+kn}{import} \PYG{n+nn}{absorption}
+%
+% \PYG{n}{P} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{p}{[}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{]}\PYG{p}{)}
+% \PYG{n}{Q} \PYG{o}{=} \PYG{n}{absorption}\PYG{o}{.}\PYG{n}{extract\PYGZus{}Q}\PYG{p}{(}\PYG{n}{P}\PYG{o}{=}\PYG{n}{P}\PYG{p}{)}
+% \PYG{n}{absorption}\PYG{o}{.}\PYG{n}{compute\PYGZus{}N}\PYG{p}{(}\PYG{n}{Q}\PYG{o}{=}\PYG{n}{Q}\PYG{p}{)}
+% \end{sphinxVerbatim}
+%
+%
+% This gives:
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% \PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{p}{[}\PYG{l+m+mf}{2.}        \PYG{p}{,} \PYG{l+m+mf}{1.33333333}\PYG{p}{]}\PYG{p}{,}
+%        \PYG{p}{[}\PYG{l+m+mf}{1.}        \PYG{p}{,} \PYG{l+m+mf}{2.66666667}\PYG{p}{]}\PYG{p}{]}\PYG{p}{)}
+% \end{sphinxVerbatim}
+%
+%
+% \subparagraph{How to compute the average steps until absorption}
+% \label{\detokenize{building-tools/06-documentation/tutorial/main:how-to-compute-the-average-steps-until-absorption}}
+%
+% Given a transition matrix \(P\) and a state vector \(\pi\), the average number of
+% steps until absorption from all states can be obtained:
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% \PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+%
+% \PYG{k+kn}{import} \PYG{n+nn}{absorption}
+%
+% \PYG{n}{P} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{p}{[}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{]}\PYG{p}{)}
+% \PYG{n}{absorption}\PYG{o}{.}\PYG{n}{compute\PYGZus{}t}\PYG{p}{(}\PYG{n}{P}\PYG{o}{=}\PYG{n}{P}\PYG{p}{)}
+% \end{sphinxVerbatim}
+%
+%
+% This gives:
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% \PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mf}{3.33333333}\PYG{p}{,} \PYG{l+m+mf}{3.66666667}\PYG{p}{]}\PYG{p}{)}
+% \end{sphinxVerbatim}
+%
+%
+% \paragraph{Explanation}
+% \label{\detokenize{building-tools/06-documentation/tutorial/main:explanation}}
+%
+% \subparagraph{Brief overview of absorbing markov chains}
+% \label{\detokenize{building-tools/06-documentation/tutorial/main:brief-overview-of-absorbing-markov-chains}}
+%
+% A Markov chain with a given transition matrix \(P\) is a system that moves from
+% state to state randomly with the probabilities given by \(P\).
+%
+%
+% For example:
+% \begin{equation*}
+% \begin{split}
+% P = \begin{pmatrix}
+%         1 / 3 & 1 / 3 & 1 / 3 \\
+%         0     & 1     & 0     \\
+%         1 / 4 & 1 / 4 & 1 / 2
+%     \end{pmatrix}
+% \end{split}
+% \end{equation*}
+%
+% The corresponding Markov chain has 3 states and:
+% \begin{itemize}
+% \item 
+%
+% \(P_{11}=1/3\) means that when in state 1 there is a 1/3 chance of staying in
+% state 1.
+%
+% \item 
+%
+% \(P_{23}=0\) means that when in state 2 there is a 0 chance of staying in
+% state 1.
+%
+% \item 
+%
+% \(P_{22}=\) actually implies that once we are in state 2 that the only next
+% state is state 2.
+%
+% \end{itemize}
+%
+%
+% In general:
+% \begin{equation*}
+% \begin{split}
+%     P_{ij} > 0 \text{ for all }ij
+% \end{split}
+% \end{equation*}\begin{equation*}
+% \begin{split}
+%     \sum_{j=0}^{|P|} P_{ij} = 1 \text{ for all }i
+% \end{split}
+% \end{equation*}
+%
+% If \(P_{ii}=1\) then state \(i\) is an absorbing state from which no further changes
+% can occur.
+%
+%
+% In the case of absorbing markov chains there are a number of quantities that can
+% be measured.
+%
+%
+% \subparagraph{Calculating the state after a given number of iterations}
+% \label{\detokenize{building-tools/06-documentation/tutorial/main:calculating-the-state-after-a-given-number-of-iterations}}
+%
+% Given a vector that describes the state of the system \(\pi\) and a transition
+% matrix \(P\), the state of the system after \(k\) iterations will be given by the
+% following vector:
+% \begin{equation*}
+% \begin{split}
+%     \pi P ^ k
+% \end{split}
+% \end{equation*}
+%
+% \subparagraph{The canonical form of the transition matrix}
+% \label{\detokenize{building-tools/06-documentation/tutorial/main:the-canonical-form-of-the-transition-matrix}}
+%
+% A transition matrix \(P\) is written in its canonical form when it can be written
+% as:
+% \begin{equation*}
+% \begin{split}
+%   P =
+%   \left(\begin{array}{c|c}
+%     Q & R \\\hline
+%     0 & I
+%   \end{array}\right)
+% \end{split}
+% \end{equation*}
+%
+% Where \(Q\) is the matrix of transitions between non absorbing states.
+%
+%
+% For example, the canonical form of \(P\) would be:
+% \begin{equation*}
+% \begin{split}
+%     \begin{pmatrix}
+%         1 / 3 & 1 / 3 & 1 / 3 \\
+%         1 / 4 & 1 / 2 & 1 / 4 \\
+%         0     &  0    & 1     \\
+%     \end{pmatrix}
+% \end{split}
+% \end{equation*}
+%
+% which would give:
+% \begin{equation*}
+% \begin{split}
+% Q = \begin{pmatrix}
+%     1 / 3 & 1 / 3 \\
+%     1 / 4 & 1 / 2
+%     \end{pmatrix}
+% \end{split}
+% \end{equation*}
+%
+% \subparagraph{The fundamental matrix}
+% \label{\detokenize{building-tools/06-documentation/tutorial/main:the-fundamental-matrix}}
+%
+% Given \(Q\) the fundamental matrix \(N\) is defined as:
+% \begin{equation*}
+% \begin{split}N = (I - Q) ^{-1}\end{split}
+% \end{equation*}
+%
+% \(N_{ij}\) corresponds to the expected number of times the chain will be in state
+% \(j\) given that it started in state \(i\).
+%
+%
+% \subparagraph{The expected number of steps until absorption.}
+% \label{\detokenize{building-tools/06-documentation/tutorial/main:the-expected-number-of-steps-until-absorption}}
+%
+% Given \(N\), the expected number of steps until absorption is given by the vector:
+% \begin{equation*}
+% \begin{split}
+% t = N \mathbb{1}
+% \end{split}
+% \end{equation*}
+%
+% where \(\mathbb{1}\) denotes a vector of 1s.
+%
+%
+% \paragraph{Reference}
+% \label{\detokenize{building-tools/06-documentation/tutorial/main:reference}}
+%
+% \subparagraph{List of functionality}
+% \label{\detokenize{building-tools/06-documentation/tutorial/main:list-of-functionality}}
+%
+% The following functions are written in \texttt{absorption}:
+% \begin{itemize}
+% \item 
+%
+% \texttt{get\_long\_run\_state}
+%
+% \item 
+%
+% \texttt{extract\_Q}
+%
+% \item 
+%
+% \texttt{compute\_N}
+%
+% \item 
+%
+% \texttt{compute\_t}
+%
+% \end{itemize}
+%
+%
+% \subparagraph{Bibliography}
+% \label{\detokenize{building-tools/06-documentation/tutorial/main:bibliography}}
+%
+% The wikipedia page on absorbing Markov chains gives a good overview of the
+% topic: \url{https://en.wikipedia.org/wiki/Absorbing\_Markov\_chain}
+%
+%
+% The following text is a recommended reference on Markov chains:
+% \begin{quote}
+%
+%
+% Stewart, William J. Probability, Markov chains, queues, and simulation: the
+% mathematical basis of performance modelling. Princeton university press, 2009.
+% \end{quote}
+%
+%
+%
+%
+% \section{How}
+% \label{\detokenize{building-tools/06-documentation/how/main:how}}\label{\detokenize{building-tools/06-documentation/how/main::doc}}
+%
+% \subsection{How to write documentation}
+% \label{\detokenize{building-tools/06-documentation/how/main:how-to-write-documentation}}
+%
+% Follow the Diataxis framework for documentation.
+%
+%
+% This involves separating your documentation in to 4 different sections based on
+% separate aims for readers.
+% \begin{itemize}
+% \item 
+%
+% {\hyperref[\detokenize{building-tools/06-documentation/how/main:how-to-write-a-tutorial}]{\sphinxcrossref{\DUrole{std,std-ref}{Tutorial}}}}: for learning.
+%
+% \item 
+%
+% {\hyperref[\detokenize{building-tools/06-documentation/how/main:how-to-write-a-how-to-guide}]{\sphinxcrossref{\DUrole{std,std-ref}{How to guides}}}}: to achieve a specific goal.
+%
+% \item 
+%
+% {\hyperref[\detokenize{building-tools/06-documentation/how/main:how-to-write-an-explanation-section}]{\sphinxcrossref{\DUrole{std,std-ref}{Explanation}}}}: to understand.
+%
+% \item 
+%
+% {\hyperref[\detokenize{building-tools/06-documentation/how/main:how-to-write-a-reference-section}]{\sphinxcrossref{\DUrole{std,std-ref}{Reference}}}}: to find information.
+%
+% \end{itemize}
+%
+%
+% \subsubsection{How to write a tutorial}
+% \label{\detokenize{building-tools/06-documentation/how/main:how-to-write-a-tutorial}}\label{\detokenize{building-tools/06-documentation/how/main:id1}}
+%
+% A tutorial should include step by step instructions with expected behaviours.
+% This should not focus on any deeper explanation.
+%
+%
+% An analogy of this is teaching a young toddler to build a toy train
+% track. They do not need to know the physics related to how the train will go
+% through the track. They need only to see how to lay the track pieces.
+%
+%
+% \subsubsection{How to write a how to guide}
+% \label{\detokenize{building-tools/06-documentation/how/main:how-to-write-a-how-to-guide}}\label{\detokenize{building-tools/06-documentation/how/main:id2}}
+%
+% A how to guide should provide a quick and to the point description of how to
+% solve a specific problem.
+%
+%
+% An analogy of this would be a recipe. The recipe will not necessarily explain
+% how to chop an onion and/or why we are chopping an onion it will tell you
+% to chop an onion as a step of cooking a particular meal.
+%
+%
+% \subsubsection{How to write an explanation section}
+% \label{\detokenize{building-tools/06-documentation/how/main:how-to-write-an-explanation-section}}\label{\detokenize{building-tools/06-documentation/how/main:id3}}
+%
+% The explanation section should provide a deeper understanding of the concepts
+% under the code.
+%
+%
+% An analogy of this again related to a recipe would be a book on the chemistry of
+% taste and why a chopped onion adds a specific type of flavour to a meal.
+%
+%
+% \subsubsection{How to write a reference section}
+% \label{\detokenize{building-tools/06-documentation/how/main:how-to-write-a-reference-section}}\label{\detokenize{building-tools/06-documentation/how/main:id4}}
+%
+% The reference section should provide an overview of the specific tools, commands
+% and indeed place for background reading as well (although this can also be
+% referred to in the explanation section).
+%
+\subsection{Write markdown}
+\label{sec:how_to_write_markdown}
+% \subsection{How to include section headers in markdown}
+% \label{\detokenize{building-tools/06-documentation/how/main:how-to-include-section-headers-in-markdown}}\label{\detokenize{building-tools/06-documentation/how/main:id5}}
+%
+% To include a section header in markdown use \texttt{\#}}. The number of \sphinxcode{\sphinxupquote{\#} corresponds
+% to the level of the section header.
+%
+% \begin{sphinxadmonition}{tip}{Tip:}
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% \PYG{g+gh}{\PYGZsh{} Section}
+% \end{sphinxVerbatim}
+% \end{sphinxadmonition}
+%
+%
+% For example:
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% \PYG{g+gh}{\PYGZsh{} The absorption library}
+%
+% Functionality to study the absorbing Markov chains.
+%
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{} Tutorial}
+% \end{sphinxVerbatim}
+%
+%
+% \subsection{How to include code in markdown}
+% \label{\detokenize{building-tools/06-documentation/how/main:how-to-include-code-in-markdown}}\label{\detokenize{building-tools/06-documentation/how/main:id6}}
+%
+% To include code in markdown use three ` marks followed by the name of the
+% language:
+%
+% \begin{sphinxadmonition}{tip}{Tip:}
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% ```\PYGZlt{}language\PYGZgt{}
+%
+% \PYGZlt{}code\PYGZgt{}
+% ```
+% \end{sphinxVerbatim}
+% \end{sphinxadmonition}
+%
+%
+% For example:
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% ```python
+% import sympy as sym
+%
+% x = sym.Symbol(\PYGZdq{}x\PYGZdq{})
+% ```
+% \end{sphinxVerbatim}
+%
+%
+% Would render as:
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% \PYG{k+kn}{import} \PYG{n+nn}{sympy} \PYG{k}{as} \PYG{n+nn}{sym}
+%
+% \PYG{n}{x} \PYG{o}{=} \PYG{n}{sym}\PYG{o}{.}\PYG{n}{Symbol}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{x}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+% \end{sphinxVerbatim}
+%
+%
+% It is also possible to include code in markdown using an indented block:
+%
+%
+% For example:
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% Here is some code:
+%
+%     import sympy as sym
+%
+%     x = sym.Symbol(\PYGZdq{}x\PYGZdq{})
+% \end{sphinxVerbatim}
+%
+%
+% Would render as:
+%
+%
+% \bigskip\hrule\bigskip
+%
+%
+%
+% Here is some code:
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% import sympy as sym
+%
+% x = sym.Symbol(\PYGZdq{}x\PYGZdq{})
+% \end{sphinxVerbatim}
+%
+%
+% \bigskip\hrule\bigskip
+%
+%
+% \begin{sphinxadmonition}{attention}{Attention:}
+%
+% Using an indented block does not allow you to specify the language and can lead
+% to mistake when combining with other nested statement.
+% \end{sphinxadmonition}
+%
+%
+% \subsection{How to include a hyperlink in markdown}
+% \label{\detokenize{building-tools/06-documentation/how/main:how-to-include-a-hyperlink-in-markdown}}\label{\detokenize{building-tools/06-documentation/how/main:id7}}
+%
+% To include a hyperlink in markdown use \texttt{{[}{]}()}
+% language:
+%
+% \begin{sphinxadmonition}{tip}{Tip:}
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% [\PYG{n+nt}{text}](\PYG{n+na}{url})
+% \end{sphinxVerbatim}
+% \end{sphinxadmonition}
+%
+%
+% For example:
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% The [\PYG{n+nt}{Online Encyclopedia of Integer Sequences}](\PYG{n+na}{https://oeis.org}) is a good resources for studying
+% resources.
+% \end{sphinxVerbatim}
+%
+%
+% \subsection{How to include an image in markdown}
+% \label{\detokenize{building-tools/06-documentation/how/main:how-to-include-an-image-in-markdown}}\label{\detokenize{building-tools/06-documentation/how/main:id8}}
+%
+% To include an image in markdown use \texttt{!{[}{]}()}
+% language:
+%
+% \begin{sphinxadmonition}{tip}{Tip:}
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% ![\PYG{n+nt}{caption}](\PYG{n+na}{path})
+% \end{sphinxVerbatim}
+% \end{sphinxadmonition}
+%
+%
+% For example:
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% Here is an image:
+%
+% ![\PYG{n+nt}{An image}](\PYG{n+na}{image.jpg})
+% \end{sphinxVerbatim}
+%
+% \begin{sphinxadmonition}{attention}{Attention:}
+%
+% If the image file is not located in the same directory as the markdown file the
+% path to the file must be correct.
+% \end{sphinxadmonition}
+%
+%
+%
+%
+% \section{Exercises}
+% \label{\detokenize{building-tools/06-documentation/exercises/main:exercises}}\label{\detokenize{building-tools/06-documentation/exercises/main:documentation-exercises}}\label{\detokenize{building-tools/06-documentation/exercises/main::doc}}
+%
+% \textbf{After} completing the tutorial attempt the following exercises.
+%
+%
+% \textbf{If you are not sure how to do something, have a look at the “How To” section.}
+%
+%
+% Write documentation for the \texttt{statistics.py} file written in the exercises of
+% {\hyperref[\detokenize{building-tools/05-modularisation/exercises/main:modularisation-exercises}]{\sphinxcrossref{\DUrole{std,std-ref}{Modularisation Exercises}}}}.
+%
+%
+%
+%
+% \section{Solutions}
+% \label{\detokenize{building-tools/06-documentation/solutions/main:solutions}}\label{\detokenize{building-tools/06-documentation/solutions/main::doc}}\begin{quote}
+%
+%
+% Write documentation for the \texttt{statistics.py} file written in the exercises of
+% {\hyperref[\detokenize{building-tools/05-modularisation/exercises/main:modularisation-exercises}]{\sphinxcrossref{\DUrole{std,std-ref}{Modularisation Exercises}}}}.
+% \end{quote}
+%
+%
+% We put the following in a \texttt{README.md} file:
+%
+% \begin{sphinxVerbatim}[commandchars=\\\{\}]
+% \PYG{g+gh}{\PYGZsh{} Stats}
+%
+% Functionality for basic statistical operations.
+%
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{} Tutorial}
+%
+% In this tutorial we will see how to use \PYG{l+s+sb}{`stats.py`} to compute the mean and
+% population variance of the following set of data:
+%
+% \PYG{l+s+sb}{```}
+% \PYG{l+s+sb}{x = (1, 2, 3, 1, 1, 1, 2, 3, 54, 5, 6, 70, 10, 12, 10)}
+% \PYG{l+s+sb}{```}
+%
+% First we import the library:
+%
+%
+% \PYG{l+s+sb}{```}\PYG{l+s+sb}{python}
+% \PYG{k+kn}{import} \PYG{n+nn}{stats}
+% \PYG{l+s+sb}{```}
+%
+% Next let us define the data:
+%
+% \PYG{l+s+sb}{```}\PYG{l+s+sb}{python}
+% \PYG{n}{x} \PYG{o}{=} \PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{54}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{,} \PYG{l+m+mi}{70}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{12}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{)}
+% \PYG{l+s+sb}{```}
+%
+% To view the mean we use \PYG{l+s+sb}{`stats.get\PYGZus{}mean`}:
+%
+% \PYG{l+s+sb}{```}\PYG{l+s+sb}{python}
+% \PYG{n}{stats}\PYG{o}{.}\PYG{n}{get\PYGZus{}mean}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}
+% \PYG{l+s+sb}{```}
+%
+% To view the population variance we use \PYG{l+s+sb}{`stats.get\PYGZus{}population\PYGZus{}variance`}:
+%
+% \PYG{l+s+sb}{```}\PYG{l+s+sb}{python}
+% \PYG{n}{stats}\PYG{o}{.}\PYG{n}{get\PYGZus{}population\PYGZus{}variance}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}
+% \PYG{l+s+sb}{```}
+%
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{} How to guide}
+%
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{}\PYGZsh{} How to compute a mean}
+%
+% To compute a mean we use \PYG{l+s+sb}{`stats.get\PYGZus{}mean`}:
+%
+% \PYG{l+s+sb}{```}\PYG{l+s+sb}{python}
+% \PYG{k+kn}{import} \PYG{n+nn}{stats}
+%
+% \PYG{n}{stats}\PYG{o}{.}\PYG{n}{get\PYGZus{}mean}\PYG{p}{(}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{)}\PYG{p}{)}
+% \PYG{l+s+sb}{```}
+%
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{}\PYGZsh{} How to compute population variance}
+%
+% To compute a mean we use \PYG{l+s+sb}{`stats.get\PYGZus{}population\PYGZus{}variance`}:
+%
+% \PYG{l+s+sb}{```}\PYG{l+s+sb}{python}
+% \PYG{k+kn}{import} \PYG{n+nn}{stats}
+%
+% \PYG{n}{stats}\PYG{o}{.}\PYG{n}{get\PYGZus{}population\PYGZus{}variance}\PYG{p}{(}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{)}\PYG{p}{)}
+% \PYG{l+s+sb}{```}
+%
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{} Explanation}
+%
+% The mean is calculated using the following formula:
+%
+% \PYGZdl{}\PYGZdl{}
+%  \PYGZbs{}bar x \PYGZbs{}frac\PYGZob{}\PYGZbs{}sum\PYGZus{}\PYGZob{}i=1\PYGZcb{}\PYGZca{}\PYGZob{}N\PYGZcb{} x\PYGZus{}i\PYGZcb{}\PYGZob{}N\PYGZcb{}
+% \PYGZdl{}\PYGZdl{}
+%
+%
+% The population variance is defined by:
+%
+% \PYGZdl{}\PYGZdl{}
+%  \PYGZbs{}sigma \PYGZca{} 2 = \PYGZbs{}frac\PYGZob{}\PYGZbs{}sum\PYGZus{}\PYGZob{}i=1\PYGZcb{}\PYGZca{}\PYGZob{}N\PYGZcb{} (x\PYGZus{}i \PYGZhy{} \PYGZbs{}bar x) \PYGZca{} 2\PYGZcb{}\PYGZob{}N\PYGZcb{}
+% \PYGZdl{}\PYGZdl{}
+%
+% Note that the population variance differs from the sample variance.
+%
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{} Reference}
+%
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{}\PYGZsh{} List of functionality}
+%
+% The following functions are written in \PYG{l+s+sb}{`absorption`}:
+%
+% \PYG{k}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+s+sb}{`get\PYGZus{}mean`}
+% \PYG{k}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+s+sb}{`get\PYGZus{}population\PYGZus{}variance`}
+%
+% \PYG{g+gu}{\PYGZsh{}\PYGZsh{}\PYGZsh{} Bibliography}
+%
+% The wikipedia page on the mean and population variance gives a good overview of the
+% topic:
+%
+% \PYG{k}{\PYGZhy{}}\PYG{+w}{ }Mean: \PYGZlt{}https://en.wikipedia.org/wiki/Mean\PYGZsh{}Arithmetic\PYGZus{}Mean\PYGZus{}(AM)\PYGZgt{}
+% \PYG{k}{\PYGZhy{}}\PYG{+w}{ }Population variance: \PYGZlt{}https://en.wikipedia.org/wiki/Variance\PYGZsh{}Population\PYGZus{}variance\PYGZgt{}
+%
+% This introductory statistics text book is recommended reading:
+%
+% \PYG{k}{\PYGZgt{} }\PYG{g+ge}{Ross, Sheldon M. Introductory statistics. Academic Press, 2017.}
+% \end{sphinxVerbatim}
+%
+%
+%
+%
+% \section{Further information}
+% \label{\detokenize{building-tools/06-documentation/why/main:further-information}}\label{\detokenize{building-tools/06-documentation/why/main:documentation-further-information}}\label{\detokenize{building-tools/06-documentation/why/main::doc}}
+%
+% \subsection{What is documentation}
+% \label{\detokenize{building-tools/06-documentation/why/main:what-is-documentation}}
+%
+% Documentation can have many different interpretations. A good definition is
+% given in {[}\hyperlink{cite.zbibliography:id4}{Martraire, 2019}{]}:
+% \begin{quote}
+%
+%
+% The process of transferring valuable knowledge to other people now and also to
+% people in the future.
+% \end{quote}
+%
+% \begin{sphinxadmonition}{note}{Note:}
+%
+% It is important to realise that the target of the documentation can be the
+% writer of the software itself at a future date.
+% \end{sphinxadmonition}
+%
+%
+% There are two types of documentation:
+% \begin{itemize}
+% \item 
+%
+% \textbf{Internal documentation} which includes things like docstrings and a good
+% choice of variable name.
+%
+% \item 
+%
+% \textbf{External documentation} which includes things like \texttt{README.md} and other
+% separate documentation.
+%
+% \end{itemize}
+%
+%
+% For a software project to be well documented it needs \textbf{both} internal and
+% external documentation.
+%
+%
+% In {[}\hyperlink{cite.zbibliography:id4}{Martraire, 2019}{]} there are 4 properties of documentation:
+% \begin{itemize}
+% \item 
+%
+% Reliable: it needs to be accurate.
+%
+% \item 
+%
+% Low effort: it should require minimal effort when changes are made to the code
+% base.
+%
+% \item 
+%
+% Collaborative: it should be a tool from which collaboration can occur.
+%
+% \item 
+%
+% Insightful: it should give information not only to be able to use the code but
+% also to understand specific reasons why certain decisions have been made as to
+% its design.
+%
+% \end{itemize}
+%
+%
+% \subsection{What is the purpose of the four separate sections in documentation}
+% \label{\detokenize{building-tools/06-documentation/why/main:what-is-the-purpose-of-the-four-separate-sections-in-documentation}}
+%
+% As discussed in \url{https://diataxis.fr}:
+% \begin{quote}
+%
+%
+% “Tutorials are lessons that take the reader by the hand through a series of
+% steps to complete a project of some kind. They are what your project needs in
+% order to show a beginner that they can achieve something with it.”
+% \end{quote}
+% \begin{quote}
+%
+%
+% “How-to guides take the reader through the steps required to solve a
+% real-world problem”
+% \end{quote}
+% \begin{quote}
+%
+%
+% “Reference guides are technical descriptions of the machinery and how to
+% operate it.”
+% \end{quote}
+% \begin{quote}
+%
+%
+% “Explanation, or discussions, clarify and illuminate a particular topic. They
+% broaden the documentation’s coverage of a topic.”
+% \end{quote}
+%
+%
+% It is natural when describing a project for the boundaries between these four
+% topics to become fuzzy. Thus, having them explicitly in four separate sections
+% ensures the reader is able to specifically find what they need.
+%
+%
+% \subsection{What alternatives are there to writing documentation in \sphinxstyleliteralintitle{\sphinxupquote{README.md}}}
+% \label{\detokenize{building-tools/06-documentation/why/main:what-alternatives-are-there-to-writing-documentation-in-readme-md}}
+%
+% A single \texttt{README.md} file is a good way to start documenting code. However as a
+% project grows it could be beneficial to use some other tools. One such example
+% of this is to use \texttt{sphinx}: \url{https://www.sphinx-doc.org/en/}. This uses a
+% different markup language called \sphinxstyleemphasis{restructured text}
+% \url{https://docutils.sourceforge.io/rst.html} and helps build more complex
+% documents but also interfaces to the code itself if necessary. So for example it
+% is possible to include the code docstrings directly in the documentation (a good
+% way of adding to the reference section).
