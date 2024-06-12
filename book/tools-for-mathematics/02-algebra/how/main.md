@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# How
+# How to
 
 ## How to create a symbolic numeric value
 
@@ -34,7 +34,7 @@ value
 ```
 
 ```{attention}
-If we combine a symbolic value with a non symbolic value it will automatically
+If you combine a symbolic value with a non symbolic value it will automatically
 give a symbolic value:
 ```
 
@@ -42,7 +42,7 @@ give a symbolic value:
 1 / value
 ```
 
-## How to get the numerical value of a symbolic expression
+## Get the numerical value of a symbolic expression
 
 We can get the numerical value of a symbolic value using `float` or `int`:
 
@@ -59,7 +59,7 @@ We can get the numerical value of a symbolic value using `float` or `int`:
   ```
   ````
 
-For example, let us create a symbolic numeric variable with value
+For example, to create a symbolic numeric variable with value
 \\(\frac{1}{5}\\):
 
 ```{code-cell} ipython3
@@ -73,7 +73,7 @@ To get the numerical value:
 float(value)
 ```
 
-If we wanted the integer value:
+To get the integer value:
 
 ```{code-cell} ipython3
 int(value)
@@ -85,7 +85,7 @@ This is not rounding to the nearest integer. It is returning the integer part.
 
 ## How to factor an expression
 
-We use the `sympy.factor` tool to factor expressions.
+Use the `sympy.factor` tool to factor expressions.
 
 ````{tip}
 ```
@@ -139,7 +139,7 @@ more beneficial to use `sympy.expand` and/or `sympy.factor`.
 
 ## How to solve an equation
 
-We use the `sympy.solveset` tool to solve an equation. It takes two values as
+Use the `sympy.solveset` tool to solve an equation. It takes two values as
 inputs. The first is either:
 
 - An expression for which a root is to be found
@@ -198,7 +198,7 @@ expression.subs({variable: value})
 It is possible to pass multiple variables at a time.
 ```
 
-For example we can substitute the values for \\(a, b, c\\) in to our quadratic:
+For example to substitute the values for \\(a, b, c\\) in to the quadratic:
 
 ```{code-cell} ipython3
 quadratic = a * x ** 2 + b * x + c

@@ -14,10 +14,6 @@ kernelspec:
 
 # Exercises
 
-**After** completing the tutorial attempt the following exercises.
-
-**If you are not sure how to do something, have a look at the "How To" section.**
-
 1. Simplify the following expressions:
    1. $\frac{3}{\sqrt{3}}$
    2. $\frac{2 ^ {78}}{2 ^ {12}2^{-32}}$

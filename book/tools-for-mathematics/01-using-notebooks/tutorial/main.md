@@ -180,9 +180,8 @@ We see two different things there:
 
 ## Writing markdown
 
-One of the reasons for using Jupyter notebooks is that it allows us to include
+One of the reasons for using Jupyter notebooks is that it allows a user to include
 both code and communication using something called `markdown`.
-
 Create a new cell and change the cell type to `Markdown`. Now write the
 following in there:
 
@@ -210,9 +209,7 @@ Rendering markdown
 Click on `File` and `Download As` this brings up a number of formats that
 Jupyter notebooks can be exported to. Some of these might need other tools
 installed on your computer but a portable option is `HTML`.
-
 Click on `HTML (.html)`.
-
 Now use your file browser and open the downloaded file. This will open in your
 browser a static version of the file you have been working on. This is a helpful
 way to share your work with someone who might not have Jupyter (or even Python).
