@@ -45,7 +45,7 @@ sym.diff(expression, x, 2)
 
 ## Calculate the indefinite integral of an expression.
 
-We can calculate the indefinite integral of an expression using
+You can calculate the indefinite integral of an expression using
 `sympy.integrate`. Which takes an expression and a variable.
 
 ````{tip}
@@ -97,7 +97,7 @@ sym.oo
 
 ## Calculate limits
 
-We can calculate limits using `sympy.limit`. The first argument is the
+You can calculate limits using `sympy.limit`. The first argument is the
 expression, then the variable and finally the expression the variable tends to.
 
 ````{tip}

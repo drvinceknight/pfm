@@ -14,7 +14,7 @@ kernelspec:
 
 # Further information
 
-## Why are we not commenting our code?
+## Why does this book not discuss commenting of code?
 
 In Python it is possible to write statements that are ignored using the `#`
 symbol. This creates something called a "comment". For example:
@@ -27,14 +27,14 @@ Comments like these often do not add to the readability of the code. In fact
 they can make the code less readable or at worse confusing {cite}`martin2009clean`.
 
 In this section of the book there is in fact no need for comments like this as
-we are mainly using tools that are well documented. Furthermore when using
-Jupyter notebooks we can add far more to the readbility of the code by adding
+you are mainly using tools that are well documented. Furthermore when using
+Jupyter notebooks you can add far more to the readability of the code by adding
 prose alongside our code instead of using small brief inline comments.
 
 This does not mean that readability of code is not important.
 
 ```{important}
-Being able to read and understand the code we write is important.
+Being able to read and understand written code is important.
 ```
 
 In {ref}`probability` we will start to write our own functions and emphasis will
@@ -68,5 +68,5 @@ multiplication instead. So for clarity it is preferred to use `@` throughout.
 `numpy` is one of the most popular and important libraries in the Python
 ecosystem. It is in fact the best library to use when doing linear algebra as it
 is computationally efficient, **however** it cannot handle symbolic variables
-which is why we are seeing how to use `Sympy` here. {ref}`numpy` gives an
+which is why you are seeing how to use `Sympy` here. {ref}`numpy` gives an
 introduction to `numpy`.

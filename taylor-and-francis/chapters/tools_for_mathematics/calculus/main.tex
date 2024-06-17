@@ -1,0 +1,794 @@
+\chapter{Calculus}
+\label{\detokenize{tools-for-mathematics/03-calculus/introduction/main:calculus}}\label{\detokenize{tools-for-mathematics/03-calculus/introduction/main::doc}}
+
+As of 2020, the A-level syllabus includes Calculus which
+is described 
+as:
+
+\begin{quote}
+
+
+Calculus: this is a fundamental element which describes change in dynamic
+situations and underlines the links between functions and graphs.
+\end{quote}
+
+
+In practice this often means:
+\begin{itemize}
+\item 
+
+taking limits of functions;
+
+\item 
+
+differentiating functions;
+
+\item 
+
+integrating functions.
+
+\end{itemize}
+
+
+Here you will see how to instruct a computer to carry out these techniques.
+
+
+
+In this chapter you will cover:
+\begin{itemize}
+\item 
+
+Taking limits.
+
+\item 
+
+Differentiating functions.
+
+\item 
+
+Computing definite and indefinite integrals.
+
+\end{itemize}
+
+
+
+
+
+\section{Tutorial}
+\label{\detokenize{tools-for-mathematics/03-calculus/tutorial/main:tutorial}}\label{\detokenize{tools-for-mathematics/03-calculus/tutorial/main::doc}}
+
+You will solve the following problem using a computer to assist with the
+technical aspects:
+
+Consider the function \(f(x)= \frac{24 x \left(a - 4 x\right) + 2 \left(a - 8 x\right) \left(b - 4 x\right)}{\left(b - 4 x\right)^{4}}\)
+\begin{enumerate}
+
+\item 
+
+Given that \(\frac{df}{dx}|_{x=0}=0\), \(\frac{d^2f}{dx^2}|_{x=0}=-1\) and that \(b>0\) find the values of \(a\) and \(b\).
+
+\item 
+
+For the specific values of \(a\) and \(b\) find:
+\begin{enumerate}
+
+\item 
+
+\(\lim_{x\to 0}f(x)\);
+
+\item 
+
+\(\lim_{x\to \infty}f(x)\);
+
+\item 
+
+\(\int f(x) dx\);
+
+\item 
+
+\(\int_{5}^{20} f(x) dx\).
+
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+Sympy is once again the library you will use for this.
+You will start by creating a variable \texttt{expression} that has the value of the expression of \(f(x)\):
+
+
+
+
+\begin{pyin}
+import sympy as sym
+
+x = sym.Symbol("x")
+a = sym.Symbol("a")
+b = sym.Symbol("b")
+expression = (24 * x * (a - 4 * x) + 2 * (a - 8 * x) * (b - 4 * x)) / ((b - 4 * x) ** 4)
+expression
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \frac{24 x \left(a - 4 x\right) + \left(2 a - 16 x\right) \left(b - 4 x\right)}{\left(b - 4 x\right)^{4}}\end{split}
+\end{equation*}
+
+You will use \texttt{sympy.diff} to calculate the derivative. This tool takes two inputs:
+\begin{itemize}
+\item 
+
+the first is the expression you are differentiating. Essentially this is the numerator of \(\frac{df}{dx}\).
+
+\item 
+
+the second is the variable you are differentiating with respect to. This is the denominator of \(\frac{df}{dx}\).
+
+\end{itemize}
+
+
+
+You have imported \texttt{import sympy as sym} so you are going to write \texttt{sym.diff}:
+
+
+
+
+
+\begin{pyin}
+derivative = sym.diff(expression, x)
+derivative
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \frac{16 a - 16 b - 64 x}{\left(b - 4 x\right)^{4}} + \frac{16 \cdot \left(24 x \left(a - 4 x\right) + \left(2 a - 16 x\right) \left(b - 4 x\right)\right)}{\left(b - 4 x\right)^{5}}\end{split}
+\end{equation*}
+
+
+
+
+Factorise that to make it slightly clearer:
+
+
+
+
+\begin{pyin}
+sym.factor(derivative)
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \frac{16 \left(- 3 a b - 12 a x + b^{2} + 16 b x + 16 x^{2}\right)}{\left(- b + 4 x\right)^{5}}\end{split}
+\end{equation*}
+
+You will now create the first equation, which is obtained by substituting \(x=0\)
+in to the value of the derivative and equating that to \(0\):
+
+
+
+
+\begin{pyin}
+first_equation = sym.Eq(derivative.subs({x: 0}), 0)
+first_equation
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \frac{32 a}{b^{4}} + \frac{16 a - 16 b}{b^{4}} = 0\end{split}
+\end{equation*}
+
+
+
+
+Factor that equation:
+
+
+
+
+\begin{pyin}
+sym.factor(first_equation)
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \frac{16 \cdot \left(3 a - b\right)}{b^{4}} = 0\end{split}
+\end{equation*}
+
+
+
+
+Now you are going to create the second equation, substituting \(x=0\) in to the
+value of the second derivative. Calculate the second derivative by passing a
+third (optional) input to \texttt{sym.diff}:
+
+
+
+
+\begin{pyin}
+second_derivative = sym.diff(expression, x, 2)
+second_derivative
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \frac{64 \left(-1 - \frac{8 \left(- a + b + 4 x\right)}{b - 4 x} + \frac{10 \cdot \left(12 x \left(a - 4 x\right) + \left(a - 8 x\right) \left(b - 4 x\right)\right)}{\left(b - 4 x\right)^{2}}\right)}{\left(b - 4 x\right)^{4}}\end{split}
+\end{equation*}
+
+Equate this expression to \(-1\):
+
+\begin{pyin}
+second_equation = sym.Eq(second_derivative.subs({x: 0}), -1)
+second_equation
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \frac{64 \cdot \left(\frac{10 a}{b} - 1 - \frac{8 \left(- a + b\right)}{b}\right)}{b^{4}} = -1\end{split}
+\end{equation*}
+
+
+
+
+Now solve the first equation to obtain a value for \(a\):
+
+
+
+
+\begin{pyin}
+\PYG{n}{sym}\PYG{o}{.}\PYG{n}{solveset}\PYG{p}{(}\PYG{n}{first\PYGZus{}equation}\PYG{p}{,} \PYG{n}{a}\PYG{p}{)}
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \left\{\frac{b}{3}\right\}\end{split}
+\end{equation*}
+
+
+
+
+Now to substitute that value for \(a\) and solve the second equation for \(b\):
+
+
+
+
+\begin{pyin}
+second_equation = second_equation.subs({a: b / 3})
+second_equation
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle - \frac{192}{b^{4}} = -1\end{split}
+\end{equation*}
+
+
+
+
+
+
+\begin{pyin}
+sym.solveset(second_equation, b)
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \left\{- 2 \sqrt{2} \cdot \sqrt[4]{3}, 2 \sqrt{2} \cdot \sqrt[4]{3}, - 2 \sqrt{2} \cdot \sqrt[4]{3} i, 2 \sqrt{2} \cdot \sqrt[4]{3} i\right\}\end{split}
+\end{equation*}
+
+
+
+
+Recalling the question you know that \(b>0\) thus: \(b = 2\sqrt{2}\sqrt[4]{3}\) and
+\(a=\frac{2\sqrt{2}\sqrt[4]{3}}{3}\).
+You will substitute these values back and finish the question:
+
+
+\begin{pyin}
+expression = expression.subs(
+    {a: 2 * sym.sqrt(2) * sym.root(3, 4) / 3, b: 2 * sym.sqrt(2) * sym.root(3, 4)}
+)
+expression
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \frac{24 x \left(- 4 x + \frac{2 \sqrt{2} \cdot \sqrt[4]{3}}{3}\right) + \left(- 16 x + \frac{4 \sqrt{2} \cdot \sqrt[4]{3}}{3}\right) \left(- 4 x + 2 \sqrt{2} \cdot \sqrt[4]{3}\right)}{\left(- 4 x + 2 \sqrt{2} \cdot \sqrt[4]{3}\right)^{4}}\end{split}
+\end{equation*}
+
+You are using the \texttt{sym.root} command for the generic \(n\)th root.
+You can confirm this:
+
+
+
+
+\begin{pyin}
+sym.diff(expression, x).subs({x: 0})
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle 0\end{split}
+\end{equation*}
+
+
+
+
+
+
+\begin{pyin}
+sym.diff(expression, x, 2).subs({x: 0})
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle -1\end{split}
+\end{equation*}
+
+
+
+
+Now you will calculate the limits using \texttt{sym.limit}, this takes 3 inputs:
+\begin{itemize}
+\item 
+
+The expression you are taking the limit of.
+
+\item 
+
+The variable that is changing.
+
+\item 
+
+The value that the variable is tending towards.
+
+\end{itemize}
+
+
+
+
+\begin{pyin}
+sym.limit(expression, x, 0)
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \frac{\sqrt{3}}{36}\end{split}
+\end{equation*}
+
+
+
+
+
+
+\begin{pyin}
+sym.limit(expression, x, sym.oo)
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle 0\end{split}
+\end{equation*}
+
+
+
+
+Now you are going to calculate the \textbf{indefinite} integral using
+\texttt{sympy.integrate}. This tool takes 2 inputs as:
+\begin{itemize}
+\item 
+
+the first is the expression you’re integrating. This is the \(f\) in \(\int_a^b f
+dx\).
+
+\item 
+
+the second is the remaining information needed to calculate the integral: \(x\).
+
+\end{itemize}
+
+
+
+
+\begin{pyin}
+sym.factor(sym.integrate(expression, x))
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \frac{x \left(6 x - \sqrt{2} \cdot \sqrt[4]{3}\right)}{12 \cdot \left(4 x^{3} - 6 \sqrt{2} \cdot \sqrt[4]{3} x^{2} + 6 \sqrt{3} x - \sqrt{2} \cdot 3^{\frac{3}{4}}\right)}\end{split}
+\end{equation*}
+
+
+
+
+If you want to calculate a \textbf{definite} integral then instead of passing the
+single variable you pass a tuple which contains the variable as youll as the
+bounds of integration:
+
+
+
+
+\begin{pyin}
+sym.factor(sym.integrate(expression, (x, 5, 20)))
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle - \frac{5 \left(- 5000 \sqrt{2} \cdot \sqrt[4]{3} - 1200 \sqrt{3} + 75 \sqrt{2} \cdot 3^{\frac{3}{4}} + 119997\right)}{2 \left(-32000 - 120 \sqrt{3} + \sqrt{2} \cdot 3^{\frac{3}{4}} + 2400 \sqrt{2} \cdot \sqrt[4]{3}\right) \left(-500 - 30 \sqrt{3} + \sqrt{2} \cdot 3^{\frac{3}{4}} + 150 \sqrt{2} \cdot \sqrt[4]{3}\right)}\end{split}
+\end{equation*}
+
+
+
+
+
+
+\section{How to}
+\label{\detokenize{tools-for-mathematics/03-calculus/how/main:how}}\label{\detokenize{tools-for-mathematics/03-calculus/how/main::doc}}
+
+\subsection{Calculate the derivative of an expression.}
+\label{\detokenize{tools-for-mathematics/03-calculus/how/main:calculate-the-derivative-of-an-expression}}
+
+You can calculate the derivative of an expression using \texttt{sympy.diff} which takes,
+an expression, a variable and a degree.
+
+
+\begin{pyin}
+sympy.diff(expression, variable, degree=1)
+\end{pyin}
+
+
+
+The default value of \texttt{degree} is 1.
+For example to compute \(\frac{d (4 x ^ 3 + 2 x + 1}{dx}\):
+
+
+
+
+\begin{pyin}
+import sympy as sym
+
+x = sym.Symbol("x")
+expression = 4 * x ** 3 + 2 * x + 1
+sym.diff(expression, x)
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle 12 x^{2} + 2\end{split}
+\end{equation*}
+
+
+
+
+To compute the second derivative: \(\frac{d ^ 2 (4 x ^ 3 + 2 x + 1}{dx ^ 2}\)
+
+
+
+
+\begin{pyin}
+sym.diff(expression, x, 2)
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle 24 x\end{split}
+\end{equation*}
+
+
+
+
+\subsection{Calculate the indefinite integral of an expression.}
+\label{\detokenize{tools-for-mathematics/03-calculus/how/main:calculate-the-indefinite-integral-of-an-expression}}
+
+You can calculate the indefinite integral of an expression using
+\texttt{sympy.integrate}. Which takes an expression and a variable.
+
+
+\begin{pyin}
+sympy.integrate(expression, variable)
+\end{pyin}
+
+
+
+For example to compute \(\int 4x^3 + 2x + 1 dx\):
+
+
+
+
+\begin{pyin}
+sym.integrate(expression, x)
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle x^{4} + x^{2} + x\end{split}
+\end{equation*}
+
+
+
+
+\subsection{Calculate the definite integral of an expression.}
+\label{\detokenize{tools-for-mathematics/03-calculus/how/main:calculate-the-definite-integral-of-an-expression}}
+
+You can calculate the definite integral of an expression using
+\texttt{sympy.integrate}. The first argument is an expression but instead of passing a
+variable as the second argument you pass a tuple with the variable and the upper
+and lower bounds of integration.
+
+
+\begin{pyin}
+sympy.integrate(expression, (variable, lower_bound, upper_bound))
+\end{pyin}
+
+
+
+For example to compute \(\int_0^4 4x^3 + 2x + 1 dx\):
+
+
+
+
+\begin{pyin}
+sym.integrate(expression, (x, 0, 4))
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle 276\end{split}
+\end{equation*}
+
+
+
+
+\subsection{Use \(\infty\protect\)}
+\label{\detokenize{tools-for-mathematics/03-calculus/how/main:use-infty}}
+
+In \texttt{sympy} you can access \(\infty\) using \texttt{sym.oo}:
+
+
+\begin{pyin}
+sympy.oo
+\end{pyin}
+
+
+
+For example:
+
+
+
+
+\begin{pyin}
+sym.oo
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \infty\end{split}
+\end{equation*}
+
+
+
+
+\subsection{Calculate limits}
+\label{\detokenize{tools-for-mathematics/03-calculus/how/main:calculate-limits}}
+
+You can calculate limits using \texttt{sympy.limit}. The first argument is the
+expression, then the variable and finally the expression the variable tends to.
+
+
+\begin{pyin}
+sympy.limit(expression, variable, value)
+\end{pyin}
+
+
+
+For example to compute \(\lim_{h \to 0} \frac{4 x ^ 3 + 2 x + 1 - 4(x - h)^3 - 2(x - h) - 1}{h}\):
+
+
+
+
+\begin{pyin}
+h = sym.Symbol("h")
+expression = (4 * x ** 3 + 2 * x + 1 - 4 * (x - h) ** 3 - 2 * (x - h) - 1) / h
+sym.limit(expression, h, 0)
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle 12 x^{2} + 2\end{split}
+\end{equation*}
+
+
+
+
+
+
+\section{Exercises}
+\label{\detokenize{tools-for-mathematics/03-calculus/exercises/main:exercises}}\label{\detokenize{tools-for-mathematics/03-calculus/exercises/main::doc}}
+\begin{enumerate}
+
+\item 
+
+For each of the following functions calculate \(\frac{df}{dx}\), \(\frac{d^2f}{dx^2}\) and \(\int f(x) dx\).
+\begin{enumerate}
+
+\item 
+
+\(f(x) = x\)
+
+\item 
+
+\(f(x) = x ^{\frac{1}{3}}\)
+
+\item 
+
+\(f(x) = 2 x (x - 3) (\sin(x) - 5)\)
+
+\item 
+
+\(f(x) = 3  x ^ 3 + 6 \sqrt{x} + 3\)
+
+\end{enumerate}
+
+\item 
+
+Consider the function \(f(x)=2x+1\). By differentiating \textbf{from first principles} show that \(f'(x)=2\).
+
+\item 
+
+Consider the second derivative \(f''(x)=6x+4\) of some cubic function \(f(x)\).
+\begin{enumerate}
+
+\item 
+
+Find \(f'(x)\)
+
+\item 
+
+You are given that \(f(0)=10\) and \(f(1)=13\), find \(f(x)\).
+
+\item 
+
+Find all the stationary points of \(f(x)\) and determine their nature.
+
+\end{enumerate}
+
+\item 
+
+Consider the function \(f(x)=\frac{2}{3}x ^ 3 + b x ^ 2 + 2 x + 3\), where \(b\) is some undetermined coefficient.
+\begin{enumerate}
+
+\item 
+
+Find \(f'(x)\) and \(f''(x)\)
+
+\item 
+
+You are given that \(f(x)\) has a stationary point at \(x=2\). Use this information to find \(b\).
+
+\item 
+
+Find the coordinates of the other stationary point.
+
+\item 
+
+Determine the nature of all stationary points.
+
+\end{enumerate}
+
+\item 
+
+Consider the functions \(f(x)=-x^2+4x+4\) and \(g(x)=3x^2-2x-2\).
+\begin{enumerate}
+
+\item 
+
+Create a variable \texttt{turning\_points} which has value the turning points of \(f(x)\).
+
+\item 
+
+Create variable \texttt{intersection\_points} which has value of the points where \(f(x)\) and \(g(x)\) intersect.
+
+\item 
+
+Using your ansyours to parts 2., calculate the area of the region betyouen \(f\) and \(g\). Assign this value to a variable \texttt{area\_betyouen}.
+
+\end{enumerate}
+
+\end{enumerate}
+
+\section{Further information}
+\label{\detokenize{tools-for-mathematics/03-calculus/why/main:further-information}}\label{\detokenize{tools-for-mathematics/03-calculus/why/main::doc}}
+
+\subsection{How can you plot a function}
+\label{\detokenize{tools-for-mathematics/03-calculus/why/main:how-can-you-plot-a-function}}
+
+It is possible to plot a function using \texttt{sympy} using the \texttt{sympy.plot} function:
+
+
+\begin{pyin}
+sympy.plot(expression)
+\end{pyin}
+
+
+
+So for example, here is a plot of \(f(x)=x^2 + 3x + 1\):
+
+
+
+
+
+\begin{pyin}
+import sympy as sym
+
+x = sym.Symbol("x")
+sym.plot(x ** 2 + 3 * x + 1)
+\end{pyin}
+
+
+\begin{center}
+    \includegraphics[width=.7\textwidth]{./assets/plotting_with_sympy/main.pdf}
+\end{center}
+
+It is possible to specify the x limits and combine it with other plots:
+
+\begin{pyin}
+sym.plot(x ** 2 + 3 * x + 1, xlim=(-5, 5))
+\end{pyin}
+
+\begin{center}
+    \includegraphics[width=.7\textwidth]{./assets/plotting_with_sympy_with_xlim/main.pdf}
+\end{center}
+
+
+
+
+\textbf{This plotting solution is good if you want to take a look at a function
+quickly but it is not recommended.} The main python library for plotting is called
+\texttt{matplotlib} and is covered in Chapter~\ref{}.

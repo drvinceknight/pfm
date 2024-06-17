@@ -16,8 +16,8 @@ kernelspec:
 
 ## Create a matrix
 
-We create a matrix using the `sympy.Matrix` tool. We combine this with
-square brackets `[]` which we nest so that every row is also inside square
+You create a matrix using the `sympy.Matrix` tool. You combine this with
+nested square brackets `[]` so that every row is also inside square
 brackets.
 
 ````{tip}
@@ -60,8 +60,7 @@ B = sym.Matrix(
 
 ## Calculate the determinant of a matrix
 
-To calculate the determinant of a matrix, we use the `.det` tool. For example to
-calculate the determinant of:
+To calculate the determinant of a matrix, use the `.det` tool.
 
 ````{tip}
 ```
@@ -86,7 +85,7 @@ matrix.det()
 
 ## Calculate the inverse of a matrix
 
-To calculate the inverse of a matrix, we use the `.inv` tool.
+To calculate the inverse of a matrix, use the `.inv` tool.
 
 ````{tip}
 ```
@@ -112,7 +111,7 @@ matrix.inv()
 
 ## Multiply matrices by a scalar
 
-To multiple a matrix by a scalar we use the `*` operator. For example to
+To multiple a matrix by a scalar use the `*` operator. For example to
 multiply the following matrix by $6$:
 
 $$
@@ -129,7 +128,7 @@ matrix = sym.Matrix([[sym.S(1) / 5, 1], [1, 1]])
 
 ## Add matrices together
 
-To add matrices we use the `+` operator. For example to compute:
+To add matrices use the `+` operator. For example to compute:
 
 $$
     \begin{pmatrix}
@@ -150,7 +149,7 @@ matrix + other_matrix
 
 ## Multiply matrices together
 
-To multiply matrices together we use the `@` operator. For example to compute:
+To multiply matrices together use the `@` operator. For example to compute:
 
 $$
     \begin{pmatrix}

@@ -14,7 +14,7 @@ kernelspec:
 
 # Tutorial
 
-We will solve the following problem using a computer to assist with the technical aspects:
+You will solve the following problem using a computer to assist with the technical aspects:
 
 ```{admonition} Problem
 
@@ -31,7 +31,7 @@ Consider the function $f(x)= \frac{24 x \left(a - 4 x\right) + 2 \left(a - 8 x\r
 
 Sympy is once again the library we will use for this.
 
-We will start by creating a variable `expression` that has the value of the expression of $f(x)$:
+You will start by creating a variable `expression` that has the value of the expression of $f(x)$:
 
 ```{code-cell} ipython3
 import sympy as sym
@@ -43,10 +43,10 @@ expression = (24 * x * (a - 4 * x) + 2 * (a - 8 * x) * (b - 4 * x)) / ((b - 4 * 
 expression
 ```
 
-now we can will use `sympy.diff` to calculate the derivative. This tool takes two inputs:
+You will use `sympy.diff` to calculate the derivative. This tool takes two inputs:
 
 - the first is the expression we are differentiating. Essentially this is the numerator of $\frac{df}{dx}$.
-- the first is the variable we are differentiating for. Essentially this is the denominator of $\frac{df}{dx}$.
+- the second is the variable we are differentiating with respect to. This is the denominator of $\frac{df}{dx}$.
 
 ```{attention}
 We have imported `import sympy as sym` so we are going to write `sym.diff`:
@@ -57,13 +57,13 @@ derivative = sym.diff(expression, x)
 derivative
 ```
 
-Let us factorise that to make it slightly clearer:
+Factorise that to make it slightly clearer:
 
 ```{code-cell} ipython3
 sym.factor(derivative)
 ```
 
-We will now create the first equation, which is obtained by substituting $x=0$
+You will now create the first equation, which is obtained by substituting $x=0$
 in to the value of the derivative and equating that to $0$:
 
 ```{code-cell} ipython3
@@ -71,7 +71,7 @@ first_equation = sym.Eq(derivative.subs({x: 0}), 0)
 first_equation
 ```
 
-We will factor that equation:
+Factor that equation:
 
 ```{code-cell} ipython3
 sym.factor(first_equation)
@@ -113,7 +113,7 @@ sym.solveset(second_equation, b)
 Recalling the question we know that $b>0$ thus: $b = 2\sqrt{2}\sqrt[4]{3}$ and
 $a=\frac{2\sqrt{2}\sqrt[4]{3}}{3}$.
 
-We will substitute these values back and finish the question:
+You will substitute these values back and finish the question:
 
 ```{code-cell} ipython3
 expression = expression.subs(
@@ -123,10 +123,10 @@ expression
 ```
 
 ```{attention}
-We are using the `sym.root` command for the generic $n$th root.
+You are using the `sym.root` command for the generic $n$th root.
 ```
 
-We can confirm our findings:
+You can confirm this:
 
 ```{code-cell} ipython3
 sym.diff(expression, x).subs({x: 0})
@@ -150,7 +150,7 @@ sym.limit(expression, x, 0)
 sym.limit(expression, x, sym.oo)
 ```
 
-Now we are going to calculate the **indefinite** integral using
+Now you are going to calculate the **indefinite** integral using
 `sympy.integrate`. This tool takes 2 inputs as:
 
 - the first is the expression we're integrating. This is the $f$ in $\int_a^b f
@@ -161,8 +161,8 @@ Now we are going to calculate the **indefinite** integral using
 sym.factor(sym.integrate(expression, x))
 ```
 
-If we want to calculate a **definite** integral then instead of passing the
-single variable we pass a tuple which contains the variable as well as the
+If you want to calculate a **definite** integral then instead of passing the
+single variable you pass a tuple which contains the variable as well as the
 bounds of integration:
 
 ```{code-cell} ipython3

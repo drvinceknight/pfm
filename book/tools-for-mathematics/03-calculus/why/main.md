@@ -45,7 +45,7 @@ sym.plot(x ** 2 + 3 * x + 1, xlim=(-5, 5))
 
 **This plotting solution is fine it you want to take a look at a function
 quickly but it is not recommended.** The main library for plotting is called
-`matplotlib` and {ref}`matplotlib` covers this.
+`matplotlib` and is covered in {ref}`matplotlib`.
 
 - Here is the `sympy` documentation for plotting:
   <https://docs.sympy.org/latest/modules/plotting.html>
