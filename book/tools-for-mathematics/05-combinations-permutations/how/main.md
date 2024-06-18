@@ -53,7 +53,7 @@ basket[1]
 
 (creating_boolean_variables)=
 
-## Creating boolean variables
+## Create boolean variables
 
 A boolean variable has one of two values: `True` or `False`.
 
@@ -128,7 +128,7 @@ not False
 
 (creating_an_iterable_with_a_given_number_of_items)=
 
-## Creating an iterable with a given number of items
+## Create an iterable with a given number of items
 
 The `range` tool gives a given number of integers.
 
@@ -160,7 +160,7 @@ It is also possible to pass a third value as an step size:
 tuple(range(4, 10, 3))
 ```
 
-## Creating permutations of a given set of elements
+## Create permutations of a given set of elements
 
 The python `itertools` library has a `permutations` tool that will generate all
 permutations of a given set.
@@ -184,7 +184,7 @@ It is possible to limit the size to only be permutations of size `r`:
 tuple(itertools.permutations(basket, r=2))
 ```
 
-## Creating combinations of a given set of elements
+## Create combinations of a given set of elements
 
 The python `itertools` library has a `combinations` tool that will generate all combinations of size `r` of a given set:
 
@@ -206,15 +206,15 @@ are sorted.
 
 (adding_items_in_a_tuple)=
 
-## Adding items in a tuple
+## Add items in a tuple
 
-We can compute the sum of items in a list using the `sum` tool:
+You can compute the sum of items in a list using the `sum` tool:
 
 ```{code-cell} ipython3
 sum((1, 2, 3))
 ```
 
-We can also directly use the `sum` without specifically creating the list. This
+You can also directly use the `sum` without specifically creating the list. This
 corresponds to the following mathematical notation:
 
 $$
@@ -237,7 +237,7 @@ $$
 sum(n ** 2 for n in range(11))
 ```
 
-Finally we can compute conditionally sums by only summing over elements that
+Finally you can compute conditionally sums by only summing over elements that
 meet a given condition using the following:
 
 ```python
@@ -254,7 +254,7 @@ $$
 sum(n ** 2 for n in range(11) if n % 2 == 1)
 ```
 
-## Directly computing \\(n!\\)
+## Directly compute \\(n!\\)
 
 The `math` library has a `factorial` tool.
 
@@ -270,7 +270,7 @@ import math
 math.factorial(5)
 ```
 
-## Directly computing ${n \choose i}$
+## Directly compute ${n \choose i}$
 
 The `scipy.special` library has a `comb` tool.
 

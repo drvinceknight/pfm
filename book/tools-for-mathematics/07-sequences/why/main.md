@@ -27,7 +27,7 @@ $$
     \end{array}\right.
 $$
 
-We can define this in Python as follows:
+You can define this in Python as follows:
 
 ```{code-cell} ipython3
 def generate_sequence(n):
@@ -50,12 +50,12 @@ The first 6 terms:
 [generate_sequence(n) for n in range(1, 7)]
 ```
 
-We note that in this case this corresponds to powers of $3$, and indeed we can
-prove that: $a_n = 3 ^ {n - 1}$. We will not carry out the proof here but one
+In this case this corresponds to powers of $3$, and indeed you can
+prove that: $a_n = 3 ^ {n - 1}$. The proof is not given here but one
 approach to doing it would be to use proof by induction which is closely related
 to recursive functions.
 
-We can write a different python function that uses this formulae. This is called
+You can write a different python function that uses this formulae. This is called
 **iteration**:
 
 ```{code-cell} ipython3
@@ -77,7 +77,7 @@ def calculate_sequence(n):
 [calculate_sequence(n) for n in range(1, 7)]
 ```
 
-We can in fact use a Jupyter [magic
+You can in fact use a Jupyter [magic
 command](https://ipython.readthedocs.io/en/stable/interactive/magics.html) to
 time the run time of a command. It is clear that recursion is slower.
 
@@ -102,7 +102,7 @@ In practice:
 
 (what_is_caching)=
 
-## What is caching
+## What is caching?
 
 One of the reasons that recursion is computationally inefficient is that it
 always has to recalculate previously calculated values.
@@ -119,7 +119,7 @@ $$
 One way to overcome this is to use caching which means that when a function is
 called for a value it has already computed it remembers the value.
 
-Python has a caching tool available in the functools library:
+Python has a caching tool available in the `functools` library:
 
 ```{code-cell} ipython3
 import functools

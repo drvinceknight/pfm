@@ -14,13 +14,13 @@ kernelspec:
 
 # Combinatorics
 
-Combinatorics is the mathematical area interested specific finite sets. In a lot
+Combinatorics is the mathematical area interested in specific finite sets. In a lot
 of instances this comes down to counting things and is often first encountered
 by mathematicians through combinations and permutations.
 
 Computers are useful when doing this as they can be used to generate the finite
-sets we want. Thus we can essentially count things "by hand" (using a computer)
-to confirm theoretic results. We will see how to do this here.
+sets considered. You can essentially count things "by hand" (using a computer)
+to confirm theoretic results.
 
 ```{important}
 In this chapter we will cover:

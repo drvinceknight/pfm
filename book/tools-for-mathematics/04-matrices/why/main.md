@@ -20,7 +20,7 @@ In Python it is possible to write statements that are ignored using the `#`
 symbol. This creates something called a "comment". For example:
 
 ```{code-cell} ipython3
-import sympy as sym  # Importing the sympy library using the alias sym
+import sympy as sym  # Importing the sympy library using an alias
 ```
 
 Comments like these often do not add to the readability of the code. In fact

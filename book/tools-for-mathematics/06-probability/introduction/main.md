@@ -26,7 +26,7 @@ In practice studying probability will often involve:
 - calculating the conditional chances of an event occurring given another event
   occurring.
 
-Here we will see how to instruct a computer to sample such events.
+Here you will see how to instruct a computer to sample such events.
 
 ```{important}
 In this chapter we will cover:

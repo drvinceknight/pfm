@@ -30,12 +30,9 @@ This means that once created tuples cannot be changed and lists can.
 As a general rule of thumb: if you do not need to modify your iterable then use
 a tuple as they are more computationally efficient.
 
-This blog post is a good explanation of the difference:
-<https://www.afternerd.com/blog/difference-between-list-tuple/>
-
 ## Why does the sum of booleans counts the `True`s?
 
-In the tutorial and elsewhere we created a list of booleans and then take the
+In the tutorial and elsewhere you created a list of booleans and then took the
 sum. Here are some of the steps:
 
 ```{code-cell} ipython3
@@ -65,14 +62,14 @@ int(False)
 
 ## What is the difference between `print` and `return`?
 
-In functions you see we use the `return` statement. This does two things:
+In functions we use the `return` statement. This does two things:
 
 1. Assigns a value to the function run;
 2. Ends the function.
 
 The `print` statement **only** displays the output.
 
-As an example let us create the following set:
+As an example create the following set:
 
 $$
     S = \{f(x)\text{ for }x \in \{0, \pi / 4, \pi / 2, 3\pi / 4\}\}
@@ -97,7 +94,8 @@ S = [f(x) for x in (0, sym.pi / 4, sym.pi / 2, 3 * sym.pi / 4)]
 S
 ```
 
-If we replaced the `return` statement in the function definition with a `print` we obtain:
+If you replaced the `return` statement in the function definition
+with a `print` you obtain:
 
 ```{code-cell} ipython3
 def f(x):
@@ -110,19 +108,14 @@ def f(x):
 S = [f(x) for x in (0, sym.pi / 4, sym.pi / 2, 3 * sym.pi / 4)]
 ```
 
-We see now that as the function has been run it displays the output.
+The function has been run and it displays the output.
 
-**However** if we look at what `S` is we see that the function has not returned
+**However** if you look at what `S` is you see that the function has not returned
 anything:
 
 ```{code-cell} ipython3
 S
 ```
-
-Here are some other materials on this subject:
-
-- <https://www.tutorialspoint.com/Why-would-you-use-the-return-statement-in-Python>
-- <https://pythonprinciples.com/blog/print-vs-return/>
 
 ## How does Python sample randomness?
 

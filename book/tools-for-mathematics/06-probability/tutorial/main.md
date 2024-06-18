@@ -34,10 +34,9 @@ When a blue token is selected a fair coin is spun.
    token.
 ```
 
-We will use the `random` library from the Python standard library to do this.
-
-First we start off by building a Python **tuple** to represent the bag with the
-tokens. We assign this to a variable `bag`:
+You will use the `random` library from the Python standard library to do this.
+First start by building a Python **tuple** to represent the bag with the
+tokens. Assign this to a variable `bag`:
 
 ```{code-cell} ipython3
 bag = (
@@ -58,15 +57,15 @@ bag
 ```
 
 ```{attention}
-We are there using the circular brackets `()` and the quotation marks
+You are there using the circular brackets `()` and the quotation marks
 `"`. Those are important and cannot be omitted. The choice of brackets `()` as
 opposed to `{}` or `[]` is in fact important as it instructs Python to do
-different things (we will learn about this later). You can use `"` or `'`
+different things. You can use `"` or `'`
 interchangeably.
 ```
 
-Instead of writing every entry out we can create a Python **list** which allows
-for us to carry out some basic algebra on the items. Here we essentially:
+Instead of writing every copy of color you can create a Python **list** which allows
+you to carry out some basic algebra on the items:
 
 - Create a list with 5 `"Red"`s.
 - Create a list with 7 `"Blue"`s.
@@ -105,10 +104,10 @@ bag
 ```
 
 In order to answer the first question (what is the probability of picking a red
-token) we want to repeat this many times.
+token) repeat this many times.
 
-We do this by defining a Python function (which is akin to a mathematical
-function) that allows us to repeat code:
+Do this by defining a Python function (which is akin to a mathematical
+function) that makes repeating code possible:
 
 ```{code-cell} ipython3
 def pick_a_token(container):
@@ -133,10 +132,10 @@ pick_a_token(container=bag)
 pick_a_token(container=bag)
 ```
 
-In order to simulate the probability of picking a red token we need to repeat
-this not once or twice but tens of thousands of times. We will do this using
+In order to simulate the probability of picking a red token repeat
+this not once or twice but tens of thousands of times. You will do this using
 something called a "list comprehension" which is akin to the mathematical
-notation we use all the time to create sets:
+notation commonly used to create sets:
 
 $$
     S_1 = \{f(x)\text{ for }x\text{ in }S_2\}
@@ -150,7 +149,7 @@ samples = [pick_a_token(container=bag) for repetition in range(number_of_repetit
 samples
 ```
 
-We can confirm that we have the correct number of samples:
+You can confirm that we have the correct number of samples:
 
 ```{code-cell} ipython3
 len(samples)
@@ -168,7 +167,7 @@ Using this we can now use `==` (double `=`) to check how many of those samples a
 sum(token == "Red" for token in samples) / number_of_repetitions
 ```
 
-We have sampled probability of around .41. The theoretic value is $\frac{5}{5 +
+You have sampled a probability of around .41. The theoretic value is $\frac{5}{5 +
 7}$:
 
 ```{code-cell} ipython3
@@ -177,8 +176,8 @@ We have sampled probability of around .41. The theoretic value is $\frac{5}{5 +
 5 / (5 + 7)
 ```
 
-To answer the second question (What is the probability of obtaining Heads?) we
-need to make use of another Python tool: an `if` statement. This will allow us
+To answer the second question (What is the probability of obtaining Heads?) you
+need to make use of another Python tool: an `if` statement. This will allow you
 to write a function that does precisely what is described in the problem:
 
 - Choose a token;
@@ -186,7 +185,7 @@ to write a function that does precisely what is described in the problem:
 - Select that coin.
 
 ```{attention}
-For the second random selection (flipping a coin) we will not choose from a list
+For the second random selection (flipping a coin) you will not choose from a list
 but instead select a random number between 0 and 1.
 ```
 
@@ -233,7 +232,7 @@ sample_experiment(bag=bag)
 sample_experiment(bag=bag)
 ```
 
-We can now find out the probability of selecting heads by carrying out a large
+You can now find out the probability of selecting heads by carrying out a large
 number of repetitions and checking which ones have a coin that is heads:
 
 ```{code-cell} ipython3
@@ -243,7 +242,7 @@ samples = [sample_experiment(bag=bag) for repetition in range(number_of_repetiti
 sum(coin == "Heads" for token, coin in samples) / number_of_repetitions
 ```
 
-We can compute this theoretically as well, the expected probability is:
+You can compute this theoretically as well, the expected probability is:
 
 ```{code-cell} ipython3
 import sympy as sym
@@ -257,10 +256,10 @@ sym.S(5) / (12) * sym.S(2) / 3 + sym.S(7) / (12) * sym.S(1) / 2
 41 / 72
 ```
 
-We can also use our samples to calculate the conditional probability that a
+You can also use our samples to calculate the conditional probability that a
 token was read if the coin is heads. This is done again using the list
-comprehension notation but including an `if` statement which allows us to
-emulate the mathematical notation:
+comprehension notation but including an `if` statement which
+emulates the mathematical notation:
 
 $$
     S_3 = \{x \in S_1  | \text{ if some property of \(x\) holds}\}

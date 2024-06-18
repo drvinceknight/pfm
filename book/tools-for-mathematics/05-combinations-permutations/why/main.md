@@ -16,7 +16,7 @@ kernelspec:
 
 ## Are there other ways to access elements in tuples?
 
-We have seen in this chapter how to access a single element in a tuple. There
+You have seen in this chapter how to access a single element in a tuple. There
 are various ways of indexing tuples:
 
 1. Indexing (what we have seen [here](how_to_access_particular_elements_in_a_tuple))
@@ -27,11 +27,11 @@ are various ways of indexing tuples:
 
 When you run either of the three `range`, `itertools.permutations` or
 `itertools.combinations` tools this is an example of creating a **generator**.
-This allows us to create the instructions to build something without building
+This allows the creation of the instructions to build something without building
 it.
 
-In practice this means that we can create large sets without needing to generate
-them until we wanted to.
+In practice this means that you can create large sets without needing to generate
+them until required.
 
 ## How does the summation notation $\sum$ correspond to the code?
 
