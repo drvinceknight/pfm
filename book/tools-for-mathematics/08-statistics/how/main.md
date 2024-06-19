@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# How
+# How to
 
 ## Calculate measures of spread and tendency
 
@@ -78,7 +78,7 @@ st.pstdev(data)
 
 ### Calculate the sample standard deviation
 
-We can calculate the sample standard deviation of a set of data using `statistics.stdev` which takes an
+You can calculate the sample standard deviation of a set of data using `statistics.stdev` which takes an
 iterable.
 
 ````{tip}
@@ -98,7 +98,7 @@ st.stdev(data)
 
 ### Calculate the population variance
 
-We can calculate the population variance of a set of data using `statistics.pvariance` which takes an
+You can calculate the population variance of a set of data using `statistics.pvariance` which takes an
 iterable.
 
 ````{tip}
@@ -118,7 +118,7 @@ st.pvariance(data)
 
 ### Calculate the sample variance
 
-We can calculate the sample variance of a set of data using `statistics.variance` which takes an
+You can calculate the sample variance of a set of data using `statistics.variance` which takes an
 iterable.
 
 ````{tip}
@@ -138,7 +138,7 @@ st.variance(data)
 
 ### Calculate the maximum
 
-We can calculate the maximum of a set of data use `max` which takes an iterable:
+You can calculate the maximum of a set of data use `max` which takes an iterable:
 
 ````{tip}
 ```
@@ -173,7 +173,7 @@ min(data)
 ### Calculate quantiles
 
 To calculate cut points dividing data in to $n$ intervals of equal probability
-we can use `statistics.quantiles` which takes an iterable and a number of
+you can use `statistics.quantiles` which takes an iterable and a number of
 intervals.
 
 ````{tip}
@@ -195,7 +195,7 @@ st.quantiles(data, n=4)
 
 ## Calculate the sample covariance
 
-To calculate the sample covariance of two data sets we can use
+To calculate the sample covariance of two data sets you can use
 `statistics.covariance` which takes two iterables.
 
 ````{tip}
@@ -217,7 +217,7 @@ st.covariance(x, y)
 
 ## Calculate the Pearson correlation coefficient
 
-To calculate the correlation coefficient of two data sets we can use
+To calculate the correlation coefficient of two data sets you can use
 `statistics.correlation` which takes two iterables.
 
 ````{tip}

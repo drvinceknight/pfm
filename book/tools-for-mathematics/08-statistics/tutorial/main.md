@@ -14,7 +14,7 @@ kernelspec:
 
 # Tutorial
 
-We will solve the following problem using a computer to do some of the more
+You will solve the following problem using a computer to do some of the more
 tedious calculations.
 
 ````{admonition} Problem
@@ -150,7 +150,7 @@ plt.ylabel("Resting heart rate: $h$")
 plt.title("Data collected by Anne");
 ```
 
-Let us start by inputting all the data:
+Start by inputting all the data:
 
 ```{code-cell} ipython3
 h = (
@@ -197,7 +197,7 @@ m = (
 )
 ```
 
-The main tool we are going to use for this is `statistics`.
+The main tool you are going to use for this is `statistics`.
 
 ```{code-cell} ipython3
 import statistics as st
@@ -223,7 +223,7 @@ st.median(h)
 st.median(m)
 ```
 
-To calculate the quartiles, we use `statistics.quantiles` and specify that we
+To calculate the quartiles, use `statistics.quantiles` and specify that you
 want to separate the date in to $n=4$ quarters.
 
 ```{code-cell} ipython3
@@ -277,7 +277,7 @@ min(h)
 min(m)
 ```
 
-In order to compute the Pearson Coefficient of correlation we use
+In order to compute the Pearson Coefficient of correlation use
 `statistics.correlation`:
 
 ```{code-cell} ipython3
@@ -288,7 +288,7 @@ This negative value indicates a negative correlation between $h$ and $m$,
 indicating that the more you exercise the lower your heart rate is likely to be.
 
 To calculate the line of best fit for the transformed variables we need to first
-create them. We will do this using a list comprehension. As we are doing
+create them. We will do this using a list comprehension. As you are doing
 everything numerically, we will use `math.log` which by default computes the
 natural logarithm:
 
@@ -298,7 +298,7 @@ x = [math.log(value) for value in m]
 y = [math.log(value) for value in h]
 ```
 
-Now to compute the line of best fit we will use `statistics.linear_regression`:
+Now to compute the line of best fit use `statistics.linear_regression`:
 
 ```{code-cell} ipython3
 slope, intercept = st.linear_regression(x, y)
@@ -316,21 +316,21 @@ The intercept is:
 intercept
 ```
 
-If we recall the transformation of the variables:
+Recall the transformation of the variables:
 
 $$x=\ln(m)\qquad y=\ln(h)$$
 
-We now have the relationship:
+You now have the relationship:
 
 $$y=ax + b$$
 
 Where $a$ corresponds to the `slope` and $b$ corresponds to the `intercept`.
 
-The question was asking for a relationship between $m$ and $h$ of the form:
+The question asks for a relationship between $m$ and $h$ of the form:
 
 $$h=cm^k$$
 
-We can use `sympy` to manipulate the expressions:
+You can use `sympy` to manipulate the expressions:
 
 ```{code-cell} ipython3
 import sympy as sym

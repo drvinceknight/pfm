@@ -25,7 +25,7 @@ It also includes using visualisation to understand data, this chapter
 will not consider visualisation which is instead considered here: {ref}`matplotlib`.
 
 ```{important}
-In this chapter we will cover:
+In this chapter you will cover:
 
 - Calculating measures of central tendency and spread
 - Calculating bivariate coefficients
