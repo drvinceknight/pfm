@@ -38,7 +38,6 @@ taylor-and-francis/_build/latex/*
 *.ind
 *.lof
 *.lot
-*.pdf
 *.pyg
 *.xdy
 env/
@@ -47,3 +46,4 @@ book/further-information/06-working-with-files/tutorial/data.txt
 book/further-information/06-working-with-files/why/array.txt
 book/further-information/06-working-with-files/why/squares.csv
 **/pngs/*
+taylor-and-francis/main.pdf

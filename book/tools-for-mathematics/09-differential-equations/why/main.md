@@ -27,8 +27,8 @@ $$
     \end{cases}
 $$
 
-We can solve it using `sym.dsolve` but instead of passing a single differential
-equation, we pass an iterable of multiple equations:
+You can solve it using `sym.dsolve` but instead of passing a single differential
+equation, pass an iterable of multiple equations:
 
 ```{code-cell} ipython3
 import sympy as sym

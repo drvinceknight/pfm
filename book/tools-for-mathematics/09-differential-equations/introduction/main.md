@@ -18,7 +18,7 @@ A differential equation is an equation that relates one or more quantities and
 their derivatives. These can often be used to model real world systems.
 
 ```{important}
-In this chapter we will cover:
+In this chapter you will cover:
 
 - How to create a symbolic function
 - How to write a differential equation

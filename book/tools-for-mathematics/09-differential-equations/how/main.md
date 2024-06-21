@@ -12,9 +12,9 @@ kernelspec:
   name: python3
 ---
 
-# How
+# How to
 
-## How to create a symbolic function
+## Create a symbolic function
 
 To create a symbolic function use `sympy.Function`.
 
@@ -33,22 +33,22 @@ y = sym.Function("y")
 y
 ```
 
-We can pass symbolic variables to this symbolic function:
+You can pass symbolic variables to this symbolic function:
 
 ```{code-cell} ipython3
 x = sym.Symbol("x")
 y(x)
 ```
 
-We can create the derivative of a symbolic function:
+You can create the derivative of a symbolic function:
 
 ```{code-cell} ipython3
 sym.diff(y(x), x)
 ```
 
-## How to create a differential equation
+## Create a differential equation
 
-To create a differential equation we use `sympy.Eq`.
+To create a differential equation use `sympy.Eq`.
 
 ````{tip}
 ```
@@ -64,7 +64,7 @@ equation = sym.Eq(lhs, rhs)
 Where `lhs` and `rhs` are expressions in $y$, $\frac{dy}{dx}$ and $x$.
 
 For example to create the differential equation: $\frac{dy}{dx} = \cos(x) y$
-we would write:
+write:
 
 ```{code-cell} ipython3
 import sympy as sym
@@ -110,9 +110,9 @@ differential_equation = sym.Eq(lhs, rhs)
 sym.dsolve(differential_equation, y(x))
 ```
 
-## How to obtain the particular solution of a differential equation
+## Obtain the particular solution of a differential equation
 
-To obtain the particular solution to a differential equation we use:
+To obtain the particular solution to a differential equation use:
 `sympy.dsolve` and pass the initial conditions: `ics`.
 
 ````{tip}
@@ -146,6 +146,6 @@ sym.dsolve(differential_equation, y(x), ics=condition)
 ```
 
 ```{note}
-The syntax used here is similar to the way we
-{ref}`substitute values in to algebraic expressions <how-to-substitute-a-value-in-to-an-expression>`.
+The syntax used here is similar to substituting
+{ref}`values in to algebraic expressions <how-to-substitute-a-value-in-to-an-expression>`.
 ```
