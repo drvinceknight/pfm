@@ -81,7 +81,7 @@ called the Airy functions of the first and second kind.
 
 Using `scipy.integrate` it is possible to solve this differential equation numerically.
 
-First, we will define a new variable $u=\frac{dy}{dx}$ so that the second order
+First, define a new variable $u=\frac{dy}{dx}$ so that the second order
 differential equation can be expressed as a system of single order differential
 equations:
 
@@ -92,7 +92,7 @@ $$
     \end{cases}
 $$
 
-We now define a python function to that returns the right hand side of that
+Now define a python function that returns the right hand side of that
 system of equations:
 
 ```{code-cell} ipython3
@@ -122,7 +122,8 @@ states = scipy.integrate.odeint(diff, y0=condition, t=xs)
 
 ```{note}
 We make use of
-{ref}`how-to-create-a-given-number-of-values-between-two-bounds` to create a set
+{ref}`how-to-create-a-given-number-of-values-between-two-bounds` to create a
+collection
 of `x` values over which to carry out the numerical integration.
 ```
 

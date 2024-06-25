@@ -1,0 +1,1351 @@
+\chapter{Variables, conditionals and loops}
+\label{\detokenize{building-tools/01-variables-conditionals-loops/introduction/main:variables-conditionals-and-loops}}\label{\detokenize{building-tools/01-variables-conditionals-loops/introduction/main::doc}}
+
+In the previous chapters you have explored a number of tools that allow you to use
+mathematical knowledge more efficiently. In this part of the book you will
+see start to gain the knowledge necessary to build these tools.
+
+
+
+\begin{note}
+In this chapter you will cover:
+\begin{itemize}
+\item 
+
+Creating variables.
+
+\item 
+
+Run code depending on a given condition.
+
+\item 
+
+Repeat code as long as a given condition is met.
+
+\item 
+
+Repeat code over a given set.
+
+\end{itemize}
+\end{note}
+
+
+
+
+
+\section{Tutorial}
+\label{\detokenize{building-tools/01-variables-conditionals-loops/tutorial/main:tutorial}}\label{\detokenize{building-tools/01-variables-conditionals-loops/tutorial/main::doc}}
+
+You will here use a computer to gain some evidence to help tackle the following
+problem.
+
+
+
+
+Consider the following polynomial:
+\begin{equation*}
+\begin{split}
+    p(n) = n ^ 2 + n + 41
+\end{split}
+\end{equation*}\begin{enumerate}
+
+\item 
+
+Verify that \(p(n)\) is prime for \(n\in \mathbb{Z}\) up until \(n=20\).
+
+\item 
+
+What is the smallest value of \(n\) for which \(p(n)\) is no longer prime?
+
+\end{enumerate}
+
+
+
+You will start by defining a function for \(p(n)\):
+
+
+
+
+\begin{pyin}
+def p(n):
+    """
+    Return the value of n ^ 2 + n + 41 for a given value of n.
+    """
+    return n ** 2 + n + 41
+\end{pyin}
+
+
+
+
+
+You will use \texttt{sympy} to check if a number is prime.
+
+
+
+
+\begin{pyin}
+import sympy as sym
+
+sym.isprime(3)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+True
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+sym.isprime(4)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+False
+\end{raw}
+
+Now to answer the first question you will use a list comprehension to create a
+list of boolean variables that confirm if \(p(n)\) is prime.
+
+\begin{note}
+This is similar to what was done in Chapter~\ref{chp:probability}.
+\end{note}
+
+
+\begin{pyin}
+checks = [sym.isprime(p(n)) for n in range(21)]
+checks
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+[True,
+ True,
+ True,
+ True,
+ True,
+ True,
+ True,
+ True,
+ True,
+ True,
+ True,
+ True,
+ True,
+ True,
+ True,
+ True,
+ True,
+ True,
+ True,
+ True,
+ True]
+\end{raw}
+
+
+
+
+
+You can use the \texttt{all} tool to check if all the boolean values are true:
+
+
+
+
+\begin{pyin}
+all(checks)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+True
+\end{raw}
+
+\begin{note}
+Using list comprehensions is a mathematical way of repeating code but at times
+it might prove useful to repeat code in a different way using a standard \texttt{for}
+statement.
+\end{note}
+
+
+
+In that case you can essentially repeat the previous exercise using:
+
+\begin{pyin}
+checks = []
+for n in range(21):
+    value = p(n)
+    is_prime = sym.isprime(value)
+    checks.append(is_prime)
+all(checks)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+True
+\end{raw}
+
+
+
+
+
+The main difference between the two approaches is that you can include multiple
+lines of indented code to be repeated for every value of \texttt{n} in
+\texttt{range(21)}.
+
+
+\begin{note}
+A \texttt{for} loop or a list comprehension should be used when we know how many
+repetitions are necessary.
+\end{note}
+
+
+
+To answer the second question you will repeat the code until the value of \(p(n)\)
+is no longer prime.
+
+
+
+
+\begin{pyin}
+n = 0
+while sym.isprime(p(n)):
+    n += 1
+n
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+40
+\end{raw}
+
+
+\begin{note}
+A \texttt{while} loop should be used when you do not know how many times a repetition
+should be made \textbf{but} you know under what conditions it should be made.
+\end{note}
+
+
+
+Indeed for \(n=40\) you have:
+
+
+
+
+\begin{pyin}
+p(n)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+1681
+\end{raw}
+
+
+
+
+
+and
+
+
+
+
+\begin{pyin}
+sym.isprime(p(n))
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+False
+\end{raw}
+
+
+
+
+
+\texttt{sympy} can also factor the number:
+
+
+
+
+\begin{pyin}
+sym.factorint(p(n))
+\end{pyin}
+
+
+
+
+
+\begin{pyin}
+41 ** 2
+\end{pyin}
+
+
+
+
+
+Indeed:
+
+
+
+
+\begin{pyin}
+41 ** 2
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+1681
+\end{raw}
+
+
+
+
+
+
+
+\section{How to}
+\label{\detokenize{building-tools/01-variables-conditionals-loops/how/main:how}}\label{\detokenize{building-tools/01-variables-conditionals-loops/how/main::doc}}
+
+\subsection{Define an integer variable}
+\label{\detokenize{building-tools/01-variables-conditionals-loops/how/main:define-an-integer-variable}}
+
+To define an integer variable use the \texttt{=} operator which is the assignment
+operator. Create the name of the variable then the assignment operator
+followed by the integer value.
+
+
+\begin{pyin}
+name_of_variable = int_value
+\end{pyin}
+
+
+
+For example:
+
+
+
+
+\begin{pyin}
+year = 2020
+year
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+2020
+\end{raw}
+
+
+\begin{note}
+When choosing a variable name there are some rules to follow:
+\begin{itemize}
+\item 
+
+No spaces, use \texttt{\_} instead.
+
+\item 
+
+Cannot start with a number or other special characters.
+
+\end{itemize}
+
+
+There are other important conventions:
+\begin{itemize}
+\item 
+
+Use explicit names that clearly describe what the variable is. Try not to use
+\texttt{i}, \texttt{a} unless those refer to specific mathematical variables.
+
+\item 
+
+Do not use \texttt{CamelCase} but use \texttt{snake\_case} when combining words. This follows
+the Python convention called EP8.
+
+\end{itemize}
+\end{note}
+
+
+
+\subsection{Define a float variable}
+\label{\detokenize{building-tools/01-variables-conditionals-loops/how/main:define-a-float-variable}}
+
+To define a float variable use the \texttt{=} operator which is the assignment
+operator. Create the name of the variable then the assignment operator
+followed by the real value.
+
+
+\begin{pyin}
+name_of_variable = float_value
+\end{pyin}
+
+
+
+For example:
+
+
+
+
+\begin{pyin}
+cms_in_an_inch = 2.54
+cms_in_an_inch
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+2.54
+\end{raw}
+
+
+
+
+
+\subsection{Define a string variable}
+\label{\detokenize{building-tools/01-variables-conditionals-loops/how/main:define-a-string-variable}}
+
+To define a string variable use the \texttt{=} operator which is the assignment
+operator. Create the name of the variable then the assignment operator
+followed by the string which is a combination of characters between quotation
+marks.
+
+
+\begin{pyin}
+name_of_variable = string_value
+\end{pyin}
+
+
+
+For example:
+
+
+
+
+\begin{pyin}
+capital_of_dominica = "roseau"
+capital_of_dominica
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+'roseau'
+\end{raw}
+
+
+
+
+
+\subsection{Define a boolean variable}
+\label{\detokenize{building-tools/01-variables-conditionals-loops/how/main:define-a-boolean-variable}}
+
+A boolean variable is one of two things: \texttt{True} or \texttt{False}. To define a boolean
+variable you use the \texttt{=} assignment operator.
+Create the name of the variable then the assignment operator followed by the
+boolean variable (either \texttt{True} or \texttt{False}).
+
+
+\begin{pyin}
+name_of_variable = boolean_value
+\end{pyin}
+
+
+
+For example:
+
+
+
+
+\begin{pyin}
+john_nash_has_a_noble = True
+john_nash_has_a_noble
+\end{pyin}
+
+
+
+
+
+\begin{pyin}
+True
+\end{pyin}
+
+
+\begin{note}
+Section~\ref{sec:create_boolean_variables} gives an overview of how to create boolean
+variables from other variables.
+\end{note}
+
+
+
+\subsection{Check the type of a variable}
+
+You can get the type of a variable using the \texttt{type} tool.
+
+
+\begin{pyin}
+type(object)
+\end{pyin}
+
+
+Where \texttt{object} is any variable.
+
+
+
+For example:
+
+
+
+
+\begin{pyin}
+year = 2020
+type(year)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+int
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+cms_in_an_inch = 2.54
+type(cms_in_an_inch)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+float
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+capital_of_dominica = "roseau"
+type(capital_of_dominica)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+str
+\end{raw}
+
+\begin{raw}
+If a numeric variable is given with any decimal part (including 0) then it is
+considered to be a float.
+\end{raw}
+
+
+
+\subsection{Manipulate numeric variables}
+\label{\detokenize{building-tools/01-variables-conditionals-loops/how/main:how-to-manipulate-numeric-variables}}
+
+Numeric values can be combined to create new numeric variables.
+\begin{enumerate}
+
+\item 
+
+Addition, \(2 + 2\): \texttt{2 + 2};
+
+\item 
+
+Subtraction, \(3 - 1\): \texttt{3 - 1};
+
+\item 
+
+Multiplication, \(3 \times 5\): \texttt{3 * 5};
+
+\item 
+
+Division, \(20 / 5\): \texttt{20 / 5};
+
+\item 
+
+Exponentiation, \(2 ^ 4\): \texttt{2 ** 4};
+
+\item 
+
+Integer remainder, \(5 \mod 2\): \texttt{5 \% 2};
+
+\item 
+
+Combining operations, \(\frac{2 ^ 3 + 1}{4}\): \texttt{(2 ** 3 + 1) / 4};
+
+\end{enumerate}
+
+
+For example:
+
+
+
+
+
+\begin{pyin}
+cms_in_an_inch = 2.54
+average_male_height_in_cms = 170
+average_male_height_in_inches = average_male_height_in_cms / cms_in_an_inch
+average_male_height_in_inches
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+66.92913385826772
+\end{raw}
+
+
+
+
+
+
+
+This is similar to what what is shown in Section~\ref{sec:carry_out_basic_arithmetic_operations}.
+
+Some languages, including Python have a shortcut to manipulate a variable “in
+place”. The following takes the variable \texttt{money} and replaces it by 3 times
+\texttt{money}:
+
+\begin{pyin}
+money *= 3
+\end{pyin}
+
+
+This is equivalent to:
+
+\begin{pyin}
+money = money * 3
+\end{pyin}
+
+
+\subsection{Include variables in strings}
+
+Variables can be used in strings using \textbf{string formatting}. There are numerous
+ways this can be done in Python but the current best practice is to use
+\texttt{f}-strings.
+
+
+\begin{pyin}
+f"{variable}"
+\end{pyin}
+
+
+
+For example the following creates a string that uses a random number:
+
+
+
+
+\begin{pyin}
+import random
+
+random.seed(0)
+random_number = random.random()
+string = f"Here is a random number: {random_number}"
+string
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+'Here is a random number: 0.8444218515250481'
+\end{raw}
+
+\subsection{Combine collections of boolean variables}
+\label{\detokenize{building-tools/01-variables-conditionals-loops/how/main:how-to-combine-collections-of-boolean-of-variables}}
+
+Given an iterable of booleans it is possible to check if any or all of them are
+\texttt{True} using \texttt{any} or \texttt{all}:
+
+
+\begin{pyin}
+all(iterable)
+\end{pyin}
+
+
+
+\begin{pyin}
+any(iterable)
+\end{pyin}
+
+
+
+For example:
+
+
+
+
+\begin{pyin}
+iterable = (True, True, False, True, True)
+all(iterable)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+False
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+any(iterable)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+True
+\end{raw}
+
+
+
+
+
+\subsection{Run code \textbf{if} a condition holds}
+
+An important part of giving instructions to a computer is to specify when to do
+different things.
+This is done using what is called an \texttt{if} statement. Following an \texttt{if} a boolean
+variable is expected, if that boolean is \texttt{True} then the indented code that
+follows is run. Otherwise it is not.
+
+
+\begin{pyin}
+if boolean:
+    code to run if boolean is true
+else:
+    code to run if boolean is false
+code to run after either of two previous code blocks are run.
+\end{pyin}
+
+
+
+\begin{note}
+An \texttt{else} statement is not always necessary. Specifically when combined with
+functions as seen in Chapter~\ref{chp:probability}
+the \texttt{else} is often not needed.
+\end{note}
+
+
+For example, the following code selects a random integer between 0 and 100 and
+then returns a different string depending on what the number was.
+
+
+
+
+\begin{pyin}
+import random
+
+random.seed(0)
+random_number = random.randint(0, 100)
+is_even = random_number % 2 == 0
+if is_even:
+    message = f"The random number ({random_number}) is even."
+else:
+    message = f"The random number ({random_number}) is odd."
+message
+\end{pyin}
+
+
+
+
+
+\begin{pyin}
+\PYGZsq{}The random number (49) is odd.\PYGZsq{}
+\end{pyin}
+
+
+
+
+
+\subsection{Repeat code \textbf{for} a given set of variables}
+\label{\detokenize{building-tools/01-variables-conditionals-loops/how/main:repeat-code-for-a-given-set-of-variables}}
+
+Given an iterable, it is possible to repeat some code for every item in the
+iterable. This is done using what is called a \texttt{for} loop. Following the
+\texttt{for} a
+placeholder variable is given then followed by the \texttt{in} keyword and the iterable.
+After that the indented code that will be repeated for every value of the
+iterable.
+
+
+\begin{pyin}
+for dummy_variable in iterable:
+    code to repeat
+    ```
+\end{pyin}
+
+
+
+For example the following will print a message for every given value in the
+iterable:
+
+
+
+
+\begin{pyin}
+iterable = ("Dog", 3, 2, -1.0)
+for item in iterable:
+    type_of_variable = type(item)
+    message = f"The variable {item} has type {type_of_variable}"
+    print(message)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+The variable Dog has type <class 'str'>
+The variable 3 has type <class 'int'>
+The variable 2 has type <class 'int'>
+The variable -1.0 has type <class 'float'>
+\end{raw}
+
+
+\begin{note}
+\texttt{for} loops are a common tool across most programming languages. They are
+similar to the list comprehensions seen in
+Section~\ref{sec:create_a_list_using_a_list_comprehension}
+\begin{itemize}
+\item 
+
+List comprehensions should be
+specifically used when the goal is to create a collection of items.
+
+\item 
+
+Traditional \texttt{for} loops should be used when the code to run for every
+iteration is more complex.
+
+\end{itemize}
+\end{note}
+
+
+
+\begin{note}
+A common
+use case of \texttt{for} loops is to combine them with a \texttt{range} statement to repeat
+code a known number of items.
+\end{note}
+
+
+
+\subsection{Repeat code \textbf{while} a given condition holds}
+
+To repeat code while a condition holds a \texttt{while} loop can be used. Similarly to
+the \texttt{if} statement, Following a \texttt{while}, a boolean
+variable is expected, if that boolean is \texttt{True} then the indented code that
+follows is repeated. After it is run, the boolean is checked once more. When the
+boolean is \texttt{False} the indented code is skipped.
+
+
+\begin{pyin}
+while boolean:
+    code to repeat before checking boolean once more
+code to run once boolean is False
+\end{pyin}
+
+Here is some code that repeatedly selects a random integer until that number is
+even.
+
+
+\begin{pyin}
+import random
+
+random.seed(4)
+selected_integer = random.randint(0, 10)
+number_of_selections = 1
+while selected_integer % 2 == 1:
+    selected_integer = random.randint(0, 10)
+    number_of_selections += 1
+number_of_selections
+\end{pyin}
+
+
+
+
+
+\begin{pyin}
+2
+\end{pyin}
+
+
+
+
+
+\subsection{Iterate over pairs of items from two iterables}
+\label{\detokenize{building-tools/01-variables-conditionals-loops/how/main:iterate-over-pairs-of-items-from-two-iterables}}
+
+To create a new iterable of pairs of items from two separate iterables use
+\texttt{zip}:
+
+
+\begin{pyin}
+zip(iterable_1, iterable_2)
+\end{pyin}
+
+
+
+For example:
+
+
+
+
+\begin{pyin}
+basket = ("Carrots", "Potatoes", "Strawberries", "Juice", "Ice cream")
+prices = (4, 2, 6, 3, 10)
+pairs = [(item, price) for item, price in zip(basket, prices)]
+pairs
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+[('Carrots', 4),
+ ('Potatoes', 2),
+ ('Strawberries', 6),
+ ('Juice', 3),
+ ('Ice cream', 10)]
+\end{raw}
+
+
+
+
+
+\subsection{Iterate over and index items from an iterable}
+\label{\detokenize{building-tools/01-variables-conditionals-loops/how/main:iterate-over-and-index-items-from-an-iterable}}
+
+To iterate over items from an iterable and keep track of their index use
+\texttt{enumerate}:
+
+
+\begin{pyin}
+enumerate(iterable)
+\end{pyin}
+
+
+
+For example:
+
+
+
+
+\begin{pyin}
+basket = ("Carrots", "Potatoes", "Strawberries", "Juice", "Ice cream")
+indices_and_items = [(count, item) for count, item in enumerate(basket)]
+indices_and_items
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+[(0, 'Carrots'),
+ (1, 'Potatoes'),
+ (2, 'Strawberries'),
+ (3, 'Juice'),
+ (4, 'Ice cream')]
+\end{raw}
+
+
+
+
+
+
+
+\section{Exercises}
+\begin{enumerate}
+
+\item 
+
+Using a \texttt{for} loop print the types of the variables in each of the following
+iterables:
+\begin{enumerate}
+
+\item 
+
+\texttt{iterable = (1, 2, 3, 4)}
+
+\item 
+
+\texttt{iterable = (1, 2.0, 3, 4.0)}
+
+\item 
+
+\texttt{iterable = (1, "dog", 0, 3, 4.0)}
+
+\end{enumerate}
+
+\item 
+
+Consider the following polynomial:
+\begin{equation*}
+\begin{split}
+    3 n ^ 3 - 183n ^ 2 + 3318n - 18757
+   \end{split}
+\end{equation*}\begin{enumerate}
+
+\item 
+
+Use the \texttt{sympy.isprime} function to find the lowest positive integer value
+of \(n\) for which the absolute value of that polynomial is not prime?
+
+\item 
+
+How many \textbf{unique} primes up until the first non prime value are there?
+(Hint: the \texttt{set} tool might prove useful here.)
+
+\end{enumerate}
+
+\item 
+
+Check the following identify for each value of \(n\in\{0, 10, 100, 2000\}\):
+\begin{equation*}
+\begin{split}
+       \sum_{i=0}^n i=\frac{n(n+1)}{2}
+   \end{split}
+\end{equation*}
+\item 
+
+Check the following identify for all positive integer values of \(n\) less than
+5000:
+\begin{equation*}
+\begin{split}
+       \sum_{i=0}^n i^2=\frac{n(n+1)(2n+1)}{6}
+   \end{split}
+\end{equation*}
+\item 
+
+Repeat the experiment of selecting a random integer between 0 and 10 until it
+is even 1000 times.
+What is the average number of times taken to select an even number?
+
+\end{enumerate}
+\section{Further information}
+\label{\detokenize{building-tools/01-variables-conditionals-loops/why/main:further-information}}\label{\detokenize{building-tools/01-variables-conditionals-loops/why/main::doc}}
+
+\subsection{Why can I not only use a \texttt{while} loop?}
+
+The \texttt{for} loop allows you to iterate over any selection of objects. Some
+languages do not have a generic \texttt{for} loop. In some cases it is only
+possible to iterate over a set of integers (similar to the \texttt{for i in range(n)}
+pattern) or to only use a \texttt{while} loop.
+
+
+Because of this, it is often the case that you will see code that uses \texttt{while}
+loops instead of \texttt{for} loops. For example:
+
+
+
+
+\begin{pyin}
+seasons = ("Winter", "Spring", "Summer", "Autumn")
+
+number_of_seasons = len(seasons)
+i = 0
+while i < number_of_seasons:
+    season = seasons[i]
+    print(season)
+    i += 1
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+Winter
+Spring
+Summer
+Autumn
+\end{raw}
+
+
+
+
+
+The above code is equivalent to:
+
+
+
+
+\begin{pyin}
+seasons = ("Winter", "Spring", "Summer", "Autumn")
+for season in seasons:
+    print(season)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+Winter
+Spring
+Summer
+Autumn
+\end{raw}
+
+
+
+
+
+While it is possible to use a \texttt{while} loop instead of a \texttt{for} loop there are no
+advantages to doing that and in fact only disadvantages:
+\begin{itemize}
+\item 
+
+Using the \texttt{while} loop requires iterating over the iterable twice: the first
+time when counting the length of it using \texttt{len} and the second time during the
+\texttt{while} statement itself.
+
+\item 
+
+There is more potential for error in the code: it would not be unlikely to
+have an off by one error in the boolean condition.
+
+\item 
+
+It is less readable.
+
+\end{itemize}
+
+
+The following is a good guideline:
+\begin{itemize}
+\item 
+
+Use a \texttt{for} loop when you know what you are iterating over.
+
+\item 
+
+Use a \texttt{while} loop when only know a specific condition under which you should
+iterate.
+
+\end{itemize}
+
+
+\subsection{Why should I not check if a boolean is equal to \texttt{True} or \texttt{False}}
+
+It is possible to create a boolean by comparing another boolean to \texttt{True} or
+\texttt{False} for example:
+
+
+
+
+\begin{pyin}
+boolean = False
+boolean == True
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+False
+\end{raw}
+
+
+
+
+
+Thus when using \texttt{if} or \texttt{while} statements you might sometimes see things like
+the following:
+
+
+\begin{pyin}
+import random
+
+random.seed(4)
+selected_integer = random.randint(0, 10)
+number_of_selections = 1
+while (selected_integer % 2 == 1) == True:
+    selected_integer = random.randint(0, 10)
+    number_of_selections += 1
+number_of_selections
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+2
+\end{raw}
+
+
+
+
+
+or:
+
+
+
+
+\begin{pyin}
+random.seed(4)
+selected_integer = random.randint(0, 10)
+number_of_selections = 1
+while (selected_integer % 2 == 1):
+    selected_integer = random.randint(0, 10)
+    number_of_selections += 1
+number_of_selections
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+2
+\end{raw}
+
+
+
+
+
+However this is not best practice. A better approach is to use \texttt{is} instead of
+\texttt{==}:
+
+
+
+
+\begin{pyin}
+import random
+
+random.seed(4)
+selected_integer = random.randint(0, 10)
+number_of_selections = 1
+while (selected_integer % 2 == 1) is True:
+    selected_integer = random.randint(0, 10)
+    number_of_selections += 1
+number_of_selections
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+2
+\end{raw}
+
+
+
+
+
+This is due to the fact that when using \texttt{==} variables that are not booleans
+will be converted to booleans and this might not be the expected behaviour.
+
+
+For example:
+
+
+
+
+\begin{pyin}
+number = 0
+number == False
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+True
+\end{raw}
+
+
+
+
+
+however:
+
+
+
+
+\begin{pyin}
+number is False
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+False
+\end{raw}
