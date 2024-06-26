@@ -16,7 +16,7 @@ kernelspec:
 
 In the previous chapters you have explored a number of tools that allow you to use
 mathematical knowledge more efficiently. In this part of the book you will
-see start to gain the knowledge necessary to build these tools.
+start to gain the knowledge necessary to build these tools.
 
 ```{important}
 In this chapter you will cover:

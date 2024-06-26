@@ -1,0 +1,1168 @@
+\chapter{Functions and data structures}
+
+In the previous chapters you have explored a number of tools that allow us to use
+our mathematical knowledge more efficiently. In this chapter you 
+continue to gain the knowledge necessary to build these tools covering the
+following topics:
+
+
+
+\begin{note}
+In this chapter you will cover:
+\begin{itemize}
+\item 
+
+Defining and using functions.
+
+\item 
+
+Defining and using various data structures.
+
+\end{itemize}
+\end{note}
+
+
+
+
+
+\section{Tutorial}
+
+Similarly to the Chapter~\ref{chp:variables_conditionals_and_loops}, you will use a computer to gain numerical
+evidence for a problem.
+
+The Fibonacci numbers are defined by the following sequence:
+\begin{equation*}
+\begin{split}
+\left\{\begin{array}{l}
+    a_0 = 0,\\
+    a_1 = 1,\\
+    a_n = a_{n - 1} + a_{n - 2}, n \geq 2\end{array}\right.
+\end{split}
+\end{equation*}
+
+Verify that the following identity holds for \(n\leq 500\):
+\begin{equation*}
+\begin{split}
+    \sum_{i=0}^n a_i = a_{n + 2} - 1
+\end{split}
+\end{equation*}
+
+
+You will start by defining a function for \(a(n)\):
+
+
+
+
+\begin{pyin}
+import functools
+
+
+@functools.lru_cache()
+def get_fibonacci(n):
+    """
+    A function to give the nth Fibonacci number using the recursive
+    definition.
+
+    Note that this also uses a cache.
+
+    Parameters
+    ----------
+    n: int
+        The index of the Fibonacci number
+
+    Returns
+    -------
+    int
+        The nth Fibonacci number
+    """
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    return get_fibonacci(n - 1) + get_fibonacci(n - 2)
+\end{pyin}
+
+\begin{note}
+This uses caching in the function definition with \texttt{lru\_cache}. This is not
+necessary but makes the code more efficient. Caching is covered in
+Section~\ref{sec:what_is_caching}.
+\end{note}
+
+
+You will print the first 10 numbers to ensure everything is working correctly:
+
+
+\begin{pyin}
+for n in range(10):
+    print(get_fibonacci(n))
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+\end{raw}
+
+
+
+
+
+Now write a function that returns a boolean: \texttt{True} if the equation
+holds for a given value of \(n\), \texttt{False} otherwise.
+
+\begin{pyin}
+def check_theorem(n):
+    """
+    A function that generate the lhs and rhs of the
+    following relationship:
+
+    \sum_{i=0}^n a_i = a_{n + 2} - 1
+
+    Where `a_i` is the i-th Fibonacci number.
+
+    It checks if the relationship holds.
+
+    Parameters
+    ----------
+    n: int
+        The index n for which the theorem is to be verified.
+
+    Returns
+    -------
+    bool
+        Whether or not the theorem holds for a given n.
+    """
+    sum_of_fibonacci = sum(get_fibonacci(i) for i in range(n + 1))
+    return sum_of_fibonacci == get_fibonacci(n + 2) - 1
+\end{pyin}
+
+
+
+
+
+Generate checks for \(n\leq 500\):
+
+
+
+
+
+\begin{pyin}
+checks = [check_theorem(n) for n in range(501)]
+checks
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+[True,
+ True,
+ True,
+ ...
+ True,
+ True,
+ True]
+\end{raw}
+
+
+
+
+
+
+Confirm that all the booleans in \texttt{checks} are \texttt{True}:
+
+
+
+
+\begin{pyin}
+all(checks)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+True
+\end{raw}
+
+\section{How to}
+\label{\detokenize{building-tools/02-functions-and-data-structures/how/main:how}}\label{\detokenize{building-tools/02-functions-and-data-structures/how/main::doc}}
+
+Two important data structures have already been seen in previous chapters:
+\begin{itemize}
+\item 
+
+Tuples: Section~\ref{sec:create_a_tuple}.
+
+\item 
+
+Lists: Section~\ref{sec:create_a_list}.
+
+\end{itemize}
+
+
+\subsection{Define a function}
+
+See: Section~\ref{sec:define_a_function}.
+
+
+\subsection{Write a docstring}
+\label{sec:write_a_docstring}
+
+A docstring is an attribute of a function that describes what it is. This can
+describe what it does, how it does it and/or why it does it.
+Here is how to write a docstring for a function that takes variables and returns
+a value.
+
+
+\begin{pyin}
+def name(parameter1, parameter2, ...):
+    """
+    <A description of what the function is.>
+
+    Parameters
+    ----------
+    parameter1 : <type of parameter1>
+        <description of parameter1>
+    parameter2 : <type of parameter2>
+        <description of parameter2>
+    ...
+
+    Returns
+    -------
+    <type of what the function returns>
+        <description of what the function returns>
+
+    """
+    INDENTED BLOCK OF CODE
+    return output
+\end{pyin}
+
+
+
+For example, here is how to write a function that returns \(x ^ 3\) for a given
+\(x\):
+
+
+
+
+\begin{pyin}
+def x_cubed(x):
+    """
+    Calculates and returns the cube of x. Does this by using Python
+    exponentiation.
+
+    Parameters
+    ----------
+    x : float
+        The value of x to be raised to the power 3
+
+    Returns
+    -------
+    float
+        The cube.
+    """
+    return x ** 3
+\end{pyin}
+
+
+
+
+
+\subsection{Create a tuple}
+
+See: Section~\ref{sec:create_a_tuple}.
+
+
+
+\subsection{Create a list}
+
+See: Section~\ref{sec:create_a_list}.
+
+
+\subsection{Create a list using a list comprehension}
+
+See: Section~\ref{sec:create_a_list_using_a_list_comprehension}.
+
+
+\subsection{Combine lists}
+
+Given two lists it is possible to combine them to create a new list using the \texttt{+} operator:
+
+
+\begin{pyin}
+first_list + other_list
+\end{pyin}
+
+
+
+Here is an example creating a single list from two separate lists:
+
+
+
+
+\begin{pyin}
+first_list = [1, 2, 3]
+other_list = [5, 6, 100]
+combined_list = first_list + other_list
+combined_list
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+[1, 2, 3, 5, 6, 100]
+\end{raw}
+
+
+
+
+
+\subsection{Append an element to a list}
+
+Appending an element to a list is done using the \texttt{append} method.
+
+
+\begin{pyin}
+a_list.append(element)
+\end{pyin}
+
+
+
+Here is an example where we append a new string to a list of strings:
+
+
+
+
+\begin{pyin}
+names = ["Vince", "Zoe", "Julien", "Kaitlynn"]
+names.append("Riggins")
+names
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+['Vince', 'Zoe', 'Julien', 'Kaitlynn', 'Riggins']
+\end{raw}
+
+\begin{note}
+It is not possible to do this with a \texttt{tuple} as a \texttt{tuple} is
+\textbf{immutable}. See
+Section~\ref{sec:what_is_the_difference_between_a_python_list_and_a_python_tuple}
+for more information on the difference between a list and a tuple.
+\end{note}
+
+
+
+\subsection{Remove an element from a list}
+
+To remove a given element from a list use the \texttt{remove} method.
+
+
+\begin{pyin}
+a_list.remove(element)
+\end{pyin}
+
+
+
+Here is an example removing a number from a list of numbers:
+
+
+
+
+\begin{pyin}
+numbers = [1, 94, 23, 202, 5]
+numbers.remove(23)
+numbers
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+[1, 94, 202, 5]
+\end{raw}
+
+
+
+
+
+\begin{note}
+It is not possible to remove an element from a \texttt{tuple} as a
+\texttt{tuple} is
+immutable. See
+Section~\ref{sec:what_is_the_difference_between_a_python_list_and_a_python_tuple}
+for more information on the difference between a list and a tuple.
+
+\end{note}
+
+
+
+\subsection{Sort a list}
+\label{\detokenize{building-tools/02-functions-and-data-structures/how/main:sort-a-list}}
+
+To sort a list use the \texttt{sort} method.
+
+
+\begin{pyin}
+a_list.sort()
+\end{pyin}
+
+
+
+Here is an example:
+
+
+
+
+\begin{raw}
+names = ["Vince", "Zoe", "Kaitlynn", "Julien"]
+names.sort()
+names
+\end{raw}
+
+
+
+
+
+\begin{pyin}
+names.sort(reverse=True)
+names
+\end{pyin}
+
+
+
+
+
+To sort a list in reverse order use the \texttt{sort} method with the \texttt{reverse=True}
+parameter.
+
+
+
+
+\begin{pyin}
+names.sort(reverse=True)
+names
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+['Zoe', 'Vince', 'Kaitlynn', 'Julien']
+\end{raw}
+
+
+
+
+
+
+\begin{note}
+It is not possible to sort a \texttt{tuple} as a \texttt{tuple} is immutable.
+See
+Section~\ref{sec:what_is_the_difference_between_a_python_list_and_a_python_tuple}
+for more information on the difference between a list and a tuple.
+\end{note}
+
+
+\subsection{Create a sorted list from an iterable}
+\label{\detokenize{building-tools/02-functions-and-data-structures/how/main:create-a-sorted-list-from-an-iterable}}
+
+To create a sorted list from an iterable use the \texttt{sorted} function.
+
+
+\begin{pyin}
+sorted(iterable)
+\end{pyin}
+
+
+
+Here is an example:
+
+
+
+
+\begin{pyin}
+tuple_of_numbers = (20, 50, 10, 6, 1, 50, 105)
+sorted(tuple_of_numbers)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+[1, 6, 10, 20, 50, 50, 105]
+\end{raw}
+
+
+
+
+
+\subsection{Access an element of an iterable}
+\label{\detokenize{building-tools/02-functions-and-data-structures/how/main:access-an-element-of-an-iterable}}
+
+See: Section~\ref{sec:how-to-access-particular-elements-in-a-tuple}.
+
+
+\subsection{Find the index of an element in an iterable}
+
+To identify the position of an element in an iterable use the \texttt{index} method.
+
+
+\begin{pyin}
+iterable.index(element)
+\end{pyin}
+
+
+
+Here is an example:
+
+
+
+
+\begin{pyin}
+numbers = [1, 94, 23, 202, 5]
+numbers.index(23)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+2
+\end{raw}
+
+
+\begin{note}
+Recall that python uses \texttt{0}-based indexing. The first element in an iterable has
+index \texttt{0}.
+\end{note}
+
+
+
+\subsection{Access an element of an iterable using negative indexing}
+
+It is possible to access an element of an iterable by counting from the end of
+the iterable using negative indexing.
+
+
+\begin{pyin}
+iterable[-index_from_end]
+\end{pyin}
+
+
+
+Here is an example showing how to access the penultimate element in a tuple:
+
+
+
+
+\begin{pyin}
+basket = ("Carrots", "Potatoes", "Strawberries", "Juice", "Ice cream")
+basket[-2]
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+'Juice'
+\end{raw}
+
+
+
+
+
+\subsection{Slice an iterable}
+\label{\detokenize{building-tools/02-functions-and-data-structures/how/main:slice-an-iterable}}\label{\detokenize{building-tools/02-functions-and-data-structures/how/main:id2}}
+
+To create a new iterable from an iterable use \texttt{[]} and specify a start
+(inclusive) and end (exclusive) pair of indices.
+
+
+\begin{pyin}
+iterable[include_start_index: exclusive_end_index]
+\end{pyin}
+
+
+
+For example:
+
+
+
+
+\begin{pyin}
+basket = ("Carrots", "Potatoes", "Strawberries", "Juice", "Ice cream")
+basket[2: 5]
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+('Strawberries', 'Juice', 'Ice cream')
+\end{raw}
+
+
+
+
+
+\subsection{Find the number of elements in an iterable}
+\label{\detokenize{building-tools/02-functions-and-data-structures/how/main:find-the-number-of-elements-in-an-iterable}}\label{\detokenize{building-tools/02-functions-and-data-structures/how/main:id3}}
+
+To count the number of elements in an iterable use \texttt{len}:
+
+
+\begin{pyin}
+len(iterable)
+\end{pyin}
+
+
+
+For example:
+
+
+
+
+\begin{pyin}
+basket = ("Carrots", "Potatoes", "Strawberries", "Juice", "Ice cream")
+len(basket)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+5
+\end{raw}
+
+
+
+
+
+\subsection{Create a set}
+\label{\detokenize{building-tools/02-functions-and-data-structures/how/main:create-a-set}}
+
+A set is a collection of distinct objects. This can be created in Python using
+the \texttt{set} command on any iterable. If there are non distinct objects in the
+iterable then this is an efficient way to remove duplicates.
+
+
+\begin{pyin}
+set(iterable)
+\end{pyin}
+
+
+
+Here is an example of creating a set:
+
+
+
+
+\begin{pyin}
+iterable = (1, 1, 3, 4, 4, 3, 2, 1, 10)
+unique_values = set(iterable)
+unique_values
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+{1, 2, 3, 4, 10}
+\end{raw}
+
+
+
+
+
+\subsection{Do set operations}
+\label{\detokenize{building-tools/02-functions-and-data-structures/how/main:do-set-operations}}
+
+Set operations between two sets can be done using Python:
+\begin{itemize}
+\item 
+
+\(S_1 \cup S_2\): \texttt{set\_1 | set\_2}
+
+\item 
+
+\(S_1 \cap S_2\): \texttt{set\_1 \& set\_2}
+
+\item 
+
+\(S_1 \setminus S_2\): \texttt{set\_1 - set\_2}
+
+\item 
+
+\(S_1 \subseteq S_2\) (checking if \(S_1\) is a subset of \(S_2\)): \texttt{set\_1 <= set\_2}
+
+\end{itemize}
+
+
+Here are some examples of carrying out the above:
+
+
+
+
+\begin{pyin}
+set_1 = set((1, 2, 3, 4, 5))
+set_2 = set((4, 5, 6, 7, 8, 9))
+
+set_1 | set_2
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+{1, 2, 3, 4, 5, 6, 7, 8, 9}
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+set_1 & set_2
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+{4, 5}
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+set_1 - set_2
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+{1, 2, 3}
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+set_1 <= set_2
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+False
+\end{raw}
+
+
+
+
+
+\subsection{Create hash tables}
+\label{sec:create_hash_tables}
+
+Lists and tuples allow us to immediately recover a value given its position.
+Hash tables allow us to create arbitrary \texttt{key} \texttt{value} pairs so that given any
+\texttt{key} we can immediately recover the value. This is called a dictionary in
+Python and is created using \texttt{\{\}} which takes a collection of \texttt{key: value}
+pairs.
+
+
+\begin{pyin}
+{key_1: value, key_2: value, …}
+\end{pyin}
+
+
+
+For example the following dictionary maps pet names to their ages:
+
+
+
+
+\begin{pyin}
+ages = {"Riggins": 4, "Chick": 7, "Duck": 7}
+ages
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+{'Riggins': 4, 'Chick': 7, 'Duck': 7}
+\end{raw}
+
+
+
+
+
+To recover a value pass the key to the dictionary using \texttt{{[}{]}}.
+
+
+For example:
+
+
+
+
+\begin{pyin}
+ages["Riggins"]
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+4
+\end{raw}
+
+
+
+
+
+\begin{note}
+If a key is used to recover the value with \texttt{{[}{]}} but the key is not in the dictionary then
+an error will be raised.
+\end{note}
+
+
+
+\subsection{Access element in a hash table}
+\label{\detokenize{building-tools/02-functions-and-data-structures/how/main:access-element-in-a-hash-table}}
+
+As described in Section\ref{sec:create_hash_tables} to access the value of a \texttt{key} in a hash
+table use \texttt{{[}{]}}.
+
+
+\begin{pyin}
+dictionary[key]
+\end{pyin}
+
+
+
+It is also possible to use the \texttt{get} method.
+The \texttt{get} method can also be passed the value of a \texttt{default} variable to return when the
+\texttt{key} is not in the hash table:
+
+
+\begin{pyin}
+dictionary.get(key, default)
+\end{pyin}
+
+
+
+For example:
+
+
+
+
+\begin{pyin}
+ages = {"Riggins": 4, "Chick": 7, "Duck": 7}
+ages.get("Vince", -1)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+-1
+\end{raw}
+
+
+
+
+
+\subsection{Iterate over keys in a hash table}
+\label{\detokenize{building-tools/02-functions-and-data-structures/how/main:iterate-over-keys-in-a-hash-table}}
+
+To iterate over the keys in a hash table use the \texttt{keys()} method:
+
+
+\begin{pyin}
+dictionary.keys()
+\end{pyin}
+
+
+
+For example:
+
+
+
+
+\begin{pyin}
+ages = {"Riggins": 4, "Chick": 7, "Duck": 7}
+ages.keys()
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+dict_keys(['Riggins', 'Chick', 'Duck'])
+\end{raw}
+
+
+
+
+
+\subsection{Iterate over values in a hash table}
+\label{\detokenize{building-tools/02-functions-and-data-structures/how/main:iterate-over-values-in-a-hash-table}}
+
+To iterate over the values in a hash table use the \texttt{values()} method:
+
+
+\begin{pyin}
+dictionary.values()
+\end{pyin}
+
+
+
+For example:
+
+
+
+
+\begin{pyin}
+ages = {"Riggins": 4, "Chick": 7, "Duck": 7}
+ages.values()
+\end{pyin}
+
+
+
+
+
+\begin{pyin}
+dict_values([4, 7, 7])
+\end{pyin}
+
+
+
+
+
+\subsection{Iterate over pairs of keys and value in a hash table}
+\label{\detokenize{building-tools/02-functions-and-data-structures/how/main:iterate-over-pairs-of-keys-and-value-in-a-hash-table}}
+
+To iterate over pairs of keys and values in a hash table use the \texttt{items()} method:
+
+
+\begin{pyin}
+dictionary.items()
+\end{pyin}
+
+
+
+For example:
+
+
+
+
+\begin{pyin}
+ages = {"Riggins": 4, "Chick": 7, "Duck": 7}
+ages.items()
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+dict_items([('Riggins', 4), ('Chick', 7), ('Duck', 7)])
+\end{raw}
+
+
+
+
+
+
+
+\section{Exercises}
+\begin{enumerate}
+
+\item 
+
+Write a function that generates \(n!\).
+
+\item 
+
+Write a function that generates the \(n\)th triangular numbers defined by:
+\begin{equation*}
+\begin{split}
+       T_n = \frac{n(n+1)}{2}
+   \end{split}
+\end{equation*}
+\item 
+
+Verify the following that the following identify holds for positive integer
+values \(n\leq 500\):
+\begin{equation*}
+\begin{split}
+       \sum_{i=0}^n T_i = \frac{n(n+1)(n+2)}{6}
+   \end{split}
+\end{equation*}
+\item 
+
+Consider the \textbf{Monty Hall problem} \cite{selvin1975monty}:
+
+\begin{quote}
+``Suppose you're on a game show, and you're given the choice of three doors:
+Behind one door is a car; behind the others, goats. You pick a door, say No. 1,
+and the host, who knows what's behind the doors, opens another door, say No. 3,
+which has a goat. He then says to you, `Do you want to pick door No. 2?' Is it
+to your advantage to switch your choice?''
+\end{quote}
+
+\begin{enumerate}
+
+\item 
+
+Write a function that simulates the play of the game when you ‘stick’ with
+the initial choice. You might find \texttt{random.shuffle} and \texttt{pop}ing a list
+helpful.
+
+\item 
+
+Write a function that simulates the play of the game when you ‘change’
+your choice. You might find \texttt{remove}ing from a list helpful.
+
+\item 
+
+Repeat the play of the game using both those functions and compare the
+probability of winning.
+
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+
+\section{Further information}
+\label{\detokenize{building-tools/02-functions-and-data-structures/why/main:further-information}}\label{\detokenize{building-tools/02-functions-and-data-structures/why/main::doc}}
+
+\subsection{What formats can be used to write a docstring?}
+\label{\detokenize{building-tools/02-functions-and-data-structures/why/main:what-formats-can-be-used-to-write-a-docstring}}
+
+The format used to write a docstring described in 
+Section~\ref{sec:write_a_docstring}.
+is the one specified
+by the Numpy project. 
+
+
+Amongst other things you can see how to specify further functionality:
+\begin{itemize}
+\item 
+
+How to indicate if a parameter is optional.
+
+\item 
+
+How to specify what types of errors might be raised by a function.
+
+\item 
+
+How to specify when a function is a generator.
+
+\end{itemize}
+
+
+There are 2 other common specifications:
+\begin{itemize}
+\item 
+
+Google’s Python Style Guide.
+
+\item 
+
+Sphinx Python Style Guide.
+
+\end{itemize}
+
+
+\subsection{Are there tools available to assist with writing docstrings?}
+\label{\detokenize{building-tools/02-functions-and-data-structures/why/main:are-there-tools-available-to-assist-with-writing-docstrings}}
+
+The \texttt{darglint} library can be used
+to check if docstrings match a given format.
+
+
+\subsection{A part from removing duplicates and set operations what are they advantages to using \texttt{set}?}
+\label{\detokenize{building-tools/02-functions-and-data-structures/why/main:a-part-from-removing-duplicates-and-set-operations-what-are-they-advantages-to-using-set}}
+
+One valuable uses of \texttt{set} is to efficiently identify if an element
+is in a given iterable or not:
+
+\begin{pyin}
+numbers = list(range(100000))
+%timeit 100000 in numbers
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+474 µs ± 2.51 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
+\end{raw}
+
+
+
+\begin{pyin}
+numbers = set(range(100000))
+%timeit 100000 in numbers
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+15.2 ns ± 0.121 ns per loop (mean ± std. dev. of 7 runs, 100,000,000 loops each)
+\end{raw}

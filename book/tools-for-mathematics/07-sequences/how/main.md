@@ -54,7 +54,7 @@ def generate_sequence(n):
     return 2 * generate_sequence(n - 1)
 ```
 
-Here we can get the first 7 terms:
+Here you can get the first 7 terms:
 
 ```{code-cell} ipython3
 values_of_sequence = [generate_sequence(n) for n in range(1, 8)]

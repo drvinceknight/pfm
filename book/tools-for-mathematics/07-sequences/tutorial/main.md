@@ -98,7 +98,7 @@ sum_of_first_four_terms = sum(generate_a(k_value=k, n=r) for r in range(1, 5))
 sum_of_first_four_terms
 ```
 
-This allows us to create the given equation and solve it:
+This allows you to create the given equation and solve it:
 
 ```{code-cell} ipython3
 equation = sym.Eq(sum_of_first_four_terms, 43)

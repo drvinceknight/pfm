@@ -14,16 +14,14 @@ kernelspec:
 
 # Functions and data structures
 
-In the previous chapters we have explored a number of tools that allow us to use
-our mathematical knowledge more efficiently. In this chapter as we
-continue to gain the knowledge necessary to build these tools we will cover the
+In the previous chapters you have explored a number of tools that allow us to use
+our mathematical knowledge more efficiently. In this chapter you
+continue to gain the knowledge necessary to build these tools covering the
 following topics:
 
 ```{important}
-In this chapter we will cover:
+In this chapter you will cover:
 
-- Defining and using functions
-- Defining and using two new data structures:
-    - Sets;
-    - Dictionaries.
+- Defining and using functions.
+- Defining and using various data structures.
 ```

@@ -101,7 +101,7 @@ first_list + other_list
 ```
 ````
 
-Here is an example a single list from two separate lists:
+Here is an example creating a single list from two separate lists:
 
 ```{code-cell} ipython3
 first_list = [1, 2, 3]
@@ -129,7 +129,7 @@ names
 ```
 
 ```{attention}
-It is not possible to do this with a `tuple` as a `tuple` **immutable**](difference_between_a_list_and_a_tuple).
+It is not possible to do this with a `tuple` as a `tuple` is [**immutable**](difference_between_a_list_and_a_tuple).
 ```
 
 ## Remove an element from a list
@@ -359,7 +359,7 @@ ages = {"Riggins": 4, "Chick": 7, "Duck": 7}
 ages
 ```
 
-To recover a value we pass the key to the dictionary using `[]`.
+To recover a value pass the key to the dictionary using `[]`.
 
 For example:
 
@@ -414,7 +414,7 @@ For example:
 
 ```{code-cell} ipython3
 ages = {"Riggins": 4, "Chick": 7, "Duck": 7}
-ages.items()
+ages.keys()
 ```
 
 ## Iterate over values in a hash table
