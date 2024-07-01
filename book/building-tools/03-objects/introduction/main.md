@@ -14,10 +14,10 @@ kernelspec:
 
 # Object oriented programming
 
-In the first part of this book we covered a number of tools that allow us to
+In the first part of this book you covered a number of tools that allow you to
 carry out mathematical techniques. One example of this is the `sympy.Symbol`
-object that create a symbolic variable that can be manipulated. In this chapter
-we will see how to define similar mathematical objects.
+object that creates a symbolic variable that can be manipulated. In this chapter
+you will see how to define similar mathematical objects.
 
 ```{important}
 In this chapter we will cover:
