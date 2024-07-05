@@ -1,0 +1,973 @@
+\chapter{Modularisation}
+\label{\detokenize{building-tools/05-modularisation/introduction/main:modularisation}}\label{\detokenize{building-tools/05-modularisation/introduction/main:id1}}\label{\detokenize{building-tools/05-modularisation/introduction/main::doc}}
+
+This is the first of three chapters that aim to move from writing code
+that works to writing software. In this particular chapter you will consider how
+to write your code in a structured way.
+
+In this chapter you will cover:
+\begin{itemize}
+    \item Importing code from python files.
+    \item Fragmenting code in to modular components.
+\end{itemize}
+
+
+\section{Tutorial}
+\label{sec:modularisation_tutorial}
+
+You will here consider a specific problem of a general type. You will not
+concentrate too much on the writing of the code itself. Instead this chapter
+concentrates
+on how you can write the code as software that will do more than just solve the
+specific problem. It will be able to be used for further problems of the same
+type.
+
+Consider a Markov chain model of the Board Game “Snakes and Ladders”:
+\begin{enumerate}
+
+\item 
+
+what is the shortest number of turns that are possible to win?
+
+\item 
+
+what is the average number of turns?
+
+\end{enumerate}
+
+
+
+To solve this problem you will make use of the Python library \texttt{numpy} which is
+discussed in the corresponding Chapter~\ref{} to
+carry out efficient numerical calculations.
+
+
+The problem you are considering is in fact an application of a mathematical
+object from probability called a Markov Chain which we will not go in to in
+detail here however the relevant ideas are that the probability of being in the
+100th square after \(k\) turns can be written down as:
+\begin{equation*}
+\begin{split}
+    (\pi P ^ k)_{100}
+\end{split}
+\end{equation*}
+
+where:
+\begin{equation*}
+\begin{split}
+\pi = (\underbrace{1, 0, \dots, 0}_{100})
+\end{split}
+\end{equation*}
+
+and \(P\in\mathbb{R}^{100 \times 100}\) where \(P_{ij}\) represents the probability
+of being in the \(i\)th square and going to the \(j_th\) square after rolling the
+dice.
+
+
+There are snakes and ladders between the squares as given in
+Table~\ref{tbl:snakes_and_ladders}.
+
+
+\begin{table}[!hbtp]
+\begin{tabular}{l|c|c}
+\hline
+
+Snake or Ladder
+&
+
+From
+&
+
+To
+\\
+\midrule
+
+Ladder
+&
+
+3
+&
+
+19
+\\
+Ladder
+&
+
+15
+&
+
+37
+\\
+
+Ladder
+&
+
+22
+&
+
+42
+\\
+
+Ladder
+&
+
+25
+&
+
+64
+\\
+
+Ladder
+&
+
+41
+&
+
+73
+\\
+
+Ladder
+&
+
+53
+&
+
+74
+\\
+
+Ladder
+&
+
+63
+&
+
+86
+\\
+
+Ladder
+&
+
+76
+&
+
+91
+\\
+
+Ladder
+&
+
+84
+&
+
+98
+\\
+
+Snake
+&
+
+11
+&
+
+7
+\\
+
+Snake
+&
+
+18
+&
+
+13
+\\
+
+Snake
+&
+
+28
+&
+
+12
+\\
+
+Snake
+&
+
+36
+&
+
+34
+\\
+
+Snake
+&
+
+77
+&
+
+16
+\\
+
+Snake
+&
+
+47
+&
+
+26
+\\
+
+Snake
+&
+
+83
+&
+
+39
+\\
+
+Snake
+&
+
+92
+&
+
+75
+\\
+
+Snake
+&
+
+99
+&
+
+70
+\end{tabular}
+\caption{Snake and Ladders}
+\label{tbl:snakes_and_ladders}
+\end{table}
+
+
+The matrix \(P\) will look like:
+
+
+\[
+    P = \left(\begin{array}{@{}*{11}{c}@{}}
+0      & 1/6 & 1/6 & 0 & 1/6    & 1/6    & 1/6    & 0      & 0      & \dots  & 0\\
+0      & 0   & 1/6 & 0 & 1/6    & 1/6    & 1/6    & 1/6    & 0      & \dots  & 0\\
+\vdots & 0   & 0   & 0 & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots & \vdots\\
+0      & 0   & 0   & 0 & 0      & 0      & 0      & \dots  & 0      & 0      & 1
+\end{array}\right)
+\]
+
+Note that because of the ladder on square 3: \(P_{14}=0\) and \(P_{1, 20}=1/6\). The
+first row/column of \(P\) corresponds to the state of not being on the board.
+
+
+A \texttt{csv} file containing this matrix \(P\) can be found at
+\texttt{https://zenodo.org/record/4236275}.
+
+
+To be able to answer the first question you will write a function to compute \(\pi
+P ^ k\) for arbitrary \(\pi\), \(k\) and \(P\):
+
+
+
+
+\begin{pyin}
+def get_long_run_state(pi, k, P):
+    """
+    For a Markov chain with transition matrix P and starting state vector pi,
+    obtain the state distribution after k steps.
+
+    This is done by computing pi P ^ k
+
+    Parameters
+    ----------
+    pi : array
+        Starting state vector.
+    k : int
+        Number of iterations.
+    P : array
+        Transition matrix
+
+    Returns
+    -------
+    array
+        The state vector after k iterations
+    """
+    return pi @ np.linalg.matrix_power(P, k)
+\end{pyin}
+
+
+
+
+
+For the second question you are going make use of a theoretic result which is
+that if \(P\) is of the form:
+\begin{equation*}
+\begin{split}
+P = \begin{pmatrix}
+        Q & R \\
+        0 & I
+    \end{pmatrix}
+\end{split}
+\end{equation*}
+
+In this case the \textbf{fundamental matrix} is defined by:
+\begin{equation*}
+\begin{split}
+    N = (I - Q) ^ {- 1}
+\end{split}
+\end{equation*}
+
+The fundamental matrix of an absorbing Markov chains has a number of potential
+applications. One of which is to calculate
+the expected number of steps for the Markov chain to be absorbed given by:
+\begin{equation*}
+\begin{split}
+    t = N\mathbb{1}
+\end{split}
+\end{equation*}
+
+where \(\mathbb{1}\) is a column of 1s.
+
+
+To be able to code this you want to write a function to compute \(t\) but this
+requires ``extracting'' \(Q\) from \(P\):
+
+
+
+
+\begin{pyin}
+def compute_t(P):
+    """
+    For an absorbing Markov chain with transition rate matrix this computes the
+    vector t which gives the expected number of steps until absorption.
+
+    Note that this does not assume P is in the required format.
+
+    Parameters
+    ----------
+    P : array
+        Transition matrix
+
+    Returns
+    -------
+    array
+        Number of steps until absorption
+    """
+    indices_without_1_in_diagonal = np.where(P.diagonal() != 1)[0]
+    Q = P[indices_without_1_in_diagonal.reshape(-1, 1), indices_without_1_in_diagonal]
+
+    number_of_rows, _ = Q.shape
+    N = np.linalg.inv(np.eye(number_of_rows) - Q)
+    return N @ np.ones(number_of_rows)
+\end{pyin}
+
+
+
+
+
+You are in fact going to modularise that function. It does 3 things:
+\begin{itemize}
+\item 
+
+Extracts the matrix \(Q\) from \(P\);
+
+\item 
+
+Computes \(N\);
+
+\item 
+
+Computes \(t\).
+
+\end{itemize}
+
+
+All of those tasks could be useful in their own right so you are going to break
+up that function in to three separate functions:
+
+
+
+
+\begin{pyin}
+def extract_Q(P):
+    """
+    For an absorbing Markov chain with transition rate matrix P this computes the
+    matrix Q.
+
+    Note that this does not assume that P is in the required format. It
+    identifies the rows and columns that have a 1 in the diagonal and removes
+    them.
+
+    Parameters
+    ----------
+    P : array
+        Transition matrix
+
+    Returns
+    -------
+    array
+        The matrix Q
+    """
+    indices_without_1_in_diagonal = np.where(P.diagonal() != 1)[0]
+    Q = P[indices_without_1_in_diagonal.reshape(-1, 1), indices_without_1_in_diagonal]
+    return Q
+
+
+def compute_N(Q):
+    """
+    For an absorbing Markov chain with transition rate matrix P that gives
+    matrix Q this computes the fundamental matrix N.
+
+    Parameters
+    ----------
+    Q : array
+        The matrix Q obtained from P
+
+    Returns
+    -------
+    array
+        The funamental matrix N
+    """
+    number_of_rows, _ = Q.shape
+    N = np.linalg.inv(np.eye(number_of_rows) - Q)
+    return N
+\end{pyin}
+
+
+
+
+
+This now allows you to redefine \texttt{compute\_t} in a simpler way:
+
+
+
+
+\begin{pyin}
+def compute_t(P):
+    """
+    For an absorbing Markov chain with transition rate matrix this computes the
+    vector t which gives the expected number of steps until absorption.
+
+    Note that this does not assume P is in the required format.
+    """
+    Q = extract_Q(P)
+    N = compute_N(Q)
+    number_of_rows, _ = Q.shape
+    return N @ np.ones(number_of_rows)
+\end{pyin}
+
+
+\begin{note}
+All the code you have written so far is generic in nature so would be better
+placed somewhere that it can be used for different project.
+\end{note}
+
+
+
+You are going to put these three functions (and the necessary \texttt{import numpy as np} statement) in an 
+\texttt{absorption.py} file as can be seen in Figure~\ref{fig:absorption.py}.
+
+\begin{figure}[htbp]
+\centering
+    \includegraphics[width=.7\textwidth]{assets/absorption/main.png}
+    \caption{The three modularised function in a python file.}
+    \label{fig:absorption.py}
+\end{figure}
+
+
+You will now use everything you have done so far:
+\begin{itemize}
+\item 
+
+Download, and extract the data available at
+\texttt{https://zenodo.org/record/4236275}. Put the
+\texttt{main.csv} file in the \texttt{snakes\_and\_ladders}
+directory.
+
+\item 
+
+Open a Jupyter notebook in the 
+\texttt{snakes\_and\_ladders} directory
+and call it \texttt{main.ipynb} also in the
+
+\end{itemize}
+
+
+This should look like the following:
+
+\begin{raw}
+snakes_and_ladders/
+    |--- absorption.py
+    |--- main.csv
+    |--- main.ipynb
+\end{raw}
+
+
+You can now use all of the code we have written in the notebook, first you can
+import the functions in \texttt{absorption.py} like any other python library:
+
+
+
+
+\begin{pyin}
+import absorption
+\end{pyin}
+
+
+
+
+
+We will also import \texttt{numpy} and use it to read the data file:
+
+
+
+
+\begin{pyin}
+import numpy as np
+
+P = np.loadtxt("main.csv", delimiter=",")
+\end{pyin}
+
+\begin{note}
+The above commands work because the 3 files are all in the same directory.
+\end{note}
+
+
+
+Now to compute the shortest number of turns:
+
+
+
+
+\begin{pyin}
+k = 1
+pi = np.zeros(101)
+pi[0] = 1
+while absorption.get_long_run_state(pi, k, P)[-1] == 0:
+    k += 1
+k
+\end{pyin}
+
+
+
+
+
+It is possible to arrive at the last square in 6 turns.
+
+
+Now to compute the average length of the game:
+
+
+
+
+
+\begin{pyin}
+:tags: [nbval-ignore-output]
+
+t = absorption.compute_t(P)
+t[0]
+\end{pyin}
+
+
+
+\begin{raw}
+43.49196169497175
+\end{raw}
+
+
+
+
+\section{How to}
+\label{\detokenize{building-tools/05-modularisation/how/main:how}}\label{\detokenize{building-tools/05-modularisation/how/main::doc}}
+
+\subsection{Import code from python files}
+\label{\detokenize{building-tools/05-modularisation/how/main:how-to-import-code-from-python-files}}
+
+Given a \texttt{<file.py>} file in a directory any other python process in the same
+directory can import that file as it would a normal library.
+
+
+\begin{pyin}
+import <file>
+\end{pyin}
+
+
+
+At that stage it is possible to uses any python object (a \texttt{function}, a
+\texttt{class}, a
+\texttt{variable}) by referring to the \texttt{<file.py>} as library:
+
+\begin{pyin}
+<file>.function
+<file>.class
+<file>.variable
+\end{pyin}
+
+
+\subsection{Break up code in to modular components}
+\label{\detokenize{building-tools/05-modularisation/how/main:how-to-break-up-code-in-to-modular-components}}
+
+When modularising code aim to identify specific components of the code that can
+be isolated from the rest.
+In practice this means writing multiple functions that use the correct inputs
+and outputs in chain for an overall goal.
+
+
+Often this allows you to write a more comprehensive docstring that explains
+specific parts of the implemented process.
+As an example, consider the problem of wanting to pay a shared bill after
+applying a tip, the following function will do this:
+
+
+
+
+\begin{pyin}
+def add_tip_and_get_bill_share(total, tip_proportion, number_of_payers):
+    """
+    This returns the share of a bill to be paid by `number_of_payers`
+    ensuring the total paid includes a tip.
+
+    Parameters
+    ----------
+    total : float
+        The total amount of the bill
+    tip_proportion : float
+        The proportion of the bill that should be added as a tip (a number
+        between 0 and 1)
+    number_of_payers : int
+        The number of people sharing the bill
+
+    Returns
+    -------
+    float
+        The amount each person should contribute
+    """
+    tip_amount = tip_proportion * total
+    total += tip_amount
+    return total / number_of_payers
+\end{pyin}
+
+You can check that this works:
+
+\begin{pyin}
+add_tip_and_get_bill_share(total=100, tip_proportion=0.2, number_of_payers=6)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+20.0
+\end{raw}
+
+An improvement of the above would be:
+
+\begin{pyin}
+def add_tip(total, tip_proportion):
+    """
+    This adds the given proportion to a bill total.
+
+    Note that tip_proportion is a number between 0 and 1. A tip_proportion of 0
+    corresponds to no tip and a tip_proportion of 1 corresponds to paying the
+    total twice.
+
+    Parameters
+    ----------
+    total : float
+        The total amount of the bill
+    tip_proportion : float
+        The proportion of the bill that should be added as a tip (a number
+        between 0 and 1)
+
+    Returns
+    -------
+    float
+        The total value of the bill (including tip)
+    """
+    tip_amount = tip_proportion * total
+    return total + tip_amount
+
+
+def get_bill_share(total, number_of_payers):
+    """
+    This returns the share of a bill by dividing the total by the number of
+    payers.
+
+    Parameters
+    ----------
+    total : float
+        The total amount of the bill
+    number_of_payers : int
+        The number of people sharing the bill
+
+    Returns
+    -------
+    float
+        The amount each person should contribute
+    """
+    return total / number_of_payers
+\end{pyin}
+
+
+Then to use the above you would be able to explicitly write out each step which
+ensures that there is clarity in what is being done:
+
+\begin{pyin}
+total = add_tip(total=100, tip_proportion=0.2)
+get_bill_share(total=total, number_of_payers=6)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+20.0
+\end{raw}
+
+
+
+\section{Exercises}
+\label{\detokenize{building-tools/05-modularisation/exercises/main:exercises}}\label{\detokenize{building-tools/05-modularisation/exercises/main:modularisation-exercises}}\label{\detokenize{building-tools/05-modularisation/exercises/main::doc}}
+
+\begin{enumerate}
+
+\item 
+
+Use the code written in Section~\ref{sec:modularisation_tutorial} to obtain the average time
+until absorption from the first state of the Markov chains with the following transition 
+matrices:
+\begin{enumerate}
+
+\item 
+
+\(P = \begin{pmatrix}1/2 & 1/2 \\ 0 & 1 \end{pmatrix}\)
+
+\item 
+
+\(P = \begin{pmatrix}1/2 & 1/4 & 1/4\\ 1/3 & 1/3 & 1/3  \\0 & 0 & 1 \end{pmatrix}\)
+
+\item 
+
+\(P = \begin{pmatrix}1 & 0 \\ 1/2 & 1/2 \end{pmatrix}\)
+
+\item 
+
+\(P = \begin{pmatrix}1/2 & 1/4 & 1/4\\ 1/3 & 1/3 & 1/3  \\1/5 & 0 & 4/5 \end{pmatrix}\)
+
+\end{enumerate}
+
+\item 
+
+Modularise the following code by creating a function \texttt{flip\_coin} that takes a
+\texttt{probability\_of\_selecting\_heads} variable.
+
+\begin{pyin}
+import random
+
+def sample_experiment(bag):
+    """
+    This samples a token from a given bag and then
+    selects a coin with a given probability.
+
+    If the sampled token is red then the probability
+    of selecting heads is 4/5 otherwise it is 2/5.
+
+    This function returns both the selected token
+    and the coin face.
+    """
+    selected_token = random.choice(bag)
+
+    if selected_token == "Red":
+       probability_of_selecting_heads = 4 / 5
+    else:
+       probability_of_selecting_heads = 2 / 5
+
+    if random.random() < probability_of_selecting_heads:
+       coin = "Heads"
+    else:
+       coin = "Tails"
+    return selected_token, coin
+\end{pyin}
+
+\item 
+
+Modularise the following code by writing 2 further functions:
+\begin{itemize}
+\item 
+
+\texttt{get\_potential\_divisors}: A function to return the integers between 2 and
+\(\sqrt{N}\) for a given \(N\).
+
+\item 
+
+\texttt{is\_divisor}: A function to check if \(n | N\) (``\(n\) divides \(N\)'') for given
+\(n, N\).
+
+\end{itemize}
+
+\begin{pyin}
+import math
+
+def is_prime(N):
+     """
+    Checks if a number N is prime by checking all that positive integers
+    numbers less sqrt(N) than it that divide it.
+
+    Note that if N is not a positive integer great than 1 then it does not
+    check: it returns False.
+    """
+    if N <= 1 or type(N) is not int:
+        return False
+    for potential_divisor in range(2, int(math.sqrt(N)) + 1):
+        if (N % potential_divisor) == 0:
+            return False
+    return True
+\end{pyin}
+
+
+Confirm your work by comparing to the results of using \texttt{sympy.isprime}.
+
+\item 
+
+Write a \texttt{stats.py} file with two functions to implement the calculations of
+mean and population variance.
+
+
+Note that the mean is defined by:
+\begin{equation*}
+\begin{split}
+    \bar x \frac{\sum_{i=1}^{N} x_i}{N}
+   \end{split}
+\end{equation*}
+
+The population variance is defined by:
+\begin{equation*}
+\begin{split}
+    \sigma ^ 2 = \frac{\sum_{i=1}^{N} (x_i - \bar x) ^ 2}{N}
+   \end{split}
+\end{equation*}
+
+Use your functions to compute the mean and population variance of the following
+collections of numbers:
+\begin{enumerate}
+
+\item 
+
+\(S_1=(1, 2, 3, 4, 4, 4, 4, 4)\)
+
+\item 
+
+\(S_1=(1)\)
+
+\item 
+
+\(S_1=(1, 1, 1, 2, 3, 4, 4, 4, 4, 4)\)
+
+\end{enumerate}
+
+
+Compare your results to the results of using the \texttt{statistics.mean},
+and \texttt{statistics.pvariance}. 
+
+\end{enumerate}
+
+
+
+\section{Further information}
+\label{\detokenize{building-tools/05-modularisation/why/main:further-information}}\label{\detokenize{building-tools/05-modularisation/why/main::doc}}
+
+\subsection{Why modularise?}
+\label{\detokenize{building-tools/05-modularisation/why/main:why-modularise}}\label{\detokenize{building-tools/05-modularisation/why/main:id1}}
+
+Best practice when writing code is to break up code in to modular parts. One
+guiding principle described in~\cite{fowler2018refactoring}:
+
+
+
+
+\begin{quote}
+
+
+``Code should be obvious. When someone needs to make a change, they should be
+able to find the code to be changed easily and make the change quickly without
+introducing any errors.''
+\end{quote}
+
+
+
+
+
+
+Whilst this guiding principle is ambiguous and all concepts related to clean
+code writing and refactoring are not things that can be covered in this book one
+specific principle is the one referred to in\ref{martin2009clean}:
+\begin{quote}
+
+
+``Functions should do one thing. They should do it well. They should do it
+only.''
+\end{quote}
+
+
+
+In some texts on code architecture you will see arbitrary rules about how many
+lines of code should be in a given function. Having a function with 10 or more
+lines of code might indicate that it can be modularised. \textbf{However}, it is
+not
+recommended to follow such rules as sometimes they might add more complexity than
+they remove. Make your code clear and
+ensuring your functions do one thing well and one thing only.
+
+
+\subsection{Why do I get an import error?}
+\label{\detokenize{building-tools/05-modularisation/why/main:why-do-i-get-an-import-error}}
+
+The most probable explanation for this is that you are importing a file that is
+not in the same directory or that you have not imported the file with the
+correct name.
+
+
+As an example, if your code is in a \texttt{library} directory but that your
+notebook is in a \textbf{different} directory then you will get an error as shown
+below:
+
+
+
+
+
+\begin{pyin}
+import library
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+---------------------------------------------------------------------------
+ModuleNotFoundError                       Traceback (most recent call last)
+Cell In[1], line 1
+----> 1 import library
+
+ModuleNotFoundError: No module named 'library'
+\end{raw}
+
+
+
+
+
+
+Similarly if you perhaps incorrectly saved your \texttt{library.py} file with a typo in
+the name such as: \texttt{librery.py} then you would get the same error.
+
+
+\subsection{How do I make my file importable from other directories?}
+\label{\detokenize{building-tools/05-modularisation/why/main:how-do-i-make-my-file-importable-from-other-directories}}
+
+This falls under the subject matter of ``packaging''. This is not covered in
+this book.

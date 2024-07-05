@@ -12,9 +12,9 @@ kernelspec:
   name: python3
 ---
 
-# How
+# How to
 
-## How to import code from python files
+## Import code from python files
 
 Given a `<file.py>` file in a directory any other python process in the same
 directory can import that file as it would a normal library.
@@ -34,9 +34,7 @@ At that stage it is possible to uses any python object (a `function`, a `class`,
 <file>.variable
 ```
 
-See the {ref}`modularisation_tutorial` for examples of this.
-
-## How to break up code in to modular components
+## Break up code in to modular components
 
 When modularising code aim to identify specific components of the code that can
 be isolated from the rest.
@@ -137,6 +135,3 @@ ensures that there is clarity in what is being done:
 total = add_tip(total=100, tip_proportion=0.2)
 get_bill_share(total=total, number_of_payers=6)
 ```
-
-You can read more and find reference texts about
-modularisation at {ref}`why_modularise`.

@@ -24,5 +24,5 @@ to write our code in a structured way.
 In this chapter we will cover:
 
 - Importing code from python files.
-- Fragmenting code in to modular pieces.
+- Fragmenting code in to modular components.
 ```
