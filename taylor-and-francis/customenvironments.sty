@@ -6,7 +6,7 @@
 
 \definecolor{pyincol}{RGB}{51, 110, 159}
 \definecolor{pyoutcol}{RGB}{78, 169, 244}
-\definecolor{Rincol}{RGB}{55, 151, 59}
+\definecolor{mdincol}{RGB}{55, 151, 59}
 \definecolor{Routcol}{RGB}{132, 203, 47}
 \definecolor{bg}{RGB}{248, 248, 248}
 
@@ -62,6 +62,17 @@
 {
 \VerbatimEnvironment
 \begin{code}{Python input}{python}{pyincol}}
+{\end{code}}
+
+\newenvironment{md}
+% Python input environment
+% \begin{pyin}
+% for i in range(5):
+%   print(i)
+% end{pyin}
+{
+\VerbatimEnvironment
+\begin{code}{Markdown input}{md}{mdincol}}
 {\end{code}}
 
 \newenvironment{raw}

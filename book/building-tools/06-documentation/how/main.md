@@ -160,8 +160,7 @@ to mistake when combining with other nested statement.
 
 ### How to include a hyperlink in markdown
 
-To include a hyperlink in markdown use `[]()`
-language:
+To include a hyperlink in markdown use `[]()`:
 
 ````{tip}
 ```md
@@ -180,8 +179,7 @@ resources.
 
 ### How to include an image in markdown
 
-To include an image in markdown use `![]()`
-language:
+To include an image in markdown use `![]()`:
 
 ````{tip}
 ```md
