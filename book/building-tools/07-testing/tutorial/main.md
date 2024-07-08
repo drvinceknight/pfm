@@ -13,23 +13,23 @@ kernelspec:
 ---
 
 (testing_tutorial)=
+
 # Tutorial
 
-In this tutorial we will write code to ensure the correctness of the software we
+In this tutorial you will write code to ensure the correctness of the software
+you
 have written in {ref}`modularisation_tutorial` and
 {ref}`documentation`.
 
 The software for `absorption.py` is in fact across two separate files:
 
-- `absorption.py`: the source code. We will check this using _unit tests_
-- `README.md`: the documentation. We will check this using _doc tests_.
-
-We will show how to write code that checks both of these.
+- `absorption.py`: the source code. You will check this using _unit tests_
+- `README.md`: the documentation. You will check this using _doc tests_.
 
 ## Writing tests for code
 
 Recalling the code written in `absorption.py` in {ref}`modularisation_tutorial`,
-there are 4 functions that need to be validated:
+there are 4 functions that need to be tested:
 
 - `get_long_run_state`
 - `extract_Q`
@@ -39,7 +39,7 @@ there are 4 functions that need to be validated:
 In the directory that contains `absorption.py` we will now create a new Python
 script called: `test_absorption.py`.
 
-We will write some functions in there to validate each of the functions in
+Write the following functions to test each of the functions in
 `absorption.py`:
 
 ```py
@@ -100,7 +100,6 @@ name: fig:running_tests_with_no_errors
 ---
 Running the tests with no errors.
 ```
-
 
 For each of the four functions in `absorption.py` we can now add further tests
 and ensure they are also called at the end. The full `test_absorption.py` file
@@ -173,7 +172,7 @@ test_compute_t()
 ```
 
 ```{tip}
-The `numpy.array_equal` and `numpy_allclose` allow us to compare equality of
+The `numpy.array_equal` and `numpy.allclose` allow us to compare equality of
 boolean arrays. They return `True` or `False` depending on whether the two
 passed arrays are equal or approximately equal (respectively).
 
@@ -194,10 +193,10 @@ name: fig:running_tests_with_error_in_source_code
 Running the tests with an error in the source code.
 ```
 
-As and when we add more features to `absorption.py` we will also add tests.
+As and when you add more features to `absorption.py` you will also add tests.
 
-Software is compromised of both code and documentation. So far we have tested
-our code, now we will test our documentation.
+Software is compromised of both code and documentation. So far you have tested
+our code, now you will test your documentation.
 
 ## Testing documentation
 
@@ -273,7 +272,6 @@ We now see how the vector $\pi$ changes over time:
 
 ```
 ````
-
 
 To test the documentation gives the results that are written, run the following
 at the command line:

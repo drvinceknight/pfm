@@ -1,0 +1,919 @@
+\chapter{Testing}
+\label{\detokenize{building-tools/07-testing/introduction/main:testing}}\label{\detokenize{building-tools/07-testing/introduction/main::doc}}
+
+This is the third and last chapter that shows how to move from writing code
+that works to writing software. In this particular chapter you will consider how
+to write automated tests for your software.
+
+\begin{note}
+In this chapter you will cover:
+\begin{itemize}
+\item 
+
+Assert statements to test code.
+
+\item 
+
+Testing documentation.
+
+\end{itemize}
+\end{note}
+
+
+
+
+
+\section{Tutorial}
+\label{sec:testing_tutorial}
+
+In this tutorial you will write code to ensure the correctness of the software
+you
+have written in Chapter~\ref{chp:modularisation} and~\ref{chp:documentation}
+tutorials.
+
+The software for \texttt{absorption.py} is in fact across two separate files:
+\begin{itemize}
+\item 
+
+\texttt{absorption.py}: the source code. You will check this using \textbf{unit tests}
+
+\item 
+
+\texttt{README.md}: the documentation. You will check this using \textbf{doc tests}.
+
+\end{itemize}
+
+
+\subsection{Writing tests for code}
+\label{\detokenize{building-tools/07-testing/tutorial/main:writing-tests-for-code}}
+
+Recalling the code written in \texttt{absorption.py} in
+Section~\ref{sec:modularisation_tutorial},
+there are 4 functions that need to be tested:
+
+\begin{itemize}
+\item 
+
+\texttt{get\_long\_run\_state}
+
+\item 
+
+\texttt{extract\_Q}
+
+\item 
+
+\texttt{compute\_N}
+
+\item 
+
+\texttt{compute\_t}
+
+\end{itemize}
+
+
+In the directory that contains \texttt{absorption.py} create a new Python
+file called: \texttt{test\_absorption.py}.
+
+
+Write the following functions to test each of the functions in
+\texttt{absorption.py}:
+
+\begin{pyin}
+import numpy as np
+
+import absorption
+
+def test_long_run_state_for_known_number_of_states():
+    """
+    This tests the `long_run_state` for a small example matrix
+    """
+    pi = np.array([1, 0, 0])
+    P = np.array([[1 / 2, 1 / 4, 1 / 4], [1 / 3, 1 / 3, 1 / 3], [0, 0, 1]])
+    pi_after_5_steps = absorption.get_long_run_state(pi=pi, k=5, P=P)
+    assert np.array_equal(pi_after_5_steps, pi @ np.linalg.matrix_power(P, 5)), "Did not get expected result for pi after 5 steps"
+
+
+def test_long_run_state_when_starting_in_absorbing_state():
+    """
+    This tests the `long_run_state` for a small example matrix.
+
+    In this test we start in the absorbing state, the state vector should not
+    change.
+    """
+    pi = np.array([0, 0, 1])
+    P = np.array([[1 / 2, 1 / 4, 1 / 4], [1 / 3, 1 / 3, 1 / 3], [0, 0, 1]])
+    pi_after_5_steps = absorption.get_long_run_state(pi=pi, k=5, P=P)
+    assert np.array_equal(pi_after_5_steps, pi)
+
+
+test_long_run_state_for_known_number_of_states()
+test_long_run_state_when_starting_in_absorbing_state()
+\end{pyin}
+
+
+\begin{note}
+The two functions we have written do not include a \texttt{return} statement but
+instead include an \texttt{assert} statement. An \texttt{assert} is followed by two values
+separated by a comma:
+\begin{enumerate}
+
+\item 
+
+A boolean that is to be \texttt{True} or \texttt{False}.
+
+\item 
+
+A string that is output if the boolean is `False`.
+
+\end{enumerate}
+\end{note}
+
+
+
+To run those tests, run the script at the command line:
+
+\begin{raw}
+$ python test_absorption.py
+\end{raw}
+
+
+When running the tests if everything has been done correctly there will be no
+output: the 2 functions have been called and the assertions have
+\textbf{passed}. See Figure~\ref{fig:running_tests_with_no_errors}.
+
+\begin{figure}[htbp]
+\centering
+
+\includegraphics[width=0.750\linewidth]{./assets/running_tests_with_no_errors/main.png}
+\caption{Running the tests with no errors.}
+\label{fig:running_tests_with_no_errors}
+\end{figure}
+
+
+For each of the four functions in \texttt{absorption.py} you can now add further tests
+and ensure they are also called at the end. The full \texttt{test\_absorption.py} file
+should look like:
+
+\begin{pyin}
+import numpy as np
+
+import absorption
+
+def test_long_run_state_for_known_number_of_states():
+    """
+    This tests the `long_run_state` for a small example matrix
+    """
+    pi = np.array([1, 0, 0])
+    P = np.array([[1 / 2, 1 / 4, 1 / 4], [1 / 3, 1 / 3, 1 / 3], [0, 0, 1]])
+    pi_after_5_steps = absorption.get_long_run_state(pi=pi, k=5, P=P)
+    assert np.array_equal(pi_after_5_steps, pi @ np.linalg.matrix_power(P, 5)), "Did not get expected result for pi after 5 steps"
+
+
+def test_long_run_state_when_starting_in_absorbing_state():
+    """
+    This tests the `long_run_state` for a small example matrix.
+
+    In this test we start in the absorbing state, the state vector should not
+    change.
+    """
+    pi = np.array([0, 0, 1])
+    P = np.array([[1 / 2, 1 / 4, 1 / 4], [1 / 3, 1 / 3, 1 / 3], [0, 0, 1]])
+    pi_after_5_steps = absorption.get_long_run_state(pi=pi, k=5, P=P)
+    assert np.array_equal(pi_after_5_steps, pi)
+
+
+def test_extract_Q():
+    """
+    This tests that the submatrix Q can be extracted from a given matrix P.
+    """
+    P = np.array([[1 / 2, 1 / 4, 1 / 4], [1 / 3, 1 / 3, 1 / 3], [0, 0, 1]])
+    Q = absorption.extract_Q(P)
+    expected_Q = np.array([[1 / 2, 1 / 4], [1 / 3, 1 / 3]])
+    assert np.array_equal(Q, expected_Q), f"The expected Q did not match, the code obtained {Q}"
+
+
+def test_compute_N():
+    """
+    This tests the computation of the fundamental matrix N
+    """
+    P = np.array([[1 / 2, 1 / 4, 1 / 4], [1 / 3, 1 / 3, 1 / 3], [0, 0, 1]])
+    Q = absorption.extract_Q(P)
+    N = absorption.compute_N(Q)
+    expected_N = np.array([[8 / 3, 1], [4 / 3, 2]])
+    assert np.allclose(N, expected_N), f"The expected N did not match, the code obtained {N}"
+
+
+def test_compute_t():
+    """
+    This tests the computation of the number of steps until absorption t.
+    """
+    P = np.array([[1 / 2, 1 / 4, 1 / 4], [1 / 3, 1 / 3, 1 / 3], [0, 0, 1]])
+    t = absorption.compute_t(P)
+    expected_t = np.array([11 / 3, 10 / 3])
+    assert np.allclose(t, expected_t), f"The expected t did not match, the code obtained {t}"
+
+
+test_long_run_state_for_known_number_of_states()
+test_long_run_state_when_starting_in_absorbing_state()
+test_extract_Q()
+test_compute_N()
+test_compute_t()
+\end{pyin}
+
+
+\begin{note}
+The \texttt{numpy.array\_equal} and \texttt{numpy.allclose} compare equality of
+boolean arrays. They return \texttt{True} or \texttt{False} depending on whether the two
+passed arrays are equal or approximately equal (respectively).
+
+\texttt{numpy.allclose} should be used when comparing numpy arrays that might be
+different due to numerical imprecision.
+\end{note}
+
+
+
+\textbf{You can experiment by changing some of the code or the tests and see the way
+the tests fail.} See Figure~\ref{fig:running_tests_with_error_in_source_code}
+where the following specific error has been introduced in to \texttt{absorption.py}:
+\texttt{P.diagonal() == 1} is incorrect and should be \texttt{P.diagonal() != 1}.
+
+\begin{figure}[htbp]
+\centering
+
+\includegraphics[width=0.750\linewidth]{./assets/running_tests_with_error_in_source_code/main.png}
+\caption{Running the tests with an error in the source code.}
+\label{fig:running_tests_with_errors_in_source_code}
+\end{figure}
+
+
+As and when you add more features to \texttt{absorption.py} you will also add tests.
+
+
+Software is compromised of both code and documentation. So far you have tested
+your code, now you will test your documentation.
+
+
+\subsection{Testing documentation}
+\label{\detokenize{building-tools/07-testing/tutorial/main:testing-documentation}}
+
+To be able to check the python code written in the documentation (see
+Chapter~\ref{chp:documentation}) is
+correct you need to write the code using a specific format:
+
+\begin{itemize}
+\item 
+
+\texttt{>>>} to denote python code
+
+\item 
+
+\texttt{...} to denote secondary lines of multi line python code.
+
+\item 
+
+Nothing to denote the expected output.
+
+\end{itemize}
+
+
+As an example, in Section~\ref{sec:documentation_tutorial}, you have written:
+
+\begin{md}
+```python
+import numpy as np
+
+import absorption
+
+pi = np.array([1, 0, 0])
+P = np.array([[1 / 2, 1 / 4, 1 / 4], [1 / 3, 1 / 3, 1 / 3], [0, 0, 1]])
+```
+
+We now see how the vector $\pi$ changes over time:
+
+```python
+for k in range(10):
+    print(absorption.get_long_run_state(pi, k, P))
+```
+
+This will give:
+
+```
+[1. 0. 0.]
+[0.5  0.25 0.25]
+[0.33333333 0.20833333 0.45833333]
+[0.23611111 0.15277778 0.61111111]
+[0.16898148 0.1099537  0.72106481]
+[0.12114198 0.0788966  0.79996142]
+[0.08686986 0.05658436 0.85654578]
+[0.06229638 0.04057892 0.8971247 ]
+[0.0446745 0.0291004 0.9262251]
+[0.03203738 0.02086876 0.94709386]
+
+```
+\end{md}
+
+
+We will modify the above to be:
+
+\begin{md}
+```python
+>>> import numpy as np
+>>> import absorption
+>>> pi = np.array([1, 0, 0])
+>>> P = np.array([[1 / 2, 1 / 4, 1 / 4], [1 / 3, 1 / 3, 1 / 3], [0, 0, 1]])
+
+```
+
+We now see how the vector $\pi$ changes over time:
+
+```python
+>>> for k in range(10):
+...     print(absorption.get_long_run_state(pi, k, P))
+[1. 0. 0.]
+[0.5  0.25 0.25]
+[0.33333333 0.20833333 0.45833333]
+[0.23611111 0.15277778 0.61111111]
+[0.16898148 0.1099537  0.72106481]
+[0.12114198 0.0788966  0.79996142]
+[0.08686986 0.05658436 0.85654578]
+[0.06229638 0.04057892 0.8971247 ]
+[0.0446745 0.0291004 0.9262251]
+[0.03203738 0.02086876 0.94709386]
+
+```
+\end{md}
+
+
+To test the documentation gives the results that are written, run the following
+at the command line:
+
+\begin{raw}
+$ python -m doctest README.md
+\end{raw}
+
+
+When testing the documentation, as for the testing of code, if there are no
+errors there will be no output as shown in
+Figure~\ref{fig:running_doctests_with_no_errors}.
+
+\begin{figure}[htbp]
+\centering
+
+\includegraphics[width=0.750\linewidth]{./assets/running_doctests_with_no_errors/main.png}
+\caption{Running the doctests with no errors.}
+\label{fig:running_doctests_with_no_errors}
+\end{figure}
+
+
+Similarly to testing the code, if an error is included in the documentation an
+error will be displayed when running the doc tests. This is shown in
+Figure~\ref{fig:running_doctests_with_an_error} where the final output has been
+changed to include an error: \texttt{-1} is written instead of \texttt{0.94709386}.
+
+\begin{figure}[htbp]
+\centering
+
+\includegraphics[width=0.750\linewidth]{./assets/running_doctests_with_an_error/main.png}
+\caption{Running the doctests with an error.}
+\label{fig:running_doctests_with_an_error}
+\end{figure}
+
+Here is the fully modified tutorial of the documentation:
+
+\begin{md}
+# Absorption
+
+Functionality to study the absorbing Markov chains.
+
+## Tutorial
+
+In this tutorial we will see how to use `absorption` to study an absorbing
+Markov chain. For some background information on absorbing Markov chains we
+recommend: <https://en.wikipedia.org/wiki/Absorbing_Markov_chain>.
+
+Given a transition matrix $P$ defined by:
+
+$$
+p = \begin{pmatrix}
+   1/2 & 1/4 & 1/4\\
+   1/3 & 1/3 & 1/3\\
+   0   & 0   & 1
+    \end{pmatrix}
+$$
+
+We will start by seeing how the chain evolves over time by starting with an
+initial vector $\pi=(1,0,0)$. In the next code snippet we will import the
+necessary libraries and create both $P$ and $\pi$:
+
+```python
+>>> import numpy as np
+>>> import absorption
+>>> pi = np.array([1, 0, 0])
+>>> P = np.array([[1 / 2, 1 / 4, 1 / 4], [1 / 3, 1 / 3, 1 / 3], [0, 0, 1]])
+
+```
+
+We now see how the vector $\pi$ changes over time:
+
+```python
+>>> for k in range(10):
+...     print(absorption.get_long_run_state(pi, k, P))
+[1. 0. 0.]
+[0.5  0.25 0.25]
+[0.33333333 0.20833333 0.45833333]
+[0.23611111 0.15277778 0.61111111]
+[0.16898148 0.1099537  0.72106481]
+[0.12114198 0.0788966  0.79996142]
+[0.08686986 0.05658436 0.85654578]
+[0.06229638 0.04057892 0.8971247 ]
+[0.0446745 0.0291004 0.9262251]
+[0.03203738 0.02086876 0.94709386]
+
+```
+
+We see that, as expected over time the probability of being in the third state,
+which is absorbing, increases.
+
+We can also use `absorption` to get the average number of steps until
+absorption from each state:
+
+```python
+>>> absorption.compute_t(P)
+array([3.66666667, 3.33333333])
+
+```
+
+We see that the expected amounts of steps from the first state is slightly more
+than from the second.
+\end{md}
+
+\subsection{Documenting the tests}
+\label{\detokenize{building-tools/07-testing/tutorial/main:documenting-the-tests}}
+
+Finally it is important to document how to run the tests. The \textbf{reference}
+section is an appropriate place to put this. We will add the following to the
+\texttt{README.md} file:
+
+\begin{md}
+### Testing the software
+
+To test the code:
+
+```
+$ python test_absorption.py
+```
+
+To test the documentation:
+
+```
+$ python -m doctest README.md
+```
+\end{md}
+
+\section{How to}
+
+\subsection{Write an \texttt{assert} statement}
+\label{\detokenize{building-tools/07-testing/how/main:how-to-write-an-assert-statement}}
+
+An \texttt{assert} statement is followed by 2 values: a boolean and an optional
+string that gets returned if the boolean is \texttt{False}.
+
+
+\begin{pyin}
+assert boolean, string
+\end{pyin}
+
+
+
+For example, given a function that adds one to a variable:
+
+
+
+
+\begin{pyin}
+def add_one(a):
+    """
+    Returns a + 1
+    """
+    return a + 1
+\end{pyin}
+
+You can assert the expected behaviour:
+
+\begin{pyin}
+assert add_one(5) == 6, "The function gave the wrong answer."
+\end{pyin}
+
+Note that if you change the function to include an error for example here adding
+2 and not 1, and run the same assert
+you get an error as well as the specified string.
+
+\begin{pyin}
+def add_one(a):
+    """
+    Returns a + 1
+    """
+    return a + 2
+
+
+assert add_one(5) == 6, "The function gave the wrong answer."
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+---------------------------------------------------------------------------
+AssertionError                            Traceback (most recent call last)
+Cell In[3], line 8
+      2     """
+      3     Returns a + 1
+      4     """
+      5     return a + 2
+----> 8 assert add_one(5) == 6, "The function gave the wrong answer."
+
+AssertionError: The function gave the wrong answer.
+\end{raw}
+
+
+
+
+
+
+\subsection{Write \texttt{assert} statements for code that acts randomly.}
+
+When making an assertion about code that behaves in a random manner, use
+seeding as described in Section~\ref{sec:reproduce_random_events}.
+
+
+For example:
+
+
+
+
+\begin{pyin}
+import random
+
+
+def roll_a_dice():
+    """
+    Pick a random integer between 1 and 6 (inclusive)
+    """
+    return random.choice(range(1, 7))
+\end{pyin}
+
+
+
+
+
+To test this, include a number of seeded assertions:
+
+
+
+
+\begin{pyin}
+random.seed(0)
+assert roll_a_dice() == 4, "The 0 seed did not give the expected result"
+random.seed(1)
+assert roll_a_dice() == 2, "The 1 seed did not give the expected result"
+random.seed(2)
+assert roll_a_dice() == 1, "The 2 seed did not give the expected result"
+random.seed(3)
+assert roll_a_dice() == 2, "The 3 seed did not give the expected result"
+\end{pyin}
+
+
+
+
+
+You can also check behaviour over a number of repetitions:
+
+
+
+
+
+\begin{pyin}
+random.seed(0)
+samples = [roll_a_dice() for repetition in range(1000)]
+all_values = {1, 2, 3, 4, 5, 6}
+assert set(samples) == all_values, "Not all values have been obtained over 1000 repetitions"
+\end{pyin}
+
+
+
+
+
+
+We can also confirm that the count of a given value is as expected:
+
+
+\begin{pyin}
+assert [samples.count(k) for k in range(1, 7)] == [193, 150, 166, 170, 152, 169], "The count of the values is not giving the expected count"
+\end{pyin}
+
+
+\begin{note}
+The last assertion used the \texttt{count} method on a list that counts a given number
+of items in a list.
+\end{note}
+
+
+
+\subsection{Write a test file.}
+
+To write tests assertion statements should be put in to a file separate to the code
+in functions.
+
+
+For example, if the \texttt{dice.py} file contained:
+
+\begin{pyin}
+import random
+
+
+def roll_a_dice():
+    """
+    Pick a random integer between 1 and 6 (inclusive)
+    """
+    return random.choice(range(1, 7))
+\end{pyin}
+
+
+Then a separate \texttt{test\_dice.py} file with the following would be written:
+
+\begin{pyin}
+import dice
+
+
+def test_roll_a_dice_with_specific_values():
+    """
+    Check the roll a dice function gives specific numbers for a number of seeds.
+    """
+    random.seed(0)
+    assert dice.roll_a_dice() == 4, "The 0 seed did not give the expected result"
+    random.seed(1)
+    assert dice.roll_a_dice() == 2, "The 1 seed did not give the expected result"
+    random.seed(2)
+    assert dice.roll_a_dice() == 1, "The 2 seed did not give the expected result"
+    random.seed(3)
+    assert dice.roll_a_dice() == 2, "The 3 seed did not give the expected result"
+
+
+def test_roll_a_dice_for_a_large_sample():
+    """
+    Collect a sample of 1000 rolls and confirm that we have expected results.
+    """
+    random.seed(0)
+    samples = [dice.roll_a_dice() for repetition in range(1000)]
+    all_values = {1, 2, 3, 4, 5, 6}
+    assert set(samples) == all_values, "Not all values have been obtained over 1000 repetitions"
+    expected_counts = [193, 150, 166, 170, 152, 169]
+    assert [samples.count(k) for k in range(1, 7)] == expected_counts, "The count of the values is not giving the expected count"
+
+test_roll_a_dice_with_specific_values()
+test_roll_a_dice_for_a_large_sample()
+\end{pyin}
+
+
+To run the tests you would then type the following at the command line:
+
+\begin{raw}
+$ python test_dice.py
+\end{raw}
+
+
+\subsection{Format doc tests.}
+
+When writing code in documentation if you write it using a specific format then
+python can be used to confirm that the code and its output is correct.
+
+
+\begin{pyin}
+>>> <python_code>
+<expected_output
+>>> <python_code_over_multiples_lines>
+... <python_code_over_multiple_lines>
+<expected_output>
+\end{pyin}
+
+\begin{itemize}
+\item 
+
+\texttt{>>>} is marks the start of a python statement.
+
+\item 
+
+\texttt{...} is used if the statement is multiple lines.
+
+\item 
+
+The expected output is written after the python statements.
+
+\end{itemize}
+
+
+For example if you were documenting the following code written in a \texttt{dice.py}
+file:
+
+\begin{pyin}
+import random
+
+
+def roll_a_dice():
+    """
+    Pick a random integer between 1 and 6 (inclusive)
+    """
+    return random.choice(range(1, 7))
+\end{pyin}
+
+
+You would write:
+
+\begin{raw}
+>>> import dice
+>>> random.seed(0)
+>>> dice.roll_a_dice()
+4
+
+\end{raw}
+
+
+\subsection{Run doctests}
+\label{\detokenize{building-tools/07-testing/how/main:how-to-run-doctests}}
+
+Given a file with doc tests, to run them type the following at the
+command line:
+
+
+\begin{raw}
+$ python -m doctest <file>
+\end{raw}
+
+
+
+For example:
+
+\begin{raw}
+$ python -m doctest README.md
+\end{raw}
+
+
+
+
+\section{Exercises}
+\label{\detokenize{building-tools/07-testing/exercises/main:exercises}}\label{\detokenize{building-tools/07-testing/exercises/main::doc}}
+
+Write tests for the \texttt{statistics.py} file written in the exercises of
+Chapters~\ref{chp:modularisation} and~\ref{chp:documentation}.
+
+
+Run the tests.
+
+
+
+\section{Further information}
+\label{\detokenize{building-tools/07-testing/why/main:further-information}}\label{\detokenize{building-tools/07-testing/why/main::doc}}
+
+\subsection{Why do we write functions in tests?}
+\label{\detokenize{building-tools/07-testing/why/main:why-do-we-write-functions-in-tests}}
+
+In Section~\ref{sec:testing_tutorial} you wrote all the tests using \texttt{assert} statements
+inside of functions. \textbf{Technically} this is not necessary as you could write a
+single script with all the assert statements one after the other.
+
+
+This is not recommended: by using functions you directly have a place to document
+the test (in the docstring) and the tests themselves are modularised.
+Furthermore, this is actually how to write the tests when using a more
+appropriate way of running tests as described in
+Section~\ref{sec:is_there_a_more_efficient_way_to_run_tests}.
+
+
+\subsection{Is there a more efficient way to run tests?}
+\label{sec:is_there_a_more_efficient_way_to_run_tests}
+
+Writing tests as a script and directly running them has one immediate problem:
+once the first \texttt{assert} statement fails the rest of them are not run.
+
+
+There is a Python library for running tests called
+\texttt{pytest}~\cite{oliveira2018pytest}.
+
+\subsection{What should be tested?}
+\label{\detokenize{building-tools/07-testing/why/main:what-should-be-tested}}
+
+The short answer to this is that all software should be tested and that software
+is compromised of documentation and code.
+
+
+Note that it is often not sufficient to test a function in a single way. For
+example, consider a function that does two different things depending on the
+parity of some input:
+
+\begin{pyin}
+def feedback_on_guess(guess, chosen_number):
+    """
+    Returns whether or not a guess is:
+
+    - Larger than  a chosen_number
+    - Smaller than a chosen_number
+    - Equal to a chosen number
+    """
+    if guess < chosen_number:
+        return "Guess is lower than chosen number"
+    if guess > chosen_number:
+        return "Guess is larger than chosen number"
+    return "Guess is equal to chosen number"
+\end{pyin}
+
+In this case you would need to write at least 3 tests that check the 3
+behaviours.
+In practice there might be some functionality that is not tested but this should
+be made clear and explicit and documented as to why should be written.
+
+
+\subsection{Why do we need doc tests?}
+\label{\detokenize{building-tools/07-testing/why/main:why-do-we-need-doc-tests}}
+
+The purpose of doctests is to ensure that the code written in documentation is
+correct.
+
+It is important to not use doctests to test the functionality of the code: this
+risks making the documentation unclear.
+
+
+\subsection{What is test driven development?}
+\label{\detokenize{building-tools/07-testing/why/main:what-is-test-driven-development}}
+
+Test driven development is the development process of writing the test before
+you write the code. Whilst this might seem counter-intuitive it is in fact a
+strong approach to writing robust code efficiently.
+
+
+In practice the process is as follows:
+\begin{enumerate}
+
+\item 
+
+Write a test for some new functionality.
+
+\item 
+
+Run the tests to confirm that it fails (as the functionality is not yet
+written).
+
+\item 
+
+Write the functionality.
+
+\item 
+
+Run the test.
+
+\item 
+
+Modify the test and/or the functionality
+
+\end{enumerate}
+
+
+Steps 4 and 5 might be repeated many times.
+
+
+A good overview of test driven development is given in~\cite{percival2014test}.
+
+
+\subsection{How are modularisation, documentation and testing related.}
+\label{\detokenize{building-tools/07-testing/why/main:how-are-modularisation-documentation-and-testing-related}}
+
+In Chapters~\ref{chp:modularisation},~\ref{chp:documentation}
+and~\ref{chp:testing}
+three concepts that move from writing code that works to writing software
+that is reliable have been discussed::
+\begin{itemize}
+\item 
+
+Modularisation.
+
+\item 
+
+Documentation.
+
+\item 
+
+Testing.
+
+\end{itemize}
+
+
+In reality \textbf{all three} of these concepts are closely related and fundamental to
+good software. Figure\ref{fig:best_practice_triangle} shows this.
+
+\begin{figure}[!htbp]
+\centering
+
+\includegraphics[width=0.750\linewidth]{./assets/best_practice_triangle/main.pdf}
+\caption{The relationship between modularisation, documentation and testing}
+\label{fig:best_practice_triangle}
+\end{figure}

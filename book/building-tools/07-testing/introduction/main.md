@@ -14,9 +14,9 @@ kernelspec:
 
 # Testing
 
-This is the third and last chapter that aim to move from writing code
-that works to writing software. In this particular chapter we will consider how
-to write automated tests for our software.
+This is the third and last chapter that shows how to move from writing code
+that works to writing software. In this particular chapter you will consider how
+to write automated tests for your software.
 
 ```{important}
 In this chapter we will cover:
