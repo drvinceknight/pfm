@@ -5,8 +5,8 @@
 \section{Introduction}
 %\label{\detokenize{tools-for-mathematics/02-algebra/introduction/main:introduction}}
 
-As of 2020, the British A-level syllabus includes Algebra which
-is described 
+A typical secondary school curriculum includes Algebra which
+is described, in the A-level syllabus
 as:
 
 \begin{quote}
@@ -23,12 +23,15 @@ In practice this often means:
 
 
 You can use a computer to carry out some of these techniques.
+
+\begin{note}
 This chapter covers:
 
 \begin{itemize}
 \item Manipulating numeric and symbolic expressions.
 \item Solving equations.
 \end{itemize}
+\end{note}
 
 \section{Tutorial}
 %\label{\detokenize{tools-for-mathematics/02-algebra/tutorial/main:tutorial}}\label{\detokenize{tools-for-mathematics/02-algebra/tutorial/main:algebra-tutorial}}\label{\detokenize{tools-for-mathematics/02-algebra/tutorial/main::doc}}
@@ -61,7 +64,7 @@ does this tell us about the graph of \(f(x)\)?
 
 To do this, a specific collection of tools available in Python will be used.
 Often specific sets of tools are separated in to things called \textbf{libraries}. 
-Start by telling Python that we want to use the specific library for \textbf{symbolic
+Start by telling Python that you want to use the specific library for \textbf{symbolic
 mathematics}:
 
 \begin{pyin}
@@ -77,8 +80,11 @@ expression
 \end{pyin}
 
 \[\frac{1}{1 + \sqrt{2}}\]
-This is not what would happen if we plugged the above in to a basic calculator,
+
+\begin{note}
+This is not what would happen if you plugged the above in to a basic calculator,
 it would instead give us a value of:
+\end{note}
 
 
 \begin{pyin}
@@ -161,7 +167,11 @@ expression
 
 
 The first line communicates to the code that \texttt{x} is going to be a symbolic variable.
-\textbf{Recall} that the \texttt{**} symbol is how we communicate exponentiation.
+
+\begin{note}
+\textbf{Recall} that the \texttt{**} symbol is how you communicate exponentiation.
+\end{note}
+
 You can immediately use this to compute the discriminant:
 
 \begin{pyin}
@@ -194,7 +204,7 @@ sympy.solveset(equation)
 
 Indeed the only solutions are imaginary numbers: this confirms that the graph of
 \(f(x)\) is a convex parabola that is above the \(y=0\) line.
-Now complete the square so that we can write:
+Now complete the square so that you can write:
 
 \begin{equation*}
 \begin{split}
@@ -231,7 +241,7 @@ the coefficients of:
 \end{equation*}
 
 with the completed square.
-First, we see that the coefficient of \(x ^ 2\) gives us an equation:
+First, you see that the coefficient of \(x ^ 2\) gives us an equation:
 
 \begin{equation*}
 \begin{split}
@@ -261,9 +271,12 @@ completed_square
 \begin{split}\displaystyle c + 2 \left(- b + x\right)^{2}\end{split}
 \end{equation*}
 
+\begin{note}
 The different types of brackets being used there: both \texttt{()} and \texttt{\{\}}. This is
 important and has specific meaning in Python which will be covered in future
 chapters.
+\end{note}
+
 Now look at the expression with the two remaining constants:
 
 \begin{pyin}
@@ -298,7 +311,7 @@ calculate the numeric value:
 \begin{pyin}
 completed_square = completed_square.subs({b: -1 / sympy.S(4)})
 completed_square
-\end{end}
+\end{pyin}
 
 \begin{equation*}
 \begin{split}\displaystyle c + 2 \left(x + \frac{1}{4}\right)^{2}\end{split}
@@ -355,6 +368,7 @@ completed_square.subs({x: -1 / sympy.S(4)})
 \begin{split}\displaystyle \frac{7}{8}\end{split}
 \end{equation*}
 
+\begin{note}
 This tutorial has:
 \begin{itemize}
 \item 
@@ -382,6 +396,7 @@ Solve symbolic equations.
 Substituted values in to symbolic expressions.
 
 \end{itemize}
+\end{note}
 
 \section{How to}
 
@@ -389,9 +404,9 @@ Substituted values in to symbolic expressions.
 
 To create a symbolic numerical value use \texttt{sympy.S}.
 
-\begin{pyin}
+\begin{api}
 sympy.S(a)
-\end{pyin}
+\end{api}
 
 
 For example:
@@ -434,17 +449,17 @@ You can get the numerical value of a symbolic value using \texttt{float} or
 
 \texttt{float} will give the numeric approximation in \(\mathbb\{R\}\)
 
-\begin{pyin}
+\begin{api}
 float(x)
-\end{pyin}
+\end{api}
 
 \item 
 
 \texttt{int} will give the integer value
 
-\begin{pyin}
+\begin{api}
 int(x)
-\end{pyin}
+\end{api}
 
 \end{itemize}
 
@@ -480,9 +495,9 @@ float(value)
 
 
 
-\begin{pyin}
+\begin{raw}
 0.2
-\end{pyin}
+\end{raw}
 
 
 
@@ -497,11 +512,13 @@ To get the integer part:
 int(value)
 \end{pyin}
 
-\[
+\begin{raw}
 0
-\]
+\end{raw}
 
+\begin{note}
 This is not rounding to the nearest integer. It is returning the integer part.
+\end{note}
 
 
 \subsection{Factor an expression}
@@ -578,9 +595,10 @@ sympy.simplify((x - 3) * (x + 3))
 \begin{split}\displaystyle x^{2} - 9\end{split}
 \end{equation*}
 
-
+\begin{note}
 This will not always give the expected (or any) result. At times it could be
 more beneficial to use \texttt{sympy.expand} and/or \texttt{sympy.factor}.
+\end{note}
 
 \subsection{How to solve an equation}
 %\label{\detokenize{tools-for-mathematics/02-algebra/how/main:how-to-solve-an-equation}}
@@ -599,14 +617,14 @@ An equation
 \end{itemize}
 
 
-The second is the variable we want to solve for.
+The second is the variable you want to solve for.
 
-\begin{pyin}
+\begin{api}
 sympy.solveset(equation, variable)
-\end{pyin}
+\end{api}
 
 
-Here is how we can use \texttt{sympy} to obtain the roots of the general quadratic:
+Here is how you can use \texttt{sympy} to obtain the roots of the general quadratic:
 
 \begin{equation*}
 \begin{split}
@@ -675,9 +693,9 @@ sympy.solveset(equation, x)
 Given a \texttt{sympy} expression it is possible to substitute values in to it using
 the \texttt{.subs()} tool.
 
-\begin{pyin}
+\begin{api}
 expression.subs({variable: value})
-\end{pyin}
+\end{api}
 
 It is possible to pass multiple variables at a time.
 For example to substitute the values for \(a, b, c\) in to the quadratic:
@@ -878,7 +896,7 @@ import math
 
 
 
-You could also make use of the fact that we do not need a square root tool at all:
+You could also make use of the fact that you do not need a square root tool at all:
 \begin{equation*}
 \begin{split}
     (\sqrt{2} + 2) ^ 2 - 2 = (2 ^ {1 / 2} + 2) ^ 2 - 2
@@ -1011,15 +1029,15 @@ math.cos(0)
 
 
 
-\begin{equation*}
-\begin{split}\displaystyle 1.0\end{split}
-\end{equation*}
+\begin{raw}
+1.0
+\end{raw}
 
 
 
 
 
-One however allows you to carry out exact computations:
+One of these tools allows you to carry out exact computations:
 
 
 
@@ -1045,12 +1063,9 @@ math.cos(math.pi / 4)
 \end{pyin}
 
 
-
-
-
-\[
+\begin{raw}
 0.7071067811865476
-\]
+\end{raw}
 
 
 
@@ -1089,19 +1104,20 @@ cos(pi / 4)
 
 
 
-
-
-\[
+\begin{raw}
 0.7071067811865476
-\]
+\end{raw}
 
 
 
 
 
 In that case the second import has overwritten the first.
+
+\begin{note}
 \textbf{It is never recommended to use} \texttt{import *} this makes your code less clear
 and you are more likely to make mistakes when your code is not clear.
+\end{note}
 
 
 \subsection{How to extract a solution from the output of \texttt{sympy.solveset}?}
@@ -1112,12 +1128,12 @@ example if consider the equation \((x - 1)(x -
 2)\).
 
 \begin{pyin}
-import sympy as sym
+import sympy
 
-x = sym.Symbol("x")
+x = sympy.Symbol("x")
 expression = (x - 1) * (x - 2)
-equation = sym.Eq(expression, 0)
-set_of_solutions = sym.solveset(equation, x)
+equation = sympy.Eq(expression, 0)
+set_of_solutions = sympy.solveset(equation, x)
 set_of_solutions
 \end{pyin}
 
@@ -1152,7 +1168,7 @@ tuple_of_solutions
 \]
 
 This creates a \textbf{finite} ordered tuple of the solutions. You can use concepts
-that are covered in Chapter~\ref{} % TODO add ref to combinatorics chapter
+that are covered in Chapter~\ref{chp:combinatorics}
 access them directly. Because there are two roots you can use the following to
 create two new variables:
 
@@ -1200,8 +1216,8 @@ where the set of solutions is an infinite set:
 
 
 \begin{pyin}
-equation = sym.Eq(sym.cos(x / 5), 0)
-set_of_solutions = sym.solveset(equation, x)
+equation = sympy.Eq(sym.cos(x / 5), 0)
+set_of_solutions = sympy.solveset(equation, x)
 set_of_solutions
 \end{pyin}
 
@@ -1223,9 +1239,9 @@ In some resources you will see that instead of \texttt{import sympy} people use:
 advantage of the fact that Python can import a library and give it an
 alias/nickname at the same time:
 
-\begin{pyin}
+\begin{api}
 import <library> as <nickname>
-\end{pyin}
+\end{api}
 
 
 So with sympy you can use:
@@ -1267,5 +1283,7 @@ a_poor_name_choice.cos(a_poor_name_choice.pi / 4)
 \begin{split}\displaystyle \frac{\sqrt{2}}{2}\end{split}
 \end{equation*}
 
+\begin{note}
 \textbf{It is important} when aliasing to use accepted conventions for these
 nicknames. For \texttt{sympy}, an accepted convention is indeed \texttt{import sympy as sym}.
+\end{note}
