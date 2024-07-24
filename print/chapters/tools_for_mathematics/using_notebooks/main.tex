@@ -1,0 +1,831 @@
+\chapter{Using notebooks}
+\label{chp:using_notebooks}
+
+\section{Introduction}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/introduction/main:introduction}}
+At the advent of Calculus two mathematicians are credited with its
+formalisation/invention:
+
+\begin{itemize}
+    \item Isaac Newton
+    \item Gottfried Leibniz
+\end{itemize}
+
+One of the differences between the approaches taken by Newton and Leibniz is
+their notation. Newton denoted the derivative of a function \(f\) as:
+
+\begin{equation*}
+Df
+\end{equation*}
+
+Leibniz denoted the derivative with the now more commonly used notation:
+\begin{equation*}
+\frac{df}{dx}
+\end{equation*}
+
+The mathematics itself is unchanged: what changes is the language/notation used
+to communicate it. Similarly when giving instructions through code to a computer there are a number
+of notations, more commonly called languages available.
+This book will be using a language called \textbf{Python}.
+Python was originally designed as a teaching language but it is now popular both
+in academia and in industry.
+In this chapter we will cover:
+\begin{itemize}
+\item 
+Installing the specific distribution of Python on your computer.
+
+\item 
+Using something called a Jupyter notebook to write and run Python code.
+
+\item Writing descriptive notes using \mintinline{markdown}{markdown} and \LaTeX\; (pronounced
+    Lay-tech).
+
+\end{itemize}
+
+\section{Tutorial}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/tutorial/main:tutorial}}\label{\detokenize{tools-for-mathematics/01-using-notebooks/tutorial/main::doc}}
+
+This tutorial will take the reader through an example of using Jupyter
+notebooks. Jupyter is the interface to the Python programming language used in the
+first part of this book.
+
+\subsection{Installation}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/tutorial/main:installation}}
+\begin{enumerate}
+\item Navigate to \texttt{https://www.anaconda.com/products/individual}.
+
+\item Identify and download the version of Python 3 for your operating system
+(Windows, MacOS, Linux).
+
+\item Run the installer. I recommend using the default choices during the
+installation process.
+
+\end{enumerate}
+
+If the reader has already used Python it is still recommended that they use the
+Anaconda distribution. An explanation for this is available later.
+
+
+\subsection{Starting a Jupyter notebook server}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/tutorial/main:starting-a-jupyter-notebook-server}}
+Open a command line tool:
+\begin{enumerate}
+\item 
+On \textbf{Windows} search for \texttt{Anaconda Prompt} (it should be available to you
+after installing Anaconda). See Figure~\ref{fig:starting-the-notebook-server-windows}.
+
+\item On \textbf{MacOS} search for \texttt{terminal}. See
+See Figure~\ref{fig:starting-the-notebook-server}.
+
+
+\end{enumerate}
+
+In there type (without the \texttt{\$}):
+
+\begin{cliin}
+$ jupyter notebook
+\end{cliin}
+
+Press \texttt{Enter} on your keyboard.
+Throughout this book, when there are commands to be typed in a command line
+they will be prefixed them with a \texttt{\$}. Do not type the \texttt{\$}.
+This will open a new page in your browser. The url bar at the top should have
+something that looks like: \texttt{http://localhost:8888/tree}.
+This is the general interface to the Jupyter server. It shows the general file
+structure on your computer.
+
+\begin{figure}[htbp]
+\centering
+
+    \includegraphics[width=0.750\linewidth]{assets/starting_the_notebook_server/main.png}
+    \caption{Starting the notebook server on
+    MacOS}\label{fig:starting-the-notebook-server}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+
+    \includegraphics[width=0.750\linewidth]{assets/starting_the_notebook_server_windows/main.png}
+    \caption{Starting the notebook server on
+    Windows}\label{fig:starting-the-notebook-server-windows}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+    \includegraphics[width=0.750\linewidth]{assets/the_jupyter_interface/main.png}
+    \caption{The Jupyter notebook interface}
+\end{figure}
+
+\subsection{Creating a new notebook}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/tutorial/main:creating-a-new-notebook}}
+In the top right, click on the \texttt{New} button and click on \texttt{Python 3}.
+Let us change the name of the notebook by clicking on “Untitled” and changing
+the name. You will call it “introduction”.
+
+\begin{figure}[htbp]
+\centering
+    \includegraphics[width=0.750\linewidth]{assets/creating_a_new_notebook/main.png}
+    \caption{Creating a new notebook}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+    \includegraphics[width=0.750\linewidth]{assets/changing_notebook_name/main.png}
+    \caption{Changing the notebook name}
+\end{figure}
+
+\subsection{Organising your files}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/tutorial/main:organising-our-files}}
+
+Open your file browser:
+
+\begin{enumerate}
+    \item File Explorer on \textbf{Windows} (see
+        Figure~\ref{fig:new_directory_structure_windows})
+
+\item Finder on \textbf{MacOS} (see
+        Figure~\ref{fig:new_directory_structure})
+\end{enumerate}
+
+Navigate to where your notebook is (this might not be immediately evident): you
+should see a \texttt{introduction.ipynb} file.
+Find a location on your computer where you want to keep the files for this
+book, using your file browser:
+
+\begin{enumerate}
+\item Create a new directory called \texttt{cfm} (short for “Computing for Mathematics”);
+
+\item Inside that directory create a new directory called \texttt{nbs} (short for
+``Notebooks'');
+
+\item Move the \texttt{introduction.ipynb} file to this \texttt{nbs} directory.
+
+\end{enumerate}
+
+\begin{figure}[htbp]
+\centering
+    \includegraphics[width=0.750\linewidth]{assets/new_directory_structure/main.png}
+    \caption{Creating a new directory on MacOS}\label{fig:new_directory_structure}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+    \includegraphics[width=0.750\linewidth]{assets/new_directory_structure_windows/main.png}
+    \caption{Creating a new directory on
+    Windows}\label{fig:new_directory_structure_windows}
+\end{figure}
+
+
+\subsection{Writing some basic Python code}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/tutorial/main:writing-some-basic-python-code}}
+Go back to the Jupyter notebook server (in your browser).
+Use the interface to navigate to the \texttt{cfm} directory and inside that the \texttt{nbs}
+directory and open the \texttt{introduction.ipynb} notebook.
+
+\begin{figure}[htbp]
+\centering
+    \includegraphics[width=0.750\linewidth]{assets/opening_notebook/main.png}
+    \caption{Opening a notebook}
+\end{figure}
+
+In the first available “cell” write the following calculation:
+
+\begin{api}
+    2 + 2
+\end{api}
+
+
+When you have done that click on the \texttt{Run} button shown in
+Figure~\ref{fig:running_code}. You can also use
+\texttt{Shift + Enter} as a keyboard shortcut.
+
+\begin{pyin}
+    2 + 2
+\end{pyin}
+
+\begin{figure}[htbp]
+\centering
+    \includegraphics[width=0.750\linewidth]{assets/running_code/main.png}
+    \caption{Running code}\label{fig:running_code}
+\end{figure}
+
+\[2\]
+
+
+Figure~\ref{fig:running_code} shows two different things:
+
+\begin{enumerate}
+\item 
+
+The input: which is the instruction to Python to use the
+mathematical technique of addition to compute 2 + 2.
+
+\item 
+
+The output: showing the output that Python has returned as a result
+of the instruction.
+
+\end{enumerate}
+
+
+\subsection{Writing markdown}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/tutorial/main:writing-markdown}}
+
+One of the reasons for using Jupyter notebooks is that it allows a user to include
+both code and communication using something called \texttt{markdown}.
+Create a new cell and change the cell type to \texttt{Markdown}. Now write the
+following in there:
+
+\begin{md}
+As well as using Python in Jupyter notebooks you can also write using 
+Markdown. This allows us to use basic \LaTeX\; as a way to display 
+mathematics. For example:
+
+1. $\frac{2}{3}$
+2. $\sum_{i=0}^n i$
+\end{md}
+
+When you run that it should look like Figure~\ref{fig:rendering_markdown}.
+
+\begin{figure}[htbp]
+\centering
+    \includegraphics[width=0.750\linewidth]{assets/rendering_markdown/main.png}
+    \caption{Rendering markdown}\label{fig:rendering_markdown}
+\end{figure}
+
+\subsection{Saving your notebook to a different format}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/tutorial/main:saving-your-notebook-to-a-different-format}}
+
+Click on \texttt{File} and \texttt{Download As} this brings up a number of formats that
+Jupyter notebooks can be exported to. Some of these might need other tools
+installed on your computer but a portable option is \texttt{HTML}.
+Click on \texttt{HTML (.html)}.
+Now use your file browser and open the downloaded file. This will open in your
+browser a static version of the file you have been working on. This is a helpful
+way to share your work with someone who might not have Jupyter (or even Python).
+
+This tutorial has:
+\begin{itemize}
+\item 
+
+Installed the Anaconda distribution of Python.
+
+\item 
+
+Started a notebook server.
+
+\item 
+
+Created a new notebook.
+
+\item 
+
+Run some Python code.
+
+\item 
+
+Written some markdown.
+
+\item 
+
+Saved the notebook to a different format.
+
+\end{itemize}
+
+
+
+
+\section{How to}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/how/main:how}}\label{\detokenize{tools-for-mathematics/01-using-notebooks/how/main::doc}}
+
+\subsection{Install Anaconda}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/how/main:install-anaconda}}
+
+\begin{enumerate}
+
+\item 
+
+Navigate to \texttt{https://www.anaconda.com/download/success}
+
+\item 
+
+Download the distribution of anaconda for your Operating System
+
+\item 
+
+Run the installer
+
+\end{enumerate}
+
+
+\subsection{Start a Jupyter notebook server}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/how/main:start-a-jupyter-notebook-server}}
+
+
+\begin{enumerate}
+
+\item 
+
+    Open a command line tool (\texttt{Anaconda prompt}) on Windows,
+        \texttt{terminal} on OS X);
+
+\item 
+
+    Type \texttt{jupyter notebook} and press \texttt{Enter}
+
+\end{enumerate}
+
+
+\subsection{Create a new notebook}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/how/main:create-a-new-notebook}}
+\begin{enumerate}
+
+\item 
+
+Navigate to the location you want using the Jupyter interface;
+
+\item 
+
+Click on the \texttt{new} button in the top right;
+
+\item 
+
+Rename the notebook (change \texttt{Untitled} in the top left to a name of your choice).
+
+\end{enumerate}
+
+
+\subsection{Find/open a notebook}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/how/main:find-open-a-notebook}}
+
+Using a file browser you can navigate the directories and files on your
+computer. Jupyter notebooks appear as generic files with the \texttt{.ipynb}
+extension.
+
+
+You cannot double click on these to open them, you need to navigate to them through the Jupyter interface.
+
+
+\subsection{Run Python code}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/how/main:run-python-code}}
+
+In a Jupyter notebook cell write an instruction, for example:
+
+\begin{api}
+3 / 5
+\end{api}
+
+
+and click on the \texttt{Run} button or use \texttt{Shift + Enter} as a keyboard shortcut.
+
+
+\subsection{Carry out basic arithmetic operations}
+\label{sec:carry_out_basic_arithmetic_operations}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/how/main:carry-out-basic-arithmetic-operations}}\label{\detokenize{tools-for-mathematics/01-using-notebooks/how/main:id1}}
+
+The Python code for the following arithmetic operations are:
+
+\begin{enumerate}
+
+\item 
+
+Addition, \(2 + 2\): \texttt{2 + 2};
+
+\item 
+
+Subtraction, \(3 - 1\): \texttt{3 - 1};
+
+\item 
+
+Multiplication, \(3 \times 5\): \texttt{3 * 5};
+
+\item 
+
+Division, \(20 / 5\): \texttt{20 / 5};
+
+\item 
+
+Exponentiation, \(2 ^ 4\): \texttt{2 ** 4};
+
+\item 
+
+Integer remainder, \(5 \mod 2\): \texttt{5 \% 2};
+
+\item 
+
+Combining operations, \(\frac{2 ^ 3 + 1}{4}\): \texttt{(2 ** 3 + 1) / 4};
+
+\end{enumerate}
+
+
+\textbf{Note} that instructions to a computer (through the code you write) need
+to be specific. For example the \texttt{\textasciicircum{}} symbol in Python
+does not mean exponentiation. If you were to type \texttt{2 \textasciicircum{} 4} you would get an error.
+In later chapters you will see what the specific instructions are to carry out more complex operations.
+
+\subsection{Write markdown}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/how/main:write-markdown}}
+
+To write markdown click on a cell and change the type to \texttt{Markdown}, you can do
+this by click on \texttt{Cell}, \texttt{Cell Type} or by using the scroll wheel in the menu
+bar.
+Markdown is a lightweight mark up language that allows you to write and
+include various types of formatting which include:
+
+\begin{enumerate}
+
+\item 
+
+Headings;
+
+\item 
+
+Bold and italics;
+
+\item 
+
+Ordered and unordered lists;
+
+\item 
+
+Code (which will only be displayed but not run);
+
+\item 
+
+Hyperlinks
+
+\end{enumerate}
+
+A more detailed guide for writing markdown is given in Section~\ref{sec:how-to-write-markdown}.
+
+\subsection{Write basic LaTeX}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/how/main:write-basic-latex}}
+
+Jupyter notebooks allow for markdown cells to not only include markdown but also
+include mathematics using another mark up language called \LaTeX.
+Here is a brief overview of the syntax for arithmetic operations:
+\begin{itemize}
+\item 
+
+\texttt{\$a+b\$} gives: \(a + b\):
+
+\item 
+
+\texttt{\$a-b\$} gives: \(a-b\)
+
+\item 
+
+\texttt{\$-a\$} gives: \(-a\)
+
+\item 
+
+\texttt{\$ab\$} gives \(ab\)
+
+\item 
+
+\texttt{\$a\textbackslash{}cdot b\$} gives \(a\cdot b\)
+
+\item 
+
+\texttt{\$a\textbackslash{}times b\$} gives \(a\times b\)
+
+\item 
+
+\texttt{\$a/b\$} gives \(a/b\)
+
+\item 
+
+\texttt{\$\textbackslash{}frac\{a\}\{b\}\$} gives \(\frac{a}{b}\)
+
+\item 
+
+\texttt{\$a \textasciicircum{} b\$} gives \(a ^ b\)
+
+\end{itemize}
+
+
+The \texttt{\$<expression>\$} delimiters create what is called an ``inline'''
+mathematics environment.
+You can change these to \texttt{\$\$<expression>\$\$} to give ``displayed
+mathematics''.
+
+
+You can write a matrix:
+
+\begin{minted}{markdown}
+    \begin{pmatrix}
+        a&b\\
+        c&d\\
+        e&f\\
+    \end{pmatrix}
+\end{minted}
+
+
+gives:
+
+\begin{equation*}
+\begin{split}
+    \begin{pmatrix}
+        a&b\\
+        c&d\\
+        e&f\\
+    \end{pmatrix}
+\end{split}
+\end{equation*}
+
+You can write integrals:
+
+\begin{minted}{markdown}
+$$
+    \int_{0}^{\infty}x dx
+$$
+\end{minted}
+
+
+gives:
+
+\begin{equation*}
+\begin{split}
+    \int_{0}^{\infty}x dx
+\end{split}
+\end{equation*}
+
+You can write summations:
+
+\begin{minted}{python}
+$$
+    \sum_{0}^{n}i
+$$
+\end{minted}
+
+
+gives:
+
+\begin{equation*}
+\begin{split}
+    \sum_{0}^{n}i
+\end{split}
+\end{equation*}
+
+\subsection{Save the output in a different format}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/how/main:save-the-output-in-a-different-format}}
+
+Click on \texttt{File} then \texttt{Download as} and choose the format you want
+to use. \texttt{HTML}
+is a portable option that can be viewed on most devices, note however that you
+cannot run the cells: what you are downloading is a static version of your
+notebook.
+
+\section{Exercises}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/exercises/main:exercises}}\label{\detokenize{tools-for-mathematics/01-using-notebooks/exercises/main::doc}}
+
+\begin{enumerate}
+
+\item 
+
+Create a new notebook rename it “exercises”. Navigate to it using your file browser to make sure you can find it.
+
+\item 
+
+Write and run some Python code to carry out the following calculations
+\begin{enumerate}
+
+\item 
+
+\(3 + 8\)
+
+\item 
+
+\(3 / 7\)
+
+\item 
+
+\(456 / 21\)
+
+\item 
+
+\(\frac{4 ^ 3 + 2}{2\times 5} - 5 ^ {\frac{1}{2}}\)
+
+\end{enumerate}
+
+\item 
+
+Write a markdown cell with the following and view the rendered version:
+
+\begin{minted}{markdown}
+# Euler's equation
+
+$$
+e ^ {i\pi} = -1
+$$
+\end{minted}
+
+\item 
+
+Render the following expressions by writing markdown
+\begin{enumerate}
+
+\item 
+
+\(\frac{4 ^ 3 + 2}{2\times 5}\)
+
+\item 
+
+\(- 5 ^ {\frac{1}{2}}\)
+
+\item 
+
+\(\frac{df}{dx}\)
+
+\item 
+
+\(\int_{5}^{12}x^2dx\)
+
+\item 
+
+\(\begin{pmatrix}4 & 12 & 3\\2 & x & i\\\end{pmatrix}\)
+
+\end{enumerate}
+
+\item 
+
+Save your notebook to \texttt{HTML} and open and view it.
+
+\item 
+
+Download the notebook available at
+\texttt{10.5281/zenodo.7118738} and
+check that you are able to open it.
+
+\end{enumerate}
+\section{Further information}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/why/main:further-information}}\label{\detokenize{tools-for-mathematics/01-using-notebooks/why/main::doc}}
+
+\subsection{Why use anaconda?}
+%$\label{\detokenize{tools-for-mathematics/01-using-notebooks/why/main:why-use-anaconda}}
+
+Python is a free and open source piece of software. One of the main reasons for
+its popularity is that there are a number of separate tools that work well with
+it, these are called libraries. Sometimes installing these libraries can require
+an understanding of some potential pitfalls. In scientific circles the Anaconda
+distribution was developed to give a single download of not only Python but a
+lot of commonly used libraries.
+
+\subsection{Why use Jupyter?}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/why/main:why-use-jupyter}}
+
+There are are variety of ways to write and run Python:
+\begin{enumerate}
+
+\item 
+
+Using an interactive notebook environment like Jupyter;
+
+\item 
+
+Using an integrated development environment and/or editor.
+
+\end{enumerate}
+
+
+The second part of this book will use an editor.
+One strength of Jupyter is that it allows you to include communication (writing
+through markdown) with your code. This allows you to use code and describe what
+you are using it for.
+Another advantage is that it allows you to immediately have your output next to your input.
+There are some limitations to Jupyter as an editor which is why we will explore
+using a powerful editor in the second part of the course.
+In general:
+
+\begin{enumerate}
+
+\item 
+
+Jupyter is a fantastic way to interactively use and communicate code;
+
+\item 
+
+Integrated development environments and/or editors are the correct tool to
+write software.
+
+\end{enumerate}
+
+
+In this book you will learn to use either approach in the appropriate manner
+for the right task. For the first part code will be used interactively and so
+you will use Jupyter notebooks.
+
+\subsection{Why can I not double click on a Jupyter notebook file?}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/why/main:why-can-i-not-double-click-on-a-jupyter-notebook-file}}
+
+When you double click on a file and your computer opens it in an application
+that is because a default is set for the particular file extension. For example
+double clicking on \texttt{main.docx} will automatically open up the document using a
+word processor (like Microsoft word). This is because the file has the extension
+\texttt{.docx} and your operating system has set that anything with that extension will
+be opened in that particular application. You could also open the
+application and navigate to the file and open it directly.
+
+With Jupyter notebooks no default is set by the operating system as the
+application that opens it is in fact a local web server in your browser. As such
+you do not have a choice and need to open it in the Jupyter interface.
+
+
+\subsection{Where can I find keyboard shortcuts for using Jupyter}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/why/main:where-can-i-find-keyboard-shortcuts-for-using-jupyter}}
+
+In a notebook if you go to the menu bar and click on \texttt{Help} followed by
+\texttt{Keyboard Shortcuts} you will find a number of helpful keyboard shortcuts.
+
+
+For example, when on a cell pressing \texttt{Esc} followed by \texttt{m} will turn the cell in
+to a markdown cell.
+
+
+\subsection{What is markdown?}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/why/main:what-is-markdown}}
+
+As described at \texttt{https://www.markdownguide.org/getting-started/}:
+
+\begin{quote}
+Markdown is a lightweight markup language that you can use to add formatting
+elements to plain text text documents. Created by John Gruber in 2004,
+Markdown is now one of the world’s most popular markup languages
+\end{quote}
+
+
+\subsection{What is LaTeX?}
+%\label{\detokenize{tools-for-mathematics/01-using-notebooks/why/main:what-is-latex}}
+
+As described at \texttt{https://www.latex-project.org/about/}:
+
+\begin{quote}
+``LaTeX;, which is pronounced `Lah-tech' or `Lay-tech' (to rhyme with `blech' or
+`Bertolt Brecht'), is a document preparation system for high-quality
+typesetting. It is most often used for medium-to-large technical or scientific
+documents but it can be used for almost any form of publishing.''
+\end{quote}
+
+\begin{quote}
+``LaTeX\; is not a word processor! Instead, LaTeX\; encourages authors not to worry
+too much about the appearance of their documents but to concentrate on getting
+the right content.''
+\end{quote}
+
+\subsection{Can I use \texttt{\textbackslash(} and \texttt{\textbackslash)} instead of \texttt{\$} for \LaTeX?}
+\label{sec:can_i_use_different_latex_delimiters_in_latex}
+
+You will see in some places that \texttt{\textbackslash(},
+\texttt{\textbackslash)} or \texttt{\textbackslash[},
+\texttt{\textbackslash]} can be used as delimiters for
+\LaTeX\; when used outside of Jupyter notebooks. This is in fact recommended for a
+number of reasons, one of which is given at
+\texttt{https://vknight.org/tex/}:
+
+\begin{quote}
+``Note that using \texttt{\textbackslash(} and \texttt{\textbackslash)} is preferred over \$. One of the reasons is that it
+is easier for humans (and machines) to find the start and end of some
+mathematics.''
+\end{quote}
+
+If you want to use \texttt{\textbackslash(}, \texttt{\textbackslash)} or
+\texttt{\textbackslash[}, \texttt{\textbackslash]} as
+mathematics delimiters within Jupyter notebooks you need to escape the
+\texttt{\textbackslash} and use: \texttt{\textbackslash\textbackslash(},
+\texttt{\textbackslash\textbackslash)} or
+\texttt{\textbackslash\textbackslash[},
+\texttt{\textbackslash\textbackslash]} instead.
+
+\subsection{What is a markup language?}
+\label{\detokenize{tools-for-mathematics/01-using-notebooks/why/main:what-is-a-markup-language}}
+
+\LaTeX\; and markdown are both examples of what is called a \textbf{markup language}.
+Another common example of a markup language is html (the way web pages are
+written).
+A markup language is a system that allows us to write content alongside
+annotations to specify how the content is to appear.
+This description of markdown from
+\texttt{https://www.markdownguide.org/getting-started/} applies
+to any markup language:
+
+\begin{quote}
+``Using Markdown is different than using a WYSIWYG editor. In an application
+like Microsoft Word, you click buttons to format words and phrases, and the
+changes are visible immediately. Markdown isn’t like that. When you create a
+Markdown-formatted file, you add Markdown syntax to the text to indicate which
+words and phrases should look different.''
+\end{quote}
+
+In general whilst it might take a little while to learn all the intricacies of a
+markup language it allows for more portability and precision.
+Markup languages differ in complexity:
+
+\begin{itemize}
+\item 
+\LaTeX\; is incredibly sophisticated and has a huge range of capabilities.
+
+\item 
+Markdown is designed to be basic with a few specific annotations to remember.
+
+\end{itemize}

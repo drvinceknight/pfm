@@ -1,0 +1,1175 @@
+\chapter{Object oriented programming}
+\label{chp:objects}
+
+In the first part of this book you covered a number of tools that allow you to
+carry out mathematical techniques. One example of this is the \texttt{sympy.Symbol}
+object that creates a symbolic variable that can be manipulated. In this chapter
+you will see how to define similar mathematical objects.
+
+
+\begin{note}
+In this chapter you will cover:
+\begin{itemize}
+\item 
+
+Creating objects.
+
+\item 
+
+Giving objects attributes.
+
+\item 
+
+Defining methods on objects.
+
+\item 
+
+Inheriting new objects from others.
+
+\end{itemize}
+\end{note}
+
+
+
+
+
+\section{Tutorial}
+\label{sec:objects_tutorial}
+
+You will write some code to create and manipulate quadratic expressions.
+With \texttt{sympy} this is not necessary as all functionality required is available
+within \texttt{sympy} however this will be a good exercise in understanding how to
+build such functionality.
+
+
+Consider the following quadratics:
+\begin{equation*}
+\begin{split}
+f(x) = 5 x ^ 2 + 2 x - 7\\
+g(x) = - 4 x ^ 2 - 3 x + 12\\
+h(x) = f(x) + g(x)
+\end{split}
+\end{equation*}
+
+Without using \texttt{sympy}, obtain the roots for all the quadratics.
+
+Start by defining an object to represent a quadratic. This is called a
+class.
+
+
+\begin{pyin}
+import math
+
+
+class QuadraticExpression:
+    """A class for a quadratic expression"""
+
+    def __init__(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
+        self.discriminant = self.b ** 2 - 4 * self.a * self.c
+
+    def get_roots(self):
+        """
+        Return the real valued roots of the quadratic expression
+
+        Returns
+        -------
+        array
+            The roots of the quadratic
+        """
+        if self.discriminant >= 0:
+            x1 = -(self.b + math.sqrt(self.discriminant)) / (2 * self.a)
+            x2 = -(self.b - math.sqrt(self.discriminant)) / (2 * self.a)
+            return x1, x2
+        return ()
+
+    def __add__(self, other):
+        """A magic method: let's us have addition between expressions"""
+        return QuadraticExpression(self.a + other.a, self.b + other.b, self.c + other.c)
+
+    def __repr__(self):
+        """A magic method: changes the default way an instance is displayed"""
+        return f"Quadratic expression: {self.a} x ^ 2 + {self.b} x + {self.c}"
+\end{pyin}
+
+\begin{note}
+Four functions were created with this class:
+\begin{itemize}
+\item 
+
+\texttt{\_\_init\_\_}: as this is surrounded by \texttt{\_\_} (two underscores) this is a magic
+function that is run when we create an instance of our class.
+
+\item 
+
+\texttt{get\_roots}: this returns the two real valued roots if the discriminant is
+positive.
+
+\item 
+
+\texttt{\_\_add\_\_}: another magic function that is run when the \texttt{+} operator is used.
+
+\item 
+
+\texttt{\_\_repr\_\_}: another magic function that gives the string representation of the
+instance.
+
+\end{itemize}
+\end{note}
+
+
+Now use this class to solve the specified problem. First create
+instances of the class that correspond to \(f\) and \(g\). This is using the \texttt{\_\_init\_\_}
+function in the background.
+
+
+
+
+\begin{pyin}
+f = QuadraticExpression(a=5, b=2, c=-7)
+g = QuadraticExpression(a=-4, b=-3, c=12)
+\end{pyin}
+
+
+
+
+
+You can now take a look at both of these instances. This is using the \texttt{\_\_repr\_\_}
+function in the background:
+
+
+
+
+\begin{pyin}
+f
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+Quadratic expression: 5 x ^ 2 + 2 x + -7
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+g
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+Quadratic expression: -4 x ^ 2 + -3 x + 12
+\end{raw}
+
+
+
+
+
+Now you are going to create \(h(x) = f(x) + g(x)\). This is using the \texttt{\_\_add\_\_}
+function in the background:
+
+
+
+
+\begin{pyin}
+h = f + g
+h
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+Quadratic expression: 1 x ^ 2 + -1 x + 5
+\end{raw}
+
+
+
+
+
+You can now iterate over the quadratics and find the roots. This is using the
+\texttt{get\_roots} function in the background:
+
+
+
+
+
+\begin{pyin}
+roots = [quadratic.get_roots() for quadratic in (f, g, h)]
+roots
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+[(-1.4, 1.0), (1.3971808598447282, -2.1471808598447284), ()]
+\end{raw}
+
+
+
+
+
+
+Note that \(f\) and \(g\) have real valued roots but \(h\) does not. You can check
+the value of the discriminant of \(h\):
+
+
+
+
+\begin{pyin}
+h.discriminant
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+-19
+\end{raw}
+
+
+
+
+
+You are going to create a new class from \texttt{QuadraticExpression} 
+replacing the \texttt{get\_roots} function with a new one that can handle imaginary roots
+and update the \texttt{\_\_add\_\_} function to return an instance of the new
+class.
+
+
+
+
+\begin{pyin}
+class QuadraticExpressionWithAllRoots(QuadraticExpression):
+    """
+    A class for a quadratic expression that can return imaginary roots
+
+    The `get_roots` function returns two tuples of the form (re, im) where re is
+    the real part and im is the imaginary part.
+    """
+
+    def get_roots(self):
+        """
+        Return the real valued roots of the quadratic expression
+
+        Returns
+        -------
+        array
+            The roots of the quadratic
+        """
+        if self.discriminant >= 0:
+            x1 = -(self.b + math.sqrt(self.discriminant)) / (2 * self.a)
+            x2 = -(self.b - math.sqrt(self.discriminant)) / (2 * self.a)
+            return (x1, 0), (x2, 0)
+
+        real_part = self.b / (2 * self.a)
+        im1 = math.sqrt(-self.discriminant) / (2 * self.a)
+        im2 = -math.sqrt(-self.discriminant) / (2 * self.a)
+        return ((real_part, im1), (real_part, im2))
+
+    def __add__(self, other):
+        """A special method: let's us have addition between expressions"""
+        return QuadraticExpressionWithAllRoots(
+            self.a + other.a, self.b + other.b, self.c + other.c
+        )
+\end{pyin}
+
+
+Now define the quadratics once again but using this new class:
+
+
+
+
+\begin{pyin}
+f = QuadraticExpressionWithAllRoots(a=5, b=2, c=-7)
+g = QuadraticExpressionWithAllRoots(a=-4, b=-3, c=12)
+h = f + g
+\end{pyin}
+
+
+
+
+
+
+
+\begin{pyin}
+f
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+Quadratic expression: 5 x ^ 2 + 2 x + -7
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+g
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+Quadratic expression: -4 x ^ 2 + -3 x + 12
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+h
+\end{pyin}
+
+
+
+
+
+\begin{pyin}
+Quadratic expression: 1 x ^ 2 + -1 x + 5
+\end{pyin}
+
+\begin{note}
+There is no need to redefine \texttt{\_\_init\_\_}, or \texttt{\_\_repr\_\_} as the new
+class inherits these from \texttt{QuadraticExpression} due to this statement:
+\end{note}
+
+\begin{pyin}
+class QuadraticExpressionWithAllRoots(QuadraticExpression):
+\end{pyin}
+
+
+
+You can now get all the roots for the quadratics:
+
+
+
+
+
+\begin{pyin}
+roots = [quadratic.get_roots() for quadratic in (f, g, h)]
+roots
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+[((-1.4, 0), (1.0, 0)),
+ ((1.3971808598447282, 0), (-2.1471808598447284, 0)),
+ ((-0.5, 2.179449471770337), (-0.5, -2.179449471770337))]
+\end{raw}
+
+
+
+
+
+
+
+
+\section{How to}
+
+\subsection{Define a class}
+
+Define a class using the \texttt{class} keyword:
+
+
+\begin{pyin}
+class Name:
+    """
+    A docstring between triple quotation to describe what the class represents
+    """
+    INDENTED BLOCKS OF CODE
+\end{pyin}
+
+
+
+For example to create a class for a country:
+
+
+
+
+\begin{pyin}
+class Country:
+    """
+    A class to represent a country
+    """
+\end{pyin}
+
+
+
+
+
+\subsection{Create an instance of the class}
+
+Once a class is defined call it using the \texttt{()}:
+
+
+\begin{pyin}
+Name()
+\end{pyin}
+
+
+
+For example:
+
+
+
+
+
+\begin{pyin}
+first_country = Country()
+first_country
+\end{pyin}
+
+
+
+
+
+\begin{pyin}
+<__main__.Country at 0x7f22a8f76e00>
+\end{pyin}
+
+
+
+
+
+
+
+
+
+\begin{pyin}
+second_country = Country()
+second_country
+\end{pyin}
+
+
+
+
+
+\begin{pyin}
+<__main__.Country at 0x7f22a8f76e30>
+\end{pyin}
+
+
+The at … is a pointer to the location of the instance in memory. If you re run
+the code that location will change.
+
+
+\subsection{Create an attribute}
+
+Attributes are variables that belong to instances of classes. There can be
+created and accessed using \texttt{.name\_of\_variable}.
+
+
+For example, the following creates the attributes \texttt{name} and
+\texttt{amount\_of\_magic}:
+
+
+
+
+\begin{pyin}
+first_country.name = "narnia"
+first_country.amount_of_magic = 500
+\end{pyin}
+
+
+
+
+
+You can access them:
+
+
+
+
+\begin{pyin}
+first_country.name
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+'Narnia'
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+first_country.amount_of_magic
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+500
+\end{raw}
+
+
+
+
+
+You can manipulate them in place:
+
+
+
+
+\begin{pyin}
+first_country.amount_of_magic += 100
+first_country.amount_of_magic
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+600
+\end{raw}
+
+
+
+
+
+\subsection{Create and call a method}
+\label{\detokenize{building-tools/03-objects/how/main:how-to-create-and-call-a-method}}
+
+Methods are functions that belong to classes. Define a function using the
+\texttt{def} keyword (short for define). The first variable of a method is always the
+specific instance that will call the method (it is passed implicitly).
+
+
+\begin{pyin}
+class Name:
+    """
+    A docstring between triple quotation to describe what the class represents
+    """
+    def name(self, parameter1, parameter2, …):
+        """
+        <A description of what the method is.>
+
+        Parameters
+        ----------
+        parameter1 : <type of parameter1>
+            <description of parameter1>
+        parameter2 : <type of parameter2>
+            <description of parameter2>
+        ...
+
+        Returns
+        -------
+        <type of what the function returns>
+            <description of what the function returns>
+
+        """
+        INDENTED BLOCK OF CODE
+        return output
+\end{pyin}
+
+
+
+For example let us create a class for a country that has the ability to
+``spend'''
+magic:
+
+
+
+
+\begin{pyin}
+class Country:
+    """
+    A class to represent a country
+    """
+
+    def spend_magic(self, amount_spent):
+        """
+        Updates the magic attribute by subtracting amount_spent
+
+        Parameters
+        ----------
+        amount_spent : float
+            The amount of mana used.
+        """
+        self.amount_of_magic -= amount_spent
+\end{pyin}
+
+Now use it:
+
+\begin{pyin}
+first_country = Country()
+first_country.name = "Narnia"
+first_country.amount_of_magic = 500
+first_country.spend_magic(amount_spent=100)
+first_country.amount_of_magic
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+400
+\end{raw}
+
+
+\begin{note}
+Even though the method is defined as taking two variables as inputs: \texttt{self} and
+\texttt{amount\_spent} you only have to explicitly pass it \texttt{amount\_spent}. The first
+variable in a method definition always corresponds to the instance on which the
+method exists.
+\end{note}
+
+
+
+\subsection{How to create and call magic methods}
+\label{sec:how_to_create_and_call_magic_methods}
+
+Some methods can be called in certain situations:
+\begin{itemize}
+\item 
+
+When creating an instance.
+
+\item 
+
+When wanting to display an instance.
+
+\end{itemize}
+
+
+These are referred to as dunder methods as they are all in between two
+underscores: \texttt{\_\_}.
+
+
+The method that is called when an instance is created is called \texttt{\_\_init\_\_} (for
+initialised). For example:
+
+
+\begin{pyin}
+class Country:
+    """
+    A class to represent a country
+    """
+
+    def __init__(self, name, amount_of_magic):
+        self.name = name
+        self.amount_of_magic = amount_of_magic
+\end{pyin}
+
+
+
+
+
+Now instead of creating an instance and then creating the attributes you can do
+those two things at the same time, by passing the variables to the class itself
+(which in turn passes them to the \texttt{\_\_init\_\_} method):
+
+
+
+
+\begin{pyin}
+first_country = Country("Narnia", 500)
+first_country.name
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+'Narnia'
+\end{raw}
+
+
+\begin{pyin}
+first_country.amount_of_magic
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+500
+\end{raw}
+
+
+
+
+
+The method that returns a representation of an instance is \texttt{\_\_repr\_\_}. For
+example:
+
+
+
+
+\begin{pyin}
+class Country:
+    """
+    A class to represent a country
+    """
+
+    def __init__(self, name, amount_of_magic):
+        self.name = name
+        self.amount_of_magic = amount_of_magic
+
+    def __repr__(self):
+        """Returns a string representation of the instance"""
+        return f"{self.name} with {self.amount_of_magic} magic."
+\end{pyin}
+
+
+
+
+
+
+
+\begin{pyin}
+first_country = Country("Narnia", 500)
+first_country
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+Narnia with 500 magic.
+\end{raw}
+
+
+
+
+
+There are numerous other magic methods, such as the \texttt{\_\_add\_\_} one used in
+the tutorial of this Chapter.
+
+
+\subsection{Use inheritance}
+\label{sec:how_to_use_inheritance}
+
+Inheritance is a tool that allows you to create one class based on another. This
+is done by passing the \texttt{Old} class to the \texttt{New} class.
+
+
+\begin{pyin}
+class New(Old)
+\end{pyin}
+
+
+
+For example let us create a class of \texttt{MuggleCountry} that overwrites the
+\texttt{\_\_init\_\_} method but keeps the \texttt{\_\_rep\_\_} method of the
+\texttt{Country} class written
+in Section~\ref{sec:how_to_create_and_call_magic_methods}:
+
+
+
+
+\begin{pyin}
+class MuggleCountry(Country):
+    """
+    A class to represent a country with no magic. It only requires the name on
+    initialisation.
+    """
+
+    def __init__(self, name):
+        self.name = name
+        self.amount_of_magic = 0
+\end{pyin}
+
+
+
+
+
+This has replaced the \texttt{\_\_init\_\_} method but the \texttt{\_\_repr\_\_} method is the same:
+
+
+
+
+\begin{pyin}
+other_country = MuggleCountry("Wales")
+other_country
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+Wales with 0 magic.
+\end{raw}
+
+
+
+
+
+
+
+\section{Exercises}
+
+\begin{enumerate}
+
+\item 
+
+Use the class created in Section~\ref{sec:objects_tutorial} to find the roots of the
+following quadratics:
+\begin{enumerate}
+
+\item 
+
+\(f(x) = -4x ^ 2 + x + 6\)
+
+\item 
+
+\(g(x) = 3x ^ 2 - 6\)
+
+\item 
+
+\(h(x) = f(x) + g(x)\)
+
+\end{enumerate}
+
+\item 
+
+Write a class for a Linear expression and use it to find the roots of the
+following expressions:
+\begin{enumerate}
+
+\item 
+
+\(f(x) = 2x + 6\)
+
+\item 
+
+\(g(x) = 3x - 6\)
+
+\item 
+
+\(h(x) = f(x) + g(x)\)
+
+\end{enumerate}
+
+\item 
+
+If rain drops were to fall randomly on a square of side length \(2r\) the
+probability of the drops landing in an inscribed circle of radius \(r\) would
+be given by:
+\begin{equation*}
+\begin{split}
+       P = \frac{\text{Area of circle}}{\text{Area of square}}=\frac{\pi r ^2}{4r^2}=\frac{\pi}{4}
+   \end{split}
+\end{equation*}
+
+Thus, if you can approximate \(P\) then we can approximate \(\pi\) as \(4P\). In this
+question you will write code to approximate \(P\) using the random library.
+
+
+First create the following class:
+
+\begin{pyin}
+class Drop:
+    """
+    A class used to represent a random rain drop falling on a square of
+    length r.
+    """
+
+    def __init__(self, r=1):
+        self.x = (0.5 - random.random()) * 2 * r
+        self.y = (0.5 - random.random()) * 2 * r
+        self.in_circle = (self.y) ** 2 + (self.x) ** 2 <= r ** 2
+\end{pyin}
+
+
+Note that the above uses the following equation for a circle centred at
+\((0,0)\) of radius \(r\):
+\begin{equation*}
+\begin{split}
+       x^2+y^2\leq r^2
+   \end{split}
+\end{equation*}
+
+To approximate \(P\) create \(N=1000\) instances of Drops and count the
+number of those that are in the circle. Use this to approximate \(\pi\).
+
+\item 
+
+In a similar fashion to question 3, approximate the integral
+\(\int_{0}^11-x^2\;dx\). Recall that the integral corresponds to the area
+under a curve.
+
+\end{enumerate}
+
+
+
+
+\section{Further information}
+
+\subsection{How to pronounce the double underscore?}
+
+The double underscore used in magic methods like \texttt{\_\_init\_\_} or
+\texttt{\_\_repr\_\_} is
+pronounced ``dunder''.
+
+
+\subsection{What is the \texttt{self} variable for?}
+
+In methods the first variable is used to refer to the instance of a given class.
+It is conventional to use \texttt{self}.
+
+
+As an example consider this class:
+
+
+
+
+\begin{pyin}
+class PetDog:
+    """
+    A class for a Pet.
+
+    Has two methods:
+        - `bark` which returns "Woof" as a string.
+        - `give_toy` which gives a toy to the dog in question. This updates the
+          `toys` attribute.
+    """
+
+    def __init__(self):
+        self.toys = []
+
+    def bark(self):
+        """
+        Returns the string Woof.
+        """
+        return "Woof"
+
+    def give_toy(self, toy):
+        """
+        Updates the instances toys list.
+        """
+        self.toys.append(toy)
+\end{pyin}
+
+
+
+
+
+If you now create two dogs:
+
+
+
+
+\begin{pyin}
+auraya = PetDog()
+riggins = PetDog()
+\end{pyin}
+
+
+
+
+
+Both have no toys:
+
+
+
+
+\begin{pyin}
+auraya.toys
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+[]
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+riggins.toys
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+[]
+\end{raw}
+
+
+
+
+
+Now when you want to give \texttt{riggins} a toy you need to specify which of those two
+empty lists to update:
+
+
+
+
+\begin{pyin}
+riggins.give_toy("ball")
+riggins.toys
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+['ball']
+\end{raw}
+
+However \texttt{auraya} still has no toys:
+
+\begin{pyin}
+auraya.toys
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+[]
+\end{raw}
+
+
+
+
+
+When running \texttt{riggins.give\_toy("ball")}, internally the \texttt{give\_toy} method is
+taking \texttt{self} to be \texttt{riggins} and so the
+line \texttt{self.toys.append(toy)} in fact is running as \texttt{riggins.toys.append(toy)}.
+
+
+The variable name \texttt{self} is a convention and not a functional requirement.
+If we modify it
+(for example using by using inheritance as explained in
+Section~\ref{sec:how_to_use_inheritance}.
+
+
+
+
+\begin{pyin}
+class OtherPetDog(PetDog):
+    """
+    A class for a Pet.
+
+    Has two methods:
+        - `bark` which returns "Woof" as a string.
+        - `give_toy` which gives a toy to the dog in question. This updates the
+          `toys` attribute.
+    """
+
+    def give_toy(the_dog_in_question, toy):
+        """
+        Updates the instances toys list.
+        """
+        the_dog_in_question.toys.append(toy)
+\end{pyin}
+
+
+
+
+
+Then we get the same outcome:
+
+
+
+
+\begin{pyin}
+riggins = OtherPetDog()
+riggins.toys
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+[]
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+riggins.give_toy("ball")
+riggins.toys
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+['ball']
+\end{raw}
+
+
+
+
+
+Indeed the line \texttt{the\_dog\_in\_question.toys.append(toy)} is run as
+\texttt{riggins.toys.append(toy)}.
+
+
+You should however use \texttt{self} as it is convention and helps with readability of
+your code.
+
+
+\subsection{Why use \texttt{CamelCase} for classes but \texttt{snake\_case} for functions?}
+
+This is specified by the Python convention which is called PEP8~\cite{pep8}.
+
+
+These conventions are important as it helps with readability of code.
+
+\subsection{What is the difference between a method and a function?}
+
+A method is a function defined on a class and always takes a first parameter
+which is the specific instance from which the method is called.
