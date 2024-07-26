@@ -198,7 +198,7 @@ random.choice(bag)
 'Blue'
 \end{raw}
 
-If you run this many times we will not always get the same outcome:
+If you run this many times you will not always get the same outcome:
 
 \begin{pyin}
 random.choice(bag)
@@ -327,7 +327,7 @@ samples
  ]
 \end{pyin}
 
-You can confirm that we have the correct number of samples:
+You can confirm that you have the correct number of samples:
 
 \begin{pyin}
 len(samples)
@@ -608,7 +608,7 @@ Using Bayes’ theorem this is given theoretically by:
 
 
 \begin{note}
-In this tutorial we have
+In this tutorial you have
 \begin{itemize}
 \item 
 
@@ -647,9 +647,9 @@ To create a list which is an ordered collection of objects that \textbf{can} be
 changed use the \texttt{{[}{]}} brackets.
 
 
-\begin{pyin}
-collection = [value_1, value_2, value_3, …, value_n]
-\end{pyin}
+\begin{api}
+collection = [value_1, value_2, value_3, ..., value_n]
+\end{api}
 
 
 
@@ -720,7 +720,7 @@ basket
 
 
 
-As for tuples we can also access elements using their indices:
+As for tuples you can also access elements using their indices:
 
 
 
@@ -747,16 +747,14 @@ basket[3]
 Define a function using the \texttt{def} keyword (short for define):
 
 
-\begin{pyin}
+\begin{api}
 def name(variable1, variable2, ...):
     """
     A docstring between triple quotation to describe what is happening
     """
     INDENTED BLOCK OF CODE
     return output
-\end{pyin}
-
-
+\end{api}
 
 For example define \(f:\mathbb{R}\to\mathbb{R}\) given by \(f(x) = x ^
 3\) using the following:
@@ -800,9 +798,9 @@ x_cubed(x)
 Once a function is defined call it using the \texttt{()}:
 
 
-\begin{pyin}
+\begin{api}
 name(variable1, variable2, ...)
-\end{pyin}
+\end{api}
 
 
 
@@ -871,12 +869,12 @@ To run code depending on whether or not a particular condition is met use
 an \texttt{if} statement.
 
 
-\begin{pyin}
+\begin{raw}
 if condition:
     INDENTED BLOCK OF CODE TO RUN IF CONDITION IS TRUE
 else:
     OTHER INDENTED BLOCK OF CODE TO RUN IF CONDITION IS NOT TRUE
-\end{pyin}
+\end{raw}
 
 
 
@@ -1058,9 +1056,9 @@ get_price_of_item("Rollerblades")
 You can create a new list from an old list using a \textbf{list comprehension}.
 
 
-\begin{pyin}
+\begin{api}
 collection = [f(item) for item in iterable]
-\end{pyin}
+\end{api}
 
 
 
@@ -1072,7 +1070,7 @@ S_2 = \{f(x)\text{ for x in }S_1\}
 \end{split}
 \end{equation*}
 
-If \(f(x)=x - 5\) and \(S_1=\{2, 5, 10\}\) then we would have:
+If \(f(x)=x - 5\) and \(S_1=\{2, 5, 10\}\) then you would have:
 \begin{equation*}
 \begin{split}
 S_2 = \{-3, 0, 5\}
@@ -1132,7 +1130,7 @@ prices
 
 
 
-\subsection{Add items in a list}
+\subsection{Summing items in a list}
 \label{\detokenize{tools-for-mathematics/06-probability/how/main:adding-items-in-a-list}}
 
 You can compute the sum of items in a list using the \texttt{sum} tool:
@@ -1156,7 +1154,7 @@ sum([1, 2, 3])
 
 
 
-You can also directly use the \texttt{sum} without specifically creating the list. This
+You can also directly use \texttt{sum} without specifically creating the list. This
 corresponds to the following mathematical notation:
 
 \begin{equation*}
@@ -1210,9 +1208,9 @@ To randomly sample from any collection of items
 use the random library and the \texttt{choice} tool.
 
 
-\begin{pyin}
+\begin{api}
 random.choice(collection)
-\end{pyin}
+\end{api}
 
 
 
@@ -1246,9 +1244,9 @@ To sample a random number between 0 and 1 use the random library and the
 \texttt{random} tool.
 
 
-\begin{pyin}
+\begin{api}
 random.random()
-\end{pyin}
+\end{api}
 
 
 
@@ -1285,9 +1283,9 @@ called pseudo random which means that it is possible to get a computer to reprod
 \textbf{seeding} the random process.
 
 
-\begin{pyin}
+\begin{api}
 random.seed(int)
-\end{pyin}
+\end{api}
 
 
 
@@ -1717,10 +1715,10 @@ symbol. This creates something called a “comment”. For example:
 bag = ["Red", "Red", "Blue"]
 \end{pyin}
 
-A docstring however is something that is “attached” to a function and can be
+A docstring however is something that is ``attached''' to a function and can be
 accessed by Python.
 If you rewrite the function to sample the experiment of the tutorial without a
-docstring but using comments we will have:
+docstring but using comments you will have:
 
 
 

@@ -106,9 +106,7 @@ import sympy as sym
 x = sym.Symbol("x")
 a = sym.Symbol("a")
 b = sym.Symbol("b")
-numerator = (24 * x * (a - 4 * x) + 2 * (a - 8 * x) * (b - 4 * x))
-denominator = ((b - 4 * x) ** 4)
-expression = numerator / denominator
+expression = (24 * x * (a - 4 * x) + 2 * (a - 8 * x) * (b - 4 * x)) / ((b - 4 * x) ** 4)
 expression
 \end{pyin}
 
