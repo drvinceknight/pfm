@@ -231,9 +231,9 @@ Obtained the particular solution of a differential equation.
 To create a symbolic function use \texttt{sympy.Function}.
 
 
-\begin{pyin}
+\begin{api}
 sympy.Function("y")
-\end{pyin}
+\end{api}
 
 
 
@@ -306,14 +306,14 @@ sym.diff(y(x), x)
 To create a differential equation use \texttt{sympy.Eq}.
 
 
-\begin{pyin}
+\begin{api}
 import sympy as sym
 
 y = sym.Function("y")
 x = sym.Symbol("x")
 
 equation = sym.Eq(lhs, rhs)
-\end{pyin}
+\end{api}
 
 
 
@@ -355,7 +355,7 @@ To obtain the generation solution to a differential equation use:
 \texttt{sympy.dsolve}.
 
 
-\begin{pyin}
+\begin{api}
 import sympy as sym
 
 y = sym.Function("y")
@@ -363,7 +363,7 @@ x = sym.Symbol("x")
 
 equation = sym.Eq(lhs, rhs)
 sym.dsolve(equation, y(x))
-\end{pyin}
+\end{api}
 
 
 
@@ -400,7 +400,7 @@ To obtain the particular solution to a differential equation use:
 \texttt{sympy.dsolve} and pass the initial conditions: \texttt{ics}.
 
 
-\begin{pyin}
+\begin{api}
 import sympy as sym
 
 y = sym.Function("y")
@@ -408,7 +408,7 @@ x = sym.Symbol("x")
 
 equation = sym.Eq(lhs, rhs)
 sym.dsolve(equation, y(x), ics={y(x_0): value})
-\end{pyin}
+\end{api}
 
 
 
@@ -769,7 +769,7 @@ array([[ 0.1       , -0.5       ],
 
 
 Figure~\ref{fig:odeint_comparison_plot} shows a plot of the above with a comparison to the exact expected values (obtained
-using the Airy functions of the first and second kind):
+using the Airy functions of the first and second kind).
 
 
 \begin{figure}[!htbp]

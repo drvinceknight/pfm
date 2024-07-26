@@ -11,9 +11,6 @@ analysis, interpretation, and presentation of data.''
 In practice this often means doing some form of analysis to data.
 This can be things like taking a mean of a collection of numerical
 values and checking if particular relationship exists within the data.
-will not consider visualisation of data which is instead covered in
-Chapter~\ref{}.
-
 
 
 \begin{note}
@@ -91,6 +88,9 @@ Table~\ref{tab:data_collected_by_anne} shows the data.
 64 & 360.0\\
 \bottomrule
 \end{tabular}
+    \caption{Data showing collected samples of heart rate (\(h\)) and weekly
+    minutes of exercise (\(m\)).}
+    \label{tab:data_collected_by_anne}
 \end{center}
 \end{table}
 
@@ -778,9 +778,9 @@ You can calculate the mean of a set of data using \texttt{statistics.mean} which
 iterable.
 
 
-\begin{pyin}
+\begin{api}
 statistics.mean(data)
-\end{pyin}
+\end{api}
 
 
 
@@ -815,9 +815,9 @@ You can calculate the median of a set of data using \texttt{statistics.median} w
 iterable.
 
 
-\begin{pyin}
+\begin{api}
 statistics.median(data)
-\end{pyin}
+\end{api}
 
 
 
@@ -852,9 +852,9 @@ You can calculate the population standard deviation of a set of data using \text
 iterable.
 
 
-\begin{pyin}
+\begin{api}
 statistics.pstdev(data)
-\end{pyin}
+\end{api}
 
 
 
@@ -889,9 +889,9 @@ You can calculate the sample standard deviation of a set of data using \texttt{s
 iterable.
 
 
-\begin{pyin}
+\begin{api}
 statistics.stdev(data)
-\end{pyin}
+\end{api}
 
 
 
@@ -926,9 +926,9 @@ You can calculate the population variance of a set of data using \texttt{statist
 iterable.
 
 
-\begin{pyin}
+\begin{api}
 statistics.pvariance(data)
-\end{pyin}
+\end{api}
 
 
 
@@ -963,9 +963,9 @@ You can calculate the sample variance of a set of data using \texttt{statistics.
 iterable.
 
 
-\begin{pyin}
+\begin{api}
 statistics.variance(data)
-\end{pyin}
+\end{api}
 
 
 
@@ -999,9 +999,9 @@ st.variance(data)
 You can calculate the maximum of a set of data use \texttt{max} which takes an iterable:
 
 
-\begin{pyin}
+\begin{api}
 max(data)
-\end{pyin}
+\end{api}
 
 
 
@@ -1033,9 +1033,9 @@ max(data)
 You can calculate the minimum of a set of data use \texttt{max} which takes an iterable:
 
 
-\begin{pyin}
+\begin{api}
 min(data)
-\end{pyin}
+\end{api}
 
 
 
@@ -1069,9 +1069,9 @@ you can use \texttt{statistics.quantiles} which takes an iterable and a number o
 intervals.
 
 
-\begin{pyin}
+\begin{api}
 statistics.quantiles(data, n)
-\end{pyin}
+\end{api}
 
 
 
@@ -1108,9 +1108,9 @@ To calculate the sample covariance of two data sets you can use
 \texttt{statistics.covariance} which takes two iterables.
 
 
-\begin{pyin}
+\begin{api}
 statistics.covariance(first_data_set, second_data_set)
-\end{pyin}
+\end{api}
 
 
 
@@ -1147,9 +1147,9 @@ To calculate the correlation coefficient of two data sets you can use
 \texttt{statistics.correlation} which takes two iterables.
 
 
-\begin{pyin}
+\begin{api}
 statistics.correlation(first_data_set, second_data_set)
-\end{pyin}
+\end{api}
 
 
 
@@ -1187,9 +1187,9 @@ you can use \texttt{statistics.linear\_regression} which takes two iterables and
 a tuple with the slope and the intercept of the line.
 
 
-\begin{pyin}
+\begin{api}
 statistics.linear_regression(first_data_set, second_data_set)
-\end{pyin}
+\end{api}
 
 
 
@@ -1245,9 +1245,9 @@ A normal distribution with mean \(\mu\) and standard deviation \(\sigma\) can be
 created using \texttt{statistics.NormalDist}:
 
 
-\begin{pyin}
+\begin{api}
 statistics.NormalDist(mu, sigma)
-\end{pyin}
+\end{api}
 
 
 
@@ -1284,10 +1284,10 @@ the normally distributed random variable is less than \(X\)) can be accessed usi
 \texttt{statistics.NormaDist.cdf}.
 
 
-\begin{pyin}
+\begin{api}
 distribution = statistics.NormalDist(mu, sigma)
 distribution.cdf(x)
-\end{pyin}
+\end{api}
 
 
 
@@ -1324,10 +1324,10 @@ inverse cumulative distribution function which for a given \(p\) gives \(x\) suc
 can be accessed using \texttt{statistics.NormaDist.inv\_cdf}.
 
 
-\begin{pyin}
+\begin{api}
 distribution = statistics.NormalDist(mu, sigma)
 distribution.inv_cdf(p)
-\end{pyin}
+\end{api}
 
 
 
