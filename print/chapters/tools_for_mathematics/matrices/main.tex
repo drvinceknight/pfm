@@ -3,6 +3,7 @@
 
 Matrices form the building block of an area of mathematics referred to as Linear
 Algebra. The dictionary definition of a matrix is:
+
 \begin{quote}
 ``A group of numbers or other symbols arranged in a rectangle that can be used
 together as a single unit to solve particular mathematical problems.''
@@ -181,7 +182,7 @@ A.subs({a: 2}).inv()
 
 
 
-To carry out matrix multiplication we use the \texttt{@} symbol:
+To carry out matrix multiplication you use the \texttt{@} symbol:
 
 
 
@@ -241,15 +242,15 @@ In this tutorial you have
 \begin{itemize}
 \item 
 
-Created a matrix.
+Created a matrix;
 
 \item 
 
-Calculated the determinant of the matrix.
+Calculated the determinant of the matrix;
 
 \item 
 
-Substituted values in the matrix.
+Substituted values in the matrix;
 
 \item 
 
@@ -273,9 +274,9 @@ nested square brackets \texttt{{[}{]}} so that every row is also inside square
 brackets.
 
 
-\begin{pyin}
+\begin{api}
 sympy.Matrix([values])
-\end{pyin}
+\end{api}
 
 
 
@@ -328,10 +329,10 @@ B = sym.Matrix(
 
 To calculate the determinant of a matrix, use the \texttt{.det} tool.
 
-\begin{pyin}
+\begin{api}
 matrix = sympy.Matrix([values])
 matrix.det()
-\end{pyin}
+\end{api}
 
 
 
@@ -368,10 +369,10 @@ matrix.det()
 To calculate the inverse of a matrix, use the \texttt{.inv} tool.
 
 
-\begin{pyin}
+\begin{api}
 matrix = sympy.Matrix([values])
 matrix.inv()
-\end{pyin}
+\end{api}
 
 
 
@@ -472,7 +473,7 @@ matrix + other_matrix
 \subsection{Multiply matrices together}
 \label{\detokenize{tools-for-mathematics/04-matrices/how/main:multiply-matrices-together}}
 
-To multiply matrices together we use the \texttt{@} operator. For example to compute:
+To multiply matrices together you use the \texttt{@} operator. For example to compute:
 \begin{equation*}
 \begin{split}
     \begin{pmatrix}
@@ -700,10 +701,6 @@ symbol. This creates something called a “comment”. For example:
 import sympy as sym  # Importing the sympy library using an alias
 \end{pyin}
 
-
-
-
-
 Comments like these often do not add to the readability of the code. In fact
 they can make the code less readable or at worse
 confusing~\cite{martin2009clean}.
@@ -722,14 +719,14 @@ Being able to read and understand written code is important.
 
 
 
-In Chapter~ref{}
-you will start to write our functions and emphasis will
+In Chapter~\ref{chp:functions_and_data_structures}
+you will start to write functions and emphasis will
 be given there on readability and documenting (as opposed to commenting) the
 code written. A specific discussion about using a tool called a
 \texttt{docstring} as opposed to a comment will be covered.
 
 
-In chapters~\ref{} and~\ref{} there is a lot more
+In chapters~\ref{chp:modularisation} and~\ref{chp:testing} there is more
 information on how to ensure code is readable and understandable.
 
 
@@ -768,5 +765,6 @@ multiplication instead. So for clarity it is preferred to use \texttt{@} through
 \texttt{numpy} is one of the most popular and important libraries in the Python
 ecosystem. It is in fact the best library to use when doing linear algebra as it
 is computationally efficient, \textbf{however} it cannot handle symbolic variables
-which is why you are seeing how to use \texttt{Sympy} here. Chapter~\ref{} gives
-an introduction to \texttt{numpy}.
+which is why you are seeing how to use \texttt{Sympy} here. An introduction to
+\texttt{numpy} is is covered in a chapter of the online version of the
+book.
