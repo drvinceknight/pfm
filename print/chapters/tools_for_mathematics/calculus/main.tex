@@ -1,15 +1,13 @@
 \chapter{Calculus}
 \label{\detokenize{tools-for-mathematics/03-calculus/introduction/main:calculus}}\label{\detokenize{tools-for-mathematics/03-calculus/introduction/main::doc}}
 
-As of 2020, the A-level syllabus includes Calculus which
-is described 
+The A-level syllabus describes Calculus 
+describes
 as:
 
 \begin{quote}
-
-
-Calculus: this is a fundamental element which describes change in dynamic
-situations and underlines the links between functions and graphs.
+``Calculus: this is a fundamental element which describes change in dynamic
+situations and underlines the links between functions and graphs.''
 \end{quote}
 
 
@@ -34,6 +32,7 @@ Here you will see how to instruct a computer to carry out these techniques.
 
 
 
+\begin{note}
 In this chapter you will cover:
 \begin{itemize}
 \item 
@@ -49,6 +48,7 @@ Differentiating functions.
 Computing definite and indefinite integrals.
 
 \end{itemize}
+\end{note}
 
 
 
@@ -106,7 +106,9 @@ import sympy as sym
 x = sym.Symbol("x")
 a = sym.Symbol("a")
 b = sym.Symbol("b")
-expression = (24 * x * (a - 4 * x) + 2 * (a - 8 * x) * (b - 4 * x)) / ((b - 4 * x) ** 4)
+numerator = (24 * x * (a - 4 * x) + 2 * (a - 8 * x) * (b - 4 * x))
+denominator = ((b - 4 * x) ** 4)
+expression = numerator / denominator
 expression
 \end{pyin}
 
@@ -250,7 +252,7 @@ Now solve the first equation to obtain a value for \(a\):
 
 
 \begin{pyin}
-\PYG{n}{sym}\PYG{o}{.}\PYG{n}{solveset}\PYG{p}{(}\PYG{n}{first\PYGZus{}equation}\PYG{p}{,} \PYG{n}{a}\PYG{p}{)}
+sym.solveset(first_equation, a)
 \end{pyin}
 
 
@@ -306,7 +308,10 @@ You will substitute these values back and finish the question:
 
 \begin{pyin}
 expression = expression.subs(
-    {a: 2 * sym.sqrt(2) * sym.root(3, 4) / 3, b: 2 * sym.sqrt(2) * sym.root(3, 4)}
+    {
+        a: 2 * sym.sqrt(2) * sym.root(3, 4) / 3, 
+        b: 2 * sym.sqrt(2) * sym.root(3, 4),
+    }
 )
 expression
 \end{pyin}
@@ -454,6 +459,25 @@ sym.factor(sym.integrate(expression, (x, 5, 20)))
 
 
 
+\begin{note}
+This tutorial has:
+\begin{itemize}
+
+\item 
+    Simplified a rational quotient;
+
+\item 
+
+Differentiated symbolic expressions;
+
+
+\item 
+
+Solved algebraic equations.
+
+\end{itemize}
+\end{note}
+
 
 
 
@@ -467,9 +491,9 @@ You can calculate the derivative of an expression using \texttt{sympy.diff} whic
 an expression, a variable and a degree.
 
 
-\begin{pyin}
+\begin{api}
 sympy.diff(expression, variable, degree=1)
-\end{pyin}
+\end{api}
 
 
 
@@ -523,9 +547,9 @@ You can calculate the indefinite integral of an expression using
 \texttt{sympy.integrate}. Which takes an expression and a variable.
 
 
-\begin{pyin}
+\begin{api}
 sympy.integrate(expression, variable)
-\end{pyin}
+\end{api}
 
 
 
@@ -557,9 +581,9 @@ variable as the second argument you pass a tuple with the variable and the upper
 and lower bounds of integration.
 
 
-\begin{pyin}
+\begin{api}
 sympy.integrate(expression, (variable, lower_bound, upper_bound))
-\end{pyin}
+\end{api}
 
 
 
@@ -588,9 +612,9 @@ sym.integrate(expression, (x, 0, 4))
 In \texttt{sympy} you can access \(\infty\) using \texttt{sym.oo}:
 
 
-\begin{pyin}
+\begin{api}
 sympy.oo
-\end{pyin}
+\end{api}
 
 
 
@@ -620,9 +644,9 @@ You can calculate limits using \texttt{sympy.limit}. The first argument is the
 expression, then the variable and finally the expression the variable tends to.
 
 
-\begin{pyin}
+\begin{api}
 sympy.limit(expression, variable, value)
-\end{pyin}
+\end{api}
 
 
 
@@ -752,9 +776,9 @@ Using your ansyours to parts 2., calculate the area of the region betyouen \(f\)
 It is possible to plot a function using \texttt{sympy} using the \texttt{sympy.plot} function:
 
 
-\begin{pyin}
+\begin{api}
 sympy.plot(expression)
-\end{pyin}
+\end{api}
 
 
 
@@ -776,7 +800,7 @@ sym.plot(x ** 2 + 3 * x + 1)
     \includegraphics[width=.7\textwidth]{./assets/plotting_with_sympy/main.pdf}
 \end{center}
 
-It is possible to specify the x limits and combine it with other plots:
+It is possible to specify the \(x\) limits and combine it with other plots:
 
 \begin{pyin}
 sym.plot(x ** 2 + 3 * x + 1, xlim=(-5, 5))
@@ -791,4 +815,5 @@ sym.plot(x ** 2 + 3 * x + 1, xlim=(-5, 5))
 
 \textbf{This plotting solution is good if you want to take a look at a function
 quickly but it is not recommended.} The main python library for plotting is called
-\texttt{matplotlib} and is covered in Chapter~\ref{}.
+\texttt{matplotlib} and is covered in a chapter of the online version of the
+book.
