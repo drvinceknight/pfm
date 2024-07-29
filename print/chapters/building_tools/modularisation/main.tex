@@ -22,7 +22,7 @@ on how you can write the code as software that will do more than just solve the
 specific problem. It will be able to be used for further problems of the same
 type.
 
-Consider a Markov chain model of the Board Game “Snakes and Ladders”:
+Consider a Markov chain model of the Board Game ``Snakes and Ladders'':
 \begin{enumerate}
 
 \item 
@@ -37,14 +37,14 @@ what is the average number of turns?
 
 
 
-To solve this problem you will make use of the Python library \texttt{numpy} which is
-discussed in the corresponding Chapter~\ref{} to
-carry out efficient numerical calculations.
+To solve this problem you will make use of the Python library \texttt{numpy}
+to carry out efficient
+numerical calculations.
 
 
 The problem you are considering is in fact an application of a mathematical
-object from probability called a Markov Chain which we will not go in to in
-detail here however the relevant ideas are that the probability of being in the
+object from probability called a Markov Chain which not be covered here 
+however the relevant ideas are that the probability of being in the
 100th square after \(k\) turns can be written down as:
 \begin{equation*}
 \begin{split}
@@ -59,9 +59,9 @@ where:
 \end{split}
 \end{equation*}
 
-and \(P\in\mathbb{R}^{100 \times 100}\) where \(P_{ij}\) represents the probability
-of being in the \(i\)th square and going to the \(j_th\) square after rolling the
-dice.
+and \(P\in\mathbb{R}^{100 \times 100}\) where \(P_{ij}\) represents the
+probability of being in the \(i\)th square and going to the \(j_th\) square
+after rolling the dice.
 
 
 There are snakes and ladders between the squares as given in
@@ -273,7 +273,7 @@ P ^ k\) for arbitrary \(\pi\), \(k\) and \(P\):
 
 
 
-\begin{pyin}
+\begin{python}
 def get_long_run_state(pi, k, P):
     """
     For a Markov chain with transition matrix P and starting state vector pi,
@@ -296,7 +296,7 @@ def get_long_run_state(pi, k, P):
         The state vector after k iterations
     """
     return pi @ np.linalg.matrix_power(P, k)
-\end{pyin}
+\end{python}
 
 
 
@@ -304,6 +304,7 @@ def get_long_run_state(pi, k, P):
 
 For the second question you are going make use of a theoretic result which is
 that if \(P\) is of the form:
+
 \begin{equation*}
 \begin{split}
 P = \begin{pmatrix}
@@ -314,6 +315,7 @@ P = \begin{pmatrix}
 \end{equation*}
 
 In this case the \textbf{fundamental matrix} is defined by:
+
 \begin{equation*}
 \begin{split}
     N = (I - Q) ^ {- 1}
@@ -323,6 +325,7 @@ In this case the \textbf{fundamental matrix} is defined by:
 The fundamental matrix of an absorbing Markov chains has a number of potential
 applications. One of which is to calculate
 the expected number of steps for the Markov chain to be absorbed given by:
+
 \begin{equation*}
 \begin{split}
     t = N\mathbb{1}
@@ -332,13 +335,13 @@ the expected number of steps for the Markov chain to be absorbed given by:
 where \(\mathbb{1}\) is a column of 1s.
 
 
-To be able to code this you want to write a function to compute \(t\) but this
+To be able to code this you write a function to compute \(t\) but this
 requires ``extracting'' \(Q\) from \(P\):
 
 
 
 
-\begin{pyin}
+\begin{python}
 def compute_t(P):
     """
     For an absorbing Markov chain with transition rate matrix this computes the
@@ -362,7 +365,7 @@ def compute_t(P):
     number_of_rows, _ = Q.shape
     N = np.linalg.inv(np.eye(number_of_rows) - Q)
     return N @ np.ones(number_of_rows)
-\end{pyin}
+\end{python}
 
 
 
@@ -391,7 +394,7 @@ up that function in to three separate functions:
 
 
 
-\begin{pyin}
+\begin{python}
 def extract_Q(P):
     """
     For an absorbing Markov chain with transition rate matrix P this computes the
@@ -434,7 +437,7 @@ def compute_N(Q):
     number_of_rows, _ = Q.shape
     N = np.linalg.inv(np.eye(number_of_rows) - Q)
     return N
-\end{pyin}
+\end{python}
 
 
 
@@ -445,7 +448,7 @@ This now allows you to redefine \texttt{compute\_t} in a simpler way:
 
 
 
-\begin{pyin}
+\begin{python}
 def compute_t(P):
     """
     For an absorbing Markov chain with transition rate matrix this computes the
@@ -457,7 +460,7 @@ def compute_t(P):
     N = compute_N(Q)
     number_of_rows, _ = Q.shape
     return N @ np.ones(number_of_rows)
-\end{pyin}
+\end{python}
 
 
 \begin{note}
@@ -467,8 +470,9 @@ placed somewhere that it can be used for different project.
 
 
 
-You are going to put these three functions (and the necessary \texttt{import numpy as np} statement) in an 
-\texttt{absorption.py} file as can be seen in Figure~\ref{fig:absorption.py}.
+You are going to put these three functions (and the necessary \texttt{import
+numpy as np} statement) in an \texttt{absorption.py} file as can be seen in
+Figure~\ref{fig:absorption.py}.
 
 \begin{figure}[htbp]
 \centering
@@ -565,8 +569,6 @@ Now to compute the average length of the game:
 
 
 \begin{pyin}
-:tags: [nbval-ignore-output]
-
 t = absorption.compute_t(P)
 t[0]
 \end{pyin}
@@ -586,25 +588,25 @@ t[0]
 \subsection{Import code from python files}
 \label{\detokenize{building-tools/05-modularisation/how/main:how-to-import-code-from-python-files}}
 
-Given a \texttt{<file.py>} file in a directory any other python process in the same
-directory can import that file as it would a normal library.
+Given a \texttt{<file.py>} file in a directory any other python process in the
+same directory can import that file as it would a normal library.
 
 
-\begin{pyin}
+\begin{api}
 import <file>
-\end{pyin}
+\end{api}
 
 
 
-At that stage it is possible to uses any python object (a \texttt{function}, a
+At this stage it is possible to uses any python object (a \texttt{function}, a
 \texttt{class}, a
 \texttt{variable}) by referring to the \texttt{<file.py>} as library:
 
-\begin{pyin}
+\begin{api}
 <file>.function
 <file>.class
 <file>.variable
-\end{pyin}
+\end{api}
 
 
 \subsection{Break up code in to modular components}
@@ -891,8 +893,6 @@ guiding principle described in~\cite{fowler2018refactoring}:
 
 
 \begin{quote}
-
-
 ``Code should be obvious. When someone needs to make a change, they should be
 able to find the code to be changed easily and make the change quickly without
 introducing any errors.''
@@ -906,9 +906,8 @@ introducing any errors.''
 Whilst this guiding principle is ambiguous and all concepts related to clean
 code writing and refactoring are not things that can be covered in this book one
 specific principle is the one referred to in\ref{martin2009clean}:
+
 \begin{quote}
-
-
 ``Functions should do one thing. They should do it well. They should do it
 only.''
 \end{quote}
@@ -935,10 +934,6 @@ correct name.
 As an example, if your code is in a \texttt{library} directory but that your
 notebook is in a \textbf{different} directory then you will get an error as shown
 below:
-
-
-
-
 
 \begin{pyin}
 import library
