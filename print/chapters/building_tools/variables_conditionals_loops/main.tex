@@ -346,9 +346,9 @@ operator. Create the name of the variable then the assignment operator
 followed by the integer value.
 
 
-\begin{pyin}
+\begin{api}
 name_of_variable = int_value
-\end{pyin}
+\end{api}
 
 
 
@@ -410,9 +410,9 @@ operator. Create the name of the variable then the assignment operator
 followed by the real value.
 
 
-\begin{pyin}
+\begin{api}
 name_of_variable = float_value
-\end{pyin}
+\end{api}
 
 
 
@@ -447,9 +447,9 @@ followed by the string which is a combination of characters between quotation
 marks.
 
 
-\begin{pyin}
+\begin{api}
 name_of_variable = string_value
-\end{pyin}
+\end{api}
 
 
 
@@ -484,9 +484,9 @@ Create the name of the variable then the assignment operator followed by the
 boolean variable (either \texttt{True} or \texttt{False}).
 
 
-\begin{pyin}
+\begin{api}
 name_of_variable = boolean_value
-\end{pyin}
+\end{api}
 
 
 
@@ -496,8 +496,8 @@ For example:
 
 
 \begin{pyin}
-john_nash_has_a_noble = True
-john_nash_has_a_noble
+john_nash_has_a_nobel = True
+john_nash_has_a_nobel
 \end{pyin}
 
 
@@ -521,9 +521,9 @@ variables from other variables.
 You can get the type of a variable using the \texttt{type} tool.
 
 
-\begin{pyin}
+\begin{api}
 type(object)
-\end{pyin}
+\end{api}
 
 
 Where \texttt{object} is any variable.
@@ -682,9 +682,9 @@ ways this can be done in Python but the current best practice is to use
 \texttt{f}-strings.
 
 
-\begin{pyin}
+\begin{api}
 f"{variable}"
-\end{pyin}
+\end{api}
 
 
 
@@ -717,15 +717,15 @@ Given an iterable of booleans it is possible to check if any or all of them are
 \texttt{True} using \texttt{any} or \texttt{all}:
 
 
-\begin{pyin}
+\begin{api}
 all(iterable)
-\end{pyin}
+\end{api}
 
 
 
-\begin{pyin}
+\begin{api}
 any(iterable)
-\end{pyin}
+\end{api}
 
 
 
@@ -778,13 +778,13 @@ variable is expected, if that boolean is \texttt{True} then the indented code th
 follows is run. Otherwise it is not.
 
 
-\begin{pyin}
+\begin{api}
 if boolean:
     code to run if boolean is true
 else:
     code to run if boolean is false
 code to run after either of two previous code blocks are run.
-\end{pyin}
+\end{api}
 
 
 
@@ -818,9 +818,9 @@ message
 
 
 
-\begin{pyin}
-\PYGZsq{}The random number (49) is odd.\PYGZsq{}
-\end{pyin}
+\begin{raw}
+'The random number (49) is odd.'
+\end{raw}
 
 
 
@@ -837,11 +837,10 @@ After that the indented code that will be repeated for every value of the
 iterable.
 
 
-\begin{pyin}
+\begin{api}
 for dummy_variable in iterable:
     code to repeat
-    ```
-\end{pyin}
+\end{api}
 
 
 
@@ -908,11 +907,11 @@ follows is repeated. After it is run, the boolean is checked once more. When the
 boolean is \texttt{False} the indented code is skipped.
 
 
-\begin{pyin}
+\begin{api}
 while boolean:
     code to repeat before checking boolean once more
 code to run once boolean is False
-\end{pyin}
+\end{api}
 
 Here is some code that repeatedly selects a random integer until that number is
 even.
@@ -934,9 +933,9 @@ number_of_selections
 
 
 
-\begin{pyin}
+\begin{raw}
 2
-\end{pyin}
+\end{raw}
 
 
 
@@ -949,9 +948,9 @@ To create a new iterable of pairs of items from two separate iterables use
 \texttt{zip}:
 
 
-\begin{pyin}
+\begin{api}
 zip(iterable_1, iterable_2)
-\end{pyin}
+\end{api}
 
 
 
@@ -990,9 +989,9 @@ To iterate over items from an iterable and keep track of their index use
 \texttt{enumerate}:
 
 
-\begin{pyin}
+\begin{api}
 enumerate(iterable)
-\end{pyin}
+\end{api}
 
 
 

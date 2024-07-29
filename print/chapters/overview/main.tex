@@ -201,6 +201,19 @@ An exercise section: this will be a number of exercises that you can work on.
 
 \end{itemize}
 
+There are a number of different Python libraries, programming techniques and frameworks covered in this
+book:
+
+\begin{itemize}
+    \item Diataxis (Chapter~\ref{chp:documentation})
+    \item Recursion (Chapter~\ref{chp:sequences});
+    \item \texttt{itertools} (Chapter~\ref{chp:combinatorics})
+    \item \texttt{random} (Chapters~\ref{chp:probability})
+    \item \texttt{statistics} (Chapters~\ref{chp:statistics})
+    \item \texttt{sympy} (Chapters~\ref{chp:algebra}-\ref{chp:matrices},~\ref{chp:differential_equations});
+\end{itemize}
+
+
 \subsection{How to use this book}
 Readers are welcome to use this book in any way they find useful however it is
 designed with the following suggestion in mind:
@@ -233,7 +246,9 @@ most common is the following:
 2 + 2
 \end{pyin}
 
+\begin{raw}
 4
+\end{raw}
 
 This is shown as input to the programming tool ``Jupyter'' which is described at
 length in Chapter~\ref{chp:using_notebooks}. As well as the input, it will also
@@ -267,17 +282,19 @@ more formally in Chapter~\ref{chp:cli}.
 $ ls
 \end{cliin}
 
-There are a number of different Python libraries, programming techniques and frameworks covered in this
-book:
+Note that when some lines of code are long they might include a continued line 
+symbol (\(\hookrightarrow\)):
 
-\begin{itemize}
-    \item Diataxis (Chapter~\ref{chp:documentation})
-    \item Recursion (Chapter~\ref{chp:sequences});
-    \item \texttt{itertools} (Chapter~\ref{chp:combinatorics})
-    \item \texttt{random} (Chapters~\ref{chp:probability})
-    \item \texttt{statistics} (Chapters~\ref{chp:statistics})
-    \item \texttt{sympy} (Chapters~\ref{chp:algebra}-\ref{chp:matrices},~\ref{chp:differential_equations});
-\end{itemize}
+\begin{pyin}
+    123456789 + 123456789 + 123456789 + 123456789 + 123456789 + 123456789 + 123456789
+\end{pyin}
+
+\begin{raw}
+864197523
+\end{raw}
+
+The carriage return symbol should be ignored as it is only present in the book
+due to the physical constraint of the page width. The code should still be written as a single line.
 
 \section{What is \textbf{not} this book?}
 

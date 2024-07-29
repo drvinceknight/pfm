@@ -229,7 +229,7 @@ Here is how to write a docstring for a function that takes variables and returns
 a value.
 
 
-\begin{pyin}
+\begin{api}
 def name(parameter1, parameter2, ...):
     """
     <A description of what the function is.>
@@ -250,7 +250,7 @@ def name(parameter1, parameter2, ...):
     """
     INDENTED BLOCK OF CODE
     return output
-\end{pyin}
+\end{api}
 
 
 
@@ -304,9 +304,9 @@ See: Section~\ref{sec:create_a_list_using_a_list_comprehension}.
 Given two lists it is possible to combine them to create a new list using the \texttt{+} operator:
 
 
-\begin{pyin}
+\begin{api}
 first_list + other_list
-\end{pyin}
+\end{api}
 
 
 
@@ -339,9 +339,9 @@ combined_list
 Appending an element to a list is done using the \texttt{append} method.
 
 
-\begin{pyin}
+\begin{api}
 a_list.append(element)
-\end{pyin}
+\end{api}
 
 
 
@@ -378,9 +378,9 @@ for more information on the difference between a list and a tuple.
 To remove a given element from a list use the \texttt{remove} method.
 
 
-\begin{pyin}
+\begin{api}
 a_list.remove(element)
-\end{pyin}
+\end{api}
 
 
 
@@ -424,9 +424,9 @@ for more information on the difference between a list and a tuple.
 To sort a list use the \texttt{sort} method.
 
 
-\begin{pyin}
+\begin{api}
 a_list.sort()
-\end{pyin}
+\end{api}
 
 
 
@@ -492,9 +492,9 @@ for more information on the difference between a list and a tuple.
 To create a sorted list from an iterable use the \texttt{sorted} function.
 
 
-\begin{pyin}
+\begin{api}
 sorted(iterable)
-\end{pyin}
+\end{api}
 
 
 
@@ -531,9 +531,9 @@ See: Section~\ref{sec:how-to-access-particular-elements-in-a-tuple}.
 To identify the position of an element in an iterable use the \texttt{index} method.
 
 
-\begin{pyin}
+\begin{api}
 iterable.index(element)
-\end{pyin}
+\end{api}
 
 
 
@@ -570,9 +570,9 @@ It is possible to access an element of an iterable by counting from the end of
 the iterable using negative indexing.
 
 
-\begin{pyin}
+\begin{api}
 iterable[-index_from_end]
-\end{pyin}
+\end{api}
 
 
 
@@ -605,9 +605,9 @@ To create a new iterable from an iterable use \texttt{[]} and specify a start
 (inclusive) and end (exclusive) pair of indices.
 
 
-\begin{pyin}
+\begin{api}
 iterable[include_start_index: exclusive_end_index]
-\end{pyin}
+\end{api}
 
 
 
@@ -639,9 +639,9 @@ basket[2: 5]
 To count the number of elements in an iterable use \texttt{len}:
 
 
-\begin{pyin}
+\begin{api}
 len(iterable)
-\end{pyin}
+\end{api}
 
 
 
@@ -675,9 +675,9 @@ the \texttt{set} command on any iterable. If there are non distinct objects in t
 iterable then this is an efficient way to remove duplicates.
 
 
-\begin{pyin}
+\begin{api}
 set(iterable)
-\end{pyin}
+\end{api}
 
 
 
@@ -816,9 +816,9 @@ Python and is created using \texttt{\{\}} which takes a collection of \texttt{ke
 pairs.
 
 
-\begin{pyin}
+\begin{api}
 {key_1: value, key_2: value, …}
-\end{pyin}
+\end{api}
 
 
 
@@ -882,9 +882,9 @@ As described in Section\ref{sec:create_hash_tables} to access the value of a \te
 table use \texttt{{[}{]}}.
 
 
-\begin{pyin}
+\begin{api}
 dictionary[key]
-\end{pyin}
+\end{api}
 
 
 
@@ -927,9 +927,9 @@ ages.get("Vince", -1)
 To iterate over the keys in a hash table use the \texttt{keys()} method:
 
 
-\begin{pyin}
+\begin{api}
 dictionary.keys()
-\end{pyin}
+\end{api}
 
 
 
@@ -961,9 +961,9 @@ dict_keys(['Riggins', 'Chick', 'Duck'])
 To iterate over the values in a hash table use the \texttt{values()} method:
 
 
-\begin{pyin}
+\begin{api}
 dictionary.values()
-\end{pyin}
+\end{api}
 
 
 
@@ -995,9 +995,9 @@ dict_values([4, 7, 7])
 To iterate over pairs of keys and values in a hash table use the \texttt{items()} method:
 
 
-\begin{pyin}
+\begin{api}
 dictionary.items()
-\end{pyin}
+\end{api}
 
 
 
@@ -1135,7 +1135,7 @@ The \texttt{darglint} library can be used
 to check if docstrings match a given format.
 
 
-\subsection{A part from removing duplicates and set operations what are they advantages to using \texttt{set}?}
+\subsection{Apart from removing duplicates and set operations what are they advantages to using \texttt{set}?}
 \label{\detokenize{building-tools/02-functions-and-data-structures/why/main:a-part-from-removing-duplicates-and-set-operations-what-are-they-advantages-to-using-set}}
 
 One valuable uses of \texttt{set} is to efficiently identify if an element
