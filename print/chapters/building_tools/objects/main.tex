@@ -401,13 +401,13 @@ roots
 Define a class using the \texttt{class} keyword:
 
 
-\begin{pyin}
+\begin{api}
 class Name:
     """
     A docstring between triple quotation to describe what the class represents
     """
     INDENTED BLOCKS OF CODE
-\end{pyin}
+\end{api}
 
 
 
@@ -432,9 +432,9 @@ class Country:
 Once a class is defined call it using the \texttt{()}:
 
 
-\begin{pyin}
+\begin{api}
 Name()
-\end{pyin}
+\end{api}
 
 
 
@@ -453,9 +453,9 @@ first_country
 
 
 
-\begin{pyin}
+\begin{raw}
 <__main__.Country at 0x7f22a8f76e00>
-\end{pyin}
+\end{raw}
 
 
 
@@ -474,12 +474,12 @@ second_country
 
 
 
-\begin{pyin}
+\begin{raw}
 <__main__.Country at 0x7f22a8f76e30>
-\end{pyin}
+\end{raw}
 
 
-The at … is a pointer to the location of the instance in memory. If you re run
+The \texttt{at ...>} is a pointer to the location of the instance in memory. If you re run
 the code that location will change.
 
 
@@ -573,7 +573,7 @@ Methods are functions that belong to classes. Define a function using the
 specific instance that will call the method (it is passed implicitly).
 
 
-\begin{pyin}
+\begin{api}
 class Name:
     """
     A docstring between triple quotation to describe what the class represents
@@ -598,7 +598,7 @@ class Name:
         """
         INDENTED BLOCK OF CODE
         return output
-\end{pyin}
+\end{api}
 
 
 
@@ -679,7 +679,7 @@ The method that is called when an instance is created is called \texttt{\_\_init
 initialised). For example:
 
 
-\begin{pyin}
+\begin{api}
 class Country:
     """
     A class to represent a country
@@ -688,7 +688,7 @@ class Country:
     def __init__(self, name, amount_of_magic):
         self.name = name
         self.amount_of_magic = amount_of_magic
-\end{pyin}
+\end{api}
 
 
 
@@ -786,9 +786,9 @@ Inheritance is a tool that allows you to create one class based on another. This
 is done by passing the \texttt{Old} class to the \texttt{New} class.
 
 
-\begin{pyin}
+\begin{api}
 class New(Old)
-\end{pyin}
+\end{api}
 
 
 
