@@ -495,39 +495,31 @@ directory.
 
 Open a Jupyter notebook in the 
 \texttt{snakes\_and\_ladders} directory
-and call it \texttt{main.ipynb} also in the
+and call it \texttt{main.ipynb}.
 
 \end{itemize}
 
 
 This should look like the following:
 
-\begin{raw}
-snakes_and_ladders/
-    |--- absorption.py
-    |--- main.csv
-    |--- main.ipynb
-\end{raw}
+\begin{center}
+\dirtree{%
+.1 snakes\_and\_ladders/.
+.2 absorption.py.
+.2 main.csv.
+.2 main.ipynb.
+}
+\end{center}
 
 
-You can now use all of the code we have written in the notebook, first you can
+You can now use all of the code you have written in the notebook, first you can
 import the functions in \texttt{absorption.py} like any other python library:
-
-
-
 
 \begin{pyin}
 import absorption
 \end{pyin}
 
-
-
-
-
-We will also import \texttt{numpy} and use it to read the data file:
-
-
-
+You will also import \texttt{numpy} and use it to read the data file:
 
 \begin{pyin}
 import numpy as np
@@ -905,7 +897,7 @@ introducing any errors.''
 
 Whilst this guiding principle is ambiguous and all concepts related to clean
 code writing and refactoring are not things that can be covered in this book one
-specific principle is the one referred to in\ref{martin2009clean}:
+specific principle is the one referred to in~\cite{martin2009clean}:
 
 \begin{quote}
 ``Functions should do one thing. They should do it well. They should do it

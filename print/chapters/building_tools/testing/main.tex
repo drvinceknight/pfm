@@ -78,7 +78,7 @@ file called: \texttt{test\_absorption.py}.
 Write the following functions to test each of the functions in
 \texttt{absorption.py}:
 
-\begin{pyin}
+\begin{python}
 import numpy as np
 
 import absorption
@@ -108,11 +108,11 @@ def test_long_run_state_when_starting_in_absorbing_state():
 
 test_long_run_state_for_known_number_of_states()
 test_long_run_state_when_starting_in_absorbing_state()
-\end{pyin}
+\end{python}
 
 
 \begin{note}
-The two functions we have written do not include a \texttt{return} statement but
+The two functions you have written do not include a \texttt{return} statement but
 instead include an \texttt{assert} statement. An \texttt{assert} is followed by two values
 separated by a comma:
 \begin{enumerate}
@@ -132,9 +132,9 @@ A string that is output if the boolean is `False`.
 
 To run those tests, run the script at the command line:
 
-\begin{raw}
+\begin{cliin}
 $ python test_absorption.py
-\end{raw}
+\end{cliin}
 
 
 When running the tests if everything has been done correctly there will be no
@@ -154,7 +154,7 @@ For each of the four functions in \texttt{absorption.py} you can now add further
 and ensure they are also called at the end. The full \texttt{test\_absorption.py} file
 should look like:
 
-\begin{pyin}
+\begin{python}
 import numpy as np
 
 import absorption
@@ -218,7 +218,7 @@ test_long_run_state_when_starting_in_absorbing_state()
 test_extract_Q()
 test_compute_N()
 test_compute_t()
-\end{pyin}
+\end{python}
 
 
 \begin{note}
@@ -233,7 +233,7 @@ different due to numerical imprecision.
 
 
 \textbf{You can experiment by changing some of the code or the tests and see the way
-the tests fail.} See Figure~\ref{fig:running_tests_with_error_in_source_code}
+the tests fail.} See Figure~\ref{fig:running_tests_with_errors_in_source_code}
 where the following specific error has been introduced in to \texttt{absorption.py}:
 \texttt{P.diagonal() == 1} is incorrect and should be \texttt{P.diagonal() != 1}.
 
@@ -313,7 +313,7 @@ This will give:
 \end{md}
 
 
-We will modify the above to be:
+You will modify the above to be:
 
 \begin{md}
 ```python
@@ -347,9 +347,9 @@ We now see how the vector $\pi$ changes over time:
 To test the documentation gives the results that are written, run the following
 at the command line:
 
-\begin{raw}
+\begin{cliin}
 $ python -m doctest README.md
-\end{raw}
+\end{cliin}
 
 
 When testing the documentation, as for the testing of code, if there are no
@@ -451,7 +451,7 @@ than from the second.
 \label{\detokenize{building-tools/07-testing/tutorial/main:documenting-the-tests}}
 
 Finally it is important to document how to run the tests. The \textbf{reference}
-section is an appropriate place to put this. We will add the following to the
+section is an appropriate place to put this. Add the following to the
 \texttt{README.md} file:
 
 \begin{md}
@@ -479,9 +479,9 @@ An \texttt{assert} statement is followed by 2 values: a boolean and an optional
 string that gets returned if the boolean is \texttt{False}.
 
 
-\begin{pyin}
+\begin{api}
 assert boolean, string
-\end{pyin}
+\end{api}
 
 
 
@@ -605,7 +605,7 @@ assert set(samples) == all_values, "Not all values have been obtained over 1000 
 
 
 
-We can also confirm that the count of a given value is as expected:
+You can also confirm that the count of a given value is as expected:
 
 
 \begin{pyin}
@@ -628,7 +628,7 @@ in functions.
 
 For example, if the \texttt{dice.py} file contained:
 
-\begin{pyin}
+\begin{python}
 import random
 
 
@@ -637,12 +637,12 @@ def roll_a_dice():
     Pick a random integer between 1 and 6 (inclusive)
     """
     return random.choice(range(1, 7))
-\end{pyin}
+\end{python}
 
 
 Then a separate \texttt{test\_dice.py} file with the following would be written:
 
-\begin{pyin}
+\begin{python}
 import dice
 
 
@@ -673,14 +673,14 @@ def test_roll_a_dice_for_a_large_sample():
 
 test_roll_a_dice_with_specific_values()
 test_roll_a_dice_for_a_large_sample()
-\end{pyin}
+\end{python}
 
 
 To run the tests you would then type the following at the command line:
 
-\begin{raw}
+\begin{cliin}
 $ python test_dice.py
-\end{raw}
+\end{cliin}
 
 
 \subsection{Format doc tests.}
@@ -689,13 +689,13 @@ When writing code in documentation if you write it using a specific format then
 python can be used to confirm that the code and its output is correct.
 
 
-\begin{pyin}
+\begin{md}
 >>> <python_code>
 <expected_output
 >>> <python_code_over_multiples_lines>
 ... <python_code_over_multiple_lines>
 <expected_output>
-\end{pyin}
+\end{md}
 
 \begin{itemize}
 \item 
@@ -716,7 +716,7 @@ The expected output is written after the python statements.
 For example if you were documenting the following code written in a \texttt{dice.py}
 file:
 
-\begin{pyin}
+\begin{python}
 import random
 
 
@@ -725,18 +725,18 @@ def roll_a_dice():
     Pick a random integer between 1 and 6 (inclusive)
     """
     return random.choice(range(1, 7))
-\end{pyin}
+\end{python}
 
 
 You would write:
 
-\begin{raw}
+\begin{md}
 >>> import dice
 >>> random.seed(0)
 >>> dice.roll_a_dice()
 4
 
-\end{raw}
+\end{md}
 
 
 \subsection{Run doctests}
@@ -746,17 +746,17 @@ Given a file with doc tests, to run them type the following at the
 command line:
 
 
-\begin{raw}
+\begin{api}
 $ python -m doctest <file>
-\end{raw}
+\end{api}
 
 
 
 For example:
 
-\begin{raw}
+\begin{cliin}
 $ python -m doctest README.md
-\end{raw}
+\end{cliin}
 
 
 
@@ -775,13 +775,12 @@ Run the tests.
 \section{Further information}
 \label{\detokenize{building-tools/07-testing/why/main:further-information}}\label{\detokenize{building-tools/07-testing/why/main::doc}}
 
-\subsection{Why do we write functions in tests?}
-\label{\detokenize{building-tools/07-testing/why/main:why-do-we-write-functions-in-tests}}
+\subsection{Why are tests written as functions?}
 
-In Section~\ref{sec:testing_tutorial} you wrote all the tests using \texttt{assert} statements
-inside of functions. \textbf{Technically} this is not necessary as you could write a
-single script with all the assert statements one after the other.
-
+In Section~\ref{sec:testing_tutorial} you wrote all the tests using
+\texttt{assert} statements inside of functions. \textbf{Technically} this is not
+necessary as you could write a single script with all the assert statements one
+after the other.
 
 This is not recommended: by using functions you directly have a place to document
 the test (in the docstring) and the tests themselves are modularised.
@@ -811,7 +810,7 @@ Note that it is often not sufficient to test a function in a single way. For
 example, consider a function that does two different things depending on the
 parity of some input:
 
-\begin{pyin}
+\begin{python}
 def feedback_on_guess(guess, chosen_number):
     """
     Returns whether or not a guess is:
@@ -825,7 +824,7 @@ def feedback_on_guess(guess, chosen_number):
     if guess > chosen_number:
         return "Guess is larger than chosen number"
     return "Guess is equal to chosen number"
-\end{pyin}
+\end{python}
 
 In this case you would need to write at least 3 tests that check the 3
 behaviours.
@@ -833,7 +832,7 @@ In practice there might be some functionality that is not tested but this should
 be made clear and explicit and documented as to why should be written.
 
 
-\subsection{Why do we need doc tests?}
+\subsection{Why do you need doc tests?}
 \label{\detokenize{building-tools/07-testing/why/main:why-do-we-need-doc-tests}}
 
 The purpose of doctests is to ensure that the code written in documentation is
