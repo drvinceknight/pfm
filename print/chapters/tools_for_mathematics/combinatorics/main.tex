@@ -23,11 +23,11 @@ Counting these configurations.
 
 \item 
 
-Directly computing \(^n C_i={n \choose i}\)
+Directly computing \(^n C_i={n \choose i}\).
 
 \item 
 
-Directly computing \(^n P_i\)
+Directly computing \(^n P_i\).
 
 \end{itemize}
 \end{note}
@@ -69,7 +69,7 @@ Less than 23000
 
 
 
-First you are going to get the 5 digits. Python has a nice tool for this called
+First you are going to get the 5 digits. Python has a tool for this called
 \texttt{range} which directly gives the integers from a given bound to another:
 
 
@@ -114,10 +114,6 @@ tuple(range(1, 6))
 The question is asking for all the permutations of size 5 of that set of
 The main tool for this is a library specifically designed to iterate over
 objects in different ways: \texttt{itertools}.
-
-
-
-
 
 \begin{pyin}
 import itertools
@@ -265,10 +261,6 @@ math.factorial(4) * 3
 72
 \end{raw}
 
-
-
-
-
 To compute the number of digits that are less than or equal to 23000 you compute a
 similar sum except you use the \texttt{<=} operator and also convert the tuple of digits
 to a number in base 10:
@@ -327,25 +319,13 @@ permutations of the other digits is valid.
 
 \end{itemize}
 
-
-
-
 \begin{pyin}
 (math.factorial(4) + math.factorial(3))
 \end{pyin}
 
-
-
-
-
 \begin{raw}
 30
 \end{raw}
-
-
-
-
-
 
 \begin{note}
 In this tutorial you have
@@ -1020,7 +1000,6 @@ math.factorial(5)
 
 
 \subsection{Directly compute \({n \choose i}\)}
-\label{\detokenize{tools-for-mathematics/05-combinations-permutations/how/main:directly-computing-n-choose-i}}
 
 The \texttt{scipy.special} library has a \texttt{comb} tool.
 

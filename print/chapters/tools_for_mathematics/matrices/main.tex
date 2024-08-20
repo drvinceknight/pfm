@@ -16,11 +16,11 @@ their own right and manipulating matrices usually corresponds to:
 \begin{itemize}
 \item 
 
-calculating the determinant of a matrix;
+calculating the \index{determinant} of a matrix;
 
 \item 
 
-calculating the inverse of a matrix.
+calculating the \index{inverse} of a matrix.
 
 \end{itemize}
 
@@ -57,7 +57,7 @@ The matrix \(A\) is given by \(A=\begin{pmatrix}a & 1 & 1\\ 1 & a & 1\\ 1 & 1 & 
 
 \item 
 
-Find the determinant of \(A\)
+Find the \index{determinant} of \(A\)
 
 \item 
 
@@ -108,15 +108,15 @@ a = sym.matrix([[a, 1, 1], [1, a, 1], [1, 1, 2]])
 
 
 
-You can now create a variable \texttt{determinant} and assign it the value of the
-determinant of \(A\):
+You can now create a variable \texttt{\index{determinant}} and assign it the value of the
+\index{determinant} of \(A\):
 
 
 
 
 \begin{pyin}
-determinant = A.det()
-determinant
+\index{determinant} = A.det()
+\index{determinant}
 \end{pyin}
 
 
@@ -129,14 +129,14 @@ determinant
 
 
 
-A matrix is singular if it has determinant 0. You can find the values of \(a\) for
+A matrix is singular if it has \index{determinant} 0. You can find the values of \(a\) for
 which this occurs:
 
 
 
 
 \begin{pyin}
-sym.solveset(determinant, a)
+sym.solveset(\index{determinant}, a)
 \end{pyin}
 
 
@@ -146,7 +146,7 @@ sym.solveset(determinant, a)
 \begin{split}\displaystyle \left\{0, 1\right\}\end{split}
 \end{equation*}
 
-Thus, it is not possible to find the inverse of \(A\) for \(a\in\{0, 1\}\).
+Thus, it is not possible to find the \index{inverse} of \(A\) for \(a\in\{0, 1\}\).
 However for \(a = 2\):
 
 
@@ -246,7 +246,7 @@ Created a matrix;
 
 \item 
 
-Calculated the determinant of the matrix;
+Calculated the \index{determinant} of the matrix;
 
 \item 
 
@@ -324,10 +324,10 @@ B = sym.Matrix(
 \end{pyin}
 
 
-\subsection{Calculate the determinant of a matrix}
+\subsection{Calculate the \index{determinant} of a matrix}
 \label{\detokenize{tools-for-mathematics/04-matrices/how/main:calculate-the-determinant-of-a-matrix}}
 
-To calculate the determinant of a matrix, use the \texttt{.det} tool.
+To calculate the \index{determinant} of a matrix, use the \texttt{.det} tool.
 
 \begin{api}
 matrix = sympy.Matrix([values])
@@ -336,7 +336,7 @@ matrix.det()
 
 
 
-For example, the determinant of the following matrix:
+For example, the \index{determinant} of the following matrix:
 \begin{equation*}
 \begin{split}
     \begin{pmatrix}
@@ -363,10 +363,10 @@ matrix.det()
 
 
 
-\subsection{Calculate the inverse of a matrix}
+\subsection{Calculate the \index{inverse} of a matrix}
 \label{\detokenize{tools-for-mathematics/04-matrices/how/main:calculate-the-inverse-of-a-matrix}}
 
-To calculate the inverse of a matrix, use the \texttt{.inv} tool.
+To calculate the \index{inverse} of a matrix, use the \texttt{.inv} tool.
 
 
 \begin{api}
@@ -377,7 +377,7 @@ matrix.inv()
 
 
 For example to
-calculate the inverse of:
+calculate the \index{inverse} of:
 \begin{equation*}
 \begin{split}
     \begin{pmatrix}
@@ -539,7 +539,7 @@ vector
 \label{\detokenize{tools-for-mathematics/04-matrices/how/main:how-to-solve-a-linear-system}}
 
 To solve a given linear system that can be represented in matrix form, create
-the corresponding matrix and vector and the matrix inverse. For example to
+the corresponding matrix and vector and the matrix \index{inverse}. For example to
 solve the following equations:
 \begin{equation*}
 \begin{split}
@@ -578,7 +578,7 @@ A.inv() @ b
 
 \item 
 
-Obtain the determinant and the inverses of the following matrices:
+Obtain the \index{determinant} and the \index{inverse}s of the following matrices:
 \begin{enumerate}
 
 \item 
@@ -625,7 +625,7 @@ The matrix \(A\) is given by \(A=\begin{pmatrix}a & 4 & 2\\ 1 & a & 0\\ 1 & 2 & 
 
 \item 
 
-Find the determinant of \(A\)
+Find the \index{determinant} of \(A\)
 
 \item 
 

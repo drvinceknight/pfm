@@ -8,8 +8,8 @@ analysis, interpretation, and presentation of data.''
 \end{quote}
 
 
-In practice this often means doing some form of analysis to data.
-This can be things like taking a mean of a collection of numerical
+In practice this often means doing some form of analysis of data.
+This includes processes like taking a mean of a collection of numerical
 values and checking if particular relationship exists within the data.
 
 
@@ -18,19 +18,19 @@ In this chapter you will cover:
 \begin{itemize}
 \item 
 
-Calculating measures of central tendency and spread
+Calculating measures of \index{central tendency} and \index{spread};
 
 \item 
 
-Calculating bivariate coefficients
+Calculating \index{bivariate} coefficients;
 
 \item 
 
-Fitting a line of best fit
+Fitting a \index{line of best fit};
 
 \item 
 
-Using the Normal distribution
+Using the \index{Normal distribution}.
 
 \end{itemize}
 \end{note}
@@ -40,13 +40,12 @@ Using the Normal distribution
 
 
 \section{Tutorial}
-\label{\detokenize{tools-for-mathematics/08-statistics/tutorial/main:tutorial}}\label{\detokenize{tools-for-mathematics/08-statistics/tutorial/main::doc}}
 
 You will solve the following problem using a computer to do some of the more
 tedious calculations.
 
 Anna is investigating the relationship between exercise and resting heart rate.
-She takes a random sample of 19 people in her year group and records for each person
+She takes a \index{random sample} of 19 people in her year group and records for each person
 \begin{itemize}
 \item 
 
@@ -103,7 +102,7 @@ Figure~\ref{fig:data_collected_by_anne}.
 \begin{center}
 \includegraphics[width=.7\textwidth]{./assets/data_collected_by_anne/main.pdf}
 \end{center}
-\caption{A scatter plot of the data collected by Anne}
+\caption{A scatter plot of the data collected by Anna}
 \label{fig:data_collected_by_anne}
 \end{figure}
 
@@ -535,7 +534,7 @@ indicating that the more you exercise the lower your heart rate is likely to be.
 To calculate the line of best fit for the transformed variables you need to first
 create them. You will do this using a list comprehension. As you are doing
 everything numerically, you will use \texttt{math.log} which by default computes the
-natural logarithm:
+\index{natural logarithm}.
 
 
 
@@ -633,7 +632,7 @@ y = sym.ln(h)
 
 
 
-A general line of best fit for \(x\) and \(y\) can be expressed in terms of \(m\) and
+A general \index{line of best fit} for \(x\) and \(y\) can be expressed in terms of \(m\) and
 \(h\):
 
 
@@ -748,15 +747,15 @@ In this tutorial you have
 \begin{itemize}
 \item 
 
-Calulated values of central tendency and spread
+Calculated values of \index{central tendency} and \index{spread};
 
 \item 
 
-Calculated some bivariate coefficients
+Calculated some \index{bivariate} coefficients;
 
 \item 
 
-Fitted a line of best fit
+Fitted a \index{line of best fit}.
 
 \end{itemize}
 \end{note}
@@ -1549,7 +1548,7 @@ correlation coefficient for the data set with itself.
 
 \item 
 
-Obtain a line of best fit for the pairs of data sets from question 2.
+Obtain a \index{line of best fit} for the pairs of data sets from question 2.
 
 \item 
 
@@ -1670,7 +1669,7 @@ The \texttt{scikit-learn} library is arguably one of the most popular python lib
 It is technically a library for machine learning and not statistics.
 
 
-\subsection{What is the difference between machine learning and statistics}
+\subsection{What is the difference between machine learning and statistics?}
 \label{\detokenize{tools-for-mathematics/08-statistics/why/main:what-is-the-difference-between-machine-learning-and-statistics}}
 
 In a lot of cases the difference here is more question of vocabulary than

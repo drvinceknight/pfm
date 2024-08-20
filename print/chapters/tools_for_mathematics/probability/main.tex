@@ -5,16 +5,15 @@ Probability is the study of random events. Computers are particularly helpful
 here as they can be used to carry out a number of experiments to confirm and/or
 explore theoretic results.
 
-
 In practice studying probability will often involve:
 \begin{itemize}
 \item 
 
-calculating expected chances of an event occurring;
+measuring expected chances of an event occurring;
 
 \item 
 
-calculating the conditional chances of an event occurring given another event
+measuring the conditional chances of an event occurring given another event
 occurring.
 
 \end{itemize}
@@ -29,11 +28,11 @@ In this chapter you will cover:
 \begin{itemize}
 \item 
 
-Generating random numbers.
+Generating \index{random numbers}.
 
 \item 
 
-Randomly sample from a given collection of items.
+Carry out a \index{random sample} from a given collection of items.
 
 \item 
 
@@ -294,7 +293,7 @@ pick_a_token(container=bag)
 
 
 
-In order to simulate the probability of picking a red token repeat
+In order to measure the probability of picking a red token repeat
 this not once or twice but tens of thousands of times. You will do this using
 something called a ``list comprehension'' which is akin to the mathematical
 notation commonly used to create sets:
@@ -375,7 +374,7 @@ You have sampled a probability of around .41. The theoretic value is \(\frac{5}{
 
 
 
-To answer the second question (What is the probability of obtaining Heads?) you
+To answer the second question (What is the probability of obtaining Heads?) You
 need to make use of another Python tool: an \texttt{if} statement. This will let
 you
 write a function that does precisely what is described in the problem:
@@ -563,7 +562,7 @@ sum(token == "Red" for token, coin in samples_with_heads) / len(samples_with_hea
 
 
 
-Using Bayes’ theorem this is given theoretically by:
+Using \index{Bayes’ theorem} this is given theoretically by:
 \begin{equation*}
 \begin{split}
     P(\text{Red}|\text{Heads}) = \frac{P(\text{Heads} | \text{Red})P(\text{Red})}{P(\text{Heads})}
@@ -1345,7 +1344,6 @@ random.random()
 
 
 \section{Exercises}
-\label{\detokenize{tools-for-mathematics/06-probability/exercises/main:exercises}}\label{\detokenize{tools-for-mathematics/06-probability/exercises/main::doc}}
 
 \begin{enumerate}
 
@@ -1777,9 +1775,6 @@ the choice of variable names the comments are in fact redundant.
 In software engineering it is generally accepted that comments indicate that
 your code is not clear and so it is preferable to write clear documentation
 explaining why something is done through docstrings.
-
-
-
 
 \begin{pyin}
 def sample_experiment(bag):

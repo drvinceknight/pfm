@@ -15,15 +15,15 @@ In practice this often means:
 \begin{itemize}
 \item 
 
-taking limits of functions;
+taking \index{limits} of functions;
 
 \item 
 
-differentiating functions;
+\index{differentiating} functions;
 
 \item 
 
-integrating functions.
+\index{integrating} functions.
 
 \end{itemize}
 
@@ -37,11 +37,11 @@ In this chapter you will cover:
 \begin{itemize}
 \item 
 
-Taking limits.
+Taking \index{limits}.
 
 \item 
 
-Differentiating functions.
+\index{differentiating} functions.
 
 \item 
 
@@ -121,11 +121,11 @@ You will use \texttt{sympy.diff} to calculate the derivative. This tool takes tw
 \begin{itemize}
 \item 
 
-the first is the expression you are differentiating. Essentially this is the numerator of \(\frac{df}{dx}\).
+the first is the expression you are \index{differentiating}. Essentially this is the numerator of \(\frac{df}{dx}\).
 
 \item 
 
-the second is the variable you are differentiating with respect to. This is the denominator of \(\frac{df}{dx}\).
+the second is the variable you are \index{differentiating} with respect to. This is the denominator of \(\frac{df}{dx}\).
 
 \end{itemize}
 
@@ -357,7 +357,7 @@ sym.diff(expression, x, 2).subs({x: 0})
 
 
 
-Now you will calculate the limits using \texttt{sym.limit}, this takes 3 inputs:
+Now you will calculate the \index{limits} using \texttt{sym.limit}, this takes 3 inputs:
 \begin{itemize}
 \item 
 
@@ -411,7 +411,7 @@ Now you are going to calculate the \textbf{indefinite} integral using
 \begin{itemize}
 \item 
 
-the first is the expression you’re integrating. This is the \(f\) in \(\int_a^b f
+the first is the expression you’re \index{integrating}. This is the \(f\) in \(\int_a^b f
 dx\).
 
 \item 
@@ -480,10 +480,8 @@ Solved algebraic equations.
 
 
 \section{How to}
-\label{\detokenize{tools-for-mathematics/03-calculus/how/main:how}}\label{\detokenize{tools-for-mathematics/03-calculus/how/main::doc}}
 
 \subsection{Calculate the derivative of an expression.}
-\label{\detokenize{tools-for-mathematics/03-calculus/how/main:calculate-the-derivative-of-an-expression}}
 
 You can calculate the derivative of an expression using \texttt{sympy.diff} which takes,
 an expression, a variable and a degree.
@@ -539,7 +537,6 @@ sym.diff(expression, x, 2)
 
 
 \subsection{Calculate the indefinite integral of an expression.}
-\label{\detokenize{tools-for-mathematics/03-calculus/how/main:calculate-the-indefinite-integral-of-an-expression}}
 
 You can calculate the indefinite integral of an expression using
 \texttt{sympy.integrate}. Which takes an expression and a variable.
@@ -571,7 +568,6 @@ sym.integrate(expression, x)
 
 
 \subsection{Calculate the definite integral of an expression.}
-\label{\detokenize{tools-for-mathematics/03-calculus/how/main:calculate-the-definite-integral-of-an-expression}}
 
 You can calculate the definite integral of an expression using
 \texttt{sympy.integrate}. The first argument is an expression but instead of passing a
@@ -635,10 +631,9 @@ sym.oo
 
 
 
-\subsection{Calculate limits}
-\label{\detokenize{tools-for-mathematics/03-calculus/how/main:calculate-limits}}
+\subsection{Calculate \index{limits}}
 
-You can calculate limits using \texttt{sympy.limit}. The first argument is the
+You can calculate \index{limits} using \texttt{sympy.limit}. The first argument is the
 expression, then the variable and finally the expression the variable tends to.
 
 
@@ -700,7 +695,7 @@ For each of the following functions calculate \(\frac{df}{dx}\), \(\frac{d^2f}{d
 
 \item 
 
-Consider the function \(f(x)=2x+1\). By differentiating \textbf{from first principles} show that \(f'(x)=2\).
+Consider the function \(f(x)=2x+1\). By \index{differentiating} \textbf{from first principles} show that \(f'(x)=2\).
 
 \item 
 
@@ -798,7 +793,7 @@ sym.plot(x ** 2 + 3 * x + 1)
     \includegraphics[width=.7\textwidth]{./assets/plotting_with_sympy/main.pdf}
 \end{center}
 
-It is possible to specify the \(x\) limits and combine it with other plots:
+It is possible to specify the \(x\) \index{limits} and combine it with other plots:
 
 \begin{pyin}
 sym.plot(x ** 2 + 3 * x + 1, xlim=(-5, 5))

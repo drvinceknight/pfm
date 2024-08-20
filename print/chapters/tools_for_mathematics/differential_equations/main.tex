@@ -9,15 +9,15 @@ In this chapter you will cover:
 \begin{itemize}
 \item 
 
-How to create a symbolic function
+Creating a symbolic function;
 
 \item 
 
-How to write a differential equation
+Writing a differential equation;
 
 \item 
 
-How to solve a differential equation
+Solving a differential equation.
 
 \end{itemize}
 \end{note}
@@ -27,13 +27,9 @@ How to solve a differential equation
 
 
 \section{Tutorial}
-\label{\detokenize{tools-for-mathematics/09-differential-equations/tutorial/main:tutorial}}\label{\detokenize{tools-for-mathematics/09-differential-equations/tutorial/main::doc}}
 
 You will solve the following problem using a computer to do some of the more
 tedious calculations.
-
-
-
 
 A container has volume \(V\) of liquid which is poured in at a rate proportional
 to \(e^{-t}\) (where \(t\) is some measurement of time). Initially the container is empty and
@@ -42,11 +38,11 @@ after \(t=3\) time units the rate at which the liquid is poured is 15.
 
 \item 
 
-Show that \(V(t)=\frac{-15e^{3}}{1-e^{3}}(1 - e^{-t})\)
+Show that \(V(t)=\frac{-15e^{3}}{1-e^{3}}(1 - e^{-t})\).
 
 \item 
 
-Obtain the limit \(\lim_{t\to \infty}V(t)\)
+Obtain the limit \(\lim_{t\to \infty}V(t)\).
 
 \end{enumerate}
 
@@ -205,11 +201,11 @@ In this tutorial you have
 \begin{itemize}
 \item 
 
-Created a differential equation
+Created a differential equation.
 
 \item 
 
-Obtained the general solution of a differential equation
+Obtained the general solution of a differential equation.
 
 \item 
 
@@ -223,7 +219,6 @@ Obtained the particular solution of a differential equation.
 
 
 \section{How to}
-\label{\detokenize{tools-for-mathematics/09-differential-equations/how/main:how}}\label{\detokenize{tools-for-mathematics/09-differential-equations/how/main::doc}}
 
 \subsection{Create a symbolic function}
 \label{\detokenize{tools-for-mathematics/09-differential-equations/how/main:how-to-create-a-symbolic-function}}
@@ -444,7 +439,7 @@ sym.dsolve(differential_equation, y(x), ics=condition)
 
 \begin{note}
 The syntax used here is similar to substituting values in to algebraic
-expressions (see Section~\ref{sec:substite_a_value_in_to_an_expression})
+expressions (see Section~\ref{sec:substite_a_value_in_to_an_expression}).
 \end{note}
 
 
@@ -630,11 +625,11 @@ y_solution
 
 
 
-\subsection{How to solve differential equations numerically}
+\subsection{How to solve differential equations numerically?}
 \label{\detokenize{tools-for-mathematics/09-differential-equations/why/main:how-to-solve-differential-equations-numerically}}
 
 Some differential equations do not have a closed form solution in terms of
-elementary functions. For example, the Airy or Stokes equation:
+elementary functions. For example, the Airy or \index{Stokes equation}:
 \begin{equation*}
 \begin{split}
 \frac{d^2y}{dx^2} = xy
@@ -667,7 +662,7 @@ sym.dsolve(equation, y(x))
 
 
 which is a linear combination of \(A_i\) and \(B_i\) which are special functions
-called the Airy functions of the first and second kind.
+called the \index{Airy functions} of the first and second kind.
 
 
 Using \texttt{scipy.integrate} it is possible to solve this differential equation numerically.
@@ -769,7 +764,7 @@ array([[ 0.1       , -0.5       ],
 
 
 Figure~\ref{fig:odeint_comparison_plot} shows a plot of the above with a comparison to the exact expected values (obtained
-using the Airy functions of the first and second kind).
+using the \index{Airy functions} of the first and second kind).
 
 
 \begin{figure}[!htbp]

@@ -46,15 +46,15 @@ will solve the following two problems:
 Rationalise the denominator of \(\frac{1}{\sqrt{2} + 1}\)
 
 \item 
-Consider the quadratic: \(f(x)=2x ^ 2 + x + 1\):
+Consider the \index{quadratic}: \(f(x)=2x ^ 2 + x + 1\):
 
 \begin{enumerate}
 
-\item Calculate the discriminant of the quadratic equation \(2x ^ 2 + x + 1 =
+\item Calculate the discriminant of the \index{quadratic} equation \(2x ^ 2 + x + 1 =
 0\). What does this tell us about the solutions to the equation? What
 does this tell us about the graph of \(f(x)\)?
 
-\item By completing the square, show that the minimum point of \(f(x)\) is
+\item By \index{completing the square}, show that the minimum point of \(f(x)\) is
 \(\left(-\frac{1}{4}, \frac{7}{8}\right)\)
 
 \end{enumerate}
@@ -136,17 +136,17 @@ Now consider the second part of the question:
 
 \item 
 
-Consider the quadratic: \(f(x)=2x ^ 2 + x + 1\):
+Consider the \index{quadratic}: \(f(x)=2x ^ 2 + x + 1\):
 
 \item 
 
-Calculate the discriminant of the quadratic equation \(2x ^ 2 + x + 1 =
+Calculate the \index{discriminant} of the \index{quadratic} equation \(2x ^ 2 + x + 1 =
 0\). What does this tell us about the solutions to the equation? What
 does this tell us about the graph of \(f(x)\)?
 
 \item 
 
-By completing the square, show that the minimum point of \(f(x)\) is
+By \index{completing the square}, show that the minimum point of \(f(x)\) is
 \(\left(-\frac{1}{4}, \frac{7}{8}\right)\)
 
 \end{enumerate}
@@ -172,7 +172,7 @@ The first line communicates to the code that \texttt{x} is going to be a symboli
 \textbf{Recall} that the \texttt{**} symbol is how you communicate exponentiation.
 \end{note}
 
-You can immediately use this to compute the discriminant:
+You can immediately use this to compute the \index{discriminant}:
 
 \begin{pyin}
 sympy.discriminant(expression)
@@ -180,7 +180,7 @@ sympy.discriminant(expression)
 
 \[-7\]
 
-Now, complement this with mathematical knowledge: if a quadratic has a
+Now, complement this with mathematical knowledge: if a \index{quadratic} has a
 negative discriminant then it does not have any roots and all the values are of
 the same sign as the coefficient of \(x ^ 2 \). Which in this case is \(2>0\).
 Confirm this by directly creating the equation. Do this by creating a
@@ -212,8 +212,9 @@ Now complete the square so that you can write:
 \end{split}
 \end{equation*}
 
-for some values of \(a, b, c\).
-Create variables that have those 3 constants as value but also create a variable \texttt{completed\_square} and assign it the general expression:
+for some values of \(a, b, c\). Create variables that have those 3 constants as
+value but also create a variable \texttt{completed\_square} and assign it the
+general expression:
 
 \begin{pyin}
 a, b, c = sympy.Symbol("a"), sympy.Symbol("b"), sympy.Symbol("c")
@@ -624,7 +625,7 @@ sympy.solveset(equation, variable)
 \end{api}
 
 
-Here is how you can use \texttt{sympy} to obtain the roots of the general quadratic:
+Here is how you can use \texttt{sympy} to obtain the roots of the general \index{quadratic}:
 
 \begin{equation*}
 \begin{split}
@@ -638,8 +639,8 @@ a x ^ 2 + bx + c
 a = sympy.Symbol("a")
 b = sympy.Symbol("b")
 c = sympy.Symbol("c")
-quadratic = a * x ** 2 + b * x + c
-sympy.solveset(quadratic, x)
+\index{quadratic} = a * x ** 2 + b * x + c
+sympy.solveset(\index{quadratic}, x)
 \end{pyin}
 
 
@@ -659,7 +660,7 @@ Here is to solve the same equation but not for \(x\) but for
 
 
 \begin{pyin}
-sympy.solveset(quadratic, b)
+sympy.solveset(\index{quadratic}, b)
 \end{pyin}
 
 
@@ -698,11 +699,11 @@ expression.subs({variable: value})
 \end{api}
 
 It is possible to pass multiple variables at a time.
-For example to substitute the values for \(a, b, c\) in to the quadratic:
+For example to substitute the values for \(a, b, c\) in to the \index{quadratic}:
 
 \begin{pyin}
-quadratic = a * x ** 2 + b * x + c
-quadratic.subs({a: 1, b: sympy.S(7) / 8, c: 0})
+\index{quadratic} = a * x ** 2 + b * x + c
+\index{quadratic}.subs({a: 1, b: sympy.S(7) / 8, c: 0})
 \end{pyin}
 
 \begin{equation*}
@@ -710,10 +711,6 @@ quadratic.subs({a: 1, b: sympy.S(7) / 8, c: 0})
 \end{equation*}
 
 \section{Exercises}
-%\label{\detokenize{tools-for-mathematics/02-algebra/exercises/main:exercises}}\label{\detokenize{tools-for-mathematics/02-algebra/exercises/main::doc}}
-
-\textbf{After} completing the tutorial attempt the following exercises.
-
 
 \textbf{If you are not sure how to do something, have a look at the “How To” section.}
 \begin{enumerate}
@@ -783,12 +780,12 @@ your solution.
 
 \item 
 
-Consider the quadratic: \(f(x)=4x ^ 2 + 16x + 25\):
+Consider the \index{quadratic}: \(f(x)=4x ^ 2 + 16x + 25\):
 \begin{enumerate}
 
 \item 
 
-Calculate the discriminant of the quadratic equation \(4x ^ 2 + 16x + 25 =
+Calculate the discriminant of the \index{quadratic} equation \(4x ^ 2 + 16x + 25 =
 0\). What does this tell us about the solutions to the equation? What
 does this tell us about the graph of \(f(x)\)?
 
@@ -801,12 +798,12 @@ By completing the square, show that the minimum point of \(f(x)\) is
 
 \item 
 
-Consider the quadratic: \(f(x)=-3x ^ 2 + 24x - 97\):
+Consider the \index{quadratic}: \(f(x)=-3x ^ 2 + 24x - 97\):
 \begin{enumerate}
 
 \item 
 
-Calculate the discriminant of the quadratic equation \(-3x ^ 2 + 24x - 97 =
+Calculate the discriminant of the \index{quadratic} equation \(-3x ^ 2 + 24x - 97 =
 0\). What does this tell us about the solutions to the equation? What
 does this tell us about the graph of \(f(x)\)?
 
@@ -849,7 +846,7 @@ There are two types of Python libraries:
 \begin{itemize}
 \item 
 
-Those that are part of the so called “standard library”: these are part of
+Those that are part of the so called ``standard library'': these are part of
 Python itself.
 
 \item 
@@ -859,7 +856,7 @@ Those that are completely separate: \texttt{sympy} is one such example of this.
 \end{itemize}
 
 
-This separation allows for the development of tools to be not dependent on each
+This separation allows for the development of tools to be independent of each
 other. The developers of \texttt{sympy} do not need to coordinate with the developers
 of Python to make new releases of the software.
 
