@@ -22,7 +22,7 @@ on how you can write the code as software that will do more than just solve the
 specific problem. It will be able to be used for further problems of the same
 type.
 
-Consider a Markov chain model of the Board Game ``Snakes and Ladders'':
+Consider a \index{Markov} chain model of the Board Game ``Snakes and Ladders'':
 \begin{enumerate}
 
 \item 
@@ -43,7 +43,7 @@ numerical calculations.
 
 
 The problem you are considering is in fact an application of a mathematical
-object from probability called a Markov Chain which not be covered here 
+object from probability called a \index{Markov} Chain which not be covered here 
 however the relevant ideas are that the probability of being in the
 100th square after \(k\) turns can be written down as:
 \begin{equation*}
@@ -270,9 +270,6 @@ A \texttt{csv} file containing this matrix \(P\) can be found at
 To be able to answer the first question you will write a function to compute \(\pi
 P ^ k\) for arbitrary \(\pi\), \(k\) and \(P\):
 
-
-
-
 \begin{python}
 def get_long_run_state(pi, k, P):
     """
@@ -322,9 +319,9 @@ In this case the \textbf{fundamental matrix} is defined by:
 \end{split}
 \end{equation*}
 
-The fundamental matrix of an absorbing Markov chains has a number of potential
+The \index{fundamental matrix} of an absorbing \index{Markov} chains has a number of potential
 applications. One of which is to calculate
-the expected number of steps for the Markov chain to be absorbed given by:
+the expected number of steps for the \index{Markov} chain to be absorbed given by:
 
 \begin{equation*}
 \begin{split}
@@ -575,10 +572,8 @@ t[0]
 
 
 \section{How to}
-\label{\detokenize{building-tools/05-modularisation/how/main:how}}\label{\detokenize{building-tools/05-modularisation/how/main::doc}}
 
 \subsection{Import code from python files}
-\label{\detokenize{building-tools/05-modularisation/how/main:how-to-import-code-from-python-files}}
 
 Given a \texttt{<file.py>} file in a directory any other python process in the
 same directory can import that file as it would a normal library.
@@ -602,7 +597,6 @@ At this stage it is possible to uses any python object (a \texttt{function}, a
 
 
 \subsection{Break up code in to modular components}
-\label{\detokenize{building-tools/05-modularisation/how/main:how-to-break-up-code-in-to-modular-components}}
 
 When modularising code aim to identify specific components of the code that can
 be isolated from the rest.
@@ -715,15 +709,9 @@ total = add_tip(total=100, tip_proportion=0.2)
 get_bill_share(total=total, number_of_payers=6)
 \end{pyin}
 
-
-
-
-
 \begin{raw}
 20.0
 \end{raw}
-
-
 
 \section{Exercises}
 \label{\detokenize{building-tools/05-modularisation/exercises/main:exercises}}\label{\detokenize{building-tools/05-modularisation/exercises/main:modularisation-exercises}}\label{\detokenize{building-tools/05-modularisation/exercises/main::doc}}
@@ -733,7 +721,7 @@ get_bill_share(total=total, number_of_payers=6)
 \item 
 
 Use the code written in Section~\ref{sec:modularisation_tutorial} to obtain the average time
-until absorption from the first state of the Markov chains with the following transition 
+until absorption from the first state of the \index{Markov} chains with the following transition 
 matrices:
 \begin{enumerate}
 

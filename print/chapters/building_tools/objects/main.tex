@@ -36,7 +36,7 @@ Inheriting new objects from others.
 \section{Tutorial}
 \label{sec:objects_tutorial}
 
-You will write some code to create and manipulate quadratic expressions.
+You will write some code to create and manipulate \index{quadratic} expressions.
 With \texttt{sympy} this is not necessary as all functionality required is available
 within \texttt{sympy} however this will be a good exercise in understanding how to
 build such functionality.
@@ -53,7 +53,7 @@ h(x) = f(x) + g(x)
 
 Without using \texttt{sympy}, obtain the roots for all the quadratics.
 
-Start by defining an object to represent a quadratic. This is called a
+Start by defining an object to represent a \index{quadratic}. This is called a
 class.
 
 
@@ -104,16 +104,17 @@ function that is run when we create an instance of our class.
 
 \item 
 
-\texttt{get\_roots}: this returns the two real valued roots if the discriminant is
+\texttt{get\_roots}: this returns the two real valued roots if the
+\index{discriminant} is
 positive.
 
 \item 
 
-\texttt{\_\_add\_\_}: another magic function that is run when the \texttt{+} operator is used.
+\texttt{\_\_add\_\_}: a magic function that is run when the \texttt{+} operator is used.
 
 \item 
 
-\texttt{\_\_repr\_\_}: another magic function that gives the string representation of the
+\texttt{\_\_repr\_\_}: a magic function that gives the string representation of the
 instance.
 
 \end{itemize}
@@ -771,13 +772,8 @@ first_country
 Narnia with 500 magic.
 \end{raw}
 
-
-
-
-
 There are numerous other magic methods, such as the \texttt{\_\_add\_\_} one used in
 the tutorial of this Chapter.
-
 
 \subsection{Use inheritance}
 \label{sec:how_to_use_inheritance}
@@ -785,20 +781,14 @@ the tutorial of this Chapter.
 Inheritance is a tool that allows you to create one class based on another. This
 is done by passing the \texttt{Old} class to the \texttt{New} class.
 
-
 \begin{api}
 class New(Old)
 \end{api}
-
-
 
 For example let us create a class of \texttt{MuggleCountry} that overwrites the
 \texttt{\_\_init\_\_} method but keeps the \texttt{\_\_rep\_\_} method of the
 \texttt{Country} class written
 in Section~\ref{sec:how_to_create_and_call_magic_methods}:
-
-
-
 
 \begin{pyin}
 class MuggleCountry(Country):
@@ -812,33 +802,16 @@ class MuggleCountry(Country):
         self.amount_of_magic = 0
 \end{pyin}
 
-
-
-
-
 This has replaced the \texttt{\_\_init\_\_} method but the \texttt{\_\_repr\_\_} method is the same:
-
-
-
 
 \begin{pyin}
 other_country = MuggleCountry("Wales")
 other_country
 \end{pyin}
 
-
-
-
-
 \begin{raw}
 Wales with 0 magic.
 \end{raw}
-
-
-
-
-
-
 
 \section{Exercises}
 
@@ -866,7 +839,7 @@ following quadratics:
 
 \item 
 
-Write a class for a Linear expression and use it to find the roots of the
+Write a class for a \index{linear expression} and use it to find the roots of the
 following expressions:
 \begin{enumerate}
 
