@@ -92,7 +92,7 @@ range(1, 6)
 
 
 
-At present that is only the instructions containing the integers from 1 to 5
+At present that is only the instructions for generating the integers from 1 to 5
 (the 6 is a strict upper bound). You can transform this to a tuple, using the
 \texttt{tuple} tool:
 
@@ -111,7 +111,7 @@ tuple(range(1, 6))
 (1, 2, 3, 4, 5)
 \end{raw}
 
-The question is asking for all the permutations of size 5 of that set of
+The question is asking for all the permutations of size 5 of that set.
 The main tool for this is a library specifically designed to iterate over
 objects in different ways: \texttt{itertools}.
 
@@ -270,7 +270,7 @@ to a number in base 10:
 \end{split}
 \end{equation*}
 
-Thus we are going to compute the following sum:
+Thus you are going to compute the following sum:
 \begin{equation*}
 \begin{split}
     \sum_{\pi \in \Pi \text{ if }\pi_1 10 ^ 4 + \pi_2 10 ^ 3 + \pi_3 10 ^ 2 + \pi_4 10 + \pi_5 \leq 23000} 1

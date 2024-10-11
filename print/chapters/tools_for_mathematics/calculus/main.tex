@@ -438,7 +438,7 @@ sym.factor(sym.integrate(expression, x))
 
 
 If you want to calculate a \textbf{definite} integral then instead of passing the
-single variable you pass a tuple which contains the variable as youll as the
+single variable you pass a tuple which contains the variables as the
 bounds of integration:
 
 
@@ -571,7 +571,7 @@ sym.integrate(expression, x)
 
 You can calculate the definite integral of an expression using
 \texttt{sympy.integrate}. The first argument is an expression but instead of passing a
-variable as the second argument you pass a tuple with the variable and the upper
+variable as the second argument you pass a tuple with the variable as well as the upper
 and lower bounds of integration.
 
 
@@ -603,7 +603,7 @@ sym.integrate(expression, (x, 0, 4))
 \subsection{Use \(\infty\protect\)}
 \label{\detokenize{tools-for-mathematics/03-calculus/how/main:use-infty}}
 
-In \texttt{sympy} you can access \(\infty\) using \texttt{sym.oo}:
+In sympy you can access \(\infty\) using \texttt{sym.oo}:
 
 
 \begin{api}

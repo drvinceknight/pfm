@@ -101,7 +101,7 @@ You will start by defining the matrix \(A\):
 import sympy as sym
 
 a = sym.symbol("a")
-a = sym.matrix([[a, 1, 1], [1, a, 1], [1, 1, 2]])
+A = sym.matrix([[a, 1, 1], [1, a, 1], [1, 1, 2]])
 \end{pyin}
 
 
@@ -115,8 +115,8 @@ You can now create a variable \texttt{\index{determinant}} and assign it the val
 
 
 \begin{pyin}
-\index{determinant} = A.det()
-\index{determinant}
+determinant = A.det()
+determinant
 \end{pyin}
 
 
@@ -136,7 +136,7 @@ which this occurs:
 
 
 \begin{pyin}
-sym.solveset(\index{determinant}, a)
+sym.solveset(determinant, a)
 \end{pyin}
 
 
@@ -318,7 +318,7 @@ B = sym.Matrix(
     [
         [1, 2, 3, 4],
         [5, 6, 7, 8],
-        [9, 10, 11, 12]
+        [9, 10, 11, 12],
     ]
 )
 \end{pyin}
@@ -692,7 +692,7 @@ Hence or otherwise, solve the equations:
 \label{\detokenize{tools-for-mathematics/04-matrices/why/main:why-are-we-not-commenting-our-code}}
 
 In Python it is possible to write statements that are ignored using the \texttt{\#}
-symbol. This creates something called a “comment”. For example:
+symbol. This creates something called a ``comment''. For example:
 
 
 
@@ -723,7 +723,7 @@ In Chapter~\ref{chp:functions_and_data_structures}
 you will start to write functions and emphasis will
 be given there on readability and documenting (as opposed to commenting) the
 code written. A specific discussion about using a tool called a
-\texttt{docstring} as opposed to a comment will be covered.
+\textbf{docstring} as opposed to a comment will be covered.
 
 
 In chapters~\ref{chp:modularisation} and~\ref{chp:testing} there is more
@@ -766,5 +766,5 @@ multiplication instead. So for clarity it is preferred to use \texttt{@} through
 ecosystem. It is in fact the best library to use when doing linear algebra as it
 is computationally efficient, \textbf{however} it cannot handle symbolic variables
 which is why you are seeing how to use \texttt{Sympy} here. An introduction to
-\texttt{numpy} is is covered in a chapter of the online version of the
+\texttt{numpy} is covered in a chapter of the online version of the
 book.
