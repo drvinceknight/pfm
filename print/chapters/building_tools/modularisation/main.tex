@@ -35,12 +35,9 @@ what is the average number of turns?
 
 \end{enumerate}
 
-
-
 To solve this problem you will make use of the Python library \texttt{numpy}
 to carry out efficient
 numerical calculations.
-
 
 The problem you are considering is in fact an application of a mathematical
 object from probability called a \index{Markov} Chain which not be covered here 
@@ -319,7 +316,7 @@ In this case the \textbf{fundamental matrix} is defined by:
 \end{split}
 \end{equation*}
 
-The \index{fundamental matrix} of an absorbing \index{Markov} chains has a number of potential
+The \index{fundamental matrix} of an absorbing \index{Markov} chain has a number of potential
 applications. One of which is to calculate
 the expected number of steps for the \index{Markov} chain to be absorbed given by:
 
@@ -386,7 +383,7 @@ Computes \(t\).
 
 
 All of those tasks could be useful in their own right so you are going to break
-up that function in to three separate functions:
+up that function in to 3 separate functions:
 
 
 
@@ -462,7 +459,7 @@ def compute_t(P):
 
 \begin{note}
 All the code you have written so far is generic in nature so would be better
-placed somewhere that it can be used for different project.
+placed somewhere that it could be used for a different project.
 \end{note}
 
 
@@ -721,7 +718,7 @@ get_bill_share(total=total, number_of_payers=6)
 \item 
 
 Use the code written in Section~\ref{sec:modularisation_tutorial} to obtain the average time
-until absorption from the first state of the \index{Markov} chains with the following transition 
+until absorption from the first state of the \index{Markov} chain with the following transition 
 matrices:
 \begin{enumerate}
 
@@ -866,7 +863,8 @@ and \texttt{statistics.pvariance}.
 \subsection{Why modularise?}
 \label{\detokenize{building-tools/05-modularisation/why/main:why-modularise}}\label{\detokenize{building-tools/05-modularisation/why/main:id1}}
 
-Best practice when writing code is to break up code in to modular parts. One
+Best practice when writing code is to break up code in to modular parts. Here is
+a
 guiding principle described in~\cite{fowler2018refactoring}:
 
 
@@ -898,9 +896,9 @@ In some texts on code architecture you will see arbitrary rules about how many
 lines of code should be in a given function. Having a function with 10 or more
 lines of code might indicate that it can be modularised. \textbf{However}, it is
 not
-recommended to follow such rules as sometimes they might add more complexity than
+recommended to follow such rules strictly. Sometimes they might add more complexity than
 they remove. Make your code clear and
-ensuring your functions do one thing well and one thing only.
+ensure your functions do one thing well and one thing only.
 
 
 \subsection{Why do I get an import error?}
