@@ -1,0 +1,4 @@
+Creating a new notebook
+
+A screenshot showing that Jupyter notebook interface. The "New" button has been
+clicked showing the  list of options which include "Notebook/Python 3".

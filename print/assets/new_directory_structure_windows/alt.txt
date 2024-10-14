@@ -1,0 +1,3 @@
+File explorer on Windows
+
+This screenshot shows the file explorer with a file structure.

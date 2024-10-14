@@ -1,0 +1,3 @@
+Finder on MacOS
+
+This screenshot shows the finder window with a file structure.

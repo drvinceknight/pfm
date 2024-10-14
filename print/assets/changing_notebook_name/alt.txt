@@ -1,0 +1,4 @@
+Changing the notebook name
+
+A screenshot showing the "Rename Notebook" interface. The word "Untitled" is
+highlighted.
