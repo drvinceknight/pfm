@@ -1,0 +1,3 @@
+An example of plotting a fitted line
+
+This shows a scatter plot and a fitted line.
