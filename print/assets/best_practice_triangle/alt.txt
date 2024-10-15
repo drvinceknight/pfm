@@ -1,0 +1,10 @@
+A diagram showing the relationship between modularity, documentation and
+testing.
+
+The modularity leads to increased accuracy of the documentation and makes
+testing possible as well as more meaningful.
+
+The documentation leads to being able to identify components of modularity and
+clarifies purpose and indicates expected outcomes of testing.
+
+Testing confirms documentation and checks modules together and individually.

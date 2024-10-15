@@ -1,0 +1,4 @@
+Running tests with no errors.
+
+A screenshot of a terminal window in Mac OS. This shows the command `python
+test_absorption.py` being run with no output.

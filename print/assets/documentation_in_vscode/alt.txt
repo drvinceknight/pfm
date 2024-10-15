@@ -1,0 +1,2 @@
+A screenshot showing the documentation file for the absorption library in VS
+code.

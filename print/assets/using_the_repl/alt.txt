@@ -1,0 +1,5 @@
+Using the Read Evaluate Print Loop
+
+A screenshot of the terminal in Mac OS showing the Python REPL.
+The terminal is shown with the command `python` used to launch the REPL followed
+by some basic arithmetic calculations.

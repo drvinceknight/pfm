@@ -1,0 +1,4 @@
+The output of the dir command on MacOS.
+
+A screenshot showing the terminal with the output of the ls command
+after using the mkdir command to create a directory.

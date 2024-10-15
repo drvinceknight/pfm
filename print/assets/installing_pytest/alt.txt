@@ -1,0 +1,5 @@
+Installing pytest.
+
+A screenshot of the terminal window. This shows the command `python -m pip
+install pytest` and the output of that command indicating that software has been
+downloaded and installed.

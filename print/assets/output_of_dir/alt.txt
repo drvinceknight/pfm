@@ -1,0 +1,4 @@
+The output of the dir command on windows.
+
+A screenshot showing the Anaconda Prompt with the output of the dir command
+after using the mkdir command to create a directory.

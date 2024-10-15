@@ -1,0 +1,6 @@
+An error caused by not submitting a code cell.
+
+A screenshot of a Jupyter window. In the first cell two variables are defined
+but the code is not run.
+
+The code in the second cell uses the two variables and it fails.

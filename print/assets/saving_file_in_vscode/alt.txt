@@ -1,0 +1,4 @@
+Saving a file in VS code.
+
+A screenshot showing the file tree on a computer with a prompt to save the
+current file in VS code.
