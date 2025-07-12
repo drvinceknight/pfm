@@ -1,0 +1,217 @@
+# Python for Mathematics
+
+## Abstracts
+
+Author: Vince Knight
+Orcid ID: 0000-0002-4245-0638
+
+### Chapter 1: Overview
+
+This chapter aims to help a reader understand who this book is for. It also
+describes the structure not only of the book but of the collection of chapters.
+This highlights how and why the book is different from other books on
+programming for mathematics.
+
+It answers the following questions:
+
+- Who is this book for?
+- What is in this book?
+- How is this book organised?
+- How to use this book?
+- What is not in this book?
+
+This book aims to show how to authentically use programming as a mathematician.
+This chapter set out how it does that.
+
+### Chapter 2: Using Notebooks
+
+This chapter introduces the main tool used to write Python in the first part of
+the book: Jupyter notebooks.
+
+- It discusses downloading the Anaconda distribution to ensure all required
+  libraries for the book are available.
+- It shows how to start a Jupyter notebook server and carry out numerical
+  calculations using Python.
+- It takes advantage of the Jupyter notebook interface to be demonstrate how to
+  write basic markdown with LaTeX. This allows for authentic mathematical
+  documents to be created throughout the first part of the book.
+
+### Chapter 2: Algebra
+
+This chapter shows how to solve algebraic problems using the popular python library for symbolic
+mathematics: Sympy.
+
+It covers simplification of numeric and/or symbolic expressions using
+factorisation as well as expansion.
+
+It also covers substitution of variables as well as solving equations.
+
+These approaches can be used not only to solve secondary school type problems
+but also to formally confirm calculations for higher level mathematics.
+
+### Chapter 3: Calculus
+
+This chapters builds on the previous chapter using Sympy to consider problems
+related to infinitesimal change: Calculus.
+
+This shows us to use code to symbolically obtains limits, derivatives as well
+integrals.
+
+As in Chapter 2, these approaches can be used not only to solve secondary school type problems
+but also to formally confirm calculations for higher level mathematics.
+
+### Chapter 4: Matrices
+
+This chapter once again uses Sympy to carry out linear algebraic manipulation:
+
+- Create matrices.
+- Carry out algebraic operations on matrices.
+- Invert matrices.
+
+This chapter also describes the use of Numpy which can be used for more
+extensive numerical linear algebraic calculations.
+
+### Chapter 5: Combinatorics
+
+This chapter uses the powerful Python library itertools to tackle combinatorial
+problems related to enumerating discrete structures.
+
+Through this the reader is not only shown the ease with which permutations and
+combinations can be created. The reader is also introduced to the more advanced
+programming technique of a for loop through python list comprehensions.
+
+This is the first chapter which exposes some important programming techniques
+that are covered more extensively in the first part of the book.
+
+### Chapter 6: Probability
+
+This chapters shows the basic (but used by mathematicians of all levels)
+technique of simulating random events to confirm and/or gain intuition of
+measures of probability.
+
+This is done using the python random library and sampling random numbers as well
+as sampling from sets are covered. To emphasise best practice seeding is also
+covered as well as a discussion of pseudo random number generation.
+
+### Chapter 7: Sequences
+
+This chapter considers sequences that are mathematically defined recursively.
+The chapter shows how the exact recursive mathematical definition of a sequence
+can be created in Python using a function.
+
+Not only does this once again allow for immediate use to mathematicians of all
+levels but it also uses a mathematical technique to introduce the important
+mathematical technique of recursion.
+
+### Chapter 8: Statistics
+
+This chapter shows how the python statistics library can be used to carry out
+statistical calculations on data. It considers:
+
+- Measures of spread and tendency.
+- Covariance.
+- Pearson correlation coefficient.
+- Fitting a line of best fit.
+- Manipulating instances of the Normal distribution.
+
+Note that just like with the previous chapters, it does not show how a student
+to build these calculations from scratch (that is covered in the second half of
+the book): this chapter empowers mathematicians to do more mathematics.
+
+A discussion of the popular machine learning library: scikit learn is also
+included.
+
+### Chapter 9: Differential equations
+
+This chapter revisits the Sympy library to show how to solve differential
+equations. The following topics are covered:
+
+- How to define a symbolic function.
+- How to create a symbolic differential equation.
+- How to solve a differential equation symbolically.
+
+A short discussion on solving differential equations numerically using numerical
+integration tools is also
+included.
+
+---
+
+### Chapter 10: Variables, conditionals and loops
+
+This chapter is the start of the second half of the book. It is a more
+traditional introduction to the basic of programming.
+
+Following the first 9 chapters of the book the reader is now hopefully used to
+using tools. Here the reader starts to gain an understanding of how to build
+tools. This chapters covers variables, conditional statements and for loops.
+
+### Chapter 11: Functions and data structures
+
+This chapters introduces students more formally to writing functions as well as
+a detailed introduction to the most popular python data structures:
+
+- Lists
+- Tuples
+- Dictionaries (has tables)
+- Sets
+
+### Chapter 12: Objects
+
+This chapters introduces the reader to the important paradigm of Oject Oriented
+Programming. Whilst the reader has been using instances of classes, here the
+reader sees how to write their own. The following concepts are covered:
+
+- How to define classes, class attributes and class methods.
+- Important dunder methods such as the initialisation method and the
+  representation method.
+- How to use inheritance to create new classes.
+
+### Chapter 13: Using a command line and an editor
+
+This chapter introduces the reader to a different interface to Python: a code
+editor. It also shows the basic use of a command line tool.
+
+No new programming and/or mathematical technique is covered here however this is
+an important chapter. After reading this chapter the reader should:
+
+- Understand the pros and cons of using a code editor and/or the Jupyter
+  notebook interface.
+- Have enough understanding of the use of a command line tool to be able to
+  carry out automated tasks such as those covered in the testing chapter of this
+  book.
+
+### Chapter 14: Modularisation
+
+This chapter describes the first of three import features of software
+development. Specifically this discusses how to compartmentalise code in to
+modular parts. As well as this it also discusses how to write a basic software
+library which allows for for the use of the software to remain separate from the
+software itself.
+
+### Chapter 15: Documentation
+
+This chapters covers the second of three import features of software development. It
+introduces documentation. It does this at the higher level by describing the
+Diataxis framework: a documentation framework popular in the open source
+software environment. Note that this framework is also how this book is written:
+each chapter follows the Diataxis framework.
+
+This chapter also considers documentation at the lower level by describing
+different conventions for documenting function and methods. It also describes
+writing markdown in more detail.
+
+### Chapter 16: Testing
+
+This chapter covers the final pillar that allows the reader to move from writing
+code to writing software: automated testing. No specific testing framework is
+used, although the popular python testing library pytest is mentioned. Instead
+this chapter concentrates on the principle of writing assertion unit tests for
+modular components of code.
+
+The chapter also shows how to write automated tests for documentation to ensure
+all the code written in documentation does indeed act as described.
+
+### Chapter 18: How this book is written
+
+This chapter is a short chapter giving some details of tools used to write this
+book. It also includes the specific version of each python library used.

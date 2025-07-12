@@ -1,0 +1,10 @@
+Vince Knight is a Professor of Mathematics at Cardiff University in the School of
+Mathematics. His research interests are in emergent behaviour, probabilistic
+modelling, applications in healthcare and pedagogy. He maintains a number of
+open source research software projects, has been a trustee of the UK Python
+association, is an editor for the Journal of Open Source Software, was awarded
+the 2017 John Pinner award for contribution to the Python community and is a
+fellow of the Sustainable Software Institute. He regularly wins awards for his
+teaching in the School of Mathematics. He does not only speak at conferences
+around the world but continues to organise conferences to bring the power of
+open source software to as many people as possible.
