@@ -12,6 +12,8 @@ kernelspec:
   name: python3
 ---
 
+(chp:matrices)=
+
 # Matrices
 
 Matrices form the building block of an area of mathematics referred to as Linear

@@ -12,6 +12,8 @@ kernelspec:
   name: python3
 ---
 
+(chp:combinatorics)=
+
 # Combinatorics
 
 Combinatorics is the mathematical area interested in specific finite sets. In a lot

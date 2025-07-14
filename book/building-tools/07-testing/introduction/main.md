@@ -12,6 +12,8 @@ kernelspec:
   name: python3
 ---
 
+(chp:testing)=
+
 # Testing
 
 This is the third and last chapter that shows how to move from writing code

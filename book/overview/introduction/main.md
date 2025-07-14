@@ -16,8 +16,11 @@ kernelspec:
 
 This book aims to introduce readers to programming for mathematics.
 
-It is assumed that readers are used to solving high school mathematics problems
-of the form:
+## Who is this book for?
+
+This book aims to introduce readers to programming **for** mathematics.
+
+It is assumed that readers are used to solving secondary school mathematics problems of the form:
 
 ---
 
@@ -54,24 +57,23 @@ techniques**:
 ```
 
 ```{attention}
-As we progress as mathematicians **mathematical knowledge** is more prominent
-than **mathematical technique**: often knowing what to do is the real problem as
-opposed to having the technical ability to do it.
+As you progress as a mathematician, **mathematical knowledge** becomes more
+prominent than **mathematical technique**: often knowing what to do is the
+real problem, as opposed to having the technical ability to do it.
 ```
 
-This is what this book will cover: **programming** allows us to instruct a
+This is what this book will cover: **programming** allows you to instruct a
 computer to carry out mathematical techniques.
 
-We will for example learn how to solve the above problem by instructing a
+For example, you will learn how to solve the above problem by instructing a
 computer which **mathematical technique** to carry out.
 
 **This book covers how to give the correct instructions to a
 computer.**
 
-The following is an example, do not worry too much about the specific code used
-for now:
+The following is an example; do not worry too much about the specific code used for now:
 
-## Differentiate $f(x)$ to get $\frac{df}{dx}$
+### Differentiate $f(x)$ to get $\frac{df}{dx}$
 
 ```{code-cell} ipython3
 import sympy as sym
@@ -80,13 +82,13 @@ x = sym.Symbol("x")
 sym.diff(x ** 2 - 3 * x + 1, x)
 ```
 
-## Equate $\frac{df}{dx}=0$
+### Equate $\frac{df}{dx}=0$
 
 ```{code-cell} ipython3
 sym.solveset(2 * x - 3, x)
 ```
 
-## Use the second derivative test on the solution
+### Use the second derivative test on the solution
 
 ```{code-cell} ipython3
 sym.diff(x ** 2 - 3 * x + 1, x, 2)

@@ -12,6 +12,8 @@ kernelspec:
   name: python3
 ---
 
+(chp:calculus)=
+
 # Calculus
 
 As of 2020, the A-level syllabus includes Calculus which

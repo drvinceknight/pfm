@@ -12,6 +12,8 @@ kernelspec:
   name: python3
 ---
 
+(chp:sequences)=
+
 # Sequences
 
 The formal definition of sequences is a collection of ordered objects with

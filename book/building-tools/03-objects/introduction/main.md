@@ -12,6 +12,8 @@ kernelspec:
   name: python3
 ---
 
+(chp:objects)=
+
 # Object oriented programming
 
 In the first part of this book you covered a number of tools that allow you to

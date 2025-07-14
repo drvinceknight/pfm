@@ -12,6 +12,8 @@ kernelspec:
   name: python3
 ---
 
+(chp:differential_equations)=
+
 # Differential Equations
 
 A differential equation is an equation that relates one or more quantities and

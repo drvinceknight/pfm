@@ -12,6 +12,8 @@ kernelspec:
   name: python3
 ---
 
+(chp:algebra)=
+
 # Algebra
 
 ## Introduction

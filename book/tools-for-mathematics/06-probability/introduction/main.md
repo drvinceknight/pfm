@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-(probability)=
+(chp:probability)=
 
 # Probability
 

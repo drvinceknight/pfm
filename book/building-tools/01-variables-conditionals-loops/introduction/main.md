@@ -12,6 +12,8 @@ kernelspec:
   name: python3
 ---
 
+(chp:variables_conditionals_and_loops)=
+
 # Variables, conditionals and loops
 
 In the previous chapters you have explored a number of tools that allow you to use

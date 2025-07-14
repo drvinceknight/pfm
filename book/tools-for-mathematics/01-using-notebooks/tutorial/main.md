@@ -12,6 +12,8 @@ kernelspec:
   name: python3
 ---
 
+(chp:using_notebooks)=
+
 # Tutorial
 
 This tutorial will take the reader through an example of using Jupyter
@@ -43,7 +45,9 @@ Open a command line tool:
 
 In there type (without the `$`):
 
-    $ jupyter notebook
+```console
+$ jupyter notebook
+```
 
 Press `Enter` on your keyboard.
 

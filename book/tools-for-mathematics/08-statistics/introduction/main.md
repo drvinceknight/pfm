@@ -12,6 +12,8 @@ kernelspec:
   name: python3
 ---
 
+(chp:statistics)=
+
 # Statistics
 
 Statistics is described as:

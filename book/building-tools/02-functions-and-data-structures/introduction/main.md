@@ -12,6 +12,8 @@ kernelspec:
   name: python3
 ---
 
+(chp:functions_and_data_structures)=
+
 # Functions and data structures
 
 In the previous chapters you have explored a number of tools that allow us to use

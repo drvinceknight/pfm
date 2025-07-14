@@ -12,6 +12,8 @@ kernelspec:
   name: python3
 ---
 
+(chp:cli)=
+
 # Using a command line and an editor
 
 In the first part of this book we used Jupyter notebooks as an interface to
