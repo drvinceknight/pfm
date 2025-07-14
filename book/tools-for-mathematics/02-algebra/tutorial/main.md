@@ -16,19 +16,24 @@ kernelspec:
 
 # Tutorial
 
-To demonstrate the ways in which a computer can assist with Algebra this
-tutorial
-will solve the following two problems:
+To demonstrate the ways in which a computer can assist with Algebra, in
+this tutorial you will solve the following two problems:
 
 ```{admonition} Problem
 
-1. Rationalise the denominator of $\frac{1}{\sqrt{2} + 1}$
-2. Consider the quadratic: $f(x)=2x ^ 2 + x + 1$:
-    1. Calculate the discriminant of the quadratic equation $2x ^ 2 + x + 1 =
-     0$. What does this tell us about the solutions to the equation? What
-     does this tell us about the graph of $f(x)$?
-    2. By completing the square, show that the minimum point of $f(x)$ is
-     $\left(-\frac{1}{4}, \frac{7}{8}\right)$
+1.  Rationalise the denominator of $\frac{1}{\sqrt{2} + 1}$
+2.  Consider the : $f(x)=2x ^ 2 + x + 1$:
+
+    1.  Calculate the discriminant of the equation $2x ^ 2 + x + 1 =
+        0$. What does this tell you about the solutions to the equation?
+        What does this tell you about the graph of $f(x)$?
+    2.  By , show that the minimum point of $f(x)$ is
+        $\left(-\frac{1}{4}, \frac{7}{8}\right)$
+
+To do this, a specific collection of tools available in Python will be
+used. Often specific sets of tools are separated in to things called
+**libraries**. Start by telling Python that you want to use the specific
+library for **symbolic mathematics**:
 ```
 
 To do this, a specific collection of tools available in Python will be used.
@@ -40,8 +45,9 @@ mathematics**:
 import sympy
 ```
 
-This allows you to solve the first part of the question. First, create a
-variable `expression` and **assign** it a value of $\frac{1}{\sqrt{2} + 1}$.
+This will allow you to solve the first part of the question. Create a
+variable `expression` and **assign** it a value of
+$\frac{1}{\sqrt{2} + 1}$.
 
 ```{code-cell} ipython3
 expression = 1 / (sympy.sqrt(2) + 1)
@@ -49,16 +55,17 @@ expression
 ```
 
 ```{attention}
-This is not what would happen if we plugged the above in to a basic calculator,
-it would instead give us a value of:
+This is not what would happen if you plugged the above in to a basic
+calculator, it would instead give you a value of:
 ```
 
 ```{code-cell} ipython3
 float(expression)
 ```
 
-The `sympy` library has a diverse set of tools available, one of which is to
-algorithmically attempt to simplify an expression. Here is how to do that:
+The `sympy` library has a diverse set of tools available, one of which
+is to algorithmically attempt to simplify an expression. Here is how to
+do that:
 
 ```{code-cell} ipython3
 sympy.simplify(expression)
@@ -67,35 +74,37 @@ sympy.simplify(expression)
 This implies that:
 
 $$
+\begin{split}
     \frac{1}{\sqrt{2} + 1} = -1 + \sqrt{2}
+\end{split}
 $$
 
-Multiplying both sides by ${\sqrt{2} + 1}$ we get:
+Multiplying both sides by ${\sqrt{2} + 1}$ gives:
 
-$$
-    1=\frac{1}{\sqrt{2} + 1}\times \left(\sqrt{2} + 1\right) = \left(-1 + \sqrt{2}\right)\times \left(\sqrt{2} + 1\right)
-$$
+$$1=\frac{1}{\sqrt{2} + 1}\times \left(\sqrt{2} + 1\right) = \left(-1 + \sqrt{2}\right)\times \left(\sqrt{2} + 1\right)$$
 
-The `sympy.simplify` command did not give much insight in to what happened
-but you can confirm that above manipulation by expanding $\left(-1 +
-\sqrt{2}\right)\times \left(\sqrt{2} + 1\right)$.
-Here is how to do that:
+The `sympy.simplify` command did not give much insight in to what
+happened but you can confirm the above manipulation by expanding
+$\left(-1 +
+\sqrt{2}\right)\times \left(\sqrt{2} + 1\right)$. Here is how to do
+that:
 
 ```{code-cell} ipython3
 sympy.expand((-1 + sympy.sqrt(2)) * (1 + sympy.sqrt(2)))
 ```
 
-The `sympy` library allows you to carry out basic expression manipulation.
-Now consider the second part of the question:
+The `sympy` library allows you to carry out basic expression
+manipulation. Now consider the second part of the question:
 
 ```{admonition} Problem
+1.  Consider the : $f(x)=2x ^ 2 + x + 1$:
 
-2. Consider the quadratic: $f(x)=2x ^ 2 + x + 1$:
-  1. Calculate the discriminant of the quadratic equation $2x ^ 2 + x + 1 =
-     0$. What does this tell us about the solutions to the equation? What
-     does this tell us about the graph of $f(x)$?
-  2. By completing the square, show that the minimum point of $f(x)$ is
-     $\left(-\frac{1}{4}, \frac{7}{8}\right)$
+2.  Calculate the of the equation $2x ^ 2 + x + 1 =
+    0$. What does this tell you about the solutions to the equation?
+    What does this tell you about the graph of $f(x)$?
+
+3.  By , show that the minimum point of $f(x)$ is
+    $\left(-\frac{1}{4}, \frac{7}{8}\right)$
 ```
 
 Start by reassigning the value of the variable `expression` to be the
@@ -112,7 +121,7 @@ Ths first line communicates to the code that `x` is going to be a symbolic varia
 ```
 
 ```{tip}
-**Recall** that the `**` symbol is how we communicate exponentiation.
+**Recall** that the `**` symbol is how you communicate exponentiation.
 ```
 
 You can immediately use this to compute the discriminant:
@@ -121,33 +130,35 @@ You can immediately use this to compute the discriminant:
 sympy.discriminant(expression)
 ```
 
-Complement this with mathematical knowledge: if a quadratic has a
-negative discriminant then it does not have any roots and all the values are of
-the same sign as the coefficient of $x ^ 2 $. Which in this case is $2>0$.
-Confirm this by directly creating the equation. Do this by creating a
-variable `equation` and assigning it the equation which has a `lhs` and a `rhs`:
+Now, complement this with mathematical knowledge: if a has a negative
+discriminant then it does not have any roots and all the values are of
+the same sign as the coefficient of $x ^ 2$. Which in this case is
+$2>0$. Confirm this by directly creating the equation. Do this by
+creating a variable `equation` and assigning it the equation which has a
+`lhs` and a `rhs`:
 
 ```{code-cell} ipython3
 equation = sympy.Eq(lhs=expression, rhs=0)
 equation
 ```
 
-and asking `sympy` to solve it:
+Now ask `sympy` to solve it:
 
 ```{code-cell} ipython3
 sympy.solveset(equation)
 ```
 
-Indeed the only solutions are imaginary numbers: this confirms that the graph of
-$f(x)$ is a convex parabola that is above the $y=0$ line.
-Now complete the square so that we can write:
+Indeed the only solutions are imaginary numbers: this confirms that the
+graph of $f(x)$ is a convex parabola that is above the $y=0$ line. Now
+complete the square so that you can write:
 
 $$
     f(x) = a (x - b) ^ 2 + c
 $$
 
-for some values of $a, b, c$.
-Create variables that have those 3 constants as value but also create a variable `completed_square` and assign it the general expression:
+for some values of $a, b, c$. Create variables that have those 3
+constants as value but also create a variable `completed_square` and
+assign it the general expression:
 
 ```{code-cell} ipython3
 a, b, c = sympy.Symbol("a"), sympy.Symbol("b"), sympy.Symbol("c")
@@ -161,15 +172,15 @@ Expand this:
 sympy.expand(completed_square)
 ```
 
-Use `sympy` to solve the various equations that arise from comparing
-the coefficients of:
+Use `sympy` to solve the various equations that arise from comparing the
+coefficients of:
 
 $$
     f(x) = 2x ^2 + x + 1
 $$
 
-with the completed square.
-First, the coefficient of $x ^ 2$ gives us an equation:
+with the completed square. First, you see that the coefficient of
+$x ^ 2$ gives you an equation:
 
 $$
     a = 2
@@ -182,7 +193,8 @@ equation = sympy.Eq(a, 2)
 sympy.solveset(equation, a)
 ```
 
-Now substitute this value of $a$ in to the completed square and update the variable with the new value:
+Now substitute this value of $a$ in to the completed square and update
+the variable with the new value:
 
 ```{code-cell} ipython3
 completed_square = completed_square.subs({a: 2})
@@ -190,8 +202,9 @@ completed_square
 ```
 
 ```{attention}
-The different types of brackets being used there: both `()` and `{}`. This is
-important and has specific meaning in Python which we will cover soon.
+The different types of brackets being used there: both `()` and `{}`.
+This is important and has specific meaning in Python which will be
+covered in future chapters.
 ```
 
 Now look at the expression with the two remaining constants:
@@ -200,7 +213,7 @@ Now look at the expression with the two remaining constants:
 sympy.expand(completed_square)
 ```
 
-Comparing the coefficients of $x$ we have the equation:
+Comparing the coefficients of $x$ gives:
 
 $$
   - 4 b = 1
@@ -229,7 +242,7 @@ Expand this to see the expression with the one remaining constant gives:
 sympy.expand(completed_square)
 ```
 
-We have a final equation for the constant term:
+This gives a final equation for the constant term:
 
 $$
     c + 1 / 8 = 1
@@ -249,21 +262,20 @@ completed_square
 ```
 
 Using this shows that the there are indeed no values of $x$ which give
-negative values of $f(x)$ as $f(x)$ is a square added to a constant.
-
-The minimum is when $x=-1/4$ which gives: $f(-1/4)=7/8$:
+negative values of $f(x)$ as $f(x)$ is a square added to a constant. The
+minimum is when $x=-1/4$ which gives: $f(-1/4)=7/8$:
 
 ```{code-cell} ipython3
 completed_square.subs({x: -1 / sympy.S(4)})
 ```
 
 ```{important}
-In this tutorial we have
+This tutorial has:
 
-- Created symbolic expressions.
-- Obtained approximate values for numerical symbolic expressions.
-- Expanded and simplified symbolic expressions.
-- Created symbolic equations.
-- Solve symbolic equations.
-- Substituted values in to symbolic expressions.
+-   Created symbolic expressions.
+-   Obtained approximate values for numerical symbolic expressions.
+-   Expanded and simplified symbolic expressions.
+-   Created symbolic equations.
+-   Solve symbolic equations.
+-   Substituted values in to symbolic expressions.
 ```

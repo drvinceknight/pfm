@@ -18,11 +18,12 @@ kernelspec:
 
 ## Introduction
 
-As of 2020, the British A-level syllabus includes Algebra which
-is described as:
+A typical secondary school curriculum includes Algebra which is
+described, in the A-level syllabus as:
 
-> Algebra: this is an essential tool which supports and expresses mathematical
-> reasoning and provides a means to generalise across a number of contexts.
+> "Algebra: this is an essential tool which supports and expresses
+> mathematical reasoning and provides a means to generalise across a
+> number of contexts."
 
 In practice this often means:
 
@@ -33,8 +34,8 @@ In practice this often means:
 You can use a computer to carry out some of these techniques.
 
 ```{important}
-This chapter will cover:
+This chapter covers:
 
-- Manipulating numeric and symbolic expressions.
-- Solving equations.
+-   Manipulating numeric and symbolic expressions.
+-   Solving equations.
 ```
