@@ -16,10 +16,11 @@ kernelspec:
 
 ## Calculate the derivative of an expression.
 
-We can calculate the derivative of an expression using `sympy.diff` which takes,
-an expression, a variable and a degree.
+You can calculate the derivative of an expression using `sympy.diff`
+which takes, an expression, a variable and a degree.
 
-````{tip}
+````{admonition} Usage
+:class: tip
 ```
 sympy.diff(expression, variable, degree=1)
 ```
@@ -48,7 +49,8 @@ sym.diff(expression, x, 2)
 You can calculate the indefinite integral of an expression using
 `sympy.integrate`. Which takes an expression and a variable.
 
-````{tip}
+````{admonition} Usage
+:class: tip
 ```
 sympy.integrate(expression, variable)
 ```
@@ -62,12 +64,13 @@ sym.integrate(expression, x)
 
 ## Calculate the definite integral of an expression.
 
-We can calculate the definite integral of an expression using
-`sympy.integrate`. The first argument is an expression but instead of passing a
-variable as the second argument we pass a tuple with the variable and the upper
-and lower bounds of integration.
+You can calculate the definite integral of an expression using
+`sympy.integrate`. The first argument is an expression but instead of
+passing a variable as the second argument you pass a tuple with the
+variable as well as the upper and lower bounds of integration.
 
-````{tip}
+````{admonition} Usage
+:class: tip
 ```
 sympy.integrate(expression, (variable, lower_bound, upper_bound))
 ```
@@ -83,7 +86,8 @@ sym.integrate(expression, (x, 0, 4))
 
 In `sympy` we can access $\infty$ using `sym.oo`:
 
-````{tip}
+````{admonition} Usage
+:class: tip
 ```
 sympy.oo
 ```
@@ -95,12 +99,14 @@ For example:
 sym.oo
 ```
 
-## Calculate limits
+## Calculate limits of an expression
 
-You can calculate limits using `sympy.limit`. The first argument is the
-expression, then the variable and finally the expression the variable tends to.
+You can calculate using `sympy.limit`. The first argument is the
+expression, then the variable and finally the expression the variable
+tends to.
 
-````{tip}
+````{admonition} Usage
+:class: tip
 ```
 sympy.limit(expression, variable, value)
 ```
