@@ -14,29 +14,32 @@ kernelspec:
 
 # Tutorial
 
-We will solve the following problem using a computer to estimate the expected
-probabilities:
+You will solve the following problem using a computer to estimate the
+expected probabilities:
 
 ```{admonition} Problem
 
-An experiment consists of selecting a token from a bag and spinning a coin. The
-bag contains 5 red tokens and 7 blue tokens. A token is selected at random from
-the bag, its colour is noted and then the token is returned to the bag.
+An experiment consists of selecting a token from a bag and spinning a
+coin. The bag contains 5 red tokens and 7 blue tokens. A token is
+selected at random from the bag, its colour is noted and then the token
+is returned to the bag.
 
-When a red token is selected, a biased coin with probability $\frac{2}{3}$
-of landing heads is spun.
+When a red token is selected, a biased coin with probability
+$\frac{2}{3}$ of landing heads is spun.
 
 When a blue token is selected a fair coin is spun.
 
-1. What is the probability of picking a red token?
-2. What is the probability of obtaining Heads?
-3. If a heads is obtained, what is the probability of having selected a red
-   token.
+1.  What is the probability of picking a red token?
+
+2.  What is the probability of obtaining Heads?
+
+3.  If a heads is obtained, what is the probability of having selected a
+    red token.
 ```
 
-You will use the `random` library from the Python standard library to do this.
-First start by building a Python **tuple** to represent the bag with the
-tokens. Assign this to a variable `bag`:
+You will use the `random` library from the Python standard library to do
+this. First start off by building a Python **tuple** to represent the
+bag with the tokens. Assign this to a variable `bag`:
 
 ```{code-cell} ipython3
 bag = (
@@ -57,15 +60,14 @@ bag
 ```
 
 ```{attention}
-You are there using the circular brackets `()` and the quotation marks
-`"`. Those are important and cannot be omitted. The choice of brackets `()` as
-opposed to `{}` or `[]` is in fact important as it instructs Python to do
-different things. You can use `"` or `'`
-interchangeably.
+You are using the circular brackets `()` and the quotation marks `"`.
+Those are important and cannot be omitted. The choice of brackets `()`
+as opposed to `{}` or `[]` is important as it instructs Python to do
+different things. You can use `"` or `’` interchangeably.
 ```
 
-Instead of writing every copy of color you can create a Python **list** which allows
-you to carry out some basic algebra on the items:
+Instead of writing every copy of color you can create a Python **list**
+which allows you to carry out some basic algebra on the items:
 
 - Create a list with 5 `"Red"`s.
 - Create a list with 7 `"Blue"`s.
@@ -76,7 +78,7 @@ bag = ["Red"] * 5 + ["Blue"] * 7
 bag
 ```
 
-Now to sample from that we use the `random` library which has a `choice`
+Now to sample from that use the `random` library which has a `choice`
 command:
 
 ```{code-cell} ipython3
@@ -87,7 +89,7 @@ import random
 random.choice(bag)
 ```
 
-If we run this many times we will not always get the same outcome:
+If you run this many times you will not always get the same outcome:
 
 ```{code-cell} ipython3
 :tags: [nbval-ignore-output]
@@ -103,11 +105,10 @@ The `bag` variable is unchanged:
 bag
 ```
 
-In order to answer the first question (what is the probability of picking a red
-token) repeat this many times.
-
-Do this by defining a Python function (which is akin to a mathematical
-function) that makes repeating code possible:
+In order to answer the first question (what is the probability of
+picking a red token) repeat this many times. Do this by defining a
+Python function (which is akin to a mathematical function) that makes
+repeating code possible:
 
 ```{code-cell} ipython3
 def pick_a_token(container):
@@ -117,8 +118,8 @@ def pick_a_token(container):
     return random.choice(container)
 ```
 
-We can then call this function, passing our `bag` to it as the `container` from
-which to pick:
+You can then call this function, passing `bag` to it as the `container`
+from which to pick:
 
 ```{code-cell} ipython3
 :tags: [nbval-ignore-output]
@@ -132,10 +133,10 @@ pick_a_token(container=bag)
 pick_a_token(container=bag)
 ```
 
-In order to simulate the probability of picking a red token repeat
-this not once or twice but tens of thousands of times. You will do this using
-something called a "list comprehension" which is akin to the mathematical
-notation commonly used to create sets:
+In order to measure the probability of picking a red token repeat this
+not once or twice but tens of thousands of times. You will do this using
+something called a "list comprehension" which is akin to the
+mathematical notation commonly used to create sets:
 
 $$
     S_1 = \{f(x)\text{ for }x\text{ in }S_2\}
@@ -149,7 +150,7 @@ samples = [pick_a_token(container=bag) for repetition in range(number_of_repetit
 samples
 ```
 
-You can confirm that we have the correct number of samples:
+You can confirm that you have the correct number of samples:
 
 ```{code-cell} ipython3
 len(samples)
@@ -167,8 +168,8 @@ Using this we can now use `==` (double `=`) to check how many of those samples a
 sum(token == "Red" for token in samples) / number_of_repetitions
 ```
 
-You have sampled a probability of around .41. The theoretic value is $\frac{5}{5 +
-7}$:
+You have sampled a probability of around .41. The theoretic value is
+$\frac{5}{5 + 7}$:
 
 ```{code-cell} ipython3
 :tags: [nbval-ignore-output]
@@ -176,17 +177,18 @@ You have sampled a probability of around .41. The theoretic value is $\frac{5}{5
 5 / (5 + 7)
 ```
 
-To answer the second question (What is the probability of obtaining Heads?) you
-need to make use of another Python tool: an `if` statement. This will allow you
-to write a function that does precisely what is described in the problem:
+To answer the second question (What is the probability of obtaining
+Heads?) You need to make use of another Python tool: an `if` statement.
+This will let you write a function that does precisely what is described
+in the problem:
 
 - Choose a token;
 - Set the probability of flipping a given coin;
 - Select that coin.
 
 ```{attention}
-For the second random selection (flipping a coin) you will not choose from a list
-but instead select a random number between 0 and 1.
+For the second random selection (flipping a coin) you will not choose
+from a list but instead select a random number between 0 and 1.
 ```
 
 ```{code-cell} ipython3
@@ -218,7 +220,7 @@ def sample_experiment(bag):
     return selected_token, coin
 ```
 
-Using this we can sample according to the problem description:
+Using this you can sample according to the problem description:
 
 ```{code-cell} ipython3
 :tags: [nbval-ignore-output]
@@ -232,8 +234,9 @@ sample_experiment(bag=bag)
 sample_experiment(bag=bag)
 ```
 
-You can now find out the probability of selecting heads by carrying out a large
-number of repetitions and checking which ones have a coin that is heads:
+You can now find out the probability of selecting heads by carrying out
+a large number of repetitions and checking which ones have a coin that
+is heads:
 
 ```{code-cell} ipython3
 :tags: [nbval-ignore-output]
@@ -256,9 +259,9 @@ sym.S(5) / (12) * sym.S(2) / 3 + sym.S(7) / (12) * sym.S(1) / 2
 41 / 72
 ```
 
-You can also use our samples to calculate the conditional probability that a
-token was read if the coin is heads. This is done again using the list
-comprehension notation but including an `if` statement which
+You can also use the samples to calculate the conditional probability
+that a token was read if the coin is heads. This is done again using the
+list comprehension notation but including an `if` statement which
 emulates the mathematical notation:
 
 $$
@@ -289,11 +292,11 @@ $$
 ```
 
 ```{important}
-In this tutorial we have
+In this tutorial you have
 
-- Randomly sampled from an iterable.
-- Randomly sampled a number between 0 and 1.
-- Written a function to represent a random experiment.
-- Created a list using list comprehensions.
-- Counted outcomes of random experiments.
+-   Randomly sampled from an iterable.
+-   Randomly sampled a number between 0 and 1.
+-   Written a function to represent a random experiment.
+-   Created a list using list comprehensions.
+-   Counted outcomes of random experiments.
 ```

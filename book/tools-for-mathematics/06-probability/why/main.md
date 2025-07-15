@@ -18,22 +18,23 @@ kernelspec:
 
 ## What is the difference between a Python list and a Python tuple?
 
-Two of the most used Python iterables are lists and tuples. In practice they
-have a number of similarities, they are both ordered collections of objects that
-can be used in list comprehensions as well as in other ways.
+Two of the most used Python iterables are lists and tuples. In practice
+they have a number of similarities, they are both ordered collections of
+objects that can be used in list comprehensions as well as in other
+ways.
 
 - Tuples are **immutable**
 - Lists are **mutable**
 
 This means that once created tuples cannot be changed and lists can.
 
-As a general rule of thumb: if you do not need to modify your iterable then use
-a tuple as they are more computationally efficient.
+As a general rule of thumb: if you do not need to modify your iterable
+then use a tuple as they are more computationally efficient.
 
-## Why does the sum of booleans counts the `True`s?
+## Why does the sum of booleans count the `True`s?
 
-In the tutorial and elsewhere you created a list of booleans and then took the
-sum. Here are some of the steps:
+In the tutorial and elsewhere you created a list of booleans and then
+took the sum. Here are some of the steps:
 
 ```{code-cell} ipython3
 samples = ("Red", "Red", "Blue")
@@ -44,13 +45,14 @@ booleans = [sample == "Red" for sample in samples]
 booleans
 ```
 
-When we take the `sum` of that list we get a numeric value:
+When you take the `sum` of that list you get a numeric value:
 
 ```{code-cell} ipython3
 sum(booleans)
 ```
 
-This has in fact counted the `True` values as 1 and the `False` values as 0.
+This has in fact counted the `True` values as 1 and the `False` values
+as 0.
 
 ```{code-cell} ipython3
 int(True)
@@ -62,10 +64,10 @@ int(False)
 
 ## What is the difference between `print` and `return`?
 
-In functions we use the `return` statement. This does two things:
+In functions you use the `return` statement. This does two things:
 
-1. Assigns a value to the function run;
-2. Ends the function.
+1.  Assigns a value to the function run;
+2.  Ends the function.
 
 The `print` statement **only** displays the output.
 
@@ -119,14 +121,15 @@ S
 
 ## How does Python sample randomness?
 
-When using the Python random module we are in fact generating a pseudo random
-process. True randomness is actually not common.
+When using the Python random module you are in fact generating a pseudo
+random process. True randomness is actually not common.
 
-Pseudo randomness is an important area of mathematics as strong algorithms that
-create unpredictable sequences of numbers are vital to cryptographic security.
+Pseudo randomness is an important area of mathematics as strong
+algorithms that create unpredictable sequences of numbers are vital to
+cryptographic security.
 
-The specific algorithm using in Python for randomness is called the Mersenne
-twister algorithm is state of the art.
+The specific algorithm using in Python for randomness is called the
+Mersenne twister algorithm is state of the art.
 
 You can read more about this here:
 <https://docs.python.org/3/library/random.html#module-random>.
@@ -135,19 +138,18 @@ You can read more about this here:
 
 ## What is the difference between a docstring and a comment
 
-In Python it is possible to write statements that are ignored using the `#`
-symbol. This creates something called a "comment". For example:
+In Python it is possible to write statements that are ignored using the
+`#` symbol. This creates something called a "comment". For example:
 
 ```{code-cell} ipython3
 # create a list to represent the tokens in a bag
 bag = ["Red", "Red", "Blue"]
 ```
 
-A docstring however is something that is "attached" to a function and can be
-accessed by Python.
-
-If we rewrite the function to sample the experiment of the tutorial without a
-docstring but using comments we will have:
+A docstring however is something that is "attached"' to a function and
+can be accessed by Python. If you rewrite the function to sample the
+experiment of the tutorial without a docstring but using comments you
+will have:
 
 ```{code-cell} ipython3
 :tags: [style-check-ignore]
@@ -173,18 +175,19 @@ def sample_experiment(bag):
     return selected_token, coin
 ```
 
-Now if we try to access the help for the function we will not get it:
+Now if you try to access the help for the function you will not get it:
 
 ```{code-cell} ipython3
 help(sample_experiment)
 ```
 
-Furthermore, if you look at the code with comments you will see that because of
-the choice of variable names the comments are in fact redundant.
+Furthermore, if you look at the code with comments you will see that
+because of the choice of variable names the comments are in fact
+redundant.
 
-In software engineering it is generally accepted that comments indicate that
-your code is not clear and so it is preferable to write clear documentation
-explaining why something is done through docstrings.
+In software engineering it is generally accepted that comments indicate
+that your code is not clear and so it is preferable to write clear
+documentation explaining why something is done through docstrings.
 
 ```{code-cell} ipython3
 def sample_experiment(bag):
