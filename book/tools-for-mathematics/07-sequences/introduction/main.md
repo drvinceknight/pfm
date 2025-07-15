@@ -16,11 +16,10 @@ kernelspec:
 
 # Sequences
 
-The formal definition of sequences is a collection of ordered objects with
-potential repetitions.
-
-The study of these sequences leads to many interesting results. Here you will
-concentrate on using recursive definitions to generate the values in a sequence.
+The formal definition of sequences is a collection of ordered objects
+with potential repetitions. The study of these sequences leads to many
+interesting results. Here you will concentrate on using recursive
+definitions to generate the values in a sequence.
 
 ```{important}
 In this chapter you will cover:

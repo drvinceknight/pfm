@@ -84,16 +84,16 @@ It is technically a library for machine learning and not statistics.
 
 ## What is the difference between machine learning and statistics
 
-In a lot of cases the difference here is more question of vocabulary than
-actual tangible differences.
+In a lot of cases the difference here is more question of vocabulary
+than actual tangible differences.
 
-For example the `scikit-learn` library has a tool for linear regression as does
-the `statsmodels` and the `statistics` library.
+For example the `scikit-learn` library has a tool for linear regression
+as does the `statsmodels` and the `statistics` library.
 
-In practice statistics is often more descriptive, for example using linear
-regression to understand the relationship between two variables. Whereas machine
-learning is more predictive, for example using liner regression to predict one
-variable value from another.
+In practice statistics is often more descriptive, for example using
+linear regression to understand the relationship between two variables.
+Whereas machine learning is more predictive, for example using liner
+regression to predict one variable value from another.
 
-A lot of modern applied mathematics using tools such as neural networks which
-are usually discussed as tools from the machine learning.
+A lot of modern applied mathematics uses tools such as neural networks
+which are considered to be from the field of machine learning.

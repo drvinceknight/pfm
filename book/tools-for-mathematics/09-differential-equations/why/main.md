@@ -104,7 +104,7 @@ def diff(state, x):
     return x * y, u
 ```
 
-We can pass this to `scipy.integrate.odeint` which is a tool that carries out
+You can pass this to `scipy.integrate.odeint` which is a tool that carries out
 numerical integration of differential equations. Note, that it is incapable of
 dealing with symbolic variables, thus an initial numeric value of $(u, y)$ is
 required.
@@ -121,7 +121,7 @@ states = scipy.integrate.odeint(diff, y0=condition, t=xs)
 ```
 
 ```{note}
-We make use of
+Here, you make use of
 {ref}`how-to-create-a-given-number-of-values-between-two-bounds` to create a
 collection
 of `x` values over which to carry out the numerical integration.

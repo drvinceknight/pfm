@@ -44,7 +44,7 @@ kernelspec:
 
    1. Define the differential equation that models this situation.
    2. Solve the differentia equation.
-   3. Given that $T(0) = 100$ and the room temperature is $$T_R=20$$ obtain the
+   3. Given that $T(0) = 100$ and the room temperature is $T_R=20$ obtain the
       particular solution.
    4. Use the particular solution to identify how on it will take for the drink
       to be ready for consumption (a temperature of 80) given that after 3 time

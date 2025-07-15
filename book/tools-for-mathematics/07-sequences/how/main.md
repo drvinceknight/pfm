@@ -16,12 +16,13 @@ kernelspec:
 
 ## Define a function using recursion
 
-It is possible to define a recursive expression using a recursive function in
-Python. This requires two things:
+It is possible to define a recursive expression using a recursive
+function in Python. This requires two things:
 
-- A recursive rule: something that relates the current term to another one;
-- A base case: a particular term that does not need the recursive rule to be
-  calculated.
+- A recursive rule: something that relates the current term to another
+  one;
+- A base case: a particular term that does not need the recursive rule
+  to be calculated.
 
 Consider the following mathematical expression:
 

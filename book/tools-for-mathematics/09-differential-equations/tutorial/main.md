@@ -14,16 +14,17 @@ kernelspec:
 
 # Tutorial
 
-You will solve the following problem using a computer to do some of the more
-tedious calculations.
+You will solve the following problem using a computer to do some of the
+more tedious calculations.
 
 ```{admonition} Problem
-A container has volume $V$ of liquid which is poured in at a rate proportional
-to $e^{-t}$ (where $t$ is some measurement of time). Initially the container is empty and
-after $t=3$ time units the rate at which the liquid is poured is 15.
+A container has volume $V$ of liquid which is poured in at a rate
+proportional to $e^{-t}$ (where $t$ is some measurement of time).
+Initially the container is empty and after $t=3$ time units the volume
+of liquid is 15.
 
-1. Show that $V(t)=\frac{-15e^{3}}{1-e^{3}}(1 - e^{-t})$
-2. Obtain the limit $\lim_{t\to \infty}V(t)$
+1.  Show that $V(t)=\frac{-15e^{3}}{1-e^{3}}(1 - e^{-t})$.
+2.  Obtain the limit $\lim_{t\to \infty}V(t)$.
 ```
 
 You first need to create the differential equation described in the text:

@@ -14,16 +14,17 @@ kernelspec:
 
 # Tutorial
 
-You will solve the following problem using a computer to do some of the more
-tedious calculations.
+You will solve the following problem using a computer to do some of the
+more tedious calculations.
 
 ````{admonition} Problem
 
-Anna is investigating the relationship between exercise and resting heart rate.
-She takes a random sample of 19 people in her year group and records for each person
+Anna is investigating the relationship between exercise and resting
+heart rate. She takes a of 19 people in her year group and records for
+each person
 
-- their resting heart rate, $h$ beats per minute.
-- the number of minutes, $m$, spent exercising each week.
+-   their resting heart rate, $h$ beats per minute.
+-   the number of minutes, $m$, spent exercising each week.
 
 A table with the data is here:
 
@@ -74,25 +75,21 @@ A table with the data is here:
 
 You can see a scatter plot below.
 
-1. For all collected values of $h$ and $m$ obtain:
+1.  For all collected values of $h$ and $m$ obtain:
 
-    - The mean
-    - The median
-    - The quartiles
-    - The standard deviation
-    - The variation
-    - The maximum
-    - The minimum
-
-2. Obtain the Pearson Coefficient of correlation for the variables $h$ and $m$.
-3. Obtain the line of best fit for variables $x$ and $y$ as
-   defined by:
-
-   $$x=\ln(m)\qquad y=\ln(h)$$
-
-4. Using the above obtain a relationship between $m$ and $h$ of the form:
-
-   $$h=cm^k$$
+    -   The mean
+    -   The median
+    -   The quartiles
+    -   The standard deviation
+    -   The variation
+    -   The maximum
+    -   The minimum
+2.  Obtain the Pearson Coefficient of correlation for the variables $h$
+    and $m$.
+3.  Obtain the line of best fit for variables $x$ and $y$ as defined by:
+    $$\begin{split}x=\ln(m)\qquad y=\ln(h)\end{split}$$
+4.  Using the above obtain a relationship between $m$ and $h$ of the
+    form: $$\begin{split}h=cm^k\end{split}$$
 ````
 
 ```{code-cell} ipython3
@@ -234,10 +231,8 @@ st.quantiles(h, n=4)
 st.quantiles(m, n=4)
 ```
 
-Note that this calculation confirms the median which corresponds to the 50%
-quartile.
-
-To calculate the sample standard deviation:
+Note that this calculation confirms the median which corresponds to the
+50% quartile. To calculate the sample standard deviation:
 
 ```{code-cell} ipython3
 st.stdev(h)
@@ -394,9 +389,9 @@ plt.title(f"Data collected by Anne with fitted relationship: $h={np.exp(intercep
 ```
 
 ```{important}
-In this tutorial we have
+In this tutorial you have
 
-- Calulated values of central tendency and spread
-- Calculated some bivariate coefficients
-- Fitted a line of best fit
+- Calulated values of central tendency and spread;
+- Calculated some bivariate coefficient;
+- Fitted a line of best fit.
 ```
