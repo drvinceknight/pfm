@@ -26,10 +26,11 @@ import sympy as sym  # Importing the sympy library using an alias
 Comments like these often do not add to the readability of the code. In fact
 they can make the code less readable or at worse confusing {cite}`martin2009clean`.
 
-In this section of the book there is in fact no need for comments like this as
-you are mainly using tools that are well documented. Furthermore when using
-Jupyter notebooks you can add far more to the readability of the code by adding
-prose alongside our code instead of using small brief inline comments.
+In this section of the book there is in fact no need for comments like
+this as you are mainly using tools that are well documented. Furthermore
+when using Jupyter notebooks you can add far more to the readability of
+the code by adding prose alongside our code instead of using small brief
+inline comments.
 
 This does not mean that readability of code is not important.
 
@@ -37,14 +38,16 @@ This does not mean that readability of code is not important.
 Being able to read and understand written code is important.
 ```
 
-In {ref}`probability` we will start to write our own functions and emphasis will
-be given there on readability and documenting (as opposed to commenting) the
-code we will write. A specific discussion about using a tool called a
-`docstring` as opposed to a comment is here
-{ref}`difference_between_a_docstring_and_a_comment`.
+In
+Chapter {ref}`chp:functions_and_data_structures` you will start to write
+functions and emphasis will be given there on readability and
+documenting (as opposed to commenting) the code written. A specific
+discussion about using a tool called a **docstring** as opposed to a
+comment will be covered.
 
-In {ref}`modularisation` and {ref}`documentation` there is a lot more
-information on how to ensure code is readable and understandable.
+In chapters {ref}`chp:modularisation`
+to {ref}`chp:testing` there is more information on how to ensure code
+is readable and understandable.
 
 ## Why do we use `@` for matrix multiplication and not `*`?
 
@@ -66,7 +69,7 @@ multiplication instead. So for clarity it is preferred to use `@` throughout.
 ## I have read that `numpy` is a library for linear algebra?
 
 `numpy` is one of the most popular and important libraries in the Python
-ecosystem. It is in fact the best library to use when doing linear algebra as it
-is computationally efficient, **however** it cannot handle symbolic variables
-which is why you are seeing how to use `Sympy` here. {ref}`numpy` gives an
-introduction to `numpy`.
+ecosystem. It is in fact the best library to use when doing linear
+algebra as it is computationally efficient, **however** it cannot handle
+symbolic variables which is why you are seeing how to use `Sympy` here.
+An introduction to `numpy` is covered in {ref}`numpy`.

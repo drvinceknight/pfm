@@ -16,25 +16,27 @@ kernelspec:
 
 # Matrices
 
-Matrices form the building block of an area of mathematics referred to as Linear
-Algebra. The dictionary definition of a matrix is:
+Matrices form the building block of an area of mathematics referred to
+as Linear Algebra. The dictionary definition of a matrix is:
 
-> "A group of numbers or other symbols arranged in a rectangle that can be used
-> together as a single unit to solve particular mathematical problems"
+> "A group of numbers or other symbols arranged in a rectangle that can
+> be used together as a single unit to solve particular mathematical
+> problems."
 
-The particular mathematical problems referred to usually correspond to solving large
-systems of linear equations. However they have become an area of interest in
-their own right and manipulating matrices usually corresponds to:
+The particular mathematical problems referred to usually correspond to
+solving large systems of linear equations. However they have become an
+area of interest in their own right and manipulating matrices usually
+corresponds to:
 
-- calculating the determinant of a matrix;
-- calculating the inverse of a matrix.
+- calculating the of a matrix;
+- calculating the of a matrix.
 
 Here you will see how to instruct a computer to carry out these techniques.
 
 ```{important}
 In this chapter you will cover:
 
-- Creating matrices.
-- Manipulating matrices.
-- Solving a system of linear equations using matrices.
+-   Creating matrices.
+-   Manipulating matrices.
+-   Solving a system of linear equations using matrices.
 ```

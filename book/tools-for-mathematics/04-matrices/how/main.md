@@ -16,11 +16,13 @@ kernelspec:
 
 ## Create a matrix
 
-You create a matrix using the `sympy.Matrix` tool. You combine this with
-nested square brackets `[]` so that every row is also inside square
+You create a matrix using the `sympy.Matrix` tool. Combine this with
+nested square brackets `[``]` so that every row is also inside square
 brackets.
 
-````{tip}
+````{admonition} Usage
+:class: tip
+
 ```
 sympy.Matrix([values])
 ```
@@ -62,7 +64,9 @@ B = sym.Matrix(
 
 To calculate the determinant of a matrix, use the `.det` tool.
 
-````{tip}
+````{admonition} Usage
+:class: tip
+
 ```
 matrix = sympy.Matrix([values])
 matrix.det()
@@ -87,7 +91,9 @@ matrix.det()
 
 To calculate the inverse of a matrix, use the `.inv` tool.
 
-````{tip}
+````{admonition} Usage
+:class: tip
+
 ```
 matrix = sympy.Matrix([values])
 matrix.inv()
@@ -186,9 +192,9 @@ vector
 
 ## How to solve a linear system
 
-To solve a given linear system that can be represented in matrix form, we create
-the corresponding matrix and vector and use the matrix inverse. For example to
-solve the following equations:
+To solve a given linear system that can be represented in matrix form,
+create the corresponding matrix and vector and the matrix . For example
+to solve the following equations:
 
 $$
     \begin{array}{l}
