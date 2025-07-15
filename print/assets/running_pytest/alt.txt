@@ -1,0 +1,4 @@
+Running pytest.
+
+A screenshot of the terminal in the terminal in Mac OS. This shows the command
+`python -m pytest` being run and the 5 tests in test_absorption.py all pass.

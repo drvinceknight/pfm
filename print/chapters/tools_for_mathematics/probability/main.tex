@@ -1,0 +1,1803 @@
+\chapter{Probability}
+\label{chp:probability}
+
+Probability is the study of random events. Computers are particularly helpful
+here as they can be used to carry out a number of experiments to confirm and/or
+explore theoretic results.
+
+In practice studying probability will often involve measuring:
+\begin{itemize}
+\item 
+
+expected chances of an event occurring;
+
+\item 
+
+the conditional chances of an event occurring given another event
+occurring.
+
+\end{itemize}
+
+
+Here you will see how to instruct a computer to sample such events.
+
+
+
+\begin{note}
+In this chapter you will cover:
+\begin{itemize}
+\item 
+
+Generating \index{random numbers}.
+
+\item 
+
+Carry out a \index{random sample} from a given collection of items.
+
+\item 
+
+Write python functions to be able to repeat experiments.
+
+\end{itemize}
+\end{note}
+
+
+
+
+\section{Tutorial}
+\label{\detokenize{tools-for-mathematics/06-probability/tutorial/main:tutorial}}\label{\detokenize{tools-for-mathematics/06-probability/tutorial/main::doc}}
+
+You will solve the following problem using a computer to estimate the expected
+probabilities:
+
+An experiment consists of selecting a token from a bag and spinning a coin. The
+bag contains 5 red tokens and 7 blue tokens. A token is selected at random from
+the bag, its colour is noted and then the token is returned to the bag.
+
+
+When a red token is selected, a biased coin with probability \(\frac{2}{3}\)
+of landing heads is spun.
+
+
+When a blue token is selected a fair coin is spun.
+\begin{enumerate}
+
+\item 
+
+What is the probability of picking a red token?
+
+\item 
+
+What is the probability of obtaining Heads?
+
+\item 
+
+If a heads is obtained, what is the probability of having selected a red
+token.
+
+\end{enumerate}
+
+
+
+You will use the \texttt{random} library from the Python standard library to do this.
+First start off by building a Python \textbf{tuple} to represent the bag with the
+tokens. Assign this to a variable \texttt{bag}:
+
+
+\begin{pyin}
+bag = (
+    "Red",
+    "Red",
+    "Red",
+    "Red",
+    "Red",
+    "Blue",
+    "Blue",
+    "Blue",
+    "Blue",
+    "Blue",
+    "Blue",
+    "Blue",
+)
+bag
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+('Red',
+ 'Red',
+ 'Red',
+ 'Red',
+ 'Red',
+ 'Blue',
+ 'Blue',
+ 'Blue',
+ 'Blue',
+ 'Blue',
+ 'Blue',
+ 'Blue')
+\end{raw}
+
+
+
+
+
+
+\begin{note}
+You are using the circular brackets \texttt{()} and the quotation marks
+\texttt{"}. Those are important and cannot be omitted. The choice of brackets
+\texttt{()} as opposed to \texttt{\{\}} or \texttt{[]} is important as it instructs Python to do
+different things. You can use \texttt{"} or \texttt{'}
+interchangeably.
+\end{note}
+
+
+
+Instead of writing every copy of color you can create a Python \textbf{list} which allows
+you to carry out some basic algebra on the items:
+\begin{itemize}
+\item 
+
+Create a list with 5 \texttt{"Red"}s.
+
+\item 
+
+Create a list with 7 \texttt{"Blue"}s.
+
+\item 
+
+Combine both lists:
+
+\end{itemize}
+
+
+
+
+\begin{pyin}
+bag = ["Red"] * 5 + ["Blue"] * 7
+bag
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+['Red',
+ 'Red',
+ 'Red',
+ 'Red',
+ 'Red',
+ 'Blue',
+ 'Blue',
+ 'Blue',
+ 'Blue',
+ 'Blue',
+ 'Blue',
+ 'Blue']
+\end{raw}
+
+Now to sample from that use the \texttt{random} library which has a \texttt{choice}
+command:
+
+\begin{pyin}
+import random
+
+random.choice(bag)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+'Blue'
+\end{raw}
+
+If you run this many times you will not always get the same outcome:
+
+\begin{pyin}
+random.choice(bag)
+\end{pyin}
+
+
+
+
+
+\begin{pyin}
+'Blue'
+\end{pyin}
+
+The \texttt{bag} variable is unchanged:
+
+\begin{pyin}
+bag
+\end{pyin}
+
+\begin{pyin}
+['Red',
+ 'Red',
+ 'Red',
+ 'Red',
+ 'Red',
+ 'Blue',
+ 'Blue',
+ 'Blue',
+ 'Blue',
+ 'Blue',
+ 'Blue',
+ 'Blue']
+\end{pyin}
+
+
+
+
+
+In order to answer the first question (what is the probability of picking a red
+token) repeat this many times:
+Do this by defining a Python function (which is akin to a mathematical
+function) that makes repeating code possible:
+
+
+
+
+\begin{pyin}
+def pick_a_token(container):
+    """
+    A function to randomly sample from a `container`.
+    """
+    return random.choice(container)
+\end{pyin}
+
+
+You can then call this function, passing \texttt{bag} to it as the \texttt{container} from
+which to pick:
+
+\begin{pyin}
+pick_a_token(container=bag)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+'Blue'
+\end{raw}
+
+
+
+
+
+
+
+
+
+\begin{pyin}
+pick_a_token(container=bag)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+'Red'
+\end{raw}
+
+
+
+
+
+
+In order to measure the probability of picking a red token repeat
+this not once or twice but tens of thousands of times. You will do this using
+something called a ``list comprehension'' which is akin to the mathematical
+notation commonly used to create sets:
+
+\begin{equation*}
+\begin{split}
+    S_1 = \{f(x)\text{ for }x\text{ in }S_2\}
+\end{split}
+\end{equation*}
+
+\begin{pyin}
+number_of_repetitions = 10000
+samples = [pick_a_token(container=bag) for repetition in range(number_of_repetitions)]
+samples
+\end{pyin}
+
+
+
+
+
+\begin{pyin}
+['Red',
+ 'Red',
+ 'Red',
+ ...
+ 'Blue',
+ 'Blue',
+ 'Red',
+ 'Blue',
+ ]
+\end{pyin}
+
+You can confirm that you have the correct number of samples:
+
+\begin{pyin}
+len(samples)
+\end{pyin}
+
+\begin{raw}
+10000
+\end{raw}
+
+\begin{note}
+\texttt{len} is the Python tool to get the length of a given Python iterable.
+\end{note}
+
+
+
+Using this you can now use \texttt{==} (double \texttt{=}) to check how many of those 
+samples are \text{Red}:
+
+\begin{pyin}
+sum(token == "Red" for token in samples) / number_of_repetitions
+\end{pyin}
+
+\begin{raw}
+0.4071
+\end{raw}
+
+You have sampled a probability of around .41. The theoretic value is \(\frac{5}{5 +
+7}\):
+
+
+\begin{pyin}
+5 / (5 + 7)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+0.4166666666666667
+\end{raw}
+
+
+
+
+
+
+To answer the second question (What is the probability of obtaining Heads?) You
+need to make use of another Python tool: an \texttt{if} statement. This will let
+you
+write a function that does precisely what is described in the problem:
+\begin{itemize}
+\item 
+
+Choose a token;
+
+\item 
+
+Set the probability of flipping a given coin;
+
+\item 
+
+Select that coin.
+
+\end{itemize}
+
+
+\begin{note}
+For the second random selection (flipping a coin) you will not choose from a list
+but instead select a random number between 0 and 1.
+\end{note}
+
+
+
+
+
+\begin{pyin}
+def sample_experiment(bag):
+    """
+    This samples a token from a given bag and then
+    selects a coin with a given probability.
+
+    If the sampled token is red then the probability
+    of selecting heads is 2/3 otherwise it is 1/2.
+
+    This function returns both the selected token
+    and the coin face.
+    """
+    selected_token = pick_a_token(container=bag)
+
+    if selected_token == "Red":
+        probability_of_selecting_heads = 2 / 3
+    else:
+        probability_of_selecting_heads = 1 / 2
+
+    if random.random() < probability_of_selecting_heads:
+        coin = "Heads"
+    else:
+        coin = "Tails"
+    return selected_token, coin
+\end{pyin}
+
+
+
+
+
+Using this you can sample according to the problem description:
+
+
+
+
+
+\begin{pyin}
+sample_experiment(bag=bag)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+('Red', 'Heads')
+\end{raw}
+
+
+\begin{pyin}
+sample_experiment(bag=bag)
+\end{pyin}
+
+\begin{raw}
+('Red', 'Tails')
+\end{raw}
+
+
+
+
+
+
+You can now find out the probability of selecting heads by carrying out a large
+number of repetitions and checking which ones have a coin that is heads:
+
+
+
+
+
+\begin{pyin}
+samples = [sample_experiment(bag=bag) for repetition in range(number_of_repetitions)]
+sum(coin == "Heads" for token, coin in samples) / number_of_repetitions
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+0.576
+\end{raw}
+
+
+
+
+
+
+You can compute this theoretically as well, the expected probability is:
+
+
+
+
+\begin{pyin}
+import sympy as sym
+
+sym.S(5) / (12) * sym.S(2) / 3 + sym.S(7) / (12) * sym.S(1) / 2
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \frac{41}{72}\end{split}
+\end{equation*}
+
+
+
+
+
+
+
+\begin{pyin}
+41 / 72
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+0.5694444444444444
+\end{raw}
+
+
+
+
+
+
+You can also use the samples to calculate the conditional probability that a
+token was read if the coin is heads. This is done again using the list
+comprehension notation but including an \texttt{if} statement which 
+emulates the mathematical notation:
+\begin{equation*}
+\begin{split}
+    S_3 = \{x \in S_1  | \text{ if some property of \(x\) holds}\}
+\end{split}
+\end{equation*}
+
+
+
+
+\begin{pyin}
+samples_with_heads = [(token, coin) for token, coin in samples if coin == "Heads"]
+sum(token == "Red" for token, coin in samples_with_heads) / len(samples_with_heads)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+0.49236111111111114
+\end{raw}
+
+
+
+
+
+
+Using \index{Bayes’ theorem} this is given theoretically by:
+\begin{equation*}
+\begin{split}
+    P(\text{Red}|\text{Heads}) = \frac{P(\text{Heads} | \text{Red})P(\text{Red})}{P(\text{Heads})}
+\end{split}
+\end{equation*}
+
+
+
+\begin{pyin}
+(sym.S(2) / 3 * sym.S(5) / 12) / (sym.S(41) / 72)
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \frac{20}{41}\end{split}
+\end{equation*}
+
+
+
+
+
+
+
+\begin{pyin}
+20 / 41
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+0.4878048780487805
+\end{raw}
+
+
+
+
+
+
+
+\begin{note}
+In this tutorial you have
+\begin{itemize}
+\item 
+
+Randomly sampled from an iterable.
+
+\item 
+
+Randomly sampled a number between 0 and 1.
+
+\item 
+
+Written a function to represent a random experiment.
+
+\item 
+
+Created a list using list comprehensions.
+
+\item 
+
+Counted outcomes of random experiments.
+
+\end{itemize}
+\end{note}
+
+
+
+
+
+\section{How to}
+\label{\detokenize{tools-for-mathematics/06-probability/how/main:how-to}}\label{\detokenize{tools-for-mathematics/06-probability/how/main::doc}}
+
+\subsection{Create a list}
+\label{sec:create_a_list}
+
+To create a list which is an ordered collection of objects that \textbf{can} be
+changed use the \texttt{{[}{]}} brackets.
+
+
+\begin{api}
+collection = [value_1, value_2, value_3, ..., value_n]
+\end{api}
+
+
+
+For example:
+
+
+
+
+\begin{pyin}
+basket = ["Bread", "Biscuits", "Coffee"]
+basket
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+['Bread', 'Biscuits', 'Coffee']
+\end{raw}
+
+
+
+
+
+You can insert an element to the end of a list by appending to it:
+
+
+
+
+\begin{pyin}
+basket.append("Tea")
+basket
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+['Bread', 'Biscuits', 'Coffee', 'Tea']
+\end{raw}
+
+
+
+
+
+You can also combine lists together:
+
+
+
+
+\begin{pyin}
+other_basket = ["Toothpaste"]
+basket = basket + other_basket
+basket
+\end{pyin}
+
+
+
+
+
+\begin{pyin}
+['Bread', 'Biscuits', 'Coffee', 'Tea', 'Toothpaste']
+\end{pyin}
+
+
+
+
+
+As for tuples you can also access elements using their indices:
+
+
+
+
+\begin{pyin}
+basket[3]
+\end{pyin}
+
+
+
+
+
+\begin{pyin}
+'Tea'
+\end{pyin}
+
+
+
+
+
+\subsection{Define a function}
+\label{sec:define_a_function}
+
+Define a function using the \texttt{def} keyword (short for define):
+
+
+\begin{api}
+def name(variable1, variable2, ...):
+    """
+    A docstring between triple quotation to describe what is happening
+    """
+    INDENTED BLOCK OF CODE
+    return output
+\end{api}
+
+For example define \(f:\mathbb{R}\to\mathbb{R}\) given by \(f(x) = x ^
+3\) using the following:
+
+
+
+
+\begin{pyin}
+def x_cubed(x):
+    """
+    A function to return x ^ 3
+    """
+    return x ** 3
+\end{pyin}
+
+It is important to include the \texttt{docstring} as this allows us to make sure our
+code is clear. You can access that docstring using \texttt{help}:
+
+\begin{pyin}
+help(x_cubed)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+Help on function x_cubed in module __main__:
+
+x_cubed(x)
+    A function to return x ^ 3
+\end{raw}
+
+
+
+
+
+\subsection{Call a function}
+\label{\detokenize{tools-for-mathematics/06-probability/how/main:call-a-function}}
+
+Once a function is defined call it using the \texttt{()}:
+
+
+\begin{api}
+name(variable1, variable2, ...)
+\end{api}
+
+
+
+For example:
+
+
+
+
+\begin{pyin}
+x_cubed(2)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+8
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+x_cubed(5)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+125
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+import sympy as sym
+
+x = sym.Symbol("x")
+x_cubed(x)
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle x^{3}\end{split}
+\end{equation*}
+
+
+
+
+\subsection{Run code based on a condition}
+\label{\detokenize{tools-for-mathematics/06-probability/how/main:conditional-running-of-code}}
+
+To run code depending on whether or not a particular condition is met use
+an \texttt{if} statement.
+
+
+\begin{raw}
+if condition:
+    INDENTED BLOCK OF CODE TO RUN IF CONDITION IS TRUE
+else:
+    OTHER INDENTED BLOCK OF CODE TO RUN IF CONDITION IS NOT TRUE
+\end{raw}
+
+
+
+These \texttt{if} statements are most useful when combined with functions. For example
+you can define the following function:
+\begin{equation*}
+\begin{split}
+    f(x) = \begin{cases}
+            x ^ 3&\text{ if }x < 0\\
+            x ^ 2&\text{ otherwise}
+            \end{cases}
+\end{split}
+\end{equation*}
+
+
+
+\begin{pyin}
+def f(x):
+    """
+    A function that returns x ^ 3 if x is negative.
+    Otherwise it returns x ^ 2.
+    """
+    if x < 0:
+        return x ** 3
+    return x ** 2
+\end{pyin}
+
+
+
+
+
+
+
+\begin{pyin}
+f(0)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+0
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+f(-1)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+-1
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+f(3)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+9
+\end{raw}
+
+
+
+
+
+Here is another example of a function that returns the price of a given item, if
+the item is not specific in the function then the price is 0:
+
+
+
+
+\begin{pyin}
+def get_price_of_item(item):
+    """
+    Returns the price of an item:
+
+    - 'Bread': 2
+    - 'Biscuits': 3
+    - 'Coffee': 1.80
+    - 'Tea': .50
+    - 'Toothpaste': 3.50
+
+    Other items will give a price of 0.
+    """
+    if item == "Bread":
+        return 2
+    if item == "Biscuits":
+        return 3
+    if item == "Coffee":
+        return 1.80
+    if item == "Tea":
+        return 0.50
+    if item == "Toothpaste":
+        return 3.50
+    return 0
+\end{pyin}
+
+
+
+
+
+
+
+\begin{pyin}
+get_price_of_item("Toothpaste")
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+3.5
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+get_price_of_item("Biscuits")
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+3
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+get_price_of_item("Rollerblades")
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+0
+\end{raw}
+
+
+
+
+
+\subsection{Create a list using a list comprehension}
+\label{sec:create_a_list_using_a_list_comprehension}
+
+You can create a new list from an old list using a \textbf{list comprehension}.
+
+
+\begin{api}
+collection = [f(item) for item in iterable]
+\end{api}
+
+
+
+This corresponds to building a set from another set in the usual mathematical
+notation:
+\begin{equation*}
+\begin{split}
+S_2 = \{f(x)\text{ for x in }S_1\}
+\end{split}
+\end{equation*}
+
+If \(f(x)=x - 5\) and \(S_1=\{2, 5, 10\}\) then you would have:
+\begin{equation*}
+\begin{split}
+S_2 = \{-3, 0, 5\}
+\end{split}
+\end{equation*}
+
+In Python this is done as follows:
+
+\begin{pyin}
+new_list = [object for object in old_list]
+\end{pyin}
+
+
+
+
+\begin{pyin}
+s_1 = [2, 5, 10]
+s_2 = [x - 5 for x in s_1]
+s_2
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+[-3, 0, 5]
+\end{raw}
+
+
+
+
+
+You can combine this with functions to write succinct efficient code.
+
+
+For example you can compute the price of a basket of goods using the following:
+
+
+
+
+\begin{pyin}
+basket = ["Tea", "Tea", "Toothpaste", "Bread"]
+prices = [get_price_of_item(item) for item in basket]
+prices
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+[0.5, 0.5, 3.5, 2]
+\end{raw}
+
+
+
+
+
+\subsection{Summing items in a list}
+\label{\detokenize{tools-for-mathematics/06-probability/how/main:adding-items-in-a-list}}
+
+You can compute the sum of items in a list using the \texttt{sum} tool:
+
+
+
+
+\begin{pyin}
+sum([1, 2, 3])
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+6
+\end{raw}
+
+
+
+
+
+You can also directly use \texttt{sum} without specifically creating the list. This
+corresponds to the following mathematical notation:
+
+\begin{equation*}
+\begin{split}
+    \sum_{s\in S}f(s)
+\end{split}
+\end{equation*}
+
+and is done using the following:
+
+\begin{pyin}
+sum(f(object) for object in old_list)
+\end{pyin}
+
+
+This gives the same result as:
+
+\begin{pyin}
+sum([f(object) for object in old_list])
+\end{pyin}
+
+
+but it is more efficient.
+Here is an example of getting the total price of a basket of goods:
+
+
+
+
+\begin{pyin}
+basket = ["Tea", "Tea", "Toothpaste", "Bread"]
+total_price = sum(get_price_of_item(item) for item in basket)
+total_price
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+6.5
+\end{raw}
+
+
+
+
+
+\subsection{Sample from an iterable}
+\label{\detokenize{tools-for-mathematics/06-probability/how/main:sample-from-an-iterable}}
+
+To randomly sample from any collection of items
+use the random library and the \texttt{choice} tool.
+
+
+\begin{api}
+random.choice(collection)
+\end{api}
+
+
+
+
+
+
+\begin{pyin}
+import random
+
+basket = ["Tea", "Tea", "Toothpaste", "Bread"]
+random.choice(basket)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+'Toothpaste'
+\end{raw}
+
+
+
+
+
+
+\subsection{Sample a random number}
+\label{\detokenize{tools-for-mathematics/06-probability/how/main:sample-a-random-number}}
+
+To sample a random number between 0 and 1 use the random library and the
+\texttt{random} tool.
+
+
+\begin{api}
+random.random()
+\end{api}
+
+
+
+For example:
+
+
+
+
+
+\begin{pyin}
+import random
+
+random.random()
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+0.7558634290782174
+\end{raw}
+
+
+
+
+
+
+\subsection{Reproduce random events}
+\label{sec:reproduce_random_events}
+
+The random numbers processes generated by the Python random module are what are
+called pseudo random which means that it is possible to get a computer to reproduce them by
+\textbf{seeding} the random process.
+
+
+\begin{api}
+random.seed(int)
+\end{api}
+
+
+
+
+
+\begin{pyin}
+import random
+
+random.seed(0)
+random.random()
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+0.8444218515250481
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+random.random()
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+0.7579544029403025
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+random.seed(0)
+random.random()
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+0.8444218515250481
+\end{raw}
+
+
+\section{Exercises}
+
+\begin{enumerate}
+
+\item 
+
+For each of the following, write a function, and repeatedly use it to simulate
+the probability of an event occurring with the following chances:
+\begin{enumerate}
+
+\item 
+
+\(\frac{2}{7}\)
+
+\item 
+
+\(\frac{1}{10}\)
+
+\item 
+
+\(\frac{1}{100}\)
+
+\item 
+
+\(1\)
+
+\end{enumerate}
+
+\item 
+
+Write a function, and repeatedly use it to simulate the probability of
+selecting a red token from each of the following configurations:
+\begin{enumerate}
+
+\item 
+
+A bag with 4 red tokens and 4 green tokens.
+
+\item 
+
+A bag with 4 red tokens, 4 green tokens and 10 yellow tokens.
+
+\item 
+
+A bag with 0 red tokens, 4 green tokens and 10 yellow tokens.
+
+\end{enumerate}
+
+\item 
+
+An experiment consists of selecting a token from a bag and spinning a coin. The bag contains 3 red tokens and 4 blue tokens. A token is selected at random from the bag, its colour is noted and then the token is returned to the bag.
+
+
+When a red token is selected, a biased coin with probability \(\frac{4}{5}\) of landing heads is spun.
+
+
+When a blue token is selected, a biased coin with probability \(\frac{2}{5}\) of landing heads is spun.
+\begin{enumerate}
+
+\item 
+
+Approximate the probability of picking a red token?
+
+\item 
+
+Approximate the probability of obtaining Heads?
+
+\item 
+
+If a heads is obtained, approximate the probability of having selected a red token.
+
+\end{enumerate}
+
+\item 
+
+On a randomly chose day, the probability of an individual travelling to school by car, bicycle or on foot is \(1/2\), \(1/6\) and \(1/3\) respectively. The probability of being late when using these methods of travel is \(1/5\), \(2/5\) and \(1/10\) respectively.
+\begin{enumerate}
+
+\item 
+
+Approximate the probability that an individual travels by foot and is late.
+
+\item 
+
+Approximate the probability that an individual is not late.
+
+\item 
+
+Given that an individual is late, approximate the probability that they did not travel on foot.
+
+\end{enumerate}
+
+\end{enumerate}
+
+
+\section{Further information}
+\label{\detokenize{tools-for-mathematics/06-probability/why/main:further-information}}\label{\detokenize{tools-for-mathematics/06-probability/why/main::doc}}
+
+\subsection{What is the difference between a Python list and a Python tuple?}
+\label{sec:what_is_the_difference_between_a_python_list_and_a_python_tuple}
+
+Two of the most used Python iterables are lists and tuples. In practice they
+have a number of similarities, they are both ordered collections of objects that
+can be used in list comprehensions as well as in other ways.
+\begin{itemize}
+\item 
+
+Tuples are \textbf{immutable}
+
+\item 
+
+Lists are \textbf{mutable}
+
+\end{itemize}
+
+
+This means that once created tuples cannot be changed and lists can.
+
+
+As a general rule of thumb: if you do not need to modify your iterable then use
+a tuple as they are more computationally efficient.
+
+
+
+\subsection{Why does the sum of booleans count the \texttt{True}s?}
+\label{\detokenize{tools-for-mathematics/06-probability/why/main:why-does-the-sum-of-booleans-counts-the-trues}}
+
+In the tutorial and elsewhere you created a list of booleans and then took the
+sum. Here are some of the steps:
+
+
+
+
+\begin{pyin}
+samples = ("Red", "Red", "Blue")
+\end{pyin}
+
+
+
+
+
+
+
+\begin{pyin}
+booleans = [sample == "Red" for sample in samples]
+booleans
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+[True, True, False]
+\end{raw}
+
+
+
+
+
+When you take the \texttt{sum} of that list you get a numeric value:
+
+
+
+
+\begin{pyin}
+sum(booleans)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+2
+\end{raw}
+
+
+
+
+
+This has in fact counted the \texttt{True} values as 1 and the \texttt{False} values as 0.
+
+
+
+
+\begin{pyin}
+int(True)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+1
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+int(False)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+0
+\end{raw}
+
+
+
+
+
+\subsection{What is the difference between \texttt{print} and \texttt{return}?}
+\label{\detokenize{tools-for-mathematics/06-probability/why/main:what-is-the-difference-between-print-and-return}}
+
+In functions you use the \texttt{return} statement. This does two things:
+\begin{enumerate}
+
+\item 
+
+Assigns a value to the function run;
+
+\item 
+
+Ends the function.
+
+\end{enumerate}
+
+
+The \texttt{print} statement \textbf{only} displays the output.
+
+
+As an example create the following set:
+\begin{equation*}
+\begin{split}
+    S = \{f(x)\text{ for }x \in \{0, \pi / 4, \pi / 2, 3\pi / 4\}\}
+\end{split}
+\end{equation*}
+
+where \(f(x)= \cos^2(x)\).
+
+
+The correct way to do this is:
+
+
+
+
+\begin{pyin}
+import sympy as sym
+
+
+def f(x):
+    """
+    Return the square of the cosine of x
+    """
+    return sym.cos(x) ** 2
+
+
+S = [f(x) for x in (0, sym.pi / 4, sym.pi / 2, 3 * sym.pi / 4)]
+S
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+[1, 1/2, 0, 1/2]
+\end{raw}
+
+
+
+
+
+If you replaced the \texttt{return} statement in the function definition with a
+\texttt{print} you obtain:
+
+
+
+
+\begin{pyin}
+def f(x):
+    """
+    Return the square of the cosine of x
+    """
+    print(sym.cos(x) ** 2)
+
+
+S = [f(x) for x in (0, sym.pi / 4, sym.pi / 2, 3 * sym.pi / 4)]
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+1
+1/2
+0
+1/2
+\end{raw}
+
+
+
+
+
+The function has been run and it displays the output.
+
+
+\textbf{However} if you look at what \texttt{S} is you see that the function has not returned
+anything:
+
+
+
+
+\begin{pyin}
+S
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+[None, None, None, None]
+\end{raw}
+
+
+
+
+
+
+
+\subsection{How does Python sample randomness?}
+\label{\detokenize{tools-for-mathematics/06-probability/why/main:how-does-python-sample-randomness}}
+
+When using the Python random module you are in fact generating a pseudo random
+process. True randomness is actually not common.
+
+
+Pseudo randomness is an important area of mathematics as strong algorithms that
+create unpredictable sequences of numbers are vital to cryptographic security.
+
+
+The specific algorithm using in Python for randomness is called the Mersenne
+twister algorithm is state of the art.
+
+
+\subsection{What is the difference between a docstring and a comment}
+\label{\detokenize{tools-for-mathematics/06-probability/why/main:what-is-the-difference-between-a-docstring-and-a-comment}}\label{\detokenize{tools-for-mathematics/06-probability/why/main:difference-between-a-docstring-and-a-comment}}
+
+In Python it is possible to write statements that are ignored using the \texttt{\#}
+symbol. This creates something called a “comment”. For example:
+
+
+
+
+\begin{pyin}
+# create a list to represent the tokens in a bag
+bag = ["Red", "Red", "Blue"]
+\end{pyin}
+
+A docstring however is something that is ``attached''' to a function and can be
+accessed by Python.
+If you rewrite the function to sample the experiment of the tutorial without a
+docstring but using comments you will have:
+
+
+
+
+
+\begin{pyin}
+def sample_experiment(bag):
+    # Select a token
+    selected_token = pick_a_token(container=bag)
+
+    # If the token is red then the probability of selecting heads is 2/3
+    if selected_token == "Red":
+        probability_of_selecting_heads = 2 / 3
+    # Otherwise it is 1 / 2
+    else:
+        probability_of_selecting_heads = 1 / 2
+
+    # Select a coin according to the probability.
+    if random.random() < probability_of_selecting_heads:
+        coin = "Heads"
+    else:
+        coin = "Tails"
+
+    # Return both the selected token and the coin.
+    return selected_token, coin
+\end{pyin}
+
+
+
+
+
+
+Now if you try to access the help for the function you will not get it:
+
+
+
+
+\begin{pyin}
+help(sample_experiment)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+Help on function sample_experiment in module __main__:
+
+sample_experiment(bag)
+\end{raw}
+
+
+Furthermore, if you look at the code with comments you will see that because of
+the choice of variable names the comments are in fact redundant.
+
+In software engineering it is generally accepted that comments indicate that
+your code is not clear and so it is preferable to write clear documentation
+explaining why something is done through docstrings.
+
+\begin{pyin}
+def sample_experiment(bag):
+    """
+    This samples a token from a given bag and then
+    selects a coin with a given probability.
+
+    If the sampled token is red then the probability
+    of selecting heads is 2/3 otherwise it is 1/2.
+
+    This function returns both the selected token
+    and the coin face.
+    """
+    selected_token = pick_a_token(container=bag)
+
+    if selected_token == "Red":
+        probability_of_selecting_heads = 2 / 3
+    else:
+        probability_of_selecting_heads = 1 / 2
+
+    if random.random() < probability_of_selecting_heads:
+        coin = "Heads"
+    else:
+        coin = "Tails"
+    return selected_token, coin
+\end{pyin}

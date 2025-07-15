@@ -1,0 +1,5 @@
+Running pytest with doctests
+
+A screenshot of the terminal in the terminal in Mac OS. This shows the command
+`python -m pytest --doctests-glob="README.md"` being run and the 5 tests in
+test_absorption.py as well as the doctest in README.md all pass.

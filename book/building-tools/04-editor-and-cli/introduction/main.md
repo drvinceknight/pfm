@@ -12,16 +12,18 @@ kernelspec:
   name: python3
 ---
 
+(chp:cli)=
+
 # Using a command line and an editor
 
 In the first part of this book we used Jupyter notebooks as an interface to
 Python. This has a number of advantages, the strongest of which is the ability
 to include both code and prose in the same document. From this part of the book
-onwards we will explore another approach to use Python which is to use the
-command line as a direct interface to your operating system and a code editor.
+onwards we will explore another approach to use Python which is to use
+a code editor and command line as a direct interface to your operating system.
 
 ```{important}
-In this chapter we will cover:
+In this chapter you will cover:
 
 - Using the cli.
 - Using an editor.

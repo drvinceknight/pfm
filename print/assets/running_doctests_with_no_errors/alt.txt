@@ -1,0 +1,4 @@
+Running doctests with errors.
+
+A screenshot of a terminal window in Mac OS. This shows the command `python
+-m doctest README.md` being run with no output.

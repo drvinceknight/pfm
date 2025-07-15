@@ -18,10 +18,12 @@ kernelspec:
 
 ## Create a tuple
 
-To create a tuple which is an ordered collection of objects that cannot be
-changed we use the `()` brackets.
+To create a tuple which is an ordered collection of objects that cannot
+be changed use the `()` brackets.
 
-````{tip}
+````{admonition} Usage
+:class: tip
+
 ```
 collection = (value_1, value_2, value_3, …, value_n)
 ```
@@ -38,10 +40,12 @@ basket
 
 ## How to access particular elements in a tuple
 
-If we need to we can access elements of this collection using `[]` brackets. The
-first element has index `0`:
+If you need to you can access elements of a collection using `[]`
+brackets. The first element has index `0`:
 
-```python
+```{admonition} Usage
+:class: tip
+
 tuple[index]
 ```
 
@@ -53,11 +57,11 @@ basket[1]
 
 (creating_boolean_variables)=
 
-## Creating boolean variables
+## Create boolean variables
 
 A boolean variable has one of two values: `True` or `False`.
 
-To create a boolean variable here are some of the things we can use:
+To create a boolean variable here are some of the things you can use:
 
 - Equality: `value == other_value`
 - Inequality `value != other_value`
@@ -65,7 +69,7 @@ To create a boolean variable here are some of the things we can use:
 - Less than or equal`value <= other_value`
 - Inclusion `value in iterable`
 
-This a subset of the operators available.
+This a subset of the operators available. For example:
 
 For example:
 
@@ -128,11 +132,13 @@ not False
 
 (creating_an_iterable_with_a_given_number_of_items)=
 
-## Creating an iterable with a given number of items
+## Create an iterable with a given number of items
 
 The `range` tool gives a given number of integers.
 
-````{tip}
+````{admonition} Usage
+:class: tip
+
 ```
 range(number_of_integers)
 ```
@@ -148,24 +154,27 @@ tuple(range(10))
 `range(N)` gives the integers from 0 until $N - 1$ (inclusive).
 ```
 
-It is also possible to pass two values as inputs so that we have a different lower bound:
+It is also possible to pass two values as inputs so that you have a
+different lower bound:
 
 ```{code-cell} ipython3
 tuple(range(4, 10))
 ```
 
-It is also possible to pass a third value as an step size:
+It is also possible to pass a third value as a step size:
 
 ```{code-cell} ipython3
 tuple(range(4, 10, 3))
 ```
 
-## Creating permutations of a given set of elements
+## Create permutations of a given set of elements
 
 The python `itertools` library has a `permutations` tool that will generate all
 permutations of a given set.
 
-````{tip}
+````{admonition} Usage
+:class: tip
+
 ```
 itertools.permutations(iterable)
 ```
@@ -184,11 +193,14 @@ It is possible to limit the size to only be permutations of size `r`:
 tuple(itertools.permutations(basket, r=2))
 ```
 
-## Creating combinations of a given set of elements
+## Create combinations of a given set of elements
 
-The python `itertools` library has a `combinations` tool that will generate all combinations of size `r` of a given set:
+The python `itertools` library has a `combinations` tool that will
+generate all combinations of size `r` of a given set:
 
-````{tip}
+````{admonition} Usage
+:class: tip
+
 ```
 itertools.combinations(iterable, r)
 ```
@@ -206,16 +218,16 @@ are sorted.
 
 (adding_items_in_a_tuple)=
 
-## Adding items in a tuple
+## Summing items in a iterable
 
-We can compute the sum of items in a list using the `sum` tool:
+You can compute the sum of items in an iterable using the `sum` tool:
 
 ```{code-cell} ipython3
 sum((1, 2, 3))
 ```
 
-We can also directly use the `sum` without specifically creating the list. This
-corresponds to the following mathematical notation:
+You can also directly use the `sum` without specifically creating the
+iterable. This corresponds to the following mathematical notation:
 
 $$
     \sum_{s\in S}f(s)
@@ -223,9 +235,13 @@ $$
 
 and is done using the following:
 
-```python
+````{admonition} Usage
+:class: tip
+
+```
 sum(f(object) for object in old_list)
 ```
+````
 
 Here is an example of calculating the following sum:
 
@@ -237,12 +253,16 @@ $$
 sum(n ** 2 for n in range(11))
 ```
 
-Finally we can compute conditionally sums by only summing over elements that
-meet a given condition using the following:
+You can compute conditional sums by only summing over elements that meet
+a given condition using the following:
 
-```python
+````{admonition} Usage
+:class: tip
+
+```
 sum(f(object) for object in old_list if condition)
 ```
+````
 
 Here is an example of calculating the following sum:
 
@@ -254,11 +274,13 @@ $$
 sum(n ** 2 for n in range(11) if n % 2 == 1)
 ```
 
-## Directly computing \\(n!\\)
+## Directly compute \\(n!\\)
 
 The `math` library has a `factorial` tool.
 
-````{tip}
+````{admonition} Usage
+:class: tip
+
 ```
 math.factorial(N)
 ```
@@ -270,11 +292,13 @@ import math
 math.factorial(5)
 ```
 
-## Directly computing ${n \choose i}$
+## Directly compute ${n \choose i}$
 
 The `scipy.special` library has a `comb` tool.
 
-````{tip}
+````{admonition} Usage
+:class: tip
+
 ```
 scipy.special.comb(n, i)
 ```
@@ -292,7 +316,9 @@ scipy.special.comb(3, 2)
 
 The `scipy.special` library has a `perm` tool.
 
-````{tip}
+````{admonition} Usage
+:class: tip
+
 ```
 scipy.special.perm(n, i)
 ```

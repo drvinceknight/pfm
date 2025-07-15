@@ -1,0 +1,7 @@
+A screenshot of the Jupyter notebook interface.
+
+This shows a web browser window with the url in a blue circle. The address is a
+localhost.
+
+It also shows a list of files and directories with a user interface which
+includes the button: "New".

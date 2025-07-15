@@ -1,0 +1,5 @@
+Syntax coloring and a plug in suggestion.
+
+A screenshot showing the algebra.py file in VS code with syntax coloring of the
+code. It also shows a suggestion in the lower right corner of the screen for a
+VS code plugin for python files.

@@ -12,27 +12,29 @@ kernelspec:
   name: python3
 ---
 
+(chp:calculus)=
+
 # Calculus
 
-As of 2020, the A-level syllabus includes Calculus which
-<https://www.cambridgeinternational.org/Images/415060-2020-2022-syllabus.pdf>
-describes as:
+The A-level syllabus describes Calculus describes as:
 
-> Calculus: this is a fundamental element which describes change in dynamic
-> situations and underlines the links between functions and graphs.
+> "Calculus: this is a fundamental element which describes change in
+> dynamic situations and underlines the links between functions and
+> graphs."
 
 In practice this often means:
 
-- taking limits of functions;
-- differentiating functions;
-- integrating functions.
+- taking of functions;
+- functions;
+- functions.
 
-Here we will see how to instruct a computer to carry out these techniques.
+Here you will see how to instruct a computer to carry out these
+techniques.
 
 ```{important}
-In this chapter we will cover:
+In this chapter you will cover:
 
-- Taking limits.
-- Differentiating functions.
-- Computing definite and indefinite integrals.
+-   Taking of functions.
+-   Differentiating functions.
+-   Computing definite and indefinite integrals.
 ```

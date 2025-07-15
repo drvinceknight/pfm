@@ -1,0 +1,5 @@
+Opening a notebook
+
+A screenshot showing the Jupyter notebook interface. A directory tree is boxed
+in blue showing: "Desktop/cfm/nbs" and also contains an "introduction.ipynb"
+file.

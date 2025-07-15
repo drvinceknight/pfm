@@ -1,0 +1,686 @@
+\chapter{Documentation}
+\label{chp:documentation} 
+
+This is the second of three chapters that aims to move from writing code
+that works to writing software. In this particular chapter you will consider how
+to write documentation for your code.
+
+\begin{note}
+In this chapter you will cover:
+\begin{itemize}
+\item 
+
+Using the \index{Diataxis} framework for
+documentation~\cite{Procida_Diataxis_documentation_framework}.
+
+\end{itemize}
+\end{note}
+
+
+
+
+\section{Tutorial}
+\label{sec:documentation_tutorial}
+
+In this tutorial you will write documentation for the code
+you wrote in Section~\ref{sec:modularisation_tutorial}.
+
+
+You start by creating a new file in VScode called \texttt{README.md}.
+
+\begin{note}
+You will be writing your documentation in markdown.
+\end{note}
+
+
+Start by writing the title of your library and a quick single sentence
+description.
+
+\begin{md}
+# Absorption
+
+Functionality to study the absorbing Markov chains.
+\end{md}
+
+
+\subsection{Writing a tutorial}
+\label{\detokenize{building-tools/06-documentation/tutorial/main:writing-a-tutorial}}
+
+You will then write your first section which is a \textbf{tutorial}.
+
+\begin{note}
+The goal of a tutorial is to provide a hands on introduction and demonstration
+of the software.
+\end{note}
+
+\begin{md}
+
+In this tutorial we will see how to use `absorption` to study an absorbing
+Markov chain. For some background information on absorbing Markov chains we
+recommend: <https://en.wikipedia.org/wiki/Absorbing_Markov_chain>.
+
+Given a transition matrix $P$ defined by:
+
+$$
+p = \begin{pmatrix}
+   1/2 & 1/4 & 1/4\\
+   1/3 & 1/3 & 1/3\\
+   0   & 0   & 1
+    \end{pmatrix}
+$$
+
+We will start by seeing how the chain evolves over time by starting with an
+initial vector $\pi=(1,0,0)$. In the next code snippet we will import the
+necessary libraries and create both $P$ and $\pi$:
+
+```python
+import numpy as np
+
+import absorption
+
+pi = np.array([1, 0, 0])
+P = np.array([[1 / 2, 1 / 4, 1 / 4], [1 / 3, 1 / 3, 1 / 3], [0, 0, 1]])
+```
+
+We now see how the vector $\pi$ changes over time:
+
+```python
+for k in range(10):
+    print(absorption.get_long_run_state(pi, k, P))
+```
+
+This will give:
+
+```
+[1. 0. 0.]
+[0.5  0.25 0.25]
+[0.33333333 0.20833333 0.45833333]
+[0.23611111 0.15277778 0.61111111]
+[0.16898148 0.1099537  0.72106481]
+[0.12114198 0.0788966  0.79996142]
+[0.08686986 0.05658436 0.85654578]
+[0.06229638 0.04057892 0.8971247 ]
+[0.0446745 0.0291004 0.9262251]
+[0.03203738 0.02086876 0.94709386]
+```
+
+We see that, as expected over time the probability of being in the third state,
+which is absorbing, increases.
+
+We can also use `absorption` to get the average number of steps until
+absorption from each state:
+
+```python
+absorption.compute_t(P)
+```
+
+This gives:
+
+```
+array([3.66666667, 3.33333333])
+```
+
+We see that the expected amounts of steps from the first state is slightly more
+than from the second.
+\end{md}
+
+This \textbf{tutorial} section allows newcomers to your code to see how it is intended
+to be used.
+
+\subsection{Writing the how-to guides}
+\label{\detokenize{building-tools/06-documentation/tutorial/main:writing-the-how-to-guides}}
+
+In the next section you will write a series of \textbf{how to} guides, this is
+targeted
+at someone who has perhaps worked through the tutorial already and wants to
+directly know how to do a specific task.
+
+Directly underneath what you have written so far write:
+
+\begin{md}
+
+## How to guides
+
+### How to compute the long run state of a system after a given number of steps
+
+Given a transition matrix $P$ and a state vector $\pi$, the state of the system
+after $k$ steps is given by:
+
+```python
+import numpy as np
+
+import absorption
+
+pi = np.array([0, 1, 0])
+P = np.array([[1 / 3, 1 / 3, 1 / 3], [1 / 4, 1 / 4, 1 / 2], [0, 0, 1]])
+absorption.get_long_run_state(pi=pi, k=10, P=P)
+```
+
+This gives:
+
+```
+array([0.0019552, 0.0019552, 0.9960896])
+```
+
+### How to extract the transitive state transition sub matrix $Q$
+
+Given a transition matrix $P$, the sub matrix $Q$ that
+corresponds to the transitions between transitive (i.e. not absorbing) states can
+be extracted:
+
+```python
+import numpy as np
+
+import absorption
+
+P = np.array([[1 / 3, 1 / 3, 1 / 3], [0, 1, 0], [1 / 4, 1 / 4, 1 / 2]])
+absorption.extract_Q(P=P)
+```
+
+This gives:
+
+```
+array([[0.33333333, 0.33333333],
+       [0.25      , 0.5       ]])
+```
+
+### How to compute the fundamental matrix $N$
+
+Given a transition matrix $P$, the fundamental matrix $N$
+can be obtained:
+
+```python
+import numpy as np
+
+import absorption
+
+P = np.array([[1 / 3, 1 / 3, 1 / 3], [0, 1, 0], [1 / 4, 1 / 4, 1 / 2]])
+Q = absorption.extract_Q(P=P)
+absorption.compute_N(Q=Q)
+```
+
+This gives:
+
+```
+array([[2.        , 1.33333333],
+       [1.        , 2.66666667]])
+```
+
+### How to compute the average steps until absorption
+
+Given a transition matrix $P$ and a state vector $\pi$, the average number of
+steps until absorption from all states can be obtained:
+
+```python
+import numpy as np
+
+import absorption
+
+P = np.array([[1 / 3, 1 / 3, 1 / 3], [0, 1, 0], [1 / 4, 1 / 4, 1 / 2]])
+absorption.compute_t(P=P)
+```
+
+This gives:
+
+```
+array([3.33333333, 3.66666667])
+```
+\end{md}
+
+This \textbf{how to} section is an efficient collection of instructions to be
+able to carry out specific tasks made possible by the software.
+
+
+\subsection{Writing the explanations section}
+\label{\detokenize{building-tools/06-documentation/tutorial/main:writing-the-explanations-section}}
+
+In the next section you will write the \textbf{explanations} which aims to give more
+in depth understanding not necessarily directly related to the code.
+
+\begin{md}
+## Explanation
+
+### Brief overview of absorbing Markov chains
+
+A Markov chain with a given transition matrix $P$ is a system that moves from
+state to state randomly with the probabilities given by $P$.
+
+For example:
+
+$$
+P = \begin{pmatrix}
+        1 / 3 & 1 / 3 & 1 / 3 \\
+        0     & 1     & 0     \\
+        1 / 4 & 1 / 4 & 1 / 2
+    \end{pmatrix}
+$$
+
+The corresponding Markov chain has 3 states and:
+
+- $P_{11}=1/3$ means that when in state 1 there is a 1/3 chance of staying in
+  state 1.
+- $P_{23}=0$ means that when in state 2 there is a 0 chance of staying in
+  state 1.
+- $P_{22}=$ actually implies that once we are in state 2 that the only next
+  state is state 2.
+
+In general:
+
+$$
+    P_{ij} > 0 \text{ for all }ij
+$$
+
+$$
+    \sum_{j=0}^{|P|} P_{ij} = 1 \text{ for all }i
+$$
+
+If $P_{ii}=1$ then state $i$ is an absorbing state from which no further changes
+can occur.
+
+In the case of absorbing markov chains there are a number of quantities that can
+be measured.
+
+### Calculating the state after a given number of iterations
+
+Given a vector that describes the state of the system $\pi$ and a transition
+matrix $P$, the state of the system after $k$ iterations will be given by the
+following vector:
+
+$$
+    \pi P ^ k
+$$
+
+### The canonical form of the transition matrix
+
+A transition matrix $P$ is written in its canonical form when it can be written
+as:
+
+$$
+  P =
+  \left(\begin{array}{c|c}
+    Q & R \\\hline
+    0 & I
+  \end{array}\right)
+$$
+
+Where $Q$ is the matrix of transitions between non absorbing states.
+
+For example, the canonical form of $P$ would be:
+
+$$
+    \begin{pmatrix}
+        1 / 3 & 1 / 3 & 1 / 3 \\
+        1 / 4 & 1 / 2 & 1 / 4 \\
+        0     &  0    & 1     \\
+    \end{pmatrix}
+$$
+
+which would give:
+
+$$
+Q = \begin{pmatrix}
+    1 / 3 & 1 / 3 \\
+    1 / 4 & 1 / 2
+    \end{pmatrix}
+$$
+
+### The fundamental matrix
+
+Given $Q$ the fundamental matrix $N$ is defined as:
+
+$$N = (I - Q) ^{-1}$$
+
+$N_{ij}$ corresponds to the expected number of times the chain will be in state
+$j$ given that it started in state $i$.
+
+### The expected number of steps until absorption.
+
+Given $N$, the expected number of steps until absorption is given by the vector:
+
+$$
+t = N \mathbb{1}
+$$
+
+where $\mathbb{1}$ denotes a vector of 1s.
+\end{md}
+
+This \textbf{explanations} section gives background reading as to how the code works.
+
+
+\subsection{Writing the reference section}
+\label{\detokenize{building-tools/06-documentation/tutorial/main:writing-the-reference-section}}
+
+In the next section you will write the \textbf{reference} which aims to be a concise
+collection of reference material.
+
+\begin{md}
+## Reference
+
+### List of functionality
+
+The following functions are written in `absorption`:
+
+- `get_long_run_state`
+- `extract_Q`
+- `compute_N`
+- `compute_t`
+
+### Bibliography
+
+The wikipedia page on absorbing Markov chains gives a good overview of the
+topic: <https://en.wikipedia.org/wiki/Absorbing_Markov_chain>
+
+The following text is a recommended reference on Markov chains:
+
+> Stewart, William J. Probability, Markov chains, queues, and simulation: the
+> mathematical basis of performance modelling. Princeton university press, 2009.
+\end{md}
+
+Figure~\ref{fig:documentation_in_vscode} shows the start of the markdown file
+in VScode alongside the preview. Note that the \texttt{Markdown all in one} plugin ensures that
+the mathematics is rendered see Section~\ref{sec:plugins_for_vs_code} for
+information on installing plugins.
+
+\begin{figure}[htbp]
+\centering
+
+
+\includegraphics[width=0.750\linewidth]{./assets/documentation_in_vscode/main.png}
+\caption{The \texttt{README.md} file in VScode with the rendered preview (using
+the \texttt{Markdown all in one} plugin).}
+\label{fig:documentation_in_vscode}
+\end{figure}
+
+\section{How to}
+\label{\detokenize{building-tools/06-documentation/how/main:how}}\label{\detokenize{building-tools/06-documentation/how/main::doc}}
+
+\subsection{Write documentation}
+\label{\detokenize{building-tools/06-documentation/how/main:how-to-write-documentation}}
+
+Follow the Diataxis framework~\cite{Procida_Diataxis_documentation_framework} for documentation.
+
+This involves separating your documentation in to 4 different sections based on
+separate aims for readers.
+\begin{itemize}
+\item 
+
+Tutorial: for learning.
+
+\item 
+
+How to guides: to achieve a specific goal.
+
+\item 
+
+Explanation: to understand.
+
+\item 
+
+Reference: to find information.
+
+\end{itemize}
+
+
+\subsubsection{Write a tutorial}
+
+A tutorial should include step by step instructions with expected behaviours.
+This should not focus on any deeper explanation.
+
+An analogy of this is teaching a young toddler to build a toy train
+track. They do not need to know the physics related to how the train will go
+through the track. They need only to see how to lay the track pieces.
+
+\subsubsection{How to write a how to guide}
+\label{\detokenize{building-tools/06-documentation/how/main:how-to-write-a-how-to-guide}}\label{\detokenize{building-tools/06-documentation/how/main:id2}}
+
+A how to guide should provide a quick and to the point description of how to
+solve a specific problem.
+
+An analogy of this would be a recipe. The recipe will not necessarily explain
+how to chop an onion and/or why you are chopping an onion. It will tell you
+how to chop an onion as a step of cooking a particular meal.
+
+\subsubsection{How to write an explanation section}
+\label{\detokenize{building-tools/06-documentation/how/main:how-to-write-an-explanation-section}}\label{\detokenize{building-tools/06-documentation/how/main:id3}}
+
+The explanation section should provide a deeper understanding of the concepts
+under the code.
+
+An analogy of this again related to a recipe would be a book on the chemistry of
+taste and why a chopped onion adds a specific type of flavour to a meal.
+
+\subsubsection{How to write a reference section}
+\label{\detokenize{building-tools/06-documentation/how/main:how-to-write-a-reference-section}}\label{\detokenize{building-tools/06-documentation/how/main:id4}}
+
+The reference section should provide an overview of the specific tools, commands
+and indeed place for background reading as well (although this can also be
+referred to in the explanation section).
+
+\subsection{Write markdown}
+\label{sec:how_to_write_markdown}
+
+\subsubsection{How to include section headers in markdown}
+\label{\detokenize{building-tools/06-documentation/how/main:how-to-include-section-headers-in-markdown}}\label{\detokenize{building-tools/06-documentation/how/main:id5}}
+
+To include a section header in markdown use \texttt{\#}. The number of \texttt{\#} corresponds
+to the level of the section header.
+
+\begin{md}
+# Section
+\end{md}
+
+
+For example:
+
+\begin{md}
+# The absorption library
+
+Functionality to study the absorbing Markov chains.
+\end{md}
+
+
+
+
+\subsubsection{Include code in markdown}
+\label{\detokenize{building-tools/06-documentation/how/main:how-to-include-code-in-markdown}}\label{\detokenize{building-tools/06-documentation/how/main:id6}}
+
+To include code in markdown use three ` marks followed by the name of the
+language:
+
+\begin{md}
+```<language>
+
+<code>
+```
+\end{md}
+
+
+For example:
+
+\begin{md}
+```python
+import sympy as sym
+
+x = sym.Symbol(''x'')
+```
+\end{md}
+
+
+It is also possible to include code in markdown using an indented block:
+
+
+For example:
+
+\begin{md}
+Here is some code:
+
+    import sympy as sym
+
+    x = sym.Symbol(''x'')
+\end{md}
+
+
+\begin{note}
+Using an indented block does not allow you to specify the language and can lead
+to mistake when combining with other nested statement.
+\end{note}
+
+
+\subsubsection{Include a hyperlink in markdown}
+\label{\detokenize{building-tools/06-documentation/how/main:how-to-include-a-hyperlink-in-markdown}}\label{\detokenize{building-tools/06-documentation/how/main:id7}}
+
+To include a hyperlink in markdown use \texttt{{[}{]}()}
+language:
+
+\begin{md}
+[text](url)
+\end{md}
+
+
+For example:
+
+\begin{md}
+The [Online Encyclopedia of Integer Sequences](https://oeis.org) is a good resources for studying
+resources.
+\end{md}
+
+
+\subsubsection{Include an image in markdown}
+\label{\detokenize{building-tools/06-documentation/how/main:how-to-include-an-image-in-markdown}}\label{\detokenize{building-tools/06-documentation/how/main:id8}}
+
+To include an image in markdown use \texttt{!{[}{]}()}:
+
+\begin{md}
+![caption](path)
+\end{md}
+
+
+For example:
+
+\begin{md}
+Here is an image:
+
+![An image](image.jpg)
+\end{md}
+
+\begin{note}
+
+If the image file is not located in the same directory as the markdown file the
+path to the file must be correct.
+\end{note}
+
+
+
+
+\section{Exercises}
+
+Write documentation for the \texttt{statistics.py} file written in the exercises of
+Chapter~\ref{chp:modularisation}.
+
+
+\section{Further information}
+\label{\detokenize{building-tools/06-documentation/why/main:further-information}}\label{\detokenize{building-tools/06-documentation/why/main:documentation-further-information}}\label{\detokenize{building-tools/06-documentation/why/main::doc}}
+
+\subsection{What is documentation?}
+\label{\detokenize{building-tools/06-documentation/why/main:what-is-documentation}}
+
+Documentation can have many different interpretations. A good definition is
+given in \cite{martraire2019living}.
+
+\begin{quote}
+``The process of transferring valuable knowledge to other people now and also to
+people in the future.''
+\end{quote}
+
+\begin{note}
+It is important to realise that the target of the documentation can be the
+writer of the software itself at a future date.
+\end{note}
+
+
+There are two types of documentation:
+\begin{itemize}
+\item 
+
+\textbf{Internal documentation} which includes things like docstrings and a good
+choice of variable names.
+
+\item 
+
+\textbf{External documentation} which includes things like the \texttt{README.md} and other
+separate documentation.
+
+\end{itemize}
+
+
+For a software project to be well documented it needs \textbf{both} internal and
+external documentation.
+
+
+In~\cite{martraire2019living} there are 
+4 properties of documentation:
+\begin{itemize}
+\item 
+
+Reliable: it needs to be accurate.
+
+\item 
+
+Low effort: it should require minimal effort when changes are made to the code
+base.
+
+\item 
+
+Collaborative: it should be a tool from which collaboration can occur.
+
+\item 
+
+Insightful: it should give information not only to be able to use the code but
+also to understand specific reasons why certain decisions have been made as to
+its design.
+
+\end{itemize}
+
+
+\subsection{What is the purpose of the four separate sections in documentation?}
+
+As discussed in~\cite{Procida_Diataxis_documentation_framework}:
+\begin{quote}
+
+
+``Tutorials are lessons that take the reader by the hand through a series of
+steps to complete a project of some kind. They are what your project needs in
+order to show a beginner that they can achieve something with it.''
+\end{quote}
+
+
+\begin{quote}
+``How-to guides take the reader through the steps required to solve a
+real-world problem'''
+\end{quote}
+
+\begin{quote}
+``Reference guides are technical descriptions of the machinery and how to
+operate it.''
+\end{quote}
+
+\begin{quote}
+``Explanation, or discussions, clarify and illuminate a particular topic. They
+broaden the documentation’s coverage of a topic.''
+\end{quote}
+
+
+It is natural when describing a project for the boundaries between these four
+topics to become fuzzy. Thus, having them explicitly in four separate sections
+ensures the reader is able to specifically find what they need.
+
+\subsection{What alternatives are there to writing documentation in the \texttt{README.md} file?}
+
+A single \texttt{README.md} file is a good way to start documenting code. However as a
+project grows it could be beneficial to use some other tools. One such example
+of this is to use \texttt{sphinx}. This uses a
+different markup language called \textbf{restructured text}
+ and helps build more complex
+documents but also interfaces to the code itself if necessary. For example, it
+is possible to include the code docstrings directly in the documentation (a good
+way of adding to the reference section).

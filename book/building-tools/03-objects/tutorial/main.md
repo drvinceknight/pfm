@@ -16,7 +16,7 @@ kernelspec:
 
 # Tutorial
 
-We will here write some code to create and manipulate quadratic expressions.
+You will write some code to create and manipulate quadratic expressions.
 With `sympy` this is not necessary as all functionality required is available
 within `sympy` however this will be a good exercise in understanding how to
 build such functionality.
@@ -33,7 +33,7 @@ $$
 Without using `sympy`, obtain the roots for all the quadratics.
 ```
 
-We will start by defining an object to represent a quadratic. This is called a
+Start by defining an object to represent a quadratic. This is called a
 class.
 
 ```{code-cell} ipython3
@@ -85,8 +85,8 @@ Four functions were created with this class:
   instance.
 ```
 
-Let us now use this class to solve the specified problem. First we create
-instances the class that correspond to $f$ and $g$. This is using the `__init__`
+Now use this class to solve the specified problem. First create
+instances of the class that correspond to $f$ and $g$. This is using the `__init__`
 function in the background.
 
 ```{code-cell} ipython3
@@ -94,7 +94,7 @@ f = QuadraticExpression(a=5, b=2, c=-7)
 g = QuadraticExpression(a=-4, b=-3, c=12)
 ```
 
-We can now take a look at both of these instances. This is using the `__repr__`
+You can now take a look at both of these instances. This is using the `__repr__`
 function in the background:
 
 ```{code-cell} ipython3
@@ -105,7 +105,7 @@ f
 g
 ```
 
-Now we are going to create $h(x) = f(x) + g(x)$. This is using the `__add__`
+Now you are going to create $h(x) = f(x) + g(x)$. This is using the `__add__`
 function in the background:
 
 ```{code-cell} ipython3
@@ -113,7 +113,7 @@ h = f + g
 h
 ```
 
-We can now iterate over our quadratics and find the roots. This is using the
+You can now iterate over our quadratics and find the roots. This is using the
 `get_roots` function in the background:
 
 ```{code-cell} ipython3
@@ -123,16 +123,16 @@ roots = [quadratic.get_roots() for quadratic in (f, g, h)]
 roots
 ```
 
-We see that $f$ and $g$ have real valued roots but $h$ does not. We can check
+Note that $f$ and $g$ have real valued roots but $h$ does not. You can check
 the value of the discriminant of $h$:
 
 ```{code-cell} ipython3
 h.discriminant
 ```
 
-We are going to now create a new class from `QuadraticExpression` where we
-replace the `get_roots` function with a new one that can handle imaginary roots
-and update the `__add__` function to make sure we return an instance of the new
+You are going to create a new class from `QuadraticExpression`
+replacing the `get_roots` function with a new one that can handle imaginary roots
+and update the `__add__` function to return an instance of the new
 class.
 
 ```{code-cell} ipython3
@@ -170,7 +170,7 @@ class QuadraticExpressionWithAllRoots(QuadraticExpression):
         )
 ```
 
-Now let us define our quadratics once again but using this new class:
+Now define the quadratics once again but using this new class:
 
 ```{code-cell} ipython3
 f = QuadraticExpressionWithAllRoots(a=5, b=2, c=-7)
@@ -191,7 +191,7 @@ h
 ```
 
 ````{attention}
-We have not needed to redefine `__init__`, or `__repr__` as the new
+There is no need to redefine `__init__`, or `__repr__` as the new
 class inherits these from `QuadraticExpression` due to this statement:
 
 ```
@@ -199,7 +199,7 @@ class QuadraticExpressionWithAllRoots(QuadraticExpression):
 ```
 ````
 
-We can now get all the roots for both quadratics:
+You can now get all the roots for the quadratics:
 
 ```{code-cell} ipython3
 :tags: [nbval-ignore-output]

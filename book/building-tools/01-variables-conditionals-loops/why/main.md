@@ -17,7 +17,7 @@ kernelspec:
 ## Why can I not only use a `while` loop
 
 The `for` loop allows us to iterate over any selection of objects. Some
-languages do not have a generic `for` loop like this. In some cases it is only
+languages do not have a generic `for` loop. In some cases it is only
 possible to iterate over a set of integers (similar to the `for i in range(n)`
 pattern) or to only use a `while` loop.
 

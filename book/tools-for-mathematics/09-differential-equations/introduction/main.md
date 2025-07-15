@@ -12,15 +12,18 @@ kernelspec:
   name: python3
 ---
 
+(chp:differential_equations)=
+
 # Differential Equations
 
-A differential equation is an equation that relates one or more quantities and
-their derivatives. These can often be used to model real world systems.
+A differential equation is an equation that relates one or more
+quantities and their derivatives. These can often be used to model real
+world systems.
 
 ```{important}
-In this chapter we will cover:
+In this chapter you will cover:
 
-- How to create a symbolic function
-- How to write a differential equation
-- How to solve a differential equation
+-   Creating a symbolic function;
+-   Writing a differential equation;
+-   Solving a differential equation.
 ```

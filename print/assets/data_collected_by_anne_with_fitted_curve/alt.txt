@@ -1,0 +1,4 @@
+A scatter plot of the data collected by Anna
+
+This shows a scatter plot of points of heart rate against exercises minutes with
+a fitted curve that decreases as exercise minutes increases.

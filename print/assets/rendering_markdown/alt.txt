@@ -1,0 +1,4 @@
+Rendering markdown
+
+A screenshot of the Jupyter interface. This shows rendered markdown describing
+some mathematics. It includes rendered mathematical formula.

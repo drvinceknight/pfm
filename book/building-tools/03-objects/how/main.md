@@ -12,11 +12,11 @@ kernelspec:
   name: python3
 ---
 
-# How
+# How to
 
-## How to define a class
+## Define a class
 
-We define a class using the `class` keyword:
+Define a class using the `class` keyword:
 
 ````{tip}
 ```
@@ -37,7 +37,7 @@ class Country:
     """
 ```
 
-## How to create an instance of the class
+## Create an instance of the class
 
 Once a class is defined we call it using the `()`:
 
@@ -66,19 +66,19 @@ second_country
 The at … is a pointer to the location of the instance in memory. If you re run
 the code that location will change.
 
-## How to create an attribute
+## Create an attribute
 
 Attributes are variables that belong to instances of classes. There can be
 created and accessed using `.name_of_variable`.
 
-For example, the following creates the attributes:
+For example, the following creates the attributes `name` and `amount_of_magic`:
 
 ```{code-cell} ipython3
-first_country.name = "Narnia"
+first_country.name = "narnia"
 first_country.amount_of_magic = 500
 ```
 
-We can access them:
+You can access them:
 
 ```{code-cell} ipython3
 first_country.name
@@ -88,7 +88,7 @@ first_country.name
 first_country.amount_of_magic
 ```
 
-We can manipulate them in place:
+You can manipulate them in place:
 
 ```{code-cell} ipython3
 first_country.amount_of_magic += 100
@@ -151,7 +151,7 @@ class Country:
         self.amount_of_magic -= amount_spent
 ```
 
-Now we can use it:
+Now use it:
 
 ```{code-cell} ipython3
 first_country = Country()
@@ -163,7 +163,7 @@ first_country.amount_of_magic
 
 ```{attention}
 Even though the method is defined as taking two variables as inputs: `self` and
-`amount_spent` we only have to explicitly pass it `amount_spent`. The first
+`amount_spent` you only have to explicitly pass it `amount_spent`. The first
 variable in a method definition always corresponds to the instance on which the
 method exists.
 ```
@@ -177,7 +177,7 @@ Some methods can be called in certain situations:
 - When creating an instance.
 - When wanting to display an instance.
 
-This are referred to as dunder methods as they are all in between two
+There are referred to as dunder methods as they are all in between two
 underscores: `__`.
 
 The method that is called when an instance is created is called `__init__` (for

@@ -14,7 +14,7 @@ kernelspec:
 
 # Tutorial
 
-Similarly to the previous chapter, we will use a computer to gain numerical
+Similarly to the previous chapter, you will use a computer to gain numerical
 evidence for a problem.
 
 ```{admonition} Problem
@@ -34,7 +34,7 @@ $$
 $$
 ```
 
-We will start by defining a function for $a(n)$:
+You will start by defining a function for $a(n)$:
 
 ```{code-cell} ipython3
 import functools
@@ -66,19 +66,19 @@ def get_fibonacci(n):
 ```
 
 ```{attention}
-We are using caching in that function definition with `lru_cache`. This is not
-necessary but makes the code more efficient. We spoke about caching in
+This uses caching in that function definition with `lru_cache`. This is not
+necessary but makes the code more efficient. Caching is covered in
 {ref}`what_is_caching`.
 ```
 
-We will print the first 10 numbers to ensure everything is working correctly:
+You will print the first 10 numbers to ensure everything is working correctly:
 
 ```{code-cell} ipython3
 for n in range(10):
     print(get_fibonacci(n))
 ```
 
-Now we will write a function that returns a boolean: `True` if the equation
+Now write a function that returns a boolean: `True` if the equation
 holds for a given value of $n$, `False` otherwise.
 
 ```{code-cell} ipython3
@@ -107,7 +107,7 @@ def check_theorem(n):
     return sum_of_fibonacci == get_fibonacci(n + 2) - 1
 ```
 
-We can then generate checks for $n\leq 500$:
+Generate checks for $n\leq 500$:
 
 ```{code-cell} ipython3
 :tags: ["output_scroll"]
@@ -116,15 +116,9 @@ checks = [check_theorem(n) for n in range(501)]
 checks
 ```
 
-Confirm that all the booleans in `check` are `True`:
+Confirm that all the booleans in `checks` are `True`:
 
 ```{code-cell} ipython3
 
 all(checks)
-```
-
-```{attention}
-Similarly to `and` and `or` (see {ref}`how_to_combine_boolean_variables`), `all`
-is an operator that takes an iterable of booleans and returns if they are all
-`True`. Another similar operator is `any`.
 ```

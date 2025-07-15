@@ -66,9 +66,13 @@ The reference section should provide an overview of the specific tools, commands
 and indeed place for background reading as well (although this can also be
 referred to in the explanation section).
 
+(how_to_write_markdown)=
+
+## How to write markdown
+
 (how_to_include_section_headers_in_markdown)=
 
-## How to include section headers in markdown
+### How to include section headers in markdown
 
 To include a section header in markdown use `#`. The number of `#` corresponds
 to the level of the section header.
@@ -91,7 +95,7 @@ Functionality to study the absorbing Markov chains.
 
 (how_to_include_code_in_markdown)=
 
-## How to include code in markdown
+### How to include code in markdown
 
 To include code in markdown use three ` marks followed by the name of the
 language:
@@ -154,10 +158,9 @@ to mistake when combining with other nested statement.
 
 (how_to_include_a_hyperlink_in_markdown)=
 
-## How to include a hyperlink in markdown
+### How to include a hyperlink in markdown
 
-To include a hyperlink in markdown use `[]()`
-language:
+To include a hyperlink in markdown use `[]()`:
 
 ````{tip}
 ```md
@@ -174,10 +177,9 @@ resources.
 
 (how_to_include_an_image_in_markdown)=
 
-## How to include an image in markdown
+### How to include an image in markdown
 
-To include an image in markdown use `![]()`
-language:
+To include an image in markdown use `![]()`:
 
 ````{tip}
 ```md

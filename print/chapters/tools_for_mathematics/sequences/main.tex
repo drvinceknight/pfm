@@ -1,0 +1,675 @@
+\chapter{Sequences}
+\label{chp:sequences}
+
+The formal definition of sequences is a collection of ordered objects with
+potential repetitions.
+The study of these sequences leads to many interesting results. Here you will
+concentrate on using recursive definitions to generate the values in a sequence.
+
+\begin{note}
+In this chapter you will cover:
+\begin{itemize}
+\item 
+
+Using \index{recursion}.
+
+\end{itemize}
+\end{note}
+
+
+
+
+\section{Tutorial}
+\label{\detokenize{tools-for-mathematics/07-sequences/tutorial/main:tutorial}}\label{\detokenize{tools-for-mathematics/07-sequences/tutorial/main::doc}}
+
+You will solve the following problem using a computer using a programming
+technique called \textbf{recursion}.
+
+A sequence \(a_1, a_2, a_3, …\) is defined by:
+\begin{equation*}
+\begin{split}
+    \left\{
+    \begin{array}{l}
+        a_1 = k,\\
+        a_{n + 1} = 2a_n – 7, n \geq 1,
+    \end{array}
+    \right.
+\end{split}
+\end{equation*}
+
+where \(k\) is a constant.
+\begin{enumerate}
+
+\item 
+
+Write down an expression for \(a_2\) in terms of \(k\).
+
+\item 
+
+Show that \(a_3 = 4k -21\)
+
+\item 
+
+Given that \(\sum_{r=1}^4 a_r = 43\) find the value of \(k\).
+
+\end{enumerate}
+
+
+
+You will use Python to define a function that reproduces the mathematical
+definition of \(a_k\):
+
+
+
+
+\begin{pyin}
+def generate_a(k_value, n):
+    """
+    Uses recursion to return a_n for a given value of k:
+
+    a_1 = k
+    a_n = 2a_{n-1} - 7
+    """
+    if n == 1:
+        return k_value
+    return 2 * generate_a(k_value, n - 1) - 7
+\end{pyin}
+
+
+\begin{note}
+This is similar to the mathematical definition: the Python definition of
+the function refers to itself.
+\end{note}
+
+
+
+You can use this to compute \(a_3\) for \(k=4\):
+
+
+
+
+\begin{pyin}
+generate_a(k_value=4, n=3)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+-5
+\end{raw}
+
+
+
+
+
+You can use this to compute \(a_5\) for \(k=1\):
+
+
+
+
+\begin{pyin}
+generate_a(k_value=1, n=5)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+-89
+\end{raw}
+
+Finally it is also possible to pass a symbolic value to \texttt{k\_value}. This allows
+you to answer the first question:
+
+\begin{pyin}
+import sympy as sym
+
+k = sym.Symbol("k")
+generate_a(k_value=k, n=2)
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle 2 k - 7\end{split}
+\end{equation*}
+
+
+
+
+Likewise for \(a_3\):
+
+
+
+
+\begin{pyin}
+generate_a(k_value=k, n=3)
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle 4 k - 21\end{split}
+\end{equation*}
+
+
+
+
+For the last question start by computing the sum:
+\begin{equation*}
+\begin{split}
+    \sum_{r=1}^4 a_r
+\end{split}
+\end{equation*}
+
+
+
+\begin{pyin}
+sum_of_first_four_terms = sum(generate_a(k_value=k, n=r) for r in range(1, 5))
+sum_of_first_four_terms
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle 15 k - 77\end{split}
+\end{equation*}
+
+
+
+
+This allows you to create the given equation and solve it:
+
+
+
+
+\begin{pyin}
+equation = sym.Eq(sum_of_first_four_terms, 43)
+sym.solveset(equation, k)
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \left\{8\right\}\end{split}
+\end{equation*}
+
+
+
+
+
+\begin{note}
+In this tutorial you have
+\begin{itemize}
+\item 
+
+Defined a function using recursion.
+
+\item 
+
+Called this function using both numeric and symbolic values.
+
+\end{itemize}
+\end{note}
+
+
+
+
+
+\section{How to}
+\label{\detokenize{tools-for-mathematics/07-sequences/how/main:how}}\label{\detokenize{tools-for-mathematics/07-sequences/how/main::doc}}
+
+\subsection{Define a function using recursion}
+\label{\detokenize{tools-for-mathematics/07-sequences/how/main:define-a-function-using-recursion}}
+
+It is possible to define a recursive expression using a recursive function in
+Python. This requires two things:
+\begin{itemize}
+\item 
+
+A recursive rule: something that relates the current term to another one;
+
+\item 
+
+A base case: a particular term that does not need the recursive rule to be
+calculated.
+
+\end{itemize}
+
+
+Consider the following mathematical expression:
+\begin{equation*}
+\begin{split}
+    \left\{
+    \begin{array}{l}
+        a_1 = 1,\\
+        a_n = 2a_{n - 1}, n > 1,
+    \end{array}
+    \right.
+\end{split}
+\end{equation*}\begin{itemize}
+\item 
+
+The recursive rule is: \(a_n = 2a_{n - 1}\);
+
+\item 
+
+The base case is: \(a_1 = 1\).
+
+\end{itemize}
+
+
+In Python this can be written as:
+
+
+
+
+\begin{pyin}
+def generate_sequence(n):
+    """
+    Generate the sequence defined by:
+
+    a_1 = 1
+    a_n = 2 a_{n - 1}
+
+    This is done using recursion.
+    """
+    if n == 1:
+        return 1
+    return 2 * generate_sequence(n - 1)
+\end{pyin}
+
+
+
+
+
+Here you can get the first 7 terms:
+
+
+
+
+\begin{pyin}
+values_of_sequence = [generate_sequence(n) for n in range(1, 8)]
+values_of_sequence
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+[1, 2, 4, 8, 16, 32, 64]
+\end{raw}
+
+
+
+
+
+
+
+\section{Exercises}
+\label{\detokenize{tools-for-mathematics/07-sequences/exercises/main:exercises}}\label{\detokenize{tools-for-mathematics/07-sequences/exercises/main::doc}}
+
+\begin{enumerate}
+
+\item 
+
+Using recursion, obtain the first 10 terms of the following sequences:
+\begin{enumerate}
+
+\item 
+
+\(\left\{\begin{array}{l}a_1 = 1,\\a_n = 3a_{n - 1}, n > 1\end{array}\right.\)
+
+\item 
+
+\(\left\{\begin{array}{l}b_1 = 3,\\b_n = 6b_{n - 1}, n > 1\end{array}\right.\)
+
+\item 
+
+\(\left\{\begin{array}{l}c_1 = 3,\\c_n = 6c_{n - 1} + 3, n > 1\end{array}\right.\)
+
+\item 
+
+\(\left\{\begin{array}{l}d_0 = 3,\\d_n = \sqrt{d_{n - 1}} + 3, n > 0\end{array}\right.\)
+
+\end{enumerate}
+
+\item 
+
+Using recursion, obtain the first 5 terms of the \index{Fibonacci} sequence:
+\begin{equation*}
+\begin{split}
+   \left\{
+       \begin{array}{l}
+           a_0 = 0,\\
+           a_1 = 1,\\
+           a_n = a_{n - 1} + a_{n - 2}, n \geq 2
+       \end{array}
+   \right.
+   \end{split}
+\end{equation*}
+\item 
+
+A 40 year building programme for new houses began in Oldtown in the year 1951 (Year 1) and finished in 1990 (Year 40).
+
+
+The number of houses built each year form an arithmetic sequence with first term \(a\) and common difference \(d\).
+
+
+Given that 2400 new houses were built in 1960 and 600 new houses were built in 1990, find:
+\begin{enumerate}
+
+\item 
+
+The value of \(d\).
+
+\item 
+
+The value of \(a\).
+
+\item 
+
+The total number of houses built in Oldtown over 40 years.
+
+\end{enumerate}
+
+\item 
+
+A sequence is given by:
+\begin{equation*}
+\begin{split}
+       \left\{\begin{array}{l}
+       x_1 = 1\\
+       x_{n + 1}= x_n(p + x_n), n > 1
+       \end{array}\right.
+   \end{split}
+\end{equation*}
+
+for \(p\ne0\).
+\begin{enumerate}
+
+\item 
+
+Find \(x_2\) in terms of \(p\).
+
+\item 
+
+Show that \(x_3=1+3p+2p^2\).
+
+\item 
+
+Given that \(x_3=1\), find the value of \(p\)
+
+\end{enumerate}
+
+\end{enumerate}
+
+\section{Further information}
+\label{\detokenize{tools-for-mathematics/07-sequences/why/main:further-information}}\label{\detokenize{tools-for-mathematics/07-sequences/why/main::doc}}
+
+\subsection{What are the differences between recursion and iteration?}
+\label{\detokenize{tools-for-mathematics/07-sequences/why/main:what-are-the-differences-between-recursion-and-iteration}}
+
+When giving instructions to a computer it is possible to use recursion to
+directly implement a common mathematical definition. For example consider the
+following sequence:
+\begin{equation*}
+\begin{split}
+    \left\{\begin{array}{l}
+    a_1 = 1\\
+    a_{n + 1}= 3a_n, n > 1
+    \end{array}\right.
+\end{split}
+\end{equation*}
+
+You can define this in Python as follows:
+
+\begin{pyin}
+def generate_sequence(n):
+    """
+    Generate the sequence defined by:
+
+    a_1 = 1
+    a_n = 3 a_{n - 1}
+
+    This is done using recursion.
+    """
+    if n == 1:
+        return 1
+    return 3 * generate_sequence(n - 1)
+\end{pyin}
+
+
+
+
+
+The first 6 terms:
+
+
+
+
+\begin{pyin}
+[generate_sequence(n) for n in range(1, 7)]
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+[1, 3, 9, 27, 81, 243]
+\end{raw}
+
+
+
+
+
+In this case this corresponds to powers of \(3\), and indeed you can
+prove that: \(a_n = 3 ^ {n - 1}\). The proof is not given here but one
+approach to doing it would be to use induction which is closely related
+to recursive functions.
+
+
+You can write a different python function that uses this formula. This is called
+\textbf{iteration}:
+
+
+
+
+\begin{pyin}
+def calculate_sequence(n):
+    """
+    Calculate the nth term of the sequence defined by:
+
+    a_1 = 1
+    a_n = 3 a_{n - 1}
+
+    This is done using iteration using the direct formula:
+
+    a_n = 3 ^ n
+    """
+    return 3 ** (n - 1)
+\end{pyin}
+
+
+
+
+
+
+
+\begin{pyin}
+[calculate_sequence(n) for n in range(1, 7)]
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+[1, 3, 9, 27, 81, 243]
+\end{raw}
+
+
+
+
+
+You can in fact use a Jupyter command to
+time the run time of a command. It is clear that recursion is slower.
+
+\begin{pyin}
+%timeit [generate_sequence(n) for n in range(1, 25)]
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+19.2 µs ± 246 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+\end{raw}
+
+
+
+
+
+
+
+
+
+
+
+\begin{pyin}
+%timeit [calculate_sequence(n) for n in range(1, 25)]
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+5.63 µs ± 44.7 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+\end{raw}
+
+
+
+
+
+
+
+In practice:
+\begin{itemize}
+\item 
+
+Using recursion is powerful as it can be used to directly implement recursive
+definitions.
+
+\item 
+
+Using iteration is more computationally efficient but it is not always
+straightforward to obtain an iterative formula.
+
+\end{itemize}
+
+
+\subsection{What is caching?}
+\label{sec:what_is_caching}
+
+One of the reasons that recursion is computationally inefficient is that it
+always has to recalculate previously calculated values.
+
+
+For example:
+\begin{equation*}
+\begin{split}
+    \left\{\begin{array}{l}
+    a_1 = 1\\
+    a_{n + 1}= 3a_n, n > 1
+    \end{array}\right.
+\end{split}
+\end{equation*}
+
+One way to overcome this is to use caching which means that when a function is
+called for a value it has already computed it remembers the value.
+Python has a caching tool available in the \texttt{functools} library:
+
+
+
+
+\begin{pyin}
+import functools
+
+
+def generate_sequence(n):
+    """
+    Generate the sequence defined by:
+
+    a_1 = 1
+    a_n = 3 a_{n - 1}
+
+    This is done using recursion.
+    """
+    if n == 1:
+        return 1
+    return 3 * generate_sequence(n - 1)
+
+
+@functools.lru_cache()
+def cached_generate_sequence(n):
+    """
+    Generate the sequence defined by:
+
+    a_1 = 1
+    a_n = 3 a_{n - 1}
+
+    This is done using recursion but also includes a cache.
+    """
+    if n == 1:
+        return 1
+    return 3 * cached_generate_sequence(n - 1)
+\end{pyin}
+
+
+Timing both these approaches confirms a substantial increase in time for the
+cached version.
+
+\begin{pyin}
+%timeit [generate_sequence(n) for n in range(1, 25)]
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+20.5 µs ± 381 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+\end{raw}
+
+
+
+
+
+
+
+
+
+
+
+\begin{pyin}
+%timeit [cached_generate_sequence(n) for n in range(1, 25)]
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+934 ns ± 38.1 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+\end{raw}

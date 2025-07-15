@@ -1,0 +1,3 @@
+A Jupyter notebook opened inside of VS Code.
+
+A screenshot of a jupyter notebook open inside of the VS Code editor.

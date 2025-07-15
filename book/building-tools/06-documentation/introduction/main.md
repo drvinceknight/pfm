@@ -12,6 +12,8 @@ kernelspec:
   name: python3
 ---
 
+(chp:documentation)=
+
 # Documentation
 
 This is the second of three chapters that aim to move from writing code

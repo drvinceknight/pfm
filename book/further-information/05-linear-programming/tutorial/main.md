@@ -29,22 +29,22 @@ As discussed in {cite}`knight2022applied` this can be written in the following
 form:
 
 $$
-\begin{align}
+\begin{aligned}
 \text{Maximise: } 50 A + 60 B &  \\
 \text{Subject to: } & \nonumber \\
 4 A + 6 B &\leq 24  \\
 5 A + 4 B &\leq 20
-\end{align}
+\end{aligned}
 $$
 
 This can be represented using the following matrices and vectors:
 
 $$
-\begin{align}
+\begin{aligned}
 \text{minimise: } c^t x&  \\
 \text{subject to: } & \nonumber \\
 A_{\text{ub}}x&\leq b_{\text{ub}}\\
-\end{align}
+\end{aligned}
 $$
 
 with:

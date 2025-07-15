@@ -1,0 +1,4 @@
+Running a script.
+
+A screenshot of the terminal window in MacOS. This shows the command `python
+algebra.py` being run followed by the output of the script.

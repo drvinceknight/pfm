@@ -1,0 +1,1248 @@
+\chapter{Combinatorics}
+\label{chp:combinatorics}
+
+Combinatorics is the mathematical area interested in specific finite sets. In a lot
+of instances this comes down to counting things and is often first encountered
+by mathematicians through combinations and permutations.
+Computers are useful when doing this as they can be used to generate the finite
+sets considered. You can essentially count things ``by hand''' (using a computer)
+to confirm theoretic results.
+
+
+\begin{note}
+In this chapter you will cover:
+\begin{itemize}
+\item 
+
+Generating configurations of elements that correspond to permutations and/or
+combinations.
+
+\item 
+
+Counting these configurations.
+
+\item 
+
+Directly computing \(^n C_i={n \choose i}\).
+
+\item 
+
+Directly computing \(^n P_i\).
+
+\end{itemize}
+\end{note}
+
+
+
+
+
+\section{Tutorial}
+\label{\detokenize{tools-for-mathematics/05-combinations-permutations/tutorial/main:tutorial}}\label{\detokenize{tools-for-mathematics/05-combinations-permutations/tutorial/main::doc}}
+
+You will solve the following problem using a computer to illustrate how a
+computer can be used to solve combinatorial problems:
+
+
+The digits 1, 2, 3, 4 and 5 are arranged in random order, to form a five-digit number.
+\begin{enumerate}
+
+\item 
+
+How many different five-digit numbers can be formed?
+
+\item 
+
+How many different five-digit numbers are:
+\begin{enumerate}
+
+\item 
+
+Odd
+
+\item 
+
+Less than 23000
+
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+First you are going to get the 5 digits. Python has a tool for this called
+\texttt{range} which directly gives the integers from a given bound to another:
+
+
+
+
+\begin{pyin}
+digits = range(1, 6)
+digits
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+range(1, 6)
+\end{raw}
+
+
+
+
+
+At present that is only the instructions for generating the integers from 1 to 5
+(the 6 is a strict upper bound). You can transform this to a tuple, using the
+\texttt{tuple} tool:
+
+
+
+
+\begin{pyin}
+tuple(range(1, 6))
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+(1, 2, 3, 4, 5)
+\end{raw}
+
+The question is asking for all the permutations of size 5 of that set.
+The main tool for this is a library specifically designed to iterate over
+objects in different ways: \texttt{itertools}.
+
+\begin{pyin}
+import itertools
+
+permutations = itertools.permutations(digits)
+permutations
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+<itertools.permutations at 0x103a548b0>
+\end{raw}
+
+That is again only the set of instructions, to view the actual permutations you
+will again transform this in to a tuple. You will overwrite the value
+of \texttt{permutations} to not be the instructions but the actual tuple of all the
+permutations:
+
+\begin{pyin}
+permutations = tuple(permutations)
+permutations
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+((1, 2, 3, 4, 5),
+ (1, 2, 3, 5, 4),
+ (1, 2, 4, 3, 5),
+ (1, 2, 4, 5, 3),
+ ...
+ (5, 4, 2, 3, 1),
+ (5, 4, 3, 1, 2),
+ (5, 4, 3, 2, 1))
+\end{raw}
+
+
+
+
+
+
+Now to answer the question you need to find out how many tuples are in that
+tuple. You do this using the Python \texttt{len} tool which returns the length of
+something:
+
+
+
+
+\begin{pyin}
+len(permutations)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+120
+\end{raw}
+
+
+
+
+
+You can confirm this to be correct as you know that there are \(5!\) ways of
+arranging those numbers. The \texttt{math} library has a \texttt{factorial} tool:
+
+
+
+
+\begin{pyin}
+import math
+
+math.factorial(5)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+120
+\end{raw}
+
+
+
+
+
+In order to find out how many 5 digit numbers are odd you are going to compute
+the following sum:
+\begin{equation*}
+\begin{split}
+    \sum_{\pi \in \Pi} \pi_5 \mod 2
+\end{split}
+\end{equation*}
+
+Where \(\Pi\) is the set of permutations and \(\pi_5\) denotes the 5th (and last)
+element of the permutation. So for example, if the first element of \(\Pi\) was
+To do this you use the \texttt{sum} tool in python coupled with the expressions
+\texttt{for}
+and \texttt{in}. You also access the 5th element of a given \texttt{permutation}
+using \texttt{[4]} (the
+first element is indexed by 0, so the 5th is indexed by 4):
+
+
+
+
+\begin{pyin}
+sum(permutation[4] % 2 for permutation in permutations)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+72
+\end{raw}
+
+
+
+
+
+You can again check this theoretically, there are three valid choices for the
+last digit of a given tuple to be odd: \(1\), \(3\) and \(5\). For each of those,
+there are then 4 choices for the remaining digits:
+
+
+
+
+\begin{pyin}
+math.factorial(4) * 3
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+72
+\end{raw}
+
+To compute the number of digits that are less than or equal to 23000 you compute a
+similar sum except you use the \texttt{<=} operator and also convert the tuple of digits
+to a number in base 10:
+\begin{equation*}
+\begin{split}
+    (\pi_1, \pi_2, \pi_3, \pi_4, \pi_5) \to \pi_1 10 ^ 4 + \pi_2 10 ^ 3 + \pi_3 10 ^ 2 + \pi_4 10 + \pi_5
+\end{split}
+\end{equation*}
+
+Thus you are going to compute the following sum:
+\begin{equation*}
+\begin{split}
+    \sum_{\pi \in \Pi \text{ if }\pi_1 10 ^ 4 + \pi_2 10 ^ 3 + \pi_3 10 ^ 2 + \pi_4 10 + \pi_5 \leq 23000} 1
+\end{split}
+\end{equation*}
+
+
+
+\begin{pyin}
+sum(
+    1
+    for permutation in permutations
+    if permutation[0] * 10 ** 4
+    + permutation[1] * 10 ** 3
+    + permutation[2] * 10 ** 2
+    + permutation[3] * 10
+    + permutation[4]
+    <= 23000
+)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+30
+\end{raw}
+
+
+
+
+
+You can again confirm this theoretically, for a given tuple to be less than 23000
+that is only possible if the first digit is 1 or 2:
+\begin{itemize}
+\item 
+
+If it is 1 then any of the other \(4!\) permutations of the other digits is
+valid;
+
+\item 
+
+If it is 2 then the second digit must be 1 and any of the other \(3!\)
+permutations of the other digits is valid.
+
+\end{itemize}
+
+\begin{pyin}
+(math.factorial(4) + math.factorial(3))
+\end{pyin}
+
+\begin{raw}
+30
+\end{raw}
+
+\begin{note}
+In this tutorial you have
+\begin{itemize}
+\item 
+
+Created permutations of a given tuples;
+
+\item 
+
+Created permutations of a given tuples that obey a given condition;
+
+\item 
+
+Counted how many permutations exist;
+
+\item 
+
+Directly computed the expected number of permutations.
+
+\end{itemize}
+\end{note}
+
+
+
+
+
+\section{How to}
+\label{\detokenize{tools-for-mathematics/05-combinations-permutations/how/main:how}}\label{\detokenize{tools-for-mathematics/05-combinations-permutations/how/main::doc}}
+
+\subsection{Create a tuple}
+\label{sec:create_a_tuple}
+
+To create a tuple which is an ordered collection of objects that cannot be
+changed use the \texttt{()} brackets.
+
+
+\begin{api}
+collection = (value_1, value_2, value_3, ..., value_n)
+\end{api}
+
+
+
+For example:
+
+
+
+
+\begin{pyin}
+basket = ("Bread", "Biscuits", "Coffee")
+basket
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+('Bread', 'Biscuits', 'Coffee')
+\end{raw}
+
+\subsection{How to access particular elements in a tuple}
+\label{sec:how-to-access-particular-elements-in-a-tuple}
+
+If you need to you can access elements of a collection using \texttt{[]} brackets. The
+first element has index \texttt{0}:
+
+\begin{api}
+tuple[index]
+\end{api}
+
+
+For example:
+
+
+
+
+\begin{pyin}
+basket[1]
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+'Biscuits'
+\end{raw}
+
+
+
+
+
+\subsection{Create boolean variables}
+\label{sec:create_boolean_variables}
+
+A boolean variable has one of two values: \texttt{True} or \texttt{False}.
+
+
+To create a boolean variable here are some of the things you can use:
+\begin{itemize}
+\item 
+
+Equality: \texttt{value == other\_value}
+
+\item 
+
+Inequality \texttt{value != other\_value}
+
+\item 
+
+Strictly less than \texttt{value < other\_value}
+
+\item 
+
+Less than or equal\texttt{value <= other\_value}
+
+\item 
+
+Inclusion \texttt{value in iterable}
+
+\end{itemize}
+
+
+This a subset of the operators available.
+For example:
+
+
+
+
+\begin{pyin}
+value = 5
+other_value = 10
+
+value == other_value
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+False
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+value != other_value
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+True
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+value <= other_value
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+True
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+value < value
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+False
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+value <= value
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+True
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+value in (1, 2, 4, 19)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+False
+\end{raw}
+
+
+
+
+
+It is also possible to combine booleans to create new booleans:
+\begin{itemize}
+\item 
+
+And: \texttt{first\_boolean and second\_boolean}
+
+\item 
+
+Or: \texttt{first\_boolean or second\_boolean}
+
+\item 
+
+No: \texttt{not boolean}
+
+\end{itemize}
+
+
+
+
+\begin{pyin}
+True and True
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+True
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+False and True
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+False
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+True or False
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+True
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+False or False
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+False
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+not True
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+False
+\end{raw}
+
+
+
+
+
+
+
+\begin{pyin}
+not False
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+True
+\end{raw}
+
+
+
+
+
+\subsection{Create an iterable with a given number of items}
+\label{\detokenize{tools-for-mathematics/05-combinations-permutations/how/main:creating-an-iterable-with-a-given-number-of-items}}\label{\detokenize{tools-for-mathematics/05-combinations-permutations/how/main:id4}}
+
+The \texttt{range} tool gives a given number of integers.
+
+
+\begin{api}
+range(number_of_integers)
+\end{api}
+
+
+
+For example:
+
+
+
+
+\begin{pyin}
+tuple(range(10))
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+\end{raw}
+
+
+
+
+
+
+\texttt{range(N)} gives the integers from 0 until \(N - 1\) (inclusive).
+
+
+
+It is also possible to pass two values as inputs so that you have a different lower bound:
+
+
+
+
+\begin{api}
+tuple(range(4, 10))
+\end{api}
+
+
+
+
+
+\begin{raw}
+(4, 5, 6, 7, 8, 9)
+\end{raw}
+
+
+
+
+
+It is also possible to pass a third value as a step size:
+
+
+
+
+\begin{pyin}
+tuple(range(4, 10, 3))
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+(4, 7)
+\end{raw}
+
+
+
+
+
+\subsection{Create permutations of a given set of elements}
+\label{\detokenize{tools-for-mathematics/05-combinations-permutations/how/main:creating-permutations-of-a-given-set-of-elements}}
+
+The python \texttt{itertools} library has a \texttt{permutations} tool that will generate all
+permutations of a given set.
+
+
+\begin{api}
+itertools.permutations(iterable)
+\end{api}
+
+
+
+
+
+\begin{pyin}
+import itertools
+
+basket = ("Bread", "Biscuits", "Coffee")
+tuple(itertools.permutations(basket))
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+(('Bread', 'Biscuits', 'Coffee'),
+ ('Bread', 'Coffee', 'Biscuits'),
+ ('Biscuits', 'Bread', 'Coffee'),
+ ('Biscuits', 'Coffee', 'Bread'),
+ ('Coffee', 'Bread', 'Biscuits'),
+ ('Coffee', 'Biscuits', 'Bread'))
+\end{raw}
+
+
+
+
+
+It is possible to limit the size to only be permutations of size \texttt{r}:
+
+
+
+
+\begin{pyin}
+tuple(itertools.permutations(basket, r=2))
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+(('Bread', 'Biscuits'),
+ ('Bread', 'Coffee'),
+ ('Biscuits', 'Bread'),
+ ('Biscuits', 'Coffee'),
+ ('Coffee', 'Bread'),
+ ('Coffee', 'Biscuits'))
+\end{raw}
+
+
+
+
+
+\subsection{Create combinations of a given set of elements}
+\label{\detokenize{tools-for-mathematics/05-combinations-permutations/how/main:creating-combinations-of-a-given-set-of-elements}}
+
+The python \texttt{itertools} library has a \texttt{combinations} tool that
+will generate all combinations of size \texttt{r} of a given set:
+
+
+\begin{api}
+itertools.combinations(iterable, r)
+\end{api}
+
+
+
+For example:
+
+
+
+
+\begin{pyin}
+basket = ("Bread", "Biscuits", "Coffee")
+tuple(itertools.combinations(basket, r=2))
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+(('Bread', 'Biscuits'), ('Bread', 'Coffee'), ('Biscuits', 'Coffee'))
+\end{raw}
+
+
+
+
+
+A combination does not care about order so by default the combinations generated
+are sorted.
+
+
+\subsection{Summing items in a iterable}
+
+You can compute the sum of items in an iterable using the \texttt{sum} tool:
+
+
+
+
+\begin{pyin}
+sum((1, 2, 3))
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+6
+\end{raw}
+
+
+
+
+
+You can also directly use the \texttt{sum} without specifically creating the
+iterable. This
+corresponds to the following mathematical notation:
+\begin{equation*}
+\begin{split}
+    \sum_{s\in S}f(s)
+\end{split}
+\end{equation*}
+
+and is done using the following:
+
+\begin{pyin}
+sum(n ** 2 for n in range(11))
+\end{pyin}
+
+
+Here is an example of calculating the following sum:
+\begin{equation*}
+\begin{split}
+    \sum_{n=0}^{10} n ^ 2
+\end{split}
+\end{equation*}
+
+
+
+\begin{pyin}
+sum(n ** 2 for n in range(11))
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+385
+\end{raw}
+
+You can compute conditional sums by only summing over elements that
+meet a given condition using the following:
+
+\begin{api}
+sum(f(object) for object in old_list if condition)
+\end{api}
+
+
+Here is an example of calculating the following sum:
+\begin{equation*}
+\begin{split}
+    \sum_{\begin{array}{c}n=0\\\text{ if }n\text{ odd}\end{array}}^{10} n ^ 2
+\end{split}
+\end{equation*}
+
+
+
+\begin{pyin}
+sum(n ** 2 for n in range(11) if n % 2 == 1)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+165
+\end{raw}
+
+
+
+
+
+\subsection{Directly compute \(n!\)}
+\label{\detokenize{tools-for-mathematics/05-combinations-permutations/how/main:directly-computing-n}}
+
+The \texttt{math} library has a \texttt{factorial} tool.
+
+
+\begin{api}
+math.factorial(N)
+\end{api}
+
+
+
+
+
+\begin{pyin}
+import math
+
+math.factorial(5)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+120
+\end{raw}
+
+
+
+
+
+\subsection{Directly compute \({n \choose i}\)}
+
+The \texttt{scipy.special} library has a \texttt{comb} tool.
+
+
+\begin{api}
+scipy.special.comb(n, i)
+\end{api}
+
+
+
+For example:
+
+
+
+
+\begin{pyin}
+import scipy.special
+
+scipy.special.comb(3, 2)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+3.0
+\end{raw}
+
+
+
+
+
+\subsection{Directly compute \(^n P_i\)}
+\label{\detokenize{tools-for-mathematics/05-combinations-permutations/how/main:directly-computing-n-p-i}}
+
+The \texttt{scipy.special} library has a \texttt{perm} tool.
+
+
+\begin{api}
+scipy.special.perm(n, i)
+\end{api}
+
+For example:
+
+\begin{pyin}
+scipy.special.perm(3, 2)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+6.0
+\end{raw}
+
+
+
+
+
+
+
+\section{Exercises}
+\begin{enumerate}
+
+\item 
+
+Obtain the following tuples using the \texttt{range} command:
+\begin{enumerate}
+
+\item 
+
+\((0, 1, 2, 3, 4, 5)\)
+
+\item 
+
+\((2, 3, 4, 5)\)
+
+\item 
+
+\((2, 4, 6, 8)\)
+
+\item 
+
+\(-1, 2, 5, 8\)
+
+\end{enumerate}
+
+\item 
+
+By \textbf{both} generating and directly computing obtain the \textbf{number of} the following:
+\begin{enumerate}
+
+\item 
+
+All permutations of \((0, 1, 2, 3, 4, 5)\).
+
+\item 
+
+All permutations of \(("A", "B", "C")\).
+
+\item 
+
+Permutations of size 3 of \((0, 1, 2, 3, 4, 5)\).
+
+\item 
+
+Permutations of size 2 of \((0, 1, 2, 3, 4, 5, 6)\).
+
+\item 
+
+Combinations of size 3 of \((0, 1, 2, 3, 4, 5)\).
+
+\item 
+
+Combinations of size 2 of \((0, 1, 2, 3, 4, 5)\).
+
+\item 
+
+Combinations of size 5 of \((0, 1, 2, 3, 4, 5)\).
+
+\end{enumerate}
+
+\item 
+
+A class consists of 3 students from Ashville and 4 from Bewton. A committee of 5 students is chosen at random the class.
+\begin{enumerate}
+
+\item 
+
+Find the number of committees that include 2 students from Ashville and 3 from Bewton are chosen.
+
+\item 
+
+In fact 2 students, from Ashville and 3 from Bewton are chosen. In order to watch a video, all 5 committee members sit in a row. In how many different orders can they sit if no two students from Bewton sit next to each other.
+
+\end{enumerate}
+
+\item 
+
+Three letters are selected at random from the 8 letters of the word \texttt{COMPUTER}, without regard to order.
+\begin{enumerate}
+
+\item 
+
+Find the number of possible selections of 3 letters.
+
+\item 
+
+Find the number of selections of 3 letters with the letter \texttt{P}.
+
+\item 
+
+Find the number of selections of 3 letters where the 3 letters form the word \texttt{TOP}.
+
+\end{enumerate}
+
+\end{enumerate}
+
+\section{Further information}
+\label{\detokenize{tools-for-mathematics/05-combinations-permutations/why/main:further-information}}\label{\detokenize{tools-for-mathematics/05-combinations-permutations/why/main::doc}}
+
+\subsection{Are there other ways to access elements in tuples?}
+\label{\detokenize{tools-for-mathematics/05-combinations-permutations/why/main:are-there-other-ways-to-access-elements-in-tuples}}
+
+You have seen in this chapter how to access a single element in a tuple. There
+are various ways of indexing tuples:
+\begin{enumerate}
+
+\item 
+
+Indexing (seen in Section~\ref{sec:how-to-access-particular-elements-in-a-tuple}).
+
+\item 
+
+Negative indexing (see Section~\ref{sec:access_an_element_of_an_iterable_using_negative_indexing})
+
+\item 
+
+Slicing (see Section~\ref{sec:slice_an_iterable})
+
+\end{enumerate}
+
+
+\subsection{Why does \texttt{range}, \texttt{itertools.permutations} and \texttt{itertools.combinations} not directly give the elements?}
+
+When you run either of the three \texttt{range}, \texttt{itertools.permutations} or
+\texttt{itertools.combinations} tools this is an example of creating a \textbf{generator}.
+This allows the creation of the instructions to build something without building
+it.
+
+
+In practice this means that you can create large sets without needing to generate
+them until required.
+
+
+\subsection{How does the summation notation \protect\(\sum\protect\) correspond to the code?}
+\label{\detokenize{tools-for-mathematics/05-combinations-permutations/why/main:how-does-the-summation-notation-sum-correspond-to-the-code}}
+
+The \texttt{sum} command corresponds to the mathematical
+\(\sum\) notation. Here are a few examples showing the \texttt{sum} command,
+the \(\sum\) notation but also the prose describing:
+
+\begin{itemize}
+\item 
+\textbf{The sum of the square of the integers from 1 to 100 (inclusive)}:
+        \[\sum_{i=1}^{100}i ^2\]
+
+        Given by:
+
+\begin{pyin}
+sum(i ** 2 for i in range(1, 101))
+\end{pyin}
+
+\begin{raw}
+338350
+\end{raw}
+
+\item
+\textbf{The sum of the square of the integers from 1 to 100 (inclusive) if they
+are prime}:
+\[\sum_{\begin{array}{c}i=1\\\text{if }i\text{ is prime}\end{array}}^{100}i ^2\]
+    Given by:
+\begin{pyin}
+sum(i ** 2 for i in range(1, 101) if sym.isprime(i))
+\end{pyin}
+
+\begin{raw}
+65796
+\end{raw}
+
+\item 
+\textbf{The sum of the square of the elements in the collection $S$ if they are
+prime}:
+\[\sum_{\begin{array}{c}i\in{S}\\\text{if }i\text{ is prime}\end{array}}i ^2\]
+Given by:
+\begin{pyin}
+S = (1, 3, 9, 12, 21, 5, 2, 2)
+sum(i ** 2 for i in S if sym.isprime(i))
+\end{pyin}
+
+\begin{raw}
+42
+\end{raw}
+\end{itemize}

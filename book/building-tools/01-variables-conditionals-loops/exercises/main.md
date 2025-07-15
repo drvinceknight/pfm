@@ -48,5 +48,5 @@ kernelspec:
    $$
 
 5. Repeat the experiment of selecting a random integer between 0 and 10 until it
-   is even 1000 times (see {ref}`repeat_code_while_a_given_condition_holds`).
+   is even 1000 times.
    What is the average number of times taken to select an even number?

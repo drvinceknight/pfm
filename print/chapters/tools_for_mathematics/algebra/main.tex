@@ -1,0 +1,1286 @@
+\chapter{Algebra}
+\label{chp:algebra}
+%\label{\detokenize{tools-for-mathematics/02-algebra/introduction/main:algebra}}\label{\detokenize{tools-for-mathematics/02-algebra/introduction/main::doc}}
+
+\section{Introduction}
+%\label{\detokenize{tools-for-mathematics/02-algebra/introduction/main:introduction}}
+
+A typical secondary school curriculum includes Algebra which
+is described, in the A-level syllabus
+as:
+
+\begin{quote}
+``Algebra: this is an essential tool which supports and expresses mathematical
+reasoning and provides a means to generalise across a number of contexts.''
+\end{quote}
+
+In practice this often means:
+\begin{itemize}
+\item Manipulating numeric expressions;
+\item Manipulating symbolic expressions;
+\item Solving equations.
+\end{itemize}
+
+
+You can use a computer to carry out some of these techniques.
+
+\begin{note}
+This chapter covers:
+
+\begin{itemize}
+\item Manipulating numeric and symbolic expressions.
+\item Solving equations.
+\end{itemize}
+\end{note}
+
+\section{Tutorial}
+%\label{\detokenize{tools-for-mathematics/02-algebra/tutorial/main:tutorial}}\label{\detokenize{tools-for-mathematics/02-algebra/tutorial/main:algebra-tutorial}}\label{\detokenize{tools-for-mathematics/02-algebra/tutorial/main::doc}}
+
+To demonstrate the ways in which a computer can assist with Algebra, in this
+tutorial you
+will solve the following two problems:
+
+\begin{enumerate}
+
+\item 
+Rationalise the denominator of \(\frac{1}{\sqrt{2} + 1}\)
+
+\item 
+Consider the \index{quadratic}: \(f(x)=2x ^ 2 + x + 1\):
+
+\begin{enumerate}
+
+\item Calculate the discriminant of the \index{quadratic} equation \(2x ^ 2 + x + 1 =
+0\). What does this tell you about the solutions to the equation? What
+does this tell you about the graph of \(f(x)\)?
+
+\item By \index{completing the square}, show that the minimum point of \(f(x)\) is
+\(\left(-\frac{1}{4}, \frac{7}{8}\right)\)
+
+\end{enumerate}
+
+\end{enumerate}
+
+
+To do this, a specific collection of tools available in Python will be used.
+Often specific sets of tools are separated in to things called \textbf{libraries}. 
+Start by telling Python that you want to use the specific library for \textbf{symbolic
+mathematics}:
+
+\begin{pyin}
+import sympy
+\end{pyin}
+
+This will allow you to solve the first part of the question. Create a
+variable \texttt{expression} and \textbf{assign} it a value of \(\frac{1}{\sqrt{2} + 1}\).
+
+\begin{pyin}
+expression = 1 / (sympy.sqrt(2) + 1)
+expression
+\end{pyin}
+
+\[\frac{1}{1 + \sqrt{2}}\]
+
+\begin{note}
+This is not what would happen if you plugged the above in to a basic calculator,
+it would instead give you a value of:
+\end{note}
+
+
+\begin{pyin}
+float(expression)
+\end{pyin}
+
+\[0.41421356237309503\]
+
+The \texttt{sympy} library has a diverse set of tools available, one of which is to
+algorithmically attempt to simplify an expression. Here is how to do that:
+
+\begin{pyin}
+sympy.simplify(expression)
+\end{pyin}
+
+\[ -1 + \sqrt{2}\]
+
+This implies that:
+
+\begin{equation*}
+\begin{split}
+    \frac{1}{\sqrt{2} + 1} = -1 + \sqrt{2}
+\end{split}
+\end{equation*}
+
+Multiplying both sides by \({\sqrt{2} + 1}\) gives:
+
+\[
+1=\frac{1}{\sqrt{2} + 1}\times \left(\sqrt{2} + 1\right) = \left(-1 + \sqrt{2}\right)\times \left(\sqrt{2} + 1\right)
+\]
+
+The \texttt{sympy.simplify} command did not give much insight in to what happened
+but you can confirm the above manipulation by expanding \(\left(-1 +
+\sqrt{2}\right)\times \left(\sqrt{2} + 1\right)\).
+Here is how to do that:
+
+\begin{pyin}
+sympy.expand((-1 + sympy.sqrt(2)) * (1 + sympy.sqrt(2)))
+\end{pyin}
+
+\[
+1
+\]
+
+The \texttt{sympy} library allows you to carry out basic expression manipulation.
+Now consider the second part of the question:
+
+\begin{enumerate}
+
+\item 
+
+Consider the \index{quadratic}: \(f(x)=2x ^ 2 + x + 1\):
+
+\item 
+
+Calculate the \index{discriminant} of the \index{quadratic} equation \(2x ^ 2 + x + 1 =
+0\). What does this tell you about the solutions to the equation? What
+does this tell you about the graph of \(f(x)\)?
+
+\item 
+
+By \index{completing the square}, show that the minimum point of \(f(x)\) is
+\(\left(-\frac{1}{4}, \frac{7}{8}\right)\)
+
+\end{enumerate}
+
+
+Start by reassigning the value of the variable \texttt{expression} to be the
+expression: \(2x ^ 2 + x + 1\).
+
+\begin{pyin}
+x = sympy.Symbol("x")
+expression = 2 * x ** 2 + x + 1
+expression
+\end{pyin}
+
+\[
+2 x^{2} + x + 1
+\]
+
+
+The first line communicates to the code that \texttt{x} is going to be a symbolic variable.
+
+\begin{note}
+\textbf{Recall} that the \texttt{**} symbol is how you communicate exponentiation.
+\end{note}
+
+You can immediately use this to compute the \index{discriminant}:
+
+\begin{pyin}
+sympy.discriminant(expression)
+\end{pyin}
+
+\[-7\]
+
+Now, complement this with mathematical knowledge: if a \index{quadratic} has a
+negative discriminant then it does not have any roots and all the values are of
+the same sign as the coefficient of \(x ^ 2 \). Which in this case is \(2>0\).
+Confirm this by directly creating the equation. Do this by creating a
+variable \texttt{equation} and assigning it the equation which has a
+\texttt{lhs} and a \texttt{rhs}:
+
+\begin{pyin}
+equation = sympy.Eq(lhs=expression, rhs=0)
+equation
+\end{pyin}
+
+\[2 x^{2} + x + 1 = 0\]
+
+Now ask \texttt{sympy} to solve it:
+
+\begin{pyin}
+sympy.solveset(equation)
+\end{pyin}
+
+\[\left\{- \frac{1}{4} - \frac{\sqrt{7} i}{4}, - \frac{1}{4} + \frac{\sqrt{7} i}{4}\right\}\]
+
+Indeed the only solutions are imaginary numbers: this confirms that the graph of
+\(f(x)\) is a convex parabola that is above the \(y=0\) line.
+Now complete the square so that you can write:
+
+\begin{equation*}
+\begin{split}
+    f(x) = a (x - b) ^ 2 + c
+\end{split}
+\end{equation*}
+
+for some values of \(a, b, c\). Create variables that have those 3 constants as
+value but also create a variable \texttt{completed\_square} and assign it the
+general expression:
+
+\begin{pyin}
+a, b, c = sympy.Symbol("a"), sympy.Symbol("b"), sympy.Symbol("c")
+completed_square = a * (x - b) ** 2 + c
+completed_square
+\end{pyin}
+
+\[a \left(- b + x\right)^{2} + c\]
+
+Expand this:
+
+\begin{pyin}
+sympy.expand(completed_square)
+\end{pyin}
+
+\[a b^{2} - 2 a b x + a x^{2} + c\]
+
+Use \texttt{sympy} to solve the various equations that arise from comparing
+the coefficients of:
+
+\begin{equation*}
+\begin{split}
+    f(x) = 2x ^2 + x + 1
+\end{split}
+\end{equation*}
+
+with the completed square.
+First, you see that the coefficient of \(x ^ 2\) gives you an equation:
+
+\begin{equation*}
+\begin{split}
+    a = 2
+\end{split}
+\end{equation*}
+
+For completeness write the code that solves this trivial equation:
+
+\begin{pyin}
+equation = sympy.Eq(a, 2)
+sympy.solveset(equation, a)
+\end{pyin}
+
+\begin{equation*}
+\begin{split}\displaystyle \left\{2\right\}\end{split}
+\end{equation*}
+
+Now substitute this value of \(a\) in to the completed square and update the variable with the new value:
+
+\begin{pyin}
+completed_square = completed_square.subs({a: 2})
+completed_square
+\end{pyin}
+
+\begin{equation*}
+\begin{split}\displaystyle c + 2 \left(- b + x\right)^{2}\end{split}
+\end{equation*}
+
+\begin{note}
+The different types of brackets being used there: both \texttt{()} and \texttt{\{\}}. This is
+important and has specific meaning in Python which will be covered in future
+chapters.
+\end{note}
+
+Now look at the expression with the two remaining constants:
+
+\begin{pyin}
+sympy.expand(completed_square)
+\end{pyin}
+
+\begin{equation*}
+\begin{split}\displaystyle 2 b^{2} - 4 b x + c + 2 x^{2}\end{split}
+\end{equation*}
+
+Comparing the coefficients of \(x\) gives:
+
+\begin{equation*}
+\begin{split}
+  - 4 b = 1
+\end{split}
+\end{equation*}
+
+\begin{pyin}
+equation = sympy.Eq(-4 * b, 1)
+sympy.solveset(equation, b)
+\end{pyin}
+
+\begin{equation*}
+\begin{split}\displaystyle \left\{- \frac{1}{4}\right\}\end{split}
+\end{equation*}
+
+Substitute this value of \(b\) back in to our expression.
+Make a point to tell sympy to treat \(1 / 4\) symbolically and to not
+calculate the numeric value:
+
+\begin{pyin}
+completed_square = completed_square.subs({b: -1 / sympy.S(4)})
+completed_square
+\end{pyin}
+
+\begin{equation*}
+\begin{split}\displaystyle c + 2 \left(x + \frac{1}{4}\right)^{2}\end{split}
+\end{equation*}
+
+Expand this to see the expression with the one remaining constant gives:
+
+\begin{pyin}
+sympy.expand(completed_square)
+\end{pyin}
+
+\begin{equation*}
+\begin{split}\displaystyle c + 2 x^{2} + x + \frac{1}{8}\end{split}
+\end{equation*}
+
+This gives a final equation for the constant term:
+
+\begin{equation*}
+\begin{split}
+    c + 1 / 8 = 1
+\end{split}
+\end{equation*}
+
+Now use sympy to find the value of \(c\):
+
+\begin{pyin}
+sympy.solveset(sympy.Eq(c + sympy.S(1) / 8, 1), c)
+\end{pyin}
+
+\begin{equation*}
+\begin{split}\displaystyle \left\{\frac{7}{8}\right\}\end{split}
+\end{equation*}
+
+As before substitute in and update the value of \texttt{completed\_square}:
+
+\begin{pyin}
+completed_square = completed_square.subs({c: 7 / sympy.S(8)})
+completed_square
+\end{pyin}
+
+\begin{equation*}
+\begin{split}\displaystyle 2 \left(x + \frac{1}{4}\right)^{2} + \frac{7}{8}\end{split}
+\end{equation*}
+
+Using this shows that the there are indeed no values of \(x\) which give
+negative values of \(f(x)\) as \(f(x)\) is a square added to a constant.
+The minimum is when \(x=-1/4\) which gives: \(f(-1/4)=7/8\):
+
+\begin{pyin}
+completed_square.subs({x: -1 / sympy.S(4)})
+\end{pyin}
+
+\begin{equation*}
+\begin{split}\displaystyle \frac{7}{8}\end{split}
+\end{equation*}
+
+\begin{note}
+This tutorial has:
+\begin{itemize}
+\item 
+
+Created symbolic expressions.
+
+\item 
+
+Obtained approximate values for numerical symbolic expressions.
+
+\item 
+
+Expanded and simplified symbolic expressions.
+
+\item 
+
+Created symbolic equations.
+
+\item 
+
+Solve symbolic equations.
+
+\item 
+
+Substituted values in to symbolic expressions.
+
+\end{itemize}
+\end{note}
+
+\section{How to}
+
+\subsection{Create a symbolic numeric value}
+
+To create a symbolic numerical value use \texttt{sympy.S}.
+
+\begin{api}
+sympy.S(a)
+\end{api}
+
+
+For example:
+
+
+
+
+\begin{pyin}
+import sympy
+
+value = sympy.S(3)
+value
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle 3\end{split}
+\end{equation*}
+
+If you combine a symbolic value with a non symbolic value it will automatically
+give a symbolic value:
+
+\begin{pyin}
+1 / value
+\end{pyin}
+
+\begin{equation*}
+\begin{split}\displaystyle \frac{1}{3}\end{split}
+\end{equation*}
+
+\subsection{Get the numerical value of a symbolic expression}
+\label{\detokenize{tools-for-mathematics/02-algebra/how/main:how-to-get-the-numerical-value-of-a-symbolic-expression}}
+
+You can get the numerical value of a symbolic value using \texttt{float} or
+\texttt{int}:
+\begin{itemize}
+\item 
+
+\texttt{float} will give the numeric approximation in \(\mathbb\{R\}\)
+
+\begin{api}
+float(x)
+\end{api}
+
+\item 
+
+\texttt{int} will give the integer value
+
+\begin{api}
+int(x)
+\end{api}
+
+\end{itemize}
+
+
+For example, to create a symbolic numeric variable with value
+\(frac{1}{5}\):
+
+\begin{pyin}
+value = 1 / sympy.S(5)
+value
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \frac{1}{5}\end{split}
+\end{equation*}
+
+
+
+
+To get the numerical value:
+
+
+
+
+\begin{pyin}
+float(value)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+0.2
+\end{raw}
+
+
+
+
+
+To get the integer part:
+
+
+
+
+\begin{pyin}
+int(value)
+\end{pyin}
+
+\begin{raw}
+0
+\end{raw}
+
+\begin{note}
+This is not rounding to the nearest integer. It is returning the integer part.
+\end{note}
+
+
+\subsection{Factor an expression}
+
+Use the \texttt{sympy.factor} tool to factor expressions.
+
+\begin{pyin}
+sympy.factor(expression)
+\end{pyin}
+
+For example:
+
+\begin{pyin}
+x = sympy.Symbol("x")
+sympy.factor(x ** 2 - 9)
+\end{pyin}
+
+
+\begin{equation*}
+\begin{split}\displaystyle \left(x - 3\right) \left(x + 3\right)\end{split}
+\end{equation*}
+
+\subsection{Expand an expression}
+
+Use the \texttt{sympy.expand} tool to expand expressions.
+
+\begin{pyin}
+sympy.expand(expression)
+\end{pyin}
+
+
+For example:
+
+
+
+
+\begin{pyin}
+sympy.expand((x - 3) * (x + 3))
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle x^{2} - 9\end{split}
+\end{equation*}
+
+
+
+
+\subsection{Simplify an expression}
+%\label{\detokenize{tools-for-mathematics/02-algebra/how/main:how-to-simplify-an-expression}}
+
+Use the \texttt{sympy.simplify} tool to simplify an expression.
+
+\begin{pyin}
+sympy.simplify(expression)
+\end{pyin}
+
+
+For example:
+
+
+
+
+\begin{pyin}
+sympy.simplify((x - 3) * (x + 3))
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle x^{2} - 9\end{split}
+\end{equation*}
+
+\begin{note}
+This will not always give the expected (or any) result. At times it could be
+more beneficial to use \texttt{sympy.expand} and/or \texttt{sympy.factor}.
+\end{note}
+
+\subsection{How to solve an equation}
+%\label{\detokenize{tools-for-mathematics/02-algebra/how/main:how-to-solve-an-equation}}
+
+Use the \texttt{sympy.solveset} tool to solve an equation. It takes two values as
+inputs. The first is either:
+\begin{itemize}
+\item 
+
+An expression for which a root is to be found
+
+\item 
+
+An equation
+
+\end{itemize}
+
+
+The second is the variable you want to solve for.
+
+\begin{api}
+sympy.solveset(equation, variable)
+\end{api}
+
+
+Here is how you can use \texttt{sympy} to obtain the roots of the general \index{quadratic}:
+
+\begin{equation*}
+\begin{split}
+a x ^ 2 + bx + c
+\end{split}
+\end{equation*}
+
+
+
+\begin{pyin}
+a = sympy.Symbol("a")
+b = sympy.Symbol("b")
+c = sympy.Symbol("c")
+\index{quadratic} = a * x ** 2 + b * x + c
+sympy.solveset(\index{quadratic}, x)
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \left\{- \frac{b}{2 a} - \frac{\sqrt{- 4 a c + b^{2}}}{2 a}, - \frac{b}{2 a} + \frac{\sqrt{- 4 a c + b^{2}}}{2 a}\right\}\end{split}
+\end{equation*}
+
+
+
+
+Here is to solve the same equation but not for \(x\) but for
+\(b\):
+
+
+
+
+\begin{pyin}
+sympy.solveset(\index{quadratic}, b)
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \left\{- \frac{a x^{2} + c}{x}\right\}\end{split}
+\end{equation*}
+
+It is however clearer to specifically write the equation to solve:
+
+\begin{pyin}
+equation = sympy.Eq(a * x ** 2 + b * x + c, 0)
+sympy.solveset(equation, x)
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \left\{- \frac{b}{2 a} - \frac{\sqrt{- 4 a c + b^{2}}}{2 a}, - \frac{b}{2 a} + \frac{\sqrt{- 4 a c + b^{2}}}{2 a}\right\}\end{split}
+\end{equation*}
+
+
+
+
+\subsection{Substitute a value in to an expression}
+\label{sec:substite_a_value_in_to_an_expression}
+%\label{\detokenize{tools-for-mathematics/02-algebra/how/main:how-to-substitute-a-value-in-to-an-expression}}\label{\detokenize{tools-for-mathematics/02-algebra/how/main:id1}}
+
+Given a \texttt{sympy} expression it is possible to substitute values in to it using
+the \texttt{.subs()} tool.
+
+\begin{api}
+expression.subs({variable: value})
+\end{api}
+
+It is possible to pass multiple variables at a time.
+For example to substitute the values for \(a, b, c\) in to the \index{quadratic}:
+
+\begin{pyin}
+\index{quadratic} = a * x ** 2 + b * x + c
+\index{quadratic}.subs({a: 1, b: sympy.S(7) / 8, c: 0})
+\end{pyin}
+
+\begin{equation*}
+\begin{split}\displaystyle x^{2} + \frac{7 x}{8}\end{split}
+\end{equation*}
+
+\section{Exercises}
+
+\textbf{If you are not sure how to do something, have a look at the “How To” section.}
+\begin{enumerate}
+
+\item 
+
+Simplify the following expressions:
+\begin{enumerate}
+
+\item 
+
+\(\frac{3}{\sqrt{3}}\)
+
+\item 
+
+\(\frac{2 ^ {78}}{2 ^ {12}2^{-32}}\)
+
+\item 
+
+\(8^0\)
+
+\item 
+
+\(a^4b^{-2}+a^{3}b^{2}+a^{4}b^0\)
+
+\end{enumerate}
+
+\item 
+
+Solve the following equations:
+\begin{enumerate}
+
+\item 
+
+\(x + 3 = -1\)
+
+\item 
+
+\(3 x ^ 2 - 2 x = 5\)
+
+\item 
+
+\(x (x - 1) (x + 3) = 0\)
+
+\item 
+
+\(4 x ^3 + 7x - 24 = 1\)
+
+\end{enumerate}
+
+\item 
+
+Consider the equation: \(x ^ 2 + 4 - y = \frac{1}{y}\):
+\begin{enumerate}
+
+\item 
+
+Find the solution to this equation for \(x\).
+
+\item 
+
+Obtain the specific solution when \(y = 5\). Do this in two ways:
+substitute the value in to your equation and substitute the value in to
+your solution.
+
+\end{enumerate}
+
+\item 
+
+Consider the \index{quadratic}: \(f(x)=4x ^ 2 + 16x + 25\):
+\begin{enumerate}
+
+\item 
+
+Calculate the discriminant of the \index{quadratic} equation \(4x ^ 2 + 16x + 25 =
+0\). What does this tell you about the solutions to the equation? What
+does this tell you about the graph of \(f(x)\)?
+
+\item 
+
+By completing the square, show that the minimum point of \(f(x)\) is
+\(\left(-2, 9\right)\)
+
+\end{enumerate}
+
+\item 
+
+Consider the \index{quadratic}: \(f(x)=-3x ^ 2 + 24x - 97\):
+\begin{enumerate}
+
+\item 
+
+Calculate the discriminant of the \index{quadratic} equation \(-3x ^ 2 + 24x - 97 =
+0\). What does this tell you about the solutions to the equation? What
+does this tell you about the graph of \(f(x)\)?
+
+\item 
+
+By completing the square, show that the maximum point of \(f(x)\) is
+\(\left(4, -49\right)\)
+
+\end{enumerate}
+
+\item 
+
+Consider the function \(f(x) = x^ 2 + a x + b\).
+\begin{enumerate}
+
+\item 
+
+Given that \(f(0) = 0\) and \(f(3) = 0\) obtain the values of \(a\) and \(b\).
+
+\item 
+
+By completing the square confirm that graph of \(f(x)\) has a line of symmetry at \(x=\frac{3}{2}\)
+
+\end{enumerate}
+
+\end{enumerate}
+
+\section{Further information}
+\label{\detokenize{tools-for-mathematics/02-algebra/why/main:further-information}}\label{\detokenize{tools-for-mathematics/02-algebra/why/main::doc}}
+
+\subsection{Why is some code in separate libraries?}
+\label{\detokenize{tools-for-mathematics/02-algebra/why/main:why-is-some-code-in-separate-libraries}}
+
+When you run the \texttt{import sympy} command you are telling Python that you want to use
+a specific set of tools. You will see other examples of this throughout this
+book.
+One of the advantages of having code in libraries is that it is more efficient
+for Python to only use what is needed.
+There are two types of Python libraries:
+\begin{itemize}
+\item 
+
+Those that are part of the so called ``standard library'': these are part of
+Python itself.
+
+\item 
+
+Those that are completely separate: \texttt{sympy} is one such example of this.
+
+\end{itemize}
+
+
+This separation allows for the development of tools to be independent of each
+other. The developers of \texttt{sympy} do not need to coordinate with the developers
+of Python to make new releases of the software.
+
+
+\subsection{Why do I need to use sympy?}
+\label{\detokenize{tools-for-mathematics/02-algebra/why/main:why-do-we-need-to-use-sympy}}
+
+\texttt{sympy} is the library for symbolic mathematics. There are other python libraries
+for carrying out mathematics in Python.
+For example, compute the value of the following expression:
+\begin{equation*}
+\begin{split}
+    (\sqrt{2} + 2) ^ 2 - 2
+\end{split}
+\end{equation*}
+
+You could compute this using the \texttt{math} library (for the square root tool):
+
+\begin{pyin}
+import math
+
+(math.sqrt(2) + 2) ** 2 - 2
+\end{pyin}
+
+
+
+
+
+\[
+9.65685424949238
+\]
+
+
+
+
+
+You could also make use of the fact that you do not need a square root tool at all:
+\begin{equation*}
+\begin{split}
+    (\sqrt{2} + 2) ^ 2 - 2 = (2 ^ {1 / 2} + 2) ^ 2 - 2
+\end{split}
+\end{equation*}
+
+
+
+\begin{pyin}
+(2 ** (1 / 2) + 2) ** 2 - 2
+\end{pyin}
+
+
+
+
+
+\[
+9.65685424949238
+\]
+
+
+You see that in both those instances, you have a numeric value for the expression
+that seems to be precise up to 14 decimal places.
+
+
+However, that is \textbf{not} the exact value of that expression. The exact value of
+the expression needs to be computed symbolically:
+
+
+
+
+\begin{pyin}
+import sympy
+
+expression = (sympy.sqrt(2) + 2) ** 2 - 2
+sympy.expand(expression)
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle 4 + 4 \sqrt{2}\end{split}
+\end{equation*}
+
+
+
+
+This is one example of why \texttt{sympy} is an effective tool for mathematicians.
+The other one seen in this chapter is being able to compute expressions with no
+numerical value at all:
+
+
+
+
+\begin{pyin}
+a = sympy.Symbol("a")
+b = sympy.Symbol("b")
+sympy.factor(a ** 2 - b ** 2)
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \left(a - b\right) \left(a + b\right)\end{split}
+\end{equation*}
+
+
+
+
+\subsection{Why do I sometimes see \texttt{from sympy import *}?}
+\label{\detokenize{tools-for-mathematics/02-algebra/why/main:why-do-i-sometimes-see-from-sympy-import}}
+
+There a number of resources available from which you can learn to use \texttt{sympy}. In
+some instances you will not see \texttt{import sympy} but instead you will see 
+\texttt{from sympy import *}.
+
+
+\textbf{This it not a good way to do it.}
+
+
+What this does is taking all the tools inside of sympy and putting it at the
+same level of all the other tools available to you.
+The problem with doing this is that it no longer makes your code clear.
+An example of this are trigonometric functions. These exist in a number of
+libraries:
+
+\begin{pyin}
+import math
+\end{pyin}
+
+
+
+
+
+
+
+\begin{pyin}
+import sympy
+\end{pyin}
+
+
+
+
+
+
+
+\begin{pyin}
+sympy.cos(0)
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle 1\end{split}
+\end{equation*}
+
+
+
+
+
+
+\begin{pyin}
+math.cos(0)
+\end{pyin}
+
+
+
+
+
+\begin{raw}
+1.0
+\end{raw}
+
+
+
+
+
+One of these tools allows you to carry out exact computations:
+
+
+
+
+\begin{pyin}
+sympy.cos(sympy.pi / 4)
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \frac{\sqrt{2}}{2}\end{split}
+\end{equation*}
+
+
+
+
+
+
+\begin{pyin}
+math.cos(math.pi / 4)
+\end{pyin}
+
+
+\begin{raw}
+0.7071067811865476
+\end{raw}
+
+
+
+
+
+If you chose to import all the functionality using \texttt{from sympy import *}
+then you
+cannot tell immediately which function you are using (except from its output):
+
+
+
+
+\begin{pyin}
+from sympy import *
+\end{pyin}
+
+
+
+
+
+
+
+\begin{pyin}
+from math import *
+\end{pyin}
+
+
+
+
+
+
+
+\begin{pyin}
+cos(pi / 4)
+\end{pyin}
+
+
+
+\begin{raw}
+0.7071067811865476
+\end{raw}
+
+
+
+
+
+In that case the second import has overwritten the first.
+
+\begin{note}
+\textbf{It is never recommended to use} \texttt{import *} this makes your code less clear
+and you are more likely to make mistakes when your code is not clear.
+\end{note}
+
+
+\subsection{How to extract a solution from the output of \texttt{sympy.solveset}?}
+%\label{\detokenize{tools-for-mathematics/02-algebra/why/main:how-to-extract-a-solution-from-the-output-of-sympy-solveset}}
+
+In some cases you might want to directly access the items in a solution set. For
+example if consider the equation \((x - 1)(x -
+2)\).
+
+\begin{pyin}
+import sympy
+
+x = sympy.Symbol("x")
+expression = (x - 1) * (x - 2)
+equation = sympy.Eq(expression, 0)
+set_of_solutions = sympy.solveset(equation, x)
+set_of_solutions
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \left\{1, 2\right\}\end{split}
+\end{equation*}
+
+
+
+
+The \texttt{set\_of\_solutions} has value the \textbf{set} of solutions of the
+equation. If you
+wanted to access them directly you can use the following:
+
+
+
+
+\begin{pyin}
+tuple_of_solutions = set_of_solutions.args
+tuple_of_solutions
+\end{pyin}
+
+
+
+
+
+\[
+(1, 2)
+\]
+
+This creates a \textbf{finite} ordered tuple of the solutions. You can use concepts
+that are covered in Chapter~\ref{chp:combinatorics}
+access them directly. Because there are two roots you can use the following to
+create two new variables:
+
+\begin{pyin}
+x1, x2 = tuple_of_solutions
+\end{pyin}
+
+Substitute these value directly in to the expression:
+
+\begin{pyin}
+expression.subs({x: x1})
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle 0\end{split}
+\end{equation*}
+
+
+
+
+
+
+\begin{pyin}
+expression.subs({x: x2})
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle 0\end{split}
+\end{equation*}
+
+
+
+
+Note that this is not always possible to get a finite ordered tuple of the
+solutions, for example there are some equations
+where the set of solutions is an infinite set:
+
+
+
+
+\begin{pyin}
+equation = sympy.Eq(sym.cos(x / 5), 0)
+set_of_solutions = sympy.solveset(equation, x)
+set_of_solutions
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \left\{10 n \pi + \frac{5 \pi}{2}\; \middle|\; n \in \mathbb{Z}\right\} \cup \left\{10 n \pi + \frac{15 \pi}{2}\; \middle|\; n \in \mathbb{Z}\right\}\end{split}
+\end{equation*}
+
+
+
+
+\subsection{Why do I sometimes see \texttt{import sympy as sym}?}
+\label{\detokenize{tools-for-mathematics/02-algebra/why/main:why-do-i-sometimes-see-import-sympy-as-sym}}
+
+In some resources you will see that instead of \texttt{import sympy} people use:
+\texttt{import sympy as sym}. This is called \textbf{aliasing}. This is common and takes
+advantage of the fact that Python can import a library and give it an
+alias/nickname at the same time:
+
+\begin{api}
+import <library> as <nickname>
+\end{api}
+
+
+So with sympy you can use:
+
+
+
+
+\begin{pyin}
+import sympy as sym
+
+sym.cos(sym.pi / 4)
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \frac{\sqrt{2}}{2}\end{split}
+\end{equation*}
+
+
+
+
+There is nothing stopping you using whatever alias you want:
+
+
+
+
+\begin{pyin}
+import sympy as a_poor_name_choice
+
+a_poor_name_choice.cos(a_poor_name_choice.pi / 4)
+\end{pyin}
+
+
+
+
+\begin{equation*}
+\begin{split}\displaystyle \frac{\sqrt{2}}{2}\end{split}
+\end{equation*}
+
+\begin{note}
+\textbf{It is important} when aliasing to use accepted conventions for these
+nicknames. For \texttt{sympy}, an accepted convention is indeed \texttt{import sympy as sym}.
+\end{note}

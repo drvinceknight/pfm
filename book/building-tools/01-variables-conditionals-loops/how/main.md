@@ -12,12 +12,12 @@ kernelspec:
   name: python3
 ---
 
-# How
+# How to
 
 ## Define an integer variable
 
-To define an integer variable we use the `=` operator which is the assignment
-operator. We create the name of the variable then the assignment operator
+To define an integer variable use the `=` operator which is the assignment
+operator. Create the name of the variable then the assignment operator
 followed by the integer value.
 
 ````{tip}
@@ -41,16 +41,16 @@ When choosing a variable name there are some rules to follow:
 
 There are other important conventions:
 
-- Use explicit names that clearly describe what the variable is (try not to use
-  `i`, `a` unless those refer to specific mathematical variables).
+- Use explicit names that clearly describe what the variable is. Try not to use
+  `i`, `a` unless those refer to specific mathematical variables.
 - Do not use `CamelCase` but use `snake_case` when combining words. This follows
   the Python convention called [PEP8](https://www.python.org/dev/peps/pep-0008/)
 ```
 
 ## Define a float variable
 
-To define a float variable we use the `=` operator which is the assignment
-operator. We create the name of the variable then the assignment operator
+To define a float variable use the `=` operator which is the assignment
+operator. Create the name of the variable then the assignment operator
 followed by the real value.
 
 ````{tip}
@@ -68,8 +68,8 @@ cms_in_an_inch
 
 ## Define a string variable
 
-To define a string variable we use the `=` operator which is the assignment
-operator. We create the name of the variable then the assignment operator
+To define a string variable use the `=` operator which is the assignment
+operator. Create the name of the variable then the assignment operator
 followed by the string which is a combination of characters between quotation
 marks.
 
@@ -89,7 +89,7 @@ capital_of_dominica
 ## Define a boolean variable
 
 A boolean variable is one of two things: `True` or `False`. To define a boolean
-variable we again use the `=` operator which is the assignment operator. We
+variable you again use the `=` assignment operator.
 create the name of the variable then the assignment operator followed by the
 boolean variable (either `True` or `False`).
 
@@ -111,9 +111,9 @@ john_nash_has_a_noble
 variables from other variables.
 ```
 
-## How to check the type of a variable
+## Check the type of a variable
 
-We can get the type of a variable using the `type` tool.
+You can get the type of a variable using the `type` tool.
 
 ````{tip}
 ```
@@ -169,7 +169,7 @@ average_male_height_in_inches
 ```
 
 ```{tip}
-This is similar to what we did in
+This is similar to what is shown in
 {ref}`carry_out_basic_arithmetic_operations`.
 ```
 
@@ -214,41 +214,7 @@ string
 
 (how_to_combine_boolean_variables)=
 
-## How to combine boolean variables
-
-Boolean variables can be combined using the logical operators `and` and `or`.
-
-````{tip}
-```
-new_boolean = first_boolean and second_boolean
-```
-```
-````
-
-````{tip}
-```
-new_boolean = first_boolean or second_boolean
-```
-```
-````
-
-For example:
-
-```{code-cell} ipython3
-is_tall = True
-is_strong = False
-is_tall_and_strong = is_tall and is_strong
-is_tall_and_strong
-```
-
-```{code-cell} ipython3
-is_tall = True
-is_strong = False
-is_tall_or_strong = is_tall or is_strong
-is_tall_or_strong
-```
-
-## How to combine collections of boolean of variables
+## Combine collections of boolean variables
 
 Given an iterable of booleans it is possible to check if any or all of them are
 `True` using `any` or `all`:
@@ -301,7 +267,7 @@ the `else` is often not needed.
 ```
 
 For example the following code selects a random integer between 0 and 100 and
-then prints a different string depending on what the number was.
+then return a different string depending on what the number was.
 
 ```{code-cell} ipython3
 import random
@@ -377,7 +343,7 @@ code to run once boolean is False
 ```
 ````
 
-Here is some code that repeatedly selects a random number until that number is
+Here is some code that repeatedly selects a random integer until that number is
 even.
 
 ```{code-cell} ipython3

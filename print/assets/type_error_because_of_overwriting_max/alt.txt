@@ -1,0 +1,6 @@
+An error caused by overwriting the max tool.
+
+A screenshot of a Jupyter notebook. In the code in the screenshot the command
+`max` has been assigned to something else.
+When trying to compute the maximum value of something it no longer works and
+gives an error.

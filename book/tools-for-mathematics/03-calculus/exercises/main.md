@@ -14,10 +14,6 @@ kernelspec:
 
 # Exercises
 
-**After** completing the tutorial attempt the following exercises.
-
-**If you are not sure how to do something, have a look at the "How To" section.**
-
 1. For each of the following functions calculate $\frac{df}{dx}$, $\frac{d^2f}{dx^2}$ and $\int f(x) dx$.
    1. $f(x) = x$
    2. $f(x) = x ^{\frac{1}{3}}$

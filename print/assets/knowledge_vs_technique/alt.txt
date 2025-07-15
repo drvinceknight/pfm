@@ -1,0 +1,11 @@
+Knowledge versus technique in this book.
+
+This diagram shows a common mathematical problem in Calculus. This leads to a
+description of the Mathematical knowledge needed to solve the problem:
+
+- Need to differentiate a function.
+- Need to equate the derivative to 0.
+- Need to use the second derivative test.
+
+Finally this leads to two separate ways to do the above: 1 with code and the
+other by writing out the mathematics.
