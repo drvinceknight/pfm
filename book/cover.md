@@ -12,10 +12,11 @@ kernelspec:
   name: python3
 ---
 
-# Python for Mathematics
+# [Python for Mathematics](https://www.taylorfrancis.com/books/mono/10.1201/9781003451860/python-mathematics-vincent-knight?context=ubx&refId=df92ae24-7381-40f4-96a6-e543be95b30b)
 
 ```{figure} ./img/cover/main.png
 ---
-width: 50%
+target: https://www.taylorfrancis.com/books/mono/10.1201/9781003451860/python-mathematics-vincent-knight?context=ubx&refId=df92ae24-7381-40f4-96a6-e543be95b30b
+width: 75%
 ---
 ```
