@@ -89,7 +89,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="How" href="../how/main.html" />
+    <link rel="next" title="How to" href="../how/main.html" />
     <link rel="prev" title="Differential Equations" href="../introduction/main.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -183,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../overview/how_to_use_this_book/main.html">
-     How to use this book
+     How to use this book?
     </a>
    </li>
   </ul>
@@ -212,7 +212,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../01-using-notebooks/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -249,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../02-algebra/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -471,7 +471,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08-statistics/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -508,7 +508,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -552,7 +552,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -626,7 +626,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/03-objects/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -663,7 +663,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/04-editor-and-cli/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -700,7 +700,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/05-modularisation/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -1251,25 +1251,23 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="tutorial">
 <h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">#</a></h1>
-<p>We will solve the following problem using a computer to do some of the more
-tedious calculations.</p>
+<p>You will solve the following problem using a computer to do some of the
+more tedious calculations.</p>
 <div class="admonition-problem admonition">
 <p class="admonition-title">Problem</p>
-<p>A container has volume <span class="math notranslate nohighlight">\(V\)</span> of liquid which is poured in at a rate proportional
-to <span class="math notranslate nohighlight">\(e^{-t}\)</span> (where <span class="math notranslate nohighlight">\(t\)</span> is some measurement of time). Initially the container is empty and
-after <span class="math notranslate nohighlight">\(t=3\)</span> time units the rate at which the liquid is poured is 15.</p>
+<p>A container has volume <span class="math notranslate nohighlight">\(V\)</span> of liquid which is poured in at a rate
+proportional to <span class="math notranslate nohighlight">\(e^{-t}\)</span> (where <span class="math notranslate nohighlight">\(t\)</span> is some measurement of time).
+Initially the container is empty and after <span class="math notranslate nohighlight">\(t=3\)</span> time units the volume
+of liquid is 15.</p>
 <ol class="simple">
-<li><p>Show that <span class="math notranslate nohighlight">\(V(t)=\frac{-15e^{3}}{1-e^{3}}(1 - e^{-t})\)</span></p></li>
-<li><p>Obtain the limit <span class="math notranslate nohighlight">\(\lim_{t\to \infty}V(t)\)</span></p></li>
+<li><p>Show that <span class="math notranslate nohighlight">\(V(t)=\frac{-15e^{3}}{1-e^{3}}(1 - e^{-t})\)</span>.</p></li>
+<li><p>Obtain the limit <span class="math notranslate nohighlight">\(\lim_{t\to \infty}V(t)\)</span>.</p></li>
 </ol>
 </div>
-<p>We first need to create the differential equation described in the text:</p>
-<div class="math notranslate nohighlight">
-\[\frac{V(t)}{dt}=ke^{-t}\]</div>
-<p>We create this differential equation in python:</p>
+<p>You first need to create the differential equation described in the text:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sym</span>
 
 <span class="n">t</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;t&quot;</span><span class="p">)</span>
 <span class="n">k</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;k&quot;</span><span class="p">)</span>
@@ -1285,7 +1283,7 @@ after <span class="math notranslate nohighlight">\(t=3\)</span> time units the r
 \[\displaystyle \frac{d}{d t} V{\left(t \right)} = k e^{- t}\]</div>
 </div>
 </div>
-<p>In order to solve the differential equation we can write:</p>
+<p>In order to solve the differential equation you can write:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">dsolve</span><span class="p">(</span><span class="n">differential_equation</span><span class="p">,</span> <span class="n">V</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
@@ -1297,9 +1295,9 @@ after <span class="math notranslate nohighlight">\(t=3\)</span> time units the r
 \[\displaystyle V{\left(t \right)} = C_{1} - k e^{- t}\]</div>
 </div>
 </div>
-<p>Note that the question gives us an initial condition: “initially the container
+<p>Note that the question gives an initial condition: “initially the container
 is empty” which corresponds to <span class="math notranslate nohighlight">\(V(0)=0\)</span>.</p>
-<p>We can pass this to the call to solve the differential equation:</p>
+<p>You can pass this to the call to solve the differential equation:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">condition</span> <span class="o">=</span> <span class="p">{</span><span class="n">V</span><span class="p">(</span><span class="mi">0</span><span class="p">):</span> <span class="mi">0</span><span class="p">}</span>
@@ -1326,7 +1324,7 @@ is empty” which corresponds to <span class="math notranslate nohighlight">\(V(
 \[\displaystyle - \frac{k}{e^{3}} + k = 15\]</div>
 </div>
 </div>
-<p>We can solve this equation to find a value for <span class="math notranslate nohighlight">\(k\)</span>:</p>
+<p>You can solve this equation to find a value for <span class="math notranslate nohighlight">\(k\)</span>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">equation</span><span class="p">,</span> <span class="n">k</span><span class="p">))</span>
@@ -1339,7 +1337,7 @@ is empty” which corresponds to <span class="math notranslate nohighlight">\(V(
 </div>
 </div>
 <p>which is the required value.</p>
-<p>We can use the complete expression for <span class="math notranslate nohighlight">\(V(t)\)</span> to take the limit:</p>
+<p>You can use the complete expression for <span class="math notranslate nohighlight">\(V(t)\)</span> to take the limit:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">limit</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">limit</span><span class="p">((</span><span class="o">-</span><span class="mi">15</span> <span class="o">*</span> <span class="n">sym</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span> <span class="n">sym</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">3</span><span class="p">)))</span> <span class="o">*</span>  <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">sym</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">t</span><span class="p">)),</span> <span class="n">t</span><span class="p">,</span> <span class="n">sym</span><span class="o">.</span><span class="n">oo</span><span class="p">)</span>
@@ -1367,7 +1365,7 @@ is empty” which corresponds to <span class="math notranslate nohighlight">\(V(
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>In this tutorial we have</p>
+<p>In this tutorial you have</p>
 <ul class="simple">
 <li><p>Created a differential equation</p></li>
 <li><p>Obtained the general solution of a differential equation</p></li>
@@ -1413,7 +1411,7 @@ is empty” which corresponds to <span class="math notranslate nohighlight">\(V(
     <a class='right-next' id="next-link" href="../how/main.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">How</p>
+        <p class="prev-next-title">How to</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

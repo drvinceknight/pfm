@@ -12,16 +12,17 @@ kernelspec:
   name: python3
 ---
 
+(chp:sequences)=
+
 # Sequences
 
-The formal definition of sequences is a collection of ordered objects with
-potential repetitions.
-
-The study of these sequences leads to many interesting results. Here we will
-concentrate on using recursive definitions to generate the values in a sequence.
+The formal definition of sequences is a collection of ordered objects
+with potential repetitions. The study of these sequences leads to many
+interesting results. Here you will concentrate on using recursive
+definitions to generate the values in a sequence.
 
 ```{important}
-In this chapter we will cover:
+In this chapter you will cover:
 
 - Using recursion.
 ```

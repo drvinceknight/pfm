@@ -181,7 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../overview/how_to_use_this_book/main.html">
-     How to use this book
+     How to use this book?
     </a>
    </li>
   </ul>
@@ -210,7 +210,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/01-using-notebooks/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -247,7 +247,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/02-algebra/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -469,7 +469,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/08-statistics/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -506,7 +506,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/09-differential-equations/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -550,7 +550,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../01-variables-conditionals-loops/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -624,7 +624,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../03-objects/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -661,7 +661,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../04-editor-and-cli/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -698,7 +698,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../05-modularisation/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -1261,8 +1261,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-do-we-need-doc-tests">
-   Why do we need doc tests?
+  <a class="reference internal nav-link" href="#why-do-you-need-doc-tests">
+   Why do you need doc tests?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1310,8 +1310,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-do-we-need-doc-tests">
-   Why do we need doc tests?
+  <a class="reference internal nav-link" href="#why-do-you-need-doc-tests">
+   Why do you need doc tests?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1339,7 +1339,7 @@ title="Print to PDF"
 <section id="why-do-we-write-functions-in-tests">
 <h2>Why do we write functions in tests?<a class="headerlink" href="#why-do-we-write-functions-in-tests" title="Permalink to this headline">#</a></h2>
 <p>In <a class="reference internal" href="../tutorial/main.html#testing-tutorial"><span class="std std-ref">Tutorial</span></a> we wrote all the tests using <code class="docutils literal notranslate"><span class="pre">assert</span></code> statements
-inside of functions. **Technically this is not necessary as you could write a
+inside of functions. <strong>Technically</strong> this is not necessary as you could write a
 single script with all the assert statements one after the other.</p>
 <p>This is not recommended: by using functions we directly have a place to document
 the test (in the docstring) and the tests themselves are modularised.
@@ -1352,58 +1352,17 @@ appropriate way of running tests as described in
 <p>Writing tests as a script and directly running them has one immediate problem:
 once the first <code class="docutils literal notranslate"><span class="pre">assert</span></code> statement fails the rest of them are not run.</p>
 <p>There is a Python library for running tests called <code class="docutils literal notranslate"><span class="pre">pytest</span></code> <a class="reference external" href="https://docs.pytest.org/">https://docs.pytest.org/</a>.
-Importantly this is not part of the anaconda distribution and needs to be
-installed.</p>
-<p>To do this type the following at the command line:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pytest
-</pre></div>
-</div>
-<p>This uses a python tool called <code class="docutils literal notranslate"><span class="pre">pip</span></code> which lets you install libraries from the
-Python Package Index (PyPi).
-Figure <a class="reference internal" href="#fig-installing-pytest"><span class="std std-ref">Installing pytest from the Python Package Index.</span></a> shows this.</p>
-<figure class="align-default" id="fig-installing-pytest">
-<a class="reference internal image-reference" href="../../../_images/main14.png"><img alt="../../../_images/main14.png" src="../../../_images/main14.png" style="width: 75%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Installing pytest from the Python Package Index.</span><a class="headerlink" href="#fig-installing-pytest" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Once we have <code class="docutils literal notranslate"><span class="pre">pytest</span></code> installed we can actually find all files starting with
-<code class="docutils literal notranslate"><span class="pre">test_</span></code> in the name and all functions in those files starting with <code class="docutils literal notranslate"><span class="pre">test_</span></code> and
-run them with the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pytest
-</pre></div>
-</div>
-<p>Figure <a class="reference internal" href="#fig-running-pytest"><span class="std std-ref">Running pytest</span></a> shows this.</p>
-<figure class="align-default" id="fig-running-pytest">
-<a class="reference internal image-reference" href="../../../_images/main15.png"><img alt="../../../_images/main15.png" src="../../../_images/main15.png" style="width: 75%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Running pytest</span><a class="headerlink" href="#fig-running-pytest" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>It is also possible to use <code class="docutils literal notranslate"><span class="pre">pytest</span></code> to test the documentation by running the
-doctests:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pytest<span class="w"> </span>--doctest-glob<span class="o">=</span><span class="s2">&quot;README.md&quot;</span>
-</pre></div>
-</div>
-<p>Figure <a class="reference internal" href="#fig-running-pytest-with-doctests"><span class="std std-ref">Running pytest with doctests</span></a> shows this.</p>
-<figure class="align-default" id="fig-running-pytest-with-doctests">
-<a class="reference internal image-reference" href="../../../_images/main16.png"><img alt="../../../_images/main16.png" src="../../../_images/main16.png" style="width: 75%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Running pytest with doctests</span><a class="headerlink" href="#fig-running-pytest-with-doctests" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>When you tests pass or fail you will get more information and there are also a
-number of plugins that exists that all you to extend the capabilities of
-<code class="docutils literal notranslate"><span class="pre">pytest</span></code>.</p>
+There are a number of resources from which to learn how to use <code class="docutils literal notranslate"><span class="pre">pytest</span></code> to its
+full extent <span id="id2">[<a class="reference internal" href="../../../zbibliography.html#id5" title="Bruno Oliveira. pytest Quick Start Guide: Write better Python code with simple and maintainable tests. Packt Publishing Ltd, 2018.">Oliveira, 2018</a>]</span>.</p>
 </section>
 <section id="what-should-be-tested">
 <h2>What should be tested?<a class="headerlink" href="#what-should-be-tested" title="Permalink to this headline">#</a></h2>
 <p>The short answer to this is that all software should be tested and that software
 is compromised of documentation and code.</p>
 <p>Note that it is often not sufficient to test a function in a single way. For
-example, if we have a function that does two different things depending on the
+example, consider a function that does two different things depending on the
 parity of some input:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">feedback_on_guess</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span> <span class="n">chosen_number</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">feedback_on_guess</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span> <span class="n">chosen_number</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns whether or not a guess is:</span>
 
@@ -1418,15 +1377,13 @@ parity of some input:</p>
     <span class="k">return</span> <span class="s2">&quot;Guess is equal to chosen number&quot;</span>
 </pre></div>
 </div>
-<p>In this case we would need to write at least 3 tests that check the 3
+<p>In this case you would need to write at least 3 tests that check the 3
 behaviours.</p>
 <p>In practice there might be some functionality that is not tested but this should
-be made clear and explicit and documentation as to why should be written.</p>
-<p>There are a number of resources from which to learn how to use <code class="docutils literal notranslate"><span class="pre">pytest</span></code> to its
-full extent and <span id="id2">[<a class="reference internal" href="../../../zbibliography.html#id5" title="Bruno Oliveira. pytest Quick Start Guide: Write better Python code with simple and maintainable tests. Packt Publishing Ltd, 2018.">Oliveira, 2018</a>]</span> is a further great resource.</p>
+be made clear and explicit and documented as to why should be written.</p>
 </section>
-<section id="why-do-we-need-doc-tests">
-<h2>Why do we need doc tests?<a class="headerlink" href="#why-do-we-need-doc-tests" title="Permalink to this headline">#</a></h2>
+<section id="why-do-you-need-doc-tests">
+<h2>Why do you need doc tests?<a class="headerlink" href="#why-do-you-need-doc-tests" title="Permalink to this headline">#</a></h2>
 <p>The purpose of doctests is to ensure that the code written in documentation is
 correct.</p>
 <p>It is important to not use doctests to test the functionality of the code: this
@@ -1462,9 +1419,9 @@ that is reliable:</p>
 <p>In reality <strong>all 3</strong> of these concepts are closely related and fundamental to
 good software. Figure <a class="reference internal" href="#fig-best-practice-triangle"><span class="std std-ref">The relationship between modularisation, documentation and testing</span></a> shows this.</p>
 <figure class="align-default" id="fig-best-practice-triangle">
-<a class="reference internal image-reference" href="../../../_images/main17.png"><img alt="../../../_images/main17.png" src="../../../_images/main17.png" style="width: 75%;" /></a>
+<a class="reference internal image-reference" href="../../../_images/main14.png"><img alt="../../../_images/main14.png" src="../../../_images/main14.png" style="width: 75%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 28 </span><span class="caption-text">The relationship between modularisation, documentation and testing</span><a class="headerlink" href="#fig-best-practice-triangle" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">The relationship between modularisation, documentation and testing</span><a class="headerlink" href="#fig-best-practice-triangle" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>

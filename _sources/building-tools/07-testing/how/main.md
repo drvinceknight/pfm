@@ -35,15 +35,15 @@ def add_one(a):
     return a + 1
 ```
 
-We can assert that we have the expected behaviour:
+You can assert the expected behaviour:
 
 ```{code-cell} ipython3
 assert add_one(5) == 6, "The function gave the wrong answer."
 ```
 
-Note that if we change the function to include an error for example here adding
+Note that if you change the function to include an error for example here adding
 2 and not 1, and run the same assert
-we get an error as well as the specific string,
+you get an error as well as the specified string.
 
 ```{code-cell} ipython3
 :tags: ["raises-exception"]
@@ -76,7 +76,7 @@ def roll_a_dice():
     return random.choice(range(1, 7))
 ```
 
-To test this we can include a number of seeded assertions:
+To test this, include a number of seeded assertions:
 
 ```{code-cell} ipython3
 random.seed(0)
@@ -89,7 +89,7 @@ random.seed(3)
 assert roll_a_dice() == 2, "The 3 seed did not give the expected result"
 ```
 
-We can also check behaviour over a number of repetitions:
+You can also check behaviour over a number of repetitions:
 
 ```{code-cell} ipython3
 :tags: ["style-check-ignore"]
@@ -113,7 +113,7 @@ of items in a list.
 
 ## How to write a test file?
 
-To write tests assertion statement can be put in to a file separate to the code
+To write tests assertion statements should be put in to a file separate to the code
 in functions.
 
 For example, if the `dice.py` file contained:
@@ -213,9 +213,9 @@ We would write:
 
 ```
 
-## How to run doctests?
+## How to run doc tests?
 
-Given a <file> with doctests to run them we type the following at the
+Given a file with doc tests, to run them type the following at the
 command line:
 
 ````{tip}

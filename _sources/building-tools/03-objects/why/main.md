@@ -24,7 +24,7 @@ pronounced "dunder".
 In methods the first variable is used to refer to the instance of a given class.
 It is conventional to use `self`.
 
-As an example let us consider this class:
+As an example consider this class:
 
 ```{code-cell} ipython3
 class PetDog:
@@ -136,13 +136,5 @@ These conventions are important as it helps with readability of code.
 
 ## What is the difference between a method and a function?
 
-A method is a function defined on a class and always takes a first argument
+A method is a function defined on a class and always takes a first parameter
 which is the specific instance from which the method is called.
-
-## Other resources on objects
-
-- A non programmers tutorial for Python: Object Oriented Programming:
-  <https://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Intro_to_Object_Oriented_Programming_in_Python_3>
-- A tutorial based on a role playing game:
-  <https://inventwithpython.com/blog/2014/12/02/why-is-object-oriented-programming-useful-with-a-role-playing-game-example/>
-- A video: <https://www.youtube.com/watch?v=trOZBgZ8F_c>

@@ -12,13 +12,14 @@ kernelspec:
   name: python3
 ---
 
-# How
+# How to
 
-## How to create a symbolic numeric value
+## Create a symbolic numeric value
 
 To create a symbolic numerical value use `sympy.S`.
 
-````{tip}
+````{admonition} Usage
+:class: tip
 ```
 sympy.S(a)
 ```
@@ -34,7 +35,7 @@ value
 ```
 
 ```{attention}
-If we combine a symbolic value with a non symbolic value it will automatically
+If you combine a symbolic value with a non symbolic value it will automatically
 give a symbolic value:
 ```
 
@@ -42,25 +43,28 @@ give a symbolic value:
 1 / value
 ```
 
-## How to get the numerical value of a symbolic expression
+## Get the numerical value of a symbolic expression
 
-We can get the numerical value of a symbolic value using `float` or `int`:
+You can get the numerical value of a symbolic value using `float` or
+`int`:
 
-- `float` will give the numeric approximation in \\(\mathbb{R}\\)
-  ````{tip}
+- `float` will give the numeric approximation in $\mathbb{R}$
+  ````{admonition} Usage
+  :class: tip
   ```
   float(x)
   ```
   ````
 - `int` will give the integer value
-  ````{tip}
+  ````{admonition} Usage
+  :class: tip
   ```
   int(x)
   ```
   ````
 
-For example, let us create a symbolic numeric variable with value
-\\(\frac{1}{5}\\):
+For example, to create a symbolic numeric variable with value
+$\frac{1}{5}$:
 
 ```{code-cell} ipython3
 value = 1 / sympy.S(5)
@@ -73,21 +77,23 @@ To get the numerical value:
 float(value)
 ```
 
-If we wanted the integer value:
+To get the integer value:
 
 ```{code-cell} ipython3
 int(value)
 ```
 
 ```{attention}
-This is not rounding to the nearest integer. It is returning the integer part.
+This is not rounding to the nearest integer. It is returning the integer
+part.
 ```
 
-## How to factor an expression
+## Factor an expression
 
-We use the `sympy.factor` tool to factor expressions.
+Use the `sympy.factor` tool to factor expressions.
 
-````{tip}
+````{admonition} Usage
+:class: tip
 ```
 sympy.factor(expression)
 ```
@@ -100,11 +106,12 @@ x = sympy.Symbol("x")
 sympy.factor(x ** 2 - 9)
 ```
 
-## How to expand an expression
+### Factor an expression
 
-We use the `sympy.expand` tool to expand expressions.
+Use the `sympy.factor` tool to factor expressions.
 
-````{tip}
+````{admonition} Usage
+:class: tip
 ```
 sympy.expand(expression)
 ```
@@ -116,11 +123,12 @@ For example:
 sympy.expand((x - 3) * (x + 3))
 ```
 
-## How to simplify an expression
+### Simplify an expression
 
-We use the `sympy.simplify` tool to simplify an expression.
+Use the `sympy.simplify` tool to simplify an expression.
 
-````{tip}
+````{admonition} Usage
+:class: tip
 ```
 sympy.simplify(expression)
 ```
@@ -137,23 +145,24 @@ This will not always give the expected (or any) result. At times it could be
 more beneficial to use `sympy.expand` and/or `sympy.factor`.
 ```
 
-## How to solve an equation
+## Solve an equation
 
-We use the `sympy.solveset` tool to solve an equation. It takes two values as
-inputs. The first is either:
+Use the `sympy.solveset` tool to solve an equation. It takes two values
+as inputs. The first is either:
 
 - An expression for which a root is to be found
 - An equation
 
-The second is the variable we want to solve for.
+The second is the variable you want to solve for.
 
-````{tip}
+````{admonition} Usage
+:class: tip
 ```
 sympy.solveset(equation, variable)
 ```
 ````
 
-Here is how we can use `sympy` to obtain the roots of the general quadratic:
+Here is how you can use `sympy` to obtain the roots of the general :
 
 $$
 a x ^ 2 + bx + c
@@ -167,14 +176,13 @@ quadratic = a * x ** 2 + b * x + c
 sympy.solveset(quadratic, x)
 ```
 
-Here is how we would solve the same equation but not for \\(x\\) but for
-\\(b\\):
+Here is how to solve the same equation but not for $x$ but for $b$:
 
 ```{code-cell} ipython3
 sympy.solveset(quadratic, b)
 ```
 
-It is however clearer to specifically write the equation that we want to solve:
+It is however clearer to specifically write the equation to solve:
 
 ```{code-cell} ipython3
 equation = sympy.Eq(a * x ** 2 + b * x + c, 0)
@@ -183,24 +191,25 @@ sympy.solveset(equation, x)
 
 (how-to-substitute-a-value-in-to-an-expression)=
 
-## How to substitute a value in to an expression
+## Substitute a value in to an expression
 
-Given a `sympy` expression it is possible to substitute values in to it using
-the `.subs()` tool.
+Given a `sympy` expression it is possible to substitute values in to it
+using the `.subs()` tool.
 
-````{tip}
+````{admonition} Usage
+:class: tip
 ```
 expression.subs({variable: value})
 ```
 ````
 
-```{attention}
-It is possible to pass multiple variables at a time.
-```
-
-For example we can substitute the values for \\(a, b, c\\) in to our quadratic:
+````{attention}
+It is possible to pass multiple variables at a time. For example to
+substitute the values for $a, b, c$ in to the expression:
 
 ```{code-cell} ipython3
 quadratic = a * x ** 2 + b * x + c
 quadratic.subs({a: 1, b: sympy.S(7) / 8, c: 0})
 ```
+
+````

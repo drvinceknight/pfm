@@ -33,7 +33,7 @@ Open a command line tool:
    {ref}`fig:starting_the_notebook_server`.
 
 Whether or not your are on Windows or MacOS changes the commands you need to
-type. We will first list the directory we are currently in:
+type. First, list the directory you are currently in:
 
 `````{tab-set}
 ````{tab-item} Windows
@@ -56,10 +56,10 @@ tool I will prefix them with a `$`. Do not type the `$`.
 ```
 
 This is similar to using your file explorer to view the contents in a given
-directory. Similarly to the way we click on a directory in the file explorer we
+directory. Similarly to the way you double click on a directory in the file explorer you
 can navigate to a directory in the command line.
 
-To do this we use the same command on both operating systems:
+To do this you use the same command on both operating systems:
 
 `````{tab-set}
 ````{tab-item} Windows
@@ -98,7 +98,7 @@ The two statements are written under each other to denote that they are run
 one after the other.
 ```
 
-We will now create a new directory:
+You will now create a new directory:
 
 `````{tab-set}
 ````{tab-item} Windows
@@ -148,19 +148,19 @@ name: fig:output_of_ls
 The contents of our directory on OS X
 ```
 
-We will come back to this directory shortly but now we are going to install a
+Before continuing with this directory you are going to install a
 powerful code editor.
 
 1. Navigate to <https://code.visualstudio.com>.
 2. Download the installer making sure it is the correct one for your operating
-   system (Windows, Mac OSX, Linux).
+   system (Windows, MacOS or Linux).
 3. Run the installer.
 
-This code editor will offer us a different way to write Python code.
+This code editor will offer you a different way to write Python code.
 
 Open VS code and create a new file.
 
-In it write the following (which corresponds to the solution of our problem):
+In it write the following (which corresponds to the solution of the problem):
 
 ```python
 """
@@ -206,11 +206,10 @@ name: fig:syntax_colouring_and_plugin_suggestion
 Syntax colouring and plugin suggestion for the now recognised Python file.
 ```
 
-All we have done so far is write the code. We now need to tell Python to run it.
-To do this we will use the command line.
+All you have done so far is write the code. You now need to tell Python to run it.
+To do this you will use the command line.
 
-Navigate to the `scripts` directory that we created earlier:
-
+Navigate to the `scripts` directory that you created earlier:
 
 `````{tab-set}
 ````{tab-item} Windows

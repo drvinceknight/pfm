@@ -183,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../overview/how_to_use_this_book/main.html">
-     How to use this book
+     How to use this book?
     </a>
    </li>
   </ul>
@@ -212,7 +212,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../01-using-notebooks/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -249,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../02-algebra/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -471,7 +471,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08-statistics/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -508,7 +508,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../09-differential-equations/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -552,7 +552,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -626,7 +626,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/03-objects/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -663,7 +663,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/04-editor-and-cli/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -700,7 +700,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/05-modularisation/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -1248,8 +1248,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-are-we-not-commenting-our-code">
-   Why are we not commenting our code?
+  <a class="reference internal nav-link" href="#why-does-this-book-not-discuss-commenting-of-code">
+   Why does this book not discuss commenting of code?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1300,8 +1300,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-are-we-not-commenting-our-code">
-   Why are we not commenting our code?
+  <a class="reference internal nav-link" href="#why-does-this-book-not-discuss-commenting-of-code">
+   Why does this book not discuss commenting of code?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1344,35 +1344,38 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="further-information">
 <h1>Further information<a class="headerlink" href="#further-information" title="Permalink to this headline">#</a></h1>
-<section id="why-are-we-not-commenting-our-code">
-<h2>Why are we not commenting our code?<a class="headerlink" href="#why-are-we-not-commenting-our-code" title="Permalink to this headline">#</a></h2>
+<section id="why-does-this-book-not-discuss-commenting-of-code">
+<h2>Why does this book not discuss commenting of code?<a class="headerlink" href="#why-does-this-book-not-discuss-commenting-of-code" title="Permalink to this headline">#</a></h2>
 <p>In Python it is possible to write statements that are ignored using the <code class="docutils literal notranslate"><span class="pre">#</span></code>
 symbol. This creates something called a “comment”. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>  <span class="c1"># Importing the sympy library using the alias sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sym</span>  <span class="c1"># Importing the sympy library using an alias</span>
 </pre></div>
 </div>
 </div>
 </div>
 <p>Comments like these often do not add to the readability of the code. In fact
 they can make the code less readable or at worse confusing <span id="id1">[<a class="reference internal" href="../../../zbibliography.html#id3" title="Robert C Martin. Clean code: a handbook of agile software craftsmanship. Pearson Education, 2009.">Martin, 2009</a>]</span>.</p>
-<p>In this section of the book there is in fact no need for comments like this as
-we are mainly using tools that are well documented. Furthermore when using
-Jupyter notebooks we can add far more to the readbility of the code by adding
-prose alongside our code instead of using small brief inline comments.</p>
+<p>In this section of the book there is in fact no need for comments like
+this as you are mainly using tools that are well documented. Furthermore
+when using Jupyter notebooks you can add far more to the readability of
+the code by adding prose alongside our code instead of using small brief
+inline comments.</p>
 <p>This does not mean that readability of code is not important.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Being able to read and understand the code we write is important.</p>
+<p>Being able to read and understand written code is important.</p>
 </div>
-<p>In <a class="reference internal" href="../../06-probability/introduction/main.html#probability"><span class="std std-ref">Probability</span></a> we will start to write our own functions and emphasis will
-be given there on readability and documenting (as opposed to commenting) the
-code we will write. A specific discussion about using a tool called a
-<code class="docutils literal notranslate"><span class="pre">docstring</span></code> as opposed to a comment is here
-<a class="reference internal" href="../../06-probability/why/main.html#difference-between-a-docstring-and-a-comment"><span class="std std-ref">What is the difference between a docstring and a comment</span></a>.</p>
-<p>In <a class="reference internal" href="../../../building-tools/05-modularisation/introduction/main.html#modularisation"><span class="std std-ref">Modularisation</span></a> and <a class="reference internal" href="../../../building-tools/06-documentation/tutorial/main.html#documentation"><span class="std std-ref">Tutorial</span></a> there is a lot more
-information on how to ensure code is readable and understandable.</p>
+<p>In
+Chapter <a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/introduction/main.html#chp-functions-and-data-structures"><span class="std std-ref">Functions and data structures</span></a> you will start to write
+functions and emphasis will be given there on readability and
+documenting (as opposed to commenting) the code written. A specific
+discussion about using a tool called a <strong>docstring</strong> as opposed to a
+comment will be covered.</p>
+<p>In chapters <a class="reference internal" href="../../../building-tools/05-modularisation/introduction/main.html#chp-modularisation"><span class="std std-ref">Modularisation</span></a>
+to <a class="reference internal" href="../../../building-tools/07-testing/introduction/main.html#chp-testing"><span class="std std-ref">Testing</span></a> there is more information on how to ensure code
+is readable and understandable.</p>
 </section>
 <section id="why-do-we-use-for-matrix-multiplication-and-not">
 <h2>Why do we use <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> for matrix multiplication and not <code class="docutils literal notranslate"><span class="pre">*</span></code>?<a class="headerlink" href="#why-do-we-use-for-matrix-multiplication-and-not" title="Permalink to this headline">#</a></h2>
@@ -1380,7 +1383,7 @@ information on how to ensure code is readable and understandable.</p>
 multiplication:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sym</span>
 
 <span class="n">matrix</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
 <span class="n">other_matrix</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">/</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
@@ -1400,10 +1403,10 @@ multiplication instead. So for clarity it is preferred to use <code class="docut
 <section id="i-have-read-that-numpy-is-a-library-for-linear-algebra">
 <h2>I have read that <code class="docutils literal notranslate"><span class="pre">numpy</span></code> is a library for linear algebra?<a class="headerlink" href="#i-have-read-that-numpy-is-a-library-for-linear-algebra" title="Permalink to this headline">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> is one of the most popular and important libraries in the Python
-ecosystem. It is in fact the best library to use when doing linear algebra as it
-is computationally efficient, <strong>however</strong> it cannot handle symbolic variables
-which is why we are seeing how to use <code class="docutils literal notranslate"><span class="pre">Sympy</span></code> here. <a class="reference internal" href="../../../further-information/01-numpy/introduction/main.html#numpy"><span class="std std-ref">Numpy</span></a> gives an
-introduction to <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p>
+ecosystem. It is in fact the best library to use when doing linear
+algebra as it is computationally efficient, <strong>however</strong> it cannot handle
+symbolic variables which is why you are seeing how to use <code class="docutils literal notranslate"><span class="pre">Sympy</span></code> here.
+An introduction to <code class="docutils literal notranslate"><span class="pre">numpy</span></code> is covered in <a class="reference internal" href="../../../further-information/01-numpy/introduction/main.html#numpy"><span class="std std-ref">Numpy</span></a>.</p>
 </section>
 </section>
 

@@ -183,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../overview/how_to_use_this_book/main.html">
-     How to use this book
+     How to use this book?
     </a>
    </li>
   </ul>
@@ -212,7 +212,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/01-using-notebooks/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -249,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/02-algebra/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -471,7 +471,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/08-statistics/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -508,7 +508,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/09-differential-equations/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -552,7 +552,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -626,7 +626,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/03-objects/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -663,7 +663,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/04-editor-and-cli/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -700,7 +700,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/05-modularisation/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -1303,12 +1303,12 @@ title="Print to PDF"
 <p>A general linear program of the form</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\begin{align}
+\begin{aligned}
 \text{minimise: } c^t x&amp;  \\
 \text{subject to: } &amp; \nonumber \\
 A_{\text{ub}}x&amp;\leq b_{\text{ub}}\\
 A_{\text{eq}}x&amp;= b_{\text{eq}}\\
-\end{align}
+\end{aligned}
 \end{split}\]</div>
 <p>can be solved using:</p>
 <div class="admonition tip">
@@ -1320,8 +1320,8 @@ A_{\text{eq}}x&amp;= b_{\text{eq}}\\
 <p>For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">scipy.optimize</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy.optimize</span>
 
 <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
 <span class="n">A_ub</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>

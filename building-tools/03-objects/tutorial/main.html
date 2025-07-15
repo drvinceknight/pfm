@@ -89,7 +89,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="How" href="../how/main.html" />
+    <link rel="next" title="How to" href="../how/main.html" />
     <link rel="prev" title="Object oriented programming" href="../introduction/main.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -183,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../overview/how_to_use_this_book/main.html">
-     How to use this book
+     How to use this book?
     </a>
    </li>
   </ul>
@@ -212,7 +212,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/01-using-notebooks/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -249,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/02-algebra/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -471,7 +471,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/08-statistics/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -508,7 +508,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/09-differential-equations/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -552,7 +552,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../01-variables-conditionals-loops/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -626,7 +626,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -663,7 +663,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../04-editor-and-cli/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -700,7 +700,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../05-modularisation/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -1251,7 +1251,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="tutorial">
 <span id="objects-tutorial"></span><h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">#</a></h1>
-<p>We will here write some code to create and manipulate quadratic expressions.
+<p>You will write some code to create and manipulate quadratic expressions.
 With <code class="docutils literal notranslate"><span class="pre">sympy</span></code> this is not necessary as all functionality required is available
 within <code class="docutils literal notranslate"><span class="pre">sympy</span></code> however this will be a good exercise in understanding how to
 build such functionality.</p>
@@ -1266,23 +1266,23 @@ h(x) = f(x) + g(x)
 \end{split}\]</div>
 <p>Without using <code class="docutils literal notranslate"><span class="pre">sympy</span></code>, obtain the roots for all the quadratics.</p>
 </div>
-<p>We will start by defining an object to represent a quadratic. This is called a
+<p>Start by defining an object to represent a quadratic. This is called a
 class.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
 
 
-<span class="k">class</span> <span class="nc">QuadraticExpression</span><span class="p">:</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">QuadraticExpression</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A class for a quadratic expression&quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="n">a</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">c</span> <span class="o">=</span> <span class="n">c</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminant</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">c</span>
 
-    <span class="k">def</span> <span class="nf">get_roots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_roots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the real valued roots of the quadratic expression</span>
 
@@ -1297,11 +1297,11 @@ class.</p>
             <span class="k">return</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span>
         <span class="k">return</span> <span class="p">()</span>
 
-    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;A magic method: let&#39;s us have addition between expressions&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">QuadraticExpression</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">c</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">c</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;A magic method: changes the default way an instance is displayed&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Quadratic expression: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="si">}</span><span class="s2"> x ^ 2 + </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="si">}</span><span class="s2"> x + </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">c</span><span class="si">}</span><span class="s2">&quot;</span>
 </pre></div>
@@ -1321,8 +1321,8 @@ positive.</p></li>
 instance.</p></li>
 </ul>
 </div>
-<p>Let us now use this class to solve the specified problem. First we create
-instances the class that correspond to <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span>. This is using the <code class="docutils literal notranslate"><span class="pre">__init__</span></code>
+<p>Now use this class to solve the specified problem. First create
+instances of the class that correspond to <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span>. This is using the <code class="docutils literal notranslate"><span class="pre">__init__</span></code>
 function in the background.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1332,7 +1332,7 @@ function in the background.</p>
 </div>
 </div>
 </div>
-<p>We can now take a look at both of these instances. This is using the <code class="docutils literal notranslate"><span class="pre">__repr__</span></code>
+<p>You can now take a look at both of these instances. This is using the <code class="docutils literal notranslate"><span class="pre">__repr__</span></code>
 function in the background:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1358,7 +1358,7 @@ function in the background:</p>
 </div>
 </div>
 </div>
-<p>Now we are going to create <span class="math notranslate nohighlight">\(h(x) = f(x) + g(x)\)</span>. This is using the <code class="docutils literal notranslate"><span class="pre">__add__</span></code>
+<p>Now you are going to create <span class="math notranslate nohighlight">\(h(x) = f(x) + g(x)\)</span>. This is using the <code class="docutils literal notranslate"><span class="pre">__add__</span></code>
 function in the background:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1373,7 +1373,7 @@ function in the background:</p>
 </div>
 </div>
 </div>
-<p>We can now iterate over our quadratics and find the roots. This is using the
+<p>You can now iterate over our quadratics and find the roots. This is using the
 <code class="docutils literal notranslate"><span class="pre">get_roots</span></code> function in the background:</p>
 <div class="cell tag_nbval-ignore-output docutils container">
 <div class="cell_input docutils container">
@@ -1388,7 +1388,7 @@ function in the background:</p>
 </div>
 </div>
 </div>
-<p>We see that <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> have real valued roots but <span class="math notranslate nohighlight">\(h\)</span> does not. We can check
+<p>Note that <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> have real valued roots but <span class="math notranslate nohighlight">\(h\)</span> does not. You can check
 the value of the discriminant of <span class="math notranslate nohighlight">\(h\)</span>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1402,13 +1402,13 @@ the value of the discriminant of <span class="math notranslate nohighlight">\(h\
 </div>
 </div>
 </div>
-<p>We are going to now create a new class from <code class="docutils literal notranslate"><span class="pre">QuadraticExpression</span></code> where we
-replace the <code class="docutils literal notranslate"><span class="pre">get_roots</span></code> function with a new one that can handle imaginary roots
-and update the <code class="docutils literal notranslate"><span class="pre">__add__</span></code> function to make sure we return an instance of the new
+<p>You are going to create a new class from <code class="docutils literal notranslate"><span class="pre">QuadraticExpression</span></code>
+replacing the <code class="docutils literal notranslate"><span class="pre">get_roots</span></code> function with a new one that can handle imaginary roots
+and update the <code class="docutils literal notranslate"><span class="pre">__add__</span></code> function to return an instance of the new
 class.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">QuadraticExpressionWithAllRoots</span><span class="p">(</span><span class="n">QuadraticExpression</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">QuadraticExpressionWithAllRoots</span><span class="p">(</span><span class="n">QuadraticExpression</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A class for a quadratic expression that can return imaginary roots</span>
 
@@ -1416,7 +1416,7 @@ class.</p>
 <span class="sd">    the real part and im is the imaginary part.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">get_roots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_roots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the real valued roots of the quadratic expression</span>
 
@@ -1435,7 +1435,7 @@ class.</p>
         <span class="n">im2</span> <span class="o">=</span> <span class="o">-</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">discriminant</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="p">)</span>
         <span class="k">return</span> <span class="p">((</span><span class="n">real_part</span><span class="p">,</span> <span class="n">im1</span><span class="p">),</span> <span class="p">(</span><span class="n">real_part</span><span class="p">,</span> <span class="n">im2</span><span class="p">))</span>
 
-    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;A special method: let&#39;s us have addition between expressions&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">QuadraticExpressionWithAllRoots</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">c</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">c</span>
@@ -1444,7 +1444,7 @@ class.</p>
 </div>
 </div>
 </div>
-<p>Now let us define our quadratics once again but using this new class:</p>
+<p>Now define the quadratics once again but using this new class:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">QuadraticExpressionWithAllRoots</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=-</span><span class="mi">7</span><span class="p">)</span>
@@ -1492,13 +1492,13 @@ class.</p>
 </div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>We have not needed to redefine <code class="docutils literal notranslate"><span class="pre">__init__</span></code>, or <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> as the new
+<p>There is no need to redefine <code class="docutils literal notranslate"><span class="pre">__init__</span></code>, or <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> as the new
 class inherits these from <code class="docutils literal notranslate"><span class="pre">QuadraticExpression</span></code> due to this statement:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">QuadraticExpressionWithAllRoots</span><span class="p">(</span><span class="n">QuadraticExpression</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">QuadraticExpressionWithAllRoots</span><span class="p">(</span><span class="n">QuadraticExpression</span><span class="p">):</span>
 </pre></div>
 </div>
 </div>
-<p>We can now get all the roots for both quadratics:</p>
+<p>You can now get all the roots for the quadratics:</p>
 <div class="cell tag_nbval-ignore-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roots</span> <span class="o">=</span> <span class="p">[</span><span class="n">quadratic</span><span class="o">.</span><span class="n">get_roots</span><span class="p">()</span> <span class="k">for</span> <span class="n">quadratic</span> <span class="ow">in</span> <span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">h</span><span class="p">)]</span>
@@ -1553,7 +1553,7 @@ class inherits these from <code class="docutils literal notranslate"><span class
     <a class='right-next' id="next-link" href="../how/main.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">How</p>
+        <p class="prev-next-title">How to</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

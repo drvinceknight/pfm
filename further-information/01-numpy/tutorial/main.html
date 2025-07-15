@@ -183,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../overview/how_to_use_this_book/main.html">
-     How to use this book
+     How to use this book?
     </a>
    </li>
   </ul>
@@ -212,7 +212,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/01-using-notebooks/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -249,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/02-algebra/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -471,7 +471,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/08-statistics/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -508,7 +508,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/09-differential-equations/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -552,7 +552,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -626,7 +626,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/03-objects/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -663,7 +663,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/04-editor-and-cli/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -700,7 +700,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/05-modularisation/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -1258,9 +1258,9 @@ of a <a class="reference external" href="https://en.wikipedia.org/wiki/Bean_mach
 <p>A Galton Board can be represented using a <a class="reference external" href="https://en.wikipedia.org/wiki/Markov_chain">Markov
 Chain</a> as shown in this diagram:</p>
 <figure class="align-default" id="fig-galton-board">
-<a class="reference internal image-reference" href="../../../_images/main19.png"><img alt="../../../_images/main19.png" src="../../../_images/main19.png" style="width: 75%;" /></a>
+<a class="reference internal image-reference" href="../../../_images/main16.png"><img alt="../../../_images/main16.png" src="../../../_images/main16.png" style="width: 75%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 29 </span><span class="caption-text">The state space for a Galton board</span><a class="headerlink" href="#fig-galton-board" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">The state space for a Galton board</span><a class="headerlink" href="#fig-galton-board" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ol>
@@ -1293,10 +1293,10 @@ combinatorics. Note however that we will be using <code class="docutils literal 
 tuples to represent the state space.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 
-<span class="k">def</span> <span class="nf">get_all_states</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_all_states</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Obtain all states for a Galton board with N rows.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1326,7 +1326,7 @@ tuples to represent the state space.</p>
 of the problem to find the transition between two states:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_transition_probability</span><span class="p">(</span><span class="n">in_state</span><span class="p">,</span> <span class="n">out_state</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_transition_probability</span><span class="p">(</span><span class="n">in_state</span><span class="p">,</span> <span class="n">out_state</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Given two states, an in_state and an out_state this returns the probability</span>
 <span class="sd">    of going from the in_state to the out_state.</span>
@@ -1364,7 +1364,7 @@ of the problem to find the transition between two states:</p>
 the probability of transition:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_transition_matrix</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_transition_matrix</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create the transition matrix for a Galton board with N rows and probability</span>
 <span class="sd">    of falling to the left of p.</span>
@@ -1411,7 +1411,7 @@ index of the items.</p>
 <p>Now to find the expected distribution.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_distribution</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_distribution</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This returns the distribution of beans over the entire state space after the</span>
 <span class="sd">    all fall.</span>
@@ -1475,7 +1475,7 @@ corresponds to a matrix of size <span class="math notranslate nohighlight">\(\fr
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>453 ms ± 4.52 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>454 ms ± 1.13 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
 </pre></div>
 </div>
 </div>

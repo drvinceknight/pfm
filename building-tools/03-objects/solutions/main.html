@@ -183,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../overview/how_to_use_this_book/main.html">
-     How to use this book
+     How to use this book?
     </a>
    </li>
   </ul>
@@ -212,7 +212,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/01-using-notebooks/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -249,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/02-algebra/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -471,7 +471,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/08-statistics/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -508,7 +508,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/09-differential-equations/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -552,7 +552,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../01-variables-conditionals-loops/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -626,7 +626,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -663,7 +663,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../04-editor-and-cli/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -700,7 +700,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../05-modularisation/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -1257,6 +1257,11 @@ title="Print to PDF"
    Question 3
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-4">
+   Question 4
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -1286,6 +1291,11 @@ title="Print to PDF"
    Question 3
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-4">
+   Question 4
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -1310,19 +1320,19 @@ following quadratics:</p>
 <p>First we define the class:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
 
 
-<span class="k">class</span> <span class="nc">QuadraticExpression</span><span class="p">:</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">QuadraticExpression</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A class for a quadratic expression&quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="n">a</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">c</span> <span class="o">=</span> <span class="n">c</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminant</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">c</span>
 
-    <span class="k">def</span> <span class="nf">get_roots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_roots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the real valued roots of the quadratic expression</span>
 
@@ -1337,16 +1347,16 @@ following quadratics:</p>
             <span class="k">return</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span>
         <span class="k">return</span> <span class="p">()</span>
 
-    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;A magic method: let&#39;s us have addition between expressions&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">QuadraticExpression</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">c</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">c</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;A magic method: changes the default way an instance is displayed&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Quadratic expression: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="si">}</span><span class="s2"> x ^ 2 + </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="si">}</span><span class="s2"> x + </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">c</span><span class="si">}</span><span class="s2">&quot;</span>
 
 
-<span class="k">class</span> <span class="nc">QuadraticExpressionWithAllRoots</span><span class="p">(</span><span class="n">QuadraticExpression</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">QuadraticExpressionWithAllRoots</span><span class="p">(</span><span class="n">QuadraticExpression</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A class for a quadratic expression that can return imaginary roots</span>
 
@@ -1354,7 +1364,7 @@ following quadratics:</p>
 <span class="sd">    the real part and im is the imaginary part.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">get_roots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_roots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the real valued roots of the quadratic expression</span>
 
@@ -1374,7 +1384,7 @@ following quadratics:</p>
         <span class="n">im2</span> <span class="o">=</span> <span class="o">-</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">discriminant</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="p">)</span>
         <span class="k">return</span> <span class="p">((</span><span class="n">real_part</span><span class="p">,</span> <span class="n">im1</span><span class="p">),</span> <span class="p">(</span><span class="n">real_part</span><span class="p">,</span> <span class="n">im2</span><span class="p">))</span>
 
-    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;A special method: let&#39;s us have addition between expressions&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">QuadraticExpressionWithAllRoots</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">c</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">c</span>
@@ -1440,17 +1450,17 @@ following expressions:</p>
 <p>First we define the class:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
 
 
-<span class="k">class</span> <span class="nc">LinearExpression</span><span class="p">:</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">LinearExpression</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A class for a linear expression a x + b&quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="n">a</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span>
 
-    <span class="k">def</span> <span class="nf">get_roots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_roots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the real valued roots of the linear expression</span>
 
@@ -1463,11 +1473,11 @@ following expressions:</p>
             <span class="k">return</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span>
         <span class="k">return</span> <span class="kc">None</span>
 
-    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;A magic method: let&#39;s us have addition between expressions&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">LinearExpression</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">b</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;A magic method: changes the default way an instance is displayed&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Linear expression: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="si">}</span><span class="s2"> x + </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span>
 </pre></div>
@@ -1529,73 +1539,177 @@ probability of the drops landing in an inscribed circle of radius <span class="m
 be given by:</p>
 </div></blockquote>
 <blockquote>
-<div><p>$$</p>
+<div><div class="math notranslate nohighlight">
+\[P = \frac{\text{Area of circle}}{\text{Area of square}}=\frac{\pi r ^2}{4r^2}=\frac{\pi}{4}\]</div>
 </div></blockquote>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  P = \frac{\text{Area of circle}}{\text{Area of square}}=\frac{\pi r ^2}{4r^2}=\frac{\pi}{4}
+<blockquote>
+<div><p>Thus, if we can approximate <span class="math notranslate nohighlight">\(P\)</span> then we can approximate <span class="math notranslate nohighlight">\(\pi\)</span> as <span class="math notranslate nohighlight">\(4P\)</span>. In this
+question we will write code to approximate <span class="math notranslate nohighlight">\(P\)</span> using the random library.</p>
+</div></blockquote>
+<blockquote>
+<div><p>First create the following class:</p>
+</div></blockquote>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Drop</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class used to represent a random rain drop falling on a square of</span>
+<span class="sd">    length r.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.5</span> <span class="o">-</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">r</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.5</span> <span class="o">-</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">r</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">in_circle</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">&lt;=</span> <span class="n">r</span> <span class="o">**</span> <span class="mi">2</span>
 </pre></div>
 </div>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}&gt;  Thus, if we can approximate $P$ then we can approximate $\pi$ as $4P$. In this
-&gt;  question we will write code to approximate $P$ using the random library.\\&gt;  First create the following class:\\&gt;  ```
-&gt;  class Drop:
-&gt;      &quot;&quot;&quot;
-&gt;      A class used to represent a random rain drop falling on a square of
-&gt;      length r.
-&gt;      &quot;&quot;&quot;
-&gt;
-&gt;      def __init__(self, r=1):
-&gt;          self.x = (0.5 - random.random()) * 2 * r
-&gt;          self.y = (0.5 - random.random()) * 2 * r
-&gt;          self.in_circle = (self.y) ** 2 + (self.x) ** 2 &lt;= r ** 2
-&gt;  ```\\```{code-cell} ipython3
-import random\\
-class Drop:
-  &quot;&quot;&quot;
-  A class used to represent a random rain drop falling on a square of
-  length r.
-  &quot;&quot;&quot;\\    def __init__(self, r=1):
-      self.x = (0.5 - random.random()) * 2 * r
-      self.y = (0.5 - random.random()) * 2 * r
-      self.in_circle = (self.y) ** 2 + (self.x) ** 2 &lt;= r ** 2
-```\\&gt;  To approximate $P$ create $N=1000$ instances of Drops and count the
-&gt;  number of those that are in the circle. Use this to approximate $\pi$.\\We start by creating the required number of drops:\\```{code-cell} ipython3
-number_of_instances = 10000
-random.seed(0)
-drops = [Drop() for number in range(number_of_instances)]
-```\\Now we count the number in the circle:\\```{code-cell} ipython3
-number_in_circle = len([drop for drop in drops if drop.in_circle])
-number_in_circle
-```\\The number in the circle leads to the probability $P$:\\```{code-cell} ipython3
-P = number_in_circle / number_of_instances
-```\\And $\pi$ can be approximated:\\```{code-cell} ipython3
-4 * P
-```\\## Question 4\\&gt; `4`. In a similar fashion to question 3, approximate the integral
-&gt;  $\int_{0}^11-x^2\;dx$. Recall that the integral corresponds to the area
-&gt;  under a curve.\\We create a different drop class changing the `in_circle` attribute to
-`under_curve` and simplifying where the `x` and `y` are sampled from.\\```{code-cell} ipython3
-class Drop:
-  &quot;&quot;&quot;
-  A class used to represent a random rain drop falling on a square of
-  length 1.
-  &quot;&quot;&quot;\\    def __init__(self):
-      self.x = random.random()
-      self.y = random.random()
-      self.under_curve = self.y &lt;= 1 - self.x ** 2
-```\\Now we repeat the steps of question 3:\\```{code-cell} ipython3
-number_of_instances = 10000
-random.seed(0)
-drops = [Drop() for number in range(number_of_instances)]
-```\\Now we count the number in the circle:\\```{code-cell} ipython3
-number_under_curve = len([drop for drop in drops if drop.under_curve])
-number_under_curve
-```\\In this particular problem the area of the square is 1 so the probability of
-being under the curve is equal to the 1: $P=\frac{\int_{0}^11-x^2\;dx}{1}$.\\```{code-cell} ipython3
-number_under_curve / number_of_instances
-```\\We can confirm this:\\```{code-cell} ipython3
-import sympy as sym\\x = sym.Symbol(&quot;x&quot;)
-sym.integrate(1 - x ** 2, (x, 0, 1))
-```
-\end{aligned}\end{align} \]</div>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Drop</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class used to represent a random rain drop falling on a square of</span>
+<span class="sd">    length r.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.5</span> <span class="o">-</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">r</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.5</span> <span class="o">-</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">r</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">in_circle</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">&lt;=</span> <span class="n">r</span> <span class="o">**</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><p>To approximate <span class="math notranslate nohighlight">\(P\)</span> create <span class="math notranslate nohighlight">\(N=1000\)</span> instances of Drops and count the
+number of those that are in the circle. Use this to approximate <span class="math notranslate nohighlight">\(\pi\)</span>.</p>
+</div></blockquote>
+<p>We start by creating the required number of drops:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_of_instances</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">drops</span> <span class="o">=</span> <span class="p">[</span><span class="n">Drop</span><span class="p">()</span> <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number_of_instances</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we count the number in the circle:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_in_circle</span> <span class="o">=</span> <span class="nb">len</span><span class="p">([</span><span class="n">drop</span> <span class="k">for</span> <span class="n">drop</span> <span class="ow">in</span> <span class="n">drops</span> <span class="k">if</span> <span class="n">drop</span><span class="o">.</span><span class="n">in_circle</span><span class="p">])</span>
+<span class="n">number_in_circle</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7809
+</pre></div>
+</div>
+</div>
+</div>
+<p>The number in the circle leads to the probability <span class="math notranslate nohighlight">\(P\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P</span> <span class="o">=</span> <span class="n">number_in_circle</span> <span class="o">/</span> <span class="n">number_of_instances</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>And <span class="math notranslate nohighlight">\(\pi\)</span> can be approximated:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="o">*</span> <span class="n">P</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.1236
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="question-4">
+<h2>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">#</a></h2>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">4</span></code>. In a similar fashion to question 3, approximate the integral
+<span class="math notranslate nohighlight">\(\int_{0}^11-x^2\;dx\)</span>. Recall that the integral corresponds to the area
+under a curve.</p>
+</div></blockquote>
+<p>We create a different drop class changing the <code class="docutils literal notranslate"><span class="pre">in_circle</span></code> attribute to
+<code class="docutils literal notranslate"><span class="pre">under_curve</span></code> and simplifying where the <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> are sampled from.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Drop</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class used to represent a random rain drop falling on a square of</span>
+<span class="sd">    length 1.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">under_curve</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">&lt;=</span> <span class="mi">1</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we repeat the steps of question 3:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_of_instances</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">drops</span> <span class="o">=</span> <span class="p">[</span><span class="n">Drop</span><span class="p">()</span> <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number_of_instances</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we count the number in the circle:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_under_curve</span> <span class="o">=</span> <span class="nb">len</span><span class="p">([</span><span class="n">drop</span> <span class="k">for</span> <span class="n">drop</span> <span class="ow">in</span> <span class="n">drops</span> <span class="k">if</span> <span class="n">drop</span><span class="o">.</span><span class="n">under_curve</span><span class="p">])</span>
+<span class="n">number_under_curve</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6646
+</pre></div>
+</div>
+</div>
+</div>
+<p>In this particular problem the area of the square is 1 so the probability of
+being under the curve is equal to the 1: <span class="math notranslate nohighlight">\(P=\frac{\int_{0}^11-x^2\;dx}{1}\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_under_curve</span> <span class="o">/</span> <span class="n">number_of_instances</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6646
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can confirm this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sym</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<span class="n">sym</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{2}{3}\]</div>
+</div>
+</div>
 </section>
 </section>
 

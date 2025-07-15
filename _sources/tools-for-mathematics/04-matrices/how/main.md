@@ -16,11 +16,13 @@ kernelspec:
 
 ## Create a matrix
 
-We create a matrix using the `sympy.Matrix` tool. We combine this with
-square brackets `[]` which we nest so that every row is also inside square
+You create a matrix using the `sympy.Matrix` tool. Combine this with
+nested square brackets `[``]` so that every row is also inside square
 brackets.
 
-````{tip}
+````{admonition} Usage
+:class: tip
+
 ```
 sympy.Matrix([values])
 ```
@@ -60,10 +62,11 @@ B = sym.Matrix(
 
 ## Calculate the determinant of a matrix
 
-To calculate the determinant of a matrix, we use the `.det` tool. For example to
-calculate the determinant of:
+To calculate the determinant of a matrix, use the `.det` tool.
 
-````{tip}
+````{admonition} Usage
+:class: tip
+
 ```
 matrix = sympy.Matrix([values])
 matrix.det()
@@ -86,9 +89,11 @@ matrix.det()
 
 ## Calculate the inverse of a matrix
 
-To calculate the inverse of a matrix, we use the `.inv` tool.
+To calculate the inverse of a matrix, use the `.inv` tool.
 
-````{tip}
+````{admonition} Usage
+:class: tip
+
 ```
 matrix = sympy.Matrix([values])
 matrix.inv()
@@ -112,7 +117,7 @@ matrix.inv()
 
 ## Multiply matrices by a scalar
 
-To multiple a matrix by a scalar we use the `*` operator. For example to
+To multiple a matrix by a scalar use the `*` operator. For example to
 multiply the following matrix by $6$:
 
 $$
@@ -129,7 +134,7 @@ matrix = sym.Matrix([[sym.S(1) / 5, 1], [1, 1]])
 
 ## Add matrices together
 
-To add matrices we use the `+` operator. For example to compute:
+To add matrices use the `+` operator. For example to compute:
 
 $$
     \begin{pmatrix}
@@ -150,7 +155,7 @@ matrix + other_matrix
 
 ## Multiply matrices together
 
-To multiply matrices together we use the `@` operator. For example to compute:
+To multiply matrices together use the `@` operator. For example to compute:
 
 $$
     \begin{pmatrix}
@@ -187,9 +192,9 @@ vector
 
 ## How to solve a linear system
 
-To solve a given linear system that can be represented in matrix form, we create
-the corresponding matrix and vector and use the matrix inverse. For example to
-solve the following equations:
+To solve a given linear system that can be represented in matrix form,
+create the corresponding matrix and vector and the matrix . For example
+to solve the following equations:
 
 $$
     \begin{array}{l}

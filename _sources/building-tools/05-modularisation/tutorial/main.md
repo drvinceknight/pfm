@@ -16,10 +16,11 @@ kernelspec:
 
 # Tutorial
 
-We will here consider a specific problem of a general type. We will not
-concentrate too much on the writing of the code itself but instead concentrate
-on how we can write the code as software that will not only be used to solve the
-specific problem but will be able to be used for further problems of the same
+You will here consider a specific problem of a general type. You will not
+concentrate too much on the writing of the code itself. Instead this chapter
+concentrates
+on how you can write the code as software that will do more than just solve the
+specific problem. It will be able to be used for further problems of the same
 type.
 
 ```{admonition} Problem

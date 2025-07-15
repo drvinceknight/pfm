@@ -183,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../overview/how_to_use_this_book/main.html">
-     How to use this book
+     How to use this book?
     </a>
    </li>
   </ul>
@@ -212,7 +212,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../01-using-notebooks/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -249,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../02-algebra/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -471,7 +471,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08-statistics/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -508,7 +508,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../09-differential-equations/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -552,7 +552,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -626,7 +626,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/03-objects/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -663,7 +663,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/04-editor-and-cli/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -700,7 +700,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/05-modularisation/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -1360,11 +1360,11 @@ title="Print to PDF"
 <h1>How<a class="headerlink" href="#how" title="Permalink to this headline">#</a></h1>
 <section id="create-a-matrix">
 <h2>Create a matrix<a class="headerlink" href="#create-a-matrix" title="Permalink to this headline">#</a></h2>
-<p>We create a matrix using the <code class="docutils literal notranslate"><span class="pre">sympy.Matrix</span></code> tool. We combine this with
-square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code> which we nest so that every row is also inside square
+<p>You create a matrix using the <code class="docutils literal notranslate"><span class="pre">sympy.Matrix</span></code> tool. Combine this with
+nested square brackets <code class="docutils literal notranslate"><span class="pre">[``]</span></code> so that every row is also inside square
 brackets.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Usage</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="n">values</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -1380,7 +1380,7 @@ brackets.</p>
 \end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sym</span>
 
 <span class="n">B</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]])</span>
 <span class="n">B</span>
@@ -1409,10 +1409,9 @@ line ends with an open bracket:</p>
 </section>
 <section id="calculate-the-determinant-of-a-matrix">
 <h2>Calculate the determinant of a matrix<a class="headerlink" href="#calculate-the-determinant-of-a-matrix" title="Permalink to this headline">#</a></h2>
-<p>To calculate the determinant of a matrix, we use the <code class="docutils literal notranslate"><span class="pre">.det</span></code> tool. For example to
-calculate the determinant of:</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
+<p>To calculate the determinant of a matrix, use the <code class="docutils literal notranslate"><span class="pre">.det</span></code> tool.</p>
+<div class="tip admonition">
+<p class="admonition-title">Usage</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="n">values</span><span class="p">])</span>
 <span class="n">matrix</span><span class="o">.</span><span class="n">det</span><span class="p">()</span>
 </pre></div>
@@ -1441,9 +1440,9 @@ calculate the determinant of:</p>
 </section>
 <section id="calculate-the-inverse-of-a-matrix">
 <h2>Calculate the inverse of a matrix<a class="headerlink" href="#calculate-the-inverse-of-a-matrix" title="Permalink to this headline">#</a></h2>
-<p>To calculate the inverse of a matrix, we use the <code class="docutils literal notranslate"><span class="pre">.inv</span></code> tool.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
+<p>To calculate the inverse of a matrix, use the <code class="docutils literal notranslate"><span class="pre">.inv</span></code> tool.</p>
+<div class="tip admonition">
+<p class="admonition-title">Usage</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="n">values</span><span class="p">])</span>
 <span class="n">matrix</span><span class="o">.</span><span class="n">inv</span><span class="p">()</span>
 </pre></div>
@@ -1473,7 +1472,7 @@ calculate the inverse of:</p>
 </section>
 <section id="multiply-matrices-by-a-scalar">
 <h2>Multiply matrices by a scalar<a class="headerlink" href="#multiply-matrices-by-a-scalar" title="Permalink to this headline">#</a></h2>
-<p>To multiple a matrix by a scalar we use the <code class="docutils literal notranslate"><span class="pre">*</span></code> operator. For example to
+<p>To multiple a matrix by a scalar use the <code class="docutils literal notranslate"><span class="pre">*</span></code> operator. For example to
 multiply the following matrix by <span class="math notranslate nohighlight">\(6\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -1497,7 +1496,7 @@ multiply the following matrix by <span class="math notranslate nohighlight">\(6\
 </section>
 <section id="add-matrices-together">
 <h2>Add matrices together<a class="headerlink" href="#add-matrices-together" title="Permalink to this headline">#</a></h2>
-<p>To add matrices we use the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator. For example to compute:</p>
+<p>To add matrices use the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator. For example to compute:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
     \begin{pmatrix}
@@ -1525,7 +1524,7 @@ multiply the following matrix by <span class="math notranslate nohighlight">\(6\
 </section>
 <section id="multiply-matrices-together">
 <h2>Multiply matrices together<a class="headerlink" href="#multiply-matrices-together" title="Permalink to this headline">#</a></h2>
-<p>To multiply matrices together we use the <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> operator. For example to compute:</p>
+<p>To multiply matrices together use the <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> operator. For example to compute:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
     \begin{pmatrix}
@@ -1576,9 +1575,9 @@ create the vector:</p>
 </section>
 <section id="how-to-solve-a-linear-system">
 <h2>How to solve a linear system<a class="headerlink" href="#how-to-solve-a-linear-system" title="Permalink to this headline">#</a></h2>
-<p>To solve a given linear system that can be represented in matrix form, we create
-the corresponding matrix and vector and use the matrix inverse. For example to
-solve the following equations:</p>
+<p>To solve a given linear system that can be represented in matrix form,
+create the corresponding matrix and vector and the matrix . For example
+to solve the following equations:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
     \begin{array}{l}

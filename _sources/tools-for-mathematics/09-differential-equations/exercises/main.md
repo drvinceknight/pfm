@@ -14,10 +14,6 @@ kernelspec:
 
 # Exercises
 
-**After** completing the tutorial attempt the following exercises.
-
-**If you are not sure how to do something, have a look at the "How To" section.**
-
 1. Create the following differential equations:
 
    1. $\frac{dy}{dx} = \cos(x)$
@@ -48,7 +44,7 @@ kernelspec:
 
    1. Define the differential equation that models this situation.
    2. Solve the differentia equation.
-   3. Given that $T(0) = 100$ and the room temperature is $$T_R=20$$ obtain the
+   3. Given that $T(0) = 100$ and the room temperature is $T_R=20$ obtain the
       particular solution.
    4. Use the particular solution to identify how on it will take for the drink
       to be ready for consumption (a temperature of 80) given that after 3 time

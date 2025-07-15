@@ -14,24 +14,32 @@ kernelspec:
 
 # Tutorial
 
-We will solve the following problem using a computer to assist with the technical aspects:
+You will solve the following problem using a computer to assist with the
+technical aspects:
 
 ```{admonition} Problem
 
-Consider the function $f(x)= \frac{24 x \left(a - 4 x\right) + 2 \left(a - 8 x\right) \left(b - 4 x\right)}{\left(b - 4 x\right)^{4}}$
+Consider the function
+$f(x)= \frac{24 x \left(a - 4 x\right) + 2 \left(a - 8 x\right) \left(b - 4 x\right)}{\left(b - 4 x\right)^{4}}$
 
-1. Given that $\frac{df}{dx}|_{x=0}=0$, $\frac{d^2f}{dx^2}|_{x=0}=-1$ and that $b>0$ find the values of $a$ and $b$.
-2. For the specific values of $a$ and $b$ find:
-    1. $\lim_{x\to 0}f(x)$;
-    2. $\lim_{x\to \infty}f(x)$;
-    3. $\int f(x) dx$;
-    4. $\int_{5}^{20} f(x) dx$.
+1.  Given that $\frac{df}{dx}|_{x=0}=0$, $\frac{d^2f}{dx^2}|_{x=0}=-1$
+    and that $b>0$ find the values of $a$ and $b$.
+
+2.  For the specific values of $a$ and $b$ find:
+
+    1.  $\lim_{x\to 0}f(x)$;
+
+    2.  $\lim_{x\to \infty}f(x)$;
+
+    3.  $\int f(x) dx$;
+
+    4.  $\int_{5}^{20} f(x) dx$.
 
 ```
 
-Sympy is once again the library we will use for this.
-
-We will start by creating a variable `expression` that has the value of the expression of $f(x)$:
+Sympy is once again the library you will use for this. You will start by
+creating a variable `expression` that has the value of the expression of
+$f(x)$:
 
 ```{code-cell} ipython3
 import sympy as sym
@@ -43,10 +51,17 @@ expression = (24 * x * (a - 4 * x) + 2 * (a - 8 * x) * (b - 4 * x)) / ((b - 4 * 
 expression
 ```
 
-now we can will use `sympy.diff` to calculate the derivative. This tool takes two inputs:
+You will use `sympy.diff` to calculate the derivative. This tool takes
+two inputs:
 
-- the first is the expression we are differentiating. Essentially this is the numerator of $\frac{df}{dx}$.
-- the first is the variable we are differentiating for. Essentially this is the denominator of $\frac{df}{dx}$.
+- the first is the expression you are differentiating. Essentially this is the
+  numerator of $\frac{df}{dx}$.
+
+- the second is the variable you are differentiating with respect to. This is the
+  denominator of $\frac{df}{dx}$.
+
+You have imported `import sympy as sym` so you are going to write
+`sym.diff`:
 
 ```{attention}
 We have imported `import sympy as sym` so we are going to write `sym.diff`:
@@ -57,29 +72,30 @@ derivative = sym.diff(expression, x)
 derivative
 ```
 
-Let us factorise that to make it slightly clearer:
+Factorise that to make it slightly clearer:
 
 ```{code-cell} ipython3
 sym.factor(derivative)
 ```
 
-We will now create the first equation, which is obtained by substituting $x=0$
-in to the value of the derivative and equating that to $0$:
+Now we are going to create the second equation, substituting $x=0$ in to the
+value of the second derivative. We calculate the second derivative by passing a
+third (optional) input to `sym.diff`:
 
 ```{code-cell} ipython3
 first_equation = sym.Eq(derivative.subs({x: 0}), 0)
 first_equation
 ```
 
-We will factor that equation:
+Factor that equation:
 
 ```{code-cell} ipython3
 sym.factor(first_equation)
 ```
 
-Now we are going to create the second equation, substituting $x=0$ in to the
-value of the second derivative. We calculate the second derivative by passing a
-third (optional) input to `sym.diff`:
+Now you are going to create the second equation, substituting $x=0$ in
+to the value of the second derivative. Calculate the second derivative
+by passing a third (optional) input to `sym.diff`:
 
 ```{code-cell} ipython3
 second_derivative = sym.diff(expression, x, 2)
@@ -93,13 +109,14 @@ second_equation = sym.Eq(second_derivative.subs({x: 0}), -1)
 second_equation
 ```
 
-Now to solve the first equation to obtain a value for $a$:
+Now solve the first equation to obtain a value for $a$:
 
 ```{code-cell} ipython3
 sym.solveset(first_equation, a)
 ```
 
-Now to substitute that value for $a$ and solve the second equation for $b$:
+Now to substitute that value for $a$ and solve the second equation for
+$b$:
 
 ```{code-cell} ipython3
 second_equation = second_equation.subs({a: b / 3})
@@ -110,10 +127,9 @@ second_equation
 sym.solveset(second_equation, b)
 ```
 
-Recalling the question we know that $b>0$ thus: $b = 2\sqrt{2}\sqrt[4]{3}$ and
-$a=\frac{2\sqrt{2}\sqrt[4]{3}}{3}$.
-
-We will substitute these values back and finish the question:
+Recalling the question you know that $b>0$ thus:
+$b = 2\sqrt{2}\sqrt[4]{3}$ and $a=\frac{2\sqrt{2}\sqrt[4]{3}}{3}$. You
+will substitute these values back and finish the question:
 
 ```{code-cell} ipython3
 expression = expression.subs(
@@ -123,10 +139,10 @@ expression
 ```
 
 ```{attention}
-We are using the `sym.root` command for the generic $n$th root.
+You are using the `sym.root` command for the generic $n$th root.
 ```
 
-We can confirm our findings:
+You can confirm this:
 
 ```{code-cell} ipython3
 sym.diff(expression, x).subs({x: 0})
@@ -136,9 +152,9 @@ sym.diff(expression, x).subs({x: 0})
 sym.diff(expression, x, 2).subs({x: 0})
 ```
 
-Now we will calculate the limits using `sym.limit`, this takes 3 inputs:
+Now you will calculate the using `sym.limit`, this takes 3 inputs:
 
-- The expression we are taking the limit of.
+- The expression you are taking the limit of.
 - The variable that is changing.
 - The value that the variable is tending towards.
 
@@ -150,21 +166,30 @@ sym.limit(expression, x, 0)
 sym.limit(expression, x, sym.oo)
 ```
 
-Now we are going to calculate the **indefinite** integral using
+Now you are going to calculate the **indefinite** integral using
 `sympy.integrate`. This tool takes 2 inputs as:
 
-- the first is the expression we're integrating. This is the $f$ in $\int_a^b f
-  dx$.
-- the second is the remaining information needed to calculate the integral: $x$.
+- the first is the expression you're integrating. This is the $f$ in $\int_a^b f
+    dx$.
+- the second is the remaining information needed to calculate the
+  integral: $x$.
 
 ```{code-cell} ipython3
 sym.factor(sym.integrate(expression, x))
 ```
 
-If we want to calculate a **definite** integral then instead of passing the
-single variable we pass a tuple which contains the variable as well as the
+If you want to calculate a **definite** integral then instead of passing
+the single variable you pass a tuple which contains the variables as the
 bounds of integration:
 
 ```{code-cell} ipython3
 sym.factor(sym.integrate(expression, (x, 5, 20)))
+```
+
+```{important}
+This tutorial has:
+
+-   Simplified a rational quotient;
+-   Differentiated symbolic expressions;
+-   Solved algebraic equations.
 ```

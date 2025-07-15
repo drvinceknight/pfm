@@ -12,13 +12,15 @@ kernelspec:
   name: python3
 ---
 
-# How
+# How to
 
-## How to create a symbolic function
+## Create a symbolic function
 
 To create a symbolic function use `sympy.Function`.
 
-````{tip}
+````{admonition} Usage
+:class: tip
+
 ```
 sympy.Function("y")
 ```
@@ -33,24 +35,26 @@ y = sym.Function("y")
 y
 ```
 
-We can pass symbolic variables to this symbolic function:
+You can pass symbolic variables to this symbolic function:
 
 ```{code-cell} ipython3
 x = sym.Symbol("x")
 y(x)
 ```
 
-We can create the derivative of a symbolic function:
+You can create the derivative of a symbolic function:
 
 ```{code-cell} ipython3
 sym.diff(y(x), x)
 ```
 
-## How to create a differential equation
+## Create a differential equation
 
-To create a differential equation we use `sympy.Eq`.
+To create a differential equation use `sympy.Eq`.
 
-````{tip}
+````{admonition} Usage
+:class: tip
+
 ```
 import sympy as sym
 
@@ -64,7 +68,7 @@ equation = sym.Eq(lhs, rhs)
 Where `lhs` and `rhs` are expressions in $y$, $\frac{dy}{dx}$ and $x$.
 
 For example to create the differential equation: $\frac{dy}{dx} = \cos(x) y$
-we would write:
+write:
 
 ```{code-cell} ipython3
 import sympy as sym
@@ -80,10 +84,12 @@ differential_equation
 
 ## How to obtain the general solution of a differential equation
 
-To obtain the generation solution to a differential equation we use:
+To obtain the generation solution to a differential equation use:
 `sympy.dsolve`.
 
-````{tip}
+````{admonition} Usage
+:class: tip
+
 ```
 import sympy as sym
 
@@ -95,8 +101,7 @@ sym.dsolve(equation, y(x))
 ```
 ````
 
-For example to solve the differential equation: $\frac{dy}{dx} = \cos(x) y$ we
-would write:
+For example to solve the differential equation: $\frac{dy}{dx} = \cos(x) y$ write:
 
 ```{code-cell} ipython3
 import sympy as sym
@@ -110,12 +115,14 @@ differential_equation = sym.Eq(lhs, rhs)
 sym.dsolve(differential_equation, y(x))
 ```
 
-## How to obtain the particular solution of a differential equation
+## Obtain the particular solution of a differential equation
 
-To obtain the particular solution to a differential equation we use:
+To obtain the particular solution to a differential equation use:
 `sympy.dsolve` and pass the initial conditions: `ics`.
 
-````{tip}
+````{admonition} Usage
+:class: tip
+
 ```
 import sympy as sym
 
@@ -127,9 +134,8 @@ sym.dsolve(equation, y(x), ics={y(x_0): value})
 ```
 ````
 
-For example to solve the differential equation: $\frac{dy}{dx} = \cos(x) y$
-with the condition $y(5)= \pi$ we
-would write:
+For example, to solve the differential equation: $\frac{dy}{dx} = \cos(x) y$
+with the condition $y(5)= \pi$ write:
 
 ```{code-cell} ipython3
 import sympy as sym
@@ -146,6 +152,6 @@ sym.dsolve(differential_equation, y(x), ics=condition)
 ```
 
 ```{note}
-The syntax used here is similar to the way we
-{ref}`substitute values in to algebraic expressions <how-to-substitute-a-value-in-to-an-expression>`.
+The syntax used here is similar to substituting
+{ref}`values in to algebraic expressions <how-to-substitute-a-value-in-to-an-expression>`.
 ```

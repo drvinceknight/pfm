@@ -183,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../overview/how_to_use_this_book/main.html">
-     How to use this book
+     How to use this book?
     </a>
    </li>
   </ul>
@@ -212,7 +212,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../01-using-notebooks/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -249,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -471,7 +471,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08-statistics/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -508,7 +508,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../09-differential-equations/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -552,7 +552,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -626,7 +626,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/03-objects/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -663,7 +663,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/04-editor-and-cli/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -700,7 +700,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/05-modularisation/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -1308,11 +1308,6 @@ title="Print to PDF"
    ?
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#are-there-other-resources-for-learning-sympy">
-   Are there other resources for learning sympy?
-  </a>
- </li>
 </ul>
 
     </nav>
@@ -1393,11 +1388,6 @@ title="Print to PDF"
    ?
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#are-there-other-resources-for-learning-sympy">
-   Are there other resources for learning sympy?
-  </a>
- </li>
 </ul>
 
                         </nav>
@@ -1412,34 +1402,34 @@ title="Print to PDF"
 <h1>Further information<a class="headerlink" href="#further-information" title="Permalink to this headline">#</a></h1>
 <section id="why-is-some-code-in-separate-libraries">
 <h2>Why is some code in separate libraries?<a class="headerlink" href="#why-is-some-code-in-separate-libraries" title="Permalink to this headline">#</a></h2>
-<p>When we run the <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">sympy</span></code> command we are telling Python that we want to use
-a specific set of tools. We will see other examples of this throughout this
-course.</p>
-<p>One of the advantages of having code in libraries is that it is more efficient
-for Python to only use what is needed.</p>
-<p>There are two types of Python libraries:</p>
+<p>When you run the <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">sympy</span></code> command you are telling Python that you
+want to use a specific set of tools. You will see other examples of this
+throughout this book. One of the advantages of having code in libraries
+is that it is more efficient for Python to only use what is needed.
+There are two types of Python libraries:</p>
 <ul class="simple">
-<li><p>Those that are part of the so called “standard library”: these are part of
-Python itself.</p></li>
-<li><p>Those that are completely separate: <code class="docutils literal notranslate"><span class="pre">sympy</span></code> is one such example of this.</p></li>
+<li><p>Those that are part of the so called “standard library”: these are
+part of Python itself.</p></li>
+<li><p>Those that are completely separate: <code class="docutils literal notranslate"><span class="pre">sympy</span></code> is one such example of
+this.</p></li>
 </ul>
-<p>This separation allows for the development of tools to be not dependent on each
-others. The developers of <code class="docutils literal notranslate"><span class="pre">sympy</span></code> do not need to coordinate with the developers
-of Python to make new releases of the software.</p>
+<p>This separation allows for the development of tools to be independent of
+each other. The developers of <code class="docutils literal notranslate"><span class="pre">sympy</span></code> do not need to coordinate with the
+developers of Python to make new releases of the software.</p>
 </section>
 <section id="why-do-we-need-to-use-sympy">
 <h2>Why do we need to use sympy?<a class="headerlink" href="#why-do-we-need-to-use-sympy" title="Permalink to this headline">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">sympy</span></code> is the library for symbolic mathematics. There are other python libraries
-for carrying out mathematics in Python.</p>
-<p>For example, let us compute the value of the following expression:</p>
+<p><code class="docutils literal notranslate"><span class="pre">sympy</span></code> is the library for symbolic mathematics. There are other python
+libraries for carrying out mathematics in Python. For example, compute
+the value of the following expression:</p>
 <div class="math notranslate nohighlight">
 \[
     (\sqrt{2} + 2) ^ 2 - 2
 \]</div>
-<p>We could compute this using the <code class="docutils literal notranslate"><span class="pre">math</span></code> library (for the square root tool):</p>
+<p>You could compute this using the <code class="docutils literal notranslate"><span class="pre">math</span></code> library (for the square root tool):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
 
 <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span>
 </pre></div>
@@ -1451,7 +1441,8 @@ for carrying out mathematics in Python.</p>
 </div>
 </div>
 </div>
-<p>We could also make use of the fact that we do not need a square root tool at all:</p>
+<p>You could also make use of the fact that you do not need a square root
+tool at all:</p>
 <div class="math notranslate nohighlight">
 \[
     (\sqrt{2} + 2) ^ 2 - 2 = (2 ^ {1 / 2} + 2) ^ 2 - 2
@@ -1468,13 +1459,13 @@ for carrying out mathematics in Python.</p>
 </div>
 </div>
 </div>
-<p>We see that in both those instances, we have a numeric value for the expression
-that seems to be precise up to 14 decimal places.</p>
-<p>However, that is <strong>not</strong> the exact value of that expression. The exact value of
-the expression needs to be computed symbolically:</p>
+<p>You see that in both those instances, you have a numeric value for the
+expression that seems to be precise up to 14 decimal places.</p>
+<p>However, that is <strong>not</strong> the exact value of that expression. The exact
+value of the expression needs to be computed symbolically:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span>
 
 <span class="n">expression</span> <span class="o">=</span> <span class="p">(</span><span class="n">sympy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span>
 <span class="n">sympy</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span>
@@ -1486,9 +1477,9 @@ the expression needs to be computed symbolically:</p>
 \[\displaystyle 4 + 4 \sqrt{2}\]</div>
 </div>
 </div>
-<p>This is one example of why <code class="docutils literal notranslate"><span class="pre">sympy</span></code> is an effective tool for mathematicians.
-The other one seen in this chapter is being able to compute expressions with no
-numerical value at all:</p>
+<p>This is one example of why <code class="docutils literal notranslate"><span class="pre">sympy</span></code> is an effective tool for
+mathematicians. The other one seen in this chapter is being able to
+compute expressions with no numerical value at all:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
@@ -1505,24 +1496,24 @@ numerical value at all:</p>
 </section>
 <section id="why-do-i-sometimes-see-from-sympy-import">
 <h2>Why do I sometimes see <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">sympy</span> <span class="pre">import</span> <span class="pre">*</span></code>?<a class="headerlink" href="#why-do-i-sometimes-see-from-sympy-import" title="Permalink to this headline">#</a></h2>
-<p>There a number of resources available from which you can learn to use <code class="docutils literal notranslate"><span class="pre">sympy</span></code>. In
-some instances you will not see <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">sympy</span></code> but instead you will see <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">sympy</span> <span class="pre">import</span> <span class="pre">*</span></code>.</p>
+<p>There a number of resources available from which you can learn to use
+<code class="docutils literal notranslate"><span class="pre">sympy</span></code>. In some instances you will not see <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">sympy</span></code> but instead
+you will see <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">sympy</span> <span class="pre">import</span> <span class="pre">*</span></code>.</p>
 <p><strong>This it not a good way to do it.</strong></p>
-<p>What this does is taking all the tools inside of sympy and putting it at the
-same level of all the other tools available to you.</p>
-<p>The problem with doing this is that it no longer makes your code clear.</p>
-<p>An example of this are trigonometric functions. These exist in a number of
-libraries:</p>
+<p>What this does is taking all the tools inside of sympy and putting it at
+the same level of all the other tools available to you. The problem with
+doing this is that it no longer makes your code clear. An example of
+this are trigonometric functions. These exist in a number of libraries:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span>
 </pre></div>
 </div>
 </div>
@@ -1550,7 +1541,7 @@ libraries:</p>
 </div>
 </div>
 </div>
-<p>One however allows us to carry out exact computations:</p>
+<p>One of these tools allows you to carry out exact computations:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">sympy</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)</span>
@@ -1574,18 +1565,19 @@ libraries:</p>
 </div>
 </div>
 </div>
-<p>If we chose to import all the functionality using <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">sympy</span> <span class="pre">import</span> <span class="pre">*</span></code> then we
-cannot tell immediately which function we are using (except from its output):</p>
+<p>If you chose to import all the functionality using <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">sympy</span> <span class="pre">import</span> <span class="pre">*</span></code>
+then you cannot tell immediately which function you are using (except
+from its output):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 </div>
 </div>
@@ -1605,18 +1597,19 @@ cannot tell immediately which function we are using (except from its output):</p
 <p>In that case the second import has overwritten the first.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><strong>It is never recommended to use</strong> <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">*</span></code> this makes your code less clear
-and you are more likely to make mistakes when your code is not clear.</p>
+<p><strong>It is never recommended to use</strong> <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">*</span></code> this makes your code less
+clear and you are more likely to make mistakes when your code is not
+clear.</p>
 </div>
 </section>
 <section id="how-to-extract-a-solution-from-the-output-of-sympy-solveset">
 <h2>How to extract a solution from the output of <code class="docutils literal notranslate"><span class="pre">sympy.solveset</span></code>?<a class="headerlink" href="#how-to-extract-a-solution-from-the-output-of-sympy-solveset" title="Permalink to this headline">#</a></h2>
-<p>In some cases you might want to directly access the items in a solution set. For
-example if consider the equation <span class="math notranslate nohighlight">\((x - 1)(x -
+<p>In some cases you might want to directly access the items in a solution
+set. For example if consider the equation <span class="math notranslate nohighlight">\((x - 1)(x -
 2)\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sym</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
 <span class="n">expression</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
@@ -1631,8 +1624,9 @@ example if consider the equation <span class="math notranslate nohighlight">\((x
 \[\displaystyle \left\{1, 2\right\}\]</div>
 </div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">set_of_solutions</span></code> has value the <strong>set</strong> of solutions of the equation. If we
-wanted to access them directly we can use the following:</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">set_of_solutions</span></code> has value the <strong>set</strong> of solutions of the
+equation. If you wanted to access them directly you can use the
+following:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tuple_of_solutions</span> <span class="o">=</span> <span class="n">set_of_solutions</span><span class="o">.</span><span class="n">args</span>
@@ -1648,7 +1642,7 @@ wanted to access them directly we can use the following:</p>
 </div>
 <p>This creates a <strong>finite</strong> ordered tuple of the solutions. We can use concepts
 that are covered in <a class="reference internal" href="../../05-combinations-permutations/how/main.html#how-to-access-particular-elements-in-a-tuple"><span class="std std-ref">How to access particular elements in a tuple</span></a> to
-access them directly. Because there are two roots we can use the following to
+access them directly. Because there are two roots you can use the following to
 create two new variables:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1657,7 +1651,7 @@ create two new variables:</p>
 </div>
 </div>
 </div>
-<p>Let us substitute these value directly in to the expression:</p>
+<p>Substitute these value directly in to the expression:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expression</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">x</span><span class="p">:</span> <span class="n">x1</span><span class="p">})</span>
@@ -1680,9 +1674,9 @@ create two new variables:</p>
 \[\displaystyle 0\]</div>
 </div>
 </div>
-<p>Note that this is not always possible to get a finite ordered tuple of the
-solutions, for example there are some equations
-where the set of solutions is an infinite set:</p>
+<p>Note that this is not always possible to get a finite ordered tuple of
+the solutions, for example there are some equations where the set of
+solutions is an infinite set:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">equation</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="mi">5</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
@@ -1696,21 +1690,20 @@ where the set of solutions is an infinite set:</p>
 \[\displaystyle \left\{10 n \pi + \frac{5 \pi}{2}\; \middle|\; n \in \mathbb{Z}\right\} \cup \left\{10 n \pi + \frac{15 \pi}{2}\; \middle|\; n \in \mathbb{Z}\right\}\]</div>
 </div>
 </div>
-<p>In this case, <code class="docutils literal notranslate"><span class="pre">set_of_solutions.args</span></code> does not necessarily make sense to use.</p>
 </section>
 <section id="why-do-i-sometimes-see-import-sympy-as-sym">
 <h2>Why do I sometimes see <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">sympy</span> <span class="pre">as</span> <span class="pre">sym</span></code>?<a class="headerlink" href="#why-do-i-sometimes-see-import-sympy-as-sym" title="Permalink to this headline">#</a></h2>
-<p>In some resources you will see that instead of <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">sympy</span></code> people use:
-<code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">sympy</span> <span class="pre">as</span> <span class="pre">sym</span></code>. This is called <strong>aliasing</strong>. This is common and takes
-advantage of the fact that Python can import a library and give it an
-alias/nickname at the same time:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="o">&lt;</span><span class="n">library</span><span class="o">&gt;</span> <span class="k">as</span> <span class="o">&lt;</span><span class="n">nickname</span><span class="o">&gt;</span>
+<p>In some resources you will see that instead of <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">sympy</span></code> people
+use: <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">sympy</span> <span class="pre">as</span> <span class="pre">sym</span></code>. This is called <strong>aliasing</strong>. This is common
+and takes advantage of the fact that Python can import a library and
+give it an alias/nickname at the same time:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="o">&lt;</span><span class="n">library</span><span class="o">&gt;</span> <span class="k">as</span> <span class="o">&lt;</span><span class="n">nickname</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>So with sympy we can use:</p>
+<p>So with sympy you can use:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sym</span>
 
 <span class="n">sym</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)</span>
 </pre></div>
@@ -1724,7 +1717,7 @@ alias/nickname at the same time:</p>
 <p>There is nothing stopping you using whatever alias you want:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">a_poor_name_choice</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">a_poor_name_choice</span>
 
 <span class="n">a_poor_name_choice</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">a_poor_name_choice</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)</span>
 </pre></div>
@@ -1738,22 +1731,9 @@ alias/nickname at the same time:</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p><strong>It is important</strong> when aliasing to use accepted conventions for these
-nicknames. For <code class="docutils literal notranslate"><span class="pre">sympy</span></code>, an accepted convention is indeed <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">sympy</span> <span class="pre">as</span> <span class="pre">sym</span></code>.</p>
+nicknames. For <code class="docutils literal notranslate"><span class="pre">sympy</span></code>, an accepted convention is indeed
+<code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">sympy</span> <span class="pre">as</span> <span class="pre">sym</span></code>.</p>
 </div>
-</section>
-<section id="are-there-other-resources-for-learning-sympy">
-<h2>Are there other resources for learning sympy?<a class="headerlink" href="#are-there-other-resources-for-learning-sympy" title="Permalink to this headline">#</a></h2>
-<p>There are a large number of resources for learning <code class="docutils literal notranslate"><span class="pre">sympy</span></code>. Not all concentrate
-on the algebra that we have considered in this chapter, and we will be covering
-further <code class="docutils literal notranslate"><span class="pre">sympy</span></code> functionality in the next chapters.</p>
-<p>Here are some resources:</p>
-<ul class="simple">
-<li><p>The main <code class="docutils literal notranslate"><span class="pre">sympy</span></code> documentation: <a class="reference external" href="https://docs.sympy.org/latest/index.html">https://docs.sympy.org/latest/index.html</a></p></li>
-<li><p>The scientific python lecture notes chapter on <code class="docutils literal notranslate"><span class="pre">sympy</span></code>:
-<a class="reference external" href="https://scipy-lectures.org/packages/sympy.html">https://scipy-lectures.org/packages/sympy.html</a></p></li>
-<li><p>A short tutorial:
-<a class="reference external" href="https://github.com/drvinceknight/Python-Mathematics-Handbook/">https://github.com/drvinceknight/Python-Mathematics-Handbook/</a></p></li>
-</ul>
 </section>
 </section>
 

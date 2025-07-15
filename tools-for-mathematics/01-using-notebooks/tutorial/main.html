@@ -87,7 +87,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="How" href="../how/main.html" />
+    <link rel="next" title="How to" href="../how/main.html" />
     <link rel="prev" title="Using notebooks" href="../introduction/main.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -181,7 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../overview/how_to_use_this_book/main.html">
-     How to use this book
+     How to use this book?
     </a>
    </li>
   </ul>
@@ -210,7 +210,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -247,7 +247,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../02-algebra/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -469,7 +469,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08-statistics/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -506,7 +506,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../09-differential-equations/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -550,7 +550,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -624,7 +624,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/03-objects/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -661,7 +661,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/04-editor-and-cli/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -698,7 +698,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/05-modularisation/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -1249,16 +1249,18 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#installation">
    Installation
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#starting-a-jupyter-notebook-server">
-   Starting a Jupyter notebook server
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creating-a-new-notebook">
-   Creating a new notebook
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#starting-a-jupyter-notebook-server">
+     Starting a Jupyter notebook server
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-a-new-notebook">
+     Creating a new notebook
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#organising-our-files">
@@ -1303,16 +1305,18 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#installation">
    Installation
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#starting-a-jupyter-notebook-server">
-   Starting a Jupyter notebook server
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creating-a-new-notebook">
-   Creating a new notebook
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#starting-a-jupyter-notebook-server">
+     Starting a Jupyter notebook server
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-a-new-notebook">
+     Creating a new notebook
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#organising-our-files">
@@ -1345,73 +1349,81 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="tutorial">
-<h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">#</a></h1>
+<span id="chp-using-notebooks"></span><h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">#</a></h1>
+<p>This tutorial will take the reader through an example of using Jupyter
+notebooks. Jupyter is the interface to the Python programming language
+used in the first part of this book.</p>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
-<li><p>Navigate to <a class="reference external" href="https://www.anaconda.com/products/individual">https://www.anaconda.com/products/individual</a>.</p></li>
-<li><p>Identify and download the version of Python 3 for your operating system
-(Windows, MacOS, Linux).</p></li>
+<li><p>Navigate to <a class="reference external" href="https://www.anaconda.com/download/success">https://www.anaconda.com/download/success</a>.</p></li>
+<li><p>Identify and download the version of Python 3 for your operating
+system (Windows, MacOS, Linux).</p></li>
 <li><p>Run the installer. I recommend using the default choices during the
 installation process.</p></li>
 </ol>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If you have already used Python it is still recommended that you use the
-Anaconda distribution. An explanation for this is available later.</p>
+Anaconda distribution. An explanation for this is available in
+<a class="reference internal" href="../why/main.html#sec-why-use-anaconda"><span class="std std-ref">in the further information section of this chapter</span></a>.
+If you are using a Chromebook or a
+Tablet there are websites and applications that you can use instead of
+Anaconda to follow along in this book. See <a class="reference internal" href="../why/main.html#sec-using-notebooks-further-information"><span class="std std-ref">the further information section of
+this chapter for information on this</span></a>.</p>
 </div>
-</section>
 <section id="starting-a-jupyter-notebook-server">
-<h2>Starting a Jupyter notebook server<a class="headerlink" href="#starting-a-jupyter-notebook-server" title="Permalink to this headline">#</a></h2>
-<p>We are going to use <strong>Jupyter notebooks</strong> for the first part of this book.
-This interface to Python works inside your web browser but does not require an
-internet connect.</p>
+<h3>Starting a Jupyter notebook server<a class="headerlink" href="#starting-a-jupyter-notebook-server" title="Permalink to this headline">#</a></h3>
 <p>Open a command line tool:</p>
 <ol class="simple">
-<li><p>On <strong>Windows</strong> search for <code class="docutils literal notranslate"><span class="pre">Anaconda</span> <span class="pre">Prompt</span></code> (it should be available to you
-after installing Anaconda). See
+<li><p>On <strong>Windows</strong> search for <code class="docutils literal notranslate"><span class="pre">Anaconda</span> <span class="pre">Prompt</span></code> (it should be available
+to you after installing Anaconda). See
 <a class="reference internal" href="#fig-starting-the-notebook-server-windows"><span class="std std-ref">Starting the notebook server on Windows</span></a>.</p></li>
-<li><p>On <strong>MacOS</strong> search for <code class="docutils literal notranslate"><span class="pre">terminal</span></code>. See
-<a class="reference internal" href="#fig-starting-the-notebook-server"><span class="std std-ref">Starting the notebook server on MacOS</span></a>.</p></li>
+<li><p>On <strong>MacOS</strong> search for <code class="docutils literal notranslate"><span class="pre">terminal</span></code>. <a class="reference internal" href="#fig-starting-the-notebook-server"><span class="std std-ref">Starting the notebook server on MacOS</span></a></p></li>
 </ol>
-<p>In there type:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ jupyter notebook
+<p>In there type (without the <code class="docutils literal notranslate"><span class="pre">$</span></code>):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>jupyter<span class="w"> </span>notebook
 </pre></div>
 </div>
-<p>and then press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> on your keyboard.</p>
+<p>Press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> on your keyboard.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Throughout this book, when there are commands to be typed in a command line
-tool I will prefix them with a <code class="docutils literal notranslate"><span class="pre">$</span></code>. Do not type the <code class="docutils literal notranslate"><span class="pre">$</span></code>.</p>
+<p>Throughout this book, when there are commands to be typed in a command
+line they will be prefixed them with a <code class="docutils literal notranslate"><span class="pre">$</span></code>. Do not type the <code class="docutils literal notranslate"><span class="pre">$</span></code>.</p>
 </div>
+<p>This
+will open a new page in your browser. The url bar at the top should have
+something that looks like: <code class="docutils literal notranslate"><span class="pre">http://localhost:8888/tree</span></code>. This is the
+general interface to the Jupyter server. It shows the general file
+structure on your computer as shown in <a class="reference internal" href="#fig-the-jupyter-interface-windows"><span class="std std-ref">The Jupyter interface</span></a>.</p>
 <figure class="align-default" id="fig-starting-the-notebook-server">
-<a class="reference internal image-reference" href="../../../_images/main24.png"><img alt="../../../_images/main24.png" src="../../../_images/main24.png" style="width: 75%;" /></a>
+<a class="reference internal image-reference" href="../../../_images/main21.png"><img alt="../../../_images/main21.png" src="../../../_images/main21.png" style="width: 75%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 2 </span><span class="caption-text">Starting the notebook server on MacOS</span><a class="headerlink" href="#fig-starting-the-notebook-server" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="fig-starting-the-notebook-server-windows">
-<a class="reference internal image-reference" href="../../../_images/main25.png"><img alt="../../../_images/main25.png" src="../../../_images/main25.png" style="width: 75%;" /></a>
+<a class="reference internal image-reference" href="../../../_images/main22.png"><img alt="../../../_images/main22.png" src="../../../_images/main22.png" style="width: 75%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 3 </span><span class="caption-text">Starting the notebook server on Windows</span><a class="headerlink" href="#fig-starting-the-notebook-server-windows" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>This will open a new page in your browser. The url bar at the top should have
-something that looks like: <code class="docutils literal notranslate"><span class="pre">http://localhost:8888/tree</span></code>.</p>
 <figure class="align-default" id="fig-the-jupyter-interface-windows">
-<a class="reference internal image-reference" href="../../../_images/main26.png"><img alt="../../../_images/main26.png" src="../../../_images/main26.png" style="width: 75%;" /></a>
+<a class="reference internal image-reference" href="../../../_images/main23.png"><img alt="../../../_images/main23.png" src="../../../_images/main23.png" style="width: 75%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4 </span><span class="caption-text">The Jupyter interface</span><a class="headerlink" href="#fig-the-jupyter-interface-windows" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>This is the general interface to the Jupyter server. It shows the general file
-structure on your computer.</p>
 </section>
 <section id="creating-a-new-notebook">
-<h2>Creating a new notebook<a class="headerlink" href="#creating-a-new-notebook" title="Permalink to this headline">#</a></h2>
-<p>In the top right, click on the <code class="docutils literal notranslate"><span class="pre">new</span></code> button and click on <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3</span></code>.</p>
+<h3>Creating a new notebook<a class="headerlink" href="#creating-a-new-notebook" title="Permalink to this headline">#</a></h3>
+<p>In the top right, click on the <code class="docutils literal notranslate"><span class="pre">New</span></code> button <a class="reference internal" href="#fig-creating-a-new-notebook"><span class="std std-ref">Creating a new notebook</span></a> and click on <code class="docutils literal notranslate"><span class="pre">Notebook</span></code>.
+This will be followed by a prompt to choose the programming language to
+use, this is referred to as the kernel: select Python 3. Change the name
+of the notebook by clicking on “Untitled” and changing the name. You
+will call it “introduction” as shown in <a class="reference internal" href="#fig-changing-notebook-name"><span class="std std-ref">Changing the notebook name</span></a>.</p>
 <figure class="align-default" id="fig-creating-a-new-notebook">
-<a class="reference internal image-reference" href="../../../_images/main27.png"><img alt="../../../_images/main27.png" src="../../../_images/main27.png" style="width: 75%;" /></a>
+<a class="reference internal image-reference" href="../../../_images/main24.png"><img alt="../../../_images/main24.png" src="../../../_images/main24.png" style="width: 75%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 5 </span><span class="caption-text">Creating a new notebook</span><a class="headerlink" href="#fig-creating-a-new-notebook" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -1419,12 +1431,12 @@ structure on your computer.</p>
 <p>Let us change the name of the notebook by clicking on “Untitled” and changing
 the name. We will call it “introduction”.</p>
 <figure class="align-default" id="fig-changing-notebook-name">
-<a class="reference internal image-reference" href="../../../_images/main28.png"><img alt="../../../_images/main28.png" src="../../../_images/main28.png" style="width: 75%;" /></a>
+<a class="reference internal image-reference" href="../../../_images/main25.png"><img alt="../../../_images/main25.png" src="../../../_images/main25.png" style="width: 75%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 6 </span><span class="caption-text">Changing the notebook name</span><a class="headerlink" href="#fig-changing-notebook-name" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Once this is done let us close the notebook by closing the corresponding tab of your web browser.</p>
+</section>
 </section>
 <section id="organising-our-files">
 <h2>Organising our files<a class="headerlink" href="#organising-our-files" title="Permalink to this headline">#</a></h2>
@@ -1433,25 +1445,25 @@ the name. We will call it “introduction”.</p>
 <li><p>File Explorer on <strong>Windows</strong> (see <a class="reference internal" href="#fig-new-directory-structure-windows"><span class="std std-ref">Creating a new directory on Windows</span></a>).</p></li>
 <li><p>Finder on <strong>MacOS</strong> (see <a class="reference internal" href="#fig-new-directory-structure"><span class="std std-ref">Creating a new directory on MacOS</span></a>).</p></li>
 </ol>
-<p>Navigate to where your notebook is (this might not be immediately evident): you
-should see a <code class="docutils literal notranslate"><span class="pre">introduction.ipynb</span></code> file.</p>
-<p>Let us rearrange things.</p>
-<p>Find a location on your computer where you want to keep the files for this
-book, using your file browser:</p>
+<p>Navigate to where your notebook is (this might not be immediately
+evident): you should see a <code class="docutils literal notranslate"><span class="pre">introduction.ipynb</span></code> file. Find a location on
+your computer where you want to keep the files for this book, using your
+file browser:</p>
 <ol class="simple">
-<li><p>Create a new directory called <code class="docutils literal notranslate"><span class="pre">cfm</span></code> (short for “Computer for Mathematics”);</p></li>
+<li><p>Create a new directory called <code class="docutils literal notranslate"><span class="pre">pfm</span></code> (short for “Python for
+Mathematics”);</p></li>
 <li><p>Inside that directory create a new directory called <code class="docutils literal notranslate"><span class="pre">nbs</span></code> (short for
 “Notebooks”);</p></li>
 <li><p>Move the <code class="docutils literal notranslate"><span class="pre">introduction.ipynb</span></code> file to this <code class="docutils literal notranslate"><span class="pre">nbs</span></code> directory.</p></li>
 </ol>
 <figure class="align-default" id="fig-new-directory-structure">
-<a class="reference internal image-reference" href="../../../_images/main29.png"><img alt="../../../_images/main29.png" src="../../../_images/main29.png" style="width: 75%;" /></a>
+<a class="reference internal image-reference" href="../../../_images/main26.png"><img alt="../../../_images/main26.png" src="../../../_images/main26.png" style="width: 75%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 7 </span><span class="caption-text">Creating a new directory on MacOS</span><a class="headerlink" href="#fig-new-directory-structure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="fig-new-directory-structure-windows">
-<a class="reference internal image-reference" href="../../../_images/main30.png"><img alt="../../../_images/main30.png" src="../../../_images/main30.png" style="width: 75%;" /></a>
+<a class="reference internal image-reference" href="../../../_images/main27.png"><img alt="../../../_images/main27.png" src="../../../_images/main27.png" style="width: 75%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 8 </span><span class="caption-text">Creating a new directory on Windows</span><a class="headerlink" href="#fig-new-directory-structure-windows" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -1459,11 +1471,11 @@ book, using your file browser:</p>
 </section>
 <section id="writing-some-basic-python-code">
 <h2>Writing some basic Python code<a class="headerlink" href="#writing-some-basic-python-code" title="Permalink to this headline">#</a></h2>
-<p>Go back to our Jupyter notebook server (in your browser).</p>
-<p>Use the interface to navigate to the <code class="docutils literal notranslate"><span class="pre">cfm</span></code> directory and inside that the <code class="docutils literal notranslate"><span class="pre">nbs</span></code>
+<p>Go back to the Jupyter notebook server (in your browser). Use the
+interface to navigate to the <code class="docutils literal notranslate"><span class="pre">pfm</span></code> directory and inside that the <code class="docutils literal notranslate"><span class="pre">nbs</span></code>
 directory and open the <code class="docutils literal notranslate"><span class="pre">introduction.ipynb</span></code> notebook.</p>
 <figure class="align-default" id="fig-opening-notebook">
-<a class="reference internal image-reference" href="../../../_images/main31.png"><img alt="../../../_images/main31.png" src="../../../_images/main31.png" style="width: 75%;" /></a>
+<a class="reference internal image-reference" href="../../../_images/main28.png"><img alt="../../../_images/main28.png" src="../../../_images/main28.png" style="width: 75%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 9 </span><span class="caption-text">Opening a notebook</span><a class="headerlink" href="#fig-opening-notebook" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -1472,9 +1484,12 @@ directory and open the <code class="docutils literal notranslate"><span class="p
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
 </pre></div>
 </div>
-<p>When you have done that click on the <code class="docutils literal notranslate"><span class="pre">Run</span></code> button (you can also use <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code> as a keyboard shortcut).</p>
+<p>When you have done that click on the <code class="docutils literal notranslate"><span class="pre">Run</span></code> button (you can also use <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code> as a keyboard shortcut).
+When you have done that click on the <code class="docutils literal notranslate"><span class="pre">Run</span></code> button shown in
+<a class="reference internal" href="#fig-running-code"><span class="std std-ref">Running code</span></a>. You can also use <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code> as a
+keyboard shortcut.</p>
 <figure class="align-default" id="fig-running-code">
-<a class="reference internal image-reference" href="../../../_images/main32.png"><img alt="../../../_images/main32.png" src="../../../_images/main32.png" style="width: 75%;" /></a>
+<a class="reference internal image-reference" href="../../../_images/main29.png"><img alt="../../../_images/main29.png" src="../../../_images/main29.png" style="width: 75%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 10 </span><span class="caption-text">Running code</span><a class="headerlink" href="#fig-running-code" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -1491,20 +1506,20 @@ directory and open the <code class="docutils literal notranslate"><span class="p
 </div>
 </div>
 </div>
-<p>We see two different things there:</p>
+<p>Figure <a class="reference internal" href="#fig-running-code"><span class="std std-ref">Running code</span></a> shows two different things:</p>
 <ol class="simple">
-<li><p>The input: <code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">[1]</span></code> which is the instruction to Python to use the
+<li><p>The input: which is the instruction to Python to use the
 mathematical technique of addition to compute 2 + 2.</p></li>
-<li><p>The output: <code class="docutils literal notranslate"><span class="pre">Out</span> <span class="pre">[1]</span></code> showing the output that Python has returned as a result
+<li><p>The output: showing the output that Python has returned as a result
 of the instruction.</p></li>
 </ol>
 </section>
 <section id="writing-markdown">
 <h2>Writing markdown<a class="headerlink" href="#writing-markdown" title="Permalink to this headline">#</a></h2>
-<p>One of the reasons for using Jupyter notebooks is that it allows us to include
-both code and communication using something called <code class="docutils literal notranslate"><span class="pre">markdown</span></code>.</p>
-<p>Create a new cell and change the cell type to <code class="docutils literal notranslate"><span class="pre">Markdown</span></code>. Now write the
-following in there:</p>
+<p>One of the reasons for using Jupyter notebooks is that it allows a user
+to include both code and communication using something called
+<code class="docutils literal notranslate"><span class="pre">markdown</span></code>. Create a new cell and change the cell type to <code class="docutils literal notranslate"><span class="pre">Markdown</span></code>.
+Now write the following in there:</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>As well as using Python in Jupyter notebooks we can also write using Markdown.
 This allows us to use basic $\LaTeX$ as a way to display mathematics.
 For example:
@@ -1513,9 +1528,9 @@ For example:
 <span class="k">2.</span> $\sum_{i=0}^n i$
 </pre></div>
 </div>
-<p>When you run that it should look like:</p>
+<p>When you run that it should look like <a class="reference internal" href="#fig-rendering-markdown"><span class="std std-ref">Rendering markdown</span></a>.</p>
 <figure class="align-default" id="fig-rendering-markdown">
-<a class="reference internal image-reference" href="../../../_images/main33.png"><img alt="../../../_images/main33.png" src="../../../_images/main33.png" style="width: 75%;" /></a>
+<a class="reference internal image-reference" href="../../../_images/main30.png"><img alt="../../../_images/main30.png" src="../../../_images/main30.png" style="width: 75%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 11 </span><span class="caption-text">Rendering markdown</span><a class="headerlink" href="#fig-rendering-markdown" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -1523,23 +1538,23 @@ For example:
 </section>
 <section id="saving-your-notebook-to-a-different-format">
 <h2>Saving your notebook to a different format<a class="headerlink" href="#saving-your-notebook-to-a-different-format" title="Permalink to this headline">#</a></h2>
-<p>Click on <code class="docutils literal notranslate"><span class="pre">File</span></code> and <code class="docutils literal notranslate"><span class="pre">Download</span> <span class="pre">As</span></code> this brings up a number of formats that
-Jupyter notebooks can be exported to. Some of these might need other tools
-installed on your computer but a portable option is <code class="docutils literal notranslate"><span class="pre">HTML</span></code>.</p>
-<p>Click on <code class="docutils literal notranslate"><span class="pre">HTML</span> <span class="pre">(.html)</span></code>.</p>
-<p>Now use your file browser and open the downloaded file. This will open in your
-browser a static version of the file you have been working on. This is a helpful
-way to share your work with someone who might not have Jupyter (or even Python).</p>
+<p>Click on <code class="docutils literal notranslate"><span class="pre">File</span></code> and <code class="docutils literal notranslate"><span class="pre">Download</span> <span class="pre">As</span></code> this brings up a number of formats
+that Jupyter notebooks can be exported to. Some of these might need
+other tools installed on your computer but a portable option is <code class="docutils literal notranslate"><span class="pre">HTML</span></code>.
+Click on <code class="docutils literal notranslate"><span class="pre">HTML</span> <span class="pre">(.html)</span></code>. Now use your file browser and open the
+downloaded file. This will open in your browser a static version of the
+file you have been working on. This is a helpful way to share your work
+with someone who might not have Jupyter (or even Python).</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>In this tutorial we have</p>
+<p>This tutorial has:</p>
 <ul class="simple">
 <li><p>Installed the Anaconda distribution of Python.</p></li>
 <li><p>Started a notebook server.</p></li>
 <li><p>Created a new notebook.</p></li>
 <li><p>Run some Python code.</p></li>
 <li><p>Written some markdown.</p></li>
-<li><p>Saved our notebook to a different format.</p></li>
+<li><p>Saved the notebook to a different format.</p></li>
 </ul>
 </div>
 </section>
@@ -1582,7 +1597,7 @@ way to share your work with someone who might not have Jupyter (or even Python).
     <a class='right-next' id="next-link" href="../how/main.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">How</p>
+        <p class="prev-next-title">How to</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

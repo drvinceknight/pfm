@@ -181,7 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../overview/how_to_use_this_book/main.html">
-     How to use this book
+     How to use this book?
     </a>
    </li>
   </ul>
@@ -210,7 +210,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/01-using-notebooks/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -247,7 +247,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/02-algebra/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -469,7 +469,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/08-statistics/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -506,7 +506,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/09-differential-equations/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -550,7 +550,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../01-variables-conditionals-loops/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -624,7 +624,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../03-objects/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -661,7 +661,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../04-editor-and-cli/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -698,7 +698,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../05-modularisation/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -1321,27 +1321,22 @@ title="Print to PDF"
 <section id="what-formats-can-be-used-to-write-a-docstring">
 <h2>What formats can be used to write a docstring?<a class="headerlink" href="#what-formats-can-be-used-to-write-a-docstring" title="Permalink to this headline">#</a></h2>
 <p>The format used to write a docstring described in <a class="reference internal" href="../how/main.html#how-to-write-a-docstring"><span class="std std-ref">How to write a docstring</span></a> is the one specified
-by the Numpy project. You can read about that specification here: https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard</p>
+by the Numpy project.</p>
 <p>Amongst other things you can see how to specify further functionality:</p>
 <ul class="simple">
 <li><p>How to indicate if a parameter is optional.</p></li>
 <li><p>How to specify what types of errors might be raised by a function.</p></li>
 <li><p>How to specify when a function is a generator.</p></li>
 </ul>
-<p>There are 2 other common specifications:</p>
-<ul class="simple">
-<li><p>Google’s Python Style Guide: https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings</p></li>
-<li><p>Sphinx Python Style Guide: https://pythonhosted.org/an_example_pypi_project/sphinx.html#function-definitions</p></li>
-</ul>
 </section>
 <section id="are-there-tools-available-to-assist-with-writing-docstrings">
 <h2>Are there tools available to assist with writing docstrings?<a class="headerlink" href="#are-there-tools-available-to-assist-with-writing-docstrings" title="Permalink to this headline">#</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">darglint</span></code> library: https://github.com/terrencepreilly/darglint can be used
+<p>The <code class="docutils literal notranslate"><span class="pre">darglint</span></code> library can be used
 to check if docstrings match a given format.</p>
 </section>
 <section id="a-part-from-removing-duplicates-and-set-operations-what-are-they-advantages-to-using-set">
 <h2>A part from removing duplicates and set operations what are they advantages to using <code class="docutils literal notranslate"><span class="pre">set</span></code>?<a class="headerlink" href="#a-part-from-removing-duplicates-and-set-operations-what-are-they-advantages-to-using-set" title="Permalink to this headline">#</a></h2>
-<p>One valuable uses of <code class="docutils literal notranslate"><span class="pre">set</span></code> is to efficiently identify is an element
+<p>One valuable uses of <code class="docutils literal notranslate"><span class="pre">set</span></code> is to efficiently identify if an element
 is in a given iterable or not:</p>
 <div class="cell tag_nbval-ignore-output tag_style-check-ignore docutils container">
 <div class="cell_input docutils container">
@@ -1351,7 +1346,7 @@ is in a given iterable or not:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>727 µs ± 565 ns per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>737 μs ± 7 μs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1364,7 +1359,7 @@ is in a given iterable or not:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24.3 ns ± 0.16 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22.9 ns ± 0.577 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
 </pre></div>
 </div>
 </div>

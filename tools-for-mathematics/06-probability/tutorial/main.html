@@ -183,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../overview/how_to_use_this_book/main.html">
-     How to use this book
+     How to use this book?
     </a>
    </li>
   </ul>
@@ -212,7 +212,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../01-using-notebooks/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -249,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../02-algebra/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -471,7 +471,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08-statistics/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -508,7 +508,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../09-differential-equations/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -552,7 +552,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -626,7 +626,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/03-objects/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -663,7 +663,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/04-editor-and-cli/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -700,7 +700,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/05-modularisation/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -1251,26 +1251,27 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="tutorial">
 <h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">#</a></h1>
-<p>We will solve the following problem using a computer to estimate the expected
-probabilities:</p>
+<p>You will solve the following problem using a computer to estimate the
+expected probabilities:</p>
 <div class="admonition-problem admonition">
 <p class="admonition-title">Problem</p>
-<p>An experiment consists of selecting a token from a bag and spinning a coin. The
-bag contains 5 red tokens and 7 blue tokens. A token is selected at random from
-the bag, its colour is noted and then the token is returned to the bag.</p>
-<p>When a red token is selected, a biased coin with probability <span class="math notranslate nohighlight">\(\frac{2}{3}\)</span>
-of landing heads is spun.</p>
+<p>An experiment consists of selecting a token from a bag and spinning a
+coin. The bag contains 5 red tokens and 7 blue tokens. A token is
+selected at random from the bag, its colour is noted and then the token
+is returned to the bag.</p>
+<p>When a red token is selected, a biased coin with probability
+<span class="math notranslate nohighlight">\(\frac{2}{3}\)</span> of landing heads is spun.</p>
 <p>When a blue token is selected a fair coin is spun.</p>
 <ol class="simple">
 <li><p>What is the probability of picking a red token?</p></li>
 <li><p>What is the probability of obtaining Heads?</p></li>
-<li><p>If a heads is obtained, what is the probability of having selected a red
-token.</p></li>
+<li><p>If a heads is obtained, what is the probability of having selected a
+red token.</p></li>
 </ol>
 </div>
-<p>We will use the <code class="docutils literal notranslate"><span class="pre">random</span></code> library from the Python standard library to do this.</p>
-<p>First we start off by building a Python <strong>tuple</strong> to represent the bag with the
-tokens. We assign this to a variable <code class="docutils literal notranslate"><span class="pre">bag</span></code>:</p>
+<p>You will use the <code class="docutils literal notranslate"><span class="pre">random</span></code> library from the Python standard library to do
+this. First start off by building a Python <strong>tuple</strong> to represent the
+bag with the tokens. Assign this to a variable <code class="docutils literal notranslate"><span class="pre">bag</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bag</span> <span class="o">=</span> <span class="p">(</span>
@@ -1310,14 +1311,13 @@ tokens. We assign this to a variable <code class="docutils literal notranslate">
 </div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>We are there using the circular brackets <code class="docutils literal notranslate"><span class="pre">()</span></code> and the quotation marks
-<code class="docutils literal notranslate"><span class="pre">&quot;</span></code>. Those are important and cannot be omitted. The choice of brackets <code class="docutils literal notranslate"><span class="pre">()</span></code> as
-opposed to <code class="docutils literal notranslate"><span class="pre">{}</span></code> or <code class="docutils literal notranslate"><span class="pre">[]</span></code> is in fact important as it instructs Python to do
-different things (we will learn about this later). You can use <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">'</span></code>
-interchangeably.</p>
+<p>You are using the circular brackets <code class="docutils literal notranslate"><span class="pre">()</span></code> and the quotation marks <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>.
+Those are important and cannot be omitted. The choice of brackets <code class="docutils literal notranslate"><span class="pre">()</span></code>
+as opposed to <code class="docutils literal notranslate"><span class="pre">{}</span></code> or <code class="docutils literal notranslate"><span class="pre">[]</span></code> is important as it instructs Python to do
+different things. You can use <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">’</span></code> interchangeably.</p>
 </div>
-<p>Instead of writing every entry out we can create a Python <strong>list</strong> which allows
-for us to carry out some basic algebra on the items. Here we essentially:</p>
+<p>Instead of writing every copy of color you can create a Python <strong>list</strong>
+which allows you to carry out some basic algebra on the items:</p>
 <ul class="simple">
 <li><p>Create a list with 5 <code class="docutils literal notranslate"><span class="pre">&quot;Red&quot;</span></code>s.</p></li>
 <li><p>Create a list with 7 <code class="docutils literal notranslate"><span class="pre">&quot;Blue&quot;</span></code>s.</p></li>
@@ -1347,11 +1347,11 @@ for us to carry out some basic algebra on the items. Here we essentially:</p>
 </div>
 </div>
 </div>
-<p>Now to sample from that we use the <code class="docutils literal notranslate"><span class="pre">random</span></code> library which has a <code class="docutils literal notranslate"><span class="pre">choice</span></code>
+<p>Now to sample from that use the <code class="docutils literal notranslate"><span class="pre">random</span></code> library which has a <code class="docutils literal notranslate"><span class="pre">choice</span></code>
 command:</p>
 <div class="cell tag_nbval-ignore-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
 
 <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">bag</span><span class="p">)</span>
 </pre></div>
@@ -1363,7 +1363,7 @@ command:</p>
 </div>
 </div>
 </div>
-<p>If we run this many times we will not always get the same outcome:</p>
+<p>If you run this many times you will not always get the same outcome:</p>
 <div class="cell tag_nbval-ignore-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">bag</span><span class="p">)</span>
@@ -1371,7 +1371,7 @@ command:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Blue&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Red&#39;
 </pre></div>
 </div>
 </div>
@@ -1403,13 +1403,13 @@ command:</p>
 </div>
 </div>
 </div>
-<p>In order to answer the first question (what is the probability of picking a red
-token) we want to repeat this many times.</p>
-<p>We do this by defining a Python function (which is akin to a mathematical
-function) that allows us to repeat code:</p>
+<p>In order to answer the first question (what is the probability of
+picking a red token) repeat this many times. Do this by defining a
+Python function (which is akin to a mathematical function) that makes
+repeating code possible:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pick_a_token</span><span class="p">(</span><span class="n">container</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">pick_a_token</span><span class="p">(</span><span class="n">container</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A function to randomly sample from a `container`.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1418,8 +1418,8 @@ function) that allows us to repeat code:</p>
 </div>
 </div>
 </div>
-<p>We can then call this function, passing our <code class="docutils literal notranslate"><span class="pre">bag</span></code> to it as the <code class="docutils literal notranslate"><span class="pre">container</span></code> from
-which to pick:</p>
+<p>You can then call this function, passing <code class="docutils literal notranslate"><span class="pre">bag</span></code> to it as the <code class="docutils literal notranslate"><span class="pre">container</span></code>
+from which to pick:</p>
 <div class="cell tag_nbval-ignore-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pick_a_token</span><span class="p">(</span><span class="n">container</span><span class="o">=</span><span class="n">bag</span><span class="p">)</span>
@@ -1427,7 +1427,7 @@ which to pick:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Red&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Blue&#39;
 </pre></div>
 </div>
 </div>
@@ -1439,15 +1439,15 @@ which to pick:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Red&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Blue&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<p>In order to simulate the probability of picking a red token we need to repeat
-this not once or twice but tens of thousands of times. We will do this using
-something called a “list comprehension” which is akin to the mathematical
-notation we use all the time to create sets:</p>
+<p>In order to measure the probability of picking a red token repeat this
+not once or twice but tens of thousands of times. You will do this using
+something called a “list comprehension” which is akin to the
+mathematical notation commonly used to create sets:</p>
 <div class="math notranslate nohighlight">
 \[
     S_1 = \{f(x)\text{ for }x\text{ in }S_2\}
@@ -1462,23 +1462,16 @@ notation we use all the time to create sets:</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
@@ -1487,16 +1480,15 @@ notation we use all the time to create sets:</p>
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
@@ -1504,7 +1496,6 @@ notation we use all the time to create sets:</p>
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
@@ -1512,45 +1503,46 @@ notation we use all the time to create sets:</p>
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
@@ -1558,8 +1550,7 @@ notation we use all the time to create sets:</p>
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
@@ -1569,9 +1560,10 @@ notation we use all the time to create sets:</p>
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
@@ -1579,11 +1571,15 @@ notation we use all the time to create sets:</p>
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
@@ -1592,61 +1588,59 @@ notation we use all the time to create sets:</p>
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
- &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
@@ -1654,30 +1648,20 @@ notation we use all the time to create sets:</p>
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
@@ -1688,20 +1672,22 @@ notation we use all the time to create sets:</p>
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
@@ -1711,55 +1697,55 @@ notation we use all the time to create sets:</p>
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
@@ -1767,67 +1753,50 @@ notation we use all the time to create sets:</p>
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
- &#39;Red&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Red&#39;,
- &#39;Red&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
- &#39;Red&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
@@ -1838,8 +1807,10 @@ notation we use all the time to create sets:</p>
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
@@ -1850,48 +1821,41 @@ notation we use all the time to create sets:</p>
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Blue&#39;,
- &#39;Red&#39;,
- &#39;Red&#39;,
- &#39;Red&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
@@ -1899,59 +1863,69 @@ notation we use all the time to create sets:</p>
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
- &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
@@ -1959,42 +1933,41 @@ notation we use all the time to create sets:</p>
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
@@ -2002,10 +1975,15 @@ notation we use all the time to create sets:</p>
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
@@ -2015,21 +1993,27 @@ notation we use all the time to create sets:</p>
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
@@ -2037,81 +2021,74 @@ notation we use all the time to create sets:</p>
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Blue&#39;,
- &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
@@ -2120,27 +2097,29 @@ notation we use all the time to create sets:</p>
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
@@ -2149,108 +2128,113 @@ notation we use all the time to create sets:</p>
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
@@ -2260,19 +2244,22 @@ notation we use all the time to create sets:</p>
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
@@ -2280,25 +2267,18 @@ notation we use all the time to create sets:</p>
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
@@ -2306,64 +2286,56 @@ notation we use all the time to create sets:</p>
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
- &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
- &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
@@ -2373,18 +2345,17 @@ notation we use all the time to create sets:</p>
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
- &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
- &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
@@ -2396,47 +2367,64 @@ notation we use all the time to create sets:</p>
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Red&#39;,
+ &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
@@ -2444,21 +2432,33 @@ notation we use all the time to create sets:</p>
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
- &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
- &#39;Blue&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
  &#39;Red&#39;,
  &#39;Red&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
+ &#39;Blue&#39;,
  &#39;Blue&#39;,
  &#39;Blue&#39;,
  ...]
@@ -2466,7 +2466,7 @@ notation we use all the time to create sets:</p>
 </div>
 </div>
 </div>
-<p>We can confirm that we have the correct number of samples:</p>
+<p>You can confirm that you have the correct number of samples:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span>
@@ -2491,13 +2491,13 @@ notation we use all the time to create sets:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.4268
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.4107
 </pre></div>
 </div>
 </div>
 </div>
-<p>We have sampled probability of around .41. The theoretic value is <span class="math notranslate nohighlight">\(\frac{5}{5 +
-7}\)</span>:</p>
+<p>You have sampled a probability of around .41. The theoretic value is
+<span class="math notranslate nohighlight">\(\frac{5}{5 + 7}\)</span>:</p>
 <div class="cell tag_nbval-ignore-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">/</span> <span class="p">(</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">7</span><span class="p">)</span>
@@ -2510,9 +2510,10 @@ notation we use all the time to create sets:</p>
 </div>
 </div>
 </div>
-<p>To answer the second question (What is the probability of obtaining Heads?) we
-need to make use of another Python tool: an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement. This will allow us
-to write a function that does precisely what is described in the problem:</p>
+<p>To answer the second question (What is the probability of obtaining
+Heads?) You need to make use of another Python tool: an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement.
+This will let you write a function that does precisely what is described
+in the problem:</p>
 <ul class="simple">
 <li><p>Choose a token;</p></li>
 <li><p>Set the probability of flipping a given coin;</p></li>
@@ -2520,15 +2521,15 @@ to write a function that does precisely what is described in the problem:</p>
 </ul>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>For the second random selection (flipping a coin) we will not choose from a list
-but instead select a random number between 0 and 1.</p>
+<p>For the second random selection (flipping a coin) you will not choose
+from a list but instead select a random number between 0 and 1.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
 
 
-<span class="k">def</span> <span class="nf">sample_experiment</span><span class="p">(</span><span class="n">bag</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">sample_experiment</span><span class="p">(</span><span class="n">bag</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This samples a token from a given bag and then</span>
 <span class="sd">    selects a coin with a given probability.</span>
@@ -2555,7 +2556,7 @@ but instead select a random number between 0 and 1.</p>
 </div>
 </div>
 </div>
-<p>Using this we can sample according to the problem description:</p>
+<p>Using this you can sample according to the problem description:</p>
 <div class="cell tag_nbval-ignore-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_experiment</span><span class="p">(</span><span class="n">bag</span><span class="o">=</span><span class="n">bag</span><span class="p">)</span>
@@ -2563,7 +2564,7 @@ but instead select a random number between 0 and 1.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;Red&#39;, &#39;Heads&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;Blue&#39;, &#39;Tails&#39;)
 </pre></div>
 </div>
 </div>
@@ -2580,8 +2581,9 @@ but instead select a random number between 0 and 1.</p>
 </div>
 </div>
 </div>
-<p>We can now find out the probability of selecting heads by carrying out a large
-number of repetitions and checking which ones have a coin that is heads:</p>
+<p>You can now find out the probability of selecting heads by carrying out
+a large number of repetitions and checking which ones have a coin that
+is heads:</p>
 <div class="cell tag_nbval-ignore-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">samples</span> <span class="o">=</span> <span class="p">[</span><span class="n">sample_experiment</span><span class="p">(</span><span class="n">bag</span><span class="o">=</span><span class="n">bag</span><span class="p">)</span> <span class="k">for</span> <span class="n">repetition</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number_of_repetitions</span><span class="p">)]</span>
@@ -2590,15 +2592,15 @@ number of repetitions and checking which ones have a coin that is heads:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5696
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5773
 </pre></div>
 </div>
 </div>
 </div>
-<p>We can compute this theoretically as well, the expected probability is:</p>
+<p>You can compute this theoretically as well, the expected probability is:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sym</span>
 
 <span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="o">*</span> <span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span> <span class="o">+</span> <span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="o">*</span> <span class="n">sym</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
 </pre></div>
@@ -2621,10 +2623,10 @@ number of repetitions and checking which ones have a coin that is heads:</p>
 </div>
 </div>
 </div>
-<p>We can also use our samples to calculate the conditional probability that a
-token was read if the coin is heads. This is done again using the list
-comprehension notation but including an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement which allows us to
-emulate the mathematical notation:</p>
+<p>You can also use the samples to calculate the conditional probability
+that a token was read if the coin is heads. This is done again using the
+list comprehension notation but including an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement which
+emulates the mathematical notation:</p>
 <div class="math notranslate nohighlight">
 \[
     S_3 = \{x \in S_1  | \text{ if some property of \(x\) holds}\}
@@ -2637,7 +2639,7 @@ emulate the mathematical notation:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.47981039325842695
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.49731508747618225
 </pre></div>
 </div>
 </div>
@@ -2672,7 +2674,7 @@ emulate the mathematical notation:</p>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>In this tutorial we have</p>
+<p>In this tutorial you have</p>
 <ul class="simple">
 <li><p>Randomly sampled from an iterable.</p></li>
 <li><p>Randomly sampled a number between 0 and 1.</p></li>

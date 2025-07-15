@@ -183,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../overview/how_to_use_this_book/main.html">
-     How to use this book
+     How to use this book?
     </a>
    </li>
   </ul>
@@ -212,7 +212,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../01-using-notebooks/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -249,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../02-algebra/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -471,7 +471,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -508,7 +508,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../09-differential-equations/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -552,7 +552,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -626,7 +626,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/03-objects/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -663,7 +663,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/04-editor-and-cli/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -700,7 +700,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/05-modularisation/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -1253,8 +1253,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-do-we-plot-a-line-of-best-fit">
-   How do we plot a line of best fit?
+  <a class="reference internal nav-link" href="#how-to-plot-a-line-of-best-fit">
+   How to plot a line of best fit?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1292,8 +1292,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-do-we-plot-a-line-of-best-fit">
-   How do we plot a line of best fit?
+  <a class="reference internal nav-link" href="#how-to-plot-a-line-of-best-fit">
+   How to plot a line of best fit?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1347,16 +1347,16 @@ is for the entire population.</p>
 sample of the entire population. The modification in the calculation is to
 counteract a potential bias.</p>
 </section>
-<section id="how-do-we-plot-a-line-of-best-fit">
-<h2>How do we plot a line of best fit?<a class="headerlink" href="#how-do-we-plot-a-line-of-best-fit" title="Permalink to this headline">#</a></h2>
+<section id="how-to-plot-a-line-of-best-fit">
+<h2>How to plot a line of best fit?<a class="headerlink" href="#how-to-plot-a-line-of-best-fit" title="Permalink to this headline">#</a></h2>
 <p>The main library for plotting is called <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and
-<a class="reference internal" href="../../../further-information/02-matplotlib/introduction/main.html#matplotlib"><span class="std std-ref">Matplotlib</span></a> covers things in more detail.</p>
+<a class="reference internal" href="../../../further-information/02-matplotlib/introduction/main.html#matplotlib"><span class="std std-ref">Matplotlib</span></a> covers this library in more detail.</p>
 <p>However below is some code to plot the data and regression line for two
 collections of data:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statistics</span> <span class="k">as</span> <span class="nn">stat</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">statistics</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">stat</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">5.6</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">)</span>
@@ -1385,23 +1385,22 @@ collections of data:</p>
 </section>
 <section id="what-other-statistics-tools-exist-in-python">
 <h2>What other statistics tools exist in Python?<a class="headerlink" href="#what-other-statistics-tools-exist-in-python" title="Permalink to this headline">#</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">statsmodels</span></code> library allows for a wider breadth of statistical analysis:
-https://www.statsmodels.org/stable/index.html</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> library is arguably one of the most popular python libraries.
+<p>The <code class="docutils literal notranslate"><span class="pre">statsmodels</span></code> library allows for a wider breadth of statistical analysis.
+The <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> library is arguably one of the most popular python libraries.
 It is technically a library for machine learning and not statistics.</p>
 </section>
 <section id="what-is-the-difference-between-machine-learning-and-statistics">
 <h2>What is the difference between machine learning and statistics<a class="headerlink" href="#what-is-the-difference-between-machine-learning-and-statistics" title="Permalink to this headline">#</a></h2>
-<p>In a lot of cases the difference here is more question of vocabulary than
-actual tangible differences.</p>
-<p>For example the <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> library has a tool for linear regression as does
-the <code class="docutils literal notranslate"><span class="pre">statsmodels</span></code> and the <code class="docutils literal notranslate"><span class="pre">statistics</span></code> library.</p>
-<p>In practice statistics is often more descriptive, for example using linear
-regression to understand the relationship between two variables. Whereas machine
-learning is more predictive, for example using liner regression to predict one
-variable value from another.</p>
-<p>A lot of modern applied mathematics using tools such as neural networks which
-are usually discussed as tools from the machine learning.</p>
+<p>In a lot of cases the difference here is more question of vocabulary
+than actual tangible differences.</p>
+<p>For example the <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> library has a tool for linear regression
+as does the <code class="docutils literal notranslate"><span class="pre">statsmodels</span></code> and the <code class="docutils literal notranslate"><span class="pre">statistics</span></code> library.</p>
+<p>In practice statistics is often more descriptive, for example using
+linear regression to understand the relationship between two variables.
+Whereas machine learning is more predictive, for example using liner
+regression to predict one variable value from another.</p>
+<p>A lot of modern applied mathematics uses tools such as neural networks
+which are considered to be from the field of machine learning.</p>
 </section>
 </section>
 

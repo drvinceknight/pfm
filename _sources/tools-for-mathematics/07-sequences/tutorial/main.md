@@ -14,8 +14,8 @@ kernelspec:
 
 # Tutorial
 
-We will solve the following problem using a computer using a programming
-technique called **recursion**.
+You will solve the following problem using a computer using a
+programming technique called **recursion**.
 
 ```{admonition} Problem
 
@@ -38,8 +38,8 @@ where $k$ is a constant.
 3. Given that $\sum_{r=1}^4 a_r = 43$ find the value of $k$.
 ```
 
-We will use a Python to define a function that reproduces the mathematical
-definition of $a_k$:
+You will use Python to define a function that reproduces the
+mathematical definition of $a_k$:
 
 ```{code-cell} ipython3
 def generate_a(k_value, n):
@@ -55,24 +55,24 @@ def generate_a(k_value, n):
 ```
 
 ```{attention}
-This is similar to the mathematical definition the Python definition of
+This is similar to the mathematical definition: the Python definition of
 the function refers to itself.
 ```
 
-We can use this to compute $a_3$ for $k=4$:
+You can use this to compute $a_3$ for $k=4$:
 
 ```{code-cell} ipython3
 generate_a(k_value=4, n=3)
 ```
 
-We can use this to compute $a_5$ for $k=1$:
+You can use this to compute $a_5$ for $k=1$:
 
 ```{code-cell} ipython3
 generate_a(k_value=1, n=5)
 ```
 
 Finally it is also possible to pass a symbolic value to `k_value`. This allows
-us to answer the first question:
+you to answer the first question:
 
 ```{code-cell} ipython3
 import sympy as sym
@@ -87,10 +87,10 @@ Likewise for $a_3$:
 generate_a(k_value=k, n=3)
 ```
 
-For the last question we start by computing the sum:
+For the last question start by computing the sum:
 
 $$
-    \sum_{r=1}^4 a_r = 43
+    \sum_{r=1}^4 a_r
 $$
 
 ```{code-cell} ipython3
@@ -98,7 +98,7 @@ sum_of_first_four_terms = sum(generate_a(k_value=k, n=r) for r in range(1, 5))
 sum_of_first_four_terms
 ```
 
-This allows us to create the given equation and solve it:
+This allows you to create the given equation and solve it:
 
 ```{code-cell} ipython3
 equation = sym.Eq(sum_of_first_four_terms, 43)
@@ -106,8 +106,8 @@ sym.solveset(equation, k)
 ```
 
 ```{important}
-In this tutorial we have
+In this tutorial you have
 
-- Defined a function using recursion.
-- Called this function using both numeric and symbolic values.
+-   Defined a function using recursion.
+-   Called this function using both numeric and symbolic values.
 ```

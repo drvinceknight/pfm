@@ -14,23 +14,20 @@ kernelspec:
 
 # Tutorial
 
-We will solve the following problem using a computer to do some of the more
-tedious calculations.
+You will solve the following problem using a computer to do some of the
+more tedious calculations.
 
 ```{admonition} Problem
-A container has volume $V$ of liquid which is poured in at a rate proportional
-to $e^{-t}$ (where $t$ is some measurement of time). Initially the container is empty and
-after $t=3$ time units the rate at which the liquid is poured is 15.
+A container has volume $V$ of liquid which is poured in at a rate
+proportional to $e^{-t}$ (where $t$ is some measurement of time).
+Initially the container is empty and after $t=3$ time units the volume
+of liquid is 15.
 
-1. Show that $V(t)=\frac{-15e^{3}}{1-e^{3}}(1 - e^{-t})$
-2. Obtain the limit $\lim_{t\to \infty}V(t)$
+1.  Show that $V(t)=\frac{-15e^{3}}{1-e^{3}}(1 - e^{-t})$.
+2.  Obtain the limit $\lim_{t\to \infty}V(t)$.
 ```
 
-We first need to create the differential equation described in the text:
-
-$$\frac{V(t)}{dt}=ke^{-t}$$
-
-We create this differential equation in python:
+You first need to create the differential equation described in the text:
 
 ```{code-cell} ipython3
 import sympy as sym
@@ -43,16 +40,16 @@ differential_equation = sym.Eq(lhs=sym.diff(V(t), t), rhs=k * sym.exp(-t))
 differential_equation
 ```
 
-In order to solve the differential equation we can write:
+In order to solve the differential equation you can write:
 
 ```{code-cell} ipython3
 sym.dsolve(differential_equation, V(t))
 ```
 
-Note that the question gives us an initial condition: "initially the container
+Note that the question gives an initial condition: "initially the container
 is empty" which corresponds to $V(0)=0$.
 
-We can pass this to the call to solve the differential equation:
+You can pass this to the call to solve the differential equation:
 
 ```{code-cell} ipython3
 condition = {V(0): 0}
@@ -67,7 +64,7 @@ equation = sym.Eq(particular_solution.rhs.subs({t: 3}), 15)
 equation
 ```
 
-We can solve this equation to find a value for $k$:
+You can solve this equation to find a value for $k$:
 
 ```{code-cell} ipython3
 sym.simplify(sym.solveset(equation, k))
@@ -75,7 +72,7 @@ sym.simplify(sym.solveset(equation, k))
 
 which is the required value.
 
-We can use the complete expression for $V(t)$ to take the limit:
+You can use the complete expression for $V(t)$ to take the limit:
 
 ```{code-cell} ipython3
 limit = sym.limit((-15 * sym.exp(3) / (1- sym.exp(3))) *  (1 - sym.exp(-t)), t, sym.oo)
@@ -89,7 +86,7 @@ float(limit)
 ```
 
 ```{important}
-In this tutorial we have
+In this tutorial you have
 
 - Created a differential equation
 - Obtained the general solution of a differential equation

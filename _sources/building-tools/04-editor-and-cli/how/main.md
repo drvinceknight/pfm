@@ -12,16 +12,16 @@ kernelspec:
   name: python3
 ---
 
-# How
+# How to
 
-## How to navigate directories in the command line
+## Navigate directories using the command line
 
 In the command line the `cd` command (short for "*c*hange *d*irectory") can be
 used to enter a given directory.
 
 ````{tip}
 ```
-$ cd directory
+$ cd <directory>
 ```
 ````
 
@@ -32,7 +32,7 @@ The target directory must be contained in the directory you are currently in.
 For example to change directory in to a directory called `cfm`:
 
 ```bash
-% cd cfm
+$ cd cfm
 ```
 
 To go back to the previous directory use `..`:
@@ -41,14 +41,14 @@ To go back to the previous directory use `..`:
 $ cd ..
 ```
 
-## How to create a new directory in the command line
+## Create a new directory using the command line
 
 In the command line the `mkdir` command (short for "*m*a*k*e *dir*ectory) can be
 used to create a new directory.
 
 ````{tip}
 ```
-$ mkdir directory
+$ mkdir <directory>
 ```
 ````
 
@@ -58,7 +58,7 @@ For example to create a director called `scripts`:
 $ mkdir scripts
 ```
 
-## How to see the contents of a directory in the command line
+## See the contents of a directory in the command line
 
 In the command line we can see the contents of the current directory:
 
@@ -84,14 +84,14 @@ $ ls
 ````
 `````
 
-## How to run python code in a file
+## Run python code in a file
 
 To run code in a file we type `python` followed by the name of the file in the
 command line.
 
 ````{tip}
 ```
-$ python file.py
+$ python <file.py>
 ```
 ````
 
@@ -103,7 +103,7 @@ $ python main.py
 
 ## How to run python code without using a file or Jupyter
 
-In the command line if you type `python` without passing a filename this will
+At the command line if you type `python` without passing a filename this will
 create a prompt in which you can directly write Python code.
 
 ````{tip}
@@ -134,7 +134,8 @@ access to Python as a way to run simple commands.
 ```
 
 (how_to_install_a_vscode_plugin)=
-## How to install VScode plugins
+
+## Install VScode plugins
 
 VScode is a powerful editor with a number of plugins for different languages and
 functionalities.

@@ -183,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../overview/how_to_use_this_book/main.html">
-     How to use this book
+     How to use this book?
     </a>
    </li>
   </ul>
@@ -212,7 +212,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../01-using-notebooks/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -249,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../02-algebra/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -471,7 +471,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08-statistics/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -508,7 +508,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -552,7 +552,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -626,7 +626,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/03-objects/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -663,7 +663,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/04-editor-and-cli/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -700,7 +700,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/05-modularisation/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -1310,11 +1310,11 @@ title="Print to PDF"
         y(1) =&amp; 300
     \end{cases}
 \end{split}\]</div>
-<p>We can solve it using <code class="docutils literal notranslate"><span class="pre">sym.dsolve</span></code> but instead of passing a single differential
-equation, we pass an iterable of multiple equations:</p>
+<p>You can solve it using <code class="docutils literal notranslate"><span class="pre">sym.dsolve</span></code> but instead of passing a single differential
+equation, pass an iterable of multiple equations:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sym</span>
 
 
 <span class="n">y</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
@@ -1348,7 +1348,7 @@ equation, we pass an iterable of multiple equations:</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle y{\left(t \right)} = \frac{50 \cdot \left(5 e^{\sqrt{\alpha \beta}} - 6\right) e^{\sqrt{\alpha \beta}} e^{- t \sqrt{\alpha \beta}}}{e^{2 \sqrt{\alpha \beta}} - 1} + \frac{50 \cdot \left(6 e^{\sqrt{\alpha \beta}} - 5\right) e^{t \sqrt{\alpha \beta}}}{e^{2 \sqrt{\alpha \beta}} - 1}\]</div>
+\[\displaystyle y{\left(t \right)} = \frac{50 \left(5 e^{\sqrt{\alpha \beta}} - 6\right) e^{\sqrt{\alpha \beta}} e^{- t \sqrt{\alpha \beta}}}{e^{2 \sqrt{\alpha \beta}} - 1} + \frac{50 \left(6 e^{\sqrt{\alpha \beta}} - 5\right) e^{t \sqrt{\alpha \beta}}}{e^{2 \sqrt{\alpha \beta}} - 1}\]</div>
 </div>
 </div>
 </section>
@@ -1363,7 +1363,7 @@ elementary functions. For example, the <a class="reference external" href="https
 <p>Attempting to solve this with Sympy gives:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sym</span>
 
 <span class="n">y</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
@@ -1381,7 +1381,7 @@ elementary functions. For example, the <a class="reference external" href="https
 <p>which is a linear combination of <span class="math notranslate nohighlight">\(A_i\)</span> and <span class="math notranslate nohighlight">\(B_i\)</span> which are special functions
 called the Airy functions of the first and second kind.</p>
 <p>Using <code class="docutils literal notranslate"><span class="pre">scipy.integrate</span></code> it is possible to solve this differential equation numerically.</p>
-<p>First, we will define a new variable <span class="math notranslate nohighlight">\(u=\frac{dy}{dx}\)</span> so that the second order
+<p>First, define a new variable <span class="math notranslate nohighlight">\(u=\frac{dy}{dx}\)</span> so that the second order
 differential equation can be expressed as a system of single order differential
 equations:</p>
 <div class="math notranslate nohighlight">
@@ -1391,11 +1391,11 @@ equations:</p>
         \frac{dy}{dx}=&amp;u
     \end{cases}
 \end{split}\]</div>
-<p>We now define a python function to that returns the right hand side of that
+<p>Now define a python function that returns the right hand side of that
 system of equations:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">diff</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">diff</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns the value of the derivates for a given set of state values (u, y).</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1405,14 +1405,14 @@ system of equations:</p>
 </div>
 </div>
 </div>
-<p>We can pass this to <code class="docutils literal notranslate"><span class="pre">scipy.integrate.odeint</span></code> which is a tool that carries out
+<p>You can pass this to <code class="docutils literal notranslate"><span class="pre">scipy.integrate.odeint</span></code> which is a tool that carries out
 numerical integration of differential equations. Note, that it is incapable of
 dealing with symbolic variables, thus an initial numeric value of <span class="math notranslate nohighlight">\((u, y)\)</span> is
 required.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">scipy.integrate</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy.integrate</span>
 
 <span class="n">condition</span> <span class="o">=</span> <span class="p">(</span><span class="mf">.1</span><span class="p">,</span> <span class="o">-</span><span class="mf">.5</span><span class="p">)</span>
 
@@ -1424,8 +1424,9 @@ required.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>We make use of
-<a class="reference internal" href="../../../further-information/01-numpy/how/main.html#how-to-create-a-given-number-of-values-between-two-bounds"><span class="std std-ref">How to create a given number of values between two bounds</span></a> to create a set
+<p>Here, you make use of
+<a class="reference internal" href="../../../further-information/01-numpy/how/main.html#how-to-create-a-given-number-of-values-between-two-bounds"><span class="std std-ref">How to create a given number of values between two bounds</span></a> to create a
+collection
 of <code class="docutils literal notranslate"><span class="pre">x</span></code> values over which to carry out the numerical integration.</p>
 </div>
 <p>This returns an array of values of <code class="docutils literal notranslate"><span class="pre">states</span></code> corresponding to <span class="math notranslate nohighlight">\((u, y)\)</span>.</p>

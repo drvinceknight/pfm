@@ -183,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../overview/how_to_use_this_book/main.html">
-     How to use this book
+     How to use this book?
     </a>
    </li>
   </ul>
@@ -212,7 +212,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../01-using-notebooks/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -249,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../02-algebra/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -471,7 +471,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08-statistics/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -508,7 +508,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../09-differential-equations/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -552,7 +552,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -626,7 +626,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/03-objects/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -663,7 +663,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/04-editor-and-cli/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -700,7 +700,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/05-modularisation/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -1251,12 +1251,15 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="tutorial">
 <h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">#</a></h1>
-<p>We will solve the following problem using a computer to assist with the technical aspects:</p>
+<p>You will solve the following problem using a computer to assist with the
+technical aspects:</p>
 <div class="admonition-problem admonition">
 <p class="admonition-title">Problem</p>
-<p>Consider the function <span class="math notranslate nohighlight">\(f(x)= \frac{24 x \left(a - 4 x\right) + 2 \left(a - 8 x\right) \left(b - 4 x\right)}{\left(b - 4 x\right)^{4}}\)</span></p>
+<p>Consider the function
+<span class="math notranslate nohighlight">\(f(x)= \frac{24 x \left(a - 4 x\right) + 2 \left(a - 8 x\right) \left(b - 4 x\right)}{\left(b - 4 x\right)^{4}}\)</span></p>
 <ol class="simple">
-<li><p>Given that <span class="math notranslate nohighlight">\(\frac{df}{dx}|_{x=0}=0\)</span>, <span class="math notranslate nohighlight">\(\frac{d^2f}{dx^2}|_{x=0}=-1\)</span> and that <span class="math notranslate nohighlight">\(b&gt;0\)</span> find the values of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>.</p></li>
+<li><p>Given that <span class="math notranslate nohighlight">\(\frac{df}{dx}|_{x=0}=0\)</span>, <span class="math notranslate nohighlight">\(\frac{d^2f}{dx^2}|_{x=0}=-1\)</span>
+and that <span class="math notranslate nohighlight">\(b&gt;0\)</span> find the values of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>.</p></li>
 <li><p>For the specific values of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> find:</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(\lim_{x\to 0}f(x)\)</span>;</p></li>
@@ -1267,11 +1270,12 @@ title="Print to PDF"
 </li>
 </ol>
 </div>
-<p>Sympy is once again the library we will use for this.</p>
-<p>We will start by creating a variable <code class="docutils literal notranslate"><span class="pre">expression</span></code> that has the value of the expression of <span class="math notranslate nohighlight">\(f(x)\)</span>:</p>
+<p>Sympy is once again the library you will use for this. You will start by
+creating a variable <code class="docutils literal notranslate"><span class="pre">expression</span></code> that has the value of the expression of
+<span class="math notranslate nohighlight">\(f(x)\)</span>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sym</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
@@ -1286,11 +1290,16 @@ title="Print to PDF"
 \[\displaystyle \frac{24 x \left(a - 4 x\right) + \left(2 a - 16 x\right) \left(b - 4 x\right)}{\left(b - 4 x\right)^{4}}\]</div>
 </div>
 </div>
-<p>now we can will use <code class="docutils literal notranslate"><span class="pre">sympy.diff</span></code> to calculate the derivative. This tool takes two inputs:</p>
+<p>You will use <code class="docutils literal notranslate"><span class="pre">sympy.diff</span></code> to calculate the derivative. This tool takes
+two inputs:</p>
 <ul class="simple">
-<li><p>the first is the expression we are differentiating. Essentially this is the numerator of <span class="math notranslate nohighlight">\(\frac{df}{dx}\)</span>.</p></li>
-<li><p>the first is the variable we are differentiating for. Essentially this is the denominator of <span class="math notranslate nohighlight">\(\frac{df}{dx}\)</span>.</p></li>
+<li><p>the first is the expression you are differentiating. Essentially this is the
+numerator of <span class="math notranslate nohighlight">\(\frac{df}{dx}\)</span>.</p></li>
+<li><p>the second is the variable you are differentiating with respect to. This is the
+denominator of <span class="math notranslate nohighlight">\(\frac{df}{dx}\)</span>.</p></li>
 </ul>
+<p>You have imported <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">sympy</span> <span class="pre">as</span> <span class="pre">sym</span></code> so you are going to write
+<code class="docutils literal notranslate"><span class="pre">sym.diff</span></code>:</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>We have imported <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">sympy</span> <span class="pre">as</span> <span class="pre">sym</span></code> so we are going to write <code class="docutils literal notranslate"><span class="pre">sym.diff</span></code>:</p>
@@ -1304,10 +1313,10 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \frac{16 a - 16 b - 64 x}{\left(b - 4 x\right)^{4}} + \frac{16 \cdot \left(24 x \left(a - 4 x\right) + \left(2 a - 16 x\right) \left(b - 4 x\right)\right)}{\left(b - 4 x\right)^{5}}\]</div>
+\[\displaystyle \frac{16 a - 16 b - 64 x}{\left(b - 4 x\right)^{4}} + \frac{16 \left(24 x \left(a - 4 x\right) + \left(2 a - 16 x\right) \left(b - 4 x\right)\right)}{\left(b - 4 x\right)^{5}}\]</div>
 </div>
 </div>
-<p>Let us factorise that to make it slightly clearer:</p>
+<p>Factorise that to make it slightly clearer:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">factor</span><span class="p">(</span><span class="n">derivative</span><span class="p">)</span>
@@ -1319,8 +1328,9 @@ title="Print to PDF"
 \[\displaystyle \frac{16 \left(- 3 a b - 12 a x + b^{2} + 16 b x + 16 x^{2}\right)}{\left(- b + 4 x\right)^{5}}\]</div>
 </div>
 </div>
-<p>We will now create the first equation, which is obtained by substituting <span class="math notranslate nohighlight">\(x=0\)</span>
-in to the value of the derivative and equating that to <span class="math notranslate nohighlight">\(0\)</span>:</p>
+<p>Now we are going to create the second equation, substituting <span class="math notranslate nohighlight">\(x=0\)</span> in to the
+value of the second derivative. We calculate the second derivative by passing a
+third (optional) input to <code class="docutils literal notranslate"><span class="pre">sym.diff</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_equation</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">derivative</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">}),</span> <span class="mi">0</span><span class="p">)</span>
@@ -1333,7 +1343,7 @@ in to the value of the derivative and equating that to <span class="math notrans
 \[\displaystyle \frac{32 a}{b^{4}} + \frac{16 a - 16 b}{b^{4}} = 0\]</div>
 </div>
 </div>
-<p>We will factor that equation:</p>
+<p>Factor that equation:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">factor</span><span class="p">(</span><span class="n">first_equation</span><span class="p">)</span>
@@ -1342,12 +1352,12 @@ in to the value of the derivative and equating that to <span class="math notrans
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \frac{16 \cdot \left(3 a - b\right)}{b^{4}} = 0\]</div>
+\[\displaystyle \frac{16 \left(3 a - b\right)}{b^{4}} = 0\]</div>
 </div>
 </div>
-<p>Now we are going to create the second equation, substituting <span class="math notranslate nohighlight">\(x=0\)</span> in to the
-value of the second derivative. We calculate the second derivative by passing a
-third (optional) input to <code class="docutils literal notranslate"><span class="pre">sym.diff</span></code>:</p>
+<p>Now you are going to create the second equation, substituting <span class="math notranslate nohighlight">\(x=0\)</span> in
+to the value of the second derivative. Calculate the second derivative
+by passing a third (optional) input to <code class="docutils literal notranslate"><span class="pre">sym.diff</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">second_derivative</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">expression</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
@@ -1357,7 +1367,7 @@ third (optional) input to <code class="docutils literal notranslate"><span class
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \frac{64 \left(-1 - \frac{8 \left(- a + b + 4 x\right)}{b - 4 x} + \frac{10 \cdot \left(12 x \left(a - 4 x\right) + \left(a - 8 x\right) \left(b - 4 x\right)\right)}{\left(b - 4 x\right)^{2}}\right)}{\left(b - 4 x\right)^{4}}\]</div>
+\[\displaystyle \frac{64 \left(-1 - \frac{8 \left(- a + b + 4 x\right)}{b - 4 x} + \frac{10 \left(12 x \left(a - 4 x\right) + \left(a - 8 x\right) \left(b - 4 x\right)\right)}{\left(b - 4 x\right)^{2}}\right)}{\left(b - 4 x\right)^{4}}\]</div>
 </div>
 </div>
 <p>We equate this expression to <span class="math notranslate nohighlight">\(-1\)</span>:</p>
@@ -1370,10 +1380,10 @@ third (optional) input to <code class="docutils literal notranslate"><span class
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \frac{64 \cdot \left(\frac{10 a}{b} - 1 - \frac{8 \left(- a + b\right)}{b}\right)}{b^{4}} = -1\]</div>
+\[\displaystyle \frac{64 \left(\frac{10 a}{b} - 1 - \frac{8 \left(- a + b\right)}{b}\right)}{b^{4}} = -1\]</div>
 </div>
 </div>
-<p>Now to solve the first equation to obtain a value for <span class="math notranslate nohighlight">\(a\)</span>:</p>
+<p>Now solve the first equation to obtain a value for <span class="math notranslate nohighlight">\(a\)</span>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">first_equation</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
@@ -1385,7 +1395,8 @@ third (optional) input to <code class="docutils literal notranslate"><span class
 \[\displaystyle \left\{\frac{b}{3}\right\}\]</div>
 </div>
 </div>
-<p>Now to substitute that value for <span class="math notranslate nohighlight">\(a\)</span> and solve the second equation for <span class="math notranslate nohighlight">\(b\)</span>:</p>
+<p>Now to substitute that value for <span class="math notranslate nohighlight">\(a\)</span> and solve the second equation for
+<span class="math notranslate nohighlight">\(b\)</span>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">second_equation</span> <span class="o">=</span> <span class="n">second_equation</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">a</span><span class="p">:</span> <span class="n">b</span> <span class="o">/</span> <span class="mi">3</span><span class="p">})</span>
@@ -1406,12 +1417,12 @@ third (optional) input to <code class="docutils literal notranslate"><span class
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \left\{- 2 \sqrt{2} \cdot \sqrt[4]{3}, 2 \sqrt{2} \cdot \sqrt[4]{3}, - 2 \sqrt{2} \cdot \sqrt[4]{3} i, 2 \sqrt{2} \cdot \sqrt[4]{3} i\right\}\]</div>
+\[\displaystyle \left\{- 2 \sqrt{2} \sqrt[4]{3}, 2 \sqrt{2} \sqrt[4]{3}, - 2 \sqrt{2} \sqrt[4]{3} i, 2 \sqrt{2} \sqrt[4]{3} i\right\}\]</div>
 </div>
 </div>
-<p>Recalling the question we know that <span class="math notranslate nohighlight">\(b&gt;0\)</span> thus: <span class="math notranslate nohighlight">\(b = 2\sqrt{2}\sqrt[4]{3}\)</span> and
-<span class="math notranslate nohighlight">\(a=\frac{2\sqrt{2}\sqrt[4]{3}}{3}\)</span>.</p>
-<p>We will substitute these values back and finish the question:</p>
+<p>Recalling the question you know that <span class="math notranslate nohighlight">\(b&gt;0\)</span> thus:
+<span class="math notranslate nohighlight">\(b = 2\sqrt{2}\sqrt[4]{3}\)</span> and <span class="math notranslate nohighlight">\(a=\frac{2\sqrt{2}\sqrt[4]{3}}{3}\)</span>. You
+will substitute these values back and finish the question:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expression</span> <span class="o">=</span> <span class="n">expression</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span>
@@ -1423,14 +1434,14 @@ third (optional) input to <code class="docutils literal notranslate"><span class
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \frac{24 x \left(- 4 x + \frac{2 \sqrt{2} \cdot \sqrt[4]{3}}{3}\right) + \left(- 16 x + \frac{4 \sqrt{2} \cdot \sqrt[4]{3}}{3}\right) \left(- 4 x + 2 \sqrt{2} \cdot \sqrt[4]{3}\right)}{\left(- 4 x + 2 \sqrt{2} \cdot \sqrt[4]{3}\right)^{4}}\]</div>
+\[\displaystyle \frac{24 x \left(- 4 x + \frac{2 \sqrt{2} \sqrt[4]{3}}{3}\right) + \left(- 16 x + \frac{4 \sqrt{2} \sqrt[4]{3}}{3}\right) \left(- 4 x + 2 \sqrt{2} \sqrt[4]{3}\right)}{\left(- 4 x + 2 \sqrt{2} \sqrt[4]{3}\right)^{4}}\]</div>
 </div>
 </div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>We are using the <code class="docutils literal notranslate"><span class="pre">sym.root</span></code> command for the generic <span class="math notranslate nohighlight">\(n\)</span>th root.</p>
+<p>You are using the <code class="docutils literal notranslate"><span class="pre">sym.root</span></code> command for the generic <span class="math notranslate nohighlight">\(n\)</span>th root.</p>
 </div>
-<p>We can confirm our findings:</p>
+<p>You can confirm this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sym</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">expression</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">})</span>
@@ -1453,9 +1464,9 @@ third (optional) input to <code class="docutils literal notranslate"><span class
 \[\displaystyle -1\]</div>
 </div>
 </div>
-<p>Now we will calculate the limits using <code class="docutils literal notranslate"><span class="pre">sym.limit</span></code>, this takes 3 inputs:</p>
+<p>Now you will calculate the using <code class="docutils literal notranslate"><span class="pre">sym.limit</span></code>, this takes 3 inputs:</p>
 <ul class="simple">
-<li><p>The expression we are taking the limit of.</p></li>
+<li><p>The expression you are taking the limit of.</p></li>
 <li><p>The variable that is changing.</p></li>
 <li><p>The value that the variable is tending towards.</p></li>
 </ul>
@@ -1481,12 +1492,13 @@ third (optional) input to <code class="docutils literal notranslate"><span class
 \[\displaystyle 0\]</div>
 </div>
 </div>
-<p>Now we are going to calculate the <strong>indefinite</strong> integral using
+<p>Now you are going to calculate the <strong>indefinite</strong> integral using
 <code class="docutils literal notranslate"><span class="pre">sympy.integrate</span></code>. This tool takes 2 inputs as:</p>
 <ul class="simple">
-<li><p>the first is the expression we’re integrating. This is the <span class="math notranslate nohighlight">\(f\)</span> in <span class="math notranslate nohighlight">\(\int_a^b f
-dx\)</span>.</p></li>
-<li><p>the second is the remaining information needed to calculate the integral: <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
+<li><p>the first is the expression you’re integrating. This is the <span class="math notranslate nohighlight">\(f\)</span> in <span class="math notranslate nohighlight">\(\int_a^b f
+  dx\)</span>.</p></li>
+<li><p>the second is the remaining information needed to calculate the
+integral: <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1496,11 +1508,11 @@ dx\)</span>.</p></li>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \frac{x \left(6 x - \sqrt{2} \cdot \sqrt[4]{3}\right)}{12 \cdot \left(4 x^{3} - 6 \sqrt{2} \cdot \sqrt[4]{3} x^{2} + 6 \sqrt{3} x - \sqrt{2} \cdot 3^{\frac{3}{4}}\right)}\]</div>
+\[\displaystyle \frac{x \left(6 x - \sqrt{2} \sqrt[4]{3}\right)}{12 \left(4 x^{3} - 6 \sqrt{2} \sqrt[4]{3} x^{2} + 6 \sqrt{3} x - \sqrt{2} \cdot 3^{\frac{3}{4}}\right)}\]</div>
 </div>
 </div>
-<p>If we want to calculate a <strong>definite</strong> integral then instead of passing the
-single variable we pass a tuple which contains the variable as well as the
+<p>If you want to calculate a <strong>definite</strong> integral then instead of passing
+the single variable you pass a tuple which contains the variables as the
 bounds of integration:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1510,8 +1522,17 @@ bounds of integration:</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle - \frac{5 \left(- 5000 \sqrt{2} \cdot \sqrt[4]{3} - 1200 \sqrt{3} + 75 \sqrt{2} \cdot 3^{\frac{3}{4}} + 119997\right)}{2 \left(-32000 - 120 \sqrt{3} + \sqrt{2} \cdot 3^{\frac{3}{4}} + 2400 \sqrt{2} \cdot \sqrt[4]{3}\right) \left(-500 - 30 \sqrt{3} + \sqrt{2} \cdot 3^{\frac{3}{4}} + 150 \sqrt{2} \cdot \sqrt[4]{3}\right)}\]</div>
+\[\displaystyle - \frac{5 \left(- 5000 \sqrt{2} \sqrt[4]{3} - 1200 \sqrt{3} + 75 \sqrt{2} \cdot 3^{\frac{3}{4}} + 119997\right)}{2 \left(-32000 - 120 \sqrt{3} + \sqrt{2} \cdot 3^{\frac{3}{4}} + 2400 \sqrt{2} \sqrt[4]{3}\right) \left(-500 - 30 \sqrt{3} + \sqrt{2} \cdot 3^{\frac{3}{4}} + 150 \sqrt{2} \sqrt[4]{3}\right)}\]</div>
 </div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This tutorial has:</p>
+<ul class="simple">
+<li><p>Simplified a rational quotient;</p></li>
+<li><p>Differentiated symbolic expressions;</p></li>
+<li><p>Solved algebraic equations.</p></li>
+</ul>
 </div>
 </section>
 

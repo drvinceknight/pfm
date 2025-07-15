@@ -27,8 +27,8 @@ $$
     \end{cases}
 $$
 
-We can solve it using `sym.dsolve` but instead of passing a single differential
-equation, we pass an iterable of multiple equations:
+You can solve it using `sym.dsolve` but instead of passing a single differential
+equation, pass an iterable of multiple equations:
 
 ```{code-cell} ipython3
 import sympy as sym
@@ -81,7 +81,7 @@ called the Airy functions of the first and second kind.
 
 Using `scipy.integrate` it is possible to solve this differential equation numerically.
 
-First, we will define a new variable $u=\frac{dy}{dx}$ so that the second order
+First, define a new variable $u=\frac{dy}{dx}$ so that the second order
 differential equation can be expressed as a system of single order differential
 equations:
 
@@ -92,7 +92,7 @@ $$
     \end{cases}
 $$
 
-We now define a python function to that returns the right hand side of that
+Now define a python function that returns the right hand side of that
 system of equations:
 
 ```{code-cell} ipython3
@@ -104,7 +104,7 @@ def diff(state, x):
     return x * y, u
 ```
 
-We can pass this to `scipy.integrate.odeint` which is a tool that carries out
+You can pass this to `scipy.integrate.odeint` which is a tool that carries out
 numerical integration of differential equations. Note, that it is incapable of
 dealing with symbolic variables, thus an initial numeric value of $(u, y)$ is
 required.
@@ -121,8 +121,9 @@ states = scipy.integrate.odeint(diff, y0=condition, t=xs)
 ```
 
 ```{note}
-We make use of
-{ref}`how-to-create-a-given-number-of-values-between-two-bounds` to create a set
+Here, you make use of
+{ref}`how-to-create-a-given-number-of-values-between-two-bounds` to create a
+collection
 of `x` values over which to carry out the numerical integration.
 ```
 

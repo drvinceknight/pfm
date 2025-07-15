@@ -14,16 +14,17 @@ kernelspec:
 
 # Tutorial
 
-We will solve the following problem using a computer to do some of the more
-tedious calculations.
+You will solve the following problem using a computer to do some of the
+more tedious calculations.
 
 ````{admonition} Problem
 
-Anna is investigating the relationship between exercise and resting heart rate.
-She takes a random sample of 19 people in her year group and records for each person
+Anna is investigating the relationship between exercise and resting
+heart rate. She takes a of 19 people in her year group and records for
+each person
 
-- their resting heart rate, $h$ beats per minute.
-- the number of minutes, $m$, spent exercising each week.
+-   their resting heart rate, $h$ beats per minute.
+-   the number of minutes, $m$, spent exercising each week.
 
 A table with the data is here:
 
@@ -74,25 +75,21 @@ A table with the data is here:
 
 You can see a scatter plot below.
 
-1. For all collected values of $h$ and $m$ obtain:
+1.  For all collected values of $h$ and $m$ obtain:
 
-    - The mean
-    - The median
-    - The quartiles
-    - The standard deviation
-    - The variation
-    - The maximum
-    - The minimum
-
-2. Obtain the Pearson Coefficient of correlation for the variables $h$ and $m$.
-3. Obtain the line of best fit for variables $x$ and $y$ as
-   defined by:
-
-   $$x=\ln(m)\qquad y=\ln(h)$$
-
-4. Using the above obtain a relationship between $m$ and $h$ of the form:
-
-   $$h=cm^k$$
+    -   The mean
+    -   The median
+    -   The quartiles
+    -   The standard deviation
+    -   The variation
+    -   The maximum
+    -   The minimum
+2.  Obtain the Pearson Coefficient of correlation for the variables $h$
+    and $m$.
+3.  Obtain the line of best fit for variables $x$ and $y$ as defined by:
+    $$\begin{split}x=\ln(m)\qquad y=\ln(h)\end{split}$$
+4.  Using the above obtain a relationship between $m$ and $h$ of the
+    form: $$\begin{split}h=cm^k\end{split}$$
 ````
 
 ```{code-cell} ipython3
@@ -150,7 +147,7 @@ plt.ylabel("Resting heart rate: $h$")
 plt.title("Data collected by Anne");
 ```
 
-Let us start by inputting all the data:
+Start by inputting all the data:
 
 ```{code-cell} ipython3
 h = (
@@ -197,7 +194,7 @@ m = (
 )
 ```
 
-The main tool we are going to use for this is `statistics`.
+The main tool you are going to use for this is `statistics`.
 
 ```{code-cell} ipython3
 import statistics as st
@@ -223,7 +220,7 @@ st.median(h)
 st.median(m)
 ```
 
-To calculate the quartiles, we use `statistics.quantiles` and specify that we
+To calculate the quartiles, use `statistics.quantiles` and specify that you
 want to separate the date in to $n=4$ quarters.
 
 ```{code-cell} ipython3
@@ -234,10 +231,8 @@ st.quantiles(h, n=4)
 st.quantiles(m, n=4)
 ```
 
-Note that this calculation confirms the median which corresponds to the 50%
-quartile.
-
-To calculate the sample standard deviation:
+Note that this calculation confirms the median which corresponds to the
+50% quartile. To calculate the sample standard deviation:
 
 ```{code-cell} ipython3
 st.stdev(h)
@@ -277,7 +272,7 @@ min(h)
 min(m)
 ```
 
-In order to compute the Pearson Coefficient of correlation we use
+In order to compute the Pearson Coefficient of correlation use
 `statistics.correlation`:
 
 ```{code-cell} ipython3
@@ -288,7 +283,7 @@ This negative value indicates a negative correlation between $h$ and $m$,
 indicating that the more you exercise the lower your heart rate is likely to be.
 
 To calculate the line of best fit for the transformed variables we need to first
-create them. We will do this using a list comprehension. As we are doing
+create them. We will do this using a list comprehension. As you are doing
 everything numerically, we will use `math.log` which by default computes the
 natural logarithm:
 
@@ -298,7 +293,7 @@ x = [math.log(value) for value in m]
 y = [math.log(value) for value in h]
 ```
 
-Now to compute the line of best fit we will use `statistics.linear_regression`:
+Now to compute the line of best fit use `statistics.linear_regression`:
 
 ```{code-cell} ipython3
 slope, intercept = st.linear_regression(x, y)
@@ -316,21 +311,21 @@ The intercept is:
 intercept
 ```
 
-If we recall the transformation of the variables:
+Recall the transformation of the variables:
 
 $$x=\ln(m)\qquad y=\ln(h)$$
 
-We now have the relationship:
+You now have the relationship:
 
 $$y=ax + b$$
 
 Where $a$ corresponds to the `slope` and $b$ corresponds to the `intercept`.
 
-The question was asking for a relationship between $m$ and $h$ of the form:
+The question asks for a relationship between $m$ and $h$ of the form:
 
 $$h=cm^k$$
 
-We can use `sympy` to manipulate the expressions:
+You can use `sympy` to manipulate the expressions:
 
 ```{code-cell} ipython3
 import sympy as sym
@@ -394,9 +389,9 @@ plt.title(f"Data collected by Anne with fitted relationship: $h={np.exp(intercep
 ```
 
 ```{important}
-In this tutorial we have
+In this tutorial you have
 
-- Calulated values of central tendency and spread
-- Calculated some bivariate coefficients
-- Fitted a line of best fit
+- Calulated values of central tendency and spread;
+- Calculated some bivariate coefficient;
+- Fitted a line of best fit.
 ```

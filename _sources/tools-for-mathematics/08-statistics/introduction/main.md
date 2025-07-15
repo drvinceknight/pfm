@@ -12,23 +12,24 @@ kernelspec:
   name: python3
 ---
 
+(chp:statistics)=
+
 # Statistics
 
 Statistics is described as:
 
-> Statistics is the discipline that concerns the collection, organization, analysis, interpretation, and presentation of data.
+> "Statistics is the discipline that concerns the collection,
+> organization, analysis, interpretation, and presentation of data."
 
-In practice this often means doing some form of analysis to data.
-This can be things like taking a mean of a collection of numerical
+In practice this often means doing some form of analysis of data. This
+includes processes like taking a mean of a collection of numerical
 values and checking if particular relationship exists within the data.
-It also includes using visualisation to understand data, this chapter
-will not consider visualisation which is instead considered here: {ref}`matplotlib`.
 
 ```{important}
-In this chapter we will cover:
+In this chapter you will cover:
 
-- Calculating measures of central tendency and spread
-- Calculating bivariate coefficients
-- Fitting a line of best fit
-- Using the Normal distribution
+- Calculating measures of central tendency and spread;
+- Calculating bivariate coefficients;
+- Fitting a line of best fit; and
+- Using the Normal distribution.
 ```

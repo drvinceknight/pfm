@@ -89,7 +89,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="How" href="../how/main.html" />
+    <link rel="next" title="How to" href="../how/main.html" />
     <link rel="prev" title="Algebra" href="../introduction/main.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -183,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../overview/how_to_use_this_book/main.html">
-     How to use this book
+     How to use this book?
     </a>
    </li>
   </ul>
@@ -212,7 +212,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../01-using-notebooks/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -249,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -471,7 +471,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../08-statistics/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -508,7 +508,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../09-differential-equations/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -552,7 +552,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -626,7 +626,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/03-objects/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -663,7 +663,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/04-editor-and-cli/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -700,7 +700,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../building-tools/05-modularisation/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -1251,36 +1251,41 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="tutorial">
 <span id="algebra-tutorial"></span><h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">#</a></h1>
-<p>To demonstrate the ways in which we can use a computer to assist with Algebra we
-will solve the following two problems:</p>
+<p>To demonstrate the ways in which a computer can assist with Algebra, in
+this tutorial you will solve the following two problems:</p>
 <div class="admonition-problem admonition">
 <p class="admonition-title">Problem</p>
 <ol class="simple">
 <li><p>Rationalise the denominator of <span class="math notranslate nohighlight">\(\frac{1}{\sqrt{2} + 1}\)</span></p></li>
-<li><p>Consider the quadratic: <span class="math notranslate nohighlight">\(f(x)=2x ^ 2 + x + 1\)</span>:</p>
+<li><p>Consider the : <span class="math notranslate nohighlight">\(f(x)=2x ^ 2 + x + 1\)</span>:</p>
 <ol class="simple">
-<li><p>Calculate the discriminant of the quadratic equation <span class="math notranslate nohighlight">\(2x ^ 2 + x + 1 =
-0\)</span>. What does this tell us about the solutions to the equation? What
-does this tell us about the graph of <span class="math notranslate nohighlight">\(f(x)\)</span>?</p></li>
-<li><p>By completing the square, show that the minimum point of <span class="math notranslate nohighlight">\(f(x)\)</span> is
+<li><p>Calculate the discriminant of the equation <span class="math notranslate nohighlight">\(2x ^ 2 + x + 1 =
+0\)</span>. What does this tell you about the solutions to the equation?
+What does this tell you about the graph of <span class="math notranslate nohighlight">\(f(x)\)</span>?</p></li>
+<li><p>By , show that the minimum point of <span class="math notranslate nohighlight">\(f(x)\)</span> is
 <span class="math notranslate nohighlight">\(\left(-\frac{1}{4}, \frac{7}{8}\right)\)</span></p></li>
 </ol>
 </li>
 </ol>
+<p>To do this, a specific collection of tools available in Python will be
+used. Often specific sets of tools are separated in to things called
+<strong>libraries</strong>. Start by telling Python that you want to use the specific
+library for <strong>symbolic mathematics</strong>:</p>
 </div>
-<p>To do this we will be using a specific collections of tools available in Python.
-Often specific sets of tools are separated in to things called <strong>libraries</strong>. We
-start by telling Python that we want to use the specific library for <strong>symbolic
+<p>To do this, a specific collection of tools available in Python will be used.
+Often specific sets of tools are separated in to things called <strong>libraries</strong>.
+Start by telling Python that we want to use the specific library for <strong>symbolic
 mathematics</strong>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>This allows us to solve the first part of the question. First we create a
-variable <code class="docutils literal notranslate"><span class="pre">expression</span></code> and <strong>assign</strong> it a value of <span class="math notranslate nohighlight">\(\frac{1}{\sqrt{2} + 1}\)</span>.</p>
+<p>This will allow you to solve the first part of the question. Create a
+variable <code class="docutils literal notranslate"><span class="pre">expression</span></code> and <strong>assign</strong> it a value of
+<span class="math notranslate nohighlight">\(\frac{1}{\sqrt{2} + 1}\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expression</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">sympy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
@@ -1295,8 +1300,8 @@ variable <code class="docutils literal notranslate"><span class="pre">expression
 </div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>This is not what would happen if we plugged the above in to a basic calculator,
-it would instead give us a value of:</p>
+<p>This is not what would happen if you plugged the above in to a basic
+calculator, it would instead give you a value of:</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1310,8 +1315,9 @@ it would instead give us a value of:</p>
 </div>
 </div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">sympy</span></code> library has a diverse set of tools available, one of which is to
-algorithmically attempt to simplify an expression. Here is how we do that:</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">sympy</span></code> library has a diverse set of tools available, one of which
+is to algorithmically attempt to simplify an expression. Here is how to
+do that:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span>
@@ -1326,17 +1332,18 @@ algorithmically attempt to simplify an expression. Here is how we do that:</p>
 <p>This implies that:</p>
 <div class="math notranslate nohighlight">
 \[
+\begin{split}
     \frac{1}{\sqrt{2} + 1} = -1 + \sqrt{2}
+\end{split}
 \]</div>
-<p>If we multiply both sides by <span class="math notranslate nohighlight">\({\sqrt{2} + 1}\)</span> we get:</p>
+<p>Multiplying both sides by <span class="math notranslate nohighlight">\({\sqrt{2} + 1}\)</span> gives:</p>
 <div class="math notranslate nohighlight">
-\[
-    1=\frac{1}{\sqrt{2} + 1}\times \left(\sqrt{2} + 1\right) = \left(-1 + \sqrt{2}\right)\times \left(\sqrt{2} + 1\right)
-\]</div>
-<p>The <code class="docutils literal notranslate"><span class="pre">sympy.simplify</span></code> command did not give us much insight in to what happened
-but we can further confirm that above manipulation by expanding <span class="math notranslate nohighlight">\(\left(-1 +
-\sqrt{2}\right)\times \left(\sqrt{2} + 1\right)\)</span>.</p>
-<p>Here is how we do that:</p>
+\[1=\frac{1}{\sqrt{2} + 1}\times \left(\sqrt{2} + 1\right) = \left(-1 + \sqrt{2}\right)\times \left(\sqrt{2} + 1\right)\]</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">sympy.simplify</span></code> command did not give much insight in to what
+happened but you can confirm the above manipulation by expanding
+<span class="math notranslate nohighlight">\(\left(-1 +
+\sqrt{2}\right)\times \left(\sqrt{2} + 1\right)\)</span>. Here is how to do
+that:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">expand</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span> <span class="o">+</span> <span class="n">sympy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">sympy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)))</span>
@@ -1348,20 +1355,20 @@ but we can further confirm that above manipulation by expanding <span class="mat
 \[\displaystyle 1\]</div>
 </div>
 </div>
-<p>We see that <code class="docutils literal notranslate"><span class="pre">sympy</span></code> allows us to carry out basic expression manipulation. We
-will now consider the second part of the question:</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">sympy</span></code> library allows you to carry out basic expression
+manipulation. Now consider the second part of the question:</p>
 <div class="admonition-problem admonition">
 <p class="admonition-title">Problem</p>
 <ol class="simple">
-<li><p>Consider the quadratic: <span class="math notranslate nohighlight">\(f(x)=2x ^ 2 + x + 1\)</span>:</p></li>
-<li><p>Calculate the discriminant of the quadratic equation <span class="math notranslate nohighlight">\(2x ^ 2 + x + 1 =
-0\)</span>. What does this tell us about the solutions to the equation? What
-does this tell us about the graph of <span class="math notranslate nohighlight">\(f(x)\)</span>?</p></li>
-<li><p>By completing the square, show that the minimum point of <span class="math notranslate nohighlight">\(f(x)\)</span> is
+<li><p>Consider the : <span class="math notranslate nohighlight">\(f(x)=2x ^ 2 + x + 1\)</span>:</p></li>
+<li><p>Calculate the of the equation <span class="math notranslate nohighlight">\(2x ^ 2 + x + 1 =
+0\)</span>. What does this tell you about the solutions to the equation?
+What does this tell you about the graph of <span class="math notranslate nohighlight">\(f(x)\)</span>?</p></li>
+<li><p>By , show that the minimum point of <span class="math notranslate nohighlight">\(f(x)\)</span> is
 <span class="math notranslate nohighlight">\(\left(-\frac{1}{4}, \frac{7}{8}\right)\)</span></p></li>
 </ol>
 </div>
-<p>We will start by reassigning the value of the variable <code class="docutils literal notranslate"><span class="pre">expression</span></code> to be the
+<p>Start by reassigning the value of the variable <code class="docutils literal notranslate"><span class="pre">expression</span></code> to be the
 expression: <span class="math notranslate nohighlight">\(2x ^ 2 + x + 1\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1376,15 +1383,15 @@ expression: <span class="math notranslate nohighlight">\(2x ^ 2 + x + 1\)</span>
 \[\displaystyle 2 x^{2} + x + 1\]</div>
 </div>
 </div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p><strong>Recall</strong> that the <code class="docutils literal notranslate"><span class="pre">**</span></code> symbol is how we communicate exponentiation.</p>
-</div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>We start by communicating to the code that <code class="docutils literal notranslate"><span class="pre">x</span></code> is going to be a symbolic variable.</p>
+<p>Ths first line communicates to the code that <code class="docutils literal notranslate"><span class="pre">x</span></code> is going to be a symbolic variable.</p>
 </div>
-<p>We can immediately use this to compute the discriminant:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Recall</strong> that the <code class="docutils literal notranslate"><span class="pre">**</span></code> symbol is how you communicate exponentiation.</p>
+</div>
+<p>You can immediately use this to compute the discriminant:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">discriminant</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span>
@@ -1396,11 +1403,12 @@ expression: <span class="math notranslate nohighlight">\(2x ^ 2 + x + 1\)</span>
 \[\displaystyle -7\]</div>
 </div>
 </div>
-<p>Now we can complement this with our mathematical knowledge: if a quadratic has a
-negative discriminant then it does not have any roots and all the values are of
-the same sign as the coefficient of <span class="math notranslate nohighlight">\(x ^ 2 \)</span>. Which in this case is <span class="math notranslate nohighlight">\(2&gt;0\)</span>.</p>
-<p>We can confirm this by directly creating the equation. We do this by creating a
-variable <code class="docutils literal notranslate"><span class="pre">equation</span></code> and assigning it the equation which has a <code class="docutils literal notranslate"><span class="pre">lhs</span></code> and a <code class="docutils literal notranslate"><span class="pre">rhs</span></code>:</p>
+<p>Now, complement this with mathematical knowledge: if a has a negative
+discriminant then it does not have any roots and all the values are of
+the same sign as the coefficient of <span class="math notranslate nohighlight">\(x ^ 2\)</span>. Which in this case is
+<span class="math notranslate nohighlight">\(2&gt;0\)</span>. Confirm this by directly creating the equation. Do this by
+creating a variable <code class="docutils literal notranslate"><span class="pre">equation</span></code> and assigning it the equation which has a
+<code class="docutils literal notranslate"><span class="pre">lhs</span></code> and a <code class="docutils literal notranslate"><span class="pre">rhs</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">equation</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">lhs</span><span class="o">=</span><span class="n">expression</span><span class="p">,</span> <span class="n">rhs</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -1413,7 +1421,7 @@ variable <code class="docutils literal notranslate"><span class="pre">equation</
 \[\displaystyle 2 x^{2} + x + 1 = 0\]</div>
 </div>
 </div>
-<p>and asking <code class="docutils literal notranslate"><span class="pre">sympy</span></code> to solve it:</p>
+<p>Now ask <code class="docutils literal notranslate"><span class="pre">sympy</span></code> to solve it:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">equation</span><span class="p">)</span>
@@ -1425,15 +1433,16 @@ variable <code class="docutils literal notranslate"><span class="pre">equation</
 \[\displaystyle \left\{- \frac{1}{4} - \frac{\sqrt{7} i}{4}, - \frac{1}{4} + \frac{\sqrt{7} i}{4}\right\}\]</div>
 </div>
 </div>
-<p>Indeed the only solutions are imaginary numbers: this confirms that the graph of
-<span class="math notranslate nohighlight">\(f(x)\)</span> is a convex parabola that is above the <span class="math notranslate nohighlight">\(y=0\)</span> line.</p>
-<p>Let us know complete the square so that we can write:</p>
+<p>Indeed the only solutions are imaginary numbers: this confirms that the
+graph of <span class="math notranslate nohighlight">\(f(x)\)</span> is a convex parabola that is above the <span class="math notranslate nohighlight">\(y=0\)</span> line. Now
+complete the square so that you can write:</p>
 <div class="math notranslate nohighlight">
 \[
     f(x) = a (x - b) ^ 2 + c
 \]</div>
-<p>for some values of <span class="math notranslate nohighlight">\(a, b, c\)</span>.</p>
-<p>First let us create variables that have those 3 constants as value but also create a variable <code class="docutils literal notranslate"><span class="pre">completed_square</span></code> and assign it the general expression:</p>
+<p>for some values of <span class="math notranslate nohighlight">\(a, b, c\)</span>. Create variables that have those 3
+constants as value but also create a variable <code class="docutils literal notranslate"><span class="pre">completed_square</span></code> and
+assign it the general expression:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">),</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">),</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">)</span>
@@ -1447,7 +1456,7 @@ variable <code class="docutils literal notranslate"><span class="pre">equation</
 \[\displaystyle a \left(- b + x\right)^{2} + c\]</div>
 </div>
 </div>
-<p>We can expand this:</p>
+<p>Expand this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">completed_square</span><span class="p">)</span>
@@ -1459,19 +1468,19 @@ variable <code class="docutils literal notranslate"><span class="pre">equation</
 \[\displaystyle a b^{2} - 2 a b x + a x^{2} + c\]</div>
 </div>
 </div>
-<p>We will now use <code class="docutils literal notranslate"><span class="pre">sympy</span></code> to solve the various equations that arise from comparing
-the coefficients of:</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">sympy</span></code> to solve the various equations that arise from comparing the
+coefficients of:</p>
 <div class="math notranslate nohighlight">
 \[
     f(x) = 2x ^2 + x + 1
 \]</div>
-<p>with the completed square.</p>
-<p>First, we see that the coefficient of <span class="math notranslate nohighlight">\(x ^ 2\)</span> gives us an equation:</p>
+<p>with the completed square. First, you see that the coefficient of
+<span class="math notranslate nohighlight">\(x ^ 2\)</span> gives you an equation:</p>
 <div class="math notranslate nohighlight">
 \[
     a = 2
 \]</div>
-<p>For completeness we will write the code that solves this trivial equation:</p>
+<p>For completeness write the code that solves this trivial equation:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">equation</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
@@ -1484,7 +1493,8 @@ the coefficients of:</p>
 \[\displaystyle \left\{2\right\}\]</div>
 </div>
 </div>
-<p>We will now substitute this value of <span class="math notranslate nohighlight">\(a\)</span> in to the completed square and update the variable with the new value:</p>
+<p>Now substitute this value of <span class="math notranslate nohighlight">\(a\)</span> in to the completed square and update
+the variable with the new value:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">completed_square</span> <span class="o">=</span> <span class="n">completed_square</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">a</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
@@ -1499,10 +1509,11 @@ the coefficients of:</p>
 </div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>The different types of brackets being used there: both <code class="docutils literal notranslate"><span class="pre">()</span></code> and <code class="docutils literal notranslate"><span class="pre">{}</span></code>. This is
-important and has specific meaning in Python which we will cover soon.</p>
+<p>The different types of brackets being used there: both <code class="docutils literal notranslate"><span class="pre">()</span></code> and <code class="docutils literal notranslate"><span class="pre">{}</span></code>.
+This is important and has specific meaning in Python which will be
+covered in future chapters.</p>
 </div>
-<p>Now let us look at the expression with our two remaining constants:</p>
+<p>Now look at the expression with the two remaining constants:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">completed_square</span><span class="p">)</span>
@@ -1514,7 +1525,7 @@ important and has specific meaning in Python which we will cover soon.</p>
 \[\displaystyle 2 b^{2} - 4 b x + c + 2 x^{2}\]</div>
 </div>
 </div>
-<p>Comparing the coefficients of <span class="math notranslate nohighlight">\(x\)</span> we have the equation:</p>
+<p>Comparing the coefficients of <span class="math notranslate nohighlight">\(x\)</span> gives:</p>
 <div class="math notranslate nohighlight">
 \[
   - 4 b = 1
@@ -1531,10 +1542,10 @@ important and has specific meaning in Python which we will cover soon.</p>
 \[\displaystyle \left\{- \frac{1}{4}\right\}\]</div>
 </div>
 </div>
-<p>We will now substitute this value of <span class="math notranslate nohighlight">\(b\)</span> back in to our expression.</p>
+<p>Substitute this value of <span class="math notranslate nohighlight">\(b\)</span> back in to our expression.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>We make a point to tell sympy to treat <span class="math notranslate nohighlight">\(1 / 4\)</span> symbolically and to not
+<p>Make a point to tell sympy to treat <span class="math notranslate nohighlight">\(1 / 4\)</span> symbolically and to not
 calculate the numeric value:</p>
 </div>
 <div class="cell docutils container">
@@ -1549,7 +1560,7 @@ calculate the numeric value:</p>
 \[\displaystyle c + 2 \left(x + \frac{1}{4}\right)^{2}\]</div>
 </div>
 </div>
-<p>Expanding this to see our expression with the one remaining constant gives:</p>
+<p>Expand this to see the expression with the one remaining constant gives:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">completed_square</span><span class="p">)</span>
@@ -1561,12 +1572,12 @@ calculate the numeric value:</p>
 \[\displaystyle c + 2 x^{2} + x + \frac{1}{8}\]</div>
 </div>
 </div>
-<p>We have a final equation for the constant term:</p>
+<p>This gives a final equation for the constant term:</p>
 <div class="math notranslate nohighlight">
 \[
     c + 1 / 8 = 1
 \]</div>
-<p>We will use sympy to find the value of <span class="math notranslate nohighlight">\(c\)</span>:</p>
+<p>Now use sympy to find the value of <span class="math notranslate nohighlight">\(c\)</span>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">solveset</span><span class="p">(</span><span class="n">sympy</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">c</span> <span class="o">+</span> <span class="n">sympy</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">c</span><span class="p">)</span>
@@ -1578,7 +1589,7 @@ calculate the numeric value:</p>
 \[\displaystyle \left\{\frac{7}{8}\right\}\]</div>
 </div>
 </div>
-<p>As before we will substitute that in and update the value of <code class="docutils literal notranslate"><span class="pre">completed_square</span></code>:</p>
+<p>As before substitute in and update the value of <code class="docutils literal notranslate"><span class="pre">completed_square</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">completed_square</span> <span class="o">=</span> <span class="n">completed_square</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">c</span><span class="p">:</span> <span class="mi">7</span> <span class="o">/</span> <span class="n">sympy</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">8</span><span class="p">)})</span>
@@ -1591,9 +1602,9 @@ calculate the numeric value:</p>
 \[\displaystyle 2 \left(x + \frac{1}{4}\right)^{2} + \frac{7}{8}\]</div>
 </div>
 </div>
-<p>Using this we can see that the there are indeed no values of <span class="math notranslate nohighlight">\(x\)</span> which give
-negative values of <span class="math notranslate nohighlight">\(f(x)\)</span> as <span class="math notranslate nohighlight">\(f(x)\)</span> is a square added to a constant.</p>
-<p>The minimum is when <span class="math notranslate nohighlight">\(x=-1/4\)</span> which gives: <span class="math notranslate nohighlight">\(f(-1/4)=7/8\)</span>:</p>
+<p>Using this shows that the there are indeed no values of <span class="math notranslate nohighlight">\(x\)</span> which give
+negative values of <span class="math notranslate nohighlight">\(f(x)\)</span> as <span class="math notranslate nohighlight">\(f(x)\)</span> is a square added to a constant. The
+minimum is when <span class="math notranslate nohighlight">\(x=-1/4\)</span> which gives: <span class="math notranslate nohighlight">\(f(-1/4)=7/8\)</span>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">completed_square</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">x</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span> <span class="o">/</span> <span class="n">sympy</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">4</span><span class="p">)})</span>
@@ -1607,7 +1618,7 @@ negative values of <span class="math notranslate nohighlight">\(f(x)\)</span> as
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>In this tutorial we have</p>
+<p>This tutorial has:</p>
 <ul class="simple">
 <li><p>Created symbolic expressions.</p></li>
 <li><p>Obtained approximate values for numerical symbolic expressions.</p></li>
@@ -1656,7 +1667,7 @@ negative values of <span class="math notranslate nohighlight">\(f(x)\)</span> as
     <a class='right-next' id="next-link" href="../how/main.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">How</p>
+        <p class="prev-next-title">How to</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

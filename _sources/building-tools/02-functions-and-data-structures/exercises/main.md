@@ -33,7 +33,7 @@ kernelspec:
    $$
 
 4. Consider the [Monty Hall
-   problem](https://en.wikipedia.org/wiki/Monty_Hall_problem):
+   problem](https://en.wikipedia.org/wiki/Monty_Hall_problem) {cite}`selvin1975monty`:
    1. Write a function that simulates the play of the game when you 'stick' with
       the initial choice. You might find `random.shuffle` and `pop`ing a list
       helpful.

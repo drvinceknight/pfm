@@ -181,7 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../overview/how_to_use_this_book/main.html">
-     How to use this book
+     How to use this book?
     </a>
    </li>
   </ul>
@@ -210,7 +210,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/01-using-notebooks/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -247,7 +247,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/02-algebra/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -469,7 +469,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/08-statistics/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -506,7 +506,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../tools-for-mathematics/09-differential-equations/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -550,7 +550,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../01-variables-conditionals-loops/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -624,7 +624,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -661,7 +661,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../04-editor-and-cli/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -698,7 +698,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../05-modularisation/how/main.html">
-     How
+     How to
     </a>
    </li>
    <li class="toctree-l2">
@@ -1283,11 +1283,6 @@ title="Print to PDF"
    What is the difference between a method and a function?
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#other-resources-on-objects">
-   Other resources on objects
-  </a>
- </li>
 </ul>
 
     </nav>
@@ -1345,11 +1340,6 @@ title="Print to PDF"
    What is the difference between a method and a function?
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#other-resources-on-objects">
-   Other resources on objects
-  </a>
- </li>
 </ul>
 
                         </nav>
@@ -1371,10 +1361,10 @@ pronounced “dunder”.</p>
 <h2>What is the <code class="docutils literal notranslate"><span class="pre">self</span></code> variable for?<a class="headerlink" href="#what-is-the-self-variable-for" title="Permalink to this headline">#</a></h2>
 <p>In methods the first variable is used to refer to the instance of a given class.
 It is conventional to use <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p>
-<p>As an example let us consider this class:</p>
+<p>As an example consider this class:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PetDog</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">PetDog</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A class for a Pet.</span>
 
@@ -1384,16 +1374,16 @@ It is conventional to use <code class="docutils literal notranslate"><span class
 <span class="sd">          `toys` attribute.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">toys</span> <span class="o">=</span> <span class="p">[]</span>
 
-    <span class="k">def</span> <span class="nf">bark</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bark</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the string Woof.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="s2">&quot;Woof&quot;</span>
 
-    <span class="k">def</span> <span class="nf">give_toy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">toy</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">give_toy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">toy</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Updates the instances toys list.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1471,7 +1461,7 @@ line <code class="docutils literal notranslate"><span class="pre">self.toys.appe
 If we modify it (using <a class="reference internal" href="../how/main.html#how-to-use-inheritance"><span class="std std-ref">inheritance</span></a>):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OtherPetDog</span><span class="p">(</span><span class="n">PetDog</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">OtherPetDog</span><span class="p">(</span><span class="n">PetDog</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A class for a Pet.</span>
 
@@ -1481,7 +1471,7 @@ If we modify it (using <a class="reference internal" href="../how/main.html#how-
 <span class="sd">          `toys` attribute.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">give_toy</span><span class="p">(</span><span class="n">the_dog_in_question</span><span class="p">,</span> <span class="n">toy</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">give_toy</span><span class="p">(</span><span class="n">the_dog_in_question</span><span class="p">,</span> <span class="n">toy</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Updates the instances toys list.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1530,18 +1520,8 @@ your code.</p>
 </section>
 <section id="what-is-the-difference-between-a-method-and-a-function">
 <h2>What is the difference between a method and a function?<a class="headerlink" href="#what-is-the-difference-between-a-method-and-a-function" title="Permalink to this headline">#</a></h2>
-<p>A method is a function defined on a class and always takes a first argument
+<p>A method is a function defined on a class and always takes a first parameter
 which is the specific instance from which the method is called.</p>
-</section>
-<section id="other-resources-on-objects">
-<h2>Other resources on objects<a class="headerlink" href="#other-resources-on-objects" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>A non programmers tutorial for Python: Object Oriented Programming:
-<a class="reference external" href="https://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Intro_to_Object_Oriented_Programming_in_Python_3">https://en.wikibooks.org/wiki/Non-Programmer%27s_Tutorial_for_Python_3/Intro_to_Object_Oriented_Programming_in_Python_3</a></p></li>
-<li><p>A tutorial based on a role playing game:
-<a class="reference external" href="https://inventwithpython.com/blog/2014/12/02/why-is-object-oriented-programming-useful-with-a-role-playing-game-example/">https://inventwithpython.com/blog/2014/12/02/why-is-object-oriented-programming-useful-with-a-role-playing-game-example/</a></p></li>
-<li><p>A video: <a class="reference external" href="https://www.youtube.com/watch?v=trOZBgZ8F_c">https://www.youtube.com/watch?v=trOZBgZ8F_c</a></p></li>
-</ul>
 </section>
 </section>
 
