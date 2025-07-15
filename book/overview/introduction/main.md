@@ -16,6 +16,11 @@ kernelspec:
 
 This book aims to introduce readers to programming for mathematics.
 
+This is the freely accessible online edition of the book published by
+[Taylor & Francis](https://www.taylorfrancis.com/books/mono/10.1201/9781003451860/python-mathematics-vincent-knight?context=ubx&refId=df92ae24-7381-40f4-96a6-e543be95b30b).  
+The author acknowledges the publisher’s progressive approach to open dissemination,
+which has facilitated the continued availability of this work in an openly accessible format.
+
 ## Who is this book for?
 
 This book aims to introduce readers to programming **for** mathematics.
