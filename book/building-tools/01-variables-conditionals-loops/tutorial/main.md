@@ -14,8 +14,8 @@ kernelspec:
 
 # Tutorial
 
-We will here use a computer to gain some evidence to help tackle the following
-problem.
+You will here use a computer to gain some evidence to help tackle the
+following problem.
 
 ```{admonition} Problem
 
@@ -25,12 +25,12 @@ $$
     p(n) = n ^ 2 + n + 41
 $$
 
-1. Verify that $p(n)$ is prime for $n\in \mathbb{Z}$ up until $n=20$.
-2. What is the smallest value of $n$ for which $p(n)$ is no longer prime?
+1.  Verify that $p(n)$ is prime for $n\in \mathbb{Z}$ up until $n=20$.
+2.  What is the smallest value of $n$ for which $p(n)$ is no longer prime?
 
 ```
 
-We will start by defining a function for $p(n)$:
+You will start by defining a function for $p(n)$:
 
 ```{code-cell} ipython3
 def p(n):
@@ -52,8 +52,8 @@ sym.isprime(3)
 sym.isprime(4)
 ```
 
-Now to answer the first question you will use a list comprehension to create a
-list of boolean variables that confirm if $p(n)$ is prime.
+Now to answer the first question you will use a list comprehension to
+create a list of boolean variables that confirm if $p(n)$ is prime.
 
 ```{tip}
 This is similar to what was done in {ref}`probability`.
@@ -71,9 +71,9 @@ all(checks)
 ```
 
 ```{attention}
-Using list comprehensions is a mathematical way of repeating code but at times
-it might prove useful to repeat code in a different way using a standard `for`
-statement.
+Using list comprehensions is a mathematical way of repeating code but at
+times it might prove useful to repeat code in a different way using a
+standard `for` statement.
 ```
 
 In that case you can essentially repeat the previous exercise using:
@@ -92,11 +92,11 @@ lines of indented code to be repeated for every value of `n` in `range(21)`.
 
 ```{attention}
 A `for` loop or a list comprehension should be used when you know how many
-repetitions are necesary.
+repetitions are necessary.
 ```
 
-To answer the second question you will repeat the code until the value of $p(n)$
-is no longer prime.
+To answer the second question you will repeat the code until the value
+of $p(n)$ is no longer prime.
 
 ```{code-cell} ipython3
 n = 0
@@ -106,8 +106,9 @@ n
 ```
 
 ```{attention}
-A `while` loop should be used when you do not know how many times a repetition
-should be made **but** you know under what conditions it should be made.
+A `while` loop should be used when you do not know how many times a
+repetition should be made **but** you know under what conditions it
+should be made.
 ```
 
 Indeed for $n=40$ you have:
