@@ -16,15 +16,15 @@ kernelspec:
 
 # Variables, conditionals and loops
 
-In the previous chapters you have explored a number of tools that allow you to use
-mathematical knowledge more efficiently. In this part of the book you will
-start to gain the knowledge necessary to build these tools.
+In the previous chapters you have explored a number of tools that allow
+you to use mathematical knowledge more efficiently. In this part of the
+book you will start to gain the knowledge necessary to build such tools.
 
 ```{important}
 In this chapter you will cover:
 
-- Creating variables.
-- Run code depending on a given condition.
-- Repeat code as long as a given condition is met.
-- Repeat code over a given set.
+-   Creating variables.
+-   Run code depending on a given condition.
+-   Repeat code as long as a given condition is met.
+-   Repeat code over a given iterable.
 ```

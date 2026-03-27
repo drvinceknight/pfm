@@ -1251,8 +1251,8 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="tutorial">
 <h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">#</a></h1>
-<p>We will here use a computer to gain some evidence to help tackle the following
-problem.</p>
+<p>You will here use a computer to gain some evidence to help tackle the
+following problem.</p>
 <div class="admonition-problem admonition">
 <p class="admonition-title">Problem</p>
 <p>Consider the following polynomial:</p>
@@ -1265,7 +1265,7 @@ problem.</p>
 <li><p>What is the smallest value of <span class="math notranslate nohighlight">\(n\)</span> for which <span class="math notranslate nohighlight">\(p(n)\)</span> is no longer prime?</p></li>
 </ol>
 </div>
-<p>We will start by defining a function for <span class="math notranslate nohighlight">\(p(n)\)</span>:</p>
+<p>You will start by defining a function for <span class="math notranslate nohighlight">\(p(n)\)</span>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">p</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -1304,8 +1304,8 @@ problem.</p>
 </div>
 </div>
 </div>
-<p>Now to answer the first question you will use a list comprehension to create a
-list of boolean variables that confirm if <span class="math notranslate nohighlight">\(p(n)\)</span> is prime.</p>
+<p>Now to answer the first question you will use a list comprehension to
+create a list of boolean variables that confirm if <span class="math notranslate nohighlight">\(p(n)\)</span> is prime.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>This is similar to what was done in <span class="xref std std-ref">probability</span>.</p>
@@ -1358,9 +1358,9 @@ list of boolean variables that confirm if <span class="math notranslate nohighli
 </div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>Using list comprehensions is a mathematical way of repeating code but at times
-it might prove useful to repeat code in a different way using a standard <code class="docutils literal notranslate"><span class="pre">for</span></code>
-statement.</p>
+<p>Using list comprehensions is a mathematical way of repeating code but at
+times it might prove useful to repeat code in a different way using a
+standard <code class="docutils literal notranslate"><span class="pre">for</span></code> statement.</p>
 </div>
 <p>In that case you can essentially repeat the previous exercise using:</p>
 <div class="cell docutils container">
@@ -1385,10 +1385,10 @@ lines of indented code to be repeated for every value of <code class="docutils l
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">for</span></code> loop or a list comprehension should be used when you know how many
-repetitions are necesary.</p>
+repetitions are necessary.</p>
 </div>
-<p>To answer the second question you will repeat the code until the value of <span class="math notranslate nohighlight">\(p(n)\)</span>
-is no longer prime.</p>
+<p>To answer the second question you will repeat the code until the value
+of <span class="math notranslate nohighlight">\(p(n)\)</span> is no longer prime.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
@@ -1406,8 +1406,9 @@ is no longer prime.</p>
 </div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>A <code class="docutils literal notranslate"><span class="pre">while</span></code> loop should be used when you do not know how many times a repetition
-should be made <strong>but</strong> you know under what conditions it should be made.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">while</span></code> loop should be used when you do not know how many times a
+repetition should be made <strong>but</strong> you know under what conditions it
+should be made.</p>
 </div>
 <p>Indeed for <span class="math notranslate nohighlight">\(n=40\)</span> you have:</p>
 <div class="cell docutils container">
