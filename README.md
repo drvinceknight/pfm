@@ -4,39 +4,35 @@
 
 ## Development
 
-The book is written in files found in `book/` in the [MySt markdown
+The book is written in files found in `book/` in the [MyST markdown
 format](https://myst-nb.readthedocs.io/en/latest/).
 
-To install development dependencies:
+### Setup
 
-    pip install -r requirements-dev.txt
+Install [uv](https://docs.astral.sh/uv/) then run:
 
-Note that as of the time of writing this: python version needs to be <=3.10.
+    uv sync --group dev
 
-To check the format of the python code in the markdown files:
+### Build the book
 
-    inv stylecheck
+    uv run jb build book --path-output .
 
-To check the spelling:
+### Test the notebooks
 
-    inv spellcheck
+    uv run pytest -vv --nbval --ignore=_build/ --current-env
 
-To check the prose:
+### Test the testing chapter
 
-    inv prosecheck
+    uv run pytest book/building-tools/07-testing/
 
-To generate back up `ipynb` versions of the notebooks:
+### Check code style
 
-    inv backupbook
+    uv run stylecheck
 
-To test the notebooks:
+### Check spelling
 
-    inv testnbs
+    uv run spellcheck
 
-The main purpose of backing up to `ipynb` and then testing is so that the CI can
-confirm the results written in the book are what would be obtained when using
-updated libraries.
+### Check prose
 
-To generate the book to the `book` directory:
-
-    inv build
+    uv run prosecheck

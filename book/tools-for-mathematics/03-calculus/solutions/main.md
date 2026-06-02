@@ -129,7 +129,7 @@ We substitute $x=0$:
 cubic.subs({x: 0})
 ```
 
-This gives $c_2=10$. We substitute that back in to our expression for the cubic:
+This gives $c_2=10$. We substitute that back into our expression for the cubic:
 
 ```{code-cell} ipython3
 cubic = cubic.subs({c2: 10})
@@ -142,7 +142,7 @@ and now substitute $x=1$:
 cubic.subs({x: 1})
 ```
 
-which gives $c_1=0$ which we substitute back in to our expression for the cubic:
+which gives $c_1=0$ which we substitute back into our expression for the cubic:
 
 ```{code-cell} ipython3
 cubic = cubic.subs({c1: 0})
@@ -193,7 +193,7 @@ second_derivative = sym.diff(expression, x, 2)
 > `2`. You are given that $f(x)$ has a stationary point at $x=2$. Use this
 > information to find $b$.
 
-We solve the equation that arises when substituting $x=2$ in to the derivative:
+We solve the equation that arises when substituting $x=2$ into the derivative:
 
 ```{code-cell} ipython3
 equation = sym.Eq(derivative.subs({x: 2}), 0)
@@ -206,7 +206,7 @@ sym.solveset(equation, b)
 
 > `3`. Find the coordinates of the other stationary point.
 
-We substitute this value of $b$ in to the expression:
+We substitute this value of $b$ into the expression:
 
 ```{code-cell} ipython3
 b_value = -sym.S(5) / 2
@@ -224,7 +224,7 @@ sym.solveset(derivative)
 This confirms that one stationary point is indeed at $x=2$, the other is at
 $x=1/2$.
 To get the full coordinate of this other stationary point we substitute this
-value of $x$ in to $f$:
+value of $x$ into $f$:
 
 ```{code-cell} ipython3
 expression.subs({b: b_value, x: sym.S(1) / 2})
@@ -232,7 +232,7 @@ expression.subs({b: b_value, x: sym.S(1) / 2})
 
 > `4`. Determine the nature of both stationary points.
 
-Substituting both values in to the second derivative:
+Substituting both values into the second derivative:
 
 ```{code-cell} ipython3
 second_derivative = second_derivative.subs({b: b_value})

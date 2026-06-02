@@ -95,22 +95,52 @@ be installed with `pip`.
 When using Python for a number of projects it can be beneficial to
 isolate the entire software environment for each project. This is done using
 something called a virtual environment and allows you to have multiple versions
-of Python that you choose to use for different things.
+of Python and different sets of libraries for different projects.
 
-Two common ways of using virtual environments are:
+The standard Python library includes `venv` for creating virtual environments:
 
-- `venv`: this is in the standard Python library.
-- `conda`: this is a dependency manager that comes with Anaconda.
+```bash
+$ python -m venv .venv
+$ source .venv/bin/activate   # macOS
+$ .venv\Scripts\activate      # Windows
+```
 
-You can read more about virtual environments at the following links:
+You can read more about `venv` at:
 
 - <https://realpython.com/python-virtual-environments-a-primer/>
 - <https://docs.python.org/3/library/venv.html>
-- <https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe>
-- <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html>
 
-## What is `conda install`
+## What is `uv`
 
-Some libraries can be installed using the Anaconda dependency manager `conda`,
-in these cases a pre built binary of the library will be installed. You can read
-about this here: <https://www.anaconda.com/blog/understanding-conda-and-pip>.
+`uv` is a fast, modern Python package and project manager. It can replace
+`pip`, `venv`, and other tools with a single command-line utility. It is
+written in Rust and considerably faster than `pip` for installing packages.
+
+You can install `uv` by following the instructions at <https://docs.astral.sh/uv/>.
+
+### Managing a project with `uv`
+
+To create a new project with its own isolated environment:
+
+```bash
+$ uv init my-project
+$ cd my-project
+```
+
+To add a library to the project (this installs it and records the dependency):
+
+```bash
+$ uv add sympy
+```
+
+To run a script or command inside the project's environment:
+
+```bash
+$ uv run python main.py
+$ uv run jupyter notebook
+```
+
+`uv` automatically creates and manages a virtual environment for the project
+so you do not need to activate it manually.
+
+You can read the full `uv` documentation at <https://docs.astral.sh/uv/>.

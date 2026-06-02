@@ -14,7 +14,7 @@ kernelspec:
 
 # List of software packages used
 
-The python version using in this book is:
+The Python version used in this book is:
 
 ```{code-cell} ipython3
 :tags: ["remove-input", "style-check-ignore", "nbval-ignore-output"]

@@ -62,7 +62,7 @@ A = np.array(
 np.savetxt("array.txt", A)
 ```
 
-It is possible read a file in to a numpy array using the `loadtxt` function:
+It is possible to read a file into a numpy array using the `loadtxt` function:
 
 ```{code-cell} ipython3
 A = np.loadtxt("array.txt")

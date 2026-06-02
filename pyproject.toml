@@ -1,0 +1,30 @@
+[project]
+name = "pfm"
+version = "0.1.0"
+description = "Python for Mathematics"
+requires-python = ">=3.10"
+# Versions are not pinned to ensure CI catches updates to libraries.
+dependencies = [
+    "jupyter",
+    "matching",
+    "matplotlib",
+    "numpy",
+    "scipy",
+    "sympy",
+]
+
+[project.scripts]
+stylecheck = "pfm.checks:stylecheck"
+spellcheck = "pfm.checks:spellcheck"
+prosecheck = "pfm.checks:prosecheck"
+
+[dependency-groups]
+dev = [
+    "black",
+    "isort",
+    "interrogate",
+    "proselint",
+    "pytest",
+    "nbval",
+    "jupyter-book>=1.0,<2.0",
+]

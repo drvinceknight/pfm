@@ -3,7 +3,18 @@ title: "Python for mathematics"
 author: "Vincent Knight"
 logo: "./img/cover/main.png"
 parse:
-  myst_extended_syntax: true
+  myst_enable_extensions:
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_admonition
+    - html_image
+    - linkify
+    - replacements
+    - smartquotes
+    - substitution
+    - tasklist
 
 exclude_patterns: ["*.bcp.ipynb", "**/*.bcp.ipynb", "**/README.md", "**/documentation_in_vscode/*"]
 

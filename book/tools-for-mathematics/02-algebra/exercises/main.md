@@ -27,15 +27,15 @@ kernelspec:
 3.  Consider the equation: $x ^ 2 + 4 - y = \frac{1}{y}$:
     1.  Find the solution to this equation for $x$.
     2.  Obtain the specific solution when $y = 5$. Do this in two ways:
-        substitute the value in to your equation and substitute the
-        value in to your solution.
-4.  Consider the : $f(x)=4x ^ 2 + 16x + 25$:
+        substitute the value into your equation and substitute the
+        value into your solution.
+4.  Consider the equation: $f(x)=4x ^ 2 + 16x + 25$:
     1.  Calculate the discriminant of the equation $4x ^ 2 + 16x + 25 =
         0$. What does this tell you about the solutions to the equation?
         What does this tell you about the graph of $f(x)$?
     2.  By completing the square, show that the minimum point of $f(x)$
         is $\left(-2, 9\right)$
-5.  Consider the : $f(x)=-3x ^ 2 + 24x - 97$:
+5.  Consider the equation: $f(x)=-3x ^ 2 + 24x - 97$:
     1.  Calculate the discriminant of the equation $-3x ^ 2 + 24x - 97 =
         0$. What does this tell you about the solutions to the equation?
         What does this tell you about the graph of $f(x)$?

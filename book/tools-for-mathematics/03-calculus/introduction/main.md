@@ -16,7 +16,7 @@ kernelspec:
 
 # Calculus
 
-The A-level syllabus describes Calculus describes as:
+The A-level syllabus describes Calculus as:
 
 > "Calculus: this is a fundamental element which describes change in
 > dynamic situations and underlines the links between functions and

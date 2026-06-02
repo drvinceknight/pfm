@@ -18,7 +18,7 @@ kernelspec:
 
 Follow the Diataxis framework for documentation.
 
-This involves separating your documentation in to 4 different sections based on
+This involves separating your documentation into 4 different sections based on
 separate aims for readers.
 
 - [Tutorial](how_to_write_a_tutorial): for learning.

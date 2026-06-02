@@ -34,7 +34,7 @@ At that stage it is possible to uses any python object (a `function`, a `class`,
 <file>.variable
 ```
 
-## Break up code in to modular components
+## Break up code into modular components
 
 When modularising code aim to identify specific components of the code that can
 be isolated from the rest.

@@ -86,11 +86,11 @@ sympy.factor(a ** 2 - b ** 2)
 
 ## Why do I sometimes see `from sympy import *`?
 
-There a number of resources available from which you can learn to use
+There are a number of resources available from which you can learn to use
 `sympy`. In some instances you will not see `import sympy` but instead
 you will see `from sympy import *`.
 
-**This it not a good way to do it.**
+**This is not a good way to do it.**
 
 What this does is taking all the tools inside of sympy and putting it at
 the same level of all the other tools available to you. The problem with
@@ -181,7 +181,7 @@ create two new variables:
 x1, x2 = tuple_of_solutions
 ```
 
-Substitute these value directly in to the expression:
+Substitute these values directly into the expression:
 
 ```{code-cell} ipython3
 expression.subs({x: x1})
