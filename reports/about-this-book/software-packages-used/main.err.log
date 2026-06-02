@@ -1,0 +1,71 @@
+Traceback (most recent call last):
+  File "/home/runner/work/pfm/pfm/.venv/lib/python3.14/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+    ~~~~~~~~~^
+        nb,
+        ^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/runner/work/pfm/pfm/.venv/lib/python3.14/site-packages/nbclient/client.py", line 1323, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/runner/work/pfm/pfm/.venv/lib/python3.14/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/runner/.local/share/uv/python/cpython-3.14.5-linux-x86_64-gnu/lib/python3.14/asyncio/base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/runner/work/pfm/pfm/.venv/lib/python3.14/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+        cell, index, execution_count=self.code_cells_executed + 1
+    )
+  File "/home/runner/work/pfm/pfm/.venv/lib/python3.14/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/runner/work/pfm/pfm/.venv/lib/python3.14/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import pathlib
+from importlib.metadata import version, PackageNotFoundError
+
+requirements_path = pathlib.Path("../../../requirements.txt")
+libraries = requirements_path.read_text().split("\n")
+
+for library in filter(lambda line: "#" not in line, libraries):
+    try:
+        if library != "":
+            print(f"{library} version: {version(library)}")
+    except PackageNotFoundError:
+        pass
+------------------
+
+
+[31m---------------------------------------------------------------------------[39m
+[31mFileNotFoundError[39m                         Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[2][39m[32m, line 5[39m
+[32m      1[39m [38;5;28;01mimport[39;00m pathlib
+[32m      2[39m [38;5;28;01mfrom[39;00m importlib.metadata [38;5;28;01mimport[39;00m version, PackageNotFoundError
+[32m      3[39m 
+[32m      4[39m requirements_path = pathlib.Path([33m"../../../requirements.txt"[39m)
+[32m----> [39m[32m5[39m libraries = requirements_path.read_text().split([33m"\n"[39m)
+[32m      6[39m 
+[32m      7[39m [38;5;28;01mfor[39;00m library [38;5;28;01min[39;00m filter([38;5;28;01mlambda[39;00m line: [33m"#"[39m [38;5;28;01mnot[39;00m [38;5;28;01min[39;00m line, libraries):
+[32m      8[39m     [38;5;28;01mtry[39;00m:
+
+[36mFile [39m[32m~/.local/share/uv/python/cpython-3.14.5-linux-x86_64-gnu/lib/python3.14/pathlib/__init__.py:787[39m, in [36mPath.read_text[39m[34m(self, encoding, errors, newline)[39m
+[32m    784[39m [38;5;66;03m# Call io.text_encoding() here to ensure any warning is raised at an[39;00m
+[32m    785[39m [38;5;66;03m# appropriate stack level.[39;00m
+[32m    786[39m encoding = io.text_encoding(encoding)
+[32m--> [39m[32m787[39m [38;5;28;01mwith[39;00m [30;43mself[39;49m[30;43m.[39;49m[30;43mopen[39;49m[30;43m([39;49m[30;43mmode[39;49m[30;43m=[39;49m[30;43m'[39;49m[30;43mr[39;49m[30;43m'[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mencoding[39;49m[30;43m=[39;49m[30;43mencoding[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43merrors[39;49m[30;43m=[39;49m[30;43merrors[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mnewline[39;49m[30;43m=[39;49m[30;43mnewline[39;49m[30;43m)[39;49m [38;5;28;01mas[39;00m f:
+[32m    788[39m     [38;5;28;01mreturn[39;00m f.read()
+
+[36mFile [39m[32m~/.local/share/uv/python/cpython-3.14.5-linux-x86_64-gnu/lib/python3.14/pathlib/__init__.py:771[39m, in [36mPath.open[39m[34m(self, mode, buffering, encoding, errors, newline)[39m
+[32m    769[39m [38;5;28;01mif[39;00m [33m"[39m[33mb[39m[33m"[39m [38;5;129;01mnot[39;00m [38;5;129;01min[39;00m mode:
+[32m    770[39m     encoding = io.text_encoding(encoding)
+[32m--> [39m[32m771[39m [38;5;28;01mreturn[39;00m [30;43mio[39;49m[30;43m.[39;49m[30;43mopen[39;49m[30;43m([39;49m[30;43mself[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mmode[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mbuffering[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mencoding[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43merrors[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mnewline[39;49m[30;43m)[39;49m
+
+[31mFileNotFoundError[39m: [Errno 2] No such file or directory: '../../../requirements.txt'
+

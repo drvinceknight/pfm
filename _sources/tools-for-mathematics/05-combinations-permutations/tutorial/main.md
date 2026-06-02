@@ -59,7 +59,7 @@ permutations
 ```
 
 That is again only the set of instructions, to view the actual
-permutations you will again transform this in to a tuple. You will
+permutations you will again transform this into a tuple. You will
 overwrite the value of `permutations` to not be the instructions but the
 actual tuple of all the permutations:
 

@@ -78,7 +78,7 @@ Factorise that to make it slightly clearer:
 sym.factor(derivative)
 ```
 
-Now we are going to create the second equation, substituting $x=0$ in to the
+Now we are going to create the second equation, substituting $x=0$ into the
 value of the second derivative. We calculate the second derivative by passing a
 third (optional) input to `sym.diff`:
 

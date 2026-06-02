@@ -18,8 +18,8 @@ kernelspec:
 
 One of the most popular Python libraries for scientific computing is `numpy`.
 Python is not renowned for its run speed but its speed of writing.
-`numpy` helps with this at is brings fast numeric computations to Python. It is
-also powerful tool for linear algebra (matrices) although it cannot handle
+`numpy` helps with this as it brings fast numeric computations to Python. It is
+also a powerful tool for linear algebra (matrices) although it cannot handle
 symbolic variables.
 
 ```{important}

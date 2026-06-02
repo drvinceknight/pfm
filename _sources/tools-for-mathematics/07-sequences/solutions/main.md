@@ -195,7 +195,7 @@ We will solve the first equation for $a$:
 sym.solveset(a_10_equation, a)
 ```
 
-We substitute this in to the other equation and solve it for $d$:
+We substitute this into the other equation and solve it for $d$:
 
 ```{code-cell} ipython3
 sym.solveset(a_40_equation.subs({a: 2400 - 9 * d}), d)
@@ -203,7 +203,7 @@ sym.solveset(a_40_equation.subs({a: 2400 - 9 * d}), d)
 
 > `2`. The value of $a$.
 
-We can substitute that value for $d$ back in to the expression for $a$:
+We can substitute that value for $d$ back into the expression for $a$:
 
 ```{code-cell} ipython3
 (2400 - 9 * d).subs({d: -60})

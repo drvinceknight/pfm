@@ -113,7 +113,7 @@ of items in a list.
 
 ## How to write a test file?
 
-To write tests assertion statements should be put in to a file separate to the code
+To write tests assertion statements should be put into a file separate to the code
 in functions.
 
 For example, if the `dice.py` file contained:

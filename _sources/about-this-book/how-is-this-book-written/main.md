@@ -29,7 +29,7 @@ Jupyter notebooks. This ensures:
 
 The source files of the book are hosted on GitHub
 <https://github.com/drvinceknight/pfm> and any contribution is tested using
-Github Actions which runs a full set of tests.
+GitHub Actions which runs a full set of tests.
 
 ### Proselint
 
@@ -55,7 +55,7 @@ the text.
 
 ### Black
 
-All code in book is checked using the `black` code formatter
+All code in the book is checked using the `black` code formatter
 <https://github.com/psf/black> this ensures that not only PEP8 is followed but
 that a specific consistent formatting convention is used.
 

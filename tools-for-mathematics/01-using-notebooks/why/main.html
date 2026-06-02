@@ -1,47 +1,59 @@
 
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="../../../" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Further information &#8212; Python for mathematics</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/togglebutton.js?v=b8b12719"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -76,80 +88,126 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-38016329-2"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-38016329-2');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-38016329-2');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tools-for-mathematics/01-using-notebooks/why/main';</script>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Algebra" href="../../02-algebra/introduction/main.html" />
     <link rel="prev" title="Solutions" href="../solutions/main.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-38016329-2', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
     
-    <div class="container-fluid" id="banner"></div>
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
 
-    
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../../index.html">
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../cover.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../../_static/main.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Python for mathematics</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../../../_static/main.png" class="logo__image only-light" alt="Python for mathematics - Home"/>
+    <img src="../../../_static/main.png" class="logo__image only-dark pst-js-only" alt="Python for mathematics - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -158,1273 +216,487 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Overview
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../overview/introduction/main.html">
-   Introduction
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../overview/structure/main.html">
-     How this book is structured
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../overview/how_to_use_this_book/main.html">
-     How to use this book?
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../overview/introduction/main.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../overview/structure/main.html">How this book is structured</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../../overview/how_to_use_this_book/main.html">How to use this book?</a></li>
+
+
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Tools for mathematics
- </span>
-</p>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools for mathematics</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../introduction/main.html">
-   Using notebooks
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tutorial/main.html">
-     Tutorial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../how/main.html">
-     How to
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../exercises/main.html">
-     Exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../solutions/main.html">
-     Solutions
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Further information
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../02-algebra/introduction/main.html">
-   Algebra
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../02-algebra/tutorial/main.html">
-     Tutorial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../02-algebra/how/main.html">
-     How to
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../02-algebra/exercises/main.html">
-     Exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../02-algebra/solutions/main.html">
-     Solutions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../02-algebra/why/main.html">
-     Further information
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../03-calculus/introduction/main.html">
-   Calculus
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../03-calculus/tutorial/main.html">
-     Tutorial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../03-calculus/how/main.html">
-     How
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../03-calculus/exercises/main.html">
-     Exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../03-calculus/solutions/main.html">
-     Solutions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../03-calculus/why/main.html">
-     Further information
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../04-matrices/introduction/main.html">
-   Matrices
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../04-matrices/tutorial/main.html">
-     Tutorial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../04-matrices/how/main.html">
-     How
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../04-matrices/exercises/main.html">
-     Exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../04-matrices/solutions/main.html">
-     Solutions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../04-matrices/why/main.html">
-     Further information
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../05-combinations-permutations/introduction/main.html">
-   Combinatorics
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../05-combinations-permutations/tutorial/main.html">
-     Tutorial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../05-combinations-permutations/how/main.html">
-     How
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../05-combinations-permutations/exercises/main.html">
-     Exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../05-combinations-permutations/solutions/main.html">
-     Solutions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../05-combinations-permutations/why/main.html">
-     Further information
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../06-probability/introduction/main.html">
-   Probability
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../06-probability/tutorial/main.html">
-     Tutorial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../06-probability/how/main.html">
-     How to
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../06-probability/exercises/main.html">
-     Exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../06-probability/solutions/main.html">
-     Solutions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../06-probability/why/main.html">
-     Further information
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../07-sequences/introduction/main.html">
-   Sequences
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../07-sequences/tutorial/main.html">
-     Tutorial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../07-sequences/how/main.html">
-     How
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../07-sequences/exercises/main.html">
-     Exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../07-sequences/solutions/main.html">
-     Solutions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../07-sequences/why/main.html">
-     Further information
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../08-statistics/introduction/main.html">
-   Statistics
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../08-statistics/tutorial/main.html">
-     Tutorial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../08-statistics/how/main.html">
-     How to
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../08-statistics/exercises/main.html">
-     Exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../08-statistics/solutions/main.html">
-     Solutions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../08-statistics/why/main.html">
-     Further information
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../09-differential-equations/introduction/main.html">
-   Differential Equations
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../09-differential-equations/tutorial/main.html">
-     Tutorial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../09-differential-equations/how/main.html">
-     How to
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../09-differential-equations/exercises/main.html">
-     Exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../09-differential-equations/solutions/main.html">
-     Solutions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../09-differential-equations/why/main.html">
-     Further information
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../introduction/main.html">Using notebooks</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/main.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how/main.html">How to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exercises/main.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/main.html">Solutions</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Further information</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Building tools
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/introduction/main.html">
-   Variables, conditionals and loops
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/tutorial/main.html">
-     Tutorial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/how/main.html">
-     How to
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/exercises/main.html">
-     Exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/solutions/main.html">
-     Solutions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/why/main.html">
-     Further information
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/introduction/main.html">
-   Functions and data structures
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/tutorial/main.html">
-     Tutorial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/how/main.html">
-     How
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/exercises/main.html">
-     Exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/solutions/main.html">
-     Solutions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/why/main.html">
-     Further information
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../building-tools/03-objects/introduction/main.html">
-   Object oriented programming
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-  <label for="toctree-checkbox-13">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/03-objects/tutorial/main.html">
-     Tutorial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/03-objects/how/main.html">
-     How to
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/03-objects/exercises/main.html">
-     Exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/03-objects/solutions/main.html">
-     Solutions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/03-objects/why/main.html">
-     Further information
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../building-tools/04-editor-and-cli/introduction/main.html">
-   Using a command line and an editor
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-  <label for="toctree-checkbox-14">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/04-editor-and-cli/tutorial/main.html">
-     Tutorial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/04-editor-and-cli/how/main.html">
-     How to
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/04-editor-and-cli/exercises/main.html">
-     Exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/04-editor-and-cli/solutions/main.html">
-     Solutions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/04-editor-and-cli/why/main.html">
-     Further information
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../building-tools/05-modularisation/introduction/main.html">
-   Modularisation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-  <label for="toctree-checkbox-15">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/05-modularisation/tutorial/main.html">
-     Tutorial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/05-modularisation/how/main.html">
-     How to
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/05-modularisation/exercises/main.html">
-     Exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/05-modularisation/solutions/main.html">
-     Solutions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/05-modularisation/why/main.html">
-     Further information
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../building-tools/06-documentation/introduction/main.html">
-   Documentation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-  <label for="toctree-checkbox-16">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/06-documentation/tutorial/main.html">
-     Tutorial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/06-documentation/how/main.html">
-     How
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/06-documentation/exercises/main.html">
-     Exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/06-documentation/solutions/main.html">
-     Solutions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/06-documentation/why/main.html">
-     Further information
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../building-tools/07-testing/introduction/main.html">
-   Testing
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
-  <label for="toctree-checkbox-17">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/07-testing/tutorial/main.html">
-     Tutorial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/07-testing/how/main.html">
-     How
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/07-testing/exercises/main.html">
-     Exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/07-testing/solutions/main.html">
-     Solutions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../building-tools/07-testing/why/main.html">
-     Further information
-    </a>
-   </li>
-  </ul>
- </li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../02-algebra/introduction/main.html">Algebra</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../02-algebra/tutorial/main.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02-algebra/how/main.html">How to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02-algebra/exercises/main.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02-algebra/solutions/main.html">Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02-algebra/why/main.html">Further information</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Further information
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../further-information/01-numpy/introduction/main.html">
-   Numpy
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
-  <label for="toctree-checkbox-18">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../further-information/01-numpy/tutorial/main.html">
-     Tutorial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../further-information/01-numpy/how/main.html">
-     How
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../further-information/01-numpy/why/main.html">
-     Further information
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../further-information/02-matplotlib/introduction/main.html">
-   Matplotlib
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
-  <label for="toctree-checkbox-19">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../further-information/02-matplotlib/tutorial/main.html">
-     Tutorial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../further-information/02-matplotlib/how/main.html">
-     How
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../further-information/02-matplotlib/why/main.html">
-     Further information.
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../further-information/03-kernel/introduction/main.html">
-   Kernels
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
-  <label for="toctree-checkbox-20">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../further-information/03-kernel/tutorial/main.html">
-     Tutorial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../further-information/03-kernel/how/main.html">
-     How
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../further-information/03-kernel/why/main.html">
-     Further information.
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../further-information/04-pip-installing/introduction/main.html">
-   Installing libraries
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
-  <label for="toctree-checkbox-21">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../further-information/04-pip-installing/tutorial/main.html">
-     Tutorial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../further-information/04-pip-installing/how/main.html">
-     How
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../further-information/04-pip-installing/why/main.html">
-     Further information.
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../further-information/05-linear-programming/introduction/main.html">
-   Linear Programming
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
-  <label for="toctree-checkbox-22">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../further-information/05-linear-programming/tutorial/main.html">
-     Tutorial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../further-information/05-linear-programming/how/main.html">
-     How
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../further-information/05-linear-programming/why/main.html">
-     Further information.
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../further-information/06-working-with-files/introduction/main.html">
-   Working with files
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
-  <label for="toctree-checkbox-23">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../further-information/06-working-with-files/tutorial/main.html">
-     Tutorial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../further-information/06-working-with-files/how/main.html">
-     How
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../further-information/06-working-with-files/why/main.html">
-     Further information.
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../zbibliography.html">
-   Bibliography
-  </a>
- </li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../03-calculus/introduction/main.html">Calculus</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../03-calculus/tutorial/main.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../03-calculus/how/main.html">How</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../03-calculus/exercises/main.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../03-calculus/solutions/main.html">Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../03-calculus/why/main.html">Further information</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  About this book
- </span>
-</p>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../04-matrices/introduction/main.html">Matrices</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../04-matrices/tutorial/main.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04-matrices/how/main.html">How</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04-matrices/exercises/main.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04-matrices/solutions/main.html">Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04-matrices/why/main.html">Further information</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../05-combinations-permutations/introduction/main.html">Combinatorics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../05-combinations-permutations/tutorial/main.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../05-combinations-permutations/how/main.html">How</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../05-combinations-permutations/exercises/main.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../05-combinations-permutations/solutions/main.html">Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../05-combinations-permutations/why/main.html">Further information</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../06-probability/introduction/main.html">Probability</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../06-probability/tutorial/main.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../06-probability/how/main.html">How to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../06-probability/exercises/main.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../06-probability/solutions/main.html">Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../06-probability/why/main.html">Further information</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../07-sequences/introduction/main.html">Sequences</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../07-sequences/tutorial/main.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07-sequences/how/main.html">How</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07-sequences/exercises/main.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07-sequences/solutions/main.html">Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07-sequences/why/main.html">Further information</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../08-statistics/introduction/main.html">Statistics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../08-statistics/tutorial/main.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../08-statistics/how/main.html">How to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../08-statistics/exercises/main.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../08-statistics/solutions/main.html">Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../08-statistics/why/main.html">Further information</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../09-differential-equations/introduction/main.html">Differential Equations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../09-differential-equations/tutorial/main.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../09-differential-equations/how/main.html">How to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../09-differential-equations/exercises/main.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../09-differential-equations/solutions/main.html">Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../09-differential-equations/why/main.html">Further information</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Building tools</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../about-this-book/main.html">
-   About this book
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
-  <label for="toctree-checkbox-24">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../about-this-book/how-is-this-book-written/main.html">
-     How this book is written
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../about-this-book/contributing/main.html">
-     Contributing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../about-this-book/citing-this-book/main.html">
-     How to cite this book
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../about-this-book/software-packages-used/main.html">
-     List of software packages used
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/introduction/main.html">Variables, conditionals and loops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/tutorial/main.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/how/main.html">How to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/exercises/main.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/solutions/main.html">Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/01-variables-conditionals-loops/why/main.html">Further information</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/introduction/main.html">Functions and data structures</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/tutorial/main.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/how/main.html">How</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/exercises/main.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/solutions/main.html">Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/02-functions-and-data-structures/why/main.html">Further information</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../building-tools/03-objects/introduction/main.html">Object oriented programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/03-objects/tutorial/main.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/03-objects/how/main.html">How to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/03-objects/exercises/main.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/03-objects/solutions/main.html">Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/03-objects/why/main.html">Further information</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../building-tools/04-editor-and-cli/introduction/main.html">Using a command line and an editor</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/04-editor-and-cli/tutorial/main.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/04-editor-and-cli/how/main.html">How to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/04-editor-and-cli/exercises/main.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/04-editor-and-cli/solutions/main.html">Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/04-editor-and-cli/why/main.html">Further information</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../building-tools/05-modularisation/introduction/main.html">Modularisation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/05-modularisation/tutorial/main.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/05-modularisation/how/main.html">How to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/05-modularisation/exercises/main.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/05-modularisation/solutions/main.html">Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/05-modularisation/why/main.html">Further information</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../building-tools/06-documentation/introduction/main.html">Documentation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/06-documentation/tutorial/main.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/06-documentation/how/main.html">How</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/06-documentation/exercises/main.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/06-documentation/solutions/main.html">Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/06-documentation/why/main.html">Further information</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../building-tools/07-testing/introduction/main.html">Testing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/07-testing/tutorial/main.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/07-testing/how/main.html">How</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/07-testing/exercises/main.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/07-testing/solutions/main.html">Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../building-tools/07-testing/why/main.html">Further information</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Further information</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../further-information/01-numpy/introduction/main.html">Numpy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../further-information/01-numpy/tutorial/main.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../further-information/01-numpy/how/main.html">How</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../further-information/01-numpy/why/main.html">Further information</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../further-information/02-matplotlib/introduction/main.html">Matplotlib</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../further-information/02-matplotlib/tutorial/main.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../further-information/02-matplotlib/how/main.html">How</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../further-information/02-matplotlib/why/main.html">Further information.</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../further-information/03-kernel/introduction/main.html">Kernels</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../further-information/03-kernel/tutorial/main.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../further-information/03-kernel/how/main.html">How</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../further-information/03-kernel/why/main.html">Further information.</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../further-information/04-pip-installing/introduction/main.html">Installing libraries</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../further-information/04-pip-installing/tutorial/main.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../further-information/04-pip-installing/how/main.html">How</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../further-information/04-pip-installing/why/main.html">Further information.</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../further-information/05-linear-programming/introduction/main.html">Linear Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../further-information/05-linear-programming/tutorial/main.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../further-information/05-linear-programming/how/main.html">How</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../further-information/05-linear-programming/why/main.html">Further information.</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../further-information/06-working-with-files/introduction/main.html">Working with files</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../further-information/06-working-with-files/tutorial/main.html">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../further-information/06-working-with-files/how/main.html">How</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../further-information/06-working-with-files/why/main.html">Further information.</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../zbibliography.html">Bibliography</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">About this book</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../about-this-book/main.html">About this book</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about-this-book/how-is-this-book-written/main.html">How this book is written</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about-this-book/contributing/main.html">Contributing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about-this-book/citing-this-book/main.html">How to cite this book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about-this-book/software-packages-used/main.html">List of software packages used</a></li>
+</ul>
+</details></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/drvinceknight/pfm/main?urlpath=tree/book/tools-for-mathematics/01-using-notebooks/why/main.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/drvinceknight/pfm" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/drvinceknight/pfm/edit/main/book/tools-for-mathematics/01-using-notebooks/why/main.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/drvinceknight/pfm/issues/new?title=Issue%20on%20page%20%2Ftools-for-mathematics/01-using-notebooks/why/main.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/tools-for-mathematics/01-using-notebooks/why/main.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/drvinceknight/pfm"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
-      
-      <li>
-        <a href="https://github.com/drvinceknight/pfm/issues/new?title=Issue%20on%20page%20%2Ftools-for-mathematics/01-using-notebooks/why/main.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/drvinceknight/pfm/edit/main/book/tools-for-mathematics/01-using-notebooks/why/main.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Edit this page"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="headerbtn__text-container">suggest edit</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../../_sources/tools-for-mathematics/01-using-notebooks/why/main.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download notebook file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="../../../_sources/tools-for-mathematics/01-using-notebooks/why/main.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button>
 
-      </li>
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
       
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
+    </div>
   
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
-    </div>
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-use-anaconda">
-   Why use anaconda?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-use-jupyter">
-   Why use Jupyter?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-can-i-not-double-click-on-a-jupyter-notebook-file">
-   Why can I not double click on a Jupyter notebook file?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#where-can-i-find-keyboard-shortcuts-for-using-jupyter">
-   Where can I find keyboard shortcuts for using Jupyter
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-markdown">
-   What is markdown?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-latex">
-   What is LaTeX?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#can-i-use-and-instead-of-for-latex">
-   Can I use
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     \(
-    </span>
-   </code>
-   and
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     \)
-    </span>
-   </code>
-   instead of
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     $
-    </span>
-   </code>
-   for LaTeX?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-a-markup-language">
-   What is a markup language?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-use-jupyter-notebooks-on-a-chromebook">
-   How to use Jupyter notebooks on a chromebook
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-use-jupyter-notebooks-on-an-ipad">
-   How to use Jupyter notebooks on an iPad
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Further information</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-use-anaconda">
-   Why use anaconda?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-use-jupyter">
-   Why use Jupyter?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-can-i-not-double-click-on-a-jupyter-notebook-file">
-   Why can I not double click on a Jupyter notebook file?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#where-can-i-find-keyboard-shortcuts-for-using-jupyter">
-   Where can I find keyboard shortcuts for using Jupyter
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-markdown">
-   What is markdown?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-latex">
-   What is LaTeX?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#can-i-use-and-instead-of-for-latex">
-   Can I use
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     \(
-    </span>
-   </code>
-   and
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     \)
-    </span>
-   </code>
-   instead of
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     $
-    </span>
-   </code>
-   for LaTeX?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-a-markup-language">
-   What is a markup language?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-use-jupyter-notebooks-on-a-chromebook">
-   How to use Jupyter notebooks on a chromebook
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-use-jupyter-notebooks-on-an-ipad">
-   How to use Jupyter notebooks on an iPad
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Further information</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-the-standard-python-distribution">Why use the standard Python distribution?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-have-we-moved-away-from-anaconda">Why have we moved away from Anaconda?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-python-m-notebook-rather-than-jupyter-notebook">Why use <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">notebook</span></code> rather than <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code>?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-jupyter">Why use Jupyter?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-can-i-not-double-click-on-a-jupyter-notebook-file">Why can I not double click on a Jupyter notebook file?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-can-i-find-keyboard-shortcuts-for-using-jupyter">Where can I find keyboard shortcuts for using Jupyter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-markdown">What is markdown?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-latex">What is LaTeX?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#can-i-use-and-instead-of-for-latex">Can I use <code class="docutils literal notranslate"><span class="pre">\(</span></code> and <code class="docutils literal notranslate"><span class="pre">\)</span></code> instead of <code class="docutils literal notranslate"><span class="pre">$</span></code> for LaTeX?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-markup-language">What is a markup language?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-jupyter-notebooks-without-a-local-installation">How to use Jupyter notebooks without a local installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-jupyter-notebooks-on-an-ipad">How to use Jupyter notebooks on an iPad</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="further-information">
-<span id="sec-using-notebooks-further-information"></span><h1>Further information<a class="headerlink" href="#further-information" title="Permalink to this headline">#</a></h1>
-<section id="why-use-anaconda">
-<span id="sec-why-use-anaconda"></span><h2>Why use anaconda?<a class="headerlink" href="#why-use-anaconda" title="Permalink to this headline">#</a></h2>
+<span id="sec-using-notebooks-further-information"></span><h1>Further information<a class="headerlink" href="#further-information" title="Link to this heading">#</a></h1>
+<section id="why-use-the-standard-python-distribution">
+<h2>Why use the standard Python distribution?<a class="headerlink" href="#why-use-the-standard-python-distribution" title="Link to this heading">#</a></h2>
 <p>Python is a free and open source piece of software. One of the main
 reasons for its popularity is that there are a number of separate tools
-that work well with it, these are called libraries. Sometimes installing
-these libraries can require an understanding of some potential pitfalls.
-In scientific circles the Anaconda distribution was developed to give a
-single download of not only Python but a lot of commonly used libraries.</p>
+that work well with it, these are called libraries. The standard Python
+distribution from <a class="reference external" href="https://www.python.org">https://www.python.org</a> gives you Python itself and
+<code class="docutils literal notranslate"><span class="pre">pip</span></code>, its built-in package installer. You can then install exactly the
+libraries you need, nothing more. This makes it straightforward to understand
+what is on your system and to keep it up to date.</p>
+</section>
+<section id="why-have-we-moved-away-from-anaconda">
+<h2>Why have we moved away from Anaconda?<a class="headerlink" href="#why-have-we-moved-away-from-anaconda" title="Link to this heading">#</a></h2>
+<p>Earlier editions of this book recommended Anaconda as the way to install
+Python. We have moved away from that recommendation for two reasons.</p>
+<p>First, Anaconda changed its licensing terms in 2020 so that its default
+package repository is no longer free for all uses. Organisations with more
+than a small number of users must now purchase a commercial licence to use
+the default Anaconda channel. Using software under unclear licensing
+conditions is not something we want to recommend to readers.</p>
+<p>Second, installation on Windows has become considerably easier. The Python
+Install Manager (available directly from <a class="reference external" href="https://www.python.org">https://www.python.org</a>) provides
+a straightforward terminal-based setup that takes only a few steps and
+does not require any third-party tools. There is therefore no longer a
+practical reason to add the complexity of Anaconda.</p>
+<p>The standard distribution gives a cleaner, lighter environment: only the
+libraries you explicitly install are present, which makes it easier to
+understand what your code depends on and to reproduce your environment on
+another machine.</p>
+</section>
+<section id="why-use-python-m-notebook-rather-than-jupyter-notebook">
+<h2>Why use <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">notebook</span></code> rather than <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code>?<a class="headerlink" href="#why-use-python-m-notebook-rather-than-jupyter-notebook" title="Link to this heading">#</a></h2>
+<p>Many tutorials and older books instruct readers to start Jupyter by typing
+<code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> in the terminal. Both commands launch the same
+application, so if you encounter that instruction elsewhere it will work
+provided the <code class="docutils literal notranslate"><span class="pre">jupyter</span></code> script is on your system’s PATH.</p>
+<p>We use <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">notebook</span></code> (or <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">notebook</span></code> on macOS) throughout
+this book for one reason: it always works. When Python installs a library
+it places any associated scripts (including <code class="docutils literal notranslate"><span class="pre">jupyter</span></code>) in a scripts
+directory. Depending on how Python was installed, that directory may not
+be on the system PATH, which means typing <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> produces a
+“command not found” error even though the library is correctly installed.
+Running <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">notebook</span></code> bypasses the scripts directory entirely: it
+asks the Python interpreter you are already using to run the <code class="docutils literal notranslate"><span class="pre">notebook</span></code>
+module directly, so there is no PATH lookup to go wrong.</p>
+<p>In practice this matters most on Windows, where the Python Install Manager
+does not always add the scripts directory to PATH. On macOS the standard
+Python from <a class="reference external" href="http://python.org">python.org</a> installs the interpreter as <code class="docutils literal notranslate"><span class="pre">python3</span></code>, so the
+equivalent command there is <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">notebook</span></code>.</p>
 </section>
 <section id="why-use-jupyter">
-<h2>Why use Jupyter?<a class="headerlink" href="#why-use-jupyter" title="Permalink to this headline">#</a></h2>
-<p>There are are variety of ways to write and run Python:</p>
-<ol class="simple">
+<h2>Why use Jupyter?<a class="headerlink" href="#why-use-jupyter" title="Link to this heading">#</a></h2>
+<p>There are a variety of ways to write and run Python:</p>
+<ol class="arabic simple">
 <li><p>Using an interactive notebook environment like Jupyter;</p></li>
 <li><p>Using an integrated development environment and/or editor.</p></li>
 </ol>
@@ -1435,7 +707,7 @@ you are using it for. Another advantage is that it allows you to
 immediately have your output next to your input. There are some
 limitations to Jupyter as an editor which is why you will explore using
 a powerful editor in the second part of the course. In general:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Jupyter is a fantastic way to interactively use and communicate
 code;</p></li>
 <li><p>Integrated development environments and/or editors are the correct
@@ -1446,7 +718,7 @@ manner for the right task. For the first part code will be used
 interactively and so you will use Jupyter notebooks.</p>
 </section>
 <section id="why-can-i-not-double-click-on-a-jupyter-notebook-file">
-<h2>Why can I not double click on a Jupyter notebook file?<a class="headerlink" href="#why-can-i-not-double-click-on-a-jupyter-notebook-file" title="Permalink to this headline">#</a></h2>
+<h2>Why can I not double click on a Jupyter notebook file?<a class="headerlink" href="#why-can-i-not-double-click-on-a-jupyter-notebook-file" title="Link to this heading">#</a></h2>
 <p>When you double click on a file and your computer opens it in an
 application that is because a default is set for the particular file
 extension. For example double clicking on <code class="docutils literal notranslate"><span class="pre">main.docx</span></code> will automatically
@@ -1461,15 +733,15 @@ As such you do not have a choice and need to open it in the Jupyter
 interface.</p>
 </section>
 <section id="where-can-i-find-keyboard-shortcuts-for-using-jupyter">
-<h2>Where can I find keyboard shortcuts for using Jupyter<a class="headerlink" href="#where-can-i-find-keyboard-shortcuts-for-using-jupyter" title="Permalink to this headline">#</a></h2>
+<h2>Where can I find keyboard shortcuts for using Jupyter<a class="headerlink" href="#where-can-i-find-keyboard-shortcuts-for-using-jupyter" title="Link to this heading">#</a></h2>
 <p>In a notebook if you go to the menu bar and click on <code class="docutils literal notranslate"><span class="pre">Help</span></code> followed by
 <code class="docutils literal notranslate"><span class="pre">Keyboard</span> <span class="pre">Shortcuts</span></code> you will find a number of helpful keyboard
 shortcuts.</p>
 <p>For example, when on a cell pressing <code class="docutils literal notranslate"><span class="pre">Esc</span></code> followed by <code class="docutils literal notranslate"><span class="pre">m</span></code> will turn the
-cell in to a markdown cell.</p>
+cell into a markdown cell.</p>
 </section>
 <section id="what-is-markdown">
-<h2>What is markdown?<a class="headerlink" href="#what-is-markdown" title="Permalink to this headline">#</a></h2>
+<h2>What is markdown?<a class="headerlink" href="#what-is-markdown" title="Link to this heading">#</a></h2>
 <p>As described at <a class="reference external" href="https://www.markdownguide.org/getting-started/">https://www.markdownguide.org/getting-started/</a>:</p>
 <blockquote>
 <div><p>Markdown is a lightweight markup language that you can use to add
@@ -1479,7 +751,7 @@ languages</p>
 </div></blockquote>
 </section>
 <section id="what-is-latex">
-<h2>What is LaTeX?<a class="headerlink" href="#what-is-latex" title="Permalink to this headline">#</a></h2>
+<h2>What is LaTeX?<a class="headerlink" href="#what-is-latex" title="Link to this heading">#</a></h2>
 <p>As described here <a class="reference external" href="https://www.latex-project.org/about/">https://www.latex-project.org/about/</a>:</p>
 <blockquote>
 <div><p>LaTeX, which is pronounced «Lah-tech» or «Lay-tech» (to rhyme with «blech» or
@@ -1494,7 +766,7 @@ the right content.</p>
 </div></blockquote>
 </section>
 <section id="can-i-use-and-instead-of-for-latex">
-<span id="why-do-we-use-brackets-instead-of-dollars-for-latex"></span><h2>Can I use <code class="docutils literal notranslate"><span class="pre">\(</span></code> and <code class="docutils literal notranslate"><span class="pre">\)</span></code> instead of <code class="docutils literal notranslate"><span class="pre">$</span></code> for LaTeX?<a class="headerlink" href="#can-i-use-and-instead-of-for-latex" title="Permalink to this headline">#</a></h2>
+<span id="why-do-we-use-brackets-instead-of-dollars-for-latex"></span><h2>Can I use <code class="docutils literal notranslate"><span class="pre">\(</span></code> and <code class="docutils literal notranslate"><span class="pre">\)</span></code> instead of <code class="docutils literal notranslate"><span class="pre">$</span></code> for LaTeX?<a class="headerlink" href="#can-i-use-and-instead-of-for-latex" title="Link to this heading">#</a></h2>
 <p>You will see in some places that <code class="docutils literal notranslate"><span class="pre">\(</span></code>, <code class="docutils literal notranslate"><span class="pre">\)</span></code> or <code class="docutils literal notranslate"><span class="pre">\[</span></code>, <code class="docutils literal notranslate"><span class="pre">\]</span></code> can be used as
 delimiters for LaTeX when used outside of Jupyter notebooks. This is in
 fact recommended for a number of reasons, one of which is given at
@@ -1517,7 +789,7 @@ within Jupyter notebooks you need to escape the <code class="docutils literal no
 </div>
 </section>
 <section id="what-is-a-markup-language">
-<h2>What is a markup language?<a class="headerlink" href="#what-is-a-markup-language" title="Permalink to this headline">#</a></h2>
+<h2>What is a markup language?<a class="headerlink" href="#what-is-a-markup-language" title="Link to this heading">#</a></h2>
 <p>LaTeX and markdown are both examples of what is called a <strong>markup
 language</strong>. Another common example of a markup language is html (the way
 web pages are written). A markup language is a system that allows us to
@@ -1542,22 +814,24 @@ capabilities.</p></li>
 remember.</p></li>
 </ul>
 </section>
-<section id="how-to-use-jupyter-notebooks-on-a-chromebook">
-<h2>How to use Jupyter notebooks on a chromebook<a class="headerlink" href="#how-to-use-jupyter-notebooks-on-a-chromebook" title="Permalink to this headline">#</a></h2>
-<p>There are a number of cloud based services that give access to scientific Python environments.
-This medium article gives a brief review of 5 of them:
-<a class="reference external" href="https://medium.com/&#64;siddesh.001/top-5-online-free-notebook-ipynb-and-other-cloud-services-dbf9580d99e3">https://medium.com/&#64;siddesh.001/top-5-online-free-notebook-ipynb-and-other-cloud-services-dbf9580d99e3</a> (this is dated 2018).</p>
-<p>I recommend using cocalc: <a class="reference external" href="https://cocalc.com">https://cocalc.com</a>. The free tier does have some limitations but it
-should be sufficient to be able to work through this book.</p>
+<section id="how-to-use-jupyter-notebooks-without-a-local-installation">
+<h2>How to use Jupyter notebooks without a local installation<a class="headerlink" href="#how-to-use-jupyter-notebooks-without-a-local-installation" title="Link to this heading">#</a></h2>
+<p><strong>Google Colab</strong> (<a class="reference external" href="https://colab.research.google.com/">https://colab.research.google.com/</a>) is the recommended
+option if you cannot install Python locally. It is a free, cloud-based Jupyter
+notebook environment provided by Google that runs entirely in your browser.
+All libraries used in this book (<code class="docutils literal notranslate"><span class="pre">sympy</span></code>, <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, <code class="docutils literal notranslate"><span class="pre">scipy</span></code>) come
+pre-installed. The only requirement is a Google account.</p>
+<p>Google Colab works on any device with a modern browser, including
+Chromebooks and tablets.</p>
 </section>
 <section id="how-to-use-jupyter-notebooks-on-an-ipad">
-<span id="sec-how-to-use-notebooks-on-an-ipad"></span><h2>How to use Jupyter notebooks on an iPad<a class="headerlink" href="#how-to-use-jupyter-notebooks-on-an-ipad" title="Permalink to this headline">#</a></h2>
-<p>There are two iOS apps that I am aware of for notebooks:</p>
+<span id="sec-how-to-use-notebooks-on-an-ipad"></span><h2>How to use Jupyter notebooks on an iPad<a class="headerlink" href="#how-to-use-jupyter-notebooks-on-an-ipad" title="Link to this heading">#</a></h2>
+<p>Google Colab works well in a browser on iPad. Alternatively there are two
+dedicated iOS apps:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://apps.apple.com/us/app/carnets-jupyter/id1450994949">Carnets</a></p></li>
 <li><p><a class="reference external" href="https://juno.sh/">Juno</a></p></li>
 </ul>
-<p>I have experimented with Carnets but not with Juno.</p>
 </section>
 </section>
 
@@ -1573,7 +847,7 @@ should be sufficient to be able to work through this book.</p>
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./tools-for-mathematics/01-using-notebooks/why"
         },
         predefinedOutput: true
@@ -1581,50 +855,116 @@ should be sufficient to be able to work through this book.</p>
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../solutions/main.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Solutions</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../solutions/main.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Solutions</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../../02-algebra/introduction/main.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../../02-algebra/introduction/main.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Algebra</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-the-standard-python-distribution">Why use the standard Python distribution?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-have-we-moved-away-from-anaconda">Why have we moved away from Anaconda?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-python-m-notebook-rather-than-jupyter-notebook">Why use <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">notebook</span></code> rather than <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code>?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-jupyter">Why use Jupyter?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-can-i-not-double-click-on-a-jupyter-notebook-file">Why can I not double click on a Jupyter notebook file?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-can-i-find-keyboard-shortcuts-for-using-jupyter">Where can I find keyboard shortcuts for using Jupyter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-markdown">What is markdown?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-latex">What is LaTeX?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#can-i-use-and-instead-of-for-latex">Can I use <code class="docutils literal notranslate"><span class="pre">\(</span></code> and <code class="docutils literal notranslate"><span class="pre">\)</span></code> instead of <code class="docutils literal notranslate"><span class="pre">$</span></code> for LaTeX?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-markup-language">What is a markup language?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-jupyter-notebooks-without-a-local-installation">How to use Jupyter notebooks without a local installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-jupyter-notebooks-on-an-ipad">How to use Jupyter notebooks on an iPad</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Vincent Knight<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Vincent Knight
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

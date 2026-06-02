@@ -221,7 +221,7 @@ st.median(m)
 ```
 
 To calculate the quartiles, use `statistics.quantiles` and specify that you
-want to separate the date in to $n=4$ quarters.
+want to separate the date into $n=4$ quarters.
 
 ```{code-cell} ipython3
 st.quantiles(h, n=4)
@@ -362,7 +362,7 @@ $$
 e^bm^a
 $$
 
-Substituting our values for the `slope` and `intercept` in to these expressions
+Substituting our values for the `slope` and `intercept` into these expressions
 gives the required relationship:
 
 ```{code-cell} ipython3

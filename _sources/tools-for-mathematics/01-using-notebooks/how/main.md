@@ -14,16 +14,63 @@ kernelspec:
 
 # How to
 
-## Install Anaconda
+## Install Python
 
-1. Navigate to <https://www.anaconda.com/products/individual>
-2. Download the distribution of anaconda for your Operating System
-3. Run the installer
+`````{tab-set}
+````{tab-item} Windows
+1. Navigate to <https://www.python.org/downloads/> and click
+   **"Download Python install manager"**.
+2. Open the downloaded file and click **"Install Python"** in the dialog.
+3. In the terminal that opens, type `y` when asked to add Python to PATH,
+   then `Y` when asked to install CPython. Wait for the installation to
+   complete.
+4. Install the required libraries. Open **Windows PowerShell** from the
+   Start menu and run:
+   ```console
+   $ python -m pip install jupyter sympy numpy matplotlib scipy
+   ```
+````
+
+````{tab-item} macOS
+1. Navigate to <https://www.python.org/downloads/> and download the latest
+   Python 3 installer for macOS.
+2. Run the installer and follow the default prompts.
+3. Install the required libraries. Open **Terminal** (`Cmd + Space`, type
+   `Terminal`) and run:
+   ```console
+   $ python3 -m pip install jupyter sympy numpy matplotlib scipy
+   ```
+````
+
+````{tab-item} Google Colab
+Navigate to <https://colab.research.google.com/> and sign in with a Google
+account. No installation is required — the libraries used in this book are
+pre-installed.
+````
+`````
 
 ## Start a Jupyter notebook server
 
-1. Open a command line tool (`Anaconda prompt` on Windows, `terminal` on OS X);
-2. Type `jupyter notebook` and press `Enter`
+`````{tab-set}
+````{tab-item} Windows
+Open **Windows PowerShell** from the Start menu and type:
+```console
+$ python -m notebook
+```
+````
+
+````{tab-item} macOS
+Open **Terminal** and type:
+```console
+$ python3 -m notebook
+```
+````
+
+````{tab-item} Google Colab
+No local server is needed. Navigate to <https://colab.research.google.com/>
+and open or create a notebook directly.
+````
+`````
 
 ## Create a new notebook
 

@@ -44,7 +44,7 @@ language but it is now popular both in academia and in industry.
 ```{important}
 In this chapter you will cover:
 
--   Installing the specific distribution of Python on your computer.
+-   Installing Python on your computer.
 -   Using something called a Jupyter notebook to write and run Python
     code.
 -   Writing descriptive notes using `markdown`{.markdown} and LaTeX

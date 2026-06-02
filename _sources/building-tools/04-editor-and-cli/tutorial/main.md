@@ -26,11 +26,15 @@ Rationalise the denominator of $\frac{1}{\sqrt{2} + 1}$
 
 Open a command line tool:
 
-1. On **Windows** search for `Anaconda Prompt` (it should be available to you
-   after installing Anaconda). See
-   {ref}`fig:starting_the_notebook_server_windows`.
-2. On **OS X** search for `terminal`. See
-   {ref}`fig:starting_the_notebook_server`.
+`````{tab-set}
+````{tab-item} Windows
+Open **Windows PowerShell** from the Start menu.
+````
+
+````{tab-item} macOS
+Open **Terminal** (press `Cmd + Space`, type `Terminal`, press `Enter`).
+````
+`````
 
 Whether or not your are on Windows or MacOS changes the commands you need to
 type. First, list the directory you are currently in:

@@ -191,9 +191,9 @@ sympy.solveset(equation, x)
 
 (how-to-substitute-a-value-in-to-an-expression)=
 
-## Substitute a value in to an expression
+## Substitute a value into an expression
 
-Given a `sympy` expression it is possible to substitute values in to it
+Given a `sympy` expression it is possible to substitute values into it
 using the `.subs()` tool.
 
 ````{admonition} Usage
@@ -205,7 +205,7 @@ expression.subs({variable: value})
 
 ````{attention}
 It is possible to pass multiple variables at a time. For example to
-substitute the values for $a, b, c$ in to the expression:
+substitute the values for $a, b, c$ into the expression:
 
 ```{code-cell} ipython3
 quadratic = a * x ** 2 + b * x + c

@@ -76,9 +76,9 @@ with open("squares.csv", "r") as f:
 data_as_string
 ```
 
-## How to turn a string in to a list
+## How to turn a string into a list
 
-To split a string on a given character and turn it in to a list use the `split`
+To split a string on a given character and turn it into a list use the `split`
 method:
 
 ````{tip}
