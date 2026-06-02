@@ -22,22 +22,22 @@ this tutorial you will solve the following two problems:
 ```{admonition} Problem
 
 1.  Rationalise the denominator of $\frac{1}{\sqrt{2} + 1}$
-2.  Consider the : $f(x)=2x ^ 2 + x + 1$:
+2.  Consider the function: $f(x)=2x ^ 2 + x + 1$:
 
     1.  Calculate the discriminant of the equation $2x ^ 2 + x + 1 =
         0$. What does this tell you about the solutions to the equation?
         What does this tell you about the graph of $f(x)$?
-    2.  By , show that the minimum point of $f(x)$ is
+    2.  By completing the square, show that the minimum point of $f(x)$ is
         $\left(-\frac{1}{4}, \frac{7}{8}\right)$
 
 To do this, a specific collection of tools available in Python will be
-used. Often specific sets of tools are separated in to things called
+used. Often specific sets of tools are separated into things called
 **libraries**. Start by telling Python that you want to use the specific
 library for **symbolic mathematics**:
 ```
 
 To do this, a specific collection of tools available in Python will be used.
-Often specific sets of tools are separated in to things called **libraries**.
+Often specific sets of tools are separated into things called **libraries**.
 Start by telling Python that we want to use the specific library for **symbolic
 mathematics**:
 
@@ -55,7 +55,7 @@ expression
 ```
 
 ```{attention}
-This is not what would happen if you plugged the above in to a basic
+This is not what would happen if you plugged the above into a basic
 calculator, it would instead give you a value of:
 ```
 
@@ -83,7 +83,7 @@ Multiplying both sides by ${\sqrt{2} + 1}$ gives:
 
 $$1=\frac{1}{\sqrt{2} + 1}\times \left(\sqrt{2} + 1\right) = \left(-1 + \sqrt{2}\right)\times \left(\sqrt{2} + 1\right)$$
 
-The `sympy.simplify` command did not give much insight in to what
+The `sympy.simplify` command did not give much insight into what
 happened but you can confirm the above manipulation by expanding
 $\left(-1 +
 \sqrt{2}\right)\times \left(\sqrt{2} + 1\right)$. Here is how to do
@@ -97,13 +97,13 @@ The `sympy` library allows you to carry out basic expression
 manipulation. Now consider the second part of the question:
 
 ```{admonition} Problem
-1.  Consider the : $f(x)=2x ^ 2 + x + 1$:
+1.  Consider the function: $f(x)=2x ^ 2 + x + 1$:
 
-2.  Calculate the of the equation $2x ^ 2 + x + 1 =
+2.  Calculate the solution of the equation $2x ^ 2 + x + 1 =
     0$. What does this tell you about the solutions to the equation?
     What does this tell you about the graph of $f(x)$?
 
-3.  By , show that the minimum point of $f(x)$ is
+3.  By completing the square, show that the minimum point of $f(x)$ is
     $\left(-\frac{1}{4}, \frac{7}{8}\right)$
 ```
 
@@ -193,7 +193,7 @@ equation = sympy.Eq(a, 2)
 sympy.solveset(equation, a)
 ```
 
-Now substitute this value of $a$ in to the completed square and update
+Now substitute this value of $a$ into the completed square and update
 the variable with the new value:
 
 ```{code-cell} ipython3
@@ -224,7 +224,7 @@ equation = sympy.Eq(-4 * b, 1)
 sympy.solveset(equation, b)
 ```
 
-Substitute this value of $b$ back in to our expression.
+Substitute this value of $b$ back into our expression.
 
 ```{attention}
 Make a point to tell sympy to treat $1 / 4$ symbolically and to not
@@ -261,7 +261,7 @@ completed_square = completed_square.subs({c: 7 / sympy.S(8)})
 completed_square
 ```
 
-Using this shows that the there are indeed no values of $x$ which give
+Using this shows that there are indeed no values of $x$ which give
 negative values of $f(x)$ as $f(x)$ is a square added to a constant. The
 minimum is when $x=-1/4$ which gives: $f(-1/4)=7/8$:
 
@@ -277,5 +277,5 @@ This tutorial has:
 -   Expanded and simplified symbolic expressions.
 -   Created symbolic equations.
 -   Solve symbolic equations.
--   Substituted values in to symbolic expressions.
+-   Substituted values into symbolic expressions.
 ```

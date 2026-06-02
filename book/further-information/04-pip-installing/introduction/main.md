@@ -15,15 +15,15 @@ kernelspec:
 (installing_libraries)=
 # Installing libraries
 
-The recommended Python distribution for this book is the Anaconda distribution.
-This is because it includes a number of libraries well suited to mathematics:
-such as `sympy` and `numpy`. However there are a number of libraries that are
-part of the Python ecosystem that are not included in the Anaconda distribution.
-In this chapter we will give an overview of how to install them,
+In the first chapter of this book you installed the libraries needed to get
+started (`sympy`, `numpy`, `matplotlib`, `scipy`). As you work through more
+advanced topics you will encounter libraries that are not part of that initial
+set. In this chapter we will give an overview of how to install them.
 
 ```{important}
 In this chapter we will cover:
 
 - The Python package index (PyPi).
-- Using `pip`.
+- Using `pip` to install a library.
+- Using `uv` to add a library to a project.
 ```

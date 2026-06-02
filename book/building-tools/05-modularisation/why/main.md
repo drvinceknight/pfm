@@ -18,7 +18,7 @@ kernelspec:
 
 ## Why modularise?
 
-Best practice when writing code is to break up code in to modular parts. One
+Best practice when writing code is to break up code into modular parts. One
 guiding principle described in {cite}`fowler2018refactoring`:
 
 <!--alex disable obvious-->
@@ -77,3 +77,10 @@ following:
 - <https://packaging.python.org>
 - <https://packaging.python.org/overview/>
 - <https://python-packaging-tutorial.readthedocs.io/en/latest/setup_py.html>
+
+`uv` (see [the further information section of the Installing Libraries
+chapter](installing_libraries)) provides a straightforward way to turn a
+directory into an installable package and manage its dependencies. Running
+`uv init` in a project directory creates a `pyproject.toml` file that
+describes the package. You can then make the project importable within its own
+environment by running `uv pip install -e .`.

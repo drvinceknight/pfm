@@ -35,7 +35,7 @@ discussed in the corresponding chapter: {ref}`numpy`. This library allows us
 carry out efficient numerical calculations.
 
 The problem we are considering is in fact an application of a mathematical
-object from probability called a Markov Chain which we will not go in to in
+object from probability called a Markov Chain which we will not go into in
 detail here however the relevant ideas are that the probability of being in the
 100th square after $k$ turns can be written down as:
 
@@ -226,7 +226,7 @@ We are in fact going to modularise that function. It does 3 things:
 - Computes $t$.
 
 All of those tasks could be useful in their own right so we are going to break
-up that function in to three separate functions:
+up that function into three separate functions:
 
 ```{code-cell} ipython3
 def extract_Q(P):

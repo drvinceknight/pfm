@@ -14,25 +14,56 @@ kernelspec:
 
 # How
 
-## How to pip install a library.
+## How to install a library
 
-To install a Python library from the Python Package index we use `pip` by typing
-the following at the command line.
+`````{tab-set}
+````{tab-item} pip
+To install a library from the Python Package Index:
 
-````{tip}
-```
+```{tip}
+```console
 $ python -m pip install <library>
+```
+```
+
+For example, to install `ciw` (a queuing-systems library):
+
+```console
+$ python -m pip install ciw
 ```
 ````
 
-For example to install `ciw` a library used to study queuing systems:
+````{tab-item} uv
+If you have not already initialised a `uv` project in your working directory,
+do so first (this is a one-time step):
 
+```{tip}
+```console
+$ uv init --no-package
 ```
-$ python -m pip install ciw
 ```
+
+Then add a library:
+
+```{tip}
+```console
+$ uv add <library>
+```
+```
+
+For example:
+
+```console
+$ uv add ciw
+```
+
+This installs the library and records it in `pyproject.toml`. To install
+a library without adding it as a permanent dependency use
+`uv pip install <library>` instead.
+````
+`````
 
 ```{attention}
 Well documented libraries will always have installation instructions. It is
 recommended to read those before installing a library.
-
 ```

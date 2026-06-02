@@ -14,8 +14,8 @@ kernelspec:
 
 # Tutorial
 
-We are going to solve a particular mathematical problem using a well suited
-python library that is not part of the Anaconda distribution.
+We are going to solve a particular mathematical problem using a Python library
+that requires an additional installation.
 
 ````{admonition} Problem
 Consider 2 sets of pilots and co-pilots. The airline needs to pair every pilot
@@ -122,13 +122,35 @@ designed to solve these problems called `matching` {cite}`matching-project`.
 **You can read the full
 documentation for the project here: <https://matching.readthedocs.io/>.**
 
-The `matching` library is not included in the Anaconda distribution and the
-first thing we need to do to use it is to install it. We follow the instructions
-in the documentation and write the following in the command line:
+The first thing we need to do to use the `matching` library is to install it.
+We follow the instructions in the documentation:
 
+`````{tab-set}
+````{tab-item} pip
 ```bash
 $ python -m pip install matching
 ```
+````
+
+````{tab-item} uv
+If you have not already initialised a `uv` project in your working directory,
+do so first (this is a one-time step):
+
+```bash
+$ uv init --no-package
+```
+
+Then add the library:
+
+```bash
+$ uv add matching
+```
+
+`uv add` installs the library and records it as a dependency in your
+`pyproject.toml`. See the [further information section](installing_libraries)
+for more on using `uv` to manage project dependencies.
+````
+`````
 
 Once this is done we can follow the instructions in the documentation for the
 library.

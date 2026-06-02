@@ -1,2 +1,2 @@
-A screenshot showing how to start a Jupyter notebook server from the command
-line of a Windows machine.
+A screenshot of Windows PowerShell showing the command to start a Jupyter
+notebook server.

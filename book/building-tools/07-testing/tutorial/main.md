@@ -182,7 +182,7 @@ different due to numerical imprecision.
 
 **You can experiment by changing some of the code or the tests and see the way
 the tests fail.** See Figure {ref}`fig:running_tests_with_error_in_source_code`
-where the following specific error has been introduced in to `absorption.py`:
+where the following specific error has been introduced into `absorption.py`:
 `P.diagonal() == 1` is incorrect and should be `P.diagonal() != 1`.
 
 ```{figure} ./img/running_tests_with_error_in_source_code/main.png

@@ -25,6 +25,6 @@ a code editor and command line as a direct interface to your operating system.
 ```{important}
 In this chapter you will cover:
 
-- Using the cli.
+- Using the CLI.
 - Using an editor.
 ```

@@ -29,7 +29,7 @@ $ cd <directory>
 The target directory must be contained in the directory you are currently in.
 ```
 
-For example to change directory in to a directory called `cfm`:
+For example to change directory into a directory called `cfm`:
 
 ```bash
 $ cd cfm

@@ -94,7 +94,7 @@ solution
 ```
 
 > Obtain the specific solution when $y = 5$. Do this in two ways:
-> substitute the value in to your equation and substitute the value in to
+> substitute the value into your equation and substitute the value into
 > your solution.
 
 ```{code-cell} ipython3
@@ -248,21 +248,21 @@ The highest value of $f(x)$ is for $x=4$ which gives: $f(4)=-49$ as expected.
 
 > Given that $f(0) = 0$ and $f(3) = 0$ obtain the values of $a$ and $b$.
 
-Substituting 0 in to $f$ gives:
+Substituting 0 into $f$ gives:
 
 ```{code-cell} ipython3
 expression = x ** 2 + a * x + b
 expression.subs({x: 0})
 ```
 
-This implies that $b=0$. Substituting back in to the expression:
+This implies that $b=0$. Substituting back into the expression:
 
 ```{code-cell} ipython3
 expression = expression.subs({b: 0})
 expression
 ```
 
-Substituting $x=3$ in to this expression gives:
+Substituting $x=3$ into this expression gives:
 
 ```{code-cell} ipython3
 expression.subs({x: 3})

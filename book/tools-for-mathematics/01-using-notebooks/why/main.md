@@ -16,20 +16,63 @@ kernelspec:
 
 # Further information
 
-(sec:why_use_anaconda)=
-
-## Why use anaconda?
+## Why use the standard Python distribution?
 
 Python is a free and open source piece of software. One of the main
 reasons for its popularity is that there are a number of separate tools
-that work well with it, these are called libraries. Sometimes installing
-these libraries can require an understanding of some potential pitfalls.
-In scientific circles the Anaconda distribution was developed to give a
-single download of not only Python but a lot of commonly used libraries.
+that work well with it, these are called libraries. The standard Python
+distribution from <https://www.python.org> gives you Python itself and
+`pip`, its built-in package installer. You can then install exactly the
+libraries you need, nothing more. This makes it straightforward to understand
+what is on your system and to keep it up to date.
+
+## Why have we moved away from Anaconda?
+
+Earlier editions of this book recommended Anaconda as the way to install
+Python. We have moved away from that recommendation for two reasons.
+
+First, Anaconda changed its licensing terms in 2020 so that its default
+package repository is no longer free for all uses. Organisations with more
+than a small number of users must now purchase a commercial licence to use
+the default Anaconda channel. Using software under unclear licensing
+conditions is not something we want to recommend to readers.
+
+Second, installation on Windows has become considerably easier. The Python
+Install Manager (available directly from <https://www.python.org>) provides
+a straightforward terminal-based setup that takes only a few steps and
+does not require any third-party tools. There is therefore no longer a
+practical reason to add the complexity of Anaconda.
+
+The standard distribution gives a cleaner, lighter environment: only the
+libraries you explicitly install are present, which makes it easier to
+understand what your code depends on and to reproduce your environment on
+another machine.
+
+## Why use `python -m notebook` rather than `jupyter notebook`?
+
+Many tutorials and older books instruct readers to start Jupyter by typing
+`jupyter notebook` in the terminal. Both commands launch the same
+application, so if you encounter that instruction elsewhere it will work
+provided the `jupyter` script is on your system's PATH.
+
+We use `python -m notebook` (or `python3 -m notebook` on macOS) throughout
+this book for one reason: it always works. When Python installs a library
+it places any associated scripts (including `jupyter`) in a scripts
+directory. Depending on how Python was installed, that directory may not
+be on the system PATH, which means typing `jupyter notebook` produces a
+"command not found" error even though the library is correctly installed.
+Running `python -m notebook` bypasses the scripts directory entirely: it
+asks the Python interpreter you are already using to run the `notebook`
+module directly, so there is no PATH lookup to go wrong.
+
+In practice this matters most on Windows, where the Python Install Manager
+does not always add the scripts directory to PATH. On macOS the standard
+Python from python.org installs the interpreter as `python3`, so the
+equivalent command there is `python3 -m notebook`.
 
 ## Why use Jupyter?
 
-There are are variety of ways to write and run Python:
+There are a variety of ways to write and run Python:
 
 1.  Using an interactive notebook environment like Jupyter;
 2.  Using an integrated development environment and/or editor.
@@ -74,7 +117,7 @@ In a notebook if you go to the menu bar and click on `Help` followed by
 shortcuts.
 
 For example, when on a cell pressing `Esc` followed by `m` will turn the
-cell in to a markdown cell.
+cell into a markdown cell.
 
 ## What is markdown?
 
@@ -147,22 +190,23 @@ precision. Markup languages differ in complexity:
 - Markdown is designed to be basic with a few specific annotations to
   remember.
 
-## How to use Jupyter notebooks on a chromebook
+## How to use Jupyter notebooks without a local installation
 
-There are a number of cloud based services that give access to scientific Python environments.
-This medium article gives a brief review of 5 of them:
-<https://medium.com/@siddesh.001/top-5-online-free-notebook-ipynb-and-other-cloud-services-dbf9580d99e3> (this is dated 2018).
+**Google Colab** (<https://colab.research.google.com/>) is the recommended
+option if you cannot install Python locally. It is a free, cloud-based Jupyter
+notebook environment provided by Google that runs entirely in your browser.
+All libraries used in this book (`sympy`, `numpy`, `matplotlib`, `scipy`) come
+pre-installed. The only requirement is a Google account.
 
-I recommend using cocalc: <https://cocalc.com>. The free tier does have some limitations but it
-should be sufficient to be able to work through this book.
+Google Colab works on any device with a modern browser, including
+Chromebooks and tablets.
 
 (sec:how_to_use_notebooks_on_an_ipad)=
 
 ## How to use Jupyter notebooks on an iPad
 
-There are two iOS apps that I am aware of for notebooks:
+Google Colab works well in a browser on iPad. Alternatively there are two
+dedicated iOS apps:
 
 - [Carnets](https://apps.apple.com/us/app/carnets-jupyter/id1450994949)
 - [Juno](https://juno.sh/)
-
-I have experimented with Carnets but not with Juno.

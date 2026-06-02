@@ -188,7 +188,7 @@ min(data)
 
 ### Calculate quantiles
 
-To calculate cut points dividing data in to $n$ intervals of equal probability
+To calculate cut points dividing data into $n$ intervals of equal probability
 you can use `statistics.quantiles` which takes an iterable and a number of
 intervals.
 
